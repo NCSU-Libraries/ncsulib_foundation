@@ -2,13 +2,13 @@
 
 .l-header {
   background: #c00;
+  padding-top: 30px;
 
-  nav {
+  .l-header-region {
     background: #fff;
-
-    ul {
-      margin-bottom: 0;
-    }
+    height: 40px;
+    margin-top: 1px;
+    padding-top: 7px;
   }
 
 }
