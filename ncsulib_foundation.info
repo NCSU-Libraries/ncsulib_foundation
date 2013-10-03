@@ -40,25 +40,33 @@ scripts[] = js/vendor/custom.modernizr.js
 ; Foundation framework scripts (minified).
 ; If you prefer to have more control over which components are included you
 ; can comment this line and uncomment the ones below you want.
-scripts[] = js/foundation.min.js
+;scripts[] = js/foundation.min.js
 
 ; Foundation framework scripts (uncompressed).
-;scripts[] = js/foundation/foundation.js
-;scripts[] = js/foundation/foundation.abide.js
-;scripts[] = js/foundation/foundation.alerts.js
+scripts[] = js/foundation/foundation.js
+scripts[] = js/foundation/foundation.abide.js
+scripts[] = js/foundation/foundation.alerts.js
 ;scripts[] = js/foundation/foundation.clearing.js
 ;scripts[] = js/foundation/foundation.cookie.js
-;scripts[] = js/foundation/foundation.dropdown.js
-;scripts[] = js/foundation/foundation.forms.js
+scripts[] = js/foundation/foundation.dropdown.js
+scripts[] = js/foundation/foundation.forms.js
 ;scripts[] = js/foundation/foundation.interchange.js
 ;scripts[] = js/foundation/foundation.joyride.js
 ;scripts[] = js/foundation/foundation.magellan.js
-;scripts[] = js/foundation/foundation.orbit.js
+scripts[] = js/foundation/foundation.orbit.js
 ;scripts[] = js/foundation/foundation.placeholder.js
-;scripts[] = js/foundation/foundation.reveal.js
-;scripts[] = js/foundation/foundation.section.js
-;scripts[] = js/foundation/foundation.tooltips.js
-;scripts[] = js/foundation/foundation.topbar.js
+scripts[] = js/foundation/foundation.reveal.js
+scripts[] = js/foundation/foundation.section.js
+scripts[] = js/foundation/foundation.tooltips.js
+scripts[] = js/foundation/foundation.topbar.js
+
+; Other vendor scripts
+; mega menus
+scripts[] = js/vendor/jquery.hoverIntent.minified.js
+scripts[] = js/vendor/jquery.dcmegamenu.1.3.3.min.js
+; typeahead
+scripts[] = js/vendor/jquery.autocomplete.js
+scripts[] = js/vendor/jquery.mockjax.js
 
 ; Theme scripts.
 ; This file is empty, just uncomment this line and start editing!
