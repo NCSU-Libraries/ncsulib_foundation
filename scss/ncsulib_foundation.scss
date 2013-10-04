@@ -68,5 +68,20 @@
 //@import "components/icons-general_enclosed";
 //@import "components/icons-social";
 
+/*  Font Awesome 3.2.1
+ *  the iconic font designed for Bootstrap
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ */
+
+@import "components/awesome-variables";
+@import "components/awesome-mixins";
+@import "components/awesome-path";
+@import "components/awesome-core";
+@import "components/awesome-extras";
+@import "components/awesome-icons";
+
 // Themes
 // @import "theme/button-light";
