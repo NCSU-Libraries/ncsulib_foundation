@@ -2,7 +2,7 @@ Below is the default documentation that is generated for the ZURB
 Foundation child themes.  This theme is being customized to work with the 
 NCSU Libraries' site.
 
-![Foundation yeti with the NCSU Libraries logo on belly](https://github.com/NCSU-Libraries/Foundation-Drupal-Child-Theme/blob/website-guidelines/images/foundation4_yeti_ncsulib.png)
+![](https://github.com/NCSU-Libraries/Foundation-Drupal-Child-Theme/blob/website-guidelines/images/foundation4_yeti_ncsulib.png)
 
 DOCUMENTATION
 ----------------------------------
