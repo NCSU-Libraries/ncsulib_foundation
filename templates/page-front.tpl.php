@@ -1,8 +1,6 @@
 <!--.page -->
 <div role="document" class="page">
 
-<?php include 'includes/header.php'; ?>
-
   <?php if (!empty($page['featured'])): ?>
     <!--/.featured -->
     <section class="l-featured row">
