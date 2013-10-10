@@ -1,24 +1,196 @@
-// Non-modular or client styles for .l-header region.
+/*begin nav styles*/
+body.nav-expanded{
+	left: -83%;
+	padding-top: 0px;
 
-.l-header {
-  background: #c00;
-  padding-top: 30px;
+	.top-bar.expanded{
+		overflow: visible;
+	}
+	nav.top-bar .top-bar-section{
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		z-index: 9999;
 
-  .l-header-region {
-    background: #fff;
-    height: 40px;
-    margin-top: 1px;
-    padding-top: 7px;
-  }
+		ul#my-menu{
+			background: lighten($primary-color-b, 15%);
+			position: absolute;
 
+			@media #{$small} {
+				background: lighten($topbar-bg, 4%);
+			}
+
+			li a{
+				background: lighten($primary-color-b, 15%);
+
+				@media #{$small} {
+					background: lighten($topbar-bg, 4%);
+				}
+			}
+
+			li ul{
+				background: lighten($primary-color-b, 10%);
+
+				@media #{$small} {
+					background: lighten($topbar-bg, 4%);
+				}
+
+				li{
+					background: lighten($primary-color-b, 10%);
+
+					@media #{$small} {
+						background: lighten($topbar-bg, 4%);
+					}
+
+					a{
+						background: lighten($primary-color-b, 10%);
+
+						@media #{$small} {
+							background: lighten($topbar-bg, 4%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+body.is-sticky{
+	padding-top: $topbar-height + 30;
+}
+body.nav-open{
+	padding-top: 0px;
+}
+/*end nav styles*/
+
+
+/*begin header*/
+header{
+
+	background: $primary-color;
+	margin-bottom: emCalc(30);
+
+	nav.top-bar{
+		@include grid-row;
+
+		.title-area .name{
+			padding-left: emCalc(15);
+			padding-top: emCalc(14);
+			width: 248px;
+
+			@media #{$small} {
+				padding-top: 12px;
+				width: 261px;
+			}
+			@media #{$medium} {
+				padding-top: 6px;
+				width: 348px;
+			}
+
+			.name a{
+				display: block;
+				height: 100%;
+			}
+		}
+		.top-bar-section{
+			@media #{$small} {
+				padding-right: emCalc(0);
+			}
+			@media #{$medium} {
+				padding-right: emCalc(15);
+			}
+			ul#my-menu{
+				li{
+					border-top: $topbar-divider-border-bottom;
+					border-bottom: $topbar-divider-border-top;
+					@media #{$small} {
+						border: none;
+						max-width: 250px;
+					}
+				}
+				li > a{
+					@media #{$small} {
+						padding: 0px emCalc(15);
+					}
+					text-transform: uppercase;
+				}
+				li > a:after{
+					border: 0px;
+					padding: 0px;
+				}
+				li > a:hover{
+					@media #{$small} {
+						background: darken($topbar-bg, 10%);
+					}
+				}
+				li ul{
+					@media #{$small} {
+						display: none;
+						position: fixed;
+						z-index: 999;
+					}
+
+					li{
+						background: darken($topbar-bg, 10%);
+						border-top: 1px solid $primary-color;
+						border-bottom: 1px solid darken($primary-color, 15%);
+						display: block;
+						float: none;
+						padding: 0px emCalc(15);
+						@media #{$small} {
+							padding: emCalc(5);
+						}
+					}
+					li:last-child{
+						border-bottom: none;
+					}
+					li:hover{
+						@media #{$small} {
+							background: darken($topbar-bg, 15%);
+						}
+					}
+					li a{
+						background: none;
+						font-size: 0.7em;
+						line-height: 1.6em;
+						padding-bottom: emCalc(10);
+						padding-top: emCalc(10);
+						text-transform: capitalize;
+					}
+					li a:hover{
+						@media #{$small} {
+							background: darken($topbar-bg, 15%);
+						}
+					}
+				}
+				li:hover ul{
+					display: block;
+				}
+			}
+		}
+	}
+}
+header.sticky{
+	position: fixed;
+	top: 0px;
+	z-index: 99;
 }
 
-// Top Bar
-//--------------------------------------------------
-.top-bar {
-  .title-area {}
-}
+header#minimum-bar{
+	height: 45px;
 
-.top-bar-section {}
-.top-bar-section .left {}
-.top-bar-section .right {}
+	.top-bar{
+		height: 45px;
+
+		.name{
+			height: 45px;
+			padding: 5px 0px 0px emCalc(15);
+			width: 248px;
+		}
+
+		.top-bar-section a{
+			line-height: 45px;
+		}
+	}
+}
+/*end header*/
+
