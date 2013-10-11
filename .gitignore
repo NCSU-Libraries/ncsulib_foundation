@@ -3,3 +3,4 @@ robots.txt
 .sass-cache
 scss/foundation/*
 *.map
+*.sublime*
