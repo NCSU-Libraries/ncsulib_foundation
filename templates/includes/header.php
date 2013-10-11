@@ -2,11 +2,9 @@
 	<nav class="top-bar">
 		<ul class="title-area">
 			<li class="name">
-				<?php if ($logo): ?>
-			  	<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-					<img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+			  	<a href="/" rel="home" id="logo">
+					<img src="/sites/all/themes/ncsulib_foundation/images/logo_80_percent.png" alt="NCSU Libraries" />
 			  	</a>
-				<?php endif; ?>
 			</li>
 			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 		</ul>
