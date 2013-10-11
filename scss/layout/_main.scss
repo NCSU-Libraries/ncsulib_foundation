@@ -5,6 +5,9 @@
 }
 
 .node {}
-.body {}
+.body {
+  .float-right  { float: right; }
+  .float-left   { float: left;  }
+}
 .image {}
 .breadcrumb {}
