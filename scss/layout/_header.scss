@@ -65,7 +65,7 @@ body.nav-open{
 
 /*begin header*/
 header{
-
+	margin-top: -3px; /* fix the spacing problem with the University nav iframe */
 	background: $primary-color;
 	margin-bottom: emCalc(30);
 	margin-top: emCalc(-3);
