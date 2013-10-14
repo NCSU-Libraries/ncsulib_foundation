@@ -68,6 +68,7 @@ header{
 
 	background: $primary-color;
 	margin-bottom: emCalc(30);
+	margin-top: emCalc(-3);
 
 	nav.top-bar{
 		@include grid-row;
@@ -95,21 +96,28 @@ header{
 			@media #{$small} {
 				padding-right: emCalc(0);
 			}
-			@media #{$medium} {
-				padding-right: emCalc(15);
-			}
 			ul#my-menu{
+				background: $topbar-dropdown-bg;
+				padding-bottom: emCalc(20);
+				@media #{$small} {
+					background: $primary-color;
+					padding-bottom: emCalc(0);
+				}
+
 				li{
-					border-top: $topbar-divider-border-bottom;
-					border-bottom: $topbar-divider-border-top;
 					@media #{$small} {
 						border: none;
+						margin-top: 13px;
 						max-width: 250px;
 					}
+
+					background: $primary-color;
+
 				}
 				li > a{
 					@media #{$small} {
-						padding: 0px emCalc(15);
+						padding: 0px emCalc(20);
+						line-height: $topbar-height - 13;
 					}
 					text-transform: uppercase;
 				}
@@ -117,48 +125,58 @@ header{
 					border: 0px;
 					padding: 0px;
 				}
-				li > a:hover{
+				li:hover > a, li:hover{
 					@media #{$small} {
-						background: darken($topbar-bg, 10%);
+						background: $topbar-dropdown-bg;
 					}
 				}
 				li ul{
 					@media #{$small} {
+						background: $topbar-dropdown-bg;
 						display: none;
-						position: fixed;
+						height: 100px;
+						left: 0;
+						opacity: 0.95;
+						padding: emCalc(20);
+						position: absolute;
+						width: 100%;
 						z-index: 999;
 					}
 
 					li{
-						background: darken($topbar-bg, 10%);
-						border-top: 1px solid $primary-color;
-						border-bottom: 1px solid darken($primary-color, 15%);
+						background: $topbar-dropdown-bg;
 						display: block;
-						float: none;
-						padding: 0px emCalc(15);
+						margin-top: 0px;
+						padding: 0px emCalc(25);
+
 						@media #{$small} {
-							padding: emCalc(5);
+							left: 49%;
+							position: relative;
 						}
+
 					}
 					li:last-child{
 						border-bottom: none;
 					}
 					li:hover{
 						@media #{$small} {
-							background: darken($topbar-bg, 15%);
+							background: none;
 						}
 					}
 					li a{
 						background: none;
-						font-size: 0.7em;
+						font-size: 0.875em;
 						line-height: 1.6em;
-						padding-bottom: emCalc(10);
-						padding-top: emCalc(10);
+						margin-top: emCalc(0);
+						padding: 0px;
+						@media #{$small} {
+							padding: emCalc(1) emCalc(10);
+						}
 						text-transform: capitalize;
 					}
 					li a:hover{
 						@media #{$small} {
-							background: darken($topbar-bg, 15%);
+							background: darken($topbar-dropdown-bg, 15%);
 						}
 					}
 				}
