@@ -1,7 +1,41 @@
-  .float-right  { float: right; }
-  .float-left   { float: left;  }
-  .right-image  {
+  .float-right {
+    float: right;
+  }
+  .float-left {
+    float: left;
+  }
+  .right-image {
     float: right;
     clear: right;
     margin: 20px 0 20px 20px;
+  }
+
+// Captions
+
+  p.caption {
+    float: right;
+    font-style: italic;
+    text-align: center;
+    margin: 15px;
+
+    img {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  .featured-image {
+    float: right;
+    padding: 2px;
+    margin: 0 0 15px 15px;
+
+    p {
+      margin-bottom: 0;
+      background: #666;
+      font-size: 12px;
+      line-height: 1;
+      color: #FFF;
+      padding: 14px;
+    }
+
   }
