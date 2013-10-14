@@ -2,13 +2,8 @@
 	<nav class="top-bar">
 		<ul class="title-area">
 			<li class="name">
-<<<<<<< HEAD:templates/includes/header.php
 			  	<a href="<?php print $GLOBALS['base_url']; ?>" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
 					<img src="<?php print $GLOBALS['base_url'].'/'.path_to_theme().'/images/ncsu-library-logo-white.png'; ?>" alt="<?php print t('Home'); ?>" />
-=======
-			  	<a href="/" rel="home" id="logo">
-					<img src="/sites/all/themes/ncsulib_foundation/images/logo_80_percent.png" alt="NCSU Libraries" />
->>>>>>> 29618d9ce8a4e2c4317744be0fe244910bd45eed:templates/includes/header.html
 			  	</a>
 			</li>
 			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>

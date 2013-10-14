@@ -24,15 +24,10 @@
       Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.
   </iframe>
 
-<<<<<<< HEAD
   <?php include 'includes/header.php'; ?>
-=======
   <div class="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
-
-  <?php include 'includes/header.html'; ?>
->>>>>>> 29618d9ce8a4e2c4317744be0fe244910bd45eed
 
   <?php print $page_top; ?>
   <?php print $page; ?>
