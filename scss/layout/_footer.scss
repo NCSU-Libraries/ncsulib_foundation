@@ -25,8 +25,13 @@ footer {
 				@include grid-column(4);
 				border-right: 1px solid darken($footer-font-color, 30%);
 				height: 300px;
+				padding-left: 0px;
 			}
 			padding-bottom: emCalc(30);
+
+			h4{
+				margin-bottom: 0px;
+			}
 		}
 
 		#f-libraries{
@@ -38,8 +43,13 @@ footer {
 			padding-bottom: emCalc(30);
 
 			ul{
+				list-style-type: none;
 				margin: 0px;
 				padding: 0px;
+			}
+
+			h4{
+				margin-bottom: 0px;
 			}
 		}
 
