@@ -4,3 +4,4 @@ robots.txt
 scss/foundation/*
 *.map
 *.sublime*
+css/*
