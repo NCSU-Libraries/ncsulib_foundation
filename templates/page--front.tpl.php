@@ -13,16 +13,16 @@
                 <div class="large-5 columns">
                     <ul data-orbit>
                         <li>
-                            <img src="/artbox/images/0311-05.jpg" />
-                            <div class="orbit-caption">...</div>
+                            <img src="/artbox/images/1013-06.jpg" />
+                            <!-- <div class="orbit-caption">...</div> -->
                         </li>
                         <li>
-                            <img src="/artbox/images/0511-01.jpg" />
-                            <div class="orbit-caption">...</div>
+                            <img src="/artbox/images/1013-05.jpg" />
+                            <!-- <div class="orbit-caption">...</div> -->
                         </li>
                         <li>
-                            <img src="/artbox/images/1111-07.jpg" />
-                            <div class="orbit-caption">...</div>
+                            <img src="/artbox/images/1013-04.jpg" />
+                            <!-- <div class="orbit-caption">...</div> -->
                         </li>
                     </ul>
                 </div>
