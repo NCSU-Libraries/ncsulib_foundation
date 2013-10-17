@@ -7,24 +7,7 @@
             <!-- top row -->
             <div class="row">
 
-                <!-- search tabs stub -->
-                <div class="large-7 columns">
-                    <div class="section-container auto search-tabs" data-section>
-                        <section class="active">
-                            <p class="title" data-section-title><a href="#panel1">Section 1</a></p>
-                            <div class="content" data-section-content>
-                                <p>Content of section 1.</p>
-                            </div>
-                        </section>
-                        <section>
-                            <p class="title" data-section-title><a href="#panel2">Section 2</a></p>
-                            <div class="content" data-section-content>
-                                <p>Content of section 2.</p>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
+                <?php include 'includes/home-search-tabs.php'; ?>
 
                 <!-- artbox stub -->
                 <div class="large-5 columns">

@@ -1,0 +1,83 @@
+/*begin tabs */
+/*main search*/
+#searcheverything{
+	@include grid-row;
+}
+#searchall{
+	@include grid-column(10);
+	height: 3.5em;
+	margin-bottom: 0px;
+}
+#all-submit{
+	@include grid-column(2);
+	height: 3.79em;
+	margin-bottom: 0px;
+}
+#research-options{
+	font-size: 0.75em;
+	margin-top: emCalc(10);
+}
+/*articles*/
+#search-articles-summon{
+	@include grid-row;
+}
+#searcharticle{
+	@include grid-column(10);
+	height: 3.5em;
+	margin-bottom: emCalc(5);
+}
+#article-submit{
+	@include grid-column(2);
+	margin-bottom: emCalc(5);
+	height: 3.79em;
+}
+.search-example{
+	@include grid-column(9);
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 0.7em;
+	padding-left: 0px;
+}
+#websitesearch .search-example{
+	float: none;
+	margin-bottom: 0px;
+}
+#searcharticleadvanced{
+	@include grid-column(3);
+	border: 1px solid #DDD;
+	margin-bottom: emCalc(5);
+	padding: 5px;
+}
+.search-more{
+	margin-bottom: 0px;
+	padding-left: 0px;
+}
+/*Books/Media*/
+#books-media-search{
+	@include grid-column(10);
+	height: 3.5em;
+	margin-bottom: emCalc(5);
+}
+#searchbookssubmit{
+	@include grid-column(2);
+	height: 3.79em;
+	margin-bottom: emCalc(5);
+}
+#books-more-options-drop{
+	@include grid-column(3);
+	border: 1px solid #DDD;
+	margin-bottom: emCalc(5);
+	padding: 5px;
+}
+/*search website*/
+#searchweb{
+	@include grid-column(10);
+	height: 3.5em;
+	margin-bottom: emCalc(5);
+}
+#web-submit{
+	@include grid-column(2);
+	margin-bottom: emCalc(5);
+	height: 3.79em;
+}
+
+/*end tabs*/

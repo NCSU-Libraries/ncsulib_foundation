@@ -164,7 +164,7 @@ header#minimum-bar{
 	background: $topbar-dropdown-bg;
 	position: absolute;
 	width: 100%;
-	z-index: 9;
+	z-index: 13;
 
 	.primary-menu-list{
 		@include grid-row;
@@ -314,10 +314,10 @@ header#minimum-bar{
 
 				li{
 					float: left;
-					padding-top: emCalc(5);
+					margin-top: emCalc(3);
 
 					a{
-						border-left: 1px solid #464646;
+						border-left: 1px solid #555555;
 						color: #CCC;
 						display: block;
 						font-size: emCalc(12);
