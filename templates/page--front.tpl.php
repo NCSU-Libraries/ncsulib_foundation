@@ -13,15 +13,15 @@
                 <div class="large-5 columns">
                     <ul data-orbit>
                         <li>
-                            <img src="/artbox/images/1013-06.jpg" />
+                            <img src="http://lib.ncsu.edu/artbox/images/1013-06.jpg" />
                             <!-- <div class="orbit-caption">...</div> -->
                         </li>
                         <li>
-                            <img src="/artbox/images/1013-05.jpg" />
+                            <img src="http://lib.ncsu.edu/artbox/images/1013-05.jpg" />
                             <!-- <div class="orbit-caption">...</div> -->
                         </li>
                         <li>
-                            <img src="/artbox/images/1013-04.jpg" />
+                            <img src="http://lib.ncsu.edu/artbox/images/1013-04.jpg" />
                             <!-- <div class="orbit-caption">...</div> -->
                         </li>
                     </ul>
