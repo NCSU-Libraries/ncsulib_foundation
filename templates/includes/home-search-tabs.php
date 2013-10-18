@@ -1,5 +1,6 @@
 <!-- search tabs stub -->
-<div class="large-7 columns">
+<div id="search-tabs">
+    <h2>SEARCH</h2>
     <div class="section-container auto search-tabs" data-section>
         <section class="active">
             <p class="title" data-section-title><a href="#panel1">All</a></p>

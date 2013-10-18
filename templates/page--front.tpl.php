@@ -5,12 +5,12 @@
             <a id="main-content"></a>
 
             <!-- top row -->
-            <div class="row">
+            <div id="tier-one">
 
                 <?php include 'includes/home-search-tabs.php'; ?>
 
                 <!-- artbox stub -->
-                <div class="large-5 columns">
+                <div id="home-artbox">
                     <ul data-orbit>
                         <li>
                             <img src="http://lib.ncsu.edu/artbox/images/1013-06.jpg" />
@@ -30,8 +30,8 @@
             </div> <!-- /top row -->
 
             <!-- middle row -->
-            <div class="row">
-                <div class="large-12 columns">
+            <div id="tier-two">
+                <div id="availibility">
                     <!-- availability tabs stub -->
                     <div class="section-container auto search-tabs" data-section>
                         <section class="active">
@@ -48,80 +48,66 @@
                         </section>
                     </div>
                 </div>
-            </div> <!-- /middle row -->
+            </div>
 
             <!-- bottom row -->
-            <div class="row">
+            <div id="tier-three">
 
-                <div class="large-4 columns">
-
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <a href="/huntlibrary/">
-                                <img src="/sites/default/files/hunt-front.jpg"  alt="The James B. Hunt Jr. Library" width="100%">
-                            </a>
-                        </div>
+                <div id="story-1">
+                    <div class="story-photo">
+                        <a href="/huntlibrary/">
+                            <img src="http://lib.ncsu.edu/sites/default/files/hunt-front.jpg"  alt="The James B. Hunt Jr. Library" width="100%">
+                        </a>
                     </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <h2>
-                                <a href="/huntlibrary/">James B. Hunt Jr. Library</a>
-                            </h2>
+                    <h2>
+                        <a href="/huntlibrary/">James B. Hunt Jr. Library</a>
+                    </h2>
 
-                            <ul class="hunt-list">
-                                <li><a href="/huntlibrary/#storify">Hunt Library on Storify</a></li>
-                                <li><a href="/huntlibrary/inthenews">In the News</a></li>
-                                <li><a href="/huntlibrary/bookBot">bookBot</a></li>
-                                <li><a href="/huntlibrary/namingopportunities">Help support Hunt</a></li>
-                                <li><a href="http://www.ncsu.edu/huntlibrary/">Think and Do</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
+                    <ul class="hunt-list">
+                        <li><a href="/huntlibrary/#storify">Hunt Library on Storify</a></li>
+                        <li><a href="/huntlibrary/inthenews">In the News</a></li>
+                        <li><a href="/huntlibrary/bookBot">bookBot</a></li>
+                        <li><a href="/huntlibrary/namingopportunities">Help support Hunt</a></li>
+                        <li><a href="http://www.ncsu.edu/huntlibrary/">Think and Do</a></li>
+                    </ul>
                 </div>
 
-                <div class="large-4 columns">
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <a href="http://d.lib.ncsu.edu/myhuntlibrary">
-                                <img src="/sites/default/files/myhunt-front.jpg" alt="Students posing on the monumental stairs" title="photo credit: @emily_reeves12" width="100%" />
-                            </a>
-                        </div>
+                <div id="story-2">
+                    <div class="story-photo">
+                        <a href="http://d.lib.ncsu.edu/myhuntlibrary">
+                            <img src="http://lib.ncsu.edu/sites/default/files/myhunt-front.jpg" alt="Students posing on the monumental stairs" title="photo credit: @emily_reeves12" width="100%" />
+                        </a>
                     </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <a href="http://d.lib.ncsu.edu/myhuntlibrary"><h2>MY &#35;HuntLibrary</h2></a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adcing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
+                    <h2><a href="http://d.lib.ncsu.edu/myhuntlibrary">MY &#35;HuntLibrary</a></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adcing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
 
-                <div class="large-4 columns">
-                    <div class="row">
-                        <div class="large-6 columns">
-                            <a href="/news/"><img src="/sites/default/files/news-front.jpg" alt="girl typing at lap" width="100%" /></a>
+                <div id="happenings">
+                    <div id="home-news">
+                        <div class="happenings-photo">
+                            <a href="/news/"><img src="http://lib.ncsu.edu/sites/default/files/news-front.jpg" alt="girl typing at lap" width="100%" /></a>
                         </div>
-                        <div class="large-6 columns">
+                        <div class="happenings-content">
                             <h2><a href="/news/">News</a></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="large-6 columns">
-                            <a href="/news/"><img src="/sites/default/files/news-front.jpg" alt="girl typing at lap" width="100%" /></a>
+                    <div id="home-events">
+                        <div class="happenings-photo">
+                            <a href="/events/"><img src="http://lib.ncsu.edu/sites/default/files/events-front.jpg" alt="girl typing at lap" width="100%" /></a>
                         </div>
-                        <div class="large-6 columns">
-                            <h2><a href="/news/">News</a></h2>
+                        <div class="happenings-content">
+                            <h2><a href="/news/">Events</a></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="large-6 columns">
-                            <a href="/news/"><img src="/sites/default/files/news-front.jpg" alt="girl typing at lap" width="100%" /></a>
+                    <div id="home-exhibits">
+                        <div class="happenings-photo">
+                            <a href="/exhibits/"><img src="http://lib.ncsu.edu/sites/default/files/exhibits-front.jpg" alt="girl typing at lap" width="100%" /></a>
                         </div>
-                        <div class="large-6 columns">
-                            <h2><a href="/news/">News</a></h2>
+                        <div class="happenings-content">
+                            <h2><a href="/news/">Exhibits</a></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>

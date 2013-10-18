@@ -11,93 +11,11 @@
 
 		<section class="top-bar-section">
 			<ul id="primary-nav" class="right">
-				<li>
-					<a href="#" data-menu="find" class="primary-menu-item">Find</a>
-<!-- 					<ul>
-						<li>
-							<a href="#">Books &amp; Media</a>
-							<a href="#">Articles</a>
-							<a href="#">Journal Titles</a>
-							<a href="#">Databases</a>
-							<a href="#">Course Reserves</a>
-						</li>
-						<li>
-							<a href="#">Spatial &amp; Numerical Data</a>
-							<a href="#">Special Collections</a>
-							<a href="#">NC State Publications</a>
-							<a href="#">Theses &amp; Dissertations</a>
-						</li>
-					</ul> -->
-				</li>
-				<li>
-					<a href="#" data-menu="help" class="primary-menu-item">Get Help</a>
-<!-- 					<ul>
-						<li>
-							<a href="#">Ask Us</a>
-							<a href="#">Research Consultation</a>
-							<a href="#">Technology Consultation</a>
-							<a href="#">Research Workshops</a>
-							<a href="#">Copyright Guidance</a>
-						</li>
-						<li>
-							<a href="#">Course Tools</a>
-							<a href="#">Citation</a>
-							<a href="#">Reference</a>
-							<a href="#">Guides</a>
-							<a href="#">Tutorials</a>
-						</li>
-					</ul> -->
-				</li>
-				<li>
-					<a href="#" data-menu="services" class="primary-menu-item">Services</a>
-<!-- 					<ul>
-						<li>
-							<a href="#">Borrow, Renew, Request</a>
-							<a href="#">Computing</a>
-							<a href="#">Create Digital Media</a>
-							<a href="#">Disability Services</a>
-							<a href="#">Distance Learning</a>
-							<a href="#">Faculty/Instructor Support</a>
-						</li>
-						<li>
-							<a href="#">GroupFinder</a>
-							<a href="#">Reserve a Room</a>
-							<a href="#">Print, Copy, Scan</a>
-							<a href="#">Suggest a Purchase</a>
-							<a href="#">Technology Lending</a>
-							<a href="#">Tripsaver</a>
-						</li>
-					</ul> -->
-				</li>
-				<li>
-					<a href="#" data-menu="libraries" class="primary-menu-item">Libraries</a>
-<!-- 					<ul>
-						<li>
-							<a href="#">D. H. Hill Library</a>
-							<a href="#">James B. Hunt Jr. Library</a>
-							<a href="#">Design Library</a>
-							<a href="#">Natural Resources Library</a>
-							<a href="#">Veterinary Medicine Library</a>
-						</li>
-					</ul> -->
-				</li>
-				<li>
-					<a href="#" data-menu="about" class="primary-menu-item">About</a>
-<!-- 					<ul>
-						<li>
-							<a href="#">Contact Us</a>
-							<a href="#">Directions &amp; Parking</a>
-							<a href="#">Hours</a>
-							<a href="#">Jobs</a>
-						</li>
-						<li>
-							<a href="#">Staff</a>
-							<a href="#">Directories</a>
-							<a href="#">Friends of the Library</a>
-							<a href="#">Special Collections</a>
-						</li>
-					</ul> -->
-				</li>
+				<li><a href="#" data-menu="find" class="primary-menu-item">Find</a></li>
+				<li><a href="#" data-menu="help" class="primary-menu-item">Get Help</a></li>
+				<li><a href="#" data-menu="services" class="primary-menu-item">Services</a></li>
+				<li><a href="#" data-menu="libraries" class="primary-menu-item">Libraries</a></li>
+				<li><a href="#" data-menu="about" class="primary-menu-item">About</a></li>
 			</ul>
 		</section>
 	</nav>

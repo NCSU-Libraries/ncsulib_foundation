@@ -844,7 +844,7 @@ $orbit-container-bg: #fff;
 // We use these to control the left/right nav styles
 
 // $orbit-nav-bg-old: rgb(0,0,0);
-// $orbit-nav-bg: rgba(0,0,0,0.6);
+$orbit-nav-bg: rgba(0,0,0,0.2);
 
 // We use these to control the timer styles
 
@@ -853,8 +853,8 @@ $orbit-container-bg: #fff;
 
 // We use these to control the bullet nav styles
 
-// $orbit-bullet-nav-color: #999;
-// $orbit-bullet-nav-color-active: #555;
+$orbit-bullet-nav-color: #CCC;
+$orbit-bullet-nav-color-active: #999;
 
 // We use thes to controls the style of slide numbers
 

@@ -75,14 +75,14 @@ header{
 		.title-area .name{
 			padding-left: emCalc(15);
 			padding-top: emCalc(14);
-			width: 248px;
+			width: 250px;
 
 			@media #{$small} {
-				padding-top: 12px;
-				width: 261px;
+				padding-top: emCalc(14);
+				width: 250px;
 			}
 			@media #{$medium} {
-				padding-top: 6px;
+				padding-top: emCalc(6);
 				width: 348px;
 			}
 
@@ -220,8 +220,11 @@ header#minimum-bar{
 		@include grid-row;
 
 		#home-hours{
-			@include grid-column(6);
+			/*@include grid-column(6);*/
 			background: lighten($topbar-dropdown-bg, 15%);
+			float: left;
+			margin-left: emCalc(14);
+			padding-left: 0px;
 
 			p#hours-title{
 				color: #010101;
@@ -231,11 +234,13 @@ header#minimum-bar{
 				line-height: emCalc(27);
 				margin-bottom: 0px;
 				margin-right: 5px;
+				padding-left: emCalc(10);
 			}
 			ul{
 				display: inline;
 				list-style-type: none;
 				margin: 0px 0px 0px 0px;
+				padding-right: emCalc(10);
 
 				li{
 					float: left;
@@ -306,7 +311,7 @@ header#minimum-bar{
 
 		#utility-links{
 			@include grid-column(6);
-
+			float: right;
 			ul{
 				list-style-type: none;
 				float: right;

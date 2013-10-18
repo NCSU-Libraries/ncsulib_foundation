@@ -1,5 +1,22 @@
+/*begin tier one*/
+#tier-one{
+	@include grid-row;
+}
 /*begin tabs */
 /*main search*/
+#search-tabs{
+	@include grid-column(12);
+
+	h2{
+		color: $primary-color;
+		font-size: emCalc(22);
+	}
+
+	@media #{$small}{
+		@include grid-column(7);
+		padding-left: 0px;
+	}
+}
 #searcheverything{
 	@include grid-row;
 }
@@ -45,7 +62,7 @@
 #searcharticleadvanced{
 	@include grid-column(3);
 	border: 1px solid #DDD;
-	margin-bottom: emCalc(5);
+	margin-bottom: emCalc(15);
 	padding: 5px;
 }
 .search-more{
@@ -66,7 +83,7 @@
 #books-more-options-drop{
 	@include grid-column(3);
 	border: 1px solid #DDD;
-	margin-bottom: emCalc(5);
+	margin-bottom: emCalc(15);
 	padding: 5px;
 }
 /*search website*/
@@ -82,3 +99,134 @@
 }
 
 /*end tabs*/
+
+/*begin artbox*/
+#home-artbox{
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(5);
+		padding-right: 0px;
+	}
+
+	.orbit-container .orbit-timer{
+		top: 0px;
+		width: 100%;
+	}
+
+	.orbit-container .orbit-prev,
+	.orbit-container .orbit-next{
+		height: 45px;
+		margin-top: -50px;
+		width: 30px;
+	}
+	.orbit-container .orbit-prev span{
+		left: -8px;
+	}
+}
+/*end artbox*/
+
+/*end tier one*/
+
+/*begin tier two*/
+#tier-two{
+	@include grid-row;
+	margin-bottom: emCalc(30);
+}
+/*begin availibility*/
+#availibility{
+	@include grid-row;
+
+	#availibility-tabs{
+		@include grid-column(12);
+	}
+}
+/*end availibility*/
+/*end tier two*/
+
+
+ /*begin tier-three*/
+#tier-three{
+	@include grid-row;
+	margin-bottom: emCalc(40);
+}
+
+#story-1, #story-2{
+	@include grid-column(12);
+	margin-bottom: emCalc(20);
+	padding: 0px;
+
+	@media #{$small}{
+		@include grid-column(4);
+		padding-left: 0px;
+		padding-right: emCalc(18);
+	}
+
+	.story-photo{
+		margin-bottom: emCalc(15);
+	}
+
+	h2 {
+		font-size: emCalc(28);
+		line-height: 1.2em;
+
+		a{
+			color: inherit;
+		}
+
+		a:hover{
+			color: $primary-color;
+		}
+	}
+}
+#story-2{
+	@media #{$small}{
+		padding-left: emCalc(7);
+		padding-right: emCalc(10);
+	}
+}
+
+#happenings{
+	@include grid-column(12);
+	padding: 0px;
+
+	@media #{$small}{
+		@include grid-column(4);
+		padding-right: 0px;
+	}
+
+	#home-news, #home-events, #home-exhibits{
+		float: left;
+		margin-bottom: emCalc(25);
+	}
+
+	.happenings-photo{
+		@include grid-column(6);
+		padding-left: 0px;
+	}
+
+	.happenings-content{
+		@include grid-column(6);
+		padding-right: 0px;
+
+		h2{
+			font-size: emCalc(26);
+			line-height: 1em;
+			margin-bottom: 5px;
+			text-transform: uppercase;
+
+			a{
+				color: inherit;
+			}
+
+			a:hover{
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+ /*end tier three*/
+
+
+
