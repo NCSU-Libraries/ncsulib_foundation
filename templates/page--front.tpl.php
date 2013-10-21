@@ -14,15 +14,12 @@
                     <ul data-orbit>
                         <li>
                             <img src="http://lib.ncsu.edu/artbox/images/1013-06.jpg" />
-                            <!-- <div class="orbit-caption">...</div> -->
                         </li>
                         <li>
                             <img src="http://lib.ncsu.edu/artbox/images/1013-05.jpg" />
-                            <!-- <div class="orbit-caption">...</div> -->
                         </li>
                         <li>
                             <img src="http://lib.ncsu.edu/artbox/images/1013-04.jpg" />
-                            <!-- <div class="orbit-caption">...</div> -->
                         </li>
                     </ul>
                 </div>
@@ -31,19 +28,46 @@
 
             <!-- middle row -->
             <div id="tier-two">
+                <h4>Availability <a href="/reservearoom/">Reserve a Room</a><a href="/techlending/">Borrow Technology</a></h4>
                 <div id="availibility">
                     <!-- availability tabs stub -->
-                    <div class="section-container auto search-tabs" data-section>
+                    <div class="section-container auto search-tabs vertical-tabs" data-section="vertical-tabs">
                         <section class="active">
-                            <p class="title" data-section-title><a href="#panel1">Section 1</a></p>
+                            <p class="title" data-section-title><a href="#panel1">D. H. Hill Library</a></p>
                             <div class="content" data-section-content>
-                                <p>Content of section 1.</p>
+                                <ul>
+                                    <li>
+                                        <span class="item"><a href="/studyrooms/getaroom.php">Study Rooms</a>:</span>
+                                        <span class="count">18</span> of 201
+                                    </li>
+                                    <li>
+                                        <span class="item"><a href="/studyrooms/getaroom.php">Laptops</a>:</span>
+                                        <span class="count">93</span> of 176
+                                    </li>
+                                    <li>
+                                        <span class="item"><a href="/studyrooms/getaroom.php">Tablets</a>:</span>
+                                        <span class="count">27</span> of 41
+                                    </li>
+                                </ul>
                             </div>
                         </section>
                         <section>
-                            <p class="title" data-section-title><a href="#panel2">Section 2</a></p>
+                            <p class="title" data-section-title><a href="#panel2">James B. Hunt Jr. Library</a></p>
                             <div class="content" data-section-content>
-                                <p>Content of section 2.</p>
+                                <ul>
+                                    <li>
+                                        <span class="item"><a href="/studyrooms/getaroom.php">Study Rooms</a>:</span>
+                                        <span class="count">72</span> of 456
+                                    </li>
+                                    <li>
+                                        <span class="item"><a href="/studyrooms/getaroom.php">Laptops</a>:</span>
+                                        <span class="count">27</span> of 256
+                                    </li>
+                                    <li>
+                                        <span class="item"><a href="/studyrooms/getaroom.php">Tablets</a>:</span>
+                                        <span class="count">65</span> of 458
+                                    </li>
+                                </ul>
                             </div>
                         </section>
                     </div>

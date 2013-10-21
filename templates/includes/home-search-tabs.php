@@ -7,7 +7,7 @@
             <div class="content" data-section-content>
                 <form accept-charset="utf-8" method="get" action="/search/" id="searcheverything">
                     <input type="text" id="searchall" value="" name="q" class="main-search-field" placeholder="Search books, articles, journals, &amp; library website" />
-                    <input type="submit" class="front-page-submit button small prefix" id="all-submit" value="SEARCH" />
+                    <input type="submit" class="front-page-submit button small" id="all-submit" value="SEARCH" />
                 </form>
             </div>
         </section>
@@ -16,8 +16,8 @@
             <div class="content" data-section-content>
                 <form accept-charset="utf-8" method="get" action="http://ncsu.summon.serialssolutions.com/search" id="search-articles-summon">
                     <input type="text" id="searcharticle" value="" name="s.q" class="articles-search-field" placeholder="Search for articles in Summon." />
+                    <input type="submit" id="article-submit" class="front-page-submit button small" value="SEARCH" />
 
-                    <input type="submit" id="article-submit" class="front-page-submit button small prefix" value="SEARCH" />
                     <p class="search-example">EX: tropical deforestation or enter a DOI</p>
                     <select id="searcharticleadvanced" name="searcharticleadvanced" class="has_sb">
                         <option value="anywhere">Anywhere</option>
@@ -75,6 +75,36 @@
                 </form>
             </div>
         </section>
-        <div id="research-options"><strong> More Research Tools:  &nbsp; </strong><a href="/databases/">Databases</a> | <a href="/journals/">Journal Titles</a> | <a href="/citationbuilder">Citation Builder</a> </div>
+        <div id="research-options">
+            <h6>More Research Tools:</h6>
+            <ul>
+                <li><a href="/databases/">Databases</a></li>
+                <li><a href="/journals/">Journal Titles</a></li>
+                <li><a href="/citationbuilder">Citation Builder</a></li>
+            </ul>
+        </div>
+        <ul id="home-quicklinks">
+            <li>
+                <ul>
+                    <li><h5>Techonology</h5></li>
+                    <li><a href="#">Create Digital Media</a></li>
+                    <li><a href="#">Makerspace</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><h5>Studying</h5></li>
+                    <li><a href="#">Reserve a Room</a></li>
+                    <li><a href="#">GroupFinder</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><h5>Course</h5></li>
+                    <li><a href="#">Course Tools</a></li>
+                    <li><a href="#">Course Reserves</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
 </div>

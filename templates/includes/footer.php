@@ -9,25 +9,25 @@
 							<span itemprop="addressRegion">NC</span> <br>
 							<span itemprop="postalCode">27695-7111</span> <br>
 						</span>
-						<span itemprop="telephone">(919) 515-3364</span>
+						<span itemprop="telephone"><a href="tel:9195153364">(919) 515-3364</a></span>
 					</p>
 
 					<h4><a href="http://www.lib.ncsu.edu/huntlibrary">James B. Hunt Jr. Library</a></h4>
 					<p>1070 Partners Way<br>
 						Campus Box 7132<br>
 						Raleigh, NC 27606<br>
-						919-515-7110
+						<a href="tel:9195157110">919-515-7110</a>
 					</p>
 				</div>
 
 				<div id="f-libraries">
-					<h4>Libraries</h4>
+					<h4><a href="/libraries">Libraries</a></h4>
 					<ul>
-						<li><a href="http://www.lib.ncsu.edu/">D. H. Hill Library</a></li>
-						<li><a href="http://www.lib.ncsu.edu/huntlibrary">Hunt Library</a></li>
-						<li><a href="http://www.lib.ncsu.edu/design">Design Library</a></li>
-						<li><a href="http://www.lib.ncsu.edu/nrl">Natural Resources Library</a></li>
-						<li><a href="http://www.lib.ncsu.edu/vetmed">Veterinary Medicine Library</a></li>
+						<li><a href="/">D. H. Hill Library</a></li>
+						<li><a href="/huntlibrary">Hunt Library</a></li>
+						<li><a href="/design">Design Library</a></li>
+						<li><a href="/nrl">Natural Resources Library</a></li>
+						<li><a href="/vetmed">Veterinary Medicine Library</a></li>
 					</ul>
 				</div>
 
@@ -35,7 +35,7 @@
 					<ul class="inline-list">
 						<li><h2><a href="https://twitter.com/ncsulibraries"><i class="icon-twitter"></i></a></h2></li>
 						<li><h2><a href="https://www.facebook.com/ncsulibraries"><i class="icon-facebook"></i></a></h2></li>
-						<li><h2><a href="http://lib.ncsu.edu/rss-feeds"><i class="icon-rss"></a></i></h2></li>
+						<li><h2><a href="/rss-feeds"><i class="icon-rss"></a></i></h2></li>
 						<li><h2><a href="http://www.youtube.com/view_play_list?p=D55CB2CA2013ACF8"><i class="icon-youtube"></i></a></h2></li>
 						<li><h2><a href="http://www.flickr.com/photos/ncsu_scrc/"><i class="icon-flickr"></a></i></h2></li>
 					</ul>
@@ -43,9 +43,9 @@
 				</div>
 				<div id="f-util">
 					<ul id="util-links">
-						<li><a href="http://lib.ncsu.edu/copyright">Copyright</a></li>
-						<li><a href="http://lib.ncsu.edu/disabilityservices">Disability Services</a></li>
-						<li><a href="http://lib.ncsu.edu/privacy">Privacy Statement</a></li>
+						<li><a href="/copyright">Copyright</a></li>
+						<li><a href="/disabilityservices">Disability Services</a></li>
+						<li><a href="/privacy">Privacy Statement</a></li>
 						<li><a href="http://staff.lib.ncsu.edu/">Staff Only</a></li>
 					</ul>
 				</div>

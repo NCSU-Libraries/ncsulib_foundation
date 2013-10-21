@@ -145,11 +145,13 @@ $border-thickness: 1px;
 
 // Media Queries
 
+$mobile-screen: 767px;
 $small-screen: 768px;
 $medium-screen: 960px;
 $large-screen: 1280px;
 
 // $screen: "only screen";
+$mobile: "only screen and (max-width: #{$mobile-screen})";
 // $small: "only screen and (min-width: #{$small-screen})";
 // $medium: "only screen and (min-width: #{$medium-screen})";
 // $large: "only screen and (min-width: #{$large-screen})";
@@ -1063,9 +1065,9 @@ $panel-border-color: #CCC;//darken($panel-bg, $panel-function-factor);
 
 // $section-title-color: #333;
 // $section-title-color-active: #333;
-// $section-title-bg: #efefef;
-// $section-title-bg-active: darken($section-title-bg, $section-function-factor);
-// $section-title-bg-active-tabs: #fff;
+$section-title-bg: #fff;
+$section-title-bg-active: #f5f5f5;
+$section-title-bg-active-tabs: #f5f5f5;
 // $section-title-bg-hover: darken($section-title-bg, $section-function-factor / 2);
 
 // Want to control border size, here ya go!
@@ -1080,7 +1082,7 @@ $panel-border-color: #CCC;//darken($panel-bg, $panel-function-factor);
 
 // Control the color of the background and some size options
 
-// $section-content-bg: #fff;
+$section-content-bg: #f5f5f5;
 // $section-vertical-nav-min-width: emCalc(200);
 // $section-vertical-tabs-title-width: emCalc(200);
 // $section-bottom-margin: emCalc(20);

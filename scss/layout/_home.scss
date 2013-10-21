@@ -6,6 +6,7 @@
 /*main search*/
 #search-tabs{
 	@include grid-column(12);
+	padding: 0px;
 
 	h2{
 		color: $primary-color;
@@ -21,35 +22,88 @@
 	@include grid-row;
 }
 #searchall{
-	@include grid-column(10);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(10);
+	}
 	height: 3.5em;
 	margin-bottom: 0px;
 }
 #all-submit{
-	@include grid-column(2);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(2);
+	}
 	height: 3.79em;
 	margin-bottom: 0px;
 }
 #research-options{
+	@include grid-row;
 	font-size: 0.75em;
+	margin-bottom: emCalc(20);
 	margin-top: emCalc(10);
+
+	h6{
+		display: inline;
+		float: left;
+		font-weight: bold;
+		line-height: 1.5em;
+		margin-right: emCalc(10);
+
+		@media #{$mobile}{
+			@include grid-column(12);
+			padding-left: 0px;
+		}
+	}
+
+	ul{
+		@include inline-list;
+		display: inline;
+
+		li{
+			border-left: 1px solid #DDD;
+			margin-left: emCalc(10);
+			padding-left: emCalc(10);
+		}
+
+		li:first-child{
+			border-left: 0px;
+			margin-left: 0px;
+			padding-left: 0px;
+		}
+	}
 }
 /*articles*/
 #search-articles-summon{
 	@include grid-row;
 }
 #searcharticle{
-	@include grid-column(10);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(10);
+	}
 	height: 3.5em;
 	margin-bottom: emCalc(5);
 }
 #article-submit{
-	@include grid-column(2);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(2);
+	}
 	margin-bottom: emCalc(5);
 	height: 3.79em;
 }
 .search-example{
-	@include grid-column(9);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(9);
+	}
+
 	color: rgba(0, 0, 0, 0.5);
 	font-size: 0.7em;
 	padding-left: 0px;
@@ -60,7 +114,12 @@
 	margin-bottom: 0px;
 }
 #searcharticleadvanced{
-	@include grid-column(3);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(3);
+	}
+
 	border: 1px solid #DDD;
 	margin-bottom: emCalc(15);
 	padding: 5px;
@@ -71,34 +130,83 @@
 }
 /*Books/Media*/
 #books-media-search{
-	@include grid-column(10);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(10);
+	}
 	height: 3.5em;
 	margin-bottom: emCalc(5);
 }
 #searchbookssubmit{
-	@include grid-column(2);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(2);
+	}
+
 	height: 3.79em;
 	margin-bottom: emCalc(5);
 }
 #books-more-options-drop{
-	@include grid-column(3);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(3);
+	}
+
 	border: 1px solid #DDD;
 	margin-bottom: emCalc(15);
 	padding: 5px;
 }
 /*search website*/
 #searchweb{
-	@include grid-column(10);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(10);
+	}
+
 	height: 3.5em;
 	margin-bottom: emCalc(5);
 }
 #web-submit{
-	@include grid-column(2);
+	@include grid-column(12);
+
+	@media #{$small}{
+		@include grid-column(2);
+	}
+
 	margin-bottom: emCalc(5);
 	height: 3.79em;
 }
 
 /*end tabs*/
+
+/*begin quicklinks*/
+#home-quicklinks{
+	@include inline-list;
+	list-style-type: none;
+	margin: 0px;
+
+	li{
+		margin-left: 0px;
+		margin-right: emCalc(45);
+
+		h5{
+			margin-bottom: 0px;
+		}
+	}
+
+	ul{
+		@include side-nav;
+
+		li{
+			margin-bottom: 0px;
+		}
+	}
+}
+/*end quicklinks*/
 
 /*begin artbox*/
 #home-artbox{
@@ -132,13 +240,80 @@
 #tier-two{
 	@include grid-row;
 	margin-bottom: emCalc(30);
+
+	h4 a{
+		border-left: 1px solid #555;
+		font-size: 0.5em;
+		margin-left: emCalc(10);
+		padding-left: emCalc(10);
+	}
+
+	h4 a:first-child{
+		border: 0px;
+		margin-left: 0px;
+	}
 }
 /*begin availibility*/
 #availibility{
 	@include grid-row;
 
-	#availibility-tabs{
-		@include grid-column(12);
+	.active .title{
+		background: #f5f5f5;
+		border-right: 0px;
+
+		a{
+			color: #555;
+			font-weight: bold;
+		}
+
+		a:hover{
+			background: #f5f5f5;
+		}
+	}
+
+	.title{
+		background: #fff;
+		border-bottom: 1px solid #CCC;
+		font-size: 0.7em;
+
+		a{
+			color: $primary-color;
+		}
+
+		a:hover{
+			background: #DDD;
+		}
+	}
+
+	.content{
+		background: #f5f5f5;
+
+		ul{
+			@include grid-row;
+			list-style-type: none;
+			margin: 0px;
+			text-align: center;
+
+			li{
+				@include grid-column(4);
+				display: inline-block;
+				line-height: 2em;
+
+				.item a{
+					font-size: 1.2em;
+					text-transform: uppercase;
+				}
+
+				.count{
+					font-size: 2em;
+				}
+			}
+		}
+	}
+
+	.section-container.vertical-tabs > section.active,
+	.section-container.vertical-tabs > .section.active{
+		padding-left: emCalc(139);
 	}
 }
 /*end availibility*/
@@ -203,6 +378,7 @@
 	.happenings-photo{
 		@include grid-column(6);
 		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	.happenings-content{

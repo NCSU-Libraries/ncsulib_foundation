@@ -1,6 +1,14 @@
 /* NCSU Branding */
-#ncsu_branding_container {
-	background-color: #C00;  /* Other choices: #000, #a30d01, #5a5952, #000, #CC0000, #666; */
+#ncsu_branding_bar{
+	display: none;
+
+	@media #{$small}{
+		display: block;
+	}
+}
+
+/*#ncsu_branding_container {
+	background-color: #C00;
 	height: 31px;
 	margin-bottom: 0px;
 }
@@ -38,5 +46,5 @@
 }
 #ncsu_branding li a:hover {
 	color: white;
-}
+}*/
 /* End NCSU branding */

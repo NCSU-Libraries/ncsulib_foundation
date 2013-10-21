@@ -214,16 +214,30 @@ header#minimum-bar{
 /*begin utility*/
 #utility{
 	background: $topbar-dropdown-bg;
-	margin-bottom: emCalc(30);
+	margin-bottom: emCalc(15);
+
+	@media #{$small}{
+		margin-bottom: emCalc(30);
+	}
 
 	#utility-bar{
 		@include grid-row;
 
 		#home-hours{
-			/*@include grid-column(6);*/
+			width: 100%;
+
+			@media #{$mobile}{
+				display: none;
+			}
+
+			@media #{$small}{
+				float: left;
+				margin-left: emCalc(14);
+				width: auto;
+			}
+
 			background: lighten($topbar-dropdown-bg, 15%);
 			float: left;
-			margin-left: emCalc(14);
 			padding-left: 0px;
 
 			p#hours-title{
@@ -310,8 +324,16 @@ header#minimum-bar{
 		}
 
 		#utility-links{
-			@include grid-column(6);
-			float: right;
+			@include grid-column(12);
+
+			@media #{$mobile}{
+				display: none;
+			}
+
+			@media #{$small}{
+				float: right;
+				width: auto;
+			}
 			ul{
 				list-style-type: none;
 				float: right;
