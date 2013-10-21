@@ -295,16 +295,37 @@
 			text-align: center;
 
 			li{
-				@include grid-column(4);
-				display: inline-block;
 				line-height: 2em;
+
+				@media #{$mobile}{
+					height: 45px;
+					text-align: left;
+				}
+
+				@media #{$small}{
+					@include grid-column(4);
+					display: inline-block;
+				}
+
+				.item{
+					float: left;
+				}
 
 				.item a{
 					font-size: 1.2em;
 					text-transform: uppercase;
 				}
 
+				.item-count{
+					color: #999;
+
+					@media #{$mobile}{
+						float: right;
+					}
+				}
+
 				.count{
+					color: #555;
 					font-size: 2em;
 				}
 			}

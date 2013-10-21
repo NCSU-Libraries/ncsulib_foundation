@@ -5,7 +5,7 @@
             <a id="main-content"></a>
 
             <!-- top row -->
-            <div id="tier-one">
+            <section id="tier-one">
 
                 <?php include 'includes/home-search-tabs.php'; ?>
 
@@ -24,10 +24,10 @@
                     </ul>
                 </div>
 
-            </div> <!-- /top row -->
+            </section> <!-- /top row -->
 
             <!-- middle row -->
-            <div id="tier-two">
+            <section id="tier-two">
                 <h4>Availability <a href="/reservearoom/">Reserve a Room</a><a href="/techlending/">Borrow Technology</a></h4>
                 <div id="availibility">
                     <!-- availability tabs stub -->
@@ -38,15 +38,15 @@
                                 <ul>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Study Rooms</a>:</span>
-                                        <span class="count">18</span> of 201
+                                        <span class="item-count"><span class="count">18</span> of 73</span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Laptops</a>:</span>
-                                        <span class="count">93</span> of 176
+                                        <span class="item-count"><span class="count">47</span> of 67</span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Tablets</a>:</span>
-                                        <span class="count">27</span> of 41
+                                        <span class="item-count"><span class="count">76</span> of 82</span>
                                     </li>
                                 </ul>
                             </div>
@@ -57,25 +57,25 @@
                                 <ul>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Study Rooms</a>:</span>
-                                        <span class="count">72</span> of 456
+                                        <span class="item-count"><span class="count">3</span> of 43</span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Laptops</a>:</span>
-                                        <span class="count">27</span> of 256
+                                        <span class="item-count"><span class="count">654</span> of 764</span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Tablets</a>:</span>
-                                        <span class="count">65</span> of 458
+                                        <span class="item-count"><span class="count">13</span> of 46</span>
                                     </li>
                                 </ul>
                             </div>
                         </section>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- bottom row -->
-            <div id="tier-three">
+            <section id="tier-three">
 
                 <div id="story-1">
                     <div class="story-photo">
@@ -137,7 +137,7 @@
                     </div>
                 </div>
 
-            </div> <!-- /bottom row -->
+            </section> <!-- /bottom row -->
 
         </div> <!--/.main region -->
     </main> <!--/.main-->
