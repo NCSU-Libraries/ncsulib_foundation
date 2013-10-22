@@ -212,6 +212,10 @@
 #home-artbox{
 	@include grid-column(12);
 
+	@media #{$mobile}{
+		display: none;
+	}
+
 	@media #{$small}{
 		@include grid-column(5);
 		padding-right: 0px;
