@@ -64,6 +64,7 @@ scripts[] = js/foundation/foundation.tooltips.js
 scripts[] = js/foundation/foundation.topbar.js
 scripts[] = js/primary-nav.js
 scripts[] = js/search-bar.js
+scripts[] = js/mobile-nav.js
 
 ; Other vendor scripts
 ; mega menus

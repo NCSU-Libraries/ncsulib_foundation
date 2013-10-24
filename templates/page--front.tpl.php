@@ -103,8 +103,8 @@
                         </a>
                     </div>
                     <h2><a href="http://d.lib.ncsu.edu/myhuntlibrary">MY &#35;HuntLibrary</a></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adcing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>We're archiving Instagram photographs tagged #HuntLibrary to help document the story of the James B. Hunt Jr. Library -- the best learning and collaborative space in the country.</p>
+                    <p>See recent and popular photos, staff picks, and vote for your favorites. </p>
                 </div>
 
                 <div id="happenings">
@@ -114,7 +114,7 @@
                         </div>
                         <div class="happenings-content">
                             <h2><a href="/news/">News</a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>Technology, innovative spaces, new library resources, and more…</p>
                         </div>
                     </div>
                     <div id="home-events">
@@ -123,7 +123,7 @@
                         </div>
                         <div class="happenings-content">
                             <h2><a href="/news/">Events</a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>Speaker series’, book discussions, campus and community events...</p>
                         </div>
                     </div>
                     <div id="home-exhibits">
@@ -132,7 +132,7 @@
                         </div>
                         <div class="happenings-content">
                             <h2><a href="/news/">Exhibits</a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>Featured collections, visiting exhibits, digital immersion experiences…</p>
                         </div>
                     </div>
                 </div>

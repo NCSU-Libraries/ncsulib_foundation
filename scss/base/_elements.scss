@@ -12,9 +12,11 @@
 
 // Anchors
 //-----------------------------------------------------------------------------
-// a {}
+a {}
 
-// a:focus {}
+a:focus {
+	outline: none !important;
+}
 
 // a.active,
 // a:active,

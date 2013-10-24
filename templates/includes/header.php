@@ -1,3 +1,5 @@
+<?php include 'mobile-nav.php'; ?>
+
 <header class="contain-to-grid">
 	<nav class="top-bar">
 		<ul class="title-area">
@@ -6,17 +8,16 @@
 					<img src="<?php print $GLOBALS['base_url'].'/'.path_to_theme().'/images/ncsu-library-logo-white.png'; ?>" alt="<?php print t('Home'); ?>" />
 			  	</a>
 			</li>
-			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+			<li id="nav-toggle">
+				<a href="#"><i class="icon-reorder"></i></a>
+			</li>
+			<li id="search-toggle">
+				<a href="#"><i class="icon-search"></i></a>
+			</li>
 		</ul>
 
-		<section class="top-bar-section">
-			<ul id="primary-nav" class="right">
-				<li><a href="/find" data-menu="find" class="primary-menu-item">Find</a></li>
-				<li><a href="/gethelp" data-menu="help" class="primary-menu-item">Get Help</a></li>
-				<li><a href="/services" data-menu="services" class="primary-menu-item">Services</a></li>
-				<li><a href="/hours/hill/general" data-menu="libraries" class="primary-menu-item">Libraries</a></li>
-				<li><a href="/about" data-menu="about" class="primary-menu-item">About</a></li>
-			</ul>
+		<section class="top-bar-section primary-nav home">
+			<?php include 'primary-nav.php'; ?>
 		</section>
 	</nav>
 </header>
@@ -100,10 +101,10 @@
 	<div id="utility-bar">
 		<?php if(drupal_is_front_page()): ?>
 		<div id="home-hours">
-			<p id="hours-title">HOURS:</p>
+			<p id="hours-title"><a href="/hours">HOURS</a>:</p>
 			<ul>
-				<li><a href="/hours/general/hill">D. H. Hill Library: &nbsp; Open 24 Hours</a></li>
-				<li><a href="/hours/general/hunt">James B. Hunt Library: &nbsp; 7am-11pm</a></li>
+				<li><a href="/hours/general/hill"><span class="library">D. H. Hill Library:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
+				<li><a href="/hours/general/hunt"><span class="library">James B. Hunt Library:</span> &nbsp; <span class="hours">7am-11pm</span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>
@@ -114,15 +115,6 @@
 			</form>
 		</div>
 		<?php endif; ?>
-		<nav id="utility-links">
-			<ul>
-				<li><a href="/askus">ASK US</a></li>
-				<li><a href="http://myaccount.lib.ncsu.edu">MY ACCOUNT</a></li>
-				<li><a href="/hours/">HOURS</a></li>
-				<li><a href="/faq/">FAQ</a></li>
-				<li><a href="https://www.lib.ncsu.edu/website/logout.php">LOG OUT</a></li>
-				<li><a href="http://libraryh3lp.com/chat/ref-desk@chat.libraryh3lp.com">CHAT NOW</a></li>
-			</ul>
-		</nav>
+		<?php include 'utility-links.php'; ?>
 	</div>
 </section>

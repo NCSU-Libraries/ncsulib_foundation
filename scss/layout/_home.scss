@@ -24,6 +24,10 @@
 #searchall{
 	@include grid-column(12);
 
+	@media #{$mobile}{
+		margin-bottom: emCalc(10);
+	}
+
 	@media #{$small}{
 		@include grid-column(10);
 	}
@@ -213,7 +217,8 @@
 	@include grid-column(12);
 
 	@media #{$mobile}{
-		display: none;
+		margin-bottom: emCalc(30);
+		padding: 0px;
 	}
 
 	@media #{$small}{
@@ -263,7 +268,9 @@
 
 	.active .title{
 		background: #f5f5f5;
-		border-right: 0px;
+		@media #{$small}{
+			border-right: 0px;
+		}
 
 		a{
 			color: #555;
