@@ -1,0 +1,405 @@
+/*begin global hours styles*/
+#sidebar-left{
+	margin-right: 0px;
+}
+#schedule-block{
+	border-bottom: 1px solid #DDD;
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	margin: 0px 0px 20px 0px;
+	padding: 20px 20px 20px;
+}
+/*end global hours styles*/
+
+/*begin service locations*/
+#page #sidebar-left #libraries{
+	padding: 15px 0px 0px 0px;
+	margin: 0px 0px 20px -10px;
+	overflow: visible;
+	width: 107%;
+}
+#page #sidebar-left #libraries > li:last-child a ul.schedule{
+	border-bottom: 1px solid #DDD;
+}
+#page #sidebar-left #libraries li{
+	border: 0px;
+}
+#page #sidebar-left #libraries li a{
+	display: block;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 26px 0px 0px;
+}
+#page #sidebar-left #libraries li a:hover{
+	background: #FFF;
+	text-decoration: none;
+}
+#page #sidebar-left #libraries li a:hover ul.schedule{
+	background: #f0f0f0;
+}
+#page #sidebar-left #libraries li a:hover ul.schedule .location{
+	text-decoration: underline;
+}
+#page #sidebar-left #libraries li a.nav-active{
+	background: #f0f0f0 url(../images/hours-nav-arrow.png) no-repeat 100% center;
+	background-size: auto 100%;
+}
+#page #sidebar-left ul.schedule{
+	border-left: 1px solid #DDD;
+	border-top: 1px solid #DDD;
+	padding: 0px 0px 0px 0px;
+	position: relative;
+	width: 100%;
+}
+#page #sidebar-left > ul.schedule .location, #page #sidebar-left > ul.schedule .availability{
+	background: #f5f5f5;
+}
+#page #sidebar-left li.location{
+	float: left;
+	font-size: 1.4em;
+	height: 55px;
+	padding: 0px 0px 0px 4%;
+	width: 75%;
+}
+#page #sidebar-left li.location p{
+	display: table-cell;
+	font-size: 1em;
+	height: 55px;
+	vertical-align: middle;
+}
+#page #sidebar-left ul.schedule.service li.location p{
+	font-size: 0.7em;
+	padding-left: 25px;
+	width: 70%;
+}
+#page #sidebar-left #libraries li.availability{
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+    display: table-cell;
+	height: 55px;
+	padding: 0px 0% 0px 0px;
+    text-align: center;
+    vertical-align: middle;
+    width: 20%;
+}
+#page div.hstatus{
+	font-size: 1.2em;
+	font-weight: normal;
+	margin: 0px 0px 2px 0px;
+	text-transform: uppercase;
+}
+#page div.hstatus.open{
+	color: #1D8C14;
+	font-weight: bold;
+}
+#page div.hstatus.appointment{
+	margin: -4px 0px 0px 0px;
+}
+#page div.hstatus.closed{
+	color: #cc0000;
+	font-weight: bold;
+}
+#page div.time{
+	color: #999;
+	font-size: 0.8em;
+}
+/*end service locations*/
+
+/*begin download PDFs*/
+#page #sidebar-left #hours-download li a{
+	padding: 8px 0px 8px 0px;
+}
+#hours-download img{
+	float: left;
+	margin: 6px 5px 0px 0px;
+}
+/*end download PDFs*/
+
+/*begin main schedule block*/
+#page #main{
+
+}
+/*end main schedule block*/
+
+/*begin library description*/
+#block-views-library-description-block{
+	float: left;
+}
+#lib-meta h2,#page #lib-meta p{
+	margin: 0px 0px 15px 0px;
+	padding: 0px;
+}
+#lib-meta h3{
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+}
+/*end library description*/
+
+
+
+/*begin mini calendar*/
+#cal{
+	float: right;
+	padding: 15px 0px 0px 0px;
+}
+#page .hours-calendar{
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	margin: 0px 30px 30px 0px;
+}
+#page .hours-calendar table.mini{
+	margin-bottom: 0px;
+	position: relative;
+	width: 100%;
+}
+#page .hours-calendar tbody{
+	border: 0px;
+}
+#page .hours-calendar th.mini, #page .hours-calendar td.mini{
+	border-bottom: 0px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	cursor: pointer;
+	padding: 5px;
+	text-align: center;
+	width: 14.2857142%;
+}
+#page #cal .hours-calendar td.mini:hover{
+	background: #666;
+	color: #FFF;
+}
+#page #cal .hours-calendar td.mini.empty:hover{
+	background: #FFF;
+}
+#page .hours-calendar th.label{
+	border-bottom: 0px;
+	border-left: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	padding: 0px;
+	text-align: center;
+	text-transform: capitalize;
+}
+#page .hours-calendar.alpha .mini td.mini.empty{
+	background: #fff;
+}
+#page .hours-calendar .mini td.mini.exception{
+	background: #C7B18A;
+}
+#page .hours-calendar .mini td.mini.exam-hours{
+	background: #67849C;
+}
+#page .hours-calendar td.mini.fall{
+	background: #e5c051;
+}
+#page .hours-calendar td.mini.spring{
+	background: #CCDDAA;
+}
+#page .hours-calendar td.mini.summer{
+	background: #E5E1D0;
+}
+#page .hours-calendar td.mini.has-events.today{
+	border: 2px solid #666666;
+}
+#page .hours-calendar td.mini.has-events.closed{
+	/*background: #FFF;*/
+	color: #ccc;
+}
+.view-library-hours-calendar{
+	float: left;
+}
+#page .view-library-hours-calendar .view-header{
+	display: none;
+}
+#page .view-library-hours-calendar .hours-pager{
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	border-top: 1px solid #DDD;
+	background: #f5f5f5;
+	float: left;
+	height: 35px;
+	left: 0px;
+	position: relative;
+	top: 0px;
+	width: 560px;
+	z-index: 2;
+}
+#page .view-library-hours-calendar .hours-pager .date-heading h3{
+	font-size: 1.3em;
+}
+#page .view-library-hours-calendar .hours-pager ul.page{
+	margin: 0px;
+	position: absolute;
+	top: 0px;
+	width: 560px;
+	z-index: 2;
+}
+#page .view .date-nav-wrapper{
+	margin: 0px;
+}
+#page .view .date-nav-wrapper .date-nav{
+	margin: 0px;
+	padding: 0px;
+}
+#page .view-library-hours-calendar .hours-pager ul.page li{
+	background: none;
+}
+#page .view-library-hours-calendar .hours-pager ul.page li.date-prev{
+	float: left;
+	height: 35px;
+	margin: 0px;
+	padding: 0px;
+	position: static;
+}
+#page .view-library-hours-calendar .hours-pager ul.page li.date-prev a{
+	background: #E5E3E3;
+	height: 26px;
+	display: block;
+	margin: 0px;
+	padding: 9px 0px 0px 0px;
+	text-align: center;
+	width: 30px;
+}
+#page .view-library-hours-calendar .hours-pager ul.page li.date-next{
+	float: right;
+	height: 35px;
+	margin: 0px;
+	padding: 0px;
+	position: static;
+}
+#page .view-library-hours-calendar .hours-pager ul.page li.date-next a{
+	background: #E5E3E3;
+	height: 26px;
+	display: block;
+	margin: 0px 0px 0px 0px;
+	padding: 9px 0px 0px 0px;
+	text-align: center;
+	width: 30px;
+}
+
+/*end mini calendar*/
+
+
+/*begin hours schedule*/
+.regular-schedule{
+	margin: 0px 0px 20px 0px;
+}
+.regular-schedule h3{
+	padding: 0px;
+}
+.regular-schedule table{
+	width: 100%;
+}
+.regular-schedule .reg-hours{
+	border: 1px solid #DDD;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	float: left;
+	height: 16px;
+	margin: 2px 10px 10px 0px;
+	width: 16px;
+}
+.regular-schedule .fall{
+	background: #e5c051;
+}
+.regular-schedule .spring{
+	background: #CCDDAA;
+}
+.regular-schedule .summer{
+	background: #E5E1D0;
+}
+span.sem-dates{
+	display: block;
+	font-size: 0.6em;
+	font-weight: normal;
+}
+#block-views-library-schedule-block{
+	float: left;
+}
+#block-views-library-hours-exceptions-block{
+	float: left;
+}
+/*end hours schedule*/
+
+
+/*begin exceptions sched*/
+.exceptions-schedule{
+	margin: 0px 0px 20px 0px;
+}
+.exceptions-schedule h3{
+	padding: 0px;
+}
+.exceptions-schedule table{
+	width: 100%;
+}
+.exceptions-schedule .exception-hours{
+	background: #C7B18A;
+	border: 1px solid #DDD;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	float: left;
+	height: 16px;
+	margin: 2px 10px 10px 0px;
+	width: 16px;
+}
+.exceptions-schedule .exam-hours{
+	background: #67849C;
+	border: 1px solid #DDD;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	float: left;
+	height: 16px;
+	margin: 2px 10px 10px 0px;
+	width: 16px;
+}
+
+/*end exceptions sched*/
+
+/*begin calendar popup*/
+.date-popup-wrapper{
+	background: #FFF;
+	border: 1px solid #DDD;
+	box-shadow: 0px 1px 6px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	position : absolute;
+	text-align: left;
+	z-index: 2;
+}
+.date-popup{
+	border-radius: 5px;
+	padding: 15px;
+	position: relative
+	z-index: 2;
+}
+.date-popup:after{
+	background: #FFF;
+	box-shadow: 3px 5px 6px -2px rgba(0,0,0,0.3);
+	content: "";
+	height: 15px;
+	position: absolute;
+	left: 46%;
+	top: 85%;
+	-webkit-transform:rotate(45deg);
+       -moz-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+         -o-transform:rotate(45deg);
+            transform:rotate(45deg);
+	width: 15px;
+	z-index: 1;
+}
+#page .date-popup h2{
+	color: #555;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	white-space: nowrap;
+}
+#page .date-popup p{
+	color: #555;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+	white-space: nowrap;
+}
+/*end calendar popup*/
+
+

@@ -27,56 +27,56 @@ base theme = zurb_foundation
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
 ; For CSS users, load the app.css file:
-; stylesheets[all][] = css/app.css
+; stylesheets[all][] = styles/core/app.css
 ; Comment the app.css file (above) if you're using sass to preprocess css:
-stylesheets[all][] = css/ncsulib_foundation.css
+stylesheets[all][] = styles/core/ncsulib_foundation.css
 
 ; Foundation JavaScript.
 
 ;jQuery
-scripts[] = js/vendor/jquery-1.10.2.min.js
+scripts[] = scripts/vendor/jquery-1.10.2.min.js
 
 ; Modernizr acts as a shim for HTML5 elements for older browsers
 ; as well as detection for mobile devices.
-scripts[] = js/vendor/custom.modernizr.js
+scripts[] = scripts/vendor/custom.modernizr.js
 
 ; Foundation framework scripts (minified).
 ; If you prefer to have more control over which components are included you
 ; can comment this line and uncomment the ones below you want.
-;scripts[] = js/foundation.min.js
+;scripts[] = scripts/foundation.min.js
 
 ; Foundation framework scripts (uncompressed).
-scripts[] = js/foundation/foundation.js
-scripts[] = js/foundation/foundation.abide.js
-scripts[] = js/foundation/foundation.alerts.js
-;scripts[] = js/foundation/foundation.clearing.js
-;scripts[] = js/foundation/foundation.cookie.js
-scripts[] = js/foundation/foundation.dropdown.js
-scripts[] = js/foundation/foundation.forms.js
-;scripts[] = js/foundation/foundation.interchange.js
-;scripts[] = js/foundation/foundation.joyride.js
-;scripts[] = js/foundation/foundation.magellan.js
-scripts[] = js/foundation/foundation.orbit.js
-;scripts[] = js/foundation/foundation.placeholder.js
-scripts[] = js/foundation/foundation.reveal.js
-scripts[] = js/foundation/foundation.section.js
-scripts[] = js/foundation/foundation.tooltips.js
-scripts[] = js/foundation/foundation.topbar.js
-scripts[] = js/primary-nav.js
-scripts[] = js/search-bar.js
-scripts[] = js/mobile-nav.js
+scripts[] = scripts/foundation/foundation.js
+scripts[] = scripts/foundation/foundation.abide.js
+scripts[] = scripts/foundation/foundation.alerts.js
+;scripts[] = scripts/foundation/foundation.clearing.js
+;scripts[] = scripts/foundation/foundation.cookie.js
+scripts[] = scripts/foundation/foundation.dropdown.js
+scripts[] = scripts/foundation/foundation.forms.js
+;scripts[] = scripts/foundation/foundation.interchange.js
+;scripts[] = scripts/foundation/foundation.joyride.js
+;scripts[] = scripts/foundation/foundation.magellan.js
+scripts[] = scripts/foundation/foundation.orbit.js
+;scripts[] = scripts/foundation/foundation.placeholder.js
+scripts[] = scripts/foundation/foundation.reveal.js
+scripts[] = scripts/foundation/foundation.section.js
+scripts[] = scripts/foundation/foundation.tooltips.js
+scripts[] = scripts/foundation/foundation.topbar.js
+scripts[] = scripts/primary-nav.js
+scripts[] = scripts/search-bar.js
+scripts[] = scripts/mobile-nav.js
 
 ; Other vendor scripts
 ; mega menus
-scripts[] = js/vendor/jquery.hoverIntent.minified.js
-scripts[] = js/vendor/jquery.dcmegamenu.1.3.3.min.js
+scripts[] = scripts/vendor/jquery.hoverIntent.minified.js
+scripts[] = scripts/vendor/jquery.dcmegamenu.1.3.3.min.js
 ; typeahead
-scripts[] = js/vendor/jquery.autocomplete.js
-scripts[] = js/vendor/jquery.mockjax.js
+scripts[] = scripts/vendor/jquery.autocomplete.js
+scripts[] = scripts/vendor/jquery.mockjax.js
 
 ; Theme scripts.
 ; This file is empty, just uncomment this line and start editing!
-scripts[] = js/ncsulib_foundation.js
+scripts[] = scripts/ncsulib_foundation.js
 
 ; This section lists the regions defined in the page.tpl.php. The name in
 ; brackets is the machine name of the region. The text after the equals sign is

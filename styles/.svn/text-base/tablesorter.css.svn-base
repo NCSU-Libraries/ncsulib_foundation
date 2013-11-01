@@ -1,0 +1,46 @@
+/* tables */
+#page table.tablesorter {
+    font-family: arial;
+    background-color: #CDCDCD;
+    margin: 10px 0pt 15px;
+    font-size: 8pt;
+    width: 100%;
+    text-align: left;
+}
+
+#page table.tablesorter thead tr th, #page table.tablesorter tfoot tr th {
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    padding: 4px;
+}
+
+#page table.tablesorter thead tr .header {
+    background-image: url(/sites/default/files/huntlibrary/css/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+
+#page table.tablesorter tbody td {
+    color: #3D3D3D;
+    padding: 4px;
+    background-color: #FFF;
+    vertical-align: top;
+}
+
+#page table.tablesorter tbody tr.odd td {
+    background-color: #F0F0F6;
+}
+
+#page table.tablesorter thead tr .headerSortUp {
+    background-image: url(/sites/default/files/huntlibrary/css/asc.gif);
+}
+
+#page table.tablesorter thead tr .headerSortDown {
+    background-image: url(/sites/default/files/huntlibrary/css/desc.gif);
+}
+
+#page table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #8dbdd8;
+}

@@ -1,0 +1,21 @@
+.availability .row {
+  display: block;
+  padding-left: 18px;
+  list-style: none;
+  background: url(/sites/all/themes/ncsulibraries/images/graybullet.png) 6px 9px no-repeat;
+}
+.availability .row {
+  border-bottom:1px dotted #999;
+}
+.tab {
+  width: 120px;
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+.availability i {
+  width: 7px;
+  display: inline-block;
+}
+.data {
+  font-weight: 700;
+}

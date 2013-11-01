@@ -1,0 +1,10 @@
+h1 																					{ display:none; }
+img.image-as-h1															{ border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+#page #node-1009 p													{ font-size: 15px; line-height: 1.3; }
+#page #node-1009 p.big-text									{ font-size: 1.7em; }
+#page #footer																{ padding:0; color:#555; }
+#footer div.field-name-media-gallery-media	{ margin:0; }
+#footer div#block-media-gallery-1010				{ margin:0; }
+#page p.caption															{ margin: 15px 4px; float:none; border:1px solid #ddd; padding:5px; }
+#main, #node-1010, #node-1009,
+#block-system-main													{ margin-bottom:0; }

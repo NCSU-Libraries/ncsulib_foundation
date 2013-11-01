@@ -1,0 +1,130 @@
+h1{
+	font-size: 20px !important;
+}
+.book_info{
+	font-size: 11px !important;
+}
+.draw{
+	font-size: 14px !important;
+	font-weight: bold;
+	line-height: 16px;
+	padding-bottom: 10px;
+}
+.graphite{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	padding-bottom: 15px;
+}
+#page .menu{
+ padding-top: 30px !important;
+}
+#page .menu a{
+	color: #555 !important;
+}
+#page .menu a:hover{
+	color: #D7753E !important;
+}
+#page .menu a.active{
+	color: #D7753E !important;
+}
+#page .draw a{
+	color: #555 !important;
+}
+#page .draw a:hover{
+	color: #D7753E !important;
+	text-decoration: none;
+}
+#page .draw a.active{
+	color: #D7753E !important;
+}
+#page #sidebar-left ul li{
+	border-bottom: none !important;
+	font-size: 14px;
+	padding-bottom: 20px !important;
+}
+#page #sidebar-left ul li a:hover{
+	background: none !important;
+}
+.node a{
+	color: #D7753E !important;
+	font-weight: bold;
+}
+.producedwith{
+	font-size: 9px !important;
+	border-top: 1px solid #ddd;
+	line-height: 12px;
+	padding-top: 10px;
+}
+.smallheading{
+	font-size: 14px;
+	font-weight: normal !important;
+}
+.text{
+	font-size: 14px !important;
+	line-height: 22px !important;
+	font-family: arial;
+}
+.textpaddingleft175{
+	padding-left: 175px;
+}
+.textpaddingleft40{
+	padding-left: 40px;
+}
+.textpaddingtop{
+	padding-top: 25px;
+}
+.quote{
+	font-weight: bold;
+	line-height: 16px !important;
+}
+div.views-field-field-caption-value{
+	position: absolute;
+	top: 570px;
+	font-size: 11px !important;
+}
+.views-slideshow-controls-bottom{
+	float: right;
+	 margin: 0 22px 0 0;
+}
+.views_slideshow_controls_text_pause{
+    display: block;
+    height: 0;
+    padding-top: 30px;
+    width: 3px;
+    float: left;
+    background: #666666;
+    margin: 0 13px 0 10px;
+    cursor: default;
+    text-indent: 10000px;
+}
+.views_slideshow_controls_text_play{
+    display: block;
+    height: 0;
+    padding-top: 30px;
+    width: 3px;
+    float: left;
+    background: #666666;
+    margin: 0 13px 0 10px;
+    cursor: default;
+    text-indent: 10000px;
+}
+.views_slideshow_controls_text_previous{
+    background: url("/sites/default/files/images/previous.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 40px;
+    float: left;
+    padding-top: 40px;
+}
+.views_slideshow_controls_text_next{
+    background: url("/sites/default/files/images/next.png") no-repeat scroll 0 0px transparent;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 60px;
+    padding-top: 40px;
+}
+div#page {
+    overflow: hidden;}

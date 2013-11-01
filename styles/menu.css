@@ -1,0 +1,226 @@
+/* menu testing */
+
+#nav_container {
+	background-color: #666;
+	background-color: #a30d01;
+	background-color: #cc0000;
+	background-color: #666;
+	height: 33px;
+}
+
+#nav {
+	z-index: 90;
+}
+
+#nav > .grid_7 {
+	z-index: 80;
+}
+
+ul#mega li a.head-link {
+	letter-spacing: 1px;
+}
+
+/* styling for the top 4 nav links */
+ul#mega {
+	font-size: 12px;
+	list-style: none;
+	margin: 0; padding: 0;
+	float:left;
+	width: 100%;
+	list-style: none;
+}
+
+ul#mega li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+ul#mega li a.head-link {
+	line-height: 33px;
+}
+ul#mega li a {
+	border-right: 1px solid #777;
+	border-right: 1px solid #a30d01;
+	border-right: 1px solid #555;
+	color: #fff;
+	display: inline-block;
+	float: left;
+	font-size: 11px;
+	line-height: 24px;
+	text-align: center;
+	text-decoration: none; !important;
+    text-transform: uppercase;
+	width: 90px;
+}
+
+ul#mega li a:hover {
+	width: 90px;
+	background: #777;
+}
+
+ul#mega li:hover a, ul#mega li a:hover {
+	background-position: left bottom;
+}
+
+/* styling for the submenus */
+ul#mega li .sub {
+	position: absolute;
+	top: 32px; left: -1px;
+	z-index: 1000;
+	background-color: white;
+	float: left;
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	display: none;
+	border-left: 2px solid #666;
+	border-right: 2px solid #666;
+	border-bottom: 2px solid #666;
+}
+
+ul#mega li.first .sub {
+	left: 0;
+}
+
+ul#mega li .row {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+ul#mega li .top {
+	padding: 15px 10px 10px 20px;
+}
+
+ul#mega li .bottom {
+	background: #ccc;
+	font-size: 11px;
+}
+
+ul#mega li .bottom a {
+	padding-left: 10px;
+	display: inline;
+	color: red;
+	text-align: left;
+	float: none;
+	text-transform: none;
+	width: auto;
+	border: none;
+	color: #155F83;
+	margin: 0;
+	padding: 0;
+}
+
+ul#mega li .bottom p {
+	padding: 10px;
+}
+
+ul#mega li .bottom a.more {
+	float: right;
+}
+
+ul#mega li .sub ul {
+	list-style:none;
+	margin: 0; padding: 0;
+	float: left;
+	width: 180px;
+}
+
+ul#mega .sub ul li {
+	width: 100%; /*--Override parent list item--*/
+	color: #fff;
+}
+
+ul#mega .sub ul li a {
+	float: none;
+	text-indent: 0;
+	height: auto;
+	padding: 0;
+	text-transform: none;
+	display: block;
+	color: #4C83AF;
+	text-align: left;
+	border-width: 0;
+	font-size: 12px;
+	width: 150px;
+	border-bottom: 1px dotted #ccc;
+}
+
+ul#mega .sub ul li a:hover {
+	background-color: transparent;
+	text-decoration: none;
+	background-color: #eee;
+	color: #004276;
+}
+
+ul#mega .sub .sublinks a {
+	float: none;
+	text-indent: 0;
+	height: auto;
+	width: auto;
+	text-transform: none;
+	display: inline;
+	color: #155F83;
+	color: #4C83AF;
+	text-align: left;
+	border-width: 0;
+	font-size: 11px;
+	margin-left: 10px;
+	padding: 0;
+}
+
+ul#mega .sub ul.menu-feature .caption {
+	float: left;
+	text-indent: 0;
+	height: auto;
+	padding: 0;
+	text-transform: none;
+	display: inline;
+	color: #666;
+	text-align: left;
+	border-width: 0;
+	font-size: 11px;
+	border-bottom: none;
+	padding-left: 10px;
+	width: 130px;
+	line-height: 1.6em;
+}
+ul#mega .sub ul.menu-feature .caption a{
+	line-height: 1.6em;
+}
+ul.menu-feature img {
+	padding: 5px;
+	border: 1px solid #dcdcdc;
+	margin-left: 10px;
+}
+
+ul#mega .sub ul.menu-feature a {
+	float: none;
+	text-indent: 0;
+	height: auto;
+	padding: 0;
+	text-transform: none;
+	display: inline;
+	color: #155F83;
+	text-align: left;
+	border-width: 0;
+	font-size: 11px;
+	border-bottom: none;
+}
+
+ul#mega .sub ul.menu-feature a:hover {
+	background: none;
+}
+
+.sub-help {
+	font-size: 11px;
+}
+
+.sub-help a {
+	padding: 0;
+}

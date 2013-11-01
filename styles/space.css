@@ -1,0 +1,39 @@
+/**
+ * For the Space node content type
+ * -Charlie Morris
+ */
+ .space-attributes {
+    margin-bottom: 10px;
+}
+.space-photo {
+    width: 480px;
+    height: auto;
+    margin: 0 0 10px 50px;
+    float: right;
+}
+a.reserve-button {
+    margin-bottom: 35px;
+}
+#page .description p {
+    line-height: 1.7;
+}
+.not-reservable {
+    color: #B3B3B3;
+    font-style: italic;
+}
+.field-item {
+    margin: 4px 6px 3px 0;
+    padding: 0 0 2px 18px;
+    list-style: none;
+    background: url(/sites/all/themes/ncsulibraries/images/graybullet.png) 5px 5px no-repeat;
+    line-height: 1.4;
+}
+.description {
+    margin-top: 36px;
+}
+.field-name-body .field-item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: none;
+}

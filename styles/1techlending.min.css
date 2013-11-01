@@ -1,0 +1,5 @@
+#page .details{font-size:11px}.views-row{width:213px;margin:0;display:block;float:left;line-height:1.3;border-left:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;padding:10px;height:334px}
+.views-row:nth-child(4n){margin-right:0}.views-row:nth-child(4n+1){clear:left}.views-field-field-lending-method,.views-field-field-device-lending-period{display:inline-block;color:gray}
+.views-field-body{margin:5px 0;text-align:left}.views-field-title a{font-size:1.25em;font-weight:700}#page .views-field-body,#page .views-field-body .field-content,#page .views-field-body p{line-height:1.2;height:45px}
+.views-field-field-device-image,.views-field-field-image{display:table;width:100%;height:220px;overflow:auto}.views-field-field-device-image .field-content,.views-field-field-image .field-content{display:table-cell;text-align:center;vertical-align:middle}
+.views-row:nth-child(1),.views-row:nth-child(2),.views-row:nth-child(3),.views-row:nth-child(4){border-top:1px solid #f0f0f0}.views-row:nth-child(4n+4),.views-row:last-child{border-right:1px solid #f0f0f0}

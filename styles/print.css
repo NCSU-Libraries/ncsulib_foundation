@@ -1,0 +1,62 @@
+/* -------------------------------------------------------------- 
+  
+ Hartija Css Print  Framework
+   * Version:   0.8 (2008-03-10)
+	 
+-------------------------------------------------------------- */
+
+body { 
+	width:100% !important;
+	margin:0 !important;
+	padding:0 !important;
+	background: #fff;
+	line-height: 1.4em;
+	word-spacing:1.1pt;
+	letter-spacing:0.2pt; 
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #000;
+	font-size: 11pt;
+}
+
+/*Headings */
+h1,h2,h3,h4,h5,h6 { font-family: Helvetica, Arial, sans-serif; }
+h1{ font-size:18pt; }
+h2{ font-size:15pt; }
+h3{ font-size:15pt; }
+h4,h5,h6{ font-size:12pt; }
+
+code { font: 10pt Courier, monospace; } 
+blockquote { margin: 1.3em; padding: 1em;  font-size: 10pt; }
+hr { background-color: #ccc; }
+
+/* Images */
+img { float: left; margin: 1em 1.5em 1.5em 0; }
+a img { border: none; }
+
+/* Links */
+a:link, a:visited { background: transparent; font-size: 12pt; font-weight: 700; text-decoration: underline;color:#333; }
+
+/* Table */
+table { margin: 1px; text-align:left; }
+th { border-bottom: 1px solid #333;  font-weight: bold; }
+td { border-bottom: 1px solid #333; }
+th,td { padding: 4px 10px 4px 0; }
+tfoot { font-style: italic; }
+caption { background: #fff; margin-bottom:2em; text-align:left; }
+thead { display: table-header-group; }
+
+/*hide various parts from the site */
+
+#skipnav, #ncsu_branding_container, #utility_links, #nav-container, #footer, #mega, #search-header, .ie6warning, #artbox, #artboxnav #fdbk_tab { display:none; }
+
+#outer{ clear: both; }
+
+#head_banner img { display: none; }
+
+#head_banner {
+	display: list-item;
+	list-style-image: url(../images/logo_bw.png);
+	list-style-position: inside;
+	margin: 0 !important;
+	padding: 0 0 20px 0 !important;
+}

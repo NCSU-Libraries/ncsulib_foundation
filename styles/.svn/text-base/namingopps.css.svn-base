@@ -1,0 +1,218 @@
+#page #hunt-subpagenav {
+    width: 162px
+}
+
+#page #hunt-subpagenav li {
+    width: 153px
+}
+
+#page div.floor {
+    display: block;
+    /*width: 737px;*/
+    margin-top: 4px;
+}
+
+#page .ui-tabs .ui-tabs-nav {
+    height: 37px
+}
+
+#page .main-content .ui-tabs-panel ul {
+    line-height: 1;
+    vertical-align: top
+}
+
+#page .main-content .data-targets li {
+    margin: 0 5px 0 0;
+    line-height: 1.1;
+    text-align: right;
+    font-style: italic;
+    overflow: auto;
+    padding: 0;
+    background: none;
+}
+
+#page .data-targets li span {
+    font-style: normal;
+    float: left;
+    width: 73%;
+    diplay: block;
+    text-align: left;
+    color: black;
+}
+
+#page .main-content .data-targets li a {
+    padding: 6px 8px;
+    font-style: normal;
+    color: #737373;
+    display: block;
+    overflow: auto;
+    font-style: italic;
+    /*font-size: 87%;*/
+
+}
+
+#page #tabs-1 ul {
+    margin: 34px 0 0 46px
+}
+
+#page #tabs-1 ul li a {
+    font-size: 1.5em;
+    line-height: .9;
+    font-weight: 700
+}
+
+#page #tabs {
+    margin-bottom: 60px;
+    overflow: auto;
+    background: url(/sites/default/files/huntlibrary/css/noisy_grid.png);
+}
+
+@-moz-document url-prefix() {
+    .ui-tabsui-tabs-navlitop:0
+}
+}
+
+#page .floorplan {
+    float: left;
+    margin: 0 25px 10px;
+}
+
+#page .main-content {
+    background: #fff;
+}
+
+#page .main-content .ui-tabs-panel .data-targets {
+    overflow: hidden;
+    margin-top: 10px;
+    background: #FBFBFB;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FBFBFB), to(#F3F3F3));
+    border-radius: .5em;
+    padding: 3px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 4px #000;
+}
+
+#page .data-targets li a:hover, #page .data-targets .highlighter {
+    background: rgba(255, 0, 0, 0.3);
+/*previous yellow color: rgba(255, 208, 22, 0.38)*/
+    border-radius: .3em;
+    padding: 6px 8px;
+    text-decoration: none;
+}
+
+#page .data-targets li a.reserved:hover, #page .data-targets .highlighter-reserved {
+    background: rgba(23, 41, 176, 0.24);
+}
+
+#page .ui-widget-header .ui-state-hover {
+    background: #fff;
+    color: #c00;
+}
+
+#page #master_wrap_0 {
+    margin-bottom: 10px;
+}
+
+#page h3 {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #B80D0D;
+}
+
+#page .main-content .instructions {
+    margin: -60px 11px 0 21px;
+    padding: 10px 10px 10px 20px;
+    margin-top: -60px;
+    border-left: 1px solid #ACACAC;
+    border-right: 1px solid #ACACAC;
+    border-bottom: 1px solid #ACACAC;
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+    line-height: 1;
+    background: url(/sites/default/files/huntlibrary/css/arrow-link.png) no-repeat 7px 12px;
+}
+
+#page #mapster_wrap_1 img, #page #mapster_wrap_1 canvas {
+    margin-left: 27px;
+}
+
+/**
+ * jQuery UI overrides
+ */
+#page .ui-state-active a, #page .ui-state-active a:link, #page .ui-state-active a:visited {
+    color: #B80D0D;
+}
+
+/**
+ * jQuery Tablesorter plugin overrides and styles needed to enable switching views between tabs and table
+ */
+#page table.tablesorter {
+    /*margin-left: 182px;*/
+    /*width: 726px;*/
+    /*position: absolute;*/
+    /*top: 389px;*/
+}
+
+#page .tablesorter td, #page .tablesorter .header {
+    border: 1px solid rgb(207, 207, 207);
+}
+
+#page .extra-height {
+    height: 2378px;
+}
+
+#page .main-content .no-utility-nav li {
+    list-style: none;
+    display: inline;
+    cursor: pointer;
+    float: right;
+    font-size: 101%;
+    color: #6F6F6F;
+    border-radius: .3em;
+    border: 1px solid;
+    padding: 1px 6px 1px 14px;
+    background-clip: padding-box;
+    background: #e9e9e9 url('/sites/default/files/huntlibrary/css/arrow-link.png') no-repeat 4px 46%;
+}
+
+#page .main-content .no-utility-nav li:hover {
+    color: #000;
+    background: rgba(255, 0, 0, 0.63) url('/sites/default/files/huntlibrary/css/arrow-link.png') no-repeat 4px 46%;
+}
+
+#page .main-content .no-utility-nav {
+    border-bottom: 1px solid #CCC;
+    height: 36px;
+/*    margin-left: 184px;
+   margin-right: -10px;*/
+}
+
+#page .main-content ul li.no-util-all {
+    margin-right: 0;
+}
+
+#page .main-content p.note {
+    margin-left: 323px;
+}
+
+#page .ui-tabs .ui-tabs-panel {
+    padding: 14px 4px 0 4px;
+}
+
+#page .ui-tabs .ui-tabs-nav li {
+    top: 6px;
+    margin: 0 .2em 1px .2em;
+}
+.other-ways {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    width: 368px;
+}
+
+#page .other-ways h3, #page h3.other-way {
+    font-size: 1em;
+    text-align: center;
+    text-transform: none;
+}

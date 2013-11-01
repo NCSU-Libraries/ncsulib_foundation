@@ -1,0 +1,75 @@
+/*begin banner*/
+#banner-img img{
+	vertical-align: bottom;
+}
+/*end banner*/
+
+
+/*begin menu*/
+#header #block-menu-menu-designing-libraries-for-the h2{
+	display: none;
+}
+#header #block-menu-menu-designing-libraries-for-the .menu{
+	background: #cc0000;
+	list-style-type: none;
+	margin: 0px;
+	text-align: center;
+}
+#header #block-menu-menu-designing-libraries-for-the .menu li{
+	background: none;
+	/*float: left;*/
+	display: inline-block;
+	padding:0px;
+	margin: 0px;
+}
+#header #block-menu-menu-designing-libraries-for-the .menu li.active-trail{
+	background: #740000;
+}
+#header #block-menu-menu-designing-libraries-for-the .menu li a{
+	color:	#fff;
+	display: block;
+	font-size: 1.2em;
+	padding: 15px;
+}
+/*end menu*/
+
+
+/*begin right sidebar*/
+#register h2, #contact-us h2{
+	background: #CC0000;
+	color: #fff;
+	padding: 10px;
+}
+#register p, #contact-us p{
+	padding: 5px 10px;
+}
+#sponsors{
+	margin: 0px;
+	padding: 10px;
+}
+#block-block-78{
+	margin: 0px;
+}
+#page #sponsors p{
+	margin: 25px 0px 25px 0px;
+}
+/*end right sidebar*/
+
+/*begin content*/
+h2#conf-title{
+	font-size: 1.5em;
+}
+#block-system-main, #node-11570{
+	margin: 0px;
+}
+/*end content*/
+
+/*begin conference schedule*/
+.content table{
+	margin: 0px 0px 30px 0px;
+	width: 100%;
+}
+.content table td:first-child{
+	width: 30%;
+}
+/*end conference schedule*/

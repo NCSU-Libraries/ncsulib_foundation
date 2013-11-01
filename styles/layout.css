@@ -1,0 +1,964 @@
+body  {
+	background: #e3e3db;
+	background: #e1dfd6;
+	color: #555;
+}
+a, a:link, a:visited {
+	color: #4C83AF;
+	text-decoration: none;
+	font-size: inherit;
+}
+a:hover, a:link:hover, a:visited:hover {
+	text-decoration: underline;
+	color: #004276;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+	line-height: 1.155em;
+	padding-bottom: 0.273em;
+	padding-top: 0.273em;
+}
+h1 {
+	border-bottom: 1px solid #dddddd;
+	color: #555;
+	font-size: 2.625em;
+	margin-bottom: 13px
+}
+h2 {
+	font-size: 1.875em;
+}
+h3 {
+	font-size: 1.625em;
+}
+h4, h5, h6 {
+	font-size: 1em;
+}
+h2 a, h2 a:link, h2 a:visited {
+	text-decoration: none;
+	font-size: inherit;
+	padding: 0;
+}
+h2.underline {
+	border-bottom: 1px solid #ccc;
+}
+h2.red {
+	color: #9E0D01;
+}
+ul li h2 {
+	padding-top: 0;
+}
+ul li h3 {
+	padding: 0;
+}
+h3 a, h3 a:link, h3 a:visited {
+	text-decoration: none;
+	font-size: inherit;
+	padding-top: 0;
+	padding: 0;
+}
+hr {
+	height: 1px;
+	color: #ccc;
+	background-color: #d2d6d9;
+	border: none;
+}
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 5px 10px;
+  line-height: 1.625em;
+}
+/* Header */
+#outer-head-container {
+	background: #cc0000; //url('../images/red-black-gradient2.png') repeat-x;
+	height: 115px;
+}
+/* NCSU Branding */
+#ncsu_branding_container {
+	background-color: #C00;  /* Other choices: #000, #a30d01, #5a5952, #000, #CC0000, #666; */
+	height: 31px;
+	margin-bottom: 5px;
+}
+#ncsu_branding {
+	text-align: center;
+	height: 31px;
+}
+
+#ncsu_logo {
+	vertical-align: middle;
+}
+#anniversary_logo {
+	 vertical-align: middle;
+	 padding-left: 5px;
+	 padding-right: 50px;
+	 border-left: 1px solid #fff;
+
+}
+#ncsu_branding ul, #ncsu_branding ul li {
+	display: inline;
+}
+#ncsu_branding li {
+	font-size: 10px;
+ 	padding: 0 3px 0 5px;
+	border-left: 1px solid #fff;
+}
+#ncsu_branding li.first {
+	border-left-width: 0;
+}
+#ncsu_branding li a {
+	color: #f7f6ee;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+#ncsu_branding li a:hover {
+	color: white;
+}
+/* End NCSU branding */
+
+/* Banner area */
+#head_container {
+}
+#head_banner {
+	overflow: auto;
+}
+#head_banner a {
+	color: #eee;
+	text-decoration: none;
+	font-size: 11px;
+}
+#head_banner a:hover {
+	color: #fff;
+}
+#head_banner ul, #head_banner ul li {
+	display:inline;
+}
+#libraries_title {
+	padding-top: 4px;
+	padding-bottom: 5px;
+}
+#utility_links {
+	padding-top: 17px;
+}
+#libraries_title_menu {
+	color: #fff;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: right;
+}
+#libraries_title_menu li {
+	border-right: 1px solid #eee;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#libraries_title_menu li.last {
+	border-right-width: 0;
+}
+
+/* skip navigation code borrowed from jim thatcher - http://jimthatcher.com/skipnav.htm */
+#skipnav {}
+#skipnav a {
+	position:absolute;
+	z-index: 100;
+	left:-1000px;
+	top:0px;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+#skipnav a:active,
+#skipnav a:focus {
+	position: absolute;
+	display: block;
+	left: auto;
+	top: 0px;
+	font-size: 15px;
+	font-weight: bold;
+	width: 150px;
+	height: 24px;
+	padding: 3px 12px;
+	border: 1px solid #e9dfb0;
+	background: #fcfeff;
+	overflow: visible;
+	text-decoration: underline;
+}
+
+/* content */
+#outer {
+	border: 1px solid #f5f5f5;
+	margin-top: -34px;
+	background: #FFF;
+}
+
+#outer-content-container {
+	/* overflow: auto; removed on 1/5/12 due to zoom text only display problems -cdm */
+	clear: left; /*added on 1/5/12 due to zoom text only problems -cdm */
+}
+
+#page {
+	font-size: 12px;
+}
+
+#page p {
+	font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 13px;
+}
+#page ul {
+	font-size: 13px;
+	line-height: 1.5em;
+	margin: 0px 0 13px 10px;
+}
+#page ul li, #page ol li ul li {
+	font-size: 13px;
+	line-height: 1.5em;
+	margin: 0px 0px 0px 0px;
+	padding: 0 0 0px 20px;
+	/*list-style: none;*/
+	background: url("../images/graybullet.png") 5px 8px no-repeat;
+}
+#page ol {
+	font-size: 12px;
+	/*list-style: decimal;*/
+	margin: 2px 0 10px 10px;
+	padding: 2px 10px;
+}
+#page ol li {
+	padding: 3px 6px 3px 3px;
+}
+#page blockquote {
+	font-size: 13px;
+	line-height: 1.5em;
+}
+#page div {
+	font-size: 13px;
+	line-height: 1.5em;
+}
+
+/* table styles */
+table {
+	margin-bottom:13px;
+}
+#page table, th, td {
+	font-size: 13px;
+	letter-spacing: normal;
+	vertical-align: top;
+	line-height: 1.5em;
+}
+#page td {
+	padding: 3px;
+}
+
+.default-table {
+	margin-top: 10px;
+}
+
+.default-table th {
+	text-align: center;
+	vertical-align: middle;
+}
+.default-table td{
+	padding: 3px 10px 3px 10px;
+	vertical-align: middle;
+}
+.default-table td a {
+	padding: 0;
+	margin: 0;
+}
+#page ul.nobullet li {
+	list-style:none;
+	background: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+#page .tips {
+	float: right;
+	margin-right: 25px;
+	padding: 13px 5px 0px;
+	color: #fff;
+	font-size: 11px;
+	border: 3px solid #E6E3D6;
+	background: #67849C;
+	/*width: 225px;*/
+	line-height: normal;
+}
+form#comment-form .tips {
+	background-color: transparent;
+	float: none;
+	color: black;
+	border-width: 0;
+	margin-top: 0;
+	padding-top: 0;
+	padding-left: 17px;
+}
+#page .tips ul li {
+	line-height: 1.5em;
+}
+#page .tips h2 {
+	padding: 2px;
+	margin: 0;
+	margin-left: 5px;
+	font-size: 12px;
+}
+#page .tips a {
+	color: #fff;
+	border-bottom: 1px solid #CCC;
+}
+#page .tips p {
+	padding-left: 5px;
+}
+#page .tips img {
+	border: none;
+}
+.tips .feed {
+	line-height: 0;
+	vertical-align: middle;
+}
+#page .about ul li a {
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+}
+#page div.grayback {
+	border: 1px solid #ddd;
+	background: #f0f0f0;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+#page div.library-about {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px;
+	width: 300px;
+}
+#page .askus img {
+	padding-top: 10px;
+}
+
+#content-container {
+	background-color: #fff;
+	overflow: auto;
+	margin-top: 0;
+}
+
+#search-header {
+	margin-top: -1px;
+}
+
+#search-header p {
+	margin: 0; padding: 0;
+	font-size: 11px;
+}
+
+#search-header form {
+}
+
+#search-header input.main-search-field {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 285px;
+	height: 21px;
+	vertical-align: middle;
+	margin: 2px 0px 0px 0px;
+	font-size: 11px;
+	padding: 4px;
+	border: 1px solid gray;
+	border-width: 1px 0 1px 1px;
+}
+
+#search-header .search-header-submit {
+	background: #A30D01;
+	background-position: 0 5px;
+	/*background-image: url('../images/search-header-button-sprite.png');*/
+	border: 0;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	width: 60px;
+}
+
+#search-header .search-header-submit:active {
+	cursor: pointer;
+	background-position: 0px 27px;
+}
+
+#search-header label { padding-left: 6px; display:none; }
+
+#search-header span.search-header-submit input[type=image] {
+}
+
+input[type=image] {
+	padding: 0;
+	border-width: 0;
+}
+
+#searchtabs input[type=image], #quicksearchForm input[type=image] {
+	vertical-align: middle;
+}
+
+/* old tocs */
+#mainContentTOCLibraryInfo {
+	color: #4C83AF;
+}
+#mainContentTOCLibraryInfo a, #mainContentTOCLibraryInfo a:link {
+	font-size: 12px;
+	line-height: 1.625em;
+}
+#mainContentTOCLibraryInfo ul li {
+}
+#mainContentTOCLibraryInfo .nobullet li {
+		padding: 0;
+}
+#mainContentTOCLibraryInfo p {
+	line-height: 1.625em;
+}
+#mainContentTOCLibraryInfo h2 {
+	font-size: 12px;
+	margin: 0;
+	margin-bottom: -5px;
+	padding: 0;
+}
+#mainContentTOCLibraryInfo h2 a{
+	border-bottom: none;
+	font-size: 12px;
+}
+
+#mainContentTOCLibraryInfo .homeLink {
+	padding: 2px 0 2px 0;
+	margin: 5px 0 10px 0;
+}
+#mainContentTOCLibraryInfo .homeLink a {
+	font-size: 14px;
+}
+/* Features in right column */
+#page .feature {
+	width: 238px;
+	line-height: normal;
+}
+
+.feature img {
+	padding: 5px;
+	width: 228px;
+	margin-right: 10px;
+	border: 1px solid #dcdcdc;
+}
+
+.feature .caption {
+	background: #c00000;
+	background: #eee;
+	border: 1px solid #dcdcdc;
+	width: 228px;
+	padding: 2px 5px 4px;
+	margin-top: -3px;
+	margin-right: 10px;
+	text-align: right;
+}
+
+.feature .caption a {
+	font-size: 11px;
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+#page .feature .tips {
+	float: left;
+	padding: 5px;
+	color: #fff;
+	font-size: 11px;
+	border: 3px solid #E6E3D6;
+	background: #67849C;
+	width: 228px;
+	margin-right: 10px;
+}
+
+.feature #node-52 {
+	border: 3px solid #E6E3D6;
+	background: #67849C;
+	padding: 0 20px 10px 10px;
+	color: #fff;
+}
+
+p.more {
+	text-align: right;
+}
+
+p.more img {
+	border: 0;
+	vertical-align: text-bottom;
+}
+
+/* NCSU Libraries theme footer */
+#ncsulibraries-footer-container {
+	width: 100%;
+	background: #666;
+ 	margin-top: 10px;
+}
+#ncsulibraries-footer {
+	overflow: auto;
+	color: #ccc;
+	padding-top: 10px;
+	color: #fff;
+	padding-left: 15px;
+}
+#ncsulibraries-footer a {
+	color: #fff;
+}
+#footer-left p {
+	text-align: left;
+	font-size: 11px;
+	line-height: 170%;
+}
+#footer-links {
+	margin: 0;
+	padding:0;
+}
+#footer-social {
+	margin-left: 80px;
+}
+#footer-social ul {
+	padding-left: 20px;
+}
+/* social icons */
+a.twitter {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	text-decoration: none;
+}
+a.twitter:hover {
+	color: #F60;
+	text-decoration: none;
+}
+a.facebook {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+}
+a.facebook:hover {
+	color: #F60;
+	text-decoration: none;
+}
+a.rss {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+}
+a.rss:hover {
+	color: #F60;
+	text-decoration: none;
+}
+a.youtube {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+}
+a.youtube:hover {
+	color: #F60;
+	text-decoration: none;
+}
+a.flickr {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+}
+a.flickr:hover {
+	color: #F60;
+	text-decoration: none;
+}
+
+/* image classes */
+.image-outline {
+	padding: 5px;
+	border: 1px solid #dcdcdc;
+}
+
+.flow-right {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+.flow-left {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+/* special classes */
+.azNav {
+	text-align: left;
+}
+.azNav a {
+	font-weight: bold;
+	padding:2px 4px 2px 4px;
+	border: 1px solid #ddd;
+	text-decoration: none;
+}
+.azNav a:hover {
+	background-color: #ccc;
+}
+.azNav ul {
+	margin: 0;
+	padding: 0;
+}
+#page .azNav li {
+ 	list-style: none;
+  	display: inline;
+	margin: 1px 1px 1px 1px;
+	padding: 0;
+	background: none;
+}
+
+/* tabs */
+
+#tabContainer {
+	line-height: normal;
+}
+#tabContainer td {
+	padding: 0;
+	margin: 0;
+	line-height: 6px;
+}
+.panel {
+	margin-top: 0;
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+.tabOn {
+	color: #555;
+	background-color: #fff;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #dddddd;
+	border-left-color: #dddddd;
+	border-bottom-width: 1px;
+	border-bottom-color: #dddddd;
+	font-weight: bold;
+	font-size: 12px;
+	vertical-align: middle;
+	margin: 0;
+	line-height:normal;
+}
+.tabOff {
+	background-color: #ccc;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #ccc;
+	border-left-color: #ccc;
+	border-bottom-width: 1px;
+	border-bottom-color: #ccc;
+	font-size: 12px;
+	vertical-align: middle;
+	padding:0;
+	margin:0;
+	line-height: normal;
+}
+
+/* for tabs within applications */
+#page .reset-list li{
+	margin: 0;
+	padding: 0;
+	background: none;
+	line-height: normal;
+}
+#page li.ui-tabs-selected {
+	margin-bottom:-15px;
+	margin-top:-10px;
+	padding-bottom:15px;
+}
+
+
+ul.ui-tabs-nav {
+	-webkit-border-bottom-right-radius: 0px;
+}
+
+
+/* layout for subsites */
+/* left navigation for subsites */
+/*#page #sidebar-left {
+	margin: 0 30px 0 0;
+}*/
+
+#page #sidebar-left h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #999;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+#page #sidebar-left ul {
+	margin: 0;
+	padding:0;
+}
+#page #sidebar-left ul li {
+	background: none;
+	margin: 0;
+	padding: 0px;
+}
+#page #sidebar-left ul li a {
+	display: block;
+	padding: 3px 0px;
+	text-decoration: none;
+}
+#page #sidebar-left ul li a:hover {
+	text-decoration: underline;
+}
+#page #sidebar-left .block {
+	margin-bottom: 1.5em;
+}
+
+/* Drupal Features in right column */
+/*#page #sidebar-right .block img {
+	width: 208px;
+}*/
+#page #sidebar-right #block-block-10 img {
+	width: 208px;
+}
+#page #sidebar-right .block .caption {
+	background: #c00000;
+	background: #eee;
+	border: 1px solid #dcdcdc;
+	width: 208px;
+	padding: 5px 5px 4px;
+	margin-top: -10px;
+	margin-right: 10px;
+	text-align: right;
+	line-height: 13px;
+}
+
+#page #sidebar-right .block .caption a {
+	font-size: 11px;
+	font-weight: bold;
+	padding: 0 5px 0 0;
+}
+#page #sidebar-right .tips {
+	margin-right: 0;
+	float: none;
+
+}
+#page #sidebar-right .tips ul {
+	padding: 0;
+}
+
+/*#page #sidebar-right .feature-chat {
+	border: 3px solid #E6E3D6;
+	background: #67849C;
+	padding: 10px 10px 10px 10px;
+	color: #fff;
+	width: 215px;
+	margin: 20px 20px 0 10px;
+}
+
+#chat_offline {
+	margin-top: 40%;
+	margin-left: 22%;
+}*/
+
+/* notice application */
+div.notice {
+	border: 2px solid #C00;
+	font-weight: bold;
+        padding: 3px;
+}
+
+/* IE6 warning */
+div.ie6warning {
+	display: none;
+}
+
+/* legacy styles */
+.highlight { background-color:#ffc }
+.alert { color:#c00; }
+.alert a { color:#c00;}
+table.thinBorder { border-collapse: collapse; border: 1px solid #ccc;}
+table.thinBorder td, table.thinBorder th{ border: 1px solid #ccc; }
+table.thinBorder th{ padding:3px; }
+
+/* book module */
+div.book-navigation ul.menu {
+	display: none;
+}
+div.book-navigation ul.page-links a.page-up{
+	display: none;
+}
+
+/*CDM added easy clearing, captions and footnote below */
+/* easy clearing */
+.clear-both 	{clear:both;}
+.clear-left 		{clear:left;}
+.clear-right 	{clear:right;}
+
+/* captions */
+#page p.caption 		{ float: right; font-style: italic; text-align: center; margin: 15px;}
+#page p.caption img 	{ display: block; margin-bottom: 5px;}
+
+/* for footnote printing */
+.printOnly		{ display:none;}
+
+/* dslr form */
+form#webform-client-form-937 .form-item label.option { display: block;}
+form#webform-client-form-937 .form-item {margin: 0;}
+
+/* technology lending */
+#page .views-field-field-device-image-fid div.field-content div.field-item{
+	float: left;
+}
+
+/* Added for 960 Grid */
+.ninesixty-center {
+	width: 980px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+#search-header {
+	padding-right: 1px;
+}
+.content-border {
+	font-size: 12px;
+	overflow: hidden; /* changed on 1/5/12, cdm */
+	width: 960px;
+}
+#content-container {
+	margin: 10px 0px 0px 0px;
+}
+
+/* slideshow image polaroid border */
+/*.views-field-node-image {
+	float: left;
+	padding: 5px 5px 2px 5px;
+	border: 1px solid #ccc;
+	margin: 0 20px 10px 0;
+	line-height: normal;
+	-moz-box-shadow: 3px 3px 3px #ddd;
+	-webkit-box-shadow: 3px 3px 3px #ddd;
+	box-shadow: 3px 3px 3px #ddd;
+}*/
+
+#page {
+	background-color: #fff;
+}
+
+#footer-social {
+	padding-right: 20px;
+}
+
+#page ul.tabs.primary li {
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Chat Ask Us page */
+
+#askus-page-large-chat {
+	width: 350px;
+	height: 300px;
+	border: 1px solid #bbb;
+	line-height: normal;
+	background-color: #fff;
+	-moz-box-shadow: 5px 5px 5px #ddd;
+	-webkit-box-shadow: 5px 5px 5px #ddd;
+	box-shadow: 5px 5px 5px #ddd;
+}
+#chat_offline {
+	margin-top: 40%;
+	margin-left: 22%;
+}
+
+/* for digital collections */
+#page .view-digital-collections ul li {
+    background: none;
+    padding: 10px 0;
+}
+
+/* no bullets on an unordered list */
+.no-bullet ul li{
+	background: none !important;
+	margin: 0px !important;
+	padding: 0px !important;
+}
+.no-bullet ul {
+	margin: 0px !important;
+}
+
+/* hide labels for inputs (accessibility requires a label for an input, but visually we may want to hide it from displaying) */
+.label-hide {
+	position: absolute;
+	left: -999em;
+}
+
+/* placeholder style as part of the jQuery shim of the missing placeholder attribute in IE<=9 */
+.placeholder { color: #aaa; }
+
+/* for styling buttons on the room reservation pages */
+
+a.reserve-button {
+  border: 1px solid #B8B8B8;
+  padding: 5px;
+  font-style: normal;
+  border-radius: .4em;
+  background: #ffffff;
+  background: -moz-linear-gradient(top,  #ffffff 0%, #e0e3e5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e0e3e5));
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#e0e3e5 100%);
+  background: -o-linear-gradient(top,  #ffffff 0%,#e0e3e5 100%);
+  background: -ms-linear-gradient(top,  #ffffff 0%,#e0e3e5 100%);
+  background: linear-gradient(to bottom,  #ffffff 0%,#e0e3e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e3e5',GradientType=0 );
+}
+
+a.reserve-button:hover {
+  text-decoration: none;
+  border: 1px solid #C4CACF;
+  background: #e0e3e5;
+  background: -moz-linear-gradient(top,  #e0e3e5 0%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0e3e5), color-stop(100%,#ffffff));
+  background: -webkit-linear-gradient(top,  #e0e3e5 0%,#ffffff 100%);
+  background: -o-linear-gradient(top,  #e0e3e5 0%,#ffffff 100%);
+  background: -ms-linear-gradient(top,  #e0e3e5 0%,#ffffff 100%);
+  background: linear-gradient(to bottom,  #e0e3e5 0%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e5', endColorstr='#ffffff',GradientType=0 );
+}
+
+#toolbar-home, .primary {
+	overflow:visible;
+}
+/* Simple breadcrumb styling */
+#page .crumbs li {
+    background: none;
+    display: inline;
+    padding: 0;
+    margin-right: 0;
+}
+#page .crumbs li:after {
+    content:" >";
+}
+#page .crumbs li:last-child:after {
+    content: none;
+}
+#page .crumbs {
+    margin: 0 0 10px 0;
+    font-size: 11px;
+}
+.icon{
+	margin-top: 10px;
+}

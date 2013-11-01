@@ -1,0 +1,31 @@
+.align-right {
+	text-align: right;
+}
+#block-views-biology-tutorial-banner-block-1{
+	margin-bottom: 0px;
+}
+.pdf-border{
+	border-top: 1px solid #ddd;
+	padding-top: 5px;
+}
+.submitted{
+	display: none;
+}
+ul.menu li.expanded.active-trail ul.menu{
+	padding-left: 20px !important;
+}
+ul.menu li.expanded.active-trail ul.menu li.first.leaf{
+	border-bottom: none !important;
+	list-style-type: disc !important;
+	line-height: 11px !important;
+}
+ul.menu li.expanded.active-trail ul.menu li.leaf{
+	border-bottom: none !important;
+	list-style-type: disc !important;
+	line-height: 11px !important;
+}
+ul.menu li.expanded.active-trail ul.menu li.last.leaf{
+	border-bottom: none !important;
+	list-style-type: disc !important;
+	line-height: 11px !important;
+}

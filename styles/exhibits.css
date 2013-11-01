@@ -1,0 +1,76 @@
+/*Begin Exhibits listing*/
+
+#page #exhibits-content{
+	display:inline-block;
+	*display: inline;
+	list-style-type: none;
+	margin: 0px;
+	width:100%;
+    zoom: 1;
+}
+#page .exhibit-item{
+	background: none;
+	border-top: 1px solid #DDD;
+	float:left;
+	margin: 0px 0px 30px 0px;
+	padding: 30px 0px 0px 0px;
+	width: 100%;
+}
+#page .exhibit-item:first-child{
+	border-top: none;
+	padding: 10px 0px 0px 0px;
+}
+.exhibit-photo{
+	border:1px solid #DDDDDD;
+	float:left;
+	margin: 0px 2% 0px 0px;
+	padding: 1%;
+	width: 38%;
+}
+.main-content .exhibit-photo img{
+	margin:0px;
+}
+.exhibit-content{
+	float:left;
+	margin: 0px;
+	width: 57%;
+}
+.exhibit-content h2 a{
+	/*text-transform: capitalize;*/
+}
+/*end exhibits listing*/
+
+
+
+
+/*begin exhibits sidenav*/
+#main-content #exhibit-sidenav{
+	float: left;
+	list-style-type: none;
+	margin: 0px;
+	margin-right: 4%;
+	width: 230px;
+}
+#main-content #exhibit-sidenav.fixed{
+	position: fixed;
+	top: 0px;
+}
+#main-content #exhibit-sidenav li{
+	margin-bottom: 10px;
+	padding: 0px;
+}
+#main-content #exhibit-sidenav li a{
+	font-size: 11px;
+}
+#main-content #exhibit-sidenav li img{
+	vertical-align: text-top;
+}
+/*end exhibits sidenav*/
+
+/*begin main exhbit content*/
+#block-system-main{
+	float: right;
+	width: 440px;
+}
+/*end main exhbit content*/
+

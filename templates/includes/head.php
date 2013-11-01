@@ -3,7 +3,6 @@
   require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
   drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 ?>
-  <!-- <?php var_dump(drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL)); ?> -->
   <?php print $head; ?>
   <link rel="shortcut icon" href="http://lib.ncsu.edu/sites/all/themes/ncsulibraries/favicon.ico" rel="shortcut icon">
   <?php print $styles; ?>

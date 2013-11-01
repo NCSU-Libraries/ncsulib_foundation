@@ -1,0 +1,801 @@
+@import url("/artbox/includes/styles.css");
+
+/* Today's Hours */
+ #hours {
+  color: #fff;
+  font-size: 11px;
+  float: right;
+  padding-top: 5px;
+  padding-right: 15px;
+  text-align: right;
+}
+#hours a {
+  color: #fff;
+  text-decoration: none;
+}
+/* Top Content Area */
+ #top-content {
+  background: #FFF;
+  overflow:auto;
+  margin-bottom: 0;
+  padding-bottom: 25px;
+  border: 0px solid #ddd;
+  z-index: 1;
+}
+#artbox img {
+  margin-top: 10px;
+  height:260px;
+  width: 400px;
+  /*padding: 4px;*/
+  background: #fff;
+}
+noscript img {
+  margin-top: 10px;
+  height:250px;
+  width: 400px;
+  border: 4px solid #fff;
+  border: 1px solid #ddd;
+  padding: 4px;
+  background: #fff;
+  margin-left: 20px;
+}
+#artboxControls {
+  position: absolute;
+  left: 30px;
+  top: 239px;
+  /* Fix IE 6 navigation positioning issue */
+  _bottom: 5px;
+  height: 0px;
+  width: 100px;
+}
+#artboxControls img {
+  margin:0;
+  padding:0;
+}
+#artboxControls a {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 11px;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  color: #999;
+  text-decoration: none;
+  background-color: #555;
+  opacity: .50;
+  /* Set IE 8 opacity */
+  -ms-filter:"alpha(opacity=50)";
+  /* Set IE 7 and earliet opacity */
+  filter: alpha(opacity=50);
+  zoom: 1;
+}
+#artboxControls a:hover {
+  color: #fff;
+  background: #555;
+  opacity: 1;
+  /* Set IE 8 opacity */
+  -ms-filter:"alpha(opacity=100)";
+  /* Set IE 7 and earliet opacity */
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+#artboxnav {
+  position: absolute;
+  left: 325px;
+  top: 238px;
+  /* Fix IE 6 navigation positioning issue */
+  _bottom: 5px;
+  height: 0px;
+  width: 75px;
+  z-index: 999;
+}
+#artboxnav a {
+  color: #999;
+  text-decoration: none;
+  background-color: #555;
+  opacity: .50;
+  /* Set IE 8 opacity */
+  -ms-filter:"alpha(opacity=50)";
+  /* Set IE 7 and earliet opacity */
+  filter: alpha(opacity=50);
+  zoom: 1;
+}
+#artboxnav a:hover {
+  color: #fff;
+  background: #555;
+  opacity: 1;
+  /* Set IE 8 opacity */
+  -ms-filter:"alpha(opacity=100)";
+  /* Set IE 7 and earliet opacity */
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+#artboxnav a.activeSlide {
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+  opacity: 1;
+  /* Set IE 8 opacity */
+  -ms-filter:"alpha(opacity=100)";
+  /* Set IE 7 and earliet opacity */
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+#artboxNext, #artboxPause, #artboxPrev {
+  cursor: pointer;
+  color: #999;
+  text-decoration: none;
+  opacity: .50;
+  /* Set IE 8 opacity */
+  -ms-filter:"alpha(opacity=50)";
+  /* Set IE 7 and earliet opacity */
+  filter: alpha(opacity=50);
+  zoom: 1;
+}
+#artboxNext:hover, #artboxPause:hover, #artboxPrev:hover {
+  opacity: 1;
+  /* Set IE 8 opacity */
+  -ms-filter:"alpha(opacity=100)";
+  /* Set IE 7 and earliet opacity */
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+#research-options {
+  color: #CCC;
+  font-size: 12px;
+}
+
+#research-options strong{
+  color: #555;
+}
+/* quicklinks */
+ .quicklinks {
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.quicklinks ul {
+  padding:0;
+  margin: 0;
+}
+.quicklinks li {
+  padding: 0;
+  margin:0;
+  background: none !important;
+  padding: 2px 0px 2px 0px !important;
+  line-height: 16px !important;
+}
+.quicklinks h2 {
+  color: #8f3931;
+  display:block;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 0;
+  padding-bottom: 3px;
+  margin: 0;
+  line-height: normal;
+}
+.quicklinks ul li {
+  list-style: none;
+  line-height: 16px;
+  padding: 2px 0 2px 0;
+}
+.quicklinks ul li a {
+  font-size: 13px;
+}
+#research-quick {
+  padding-left: 30px;
+}
+#computing-quick {
+  width: 150px;
+  float: left;
+}
+#page #computing-quick ul, #page #studying-quick ul, #page #courses-quick ul{
+  margin: 0px;
+}
+#page #computing-quick ul li, #page #studying-quick ul li, #page #courses-quick ul li{
+  margin-bottom: 0px;
+}
+#courses-quick {
+  float: left;
+}
+#studying-quick {
+  padding-left: 40px;
+  width: 150px;
+  float: left;
+}
+/* Features */
+ .features-caption {
+  font-size: 12px;
+  color: #666;
+  line-height: 14px;
+  word-wrap: break-word;
+}
+
+/*begin tech lending*/
+#tech-lending{
+  background: #f5f5f5;
+  border: 1px solid #CCC;
+  float:left;
+  height: 53px;
+  height: 54px\0;
+  margin-bottom: 30px;
+  width: 100%;
+}
+#page #tech-tabs{
+  float:right;
+  height: 30px;
+  position: relative;
+  width: 100%;
+}
+#tech-title{
+  float:left;
+  padding: 0px 0px 0px 0px;
+}
+#tech-title h3{
+  display: inline;
+  padding-right: 3px;
+}
+#tech-title a{
+
+}
+#page #tech-tabs ul{
+  float:right;
+  list-style-type: none;
+  margin: 0px -2px -1px 0;
+}
+#page #tech-tabs ul li{
+  background: #FFF;
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+  float:left;
+  padding: 0px;
+  list-style-type: none;
+}
+#page #tech-tabs ul li:first-child{
+  border-right: 0px;
+}
+#page #tech-tabs ul li.active{
+  background: #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+}
+#page #tech-tabs ul li a{
+  display: block;
+  padding: 5px 8px;
+}
+#page #tech-tabs ul li a:hover{
+  background: #DDD;
+  color: #4C83AF;
+  text-decoration: none;
+}
+#page #tech-tabs ul li.active a:hover{
+  background: none;
+  color: #4C83AF;
+}
+.tech-tab{
+  display: none;
+  float:left;
+  height: 53px;
+  width: 100%;
+}
+.tech-tab.active{
+  display: block;
+}
+.tech-tab .study-rooms{
+  border-right: 1px solid #CCC;
+  float:left;
+  margin: 15px 0% 0px;
+  padding: 0px 3% 0px;
+  text-align: center;
+  width: 27%;
+}
+.tech-tab .laptops{
+  border-right: 1px solid #CCC;
+  float:left;
+  margin: 15px 0% 0px;
+  padding: 0px 3% 0px;
+  text-align: center;
+  width: 27%;
+}
+.tech-tab .tablets{
+  float:left;
+  margin: 15px 0% 0px;
+  padding: 0px 3% 0px;
+  text-align: center;
+  width: 27%;
+}
+.tech-tab .cell-one{
+  display: inline-block;
+  font-size: 1.2em;
+  padding-right: 15px;
+}
+.tech-tab .t-nums{
+  font-size: 1.4em;
+}
+/*end tech lending*/
+
+ #feature-container {
+  overflow: none;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  float: left;
+}
+.features-section {
+  width: 212px;
+  float: left;
+}
+.features-section img {
+  margin-right: 7px;
+}
+#page .features-section.features-ls p{
+  line-height: 1.3em;
+  padding-top: 5px;
+}
+
+.features-header {
+  color: #444;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: normal;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0px;
+}
+.features-section {
+  word-wrap: break-word;
+}
+.features-section .news a {
+  font-size: 12px;
+  color: #666;
+}
+.features-section .features-more a {
+  font-size: 11px;
+  color: #e3691d;
+}
+#get_on_our_screens {
+  padding-top: 10px;
+}
+#leading_the_way img {
+  border: 1px solid #ddd;
+  padding: 2px;
+  background: #fff;
+}
+.more {
+  font-size: 12px;
+}
+.more img {
+  border: none !important;
+  position: relative;
+  top: 3px;
+}
+/* captions */
+ body.front #page p.caption {
+  font-style: italic;
+  font-size: 12px;
+  color: #666;
+  line-height: 14px;
+  margin: 0;
+  text-align: left;
+  float: none;
+  width: 186px;
+}
+.features-news a {
+  /*color: #666;*/
+  font-size: 12px;
+}
+.features-news ul li {
+  padding: 5px 0 5px 0;
+  border-bottom: 1px dotted #999;
+  line-height: 14px;
+}
+.features-events {
+  float: left;
+  width: 230px;
+  margin-right: 20px;
+  padding-top: 10px;
+}
+.features-photos {
+  background: none;
+  margin-right: 0px;
+  float: left;
+  width: 220px;
+  padding-top: 10px;
+}
+.features-social {
+  float: left;
+  width:215px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+.features-social a:link {
+  color: #69C;
+  color: #e3691d;
+}
+/* twitter */
+ .tweet {
+  font-size: 12px;
+}
+.tweet_list {
+  padding: 4px 4px 0 0;
+  line-height: 18px;
+}
+.tweet-list a:link {
+  color: #ddd;
+}
+.tweet_list li {
+  padding: 2px 0 5px 0;
+}
+.origination {
+  font-size: 10px;
+}
+.tweet_text {
+  line-height: 14px;
+}
+#join {
+  font-size: 11px;
+  font-weight: bold;
+  text-align: right;
+  padding: 0 5px 0 0;
+}
+#join a {
+  color: #e3691d;
+}
+.features-photos a:hover img {
+  padding: 2px;
+}
+.features-photos img {
+  border: 1px solid #ddd;
+  padding: 2px;
+  background: #fff;
+}
+img.feed {
+  border: none;
+  background: none;
+  padding: 0px;
+  padding-right: 3px;
+  margin: 0;
+  vertical-align: middle;
+}
+#footer-social {
+  padding-right: 20px;
+}
+#page ul li {
+  background: none;
+  padding: 2px 0px 2px 0px;
+  line-height: 16px;
+}
+/*****************jQuery selectbox************************/
+
+/* applied to original <select> to hide */
+ .has_sb {
+  position:absolute;
+  left:-999999em;
+  text-indent:-999999em;
+}
+/* always visible styles */
+ .selectbox {
+  display:inline-block;
+  *display:inline;
+  font-family:arial;
+  font-size:0.7;
+  position:relative;
+  vertical-align:bottom;
+  zoom:1;
+}
+/*.text{padding-top: 5px;}*/
+ .selectbox .display {
+  background:#fff;
+  width: 95px !important;
+  /*border:1px solid #abadb3;*/
+  color:#000;
+  cursor:default;
+  display:block;
+  font-weight:normal;
+  height: 23px;
+  line-height:1.00em;
+  overflow:hidden;
+  outline:none;
+  padding:0 28px 0 3px;
+  margin-right: 4px;
+  position:relative;
+  text-decoration:none;
+  overflow:hidden;
+}
+#page .selectbox .display .text {
+  padding:6px 0 0 3px;
+  white-space:nowrap;
+  line-height: 1em;
+}
+.selectbox.disabled .display {
+  color:#999;
+}
+.selectbox.focused .display .text {
+  color:#000;
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+  white-space:nowrap;
+  padding:6px 0 0 3px;
+}
+.selectbox .display.active {
+  border-color:#7b7d83;
+}
+.selectbox .display .arrow_btn {
+  background:#dbdbdb url(/sites/all/themes/ncsulibraries/images/select_arrow_bg.gif) repeat-x left center;
+  border:1px solid #707070;
+  display:block;
+  height: 19px;
+  line-height:.92em;
+  padding:1px;
+  position:absolute;
+  right:0;
+  text-align:center;
+  top:0;
+  width:1.08em;
+}
+.selectbox .display .arrow_btn .arrow {
+  background:transparent url(/sites/all/themes/ncsulibraries/images/select_arrow.gif) no-repeat center center;
+  display:inline-block;
+  *display:inline;
+  height:4px;
+  left:.33em;
+  position:absolute;
+  top:.5em;
+  width:7px;
+  zoom:1;
+}
+.selectbox .display.active .arrow_btn {
+  -moz-box-shadow:inset 0 0 1px 1px #9eb0ba;
+  -webkit-box-shadow:inset 0 0 1px 1px #9eb0ba;
+}
+.selectbox .display.hover .arrow_btn {
+  background-image:url(/sites/all/themes/ncsulibraries/images/select_arrow_bg_hover.gif);
+}
+.selectbox .value {
+  display:none;
+}
+/* dropdown styles */
+ .selectbox.items {
+  background:#fff;
+  width: 120px !important;
+  /*border-bottom:1px solid #828790;
+  border-left:1px solid #828790;
+  border-right:1px solid #828790;*/
+  border-top:1px solid #DDD;
+  display:block;
+  font-family:arial;
+  font-size:12px;
+  list-style-type:none;
+  margin:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  padding:0 0 1px 0;
+  z-index:99999;
+  -moz-box-shadow:0 3px 5px rgba(0, 0, 0, .5);
+  -webkit-box-shadow:0 3px 5px rgba(0, 0, 0, .5);
+}
+.selectbox.items.above {
+}
+.selectbox.items li {
+  display:block;
+  margin:0;
+  padding:0;
+  /*white-space:nowrap; maybe necessary if using fixedWidth: false */
+}
+.selectbox.items li.first {
+  margin-top:0;
+}
+.selectbox.items li>.item {
+  color:#777;
+  cursor:default;
+  display:block;
+  padding:0px 4px;
+  text-decoration:none;
+}
+.selectbox.items li>.item>.text {
+  display:inline-block;
+  display:inline;
+  zoom:1;
+}
+.selectbox.items li.selected>.item {
+  background:#ddd;
+  border-bottom:1px dotted #999;
+  border-top:1px dotted #999;
+  color:#000;
+}
+.selectbox.items li.disabled>.item {
+  color:#999;
+}
+.selectbox.items li.hover>.item {
+  /*background-color:#ddd;color:#000;*/
+  border-bottom:1px dotted #999;
+  border-top:1px dotted #999;
+}
+.selectbox.items .value {
+  display:none;
+}
+/* homepage refresh 8/1/12 CDM */
+ #page .features-section .zero-margin-bottom {
+  margin-bottom:0;
+}
+#page .features-section .zero-margin-top {
+  margin-top:0;
+}
+a.video-link {
+  background:url(/sites/default/files/icons/camera.png) no-repeat 100% 30%;
+  padding-right:20px;
+}
+a.video-link:hover {
+  background:url(/sites/default/files/icons/camera-hover.png) no-repeat 100% 30%;
+  padding-right:20px;
+}
+div.features-news ul li span.tab {
+  margin-right: 3.1em;
+  display: inline-block;
+  width: 82px;
+  font-weight: 700;
+}
+#hunt-front{
+  padding-right: 12px;
+}
+#myhunt-front{
+  padding-right: 12px;
+}
+#news-and-events {
+  width: 310px;
+}
+#news-front, #events-front{
+  float:left;
+  margin-bottom: 30px;
+  width: 100%;
+}
+#exhibits-front{
+  float:left;
+  width: 100%;
+}
+#news-front{
+  margin-right: 0px;
+}
+#news-and-events .news-event-photo img{
+  vertical-align: bottom;
+}
+#news-and-events .news-event-photo {
+  float:left;
+  margin-right: 5%;
+  width: 45%;
+}
+#news-and-events .news-event-content {
+  float:left;
+  width: 50%;
+}
+#news-and-events .news-event-content h2{
+  line-height: 0.9em;
+  padding-top: 0px;
+  text-transform: uppercase;
+}
+#news-and-events .news-event-content p{
+  line-height: 1.5em;
+  margin-bottom: 0px;
+}
+#page ul.hunt-list li {}
+.container-16 #feature-container .features-news {
+  float: left;
+  font-size: 12px;
+  width: 258px;
+}
+#page p.countdown {
+  font-size: 14px;
+  border-radius: 0 0 .3em 0;
+  padding: 9px;
+  color: white;
+  margin: 0 0 9px 0;
+  border-top: 1px solid #BBB;
+  background: #A31401;
+}
+#page span.count {
+  padding: 2px;
+  color: #A31401;
+  background: white;
+  margin-right: 1px;
+}
+#page ul.zero-margin-top {
+  margin-left: 5px;
+}
+.zero-margin-top li a {
+  line-height: 9px;
+}
+#rendering {
+  height: 194px;
+  width: 232px;
+  float:left;
+}
+.hunt {
+  /*width:400px;*/
+}
+.hunt h2 {
+  /*font-size: 1.5em;*/
+  /*margin-bottom:10px;*/
+}
+.egg {
+  margin-top:9px;
+}
+.desktops {
+  padding-left:2px;
+}
+#page .hunt-list {
+  margin: 0 0 6px 0;
+  padding-left: 0px;
+}
+#page .hunt-list li{}
+/* for technology lending numbers tabs */
+ .tech-avail {
+  border: none;
+  background: none;
+  height: 100px;
+}
+#page .tech-avail .ui-state-default {
+  background: #E6E6E6;
+  border-radius: 0;
+}
+#page .tech-avail .ui-tabs-nav .ui-state-default {
+  text-align: right;
+  border: none;
+  margin: 0 0 0 10px;
+  line-height: 13px;
+  background: none;
+  top: 0;
+}
+.tech-avail .ui-state-default a {
+}
+.tech-avail .ui-state-active a {
+  color: black;
+}
+.tech-avail .ui-state-hover {
+  background: red;
+}
+.t-row {
+  /*background: url(http://www.lib.ncsu.edu/sites/all/themes/ncsulibraries/images/graybullet.png) no-repeat 5px 5px;*/
+  /*padding: 0 0 2px 18px;*/
+  /*border-bottom: 1px dotted #999;*/
+  /*line-height: 16px;*/
+  /*margin: 4px 6px 3px 0;*/
+}
+.tech-avail .ui-tabs-panel {
+  padding: 0;
+  clear: left;
+}
+.tech-avail .features-header {
+  width: 112px;
+  float: left;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+#hill {
+}
+#page .ui-tabs.tech-avail .ui-tabs-nav {
+  padding-top: 0;
+  margin-bottom: 12px;
+}
+i {
+  color: #7E7E7E;
+}
+#page .tech-avail .ui-tabs-nav li.ui-state-default a {
+  padding: 6px 6px;
+  border-radius: 0.9em;
+  margin-top: 1px;
+}
+#page .tech-avail .ui-tabs-nav li.ui-state-default a:hover {
+  background: gray;
+  color: white;
+}
+.tech-avail .ui-tabs-nav li.ui-tabs-selected a {
+  cursor: default;
+  background: gray;
+  border-radius: 1em;
+  color: white;
+}
+/* end of file */

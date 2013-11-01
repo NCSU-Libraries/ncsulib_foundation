@@ -14,11 +14,8 @@
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
   <?php print $page_top; ?>
-  page top<br/>
   <?php print $page; ?>
-  page<br/>
   <?php print $page_bottom; ?>
-  page bottom<br/>
   <?php print _zurb_foundation_add_reveals(); ?>
 
   <?php include 'includes/footer.php'; ?>

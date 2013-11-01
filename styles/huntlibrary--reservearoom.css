@@ -1,0 +1,83 @@
+table {
+    width: 100%;
+}
+
+td a.reserve-button {
+    display: block;
+    text-align: center;
+}
+
+.not-reservable {
+    color: #ACACAC;
+    padding-top: 8px;
+    font-style: italic;
+}
+
+#page td.views-field-field-reservation-method {
+    padding-top: 8px;
+    color: rgb(163,163,163);
+    text-align: center;
+    font-style: italic;
+}
+
+tr.even {
+    background: #FCFCFC;
+}
+
+#page table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+#page table p {
+    margin: 0;
+}
+
+.views-field-title {
+    width: 148px;
+}
+
+.not-ready {
+    color: red;
+    padding: 10px 0;
+}
+
+.info-icon {
+    background: url("/sites/default/files/icons/info-icon.png") no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 8px;
+    top: 3px;
+    position: relative;
+}
+
+.info-icon:hover {
+    background: url("/sites/default/files/icons/info-icon-hover.png") no-repeat;
+}
+
+.policies-list {
+    display: none;
+}
+
+p.policies {
+    color: #4C83AF;
+    cursor: pointer;
+}
+
+p.policies:hover {
+    text-decoration: underline;
+}
+
+.additional-details {
+    margin-top: 10px;
+}
+
+.views-field-field-image {
+    width: 100px;
+}
+
+.view img {
+    padding: 5px;
+    border: 1px solid gainsboro;
+}

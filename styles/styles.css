@@ -1,0 +1,84 @@
+/* $Id: styles.css,v 1.1.2.2.2.1 2011/01/11 01:08:49 dvessel Exp $ */
+
+h1#site-name {
+    margin-bottom: 0;
+}
+
+ul, ol {
+    overflow: hidden;
+}
+
+ul#mega {
+    overflow: visible;
+}
+
+#site-header,
+#site-subheader,
+#footer-region,
+.column,
+.node,
+.comment,
+.block {
+    margin-bottom: 1.5em;
+}
+
+ul.main-menu,
+ul.secondary-menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/*begin sub navigation*/
+#page #sidebar-left ul.menu li.expanded {
+    border: none;
+}
+#page #sidebar-left ul.menu li.expanded ul.menu{
+    border-top: 1px dotted #CCC;
+}
+#page #sidebar-left ul.menu li.expanded ul.menu li a{
+    padding-left: 10px;
+}
+/*end sub navigation*/
+
+
+/* editor styles
+        created by cdm 12/6/11
+*/
+.main-content .center-text {
+    text-align: center;
+}
+
+.main-content .left-text {
+    text-align: left;
+}
+
+.main-content .right-text {
+    text-align: right;
+}
+
+.main-content .right-image {
+    float: right;
+    clear: right;
+    margin: 20px 0 20px 20px;
+}
+
+.main-content .left-image {
+    float: left;
+    clear: left;
+    margin: 20px 20px 20px 0;
+}
+
+.main-content .clear {
+    clear: both;
+}
+
+.main-content .big-text {
+    font-size: 125%;
+    line-height: 1.3;
+}
+
+.main-content .bigger-text {
+    font-size: 150%;
+    line-height: 1.5;
+}

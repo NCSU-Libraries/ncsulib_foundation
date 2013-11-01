@@ -1,0 +1,28 @@
+/****
+ * special styles for IE6 
+ * Not trying to fix every problem with IE6 here
+ * just making some adjustments so the experience
+ * is a little smoother.
+*/
+
+/* Hide drop down menus */
+/* mega menu drop downs inconsistently appear behind content*/
+.sub {
+	display: none !important;
+	visibility: hidden;
+}
+
+div.ie6warning {
+	display: block;
+	width: 75%;
+	margin: 0 auto;
+	background-color: white;
+	border: 2px solid #C00;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+div.ie6warning img {
+	float:left;
+	margin-right: 10px;
+}

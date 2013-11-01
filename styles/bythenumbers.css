@@ -1,0 +1,102 @@
+/* DV: By the Numbers */
+ #main .dataviews .views-row {
+    border: 1px solid #C9C9C7;
+    box-shadow: 0 0px 2px #C9C9C7 inset;
+    float: left;
+    height: 210px;
+    margin: 0 16px 15px 0;
+    padding: 0px;
+    width: 217px;
+}
+#main .views-row .views-field-expression .field-content {
+    color: #000000;
+    display: block;
+    font-size: 5em;
+    line-height: 1;
+    margin-left: 19px;
+    margin-top: 15px;
+    padding-bottom: 7px;
+    text-shadow: 0 1px 1px #000000;
+}
+#main .views-row .views-field-body p {
+    color: black;
+    font-size: 2em;
+    line-height: 1.1;
+    padding-bottom: 18px;
+    padding-left: 21px;
+}
+#main .dataviews .views-row .views-field-field-dv-date {
+    color: #000000;
+    float: left;
+    font-style: italic;
+    padding-left: 5px;
+}
+#main .dataviews .views-row .views-field-field-dv-action-text {
+    font-weight: 700;
+    padding-right: 5px;
+    text-align: right;
+}
+#main .dataviews .views-row .views-field-field-dv-action-text a {
+    background: url("/dataviews/includes/images/more_arrow_white.jpg") no-repeat scroll 100% 50% transparent;
+    color: #FFFFFF;
+    font-size: 1em;
+    padding-right: 13px;
+}
+#page .courseviews .views-field-body p {
+    margin-bottom: 6px;
+}
+#main .device-lending .views-field-body p {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+#main .online-access .views-field-body p, #main .new-books .views-field-body p {
+    font-size: 17px;
+    margin: 13px 0 21px;
+    padding: 0 18px;
+}
+#main .dataviews .online-access .views-field-expression .field-content {
+    font-size: 4em;
+    padding-top: 13px;
+}
+#main .computer-logins .views-field-body p {
+    padding: 0 18px;
+    font-size: 19px;
+    margin: 0 0 26px;
+}
+#main .cost-per-use .views-field-body p {
+    font-size: 15px;
+    margin: 12px 0 27px;
+    padding: 0 18px;
+}
+#main .collection-use .views-field-field-dv-pre .field-content {
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.1;
+    padding: 20px 18px 0 20px;
+}
+#main .cost-per-use .views-field-expression {
+    font-size: 0.8em;
+}
+#main .collection-use .views-field-body p {
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+#main .collection-use .views-field-expression {
+    font-size: 0.85em;
+    margin-bottom: 15px;
+}
+#main .hours-open .views-field-body p, #main .views-row-9 .views-field-body p {
+    font-size: 22px;
+    margin: 7px 0 27px;
+    padding: 0 18px;
+}
+.views-row .views-field-field-dv-action-text, .views-row .views-field-field-dv-date {
+    margin: 0;
+}
+#main .gate-counts .views-field-expression .field-content {
+    font-size: 53px;
+    margin-bottom: 14px;
+}
+#main .gate-counts .views-field-body p {
+    padding-bottom: 11px;
+}

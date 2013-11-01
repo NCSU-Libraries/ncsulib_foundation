@@ -13,41 +13,43 @@ variable_set('htdocs_root', str_replace(strrchr(DRUPAL_ROOT, "/"), "/htdocs", DR
  */
 
 function ncsulib_foundation_preprocess_page(&$variables) {
-  // Linex 19 to 118 are Jason Walsh's code
-  if (module_exists('path')) {
-    $alias = drupal_get_path_alias(str_replace('/edit','',$_GET['q']));
-    // If the alias is a clean URL
-    if ($alias != $_GET['q'] || empty($variables['node'])) {
-      // Break the alias into its parts and iterate through the alias part by
-      // part
-      $i=0;
-      foreach (explode('/', $alias) as $path_part) {
-        if ($i==0) {
-          // If this is the first time through the loop, create the template
-          // suggestion
-          $template_suggestion = $path_part;
-          $css_suggestion = $path_part;
-        } elseif ($i>=1) {
-          if ($i==1) {
-          // If this is the second time through the loop, create a variable to
-          // append each $path_part to
-          $path_part_holder = $css_suggestion . '--' . $path_part;
-        } elseif ($i>=2) {
-          $path_part_holder .= '--' . $path_part;
+    // Lines 19 to 118 are Jason Walsh's code (just so everyone knows Charlie would never write such code)
+    if (module_exists('path')) {
+        $alias = drupal_get_path_alias(str_replace('/edit','',$_GET['q']));
+        // If the alias is a clean URL
+        if ($alias != $_GET['q'] || empty($variables['node'])) {
+            // Break the alias into its parts and iterate through the alias part by part
+            $i=0;
+            foreach (explode('/', $alias) as $path_part) {
+                if ($i==0) {
+                    // If this is the first time through the loop, create the template suggestion
+                    $template_suggestion = $path_part;
+                    $css_suggestion = $path_part;
+                } elseif ($i>=1) {
+                    if ($i==1) {
+                        // If this is the second time through the loop, create a variable to append each $path_part to
+                        $path_part_holder = $css_suggestion . '--' . $path_part;
+                    } elseif ($i>=2) {
+                        $path_part_holder .= '--' . $path_part;
+                    }
+
+                    // If this is the second time or more through the loop, continue to append the alias path to the template suggestion
+                    $template_suggestion = $template_suggestion . '__' . $path_part;
+                    $css_suggestions[] = $path_part_holder;
+                }
+
+                // Increase the counter
+                $i++;
+            }
+
+            $template_suggestion = 'page__' . $template_suggestion;
+            // Add the template suggestion to the template suggestions hook
+            $variables['theme_hook_suggestions'][] = $template_suggestion;
         }
-        // If this is the second time or more through the loop, continue to
-        // append the alias path to the template suggestion
-        $template_suggestion = $template_suggestion . '__' . $path_part;
-        $css_suggestions[] = $path_part_holder;
-      }
-      // Increase the counter
-      $i++;
-    }
-      $template_suggestion = 'page__' . $template_suggestion;
-      // Add the template suggestion to the template suggestions hook
-      $variables['theme_hook_suggestions'][] = $template_suggestion;
-      print_r($variables['theme_hook_suggestions']);
-    }
+
+
+
+
     // Create the CSS suggestion(s)
     if (isset($css_suggestion)) {
       $css_suggestion = path_to_theme() .'/styles/'. $css_suggestion .'.css';

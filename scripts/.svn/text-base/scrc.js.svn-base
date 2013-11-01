@@ -1,0 +1,14 @@
+jQuery(document).ready(function($){
+	$('#scrc-search').focus(function(){
+		var placeholder = $(this).data('placeholder');
+		if($(this).val() == placeholder){
+			$(this).val('').addClass('active');
+		}
+	})
+	$('#scrc-search').blur(function(){
+		var placeholder = $(this).data('placeholder');
+		if($(this).val() == ''){
+			$(this).val(placeholder).removeClass('active');
+		}
+	})
+})

@@ -1,0 +1,8 @@
+.views-row {
+    width: 281px;
+    float: left;
+    margin: 0 48px 10px 0;
+}
+.views-row:nth-child(4n+0) {
+    margin-right: 0;
+}

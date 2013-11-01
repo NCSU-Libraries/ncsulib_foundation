@@ -1,0 +1,23 @@
+/* ie7 stylesheet */
+#search-header {
+	margin-top: 0px;
+}
+#nav_container{
+	position: relative;
+	z-index: 9999;
+}
+#feature-container{
+	padding-top: 30px;
+}
+#news-front .news-event-photo,
+#events-front .news-event-photo,
+#exhibits-front .news-event-photo{
+	float: left;
+	width: 40%;
+}
+#news-front .news-event-content,
+#events-front .news-event-content,
+#exhibits-front .news-event-content{
+	float: left;
+	width: 40%;
+}

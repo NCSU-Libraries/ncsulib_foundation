@@ -1,0 +1,18 @@
+.featured-image {
+  float: right;
+  padding: 2px;
+  margin: 0 0 15px 15px;
+}
+#page .featured-image p {
+  margin-bottom: 0;
+  background: #666;
+  font-size: 12px;
+  width: 312px;
+  line-height: 1;
+  color: #FFF;
+  padding: 14px;
+  margin-top: -6px;
+}
+#page p.half-page-width {
+    width: 432px;
+}

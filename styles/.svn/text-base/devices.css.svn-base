@@ -1,0 +1,5 @@
+.field-name-field-device-hardware, .field-name-field-device-software {
+    width: 26%;
+    float: left;
+    padding-right: 10px;
+}
