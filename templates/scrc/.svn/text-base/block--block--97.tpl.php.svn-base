@@ -1,0 +1,11 @@
+<?php
+	drupal_add_js('sites/all/themes/ncsulibraries/scripts/scrc.js', 'file');
+?>
+
+<div id="scrc-form-wrapper">
+	<form action="http://historicalstate.lib.ncsu.edu/search/" id="scrc-search-form">
+		<input type="text" name="q" id="scrc-search" data-placeholder="Search The Special Collection Research Center" value="Search The Special Collection Research Center" />
+		<input type="submit" value="SEARCH" id="scrc-submit" />
+	</form>
+	<a href="http://www.lib.ncsu.edu/findingaids/search?browse-all=yes">Collection Guides</a> | <a href="http://d.lib.ncsu.edu/collections">Rare and Unique Digital Collections</a>
+</div>

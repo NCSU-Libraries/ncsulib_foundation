@@ -46,6 +46,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       $template_suggestion = 'page__' . $template_suggestion;
       // Add the template suggestion to the template suggestions hook
       $variables['theme_hook_suggestions'][] = $template_suggestion;
+      print_r($variables['theme_hook_suggestions']);
     }
     // Create the CSS suggestion(s)
     if (isset($css_suggestion)) {

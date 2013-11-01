@@ -24,7 +24,7 @@
 					<h4><a href="/libraries">Libraries</a></h4>
 					<ul>
 						<li><a href="/">D. H. Hill Library</a></li>
-						<li><a href="/huntlibrary">Hunt Library</a></li>
+						<li><a href="/huntlibrary">James B. Hunt Jr. Library</a></li>
 						<li><a href="/design">Design Library</a></li>
 						<li><a href="/nrl">Natural Resources Library</a></li>
 						<li><a href="/vetmed">Veterinary Medicine Library</a></li>
@@ -51,3 +51,8 @@
 				</div>
 			</div>
 		</footer>
+		<script>
+    		(function ($, Drupal, window, document, undefined) {
+      			$(document).foundation();
+    		})(jQuery, Drupal, this, this.document);
+  		</script>

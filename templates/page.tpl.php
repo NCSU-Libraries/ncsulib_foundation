@@ -1,3 +1,6 @@
+<?php print_r(theme_get_suggestions(arg(1), 'page', '--')); ?>
+<br>
+page.tpl.php
 <!--.page -->
 <div role="document" class="page">
 

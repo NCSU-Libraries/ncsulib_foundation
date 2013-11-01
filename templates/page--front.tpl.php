@@ -28,7 +28,7 @@
 
             <!-- middle row -->
             <section id="tier-two">
-                <h4>Availability <a href="/reservearoom/">Reserve a Room</a><a href="/techlending/">Borrow Technology</a></h4>
+                <h4>Available Now <a href="/reservearoom/">Reserve a Room</a><a href="/techlending/">Borrow Technology</a></h4>
                 <div id="availibility">
                     <!-- availability tabs stub -->
                     <div class="section-container auto search-tabs vertical-tabs" data-section="vertical-tabs">
@@ -38,15 +38,15 @@
                                 <ul>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Study Rooms</a>:</span>
-                                        <span class="item-count"><span class="count">18</span> of 73</span>
+                                        <span class="item-count"><span class="count">18</span></span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Laptops</a>:</span>
-                                        <span class="item-count"><span class="count">47</span> of 67</span>
+                                        <span class="item-count"><span class="count">47</span></span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Tablets</a>:</span>
-                                        <span class="item-count"><span class="count">76</span> of 82</span>
+                                        <span class="item-count"><span class="count">76</span></span>
                                     </li>
                                 </ul>
                             </div>
@@ -57,15 +57,15 @@
                                 <ul>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Study Rooms</a>:</span>
-                                        <span class="item-count"><span class="count">3</span> of 43</span>
+                                        <span class="item-count"><span class="count">3</span></span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Laptops</a>:</span>
-                                        <span class="item-count"><span class="count">654</span> of 764</span>
+                                        <span class="item-count"><span class="count">654</span></span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php">Tablets</a>:</span>
-                                        <span class="item-count"><span class="count">13</span> of 46</span>
+                                        <span class="item-count"><span class="count">13</span></span>
                                     </li>
                                 </ul>
                             </div>

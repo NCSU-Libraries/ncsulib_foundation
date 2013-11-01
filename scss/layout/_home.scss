@@ -17,6 +17,9 @@
 		@include grid-column(7);
 		padding-left: 0px;
 	}
+	p.title a:hover{
+		text-decoration: none;
+	}
 }
 #searcheverything{
 	@include grid-row;
@@ -48,6 +51,7 @@
 	font-size: 0.75em;
 	margin-bottom: emCalc(20);
 	margin-top: emCalc(10);
+	padding-left: 5px;
 
 	h6{
 		display: inline;
@@ -198,6 +202,7 @@
 		margin-right: emCalc(45);
 
 		h5{
+			font-weight: bold;
 			margin-bottom: 0px;
 		}
 	}
@@ -280,6 +285,7 @@
 		a:hover{
 			background: #f5f5f5;
 			cursor: default;
+			text-decoration: none;
 		}
 	}
 
@@ -307,7 +313,8 @@
 			text-align: center;
 
 			li{
-				line-height: 2em;
+				line-height: 1em;
+				padding-top: 8px;
 
 				@media #{$mobile}{
 					height: 45px;
@@ -320,7 +327,9 @@
 				}
 
 				.item{
-					float: left;
+					padding-right: 5px;
+					position: relative;
+					top: -3px;
 				}
 
 				.item a{
