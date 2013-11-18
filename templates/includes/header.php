@@ -3,7 +3,7 @@
   require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
   drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 ?>
-<?php print $styles; ?>
+<?php //print $styles; ?>
 
 <div class="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
@@ -20,7 +20,7 @@
 	<nav class="top-bar">
 		<ul class="title-area">
 			<li class="name">
-			  	<a href="<?php print $GLOBALS['base_url']; ?>" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
+			  	<a href="/" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
 					<img src="/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
 			  	</a>
 			</li>
@@ -119,8 +119,8 @@
 		<div id="home-hours">
 			<p id="hours-title"><a href="/hours">TODAYS HOURS</a>:</p>
 			<ul>
-				<li><a href="/hours/general/hill"><span class="library">D. H. Hill Library:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
-				<li><a href="/hours/general/hunt"><span class="library">James B. Hunt Library:</span> &nbsp; <span class="hours">7am-11pm</span></a></li>
+				<li><a href="/hours/general/hill"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
+				<li><a href="/hours/general/hunt"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>

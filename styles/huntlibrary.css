@@ -1,3 +1,58 @@
+/*begin rotating artbox*/
+.block-views-slideshows-block-4{
+    margin-bottom: 30px;
+}
+.block-views-slideshows-block-4 img{
+    width: 100%;
+}
+/*end rotating artbox*/
+
+
+/*begin hunt promo 1*/
+#hunt-promo-1{
+    margin-bottom: 20px;
+}
+/*end hunt promo 1*/
+
+
+/*begin hunt promo 2*/
+#hunt-promo-2{
+    margin-bottom: 20px;
+}
+/*end hunt promo 1*/
+
+
+/*begin events block*/
+.main .events-block{
+    padding-left: 0px;
+}
+
+/*end events block*/
+
+/*begin news block*/
+#block-aggregator-feed-7 {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width : 768px){
+    #block-aggregator-feed-7 {
+        padding: 0px;
+    }
+}
+
+#block-aggregator-feed-7 ul{
+    list-style-type: none;
+}
+
+#block-aggregator-feed-7 ul li{
+    margin: 0px 0px 10px 0px;
+}
+/*begin news block*/
+
+
+
+
+
 a.nav-item {
     text-transform: uppercase;
     font-weight: 700;
@@ -103,15 +158,7 @@ a.nav-item {
     padding-top: 30px;
 }
 
-.grid-6.border-adjust {
-    /*width: 339px;
-    border-right: 1px solid #E0E0E0;
-    padding-bottom: 28px;*/
-}
 
-#block-aggregator-feed-7 {
-    margin-bottom: 0;
-}
 
 #block-views-upcoming-events-block-5 {
     clear: left;

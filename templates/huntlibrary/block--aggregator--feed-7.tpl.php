@@ -10,14 +10,16 @@
  *
  */
 ?>
-<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="grid-6 omega block block-<?php print $block->module ?>">
+	<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="block block-<?php print $block->module ?> column large-6">
 
-<?php if ($block->subject): ?>
-  <h2><?php print $block->subject; ?></h2>
-<?php endif;?>
+	<?php if ($block->subject): ?>
+	  <h2><?php print $block->subject; ?></h2>
+	<?php endif;?>
 
-<?php if ($variables['elements']['#markup']): ?>
-  <div><?php  print $variables['elements']['#markup']; ?></div>
-<?php endif;?>
+	<?php if ($variables['elements']['#markup']): ?>
+	  <div><?php  print $variables['elements']['#markup']; ?></div>
+	<?php endif;?>
 
-</div>
+	</div>
+
+

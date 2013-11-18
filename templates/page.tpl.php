@@ -50,7 +50,7 @@
         <!--/.main region -->
 
         <?php if (!empty($page['sidebar_first'])): ?>
-            <aside role="complementary" class="<?php print $sidebar_first_grid; ?> sidebar-first columns sidebar">
+            <aside id="subnav" role="complementary" class="<?php print $sidebar_first_grid; ?> sidebar-first columns sidebar">
                 <?php print render($page['sidebar_first']); ?>
             </aside>
         <?php endif; ?>

@@ -9,7 +9,7 @@
  *
  */
 ?>
-<div class="grid-6 alpha border-adjust">
+<div class="column large-6 border-adjust events-block">
   <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
     <?php print render($title_prefix); ?>
@@ -22,4 +22,4 @@
       <?php print $content ?>
     </div>
   </div>
-</div> <!-- end .grid-6.alpha -->
+</div>

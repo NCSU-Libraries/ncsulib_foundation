@@ -322,6 +322,7 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
+    border-radius: 0px;
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
 }

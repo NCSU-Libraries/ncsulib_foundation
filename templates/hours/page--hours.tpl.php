@@ -16,13 +16,13 @@
 		</div>
 
 		<?php if ($page['sidebar_first']): ?>
-			<div id="sidebar-left" class="columns sidebar region large-4">
+			<div id="sidebar-left">
 				<?php print render($page['sidebar_first']); ?>
 			</div>
 		<?php endif; ?>
 
-		<div id="main" class="columns large-8">
-			<div id="main-content" class="main-content region">
+		<div id="main">
+			<div id="main-content" class="main-content">
 				<?php print render($page['content']); ?>
 			</div>
 		</div>

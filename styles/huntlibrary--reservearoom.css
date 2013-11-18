@@ -60,14 +60,14 @@ tr.even {
     display: none;
 }
 
-p.policies {
+/*p.policies {
     color: #4C83AF;
     cursor: pointer;
 }
 
 p.policies:hover {
     text-decoration: underline;
-}
+}*/
 
 .additional-details {
     margin-top: 10px;
@@ -77,7 +77,36 @@ p.policies:hover {
     width: 100px;
 }
 
-.view img {
-    padding: 5px;
-    border: 1px solid gainsboro;
+
+
+/*begin responsive styling EO*/
+.res-room{
+    padding-top: 40px;
 }
+.res-room h3{
+    margin-top: 0px;
+}
+.res-photo{
+    margin: 5px 0px 20px;
+}
+.page .res-button-wrap{
+    position: relative;
+    top: 100px;
+}
+@media only screen and (max-width : 767px) {
+    .page .res-button-wrap{
+        position: static;
+    }
+}
+.res-button{
+    width: 100%;
+}
+.res-guidelines{
+    display: none;
+    float: left;
+    margin-bottom: 20px;
+}
+a.policies{
+    margin-bottom: 20px;
+}
+/*end responsive styling*/

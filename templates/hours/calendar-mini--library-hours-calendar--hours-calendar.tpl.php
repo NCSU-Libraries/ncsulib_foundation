@@ -44,6 +44,7 @@
 	$prev_url = 'http://'.$_SERVER['HTTP_HOST'].'/'.arg(0).'/'.arg(1).'/'.arg(2).'?date='.$prev_year.'-'.$prev_month;
 	$next_url = 'http://'.$_SERVER['HTTP_HOST'].'/'.arg(0).'/'.arg(1).'/'.arg(2).'?date='.$next_year.'-'.$next_month;
 ?>
+
 <div class="hours-pager">
 	<div class="date-nav-wrapper clearfix">
 		<div class="date-nav item-list">
@@ -61,19 +62,19 @@
 		</div>
 	</div>
 </div>
-<div class="alpha grid-9" id="schedule-block">
+<div id="schedule-block">
 
 	<?php
 		/* Regular Schedule*/
 		include 'block--block--94.tpl.php';
 	?>
 	<div id="cal">
-		<div class="hours-calendar alpha grid-4">
+		<div class="hours-calendar">
 			<table class="mini">
 				<thead>
 					<tr>
 						<?php foreach ($day_names as $cell): ?>
-						<th class="label">
+						<th class="cal-label">
 							<?php echo $cell['data']; ?>
 						</th>
 						<?php endforeach; ?>

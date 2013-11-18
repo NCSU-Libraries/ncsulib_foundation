@@ -263,6 +263,7 @@ jQuery(document).ready(function($) {
   // }
 });
 
+
 // Load Availability Data
 var tech = {
 

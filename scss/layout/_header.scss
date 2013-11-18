@@ -185,7 +185,8 @@ header{
 				}
 
 				li > a:hover{
-					background: $topbar-dropdown-bg;
+					background: none;
+					// background: $topbar-dropdown-bg;
 					text-decoration: none;
 				}
 
@@ -283,6 +284,10 @@ header#minimum-bar{
 			}
 		}
 	}
+
+	.primary-menu-list.open{
+		display: block;
+	}
 }
 /*end dropdown menus*/
 
@@ -352,14 +357,14 @@ header#minimum-bar{
 				padding-right: emCalc(10);
 
 				li{
-					@media #{$small}{
+					@media #{$medium}{
 						float: left;
 						padding: 5px 0px;
 					}
 					padding: 4px 0px;
 
 					a{
-						@media #{$small}{
+						@media #{$medium}{
 							border-left: 1px solid #FFF;
 							margin: 0px 0px 0px 10px;
 						}
@@ -388,12 +393,22 @@ header#minimum-bar{
 		}
 
 		#utility-search{
-			@include grid-column(6);
+			// @include grid-column(6);
+			padding-left: emCalc(15);
+
+			#search-form{
+				margin: 0px;
+			}
 
 			@media #{$mobile}{
 				display: none;
 				padding: emCalc(15);
 				width: 100%;
+			}
+
+			@media #{$medium}{
+				padding-right: 0px;
+				width: 45%;
 			}
 
 			#search-all{
@@ -420,6 +435,10 @@ header#minimum-bar{
 			}
 			#search-all:focus, #search-all.active{
 				@media #{$small}{
+					height: 40px;
+					width: 290px;
+				}
+				@media #{$medium}{
 					height: 40px;
 					width: 335px;
 				}
@@ -464,6 +483,7 @@ header#minimum-bar{
 
 		#utility-links{
 			@include grid-column(12);
+			padding-left: 0px;
 
 			@media #{$mobile}{
 				display: none;
@@ -473,6 +493,7 @@ header#minimum-bar{
 				float: right;
 				width: auto;
 			}
+
 			ul{
 				list-style-type: none;
 				float: right;
@@ -480,7 +501,7 @@ header#minimum-bar{
 
 				li{
 					float: left;
-					margin-top: emCalc(3);
+					margin-top: emCalc(4);
 
 					a{
 						border-left: 1px solid #555555;

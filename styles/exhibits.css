@@ -1,6 +1,6 @@
 /*Begin Exhibits listing*/
 
-#page #exhibits-content{
+.page ul#exhibits-content{
 	display:inline-block;
 	*display: inline;
 	list-style-type: none;
@@ -8,7 +8,7 @@
 	width:100%;
     zoom: 1;
 }
-#page .exhibit-item{
+.page .exhibit-item{
 	background: none;
 	border-top: 1px solid #DDD;
 	float:left;
@@ -16,27 +16,25 @@
 	padding: 30px 0px 0px 0px;
 	width: 100%;
 }
-#page .exhibit-item:first-child{
+.page .exhibit-item:first-child{
 	border-top: none;
 	padding: 10px 0px 0px 0px;
 }
 .exhibit-photo{
-	border:1px solid #DDDDDD;
-	float:left;
-	margin: 0px 2% 0px 0px;
-	padding: 1%;
-	width: 38%;
+	margin: 0px 0px 20px 0px;
 }
 .main-content .exhibit-photo img{
 	margin:0px;
 }
-.exhibit-content{
-	float:left;
-	margin: 0px;
-	width: 57%;
+.exhibit-content{}
+.exhibit-meta{
+	margin-bottom: 20px;
+}
+.exhibit-meta p{
+	margin-bottom: 0px;
 }
 .exhibit-content h2 a{
-	/*text-transform: capitalize;*/
+	font-size: inherit;
 }
 /*end exhibits listing*/
 

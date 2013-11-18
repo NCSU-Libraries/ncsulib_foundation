@@ -6,7 +6,7 @@
 *
 */
 ?>
-<div id="schedules" class="grid-4">
+<div id="schedules">
 <?php
 
 	// get relevant semester(s)
@@ -20,9 +20,9 @@
 		$sem_end = date('M j',strtotime($semester_node[0]['value2']));
 ?>
 
-	<div class="regular-schedule">
+	<div class="regular-schedule large-12">
 		<div class="reg-hours <?php echo strtolower($all_semester_ary[$key]['semester']); ?>">&nbsp;</div>
-		<h3><?php echo $all_semester_ary[$key]['semester']; ?> Hours <span class="sem-dates">(<?php echo $sem_start.'-'.$sem_end; ?>)</span></h3>
+		<h4><?php echo $all_semester_ary[$key]['semester']; ?> Hours <span class="sem-dates">(<?php echo $sem_start.'-'.$sem_end; ?>)</span></h4>
 		<table>
 			<?php
 				foreach ($sem as $item):
@@ -58,8 +58,8 @@
 		}
 	?>
 	<?php if($exam_hours): ?>
-	<div class="exceptions-schedule">
-		<h3>Exam Hours <div class="exam-hours">&nbsp;</div></h3>
+	<div class="exceptions-schedule large-12">
+		<h4>Exam Hours <div class="exam-hours">&nbsp;</div></h4>
 		<table>
 			<?php
 				foreach ($json_data as $key => $sem):
@@ -103,8 +103,8 @@
 	?>
 
 	<?php if($exceptions): ?>
-	<div class="exceptions-schedule">
-		<h3>Exceptions <div class="exception-hours">&nbsp;</div></h3>
+	<div class="exceptions-schedule large-12">
+		<h4>Exceptions <div class="exception-hours">&nbsp;</div></h4>
 		<table>
 			<?php
 				foreach ($json_data as $key => $sem):

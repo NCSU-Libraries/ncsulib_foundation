@@ -63,6 +63,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
         }
       }
     }
+
     // If this is the front/home page of the site
     if ($variables['is_front']) {
       // Add the following CSS suggestions to Drupal
@@ -118,15 +119,11 @@ function ncsulib_foundation_preprocess_page(&$variables) {
     }
   }
 
-  // Additional logic to unset the menus for the Reserve a Room page in Hunt
-  if ($alias ==  'huntlibrary/reservearoom'){
-    $variables['page']['sidebar_first'] = array();
-  }
 
   // Creating a single template suggestion for all pages that begin with /scrc
   // allowing for overrides by more specific path-based or node id templates
   // e.g. page--scrc--zoologicalhealth.tpl.php or page--node--9999.tpl.php
-  if (preg_match('/^1scrc/', $alias)){
+  if (preg_match('/^scrc/', $alias)){
     $arr_length = count($variables['theme_hook_suggestions']);
     array_splice($variables['theme_hook_suggestions'], ($arr_length-2), 0, 'page__scrc__subpage');
   }
@@ -139,6 +136,12 @@ function ncsulib_foundation_preprocess_page(&$variables) {
 
 } // End tremendous template_preprocess_page function
 
+function ncsulib_foundation_page_alter(&$page) {
+  // Additional logic to unset the menus for the Reserve a Room page in Hunt
+  if (current_path() == 'huntlibrary/reservearoom') {
+    unset($page['sidebar_first']);
+  }
+}
 /**
  * Implements template_preprocess_node
  *

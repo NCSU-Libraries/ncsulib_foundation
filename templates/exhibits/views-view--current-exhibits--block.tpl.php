@@ -29,20 +29,22 @@
 		$building_field = field_get_items('node', $space_node, 'field_building_name');
 		$library = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
 	?>
-		<li class="exhibit-item">
+		<li class="exhibit-item row">
 			<?php if($img_url): ?>
-			<div class="exhibit-photo">
+			<div class="exhibit-photo column large-5">
 				<img src="<?php echo $img_url; ?>" width="100%" />
 			</div>
 			<?php endif; ?>
-			<div class="exhibit-content">
-				<h2><?php echo $url; ?></h2>
-				<?php if($space_title): ?>
-				<h4>Where: <a href="<?php echo url('node/'.$where[0]['target_id']); ?>"><?php echo $space_title; ?></a> at <?php echo $library['#markup']; ?></h4>
-				<?php endif; ?>
-				<?php if($start_time || $end_time): ?>
-				<h4>When: <?php echo $start_time . ' - ' . $end_time; ?></h4>
-				<?php endif; ?>
+			<div class="exhibit-content column large-7">
+				<div class="exhibit-meta">
+					<h2><?php echo $url; ?></h2>
+					<?php if($space_title): ?>
+					<p>Where: <a href="<?php echo url('node/'.$where[0]['target_id']); ?>"><?php echo $space_title; ?></a> at <?php echo $library['#markup']; ?></p>
+					<?php endif; ?>
+					<?php if($start_time || $end_time): ?>
+					<p>When: <?php echo $start_time . ' - ' . $end_time; ?></p>
+					<?php endif; ?>
+				</div>
 				<?php if($body): ?>
 				<?php echo $body; ?>
 				<?php endif; ?>

@@ -55,7 +55,7 @@
 </ul>
 
 <!-- pdf link -->
-<h2>Download Hours Schedule</h2>
+<h3>Download Hours Schedule</h3>
 <ul id="hours-download">
 	<li><img src="/images/pdf.gif"><a href="/documents/hours/2013-fall-hours.pdf">Fall 2013 hours</a></li>
 	<li><img src="/images/pdf.gif"><a href="/documents/hours/2014-spring-hours.pdf">Spring 2014 hours</a></li>

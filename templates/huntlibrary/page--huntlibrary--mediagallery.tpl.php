@@ -12,9 +12,9 @@
 ?>
 
 <?php include DRUPAL_ROOT."/".$GLOBALS['theme_path']."/includes/header.php"; ?>
-<div id="page" class="container-16">
+<div id="page" class="row">
 	<div class="content-border">
-		<div class="grid-16 clearfix">
+		<div class="column large-12">
 			<?php if ($tabs): ?>
 				<div class="tabs">
 					<?php print render($tabs); ?>
@@ -28,11 +28,11 @@
 			<?php print render($title_suffix); ?>
 		</div>
 		<?php if ($page['header']): ?>
-			<div id="header" class="grid-16">
+			<div id="header" class="column large-12">
 				<?php print render($page['header']); ?>
 			</div>
 		<?php endif; ?>
-		<div id="main" class="column <?php print ns('grid-16', $page['sidebar_first'], 4, $page['sidebar_second'], 4) . ' ' . ns('push-4', !$page['sidebar_first'], 4); ?>">
+		<div id="main" class="row">
 			<div id="main-content" class="main-content region">
 
 				<?php
@@ -66,17 +66,17 @@
 			</div>
 		</div>
 		<?php if ($page['sidebar_first']): ?>
-			<div id="sidebar-left" class="column sidebar region grid-4 <?php print ns('pull-12', $page['sidebar_second'], 4); ?>">
+			<div id="sidebar-left" class="column sidebar region large-3 <?php print ns('pull-12', $page['sidebar_second'], 4); ?>">
 				<?php print render($page['sidebar_first']); ?>
 			</div>
 		<?php endif; ?>
 		<?php if ($page['sidebar_second']): ?>
-			<div id="sidebar-right" class="column sidebar region grid-4">
+			<div id="sidebar-right" class="column sidebar region large-3">
 				<?php print render($page['sidebar_second']); ?>
 			</div>
 		<?php endif; ?>
 		<?php if ($page['footer']): ?>
-			<div id="footer" class="grid-16">
+			<div id="footer" class="large-12">
 				<?php print render($page['footer']); ?>
 			</div>
 		<?php endif; ?>

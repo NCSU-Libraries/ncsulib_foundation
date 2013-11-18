@@ -1,10 +1,42 @@
 // Non-modular or client styles for the .l-content region.
 
-.l-main {
-  background-color: #fff;
+div.workbench-info-block{
+	display: none;
 }
 
-.node {}
-.body {}
-.image {}
-.breadcrumb {}
+#page, .page{
+	margin-bottom: 40px;
+}
+.l-main {
+	background-color: #fff;
+}
+
+#subnav{
+
+	@media #{$mobile}{
+		border-top: 1px solid $border-color;
+		padding-top: 0.9375em;
+	}
+
+	ul.menu{
+		list-style-type: none;
+		margin-left: 0px;
+
+		li{
+			padding: 0px;
+		}
+	}
+
+}
+
+// begin page styles
+.content .featured-image{
+	@media #{$mobile}{
+		margin-left: 0px;
+	}
+
+	img{
+		width: 100%;
+	}
+}
+// end page styles

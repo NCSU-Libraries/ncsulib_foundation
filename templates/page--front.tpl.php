@@ -13,13 +13,13 @@
                 <div id="home-artbox">
                     <ul data-orbit>
                         <li>
-                            <img src="http://lib.ncsu.edu/artbox/images/1013-06.jpg" />
+                            <img src="http://lib.ncsu.edu/artbox/images/1013-06.jpg" width="100%" />
                         </li>
                         <li>
-                            <img src="http://lib.ncsu.edu/artbox/images/1013-05.jpg" />
+                            <img src="http://lib.ncsu.edu/artbox/images/1013-05.jpg" width="100%"/>
                         </li>
                         <li>
-                            <img src="http://lib.ncsu.edu/artbox/images/1013-04.jpg" />
+                            <img src="http://lib.ncsu.edu/artbox/images/1013-04.jpg" width="100%"/>
                         </li>
                     </ul>
                 </div>
@@ -29,7 +29,7 @@
             <!-- middle row -->
             <section id="tier-two">
                 <h4>Available Now <a href="/reservearoom/">Reserve a Room</a><a href="/techlending/">Borrow Technology</a></h4>
-                <div id="availibility">
+                <div id="availability">
                     <!-- availability tabs stub -->
                     <div class="section-container auto search-tabs vertical-tabs" data-section="vertical-tabs">
                         <section class="active">
@@ -110,7 +110,7 @@
                 <div id="happenings">
                     <div id="home-news">
                         <div class="happenings-photo">
-                            <a href="/news/"><img src="http://lib.ncsu.edu/sites/default/files/news-front.jpg" alt="girl typing at lap" width="100%" /></a>
+                            <a href="/news/"><img src="http://lib.ncsu.edu/sites/default/files/news-front.jpg" alt="News Image" width="100%" /></a>
                         </div>
                         <div class="happenings-content">
                             <h2><a href="/news/">News</a></h2>
@@ -119,19 +119,19 @@
                     </div>
                     <div id="home-events">
                         <div class="happenings-photo">
-                            <a href="/events/"><img src="http://lib.ncsu.edu/sites/default/files/events-front.jpg" alt="girl typing at lap" width="100%" /></a>
+                            <a href="/events/"><img src="http://lib.ncsu.edu/sites/default/files/events-front.jpg" alt="Events Image" width="100%" /></a>
                         </div>
                         <div class="happenings-content">
-                            <h2><a href="/news/">Events</a></h2>
+                            <h2><a href="/events/">Events</a></h2>
                             <p>Speaker series’, book discussions, campus and community events...</p>
                         </div>
                     </div>
                     <div id="home-exhibits">
                         <div class="happenings-photo">
-                            <a href="/exhibits/"><img src="http://lib.ncsu.edu/sites/default/files/exhibits-front.jpg" alt="girl typing at lap" width="100%" /></a>
+                            <a href="/exhibits/"><img src="http://lib.ncsu.edu/sites/default/files/exhibits-front.jpg" alt="Exhibits Image" width="100%" /></a>
                         </div>
                         <div class="happenings-content">
-                            <h2><a href="/news/">Exhibits</a></h2>
+                            <h2><a href="/exhibits/">Exhibits</a></h2>
                             <p>Featured collections, visiting exhibits, digital immersion experiences…</p>
                         </div>
                     </div>

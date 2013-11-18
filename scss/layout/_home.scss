@@ -14,7 +14,7 @@
 	}
 
 	@media #{$small}{
-		@include grid-column(7);
+		@include grid-column(6);
 		padding-left: 0px;
 	}
 	p.title a:hover{
@@ -23,6 +23,15 @@
 }
 #searcheverything{
 	@include grid-row;
+}
+.search-body{
+	padding: 0px;
+	width: 100%;
+
+	label{
+		float: left;
+		width: 100%;
+	}
 }
 #searchall{
 	@include grid-column(12);
@@ -34,15 +43,25 @@
 	@media #{$small}{
 		@include grid-column(10);
 	}
+
 	height: 3.5em;
 	margin-bottom: 0px;
 }
 #all-submit{
-	@include grid-column(12);
+
+	@media #{$mobile}{
+		@include grid-column(5, false, false, false, false, false, false, right);
+		@include button($button-tny);
+		margin: 0px;
+	}
 
 	@media #{$small}{
 		@include grid-column(2);
+		font-size: 0.7em;
+		height: 49px;
+		padding: 0px;
 	}
+
 	height: 3.79em;
 	margin-bottom: 0px;
 }
@@ -68,7 +87,9 @@
 
 	ul{
 		@include inline-list;
-		display: inline;
+		margin-left: 5px;
+		margin-top: 5px;
+		// display: inline-block;
 
 		li{
 			border-left: 1px solid #DDD;
@@ -97,10 +118,17 @@
 	margin-bottom: emCalc(5);
 }
 #article-submit{
-	@include grid-column(12);
+	@media #{$mobile}{
+		@include grid-column(5, false, false, false, false, false, false, right);
+		@include button($button-tny);
+		margin: 0px;
+	}
 
 	@media #{$small}{
 		@include grid-column(2);
+		font-size: 0.7em;
+		height: 49px;
+		padding: 0px;
 	}
 	margin-bottom: emCalc(5);
 	height: 3.79em;
@@ -133,6 +161,7 @@
 	padding: 5px;
 }
 .search-more{
+	float: left;
 	margin-bottom: 0px;
 	padding-left: 0px;
 }
@@ -151,6 +180,9 @@
 
 	@media #{$small}{
 		@include grid-column(2);
+		font-size: 0.7em;
+		height: 49px;
+		padding: 0px;
 	}
 
 	height: 3.79em;
@@ -183,6 +215,9 @@
 
 	@media #{$small}{
 		@include grid-column(2);
+		font-size: 0.7em;
+		height: 49px;
+		padding: 0px;
 	}
 
 	margin-bottom: emCalc(5);
@@ -199,12 +234,16 @@
 
 	li{
 		margin-left: 0px;
-		margin-right: emCalc(45);
+		margin-left: emCalc(45);
 
 		h5{
 			font-weight: bold;
 			margin-bottom: 0px;
 		}
+	}
+
+	li:first-child{
+		margin-left: 0px;
 	}
 
 	ul{
@@ -227,7 +266,7 @@
 	}
 
 	@media #{$small}{
-		@include grid-column(5);
+		@include grid-column(6);
 		padding-right: 0px;
 	}
 
@@ -267,8 +306,8 @@
 		margin-left: 0px;
 	}
 }
-/*begin availibility*/
-#availibility{
+/*begin availability*/
+#availability{
 	@include grid-row;
 
 	.active .title{
@@ -333,8 +372,13 @@
 				}
 
 				.item a{
-					font-size: 1.2em;
 					text-transform: uppercase;
+					@media #{$mobile}{
+						font-size: 1em;
+					}
+					@media #{$small}{
+						font-size: 1em;
+					}
 				}
 
 				.item-count{
@@ -358,7 +402,7 @@
 		padding-left: emCalc(139);
 	}
 }
-/*end availibility*/
+/*end availability*/
 /*end tier two*/
 
 
@@ -431,6 +475,7 @@
 			font-size: emCalc(26);
 			line-height: 1em;
 			margin-bottom: 5px;
+			margin-top: 0px;
 			text-transform: uppercase;
 
 			a{
@@ -440,6 +485,11 @@
 			a:hover{
 				color: $primary-color;
 			}
+		}
+
+		p{
+			font-size: 0.8em;
+			line-height: 1.2em;
 		}
 	}
 }
