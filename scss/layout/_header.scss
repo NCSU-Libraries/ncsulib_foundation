@@ -297,7 +297,7 @@ header#minimum-bar{
 	margin-bottom: emCalc(15);
 
 	@media #{$small}{
-		margin-bottom: emCalc(30);
+		margin-bottom: emCalc(20);
 	}
 
 	#utility-bar{
@@ -449,8 +449,7 @@ header#minimum-bar{
 
 				@media #{$mobile}{
 					float: right;
-					margin: 0px;
-					width: 100%;
+					margin: 0px 0px emCalc(9) 0px;
 				}
 
 				@media #{$small}{

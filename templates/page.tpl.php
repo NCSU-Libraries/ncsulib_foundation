@@ -22,11 +22,14 @@
     <?php endif; ?>
 
     <main role="main" class="row l-main">
+        <div class="columns">
+        <?php if ($breadcrumb): print $breadcrumb; endif; ?>
+        </div>
+
         <div class="<?php print $main_grid; ?> main columns">
 
             <a id="main-content"></a>
 
-            <?php if ($breadcrumb): print $breadcrumb; endif; ?>
 
             <?php if ($title && !$is_front): ?>
                 <?php print render($title_prefix); ?>

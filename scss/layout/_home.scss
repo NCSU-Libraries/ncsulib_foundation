@@ -1,3 +1,11 @@
+/* begin global styles */
+.front #utility{
+	margin-bottom: 50px;
+}
+/* end global styles */
+
+
+
 /*begin tier one*/
 #tier-one{
 	@include grid-row;
@@ -67,8 +75,8 @@
 }
 #research-options{
 	@include grid-row;
-	font-size: 0.75em;
-	margin-bottom: emCalc(20);
+	font-size: 0.95em;
+	margin-bottom: emCalc(15);
 	margin-top: emCalc(10);
 	padding-left: 5px;
 
@@ -88,7 +96,7 @@
 	ul{
 		@include inline-list;
 		margin-left: 5px;
-		margin-top: 5px;
+		margin-top: 4px;
 		// display: inline-block;
 
 		li{
@@ -236,7 +244,7 @@
 		margin-left: 0px;
 		margin-left: emCalc(45);
 
-		h5{
+		h4{
 			font-weight: bold;
 			margin-bottom: 0px;
 		}
@@ -296,7 +304,7 @@
 
 	h4 a{
 		border-left: 1px solid #555;
-		font-size: 0.5em;
+		font-size: 0.65em;
 		margin-left: emCalc(10);
 		padding-left: emCalc(10);
 	}
@@ -319,6 +327,8 @@
 		a{
 			color: #555;
 			font-weight: bold;
+			line-height: 1.6em;
+			height: 38px;
 		}
 
 		a:hover{
@@ -332,6 +342,9 @@
 		background: #fff;
 		border-bottom: 1px solid #CCC;
 		font-size: 0.7em;
+		@media #{$small}{
+			width: 150px;
+		}
 
 		a{
 			color: $primary-color;
@@ -353,7 +366,7 @@
 
 			li{
 				line-height: 1em;
-				padding-top: 8px;
+				padding-top: 16px;
 
 				@media #{$mobile}{
 					height: 45px;
@@ -374,10 +387,10 @@
 				.item a{
 					text-transform: uppercase;
 					@media #{$mobile}{
-						font-size: 1em;
+						font-size: 1.2em;
 					}
 					@media #{$small}{
-						font-size: 1em;
+						font-size: 1.2em;
 					}
 				}
 
@@ -488,8 +501,8 @@
 		}
 
 		p{
-			font-size: 0.8em;
-			line-height: 1.2em;
+			font-size: 0.85em;
+			line-height: 1.35em;
 		}
 	}
 }

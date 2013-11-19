@@ -11,28 +11,20 @@ div.workbench-info-block{
 	background-color: #fff;
 }
 
-#subnav{
-
-	@media #{$mobile}{
-		border-top: 1px solid $border-color;
-		padding-top: 0.9375em;
-	}
-
-	ul.menu{
-		list-style-type: none;
-		margin-left: 0px;
-
-		li{
-			padding: 0px;
-		}
-	}
-
+h1{
+	margin-top: 0px;
 }
 
 // begin page styles
 .content .featured-image{
 	@media #{$mobile}{
 		margin-left: 0px;
+	}
+
+	p{
+		background: none;
+		color: #555;
+		padding: 15px 0px;
 	}
 
 	img{

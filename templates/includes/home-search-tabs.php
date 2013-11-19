@@ -92,21 +92,21 @@
         <ul id="home-quicklinks">
             <li>
                 <ul>
-                    <li><h5>Technology</h5></li>
+                    <li><h4>Technology</h4></li>
                     <li><a href="/cdm/">Create Digital Media</a></li>
                     <li><a href="/spaces/makerspace/">Makerspace</a></li>
                 </ul>
             </li>
             <li>
                 <ul>
-                    <li><h5>Studying</h5></li>
+                    <li><h4>Studying</h4></li>
                     <li><a href="/reservearoom/">Reserve a Room</a></li>
                     <li><a href="/groupfinder/">GroupFinder</a></li>
                 </ul>
             </li>
             <li>
                 <ul>
-                    <li><h5>Courses</h5></li>
+                    <li><h4>Courses</h4></li>
                     <li><a href="/course">Course Tools</a></li>
                     <li><a href="http://reserves.lib.ncsu.edu/">Course Reserves</a></li>
                 </ul>

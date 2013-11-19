@@ -206,11 +206,11 @@ $header-text-rendering: optimizeLegibility;
 // Control header font sizes
 
 $h1-font-size: emCalc(44);
-$h2-font-size: emCalc(33);
-$h3-font-size: emCalc(27);
-$h4-font-size: emCalc(24);
-$h5-font-size: emCalc(21);
-$h6-font-size: emCalc(18);
+$h2-font-size: emCalc(26);
+$h3-font-size: emCalc(21);
+$h4-font-size: emCalc(18);
+$h5-font-size: emCalc(16);
+$h6-font-size: emCalc(14);
 
 // Control how subheaders are styled.
 
@@ -229,7 +229,7 @@ $h6-font-size: emCalc(18);
 
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-$paragraph-font-size: emCalc(15);
+$paragraph-font-size: emCalc(14.5);
 $paragraph-line-height: 1.5;
 // $paragraph-margin-bottom: emCalc(20);
 // $paragraph-aside-font-size: emCalc(14);
@@ -556,17 +556,17 @@ $alert-close-position: emCalc(8);
 
 // We use this to set the background color for the breadcrumb container.
 
-$crumb-bg: lighten($secondary-color, 75%);
+$crumb-bg: lighten($secondary-color, 100%);
 
 // We use these to set the padding around the breadcrumbs.
 
-// $crumb-padding: emCalc(9, 14, 9);
+$crumb-padding: emCalc(9, 14, 0, 0);
 // $crumb-side-padding: emCalc(12);
 
 // We use these to control border styles.
 
 // $crumb-function-factor: 10%;
-// $crumb-border-size: 1px;
+$crumb-border-size: 0px;
 // $crumb-border-style: solid;
 // $crumb-border-color: darken($crumb-bg, $crumb-function-factor);
 $crumb-radius: 0; //$global-radius;
@@ -1079,7 +1079,7 @@ $section-title-bg-active-tabs: #f5f5f5;
 
 // Font controls
 
-// $section-font-size: emCalc(14);
+$section-font-size: emCalc(16);
 
 // Control the color of the background and some size options
 

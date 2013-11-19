@@ -1,7 +1,20 @@
 // Non-modular or client styles for asides or sidebars.
 
-.l-sidebar {}
+#subnav{
+	padding-top: emCalc(10);
+	@media #{$mobile}{
+		border-top: 1px solid $border-color;
+		padding-top: 0.9375em;
+	}
 
-.sidebar {}
-.sidebar-first {}
-.sidebar-second {}
+	ul.menu{
+		list-style-type: none;
+		margin-left: 0px;
+
+		li{
+			margin-bottom: 5px;
+			padding: 0px;
+		}
+	}
+
+}
