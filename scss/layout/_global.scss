@@ -1,0 +1,40 @@
+// Non-modular or client styles for the .l-content region.
+
+div.workbench-info-block{
+	display: none;
+}
+
+#page, .page{
+	margin-bottom: 40px;
+}
+.l-main {
+	background-color: #fff;
+}
+
+h1{	font-size: $h1-font-size; margin-top: 0px; }
+h2{ font-size: $h2-font-size;}
+h3{ font-size: $h3-font-size;}
+h4{ font-size: $h4-font-size;}
+h5{ font-size: $h5-font-size;}
+h6{ font-size: $h6-font-size;}
+
+// begin page styles
+html #content{
+	margin-top: 30px;
+}
+.content .featured-image{
+	@media #{$mobile}{
+		margin-left: 0px;
+	}
+
+	p{
+		background: none;
+		color: #555;
+		padding: 15px 0px;
+	}
+
+	img{
+		width: 100%;
+	}
+}
+// end page styles

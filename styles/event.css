@@ -1,34 +1,6 @@
-.main-content img {
-    float: left;
-    margin: 0 20px 20px 0;
+#event-node .event-meta{
+    margin-bottom: 20px;
 }
-
-.at {
-    display: block;
-    line-height: 1;
-    clear: left;
+#event-node .event-meta h5{
+    font-weight: bold;
 }
-
-.field-name-field-space {
-    display: inline-block;
-    line-height: 1;
-}
-
-.field-name-body {
-    line-height: 16px;
-    max-width: 900px;
-}
-
-.field-name-field-image-for-event {
-    float: right;
-    margin-left: 15px;
-}
-/* PITA override */
-.field.clearfix:after {
-    clear: none;
-}
-.field-label {
-    clear: left;
-}
-
-

@@ -1,5 +1,5 @@
 <!--.page -->
-<div role="document" class="page">
+<div id="content" role="document" class="page">
 
     <?php if (!empty($page['featured'])): ?>
         <!--/.featured -->

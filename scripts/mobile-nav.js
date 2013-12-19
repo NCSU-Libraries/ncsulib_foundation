@@ -14,7 +14,7 @@ var mobileNav = {
 				$('#mobile-nav').hide();
 			} else{ //open
 				$('body').addClass('nav-expanded');
-				$('#mobile-nav').show().height($('body').height());
+				$('#mobile-nav, #primary-nav').show().height($('body').height());
 			}
 
 			e.preventDefault();

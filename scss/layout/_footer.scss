@@ -3,7 +3,7 @@ footer {
 	background: $footer-bg-color;
 	padding-top: $footer-padding-top;
 
-	p, h2,h3,h4,h5, i{
+	p,h2,h3,h4,h5, i{
 		color: $footer-font-color;
 	}
 	a{
@@ -26,8 +26,8 @@ footer {
 				border-right: 1px solid darken($footer-font-color, 30%);
 				height: 300px;
 				padding-left: 0px;
+				padding-bottom: emCalc(30);
 			}
-			padding-bottom: emCalc(30);
 		}
 
 		#f-libraries{
@@ -54,6 +54,12 @@ footer {
 
 			i{
 				font-weight: normal;
+			}
+
+			@media #{$mobile}{
+				a{
+					font-size: 1.5em;
+				}
 			}
 			a:hover i{
 				color: #FFF;

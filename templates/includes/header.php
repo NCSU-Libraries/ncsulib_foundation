@@ -119,8 +119,8 @@
 		<div id="home-hours">
 			<p id="hours-title"><a href="/hours">TODAYS HOURS</a>:</p>
 			<ul>
-				<li><a href="/hours/general/hill"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
-				<li><a href="/hours/general/hunt"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
+				<li><a href="/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
+				<li><a href="/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>

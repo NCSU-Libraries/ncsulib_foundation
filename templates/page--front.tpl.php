@@ -1,5 +1,5 @@
 <!--.page -->
-<div role="document" class="page">
+<div role="document" class="page" id="content">
     <main role="main" class="row l-main">
         <div class="<?php print $main_grid; ?> main columns">
             <a id="main-content"></a>

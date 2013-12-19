@@ -7,12 +7,59 @@ body.nav-open{
 body.nav-expanded{
 	left: -80%;
 	position: absolute;
+	width: 100%;
 
-	#mobile-nav{
+	#mobile-nav, #primary-nav{
+		display: block;
 		float: right;
 		left: 100%;
 		position: absolute;
 		top: 0px;
+	}
+
+	.top-bar{
+		overflow: visible;
+
+		.top-bar-section{
+
+			ul#primary-nav{
+				padding: 3% 0px;
+
+				li{
+					background: none;
+					a{
+						color: #CCC;
+						font-size: 1.3em;
+					}
+				}
+
+				li.title{
+					display: none;
+				}
+
+				li a.parent-link{
+					display: none;
+				}
+
+				li.has-dropdown{
+
+					.dropdown{
+						background: darken($topbar-dropdown-bg, 5%);
+						display: block;
+						padding: 0px 0px 5px 0px;
+						position: static;
+
+						li{
+							padding-left: emCalc(20);
+
+							a{
+								background: none;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 /*end nav styles*/
@@ -162,13 +209,13 @@ header{
 
 				@media #{$small} {
 					background: $primary-color;
+					margin-top: 13px;
 					padding-bottom: emCalc(0);
 				}
 
 				li{
 					@media #{$small} {
 						border: none;
-						margin-top: 13px;
 						max-width: 250px;
 					}
 
@@ -181,12 +228,14 @@ header{
 						line-height: $topbar-height - 13;
 					}
 					text-transform: uppercase;
-
 				}
 
-				li > a:hover{
-					background: none;
-					// background: $topbar-dropdown-bg;
+				li:hover > a{
+					background: $topbar-dropdown-bg;
+				}
+
+				li > a:hover, li a:hover:not(.button){
+					background: $topbar-dropdown-bg;
 					text-decoration: none;
 				}
 
@@ -197,6 +246,30 @@ header{
 				li a.open{
 					@media #{$small} {
 						background: $topbar-dropdown-bg;
+					}
+				}
+
+				li.has-dropdown{
+					.dropdown{
+						background: $topbar-dropdown-bg;
+						padding: emCalc(10) 0px;
+						li{
+							a{
+								background: $topbar-dropdown-bg;
+								font-size: 0.9em;
+								line-height: 1.5em;
+								padding: emCalc(10) emCalc(30) !important;
+								text-transform: none;
+							}
+
+							a:hover{
+								text-decoration: underline;
+							}
+						}
+					}
+
+					a{
+						padding-right: emCalc(20) !important;
 					}
 				}
 			}
@@ -214,15 +287,29 @@ header.sticky{
 }
 
 header#minimum-bar{
-	height: 45px;
+	height: 60px;
+	width: 100%;
 
 	.top-bar{
-		height: 45px;
+		height: 60px;
 
 		.name{
-			height: 45px;
+			height: 60px;
 			padding: 5px 0px 0px emCalc(15);
 			width: 248px;
+
+			a{
+				color: #FFF;
+			}
+
+			a:hover{
+				text-decoration: underline;
+			}
+
+			h2{
+				color: #FFF;
+				margin: 0px;
+			}
 		}
 
 		.top-bar-section a{
@@ -279,7 +366,6 @@ header#minimum-bar{
 			li a:hover{
 				@media #{$small} {
 					text-decoration: underline;
-					/*background: darken($topbar-dropdown-bg, 15%);*/
 				}
 			}
 		}

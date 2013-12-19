@@ -1,7 +1,7 @@
 		<footer>
 			<div id="footer">
 				<div id="f-address">
-					<h4 itemscope itemtype="http://schema.org/Library" itemprop="name"><link itemprop="logo" href="http://www.lib.ncsu.edu/website/images/logo_small.png"><a href="http://www.lib.ncsu.edu/"itemprop="url">D. H. Hill Library</a></h4>
+					<h3 itemscope itemtype="http://schema.org/Library" itemprop="name"><link itemprop="logo" href="http://www.lib.ncsu.edu/website/images/logo_small.png"><a href="http://www.lib.ncsu.edu/"itemprop="url">D. H. Hill Library</a></h3>
 					<p>
 						<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 							<span itemprop="streetAddress">2 Broughton Drive</span> <br>
@@ -12,7 +12,7 @@
 						<span itemprop="telephone"><a href="tel:9195153364">(919) 515-3364</a></span>
 					</p>
 
-					<h4><a href="http://www.lib.ncsu.edu/huntlibrary">James B. Hunt Jr. Library</a></h4>
+					<h3><a href="http://www.lib.ncsu.edu/huntlibrary">James B. Hunt Jr. Library</a></h3>
 					<p>1070 Partners Way<br>
 						Campus Box 7132<br>
 						Raleigh, NC 27606<br>
@@ -21,7 +21,7 @@
 				</div>
 
 				<div id="f-libraries">
-					<h4><a href="/libraries">Libraries</a></h4>
+					<h3><a href="/libraries">Libraries</a></h3>
 					<ul>
 						<li><a href="/">D. H. Hill Library</a></li>
 						<li><a href="/huntlibrary">James B. Hunt Jr. Library</a></li>
