@@ -1,24 +1,48 @@
 var mobileNav = {
+	tOut : false,
+
 	init : function(){
 
 		mobileNav.handleNav();
 		mobileNav.handleSearch();
 
+		//brower resize event
+		window.onresize = function(e){
+			// detect if mobile nav is open
+			if(!mobileNav.tOut){
+				var timeout = setTimeout(function(){
+					if(window.innerWidth > 768){
+						mobileNav.closeNav();
+					}
+					mobileNav.tOut = false;
+				}, 1000)
+
+				mobileNav.tOut = true;
+			}
+		}
 	},
 
 	handleNav : function(){
 		$('#nav-toggle').click(function(e){
 
 			if($('body').hasClass('nav-expanded')){ //close
-				$('body').removeClass('nav-expanded');
-				$('#mobile-nav').hide();
+				mobileNav.closeNav();
 			} else{ //open
-				$('body').addClass('nav-expanded');
-				$('#mobile-nav, #primary-nav').show().height($('body').height());
+				mobileNav.openNav();
 			}
 
 			e.preventDefault();
 		})
+	},
+
+	openNav : function(){
+		$('body').addClass('nav-expanded');
+		$('#mobile-nav, #primary-nav').show().height($('body').height());
+	},
+
+	closeNav : function(){
+		$('body').removeClass('nav-expanded');
+		$('#mobile-nav').hide();
 	},
 
 	handleSearch : function(){
@@ -29,7 +53,7 @@ var mobileNav = {
 			e.preventDefault();
 		})
 
-	}
+	},
 }
 
 $(function(){
