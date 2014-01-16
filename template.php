@@ -311,3 +311,63 @@ function ncsulib_foundation_js_alter(&$js) {
     }
   }
 }
+
+
+/**
+ * Implements theme_breadrumb().
+ *
+ * Print breadcrumbs as a list, with separators.
+ */
+function ncsulib_foundation_breadcrumb($variables) {
+  $links = array();
+  $path = '';
+  // Get URL arguments
+  $arguments = explode('/', request_uri());
+  // Remove empty values
+  foreach ($arguments as $key => $value) {
+    if (empty($value)) {
+      unset($arguments[$key]);
+    }
+  }
+  $arguments = array_values($arguments);
+  // Add 'Home' link
+  $links[] = l(t('Home'), '<front>');
+  // Add other links
+  if (!empty($arguments)) {
+    foreach ($arguments as $key => $value) {
+      // Don't make last breadcrumb a link
+      if ($key == (count($arguments) - 1)) {
+        $links[] = drupal_get_title();
+      } else {
+        if (!empty($path)) {
+          $path .= '/'. $value;
+        } else {
+          $path .= $value;
+        }
+        $links[] = l(drupal_ucfirst($value), $path);
+      }
+    }
+  }
+  // Set custom breadcrumbs
+  drupal_set_breadcrumb($links);
+  // Get custom breadcrumbs
+  $breadcrumb = drupal_get_breadcrumb();
+
+  if (!empty($breadcrumb)) {
+    // Provide a navigational heading to give context for breadcrumb links to
+    // screen-reader users. Make the heading invisible with .element-invisible.
+    $breadcrumbs = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+
+    $breadcrumbs .= '<ul class="breadcrumbs">';
+
+    foreach ($breadcrumb as $key => $value) {
+      $breadcrumbs .= '<li>' . $value . '</li>';
+    }
+
+    $title = strip_tags(drupal_get_title());
+    // $breadcrumbs .= '<li class="current"><a href="#">' . $title. '</a></li>';
+    $breadcrumbs .= '</ul>';
+
+    return $breadcrumbs;
+  }
+}
