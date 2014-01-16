@@ -69,7 +69,6 @@ body.nav-expanded{
 	background: $topbar-dropdown-bg;
 	display: none;
 	padding: 0 10%;
-	width: 80%;
 
 	#primary-nav-mobile{
 
@@ -114,6 +113,10 @@ body.nav-expanded{
 			}
 		}
 	}
+
+	#subnav{
+		color: #CCC;
+	}
 }
 
 
@@ -125,6 +128,10 @@ header{
 
 	nav.top-bar{
 		@include grid-row;
+
+		a{
+			text-decoration: none;
+		}
 
 		.title-area .name{
 			padding-left: emCalc(15);
@@ -139,6 +146,7 @@ header{
 				padding-top: emCalc(14);
 				width: 250px;
 			}
+
 			@media #{$medium} {
 				padding-top: emCalc(6);
 				width: 348px;
