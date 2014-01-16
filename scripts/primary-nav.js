@@ -1,13 +1,22 @@
 var nav = {
-	index : -1, isNavActive : false, isNavMenuActive : false,
+	index : -1, navActive : false, navMenuActive : false,
 	init : function() {
+
+		// set hoverintent
+		$("#primary-nav li").hoverIntent({
+			over: nav.handleIn,
+			out : nav.handleOut,
+			timeout: 250
+		});
 
 		// mouse on primary nav link
 		$('.primary-nav a.primary-menu-item').mouseenter(function(){
 			nav.index = $(this).parent().index();
 
 			// show nav item
-			nav.openNav();
+			if(window.innerWidth > 768 && nav.navActive){
+				nav.openNav();
+			}
 		})
 
 		// mouse out primary nav link
@@ -17,21 +26,42 @@ var nav = {
 
 		// mouse on primary nav list
 		$('.primary-menu-list').mouseenter(function(){
-			nav.isNavMenuActive = true;
+			nav.navMenuActive = true;
 			nav.openNav();
 		})
 
 		// mouse out primary nav list
 		$('.primary-menu-list').mouseleave(function(){
-			nav.isNavMenuActive = false;
+			nav.navMenuActive = false;
 			$('.primary-nav li:eq('+nav.index+') a').removeClass('open');
 			$('.primary-menu-list:eq('+nav.index+')').removeClass('open');
 		})
+
+		// chat window
+		$(".globalchat").click(function(e){
+			var chaturl = $(this).attr('href');
+		    window.open(chaturl,"chat","resizable=1,width=400,height=350,directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no");
+
+		    e.preventDefault();
+		});
+
+	},
+
+	handleOut : function(){
+		nav.navActive = false;
+		// nav.closeNav();
+	},
+
+	handleIn : function(){
+		nav.navActive = true;
+		nav.openNav();
 	},
 
 	openNav : function(){
-		$('.primary-nav li:eq('+nav.index+') a').addClass('open');
-		$('.primary-menu-list:eq('+nav.index+')').addClass('open');
+		if(window.innerWidth > 768){
+			$('.primary-nav li:eq('+nav.index+') a').addClass('open');
+			$('.primary-menu-list:eq('+nav.index+')').addClass('open');
+		}
 	},
 
 	closeNav : function(){
@@ -45,11 +75,11 @@ var nav = {
 	},
 
 	setNav : function(){
-		nav.isNavActive = true;
+		nav.navActive = true;
 	},
 
 	unsetNav : function(){
-		nav.isNavActive = false;
+		nav.navActive = false;
 	},
 
 
