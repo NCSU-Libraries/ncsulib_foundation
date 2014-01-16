@@ -215,52 +215,6 @@ jQuery(document).ready(function($) {
     if (searcharticleadvanced ==
       "author") $("#searcharticle").attr("name", "t.AuthorCombined");
   });
-  // Fetching tech lending data
-  // $.get('/sites/default/files/techlending/devices_data/aggregate.json', function(data) {
-  //   writeNumbers(data, ['lap', 'tab']);
-  // }, 'json');
-
-  // For writing the contents of the tech lending tabs
-  // function writeNumbers(techData, devicesToCheckFor) {
-  //   for (var branch in techData){
-  //     if (branch === 'hunt' || branch === 'dhhill'){
-
-  //       for (var i = 0; i < devicesToCheckFor.length; i++) {
-  //         var typeDiv       = document.createElement('div');
-  //         var rowDiv        = document.createElement('div');
-  //         var identitySpan  = document.createElement('span');
-  //         var numbersSpan   = document.createElement('span');
-  //         var deviceName    = '';
-
-  //         switch(devicesToCheckFor[i]) {
-  //           case 'lap':
-  //             deviceName = 'Laptops';
-  //             break;
-  //           case 'tab':
-  //             deviceName = 'Tablets';
-  //             break;
-  //         }
-
-  //         $('#' + branch).append(typeDiv);
-  //         $(typeDiv)
-  //           .addClass(deviceName.toLowerCase())
-  //           .append(rowDiv);
-  //         $(rowDiv)
-  //           .addClass('t-row')
-  //           .append(identitySpan)
-  //           .append(numbersSpan);
-  //         $(identitySpan)
-  //           .addClass('cell-one')
-  //           .append(deviceName);
-  //         $(numbersSpan)
-  //           .addClass('t-nums')
-  //           .append(techData[branch][devicesToCheckFor[i]].available.all + ' of ')
-  //           .append(techData[branch][devicesToCheckFor[i]].total);
-
-  //       }
-  //     }
-  //   }
-  // }
 });
 
 
