@@ -15,7 +15,7 @@ var mobileNav = {
 						mobileNav.closeNav();
 					}
 					mobileNav.tOut = false;
-				}, 1000)
+				}, 50)
 
 				mobileNav.tOut = true;
 			}
