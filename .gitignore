@@ -5,3 +5,5 @@ scss/foundation/*
 *.map
 *.sublime*
 css/*
+.DS_Store
+._DS_Store
