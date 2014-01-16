@@ -3,7 +3,6 @@
   require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
   drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 ?>
-<?php //print $styles; ?>
 
 <div class="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
@@ -14,7 +13,6 @@
 	Your browser does not support inline frames or is currently configured  not to display inline frames.<br /> Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.
 </iframe>
 
-<?php include 'mobile-nav.php'; ?>
 
 <header class="contain-to-grid">
 	<nav class="top-bar">
@@ -35,6 +33,9 @@
 		<section class="top-bar-section primary-nav home">
 			<?php include 'primary-nav.php'; ?>
 		</section>
+
+		<?php include 'mobile-nav.php'; ?>
+
 	</nav>
 </header>
 
