@@ -28,7 +28,12 @@
 
             <!-- middle row -->
             <section id="tier-two">
-                <h4>Available Now <a href="/reservearoom/">Reserve a Room</a><a href="/techlending/">Borrow Technology</a></h4>
+                <ul id="available-links" class="inline-list">
+                    <li><h4>Available Now</h4></li>
+                    <li><a href="/reservearoom/">Reserve a Room</a></li>
+                    <li><a href="/techlending/">Borrow Technology</a></li>
+                </ul>
+
                 <div id="availability">
                     <!-- availability tabs stub -->
                     <div class="section-container auto search-tabs vertical-tabs" data-section="vertical-tabs">
