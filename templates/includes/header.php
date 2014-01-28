@@ -33,10 +33,9 @@
 		<section class="top-bar-section primary-nav home">
 			<?php include 'primary-nav.php'; ?>
 		</section>
-
-		<?php include 'mobile-nav.php'; ?>
-
 	</nav>
+
+	<?php include 'mobile-nav.php'; ?>
 </header>
 
 <nav id="primary-nav-menus">

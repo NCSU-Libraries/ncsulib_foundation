@@ -37,7 +37,7 @@ var mobileNav = {
 
 	openNav : function(){
 		$('body').addClass('nav-expanded');
-		$('#mobile-nav, #primary-nav').show().height($('body').height());
+		$('#mobile-nav').show().height($('body').height());
 	},
 
 	closeNav : function(){

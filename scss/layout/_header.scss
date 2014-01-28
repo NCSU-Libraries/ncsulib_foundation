@@ -15,6 +15,7 @@ body.nav-expanded{
 		left: 100%;
 		position: absolute;
 		top: 0px;
+		width: 80%;
 	}
 
 	.top-bar{
@@ -71,12 +72,15 @@ body.nav-expanded{
 	padding: 0 10%;
 
 	#primary-nav-mobile{
+		width: 100%;
 
 		ul#primary-nav{
 			border-bottom: 1px solid darken($topbar-link-color, 65%);
 			float: none;
 			list-style-type: none;
 			margin: 10% 0 0 0;
+			position: static;
+
 
 			li{
 
@@ -95,14 +99,15 @@ body.nav-expanded{
 		}
 	}
 
-	#utility-links{
-		ul{
+	#utility-nav-mobile{
+		width: 100%;
+
+		ul#utility-links{
 			float: none;
 			list-style-type: none;
 			margin: 10% 0 0 0;
 
 			li{
-
 				a{
 					color: darken($topbar-link-color, 20%);
 					display: block;
@@ -574,8 +579,11 @@ header#minimum-bar{
 			}
 		}
 
-		#utility-links{
+		ul#utility-links{
 			@include grid-column(12);
+			list-style-type: none;
+			float: right;
+			margin: 0px;
 			padding-left: 0px;
 
 			@media #{$mobile}{
@@ -587,30 +595,24 @@ header#minimum-bar{
 				width: auto;
 			}
 
-			ul{
-				list-style-type: none;
-				float: right;
-				margin: 0px;
+			li{
+				float: left;
+				margin-top: emCalc(4);
 
-				li{
-					float: left;
-					margin-top: emCalc(4);
-
-					a{
-						border-left: 1px solid #555555;
-						color: #CCC;
-						display: block;
-						font-size: emCalc(12);
-						margin-left: emCalc(10);
-						padding: 0px 0px 0px emCalc(10);
-					}
-					a:hover{
-						text-decoration: underline;
-					}
+				a{
+					border-left: 1px solid #555555;
+					color: #CCC;
+					display: block;
+					font-size: emCalc(12);
+					margin-left: emCalc(10);
+					padding: 0px 0px 0px emCalc(10);
 				}
-				li:first-child a{
-					border-left: 0px;
+				a:hover{
+					text-decoration: underline;
 				}
+			}
+			li:first-child a{
+				border-left: 0px;
 			}
 		}
 	}
