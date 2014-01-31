@@ -18,7 +18,7 @@
         <?php print $page_bottom; ?>
         <?php print _zurb_foundation_add_reveals(); ?>
 
-        <?php include 'includes/footer.php'; ?>
+        <?php include 'includes/drupal-footer.php'; ?>
 
     </body>
 </html>
