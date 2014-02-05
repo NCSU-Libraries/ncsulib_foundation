@@ -21,6 +21,10 @@ h6{ font-size: $h6-font-size;}
 // begin page styles
 html #content{
 	margin-top: 30px;
+
+	@media #{$mobile}{
+		margin-top: 0px;
+	}
 }
 .content .featured-image{
 	@media #{$mobile}{
