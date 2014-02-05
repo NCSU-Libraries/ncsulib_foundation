@@ -27,7 +27,7 @@
                         </select>
 
                         <label class="access" for="peer-reviewed"><input type="checkbox" value="IsPeerReviewed,true" name="s.fvf[]" id="peer-reviewed" class="article-input" /> Peer-reviewed only</label>
-                        <p class="search-more"><a href="/articles/" onclick="_gaq.push(['_trackEvent', 'Article Search', 'Internal Link', 'Articles']);">More search options »</a></p>
+                        <p class="search-more"><a href="/articles/"  onclick="_gaq.push(['_trackEvent', 'Article Search', 'Internal Link', 'Articles']);">More search options »</a></p>
                     </div>
                     <!-- ncsu.summon.serialssolutions.com hidden inputs -->
                     <input type="hidden" value="ContentType,Book Chapter,f" name="s.fvf[]" />
@@ -84,7 +84,7 @@
         <div id="research-options">
             <h6>More Research Tools:</h6>
             <ul>
-                <li><a href="/databases/">Databases</a></li>
+                <li><a href="/databases/" onClick="_gaq.push(['_trackEvent', 'Search', 'More Research Tools', 'Databases']);">Databases</a></li>
                 <li><a href="/journals/">Journal Titles</a></li>
                 <li><a href="/citationbuilder">Citation Builder</a></li>
             </ul>
@@ -93,22 +93,22 @@
             <li>
                 <ul>
                     <li><h4>Technology</h4></li>
-                    <li><a href="/cdm/">Create Digital Media</a></li>
-                    <li><a href="/spaces/makerspace/">Makerspace</a></li>
+                    <li><a href="/cdm/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Technology', 'Create Digital Media']);">Create Digital Media</a></li>
+                    <li><a href="/spaces/makerspace/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Technology', 'Makerspace']);">Makerspace</a></li>
                 </ul>
             </li>
             <li>
                 <ul>
                     <li><h4>Studying</h4></li>
-                    <li><a href="/reservearoom/">Reserve a Room</a></li>
-                    <li><a href="/groupfinder/">GroupFinder</a></li>
+                    <li><a href="/reservearoom/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Studying', 'Reserve a Room']);">Reserve a Room</a></li>
+                    <li><a href="/groupfinder/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Studying', 'GroupFinder']);">GroupFinder</a></li>
                 </ul>
             </li>
             <li>
                 <ul>
                     <li><h4>Courses</h4></li>
-                    <li><a href="/course">Course Tools</a></li>
-                    <li><a href="http://reserves.lib.ncsu.edu/">Course Reserves</a></li>
+                    <li><a href="/course" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Courses', 'Course Tools']);">Course Tools</a></li>
+                    <li><a href="http://reserves.lib.ncsu.edu/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Courses', 'Course Reserves']);">Course Reserves</a></li>
                 </ul>
             </li>
         </ul>
