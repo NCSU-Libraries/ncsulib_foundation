@@ -23,9 +23,9 @@ var mobileNav = {
 	},
 
 	handleNav : function(){
-		$('#nav-toggle').click(function(e){
+		jQuery('#nav-toggle').click(function(e){
 
-			if($('body').hasClass('nav-expanded')){ //close
+			if(jQuery('body').hasClass('nav-expanded')){ //close
 				mobileNav.closeNav();
 			} else{ //open
 				mobileNav.openNav();
@@ -36,19 +36,19 @@ var mobileNav = {
 	},
 
 	openNav : function(){
-		$('body').addClass('nav-expanded');
-		$('#mobile-nav').show().height($('body').height());
+		jQuery('body').addClass('nav-expanded');
+		jQuery('#mobile-nav').show().height(jQuery('body').height());
 	},
 
 	closeNav : function(){
-		$('body').removeClass('nav-expanded');
-		$('#mobile-nav').hide();
+		jQuery('body').removeClass('nav-expanded');
+		jQuery('#mobile-nav').hide();
 	},
 
 	handleSearch : function(){
 
-		$('#search-toggle').click(function(e){
-			$('#utility-search').toggle();
+		jQuery('#search-toggle').click(function(e){
+			jQuery('#utility-search').toggle();
 
 			e.preventDefault();
 		})
@@ -56,6 +56,6 @@ var mobileNav = {
 	},
 }
 
-$(function(){
+jQuery(function(){
 	mobileNav.init();
 })

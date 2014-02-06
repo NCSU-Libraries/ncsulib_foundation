@@ -1,15 +1,15 @@
 var searchbar = {
 	init : function() {
 		// on
-		$('#search-submit').click(function(e){
-			$(this).addClass('active');
-			$('#search-all').addClass('active');
+		jQuery('#search-submit').click(function(e){
+			jQuery(this).addClass('active');
+			jQuery('#search-all').addClass('active');
 
 			// e.preventDefault();
 		})
 	}
 }
 
-$(function(){
+jQuery(function(){
 	searchbar.init();
 })
