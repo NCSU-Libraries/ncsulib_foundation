@@ -1,3 +1,5 @@
+<?php drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/front-page.js'); ?>
+
 <!--.page -->
 <div role="document" class="page" id="content">
     <main role="main" class="row l-main">
