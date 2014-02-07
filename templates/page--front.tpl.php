@@ -91,7 +91,7 @@
                         </a>
                     </div>
                     <h2>
-                        <a href="/huntlibrary/"onClick="_gaq.push(['_trackEvent', 'Feature Area 1', 'James B. Hunt Library', 'h2']);">James B. Hunt Jr. Library</a>
+                        <a href="/huntlibrary/" onClick="_gaq.push(['_trackEvent', 'Feature Area 1', 'James B. Hunt Library', 'h2']);">James B. Hunt Jr. Library</a>
                     </h2>
 
                     <ul class="hunt-list">
