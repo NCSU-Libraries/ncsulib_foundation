@@ -66,10 +66,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
 
     // If this is the front/home page of the site
     if ($variables['is_front']) {
-      // Add the following CSS suggestions to Drupal
-      drupal_add_css(path_to_theme() . '/styles/front-page.css');
-      drupal_add_css(path_to_theme() . '/styles/search.css');
-      drupal_add_css(path_to_theme() . '/styles/trln_ncsu_autosuggest.css');
 
       // Add the following Conditional CSS suggestions to Drupal
       drupal_add_css(path_to_theme() . '/styles/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE), 'preprocess' => FALSE));

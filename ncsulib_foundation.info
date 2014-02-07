@@ -38,7 +38,7 @@ stylesheets[all][] = styles/core/ncsulib_foundation.css
 
 ; Modernizr acts as a shim for HTML5 elements for older browsers
 ; as well as detection for mobile devices.
-scripts[] = scripts/vendor/custom.modernizr.js
+;scripts[] = scripts/vendor/custom.modernizr.js
 
 ; Foundation framework scripts (minified).
 ; If you prefer to have more control over which components are included you
@@ -63,14 +63,11 @@ scripts[] = scripts/vendor/foundation/foundation.reveal.js
 scripts[] = scripts/vendor/foundation/foundation.section.js
 scripts[] = scripts/vendor/foundation/foundation.tooltips.js
 scripts[] = scripts/vendor/foundation/foundation.topbar.js
-scripts[] = scripts/primary-nav.js
-scripts[] = scripts/search-bar.js
-scripts[] = scripts/mobile-nav.js
-scripts[] = scripts/polyfill/modernizr-tests.js
 
 ; Other vendor scripts
 ; mega menus
 scripts[] = scripts/vendor/jquery.hoverIntent.minified.js
+
 ; typeahead
 scripts[] = scripts/vendor/jquery.autocomplete.js
 scripts[] = scripts/vendor/jquery.mockjax.js
@@ -80,6 +77,7 @@ scripts[] = scripts/vendor/jquery.mockjax.js
 ;scripts[] = scripts/ncsulib_foundation.js
 
 ; Custom
+scripts[] = scripts/global.js
 scripts[] = scripts/primary-nav.js
 scripts[] = scripts/search-bar.js
 scripts[] = scripts/mobile-nav.js
