@@ -1,16 +1,23 @@
-<?php
-  	// if(!$_SERVER['REMOTE_ADDR']){
-		$_SERVER['REMOTE_ADDR'] = '';
-  		define('DRUPAL_ROOT', '/var/www/webdev/drupal');
-  		require_once (DRUPAL_ROOT.'/includes/bootstrap.inc');
-  		drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
-  	// }
-?>
-
-<?php print $head; ?>
 <link rel="shortcut icon" href="http://lib.ncsu.edu/sites/all/themes/ncsulibraries/favicon.ico" rel="shortcut icon">
+<!-- If !Drupal then add static files  -->
+<?php if(!$_SERVER['REMOTE_ADDR']): ?>
+<meta charset="utf-8" />
+<meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" />
+<meta http-equiv="ImageToolbar" content="false" />
+<meta name="viewport" content="width=device-width" />
+
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css">
+
+<!-- js -->
+<script src="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/source/scripts.js"></script>
+
+<?php else: ?>
+<?php print $head; ?>
 <?php print $styles; ?>
 <?php print $scripts; ?>
+<?php endif; ?>
+
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
