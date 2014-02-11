@@ -43,7 +43,7 @@ html #content{
 }
 // end page styles
 
-a.skip-main {
+a.skip-link {
     left:-999px;
     position:absolute;
     top:auto;
@@ -52,7 +52,7 @@ a.skip-main {
     overflow:scroll;
     z-index:-999;
 }
-a.skip-main:focus, a.skip-main:active {
+a.skip-link:focus, a.skip-link:active {
     color: #fff;
     background-color:#000;
     left: auto;
