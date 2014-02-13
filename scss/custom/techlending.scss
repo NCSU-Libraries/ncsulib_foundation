@@ -1,0 +1,13 @@
+@import "../variables";
+$include-html-classes: false;
+@import "../foundation/components/grid";
+
+ // just a demo
+body {
+  backround: red;
+}
+.main {
+  @include grid-column(5);
+
+
+}
