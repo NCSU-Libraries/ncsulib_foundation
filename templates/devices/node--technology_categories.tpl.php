@@ -2,6 +2,7 @@
   drupal_add_css(drupal_get_path('theme', 'ncsulibraries').'/styles/node-technology_categories.css');
   hide($content['comments']);
   hide($content['links']);
+  hide($content['body']);
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
@@ -12,11 +13,17 @@
   <?php print render($title_suffix); ?>
 
     <ul class="crumbs">
-      <li><a href="/1techlending">Technology Lending</a></li>
+      <li><a href="/techlending">Technology Lending</a></li>
       <li><?php print $title; ?></li>
     </ul>
 
   <div class="content"<?php print $content_attributes; ?>>
-    <?php print render($content); ?>
+    <?php print render($content);
+
+    // 22469 is the nid for DSLRs
+    if ($node->nid == 22469) {
+      print render($content['body']);
+    }
+    ?>
   </div>
 </div>
