@@ -1,4 +1,8 @@
-<?php drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/front-page.js'); ?>
+<?php
+    drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css');
+    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/front-page.js');
+    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.orbit.js', array('scope'=> 'footer'));
+?>
 
 <!--.page -->
 <div role="document" class="page" id="content">
@@ -10,6 +14,8 @@
             <section id="tier-one">
 
                 <?php include 'includes/home-search-tabs.php'; ?>
+
+                <?php //if(device_detect_width() > 320): ?>
 
                 <!-- artbox stub -->
                 <div id="home-artbox">
@@ -25,6 +31,8 @@
                         </li>
                     </ul>
                 </div>
+
+                <?php //endif; ?>
 
             </section> <!-- /top row -->
 
@@ -45,15 +53,15 @@
                                 <ul>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hill', 'study rooms']);">Study Rooms</a>:</span>
-                                        <span class="item-count"><span class="count">18</span></span>
+                                        <span class="item-count count" id="hill-study"></span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hill', 'laptops']);">Laptops</a>:</span>
-                                        <span class="item-count"><span class="count">47</span></span>
+                                        <span class="item-count count" id="hill-laptops"></span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hill', 'tablets']);">Tablets</a>:</span>
-                                        <span class="item-count"><span class="count">76</span></span>
+                                        <span class="item-count count" id="hill-tablets"></span>
                                     </li>
                                 </ul>
                             </div>
@@ -64,15 +72,15 @@
                                 <ul>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hunt', 'Study Rooms']);">Study Rooms</a>:</span>
-                                        <span class="item-count"><span class="count">3</span></span>
+                                        <span class="item-count count" id="hunt-study"></span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hunt', 'laptops']);">Laptops</a>:</span>
-                                        <span class="item-count"><span class="count">654</span></span>
+                                        <span class="item-count count" id="hunt-laptops"></span>
                                     </li>
                                     <li>
                                         <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hunt', 'tablets']);">Tablets</a>:</span>
-                                        <span class="item-count"><span class="count">13</span></span>
+                                        <span class="item-count count" id="hunt-tablets"></span>
                                     </li>
                                 </ul>
                             </div>
