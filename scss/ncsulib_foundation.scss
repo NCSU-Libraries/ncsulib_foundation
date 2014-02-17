@@ -55,8 +55,8 @@
 @import "layout/global";
 @import "layout/aside";
 @import "layout/footer";
-@import "layout/home";
 @import "layout/editor-styles";
+@import "layout/grid-medium"; //adds medium classes for min-width 640px
 
 // Components
 // @import "components/buttons";
