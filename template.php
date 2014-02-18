@@ -132,12 +132,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
 
 } // End tremendous template_preprocess_page function
 
-function ncsulib_foundation_page_alter(&$page) {
-  // Additional logic to unset the menus for the Reserve a Room page in Hunt
-  if (current_path() == 'huntlibrary/reservearoom') {
-    unset($page['sidebar_first']);
-  }
-}
 
 //function ncsulib_foundation_preprocess_views_view(&$variables) {
 //}
