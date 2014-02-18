@@ -22,7 +22,6 @@ variable_set('htdocs_root', str_replace(strrchr(DRUPAL_ROOT, "/"), "/htdocs", DR
  *  and other various and sundry activities
  */
 function ncsulib_foundation_preprocess_page(&$variables) {
-    // Lines 19 to 118 are Jason Walsh's code (just so everyone knows Charlie would never write such code)
     if (module_exists('path')) {
         $alias = drupal_get_path_alias(str_replace('/edit','',$_GET['q']));
         // If the alias is a clean URL
@@ -46,8 +45,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
                     $template_suggestion = $template_suggestion . '__' . $path_part;
                     $css_suggestions[] = $path_part_holder;
                 }
-
-                // Increase the counter
                 $i++;
             }
 
@@ -55,9 +52,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
             // Add the template suggestion to the template suggestions hook
             $variables['theme_hook_suggestions'][] = $template_suggestion;
         }
-
-
-
 
     // Create the CSS suggestion(s)
     if (isset($css_suggestion)) {
