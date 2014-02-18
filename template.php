@@ -132,24 +132,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
 
 } // End tremendous template_preprocess_page function
 
-
-//function ncsulib_foundation_preprocess_views_view(&$variables) {
-//}
-
-/**
- * Implements template_preprocess_panels_pane().
- *
- */
-//function ncsulib_foundation_preprocess_panels_pane(&$variables) {
-//}
-
-/**
- * Implements template_preprocess_views_views_fields().
- *
- */
-//function ncsulib_foundation_preprocess_views_view_fields(&$variables) {
-//}
-
 /**
  * Implements theme_form_element_label()
  * Use foundation tooltips
