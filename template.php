@@ -138,55 +138,6 @@ function ncsulib_foundation_page_alter(&$page) {
     unset($page['sidebar_first']);
   }
 }
-/**
- * Implements template_preprocess_node
- *
- */
-//function ncsulib_foundation_preprocess_node(&$variables) {
-//}
-
-/**
- * Implements hook_preprocess_block()
- */
-//function ncsulib_foundation_preprocess_block(&$variables) {
-//  // Add wrapping div with global class to all block content sections.
-//  $variables['content_attributes_array']['class'][] = 'block-content';
-//
-//  // Convenience variable for classes based on block ID
-//  $block_id = $variables['block']->module . '-' . $variables['block']->delta;
-//
-//  // Add classes based on a specific block
-//  switch ($block_id) {
-//    // System Navigation block
-//    case 'system-navigation':
-//      // Custom class for entire block
-//      $variables['classes_array'][] = 'system-nav';
-//      // Custom class for block title
-//      $variables['title_attributes_array']['class'][] = 'system-nav-title';
-//      // Wrapping div with custom class for block content
-//      $variables['content_attributes_array']['class'] = 'system-nav-content';
-//      break;
-//
-//    // User Login block
-//    case 'user-login':
-//      // Hide title
-//      $variables['title_attributes_array']['class'][] = 'element-invisible';
-//      break;
-//
-//    // Example of adding Foundation classes
-//    case 'block-foo': // Target the block ID
-//      // Set grid column or mobile classes or anything else you want.
-//      $variables['classes_array'][] = 'six columns';
-//      break;
-//  }
-//
-//  // Add template suggestions for blocks from specific modules.
-//  switch($variables['elements']['#block']->module) {
-//    case 'menu':
-//      $variables['theme_hook_suggestions'][] = 'block__nav';
-//    break;
-//  }
-//}
 
 //function ncsulib_foundation_preprocess_views_view(&$variables) {
 //}
