@@ -1,5 +1,15 @@
 <?php
 
+function ncsulibraries_process_html(&$vars){
+    foreach (array('head', 'styles', 'scripts', 'page_bottom') as $replace) {
+        if (!isset($vars[$replace])) {
+            continue;
+        }
+
+        $vars[$replace] = preg_replace('/(src|href|@import )(url\(|=)(")http(s?):/', '$1$2$3', $vars[$replace]);
+    }
+}
+
 /**
  * Setting custom variable htdocs root path
  */
@@ -11,7 +21,6 @@ variable_set('htdocs_root', str_replace(strrchr(DRUPAL_ROOT, "/"), "/htdocs", DR
  *  The code below handles additional page template/CSS suggestions in Drupal
  *  and other various and sundry activities
  */
-
 function ncsulib_foundation_preprocess_page(&$variables) {
     // Lines 19 to 118 are Jason Walsh's code (just so everyone knows Charlie would never write such code)
     if (module_exists('path')) {
@@ -135,6 +144,8 @@ function ncsulib_foundation_preprocess_page(&$variables) {
 
 /**
  * Implements hook_css_alter().
+ * Note: this was a default hook that came packaged with the Zurb Foundation
+ * child theme
  */
 function ncsulib_foundation_css_alter(&$css) {
   // Always remove base theme CSS.
@@ -149,6 +160,8 @@ function ncsulib_foundation_css_alter(&$css) {
 
 /**
  * Implements hook_js_alter().
+ * Note: this was a default hook that came packaged with the Zurb Foundation
+ * child theme
  */
 function ncsulib_foundation_js_alter(&$js) {
   // Always remove base theme JS.
@@ -166,6 +179,8 @@ function ncsulib_foundation_js_alter(&$js) {
  * Implements theme_breadrumb().
  *
  * Print breadcrumbs as a list, with separators.
+ * Note: this was a default hook that came packaged with the Zurb Foundation
+ * child theme
  */
 function ncsulib_foundation_breadcrumb($variables) {
   $links = array();
@@ -220,3 +235,200 @@ function ncsulib_foundation_breadcrumb($variables) {
     return $breadcrumbs;
   }
 }
+
+function ncsulibraries_form_user_login_alter(&$form, &$form_state, $form_id) {
+  //Alters the text on the user login form
+  drupal_set_title(t('Website editing login'));
+  $form['name']['#title'] = t('Unity ID');
+  $form['name']['#description'] = t('Enter your NCSU Unity ID');
+  $form['pass']['#title'] = t('Active Directory password');
+  $form['pass']['#description'] = t('Enter your NCSU Libraries Active Directory password');
+}
+
+function ncsulibraries_more_link ($array) {
+  if (stristr($array['url'], 'aggregator')) {
+    return "";
+  }
+}
+
+/**
+ *  Blocks preprocessor
+ *
+ *  Handles adding additional classes to the blocks on the "/upcomingevents"
+ *  page.
+ *  Adds classes to blocks on the scrc page.
+ *
+ *  -Charlie Morris 11/20/2012
+ */
+function ncsulibraries_preprocess_block(&$variables) {
+  if ($variables['block_html_id'] == 'block-views-upcoming-events-block-3') {
+    $variables['classes_array'][] = 'grid-12';
+    $variables['classes_array'][] = 'alpha';
+    $variables['classes_array'][] = 'omega';
+    // $variables['elements']['#block']->subject = date('l, M jS', strtotime('today'));
+  }
+  // adding classes to blocks on /scrc
+  if ($variables['block_html_id']  == "block-aggregator-feed-8") {
+    $variables['classes_array'][] = 'grid-12';
+    $variables['classes_array'][] = 'alpha';
+  }
+  if ($variables['block_html_id']  == "block-block-78"){
+    $variables['classes_array'][] = 'grid-4';
+    $variables['classes_array'][] = 'omega';
+  }
+}
+
+/**
+ * Modify the output of views
+ *
+ * -Charlie Morris, 1/2/13
+ */
+function ncsulibraries_views_pre_render(&$view) {
+  // The following two loops add month and day formatted dates to events
+  if ($view->name == 'upcoming_events' && $view->current_display == 'block_3') {
+    if (!empty($view->result)) {
+      for ($i = 0; $i < count($view->result); $i++ ) {
+        // Set event url
+        $node = node_load($view->result[$i]->nid);
+        $url_data = field_get_items('node', $node, 'field_event_url');
+        $alias = drupal_get_path_alias('node/'.$node->nid);
+        if(!empty($url_data[0]['url'])) {
+          $view->result[$i]->event_url = $url_data[0]['url'];
+        } else if ($alias){
+          $view->result[$i]->event_url = $alias;
+        } else {
+          $view->result[$i]->event_url = '/node/'.$view->result[$i]->nid;
+        }
+
+        // Set event dates
+        $timestamp = filter_xss($view->result[$i]->field_data_field_time_field_time_value);
+        $timestamp2 = filter_xss($view->result[$i]->field_data_field_time_field_time_value2);
+        $open = strtotime($timestamp)+ncsulibraries_adjust_for_timezone($timestamp);
+        $close = strtotime($timestamp2)+ncsulibraries_adjust_for_timezone($timestamp2);
+        $view->result[$i]->date_display = (date('m j Y', $open) == date('m j Y', $close)) ? date('M j, Y', $open) : date('M j, Y', $open) . ' - ' . date('M j, Y', $close);
+      }
+    }
+  }
+
+  // Add stylesheet to make the related devices on tech categories look right
+  if ($view->name == 'devices_device' && $view->current_display == 'block_9') {
+    drupal_add_css(path_to_theme() . '/styles/related_devices.css');
+  }
+
+  // Add stylesheet to cover all dataviews block displays
+  if ($view->name == "dv_hours_open") {
+    drupal_add_css(path_to_theme() . '/styles/dataviews.css');
+  }
+
+
+}
+
+/**
+ * Returns HTML for an individual feed item for display in the block.
+ *
+ * Author: Charlie Morris
+ * For SCRC
+ */
+function ncsulibraries_aggregator_block_item($variables) {
+  if ($variables['item']->fid == '8') {
+    // Display the external link to the item.
+    return '<a href="' . check_url($variables['item']->link) . '">' . check_plain($variables['item']->title) . "</a>\n<br />" . filter_xss($variables['item']->description);
+  } else {
+    return '<a href="' . check_url($variables['item']->link) . '">' . check_plain($variables['item']->title) . "</a>\n";
+  }
+}
+
+/**
+ * Implements template_preprocess_image
+ *
+ * Image preprocessor
+ *
+ * Author: Charlie Morris
+ *
+ */
+function ncsulibraries_preprocess_image(&$variables) {
+  // Only perform preprocessing on images with defined style
+  if (isset($variables['style_name'])) {
+    // Add the image-outline style for images with half-page-width style
+    // applied
+    if ($variables['style_name'] == 'half-page-width') {
+      $variables['attributes']['class'][] = 'image-outline';
+    }
+  }
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Using this to change the markup delivered to the Field Request Form URL
+ * field.  Turning it into a button.
+ */
+function ncsulibraries_field__field_request_form_url__device($variables) {
+  $output ='';
+  $device_nid = $variables['element']['#object']->nid;
+  $building = " (Hill only)";
+
+  foreach ($variables['items'] as $delta => $item) {
+    if ($device_nid == 22470 ) {
+      // 22470 = Canon EOS Rebel T4i
+      $building = " (Hunt only)";
+    } else if ($device_nid == 23583){
+      // 23583 = projectors
+      $building = '';
+    }
+    $output = '<div class="clear-left"><a href="'.drupal_render($item).'" class="reserve-button">Request'.$building.'</a></div>';
+  }
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Using this to change the markup delivered to the Building field on Space
+ * nodes
+ */
+function ncsulibraries_field__field_building_name__space($variables) {
+  $output ='';
+  foreach ($variables['items'] as $delta => $item) {
+    $output = drupal_render($item);
+  }
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Adding heading 2 for label
+ */
+function ncsulibraries_field__space($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden and display it as a heading 2
+  if (!$variables['label_hidden']) {
+    $output .= '<h2' . $variables['title_attributes'] . '>' . $variables['label'] . '</h2>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
+
+/**
+ * Helper function that adjusts date to current timezone. Especially for
+ * daylight savings
+ */
+function ncsulibraries_adjust_for_timezone($time){
+    $origin_dtz = new DateTimeZone(date_default_timezone_get());
+    $origin_dt = new DateTime($time, $origin_dtz);
+    return $origin_dtz->getOffset($origin_dt);
+}
+
