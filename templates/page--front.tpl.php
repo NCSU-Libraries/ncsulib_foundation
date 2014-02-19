@@ -1,7 +1,6 @@
 <?php
     drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/front-page.js');
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.orbit.js', array('scope'=> 'footer'));
 ?>
 
 <!--.page -->
