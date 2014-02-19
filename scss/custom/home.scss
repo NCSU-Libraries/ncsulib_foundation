@@ -182,15 +182,9 @@ $include-html-classes: false;
 	margin-bottom: 0px;
 }
 #searcharticleadvanced{
-	@include grid-column(12);
-
-	@media #{$small}{
-		@include grid-column(3);
-	}
-
 	border: 1px solid #DDD;
 	margin-bottom: emCalc(15);
-	// padding: 5px;
+	padding: 5px;
 }
 .search-more{
 	float: left;
@@ -221,11 +215,6 @@ $include-html-classes: false;
 	margin-bottom: emCalc(5);
 }
 #books-more-options-drop{
-	@include grid-column(12);
-
-	@media #{$small}{
-		@include grid-column(3);
-	}
 
 	border: 1px solid #DDD;
 	margin-bottom: emCalc(15);
