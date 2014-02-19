@@ -10,12 +10,19 @@
 <link rel="stylesheet" type="text/css" href="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css">
 
 <!-- js -->
-<script src="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/source/scripts.js"></script>
+<script src="/sites/all/themes/ncsulib_foundation/scripts/vendor/foundation.min.js"></script>
+<script type="text/javascript">
+    // instantiate foundation
+    (function ($) {
+        $(document).foundation();
+    })(jQuery);
+</script>
 
 <?php else: ?>
 <?php print $head; ?>
 <?php print $styles; ?>
 <?php print $scripts; ?>
+<script src="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/global.js"></script>
 <?php endif; ?>
 
 <!--[if lt IE 9]>

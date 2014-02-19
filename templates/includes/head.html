@@ -1,22 +1,22 @@
 <link rel="shortcut icon" href="http://lib.ncsu.edu/sites/all/themes/ncsulibraries/favicon.ico" rel="shortcut icon">
-
 <!-- If !Drupal then add static files  -->
 <meta charset="utf-8" />
 <meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" />
 <meta http-equiv="ImageToolbar" content="false" />
 <meta name="viewport" content="width=device-width" />
+
 <!-- css -->
-<link rel="stylesheet" type="text/css" href="/sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css">
+<link rel="stylesheet" type="text/css" href="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css">
 
 <!-- js -->
-<!-- // <script src="/sites/all/themes/ncsulib_foundation/scripts/source/scripts.js"></script> -->
+<script src="/sites/all/themes/ncsulib_foundation/scripts/vendor/foundation.min.js"></script>
+<script type="text/javascript">
+    // instantiate foundation
+    (function ($) {
+        $(document).foundation();
+    })(jQuery);
+</script>
 
-<!-- begin temporary -->
-<!-- This here temporarily so Foundation will work on htdocs pages. Remove once JS has been rendered to this include  -->
-<script src="/sites/all/themes/ncsulib_foundation/scripts/vendor/foundation/foundation.js"></script>
-
-
-<!-- end temporary -->
 
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

@@ -43,26 +43,26 @@ stylesheets[all][] = styles/core/ncsulib_foundation.css
 ; Foundation framework scripts (minified).
 ; If you prefer to have more control over which components are included you
 ; can comment this line and uncomment the ones below you want.
-;scripts[] = scripts/foundation.min.js
+scripts[] = scripts/vendor/foundation.min.js
 
 ; Foundation framework scripts (uncompressed).
 
-scripts[] = scripts/vendor/foundation/foundation.js
-scripts[] = scripts/vendor/foundation/foundation.abide.js
-scripts[] = scripts/vendor/foundation/foundation.alerts.js
+;scripts[] = scripts/vendor/foundation/foundation.js
+;scripts[] = scripts/vendor/foundation/foundation.abide.js
+;scripts[] = scripts/vendor/foundation/foundation.alerts.js
 ;scripts[] = scripts/vendor/foundation/foundation.clearing.js
 ;scripts[] = scripts/vendor/foundation/foundation.cookie.js
 ;scripts[] = scripts/vendor/foundation/foundation.dropdown.js
-scripts[] = scripts/vendor/foundation/foundation.forms.js
+;scripts[] = scripts/vendor/foundation/foundation.forms.js
 ;scripts[] = scripts/vendor/foundation/foundation.interchange.js
 ;scripts[] = scripts/vendor/foundation/foundation.joyride.js
 ;scripts[] = scripts/vendor/foundation/foundation.magellan.js
 ;scripts[] = scripts/vendor/foundation/foundation.orbit.js
 ;scripts[] = scripts/vendor/foundation/foundation.placeholder.js
-scripts[] = scripts/vendor/foundation/foundation.reveal.js
-scripts[] = scripts/vendor/foundation/foundation.section.js
-scripts[] = scripts/vendor/foundation/foundation.tooltips.js
-scripts[] = scripts/vendor/foundation/foundation.topbar.js
+;scripts[] = scripts/vendor/foundation/foundation.reveal.js
+;scripts[] = scripts/vendor/foundation/foundation.section.js
+;scripts[] = scripts/vendor/foundation/foundation.tooltips.js
+;scripts[] = scripts/vendor/foundation/foundation.topbar.js
 
 ; Other vendor scripts
 ; mega menus
