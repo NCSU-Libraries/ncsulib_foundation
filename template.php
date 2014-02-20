@@ -74,7 +74,10 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       drupal_add_css(path_to_theme() . '/styles/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
       drupal_add_css(path_to_theme() . '/styles/ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 6', '!IE' => FALSE), 'preprocess' => FALSE));
 
-      function ncsulibraries_css_alter(&$css) {
+      function ncsulib_foundation_css_alter(&$css) {
+          $css['sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css']['weight'] = -1;
+// kpr($css);
+
         // Remove unused CSS files for performance
         if (isset($css['modules/aggregator/aggregator.css'])) {
           unset($css['modules/aggregator/aggregator.css']);
@@ -134,40 +137,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   }
 
 } // End tremendous template_preprocess_page function
-
-
-/**
- * Implements hook_css_alter().
- * Note: this was a default hook that came packaged with the Zurb Foundation
- * child theme
- */
-function ncsulib_foundation_css_alter(&$css) {
-  // Always remove base theme CSS.
-  $theme_path = drupal_get_path('theme', 'zurb_foundation');
-
-  foreach($css as $path => $values) {
-    if(strpos($path, $theme_path) === 0) {
-      unset($css[$path]);
-    }
-  }
-}
-
-/**
- * Implements hook_js_alter().
- * Note: this was a default hook that came packaged with the Zurb Foundation
- * child theme
- */
-function ncsulib_foundation_js_alter(&$js) {
-  // Always remove base theme JS.
-  $theme_path = drupal_get_path('theme', 'zurb_foundation');
-
-  foreach($js as $path => $values) {
-    if(strpos($path, $theme_path) === 0) {
-      unset($js[$path]);
-    }
-  }
-}
-
 
 /**
  * Implements theme_breadrumb().

@@ -8,13 +8,14 @@
 // https://github.com/zurb/foundation/blob/master/scss/foundation.scss
 
 // Global Zurb Foundation variables.
-@import "variables";
+@import "../foundation/settings";
 // Comment out this import if you don't want to use normalize.
-@import "normalize";
+@import "../normalize";
 // Comment out this import below if you are customizing you imports below.
-@import "foundation";
+@import "../foundation/functions";
+@import "../foundation";
 // Comment out this import if you don't want to use Compass.
-// @import "compass";
+@import "compass";
 
 // Or optionally, if you require only portions of Zurb Foundation (at your own
 // risk), comment the above Foundation import and uncomment the ones below.

@@ -1,5 +1,5 @@
 <?php
-    drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css');
+    drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css', array('weight' => 999));
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/front-page.js');
 ?>
 
@@ -12,9 +12,127 @@
             <!-- top row -->
             <section id="tier-one">
 
-                <?php include 'includes/home-search-tabs.php'; ?>
 
-                <?php //if(device_detect_width() > 320): ?>
+                <div id="search-tabs">
+
+                    <!-- Search tabs begin -->
+                    <dl class="tabs" data-tab>
+                      <dd class="active"><a href="#panel2-1">All</a></dd>
+                      <dd><a href="#panel2-2">Articles</a></dd>
+                      <dd><a href="#panel2-3">Books &amp; Media</a></dd>
+                      <dd><a href="#panel2-4">Our Website</a></dd>
+                    </dl>
+
+                    <div class="tabs-content">
+                        <!-- All -->
+                        <div class="content active" id="panel2-1">
+                            <form accept-charset="utf-8" method="get" action="/search/" id="searcheverything">
+                                <input type="text" id="searchall" value="" name="q" class="main-search-field" placeholder="Search books, articles, journals, &amp; library website" />
+                                <input type="submit" class="front-page-submit button small" id="all-submit" value="SEARCH" />
+                            </form>
+                        </div>
+
+                        <!-- Articles -->
+                        <div class="content" id="panel2-2">
+                            <form accept-charset="utf-8" method="get" action="http://ncsu.summon.serialssolutions.com/search" id="search-articles-summon">
+                                <div class="search-body">
+                                    <input type="text" id="searcharticle" value="" name="s.q" class="articles-search-field" placeholder="Search for articles in Summon." />
+                                    <input type="submit" id="article-submit" class="front-page-submit button small" value="SEARCH" />
+
+                                    <p class="search-example">EX: tropical deforestation or enter a DOI</p>
+                                    <select id="searcharticleadvanced" name="searcharticleadvanced" class="has_sb">
+                                        <option value="anywhere">Anywhere</option>
+                                        <option value="title">Title</option>
+                                        <option value="author">Author</option>
+                                    </select>
+
+                                    <label class="access" for="peer-reviewed"><input type="checkbox" value="IsPeerReviewed,true" name="s.fvf[]" id="peer-reviewed" class="article-input" /> Peer-reviewed only</label>
+                                    <p class="search-more"><a href="/articles/"  onclick="_gaq.push(['_trackEvent', 'Article Search', 'Internal Link', 'Articles']);">More search options »</a></p>
+                                </div>
+                                <!-- ncsu.summon.serialssolutions.com hidden inputs -->
+                                <input type="hidden" value="ContentType,Book Chapter,f" name="s.fvf[]" />
+                                <input type="hidden" class="article-input" value="ContentType,Journal Article" name="s.fvf[]" />
+                                <input type="hidden" class="article-input" value="addFacetValueFilters(ContentType,Journal / eJournal)" name="s.cmd" />
+                                <input type="hidden" value="true" name="keep_r" />
+                            </form>
+                        </div>
+
+                        <!-- Books and Media -->
+                        <div class="content" id="panel2-3">
+                            <form accept-charset="utf-8" method="get" action="http://catalog.lib.ncsu.edu/" id="searchbooksform">
+                                <div class="search-body clearfix">
+                                    <input type="text" value="" id="books-media-search" name="Ntt" class="books-media-search-field ac_input" placeholder="Search for ebooks, journals, movies &amp; more" autocomplete="off">
+                                    <input type="submit" class="front-page-submit button small prefix" value="SEARCH" id="searchbookssubmit">
+                                    <p class="search-example">Example: Freakonomics</p>
+
+                                    <select id="books-more-options-drop" name="Ntk" class="has_sb">
+                                        <option selected="selected" value="Keyword">Anywhere</option>
+                                        <option value="Title">Title</option>
+                                        <option value="Journal_Title">Journal Title</option>
+                                        <option value="Author">Author</option>
+                                        <option value="Subject">Subject Heading</option>
+                                        <option value="ISBN">ISBN/ISSN</option>
+                                        <option value="LC" class="callnum">Call Number</option>
+                                        <option value="SUDOC" class="callnum">Gov Doc Number</option>
+                                    </select>
+
+                                    <label class="access" for="ncsu"><input type="radio" checked="checked" value="ncsu" name="scope" id="ncsu" /> NC State Only</label></li>
+                                    <label class="access" for="trln"><input type="radio" value="trln" name="scope" id="trln" /> Triangle Research Libraries</label></li>
+                                    <label class="access" for="worldcat"><input type="radio" value="worldcat" name="scope" id="worldcat" /> UNC System Libraries &amp; Beyond</label></li>
+                                    <p class="search-more"><a href="/catalog/" onclick="_gaq.push(['_trackEvent', 'Book Search', 'Internal Link', 'Catalog']);">More search options »</a></p>
+                                </div>
+                                <input type="hidden" value="1" name="Nty">
+                                <input type="hidden" value="0" name="N">
+                                <input type="hidden" value="" id="sugg" name="sugg">
+                            </form>
+                        </div>
+
+                        <!-- Website -->
+                        <div class="content" id="panel2-4">
+                            <form accept-charset="utf-8" method="get" action="/search/websearch.php" id="websitesearch">
+                                <input type="text" id="searchweb" value="" name="q" class="main-search-field" placeholder="Search the library website">
+                                <input type="submit" class="front-page-submit button small prefix" id="web-submit" value="SEARCH" />
+                                <p class="search-example">Example: Borrow a Laptop</p>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Search tabs end -->
+
+
+
+
+                        <div id="research-options">
+                            <h6>More Research Tools:</h6>
+                            <ul>
+                                <li><a href="/databases/" onClick="_gaq.push(['_trackEvent', 'Search', 'More Research Tools', 'Databases']);">Databases</a></li>
+                                <li><a href="/journals/">Journal Titles</a></li>
+                                <li><a href="/citationbuilder">Citation Builder</a></li>
+                            </ul>
+                        </div>
+                        <ul id="home-quicklinks">
+                            <li>
+                                <ul>
+                                    <li><h4>Technology</h4></li>
+                                    <li><a href="/cdm/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Technology', 'Create Digital Media']);">Create Digital Media</a></li>
+                                    <li><a href="/spaces/makerspace/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Technology', 'Makerspace']);">Makerspace</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><h4>Studying</h4></li>
+                                    <li><a href="/reservearoom/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Studying', 'Reserve a Room']);">Reserve a Room</a></li>
+                                    <li><a href="/groupfinder/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Studying', 'GroupFinder']);">GroupFinder</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><h4>Courses</h4></li>
+                                    <li><a href="/course" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Courses', 'Course Tools']);">Course Tools</a></li>
+                                    <li><a href="http://reserves.lib.ncsu.edu/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Courses', 'Course Reserves']);">Course Reserves</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
                 <!-- artbox stub -->
                 <div id="home-artbox">
@@ -30,9 +148,6 @@
                         </li>
                     </ul>
                 </div>
-
-                <?php //endif; ?>
-
             </section> <!-- /top row -->
 
             <!-- middle row -->
