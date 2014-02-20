@@ -1,4 +1,4 @@
-<link rel="shortcut icon" href="http://lib.ncsu.edu/sites/all/themes/ncsulibraries/favicon.ico" rel="shortcut icon">
+<link rel="shortcut icon" href="/sites/all/themes/ncsulibraries/favicon.ico" rel="shortcut icon">
 <!-- If !Drupal then add static files  -->
 <?php if(!$_SERVER['REMOTE_ADDR']): ?>
 <meta charset="utf-8" />
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <!-- css -->
-<link rel="stylesheet" type="text/css" href="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css">
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css">
 
 <!-- js -->
 <script src="/sites/all/themes/ncsulib_foundation/scripts/vendor/foundation.min.js"></script>
@@ -22,7 +22,7 @@
 <?php print $head; ?>
 <?php print $styles; ?>
 <?php print $scripts; ?>
-<script src="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/global.js"></script>
+<script src="/sites/all/themes/ncsulib_foundation/scripts/global.js"></script>
 <?php endif; ?>
 
 <!--[if lt IE 9]>

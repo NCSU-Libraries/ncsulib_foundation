@@ -22,7 +22,7 @@
 		<ul class="title-area">
 			<li class="name">
 			  	<a href="/" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
-					<img src="/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
+					<img src="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
 			  	</a>
 			</li>
 			<li id="nav-toggle">
