@@ -1,8 +1,15 @@
 jQuery(document).ready(function($){
 
- 	$(document).foundation('orbit', {
+ 	$(document).foundation({
+    orbit: {
   		animation: 'fade',
   		slide_number: false,
+    },
+    tab: {
+      callback : function (tab) {
+        console.log(tab);
+      }
+    }
 	});
 
 	tech.init();

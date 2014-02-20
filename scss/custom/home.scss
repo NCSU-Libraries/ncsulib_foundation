@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../foundation/settings";
 $include-html-classes: false;
 @import "foundation/components/global";
 @import "foundation/components/grid";
@@ -28,11 +28,6 @@ $include-html-classes: false;
 	@include grid-column(12);
 	padding: 0px;
 
-	h2{
-		color: $primary-color;
-		font-size: emCalc(22);
-	}
-
 	@media #{$small}{
 		@include grid-column(6);
 		padding-left: 0px;
@@ -41,6 +36,10 @@ $include-html-classes: false;
 		text-decoration: none;
 	}
 }
+.tabs dd>a{
+	font-size: .5em;
+}
+
 #searcheverything{
 	@include grid-row;
 }

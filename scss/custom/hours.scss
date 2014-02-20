@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../foundation/settings";
 $include-html-classes: false;
 @import "foundation/components/global";
 @import "foundation/components/grid";
@@ -14,7 +14,7 @@ $include-html-classes: false;
 
 	ul#libraries{
 		list-style-type: none;
-		margin: 0px 0px 40px 0px;
+		margin: 0 0 40px 0;
 		overflow: visible;
 
 		li{
@@ -22,7 +22,7 @@ $include-html-classes: false;
 
 			a{
 				display: block;
-				margin: 0px 0px 0px 0px;
+				margin: 0;
 				padding: 0px 26px 0px 0px;
 				text-decoration: none;
 
