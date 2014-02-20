@@ -10,7 +10,7 @@ $include-html-classes: false;
 .front #utility{
 	margin-bottom: 50px;
 
-	@media #{$mobile}{
+	@media #{$small}{
 		margin-bottom: 20px;
 	}
 }
@@ -55,7 +55,7 @@ $include-html-classes: false;
 #searchall{
 	@include grid-column(12);
 
-	@media #{$mobile}{
+	@media #{$small}{
 		margin-bottom: emCalc(10);
 	}
 
@@ -68,7 +68,7 @@ $include-html-classes: false;
 }
 #all-submit{
 
-	@media #{$mobile}{
+	@media #{$small}{
 		@include grid-column(5, false, false, false, false, false, false, right);
 		@include button($button-tny);
 		margin: 0px;
@@ -98,7 +98,7 @@ $include-html-classes: false;
 		line-height: 1.5em;
 		margin-right: emCalc(10);
 
-		@media #{$mobile}{
+		@media #{$small}{
 			@include grid-column(12);
 			padding-left: 0px;
 		}
@@ -113,7 +113,7 @@ $include-html-classes: false;
 		margin-top: 4px;
 		// display: inline-block;
 
-		@media #{$mobile}{
+		@media #{$small}{
 			margin-left: 0px;
 			overflow: visible;
 		}
@@ -149,7 +149,7 @@ $include-html-classes: false;
 	margin-bottom: emCalc(5);
 }
 #article-submit{
-	@media #{$mobile}{
+	@media #{$small}{
 		@include grid-column(5, false, false, false, false, false, false, right);
 		@include button($button-tny);
 		margin: 0px;
@@ -249,7 +249,7 @@ $include-html-classes: false;
 /*begin quicklinks*/
 #home-quicklinks{
 	list-style-type: none;
-	@media #{$mobile}{
+	@media #{$small}{
 		margin: 0px;
 	}
 
@@ -260,7 +260,7 @@ $include-html-classes: false;
 	}
 
 	li{
-		@media #{$mobile}{
+		@media #{$small}{
 			margin-left: emCalc(0);
 		}
 
@@ -276,7 +276,7 @@ $include-html-classes: false;
 			font-weight: bold;
 			margin-bottom: 0px;
 
-			@media #{$mobile}{
+			@media #{$small}{
 				font-size: 1.5em;
 				font-weight: normal;
 				margin-bottom: 10px;
@@ -302,7 +302,7 @@ $include-html-classes: false;
 #home-artbox{
 	@include grid-column(12);
 
-	@media #{$mobile}{
+	@media #{$small}{
 		margin-bottom: emCalc(30);
 		padding: 0px;
 	}
@@ -420,7 +420,7 @@ $include-html-classes: false;
 				line-height: 1em;
 				padding-top: 16px;
 
-				@media #{$mobile}{
+				@media #{$small}{
 					height: 45px;
 					text-align: left;
 				}
@@ -438,7 +438,7 @@ $include-html-classes: false;
 
 				.item a{
 					text-transform: uppercase;
-					@media #{$mobile}{
+					@media #{$small}{
 						font-size: 1.2em;
 					}
 					@media #{$small}{
@@ -452,7 +452,7 @@ $include-html-classes: false;
 				.item-count{
 					color: #999;
 
-					@media #{$mobile}{
+					@media #{$small}{
 						float: right;
 					}
 				}

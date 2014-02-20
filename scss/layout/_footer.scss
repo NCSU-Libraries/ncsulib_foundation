@@ -56,7 +56,7 @@ footer {
 				font-weight: normal;
 			}
 
-			@media #{$mobile}{
+			@media #{$small}{
 				a{
 					font-size: 1.5em;
 				}

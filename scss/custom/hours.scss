@@ -26,7 +26,7 @@ $include-html-classes: false;
 				padding: 0px 26px 0px 0px;
 				text-decoration: none;
 
-				@media #{$mobile}{
+				@media #{$small}{
 					padding: 0px;
 				}
 			}
@@ -147,7 +147,7 @@ $include-html-classes: false;
 	}
 
 	#hours-download {
-		@media #{$mobile}{
+		@media #{$small}{
 			margin-bottom: 40px;
 		}
 
@@ -489,7 +489,7 @@ $include-html-classes: false;
 		margin: 8px 10px 10px 0px;
 		width: 18px;
 
-		@media #{$mobile}{
+		@media #{$small}{
 			margin-top: 0px;
 		}
 	}
@@ -544,7 +544,7 @@ $include-html-classes: false;
 		margin: 8px 10px 10px 0px;
 		width: 18px;
 
-		@media #{$mobile}{
+		@media #{$small}{
 			margin-top: 0px;
 		}
 	}
