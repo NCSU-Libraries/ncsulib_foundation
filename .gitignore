@@ -1,7 +1,6 @@
 humans.txt
 robots.txt
 .sass-cache
-scss/foundation/*
 *.map
 *.sublime*
 .DS_Store
