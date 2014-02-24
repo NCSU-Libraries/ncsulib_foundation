@@ -68,7 +68,7 @@ body.nav-expanded{
 /*begin mobile nav*/
 #mobile-nav{
 	background: $topbar-dropdown-bg;
-	display: none;
+	// display: none;
 	padding: 0 10%;
 
 	#primary-nav-mobile{
@@ -192,11 +192,12 @@ header{
 		}
 
 		#nav-toggle{
-			@media #{$small-only}{
-				display: none;
-			}
 			float: right;
 			text-align: center;
+
+			@media #{$medium-up}{
+				display: none;
+			}
 
 			a{
 				display: block;
