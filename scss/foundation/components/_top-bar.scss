@@ -33,7 +33,7 @@ $topbar-link-color-hover: #fff !default;
 $topbar-link-color-active: #fff !default;
 $topbar-link-color-active-hover: #fff !default;
 $topbar-link-weight: normal !default;
-$topbar-link-font-size: rem-calc(13) !default;
+$topbar-link-font-size: rem-calc(15) !default;
 $topbar-link-hover-lightness: -10% !default; // Darken by 10%
 $topbar-link-bg-hover: #272727 !default;
 $topbar-link-bg-active: $primary-color !default;
@@ -294,6 +294,7 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
           padding-#{$default-float}: $topbar-link-padding;
           font-family: $topbar-link-font-family;
           font-size: $topbar-link-font-size;
+          @media #{$medium-only} {font-size: rem-calc(13);}
           font-weight: $topbar-link-weight;
           background: $topbar-dropdown-bg;
 

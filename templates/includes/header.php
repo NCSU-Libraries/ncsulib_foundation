@@ -22,7 +22,7 @@
 		<ul class="title-area">
 			<li class="name">
 			  	<a href="/" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
-					<img src="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
+					<img src="/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
 			  	</a>
 			</li>
 			<li id="nav-toggle">
@@ -120,7 +120,7 @@
 	<div id="utility-bar">
 		<?php if(drupal_is_front_page() && $_SERVER['REMOTE_ADDR']): ?>
 		<div id="home-hours">
-			<p id="hours-title"><a href="/hours">TODAYS HOURS</a>:</p>
+			<p id="hours-title"><a href="/hours">TODAY'S HOURS</a>:</p>
 			<ul>
 				<li><a href="/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
 				<li><a href="/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
