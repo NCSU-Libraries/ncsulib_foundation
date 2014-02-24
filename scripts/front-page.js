@@ -4,11 +4,6 @@ jQuery(document).ready(function($){
     orbit: {
   		animation: 'fade',
   		slide_number: false,
-    },
-    tab: {
-      callback : function (tab) {
-        console.log(tab);
-      }
     }
 	});
 
