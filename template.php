@@ -139,6 +139,15 @@ function ncsulib_foundation_preprocess_page(&$variables) {
 } // End tremendous template_preprocess_page function
 
 /**
+ * Implements hook_js_alter()
+ */
+function ncsulib_foundation_js_alter(&$javascript) {
+  // kill old jquery
+  unset($javascript['misc/jquery.js']);
+}
+
+
+/**
  * Implements theme_breadrumb().
  *
  * Print breadcrumbs as a list, with separators.
