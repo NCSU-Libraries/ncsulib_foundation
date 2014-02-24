@@ -1,52 +1,47 @@
 @import "../foundation/settings";
 $include-html-classes: false;
-@import "foundation";
-@import "foundation/components/global";
-@import "foundation/components/grid";
-@import "foundation/components/section";
 
-#alpha-tabs{
-	section.active{
+.tabs{
+	.content{
+		display: none;
+	}
 
-		.title{
-			border-right: 0px;
-		}
+	.content.active{
+		display: block;
+	}
+}
 
-		.content{
+.tabs-content.vertical, .tabs-content{
+	padding: 0px;
 
-			padding: 1.5em;
+	.content, .content-vertical{
+		padding: rem-calc(10) 0px 0px 0px;
 
-			ul{
-				margin: 0px;
+		ul{
+			margin:0px;
+			padding: rem-calc(20);
 
-				li{
-					list-style-type: none;
-					margin-bottom: 10px;
-				}
+			li{
+				list-style-type:none;
+				margin-bottom: rem-calc(10);
 			}
 		}
 	}
 }
 
-#subject-tabs{
+.alpha-content, .subject-content{
+	display: none;
+}
 
-	section.active{
-		padding-left: 11.3em;
 
-		.title{
-			border-right: 0px;
-		}
-		.content{
-			padding: 1.5em;
+// mobile style
+.alpha-content, .subject-content {
+	ul{
+		list-style-type: none;
+		margin: 0px;
 
-			ul{
-				margin: 0px;
-
-				li{
-					list-style-type: none;
-					margin-bottom: 10px;
-				}
-			}
+		li{
+			padding: 0px 0px rem-calc(10);
 		}
 	}
 }

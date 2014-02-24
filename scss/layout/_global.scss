@@ -22,7 +22,7 @@ h6{ font-size: $h6-font-size;}
 html #content{
 	margin-top: 30px;
 
-	@media #{$small}{
+	@media #{$small-only}{
 		margin-top: 0px;
 	}
 }
@@ -68,3 +68,94 @@ html #content{
     font-size:1.2em;
     z-index:999;
 }
+
+
+
+
+
+
+// begin global UI style overwrite
+dl.tabs{
+    dd.active{
+        border-left: 0px solid $border-color;
+        border-bottom: 1px solid #FFF;
+
+        @media #{$small-only}{
+            border-left: 1px solid $border-color;
+        }
+    }
+    dd:first-child{
+        border-left: 1px solid $border-color;
+    }
+    dd{
+        border-bottom: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+        border-top: 1px solid $border-color;
+
+        @media #{$small-only}{
+            border-left: 1px solid $border-color;
+            width: 100%;
+        }
+
+        a{
+            padding: rem-calc(12);
+        }
+    }
+}
+
+div.tabs-content{
+    border-bottom: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+    padding: 0px rem-calc(16);
+}
+
+dl.tabs.vertical{
+    dd.active{
+        border-top: 1px solid $border-color;
+        border-right: 1px solid #FFF;
+        position: relative;
+
+        @media #{$small-only}{
+            border-right: 1px solid $border-color;
+        }
+    }
+    dd:first-child{
+        border-left: 1px solid $border-color;
+    }
+    dd{
+        border-bottom: 1px solid $border-color;
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+        border-top: 1px solid $border-color;
+
+        a{
+            padding: rem-calc(12);
+        }
+    }
+}
+
+// end global UI style overwrite
+
+// hacky way to prevent mobile devices from zooming in on input elements
+@media #{$small}{
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] { font-size: 1em !important; }
+}
+
+
