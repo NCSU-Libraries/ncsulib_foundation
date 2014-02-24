@@ -25,7 +25,7 @@
 					<img src="/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
 			  	</a>
 			</li>
-			<li id="nav-toggle">
+			<li id="nav-toggle" class="right-off-canvas-toggle">
 				<a href="#"><i class="fa fa-bars"></i></a>
 			</li>
 			<li id="search-toggle">
