@@ -51,7 +51,7 @@ body.nav-expanded{
 						position: static;
 
 						li{
-							padding-left: emCalc(20);
+							padding-left: rem-calc(20);
 
 							a{
 								background: none;
@@ -88,7 +88,7 @@ body.nav-expanded{
 					color: darken($topbar-link-color, 20%);
 					display: block;
 					font-size: 1.3em;
-					padding: 0px 0px emCalc(20);
+					padding: 0px 0px rem-calc(20);
 					text-transform: uppercase;
 				}
 
@@ -112,7 +112,7 @@ body.nav-expanded{
 					color: darken($topbar-link-color, 20%);
 					display: block;
 					font-size: 0.9em;
-					padding: 0px 0px emCalc(15);
+					padding: 0px 0px rem-calc(15);
 					text-transform: uppercase;
 				}
 			}
@@ -129,7 +129,7 @@ body.nav-expanded{
 header{
 	margin-top: -3px; /* fix the spacing problem with the University nav iframe */
 	background: $primary-color;
-	margin-top: emCalc(-3);
+	margin-top: rem-calc(-3);
 
 	nav.top-bar{
 		@include grid-row;
@@ -139,21 +139,26 @@ header{
 		}
 
 		.title-area .name{
-			padding-left: emCalc(15);
-			padding-top: emCalc(22);
+			padding-left: rem-calc(15);
+			padding-top: rem-calc(22);
 			width: 200px;
 
-			@media #{$small}{
+			@media #{$small-only}{
 				float: left;
 			}
 
-			@media #{$small} {
-				padding-top: emCalc(14);
+			@media #{$small-only} {
+				padding-top: rem-calc(14);
 				width: 250px;
 			}
 
-			@media #{$medium} {
-				padding-top: emCalc(6);
+			@media #{$medium-only} {
+				padding-top: rem-calc(23);
+				width: 230px;
+			}
+
+			@media #{$large-up} {
+				padding-top: rem-calc(6);
 				width: 348px;
 			}
 
@@ -168,14 +173,14 @@ header{
 			float: right;
 			text-align: center;
 
-			@media #{$small}{
+			@media #{$small-only}{
 				display: block;
 			}
 
 			a{
 				display: block;
 				height: $topbar-height;
-				padding-top: emCalc(21);
+				padding-top: rem-calc(21);
 				width: 44px;
 			}
 
@@ -187,7 +192,7 @@ header{
 		}
 
 		#nav-toggle{
-			@media #{$small}{
+			@media #{$small-only}{
 				display: none;
 			}
 			float: right;
@@ -196,7 +201,7 @@ header{
 			a{
 				display: block;
 				height: $topbar-height;
-				padding-top: emCalc(21);
+				padding-top: rem-calc(21);
 				width: 44px;
 			}
 
@@ -212,22 +217,22 @@ header{
 		}
 
 		.top-bar-section{
-			@media #{$small} {
-				padding-right: emCalc(0);
+			@media #{$small-only} {
+				padding-right: rem-calc(0);
 			}
 			ul#primary-nav{
 				background: $topbar-dropdown-bg;
 				float: right;
-				padding-bottom: emCalc(20);
+				padding-bottom: rem-calc(20);
 
-				@media #{$small} {
+				@media #{$small-only} {
 					background: $primary-color;
 					margin-top: 13px;
-					padding-bottom: emCalc(0);
+					padding-bottom: rem-calc(0);
 				}
 
 				li{
-					@media #{$small} {
+					@media #{$small-only} {
 						border: none;
 						max-width: 250px;
 					}
@@ -236,8 +241,8 @@ header{
 
 				}
 				li > a{
-					@media #{$small} {
-						padding: 0px emCalc(20);
+					@media #{$small-only} {
+						padding: 0px rem-calc(20);
 						line-height: $topbar-height - 13;
 					}
 					text-transform: uppercase;
@@ -257,7 +262,7 @@ header{
 					padding: 0px;
 				}
 				li a.open{
-					@media #{$small} {
+					@media #{$small-only} {
 						background: $topbar-dropdown-bg;
 					}
 				}
@@ -265,13 +270,13 @@ header{
 				li.has-dropdown{
 					.dropdown{
 						background: $topbar-dropdown-bg;
-						padding: emCalc(10) 0px;
+						padding: rem-calc(10) 0px;
 						li{
 							a{
 								background: $topbar-dropdown-bg;
 								font-size: 0.9em;
 								line-height: 1.5em;
-								padding: emCalc(10) emCalc(30) !important;
+								padding: rem-calc(10) rem-calc(30) !important;
 								text-transform: none;
 							}
 
@@ -282,7 +287,7 @@ header{
 					}
 
 					a{
-						padding-right: emCalc(20) !important;
+						padding-right: rem-calc(20) !important;
 					}
 				}
 			}
@@ -308,7 +313,7 @@ header#minimum-bar{
 
 		.name{
 			height: 60px;
-			padding: 5px 0px 0px emCalc(15);
+			padding: 5px 0px 0px rem-calc(15);
 			width: 248px;
 
 			a{
@@ -346,7 +351,7 @@ header#minimum-bar{
 		padding: 25px 0px;
 
 		ul{
-			@include grid-column(3, null, null, null, 6);
+			@include grid-column(3, $float: right);
 			margin: 0px;
 			padding: 0px;
 
@@ -359,7 +364,7 @@ header#minimum-bar{
 				border-bottom: none;
 			}
 			li:hover{
-				@media #{$small} {
+				@media #{$small-only} {
 					background: none;
 				}
 			}
@@ -369,15 +374,15 @@ header#minimum-bar{
 				display: block;
 				font-size: 0.875em;
 				line-height: 1.6em;
-				margin-top: emCalc(0);
+				margin-top: rem-calc(0);
 				padding: 0px;
-				@media #{$small} {
-					padding: emCalc(0) emCalc(10);
+				@media #{$small-only} {
+					padding: rem-calc(0) rem-calc(10);
 				}
 				text-transform: capitalize;
 			}
 			li a:hover{
-				@media #{$small} {
+				@media #{$small-only} {
 					text-decoration: underline;
 				}
 			}
@@ -393,229 +398,229 @@ header#minimum-bar{
 /*begin utility*/
 #utility{
 	background: $topbar-dropdown-bg;
-	margin-bottom: emCalc(15);
+	margin-bottom: rem-calc(15);
 
-	@media #{$small}{
-		margin-bottom: emCalc(20);
+	@media #{$small-only}{
+		margin-bottom: rem-calc(20);
 	}
+
 
 	#utility-bar{
 		@include grid-row;
 
 		#home-hours{
-			float: left;
-			padding-left: 0px;
-			width: 100%;
+			padding:rem-calc(5) 0;
+			background: $topbar-dropdown-bg;
 
-			@media #{$small}{
-				padding: emCalc(5) emCalc(15);
+			@media #{$medium-only} {
+				@include grid-column(6, $pull:6);
 			}
-
-			@media #{$small}{
-				background: $topbar-dropdown-bg;
-				float: left;
-				margin-left: emCalc(14);
-				width: auto;
+			@media #{$large-up} {
+				@include grid-column(7, $pull:5);
 			}
 
 			p#hours-title{
-				color: #aaa;
-				float: left;
-				font-size: 0.8em;
-				font-weight: bold;
-				line-height: emCalc(27);
-				margin-bottom: 0px;
-				margin-right: 5px;
-				padding-left: emCalc(0);
+				font-size: rem-calc(12);
+				font-weight: 700;
+				margin: 0;
+				line-height: 1.16;
 
-				@media #{$small}{
-					height: 40px;
-					line-height: emCalc(20);
-					margin-right: 5%;
-					padding-left: 0px;
-					width: 18%;
+				@media #{$small-only}{
+					float: left;
+					margin:0 10px 0 14px;
+					width: 53px;
+				}
+				@media #{$medium-up}{
+					// @include grid-column(4);
+					width: 101px;
+					float: left;
 				}
 
-				a{
+				a {
 					color: #aaa;
-				}
 
-				a:hover{
-					text-decoration: underline;
-				}
-			}
-			ul{
-				@media #{$small}{
-					padding-right: 0px;
-					width: 77%;
-				}
-				display: inline;
-				float: left;
-				list-style-type: none;
-				margin: 0px 0px 0px 0px;
-				padding-right: emCalc(10);
-
-				li{
-					@media #{$medium}{
-						float: left;
-						padding: 5px 0px;
-					}
-					padding: 4px 0px;
-
-					a{
-						@media #{$medium}{
-							border-left: 1px solid #FFF;
-							margin: 0px 0px 0px 10px;
-						}
-						color: #FFF;
-						display: block;
-						font-size: 0.8em;
-						line-height: 1em;
-						padding: 0px 0px 0px 10px;
-					}
-					a:hover{
+					:hover{
 						text-decoration: underline;
 					}
+				}
+			}
 
-					@media #{$small}{
-						.hours{
-							float: right;
-							font-weight: bold;
-						}
+			ul {
+				display: inline;
+				list-style-type: none;
+				margin: 0;
+				line-height: 1;
+
+				@media #{$small-only}{
+					.library {
+						display: inline-block;
+						width: 120px;
+					}
+					.hours{
+						font-weight: bold;
 					}
 				}
-				li:first-child a{
-					border-left: 0px;
-					margin-left: 0px;
+
+				@media #{$medium-up} {
+					display: inline-block;
+				}
+
+				li {
+					@media #{$large-up}{
+						display: inline-block;
+						border-left: 1px solid #FFF;
+						margin: 0 0 0 10px;
+
+						&:first-child {
+							border-left: none;
+						}
+					}
+
+
+					display: block;
+					font-size: 0.8em;
+					line-height: 1em;
+					padding: 0 0 0 10px;
+
+					a{
+						color: #FFF;
+
+						@media #{$medium-only}{
+							font-size: rem-calc(11.5);
+						}
+					}
+
+					&:hover{
+						text-decoration: underline;
+					}
 				}
 			}
 		}
+	}
 
-		#utility-search{
-			// @include grid-column(6);
-			padding-left: emCalc(15);
+	#utility-search{
+		@include grid-column(6);
+		padding-left: rem-calc(15);
 
-			#search-form{
-				margin: 0px;
-			}
+		#search-form{
+			margin: 0px;
+		}
 
-			@media #{$small}{
-				display: none;
-				padding: emCalc(15);
+		@media #{$small-only}{
+			display: none;
+			padding: rem-calc(15);
+			width: 100%;
+		}
+
+		@media #{$medium-only}{
+			padding-right: 0px;
+			width: 45%;
+		}
+
+		#search-all{
+			@media #{$small-only}{
+				border-radius: 0px;
+				height: 50px;
+				margin-bottom: rem-calc(10);
 				width: 100%;
 			}
 
-			@media #{$medium}{
-				padding-right: 0px;
-				width: 45%;
+			@media #{$small-only}{
+				float: left;
+				height: 25px;
+				margin-bottom: 0px;
+				padding: 0px 10px;
+				transition: height 0.5s, width 0.5s;
+				-moz-transition: height 0.5s, width 0.5s;
+				-webkit-transition: height 0.5s, width 0.5s;
+				transition-delay: 0.25s;
+				-moz-transition-delay: 0.25s; /* Safari */
+				-webkit-transition-delay: 0.25s; /* Safari */
+				width: 235px;
 			}
-
-			#search-all{
-				@media #{$small}{
-					border-radius: 0px;
-					height: 50px;
-					margin-bottom: emCalc(10);
-					width: 100%;
-				}
-
-				@media #{$small}{
-					float: left;
-					height: 25px;
-					margin-bottom: 0px;
-					padding: 0px 10px;
-					transition: height 0.5s, width 0.5s;
-					-moz-transition: height 0.5s, width 0.5s;
-					-webkit-transition: height 0.5s, width 0.5s;
-					transition-delay: 0.25s;
-					-moz-transition-delay: 0.25s; /* Safari */
-					-webkit-transition-delay: 0.25s; /* Safari */
-					width: 235px;
-				}
+		}
+		#search-all:focus, #search-all.active{
+			@media #{$small-only}{
+				height: 40px;
+				width: 290px;
 			}
-			#search-all:focus, #search-all.active{
-				@media #{$small}{
-					height: 40px;
-					width: 290px;
-				}
-				@media #{$medium}{
-					height: 40px;
-					width: 335px;
-				}
-			}
-
-			#search-submit{
-				@include button;
-
-				@media #{$small}{
-					float: right;
-					margin: 0px 0px emCalc(9) 0px;
-				}
-
-				@media #{$small}{
-					background: #990000;
-					border: 0px;
-					color: #FFF;
-					float: left;
-					font-size: 0.7em;
-					font-weight: normal;
-					height: 25px;
-					margin-bottom: 0px;
-					padding: 0px 10px;
-					transition: height 0.5s;
-					-moz-transition: height 0.5s;
-					-webkit-transition: height 0.5s;
-					transition-delay: 0.25s;
-					-moz-transition-delay: 0.25s; /* Safari */
-					-webkit-transition-delay: 0.25s; /* Safari */
-				}
-			}
-			#search-all:focus + #search-submit, #search-submit.active{
-				@media #{$small}{
-					height: 40px;
-				}
-			}
-			#search-submit:hover{
-				background: darken(#990000, 10%);
+			@media #{$medium-only}{
+				height: 40px;
+				width: 335px;
 			}
 		}
 
-		ul#utility-links{
-			@include grid-column(12);
-			list-style-type: none;
-			float: right;
-			margin: 0px;
-			padding-left: 0px;
+		#search-submit{
+			@include button;
 
-			@media #{$small}{
-				display: none;
-			}
-
-			@media #{$small}{
+			@media #{$small-only}{
 				float: right;
-				width: auto;
+				margin: 0px 0px rem-calc(9) 0px;
 			}
 
-			li{
+			@media #{$small-only}{
+				background: #990000;
+				border: 0px;
+				color: #FFF;
 				float: left;
-				margin-top: emCalc(4);
+				font-size: 0.7em;
+				font-weight: normal;
+				height: 25px;
+				margin-bottom: 0px;
+				padding: 0px 10px;
+				transition: height 0.5s;
+				-moz-transition: height 0.5s;
+				-webkit-transition: height 0.5s;
+				transition-delay: 0.25s;
+				-moz-transition-delay: 0.25s; /* Safari */
+				-webkit-transition-delay: 0.25s; /* Safari */
+			}
+		}
+		#search-all:focus + #search-submit, #search-submit.active{
+			@media #{$small-only}{
+				height: 40px;
+			}
+		}
+		#search-submit:hover{
+			background: darken(#990000, 10%);
+		}
+	}
 
-				a{
+	ul#utility-links {
+		display: none;
+
+
+		@media #{$medium-up}{
+			display: inline-block;
+			margin: 0 20px 0 0;
+			list-style: none;
+			float: right;
+
+			li {
+				float: left;
+				margin-top: rem-calc(4);
+
+				a {
 					border-left: 1px solid #555555;
 					color: #CCC;
 					display: block;
-					font-size: emCalc(12);
-					margin-left: emCalc(10);
-					padding: 0px 0px 0px emCalc(10);
+					font-size: rem-calc(12);
+					@media #{$medium-only}{font-size: rem-calc(11);}
+					margin-left: rem-calc(5.5);
+					padding: 0px 0px 0px rem-calc(5.5);
 				}
+
 				a:hover{
 					text-decoration: underline;
 				}
 			}
+
 			li:first-child a{
-				border-left: 0px;
+				border-left: 0;
 			}
 		}
 	}
 }
+
 /*end utility*/
 
