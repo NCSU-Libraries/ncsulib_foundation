@@ -80,7 +80,7 @@ scripts[] = scripts/vendor/jquery.mockjax.js
 scripts[] = scripts/global.js
 scripts[] = scripts/primary-nav.js
 scripts[] = scripts/search-bar.js
-scripts[] = scripts/mobile-nav.js
+; scripts[] = scripts/mobile-nav.js
 scripts[] = scripts/modernizr-tests.js
 
 ; This section lists the regions defined in the page.tpl.php. The name in
