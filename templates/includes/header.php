@@ -26,10 +26,10 @@
 			  	</a>
 			</li>
 			<li id="nav-toggle">
-				<a href="#"><i class="icon-reorder"></i></a>
+				<a href="#"><i class="fa fa-bars"></i></a>
 			</li>
 			<li id="search-toggle">
-				<a href="#"><i class="icon-search"></i></a>
+				<a href="#"><i class="fa fa-search"></i></a>
 			</li>
 		</ul>
 
