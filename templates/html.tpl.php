@@ -9,16 +9,19 @@
         <?php include 'includes/head.php'; ?>
     </head>
     <body class="<?php print $classes; ?>" <?php print $attributes;?>>
+        <div class="off-canvas-wrap">
+            <div class="inner-wrap">
+                <?php include 'includes/header.php'; ?>
+                <div class="skip-link">
+                    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+                </div>
+                <?php print $page_top; ?>
+                <?php print $page; ?>
+                <?php print $page_bottom; ?>
 
-        <?php include 'includes/header.php'; ?>
-        <div class="skip-link">
-            <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+                <?php include 'includes/footer.html'; ?>
+                <a class="exit-off-canvas"></a>
+            </div>
         </div>
-        <?php print $page_top; ?>
-        <?php print $page; ?>
-        <?php print $page_bottom; ?>
-
-        <?php include 'includes/footer.html'; ?>
-
     </body>
 </html>
