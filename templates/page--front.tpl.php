@@ -1,6 +1,7 @@
 <?php
     drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css', array('weight' => 999));
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/front-page.js');
+    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
 ?>
 
 <!--.page -->
@@ -10,10 +11,8 @@
             <a id="main-content"></a>
             <!-- top row -->
             <section id="tier-one">
-                <div data-interchange="[/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search_tabs-desktop.html, (small)], [/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search_tabs-desktop.html, (medium)]">
-                    no content
-                </div>
-
+                <div id="search-options">
+                    <div data-interchange="[/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search-mobile.html, (small)], [/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search_tabs-desktop.html, (medium)]"></div>
                     <div id="research-tools">
                         <h2>More Research Tools:</h2>
                         <ul>
@@ -48,9 +47,6 @@
                     </ul>
 
                 </div>
-
-
-
 
                 <!-- artbox stub -->
                 <div id="home-artbox">

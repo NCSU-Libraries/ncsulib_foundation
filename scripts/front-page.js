@@ -1,13 +1,13 @@
 jQuery(document).ready(function($){
 
- 	$(document).foundation({
+  $(document).foundation({
     orbit: {
-  		animation: 'fade',
-  		slide_number: false,
+      animation: 'fade',
+      slide_number: false,
     }
-	});
+  });
 
-	tech.init();
+  tech.init();
 
 })
 

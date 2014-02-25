@@ -3,6 +3,7 @@ $include-html-classes: false;
 @import "foundation/components/global";
 @import "foundation/components/grid";
 @import "foundation/components/buttons";
+@import "foundation/components/button-groups";
 @import "foundation/components/inline-lists";
 @import "foundation/components/side-nav";
 
@@ -75,11 +76,15 @@ $include-html-classes: false;
 #all-submit{
 	@include grid-column(2, false, false, false, false, false, false, right);
 	margin: 0px;
-	height: 3.79em;
+	height: 4.25em;
 
 	@media #{$small-only}{
 		@include grid-column(12);
 	}
+}
+
+#mobile-search-form{
+	margin-bottom: rem-calc(15);
 }
 
 /*articles*/
@@ -98,7 +103,7 @@ $include-html-classes: false;
 #article-submit{
 	@include grid-column(2, false, false, false, false, false, false, right);
 	margin: 0px 0px rem-calc(5);
-	height: 3.79em;
+	height: 4.25em;
 
 	@media #{$small-only}{
 		@include grid-column(12);
@@ -142,7 +147,7 @@ $include-html-classes: false;
 }
 #searchbookssubmit{
 	@include grid-column(2);
-	height: 3.79em;
+	height: 4.25em;
 	margin-bottom: emCalc(5);
 
 	@media #{$small-only}{
@@ -150,7 +155,6 @@ $include-html-classes: false;
 	}
 }
 #books-more-options-drop{
-
 	border: 1px solid #DDD;
 	margin-bottom: emCalc(15);
 	padding: 5px;
@@ -159,7 +163,7 @@ $include-html-classes: false;
 #searchweb{
 	@include grid-column(10);
 	height: 3.5em;
-	margin-bottom: emCalc(10);
+	margin-bottom: emCalc(15);
 
 	@media #{$small-only}{
 		@include grid-column(12);
@@ -167,7 +171,7 @@ $include-html-classes: false;
 }
 #web-submit{
 	@include grid-column(2);
-	height: 3.79em;
+	height: 4.25em;
 	margin-bottom: rem-calc(10);
 
 	@media #{$small-only}{
@@ -184,8 +188,15 @@ $include-html-classes: false;
 	}
 
 	ul{
-		@media #{$medium-up}{
-			@include inline-list;
+		@include inline-list;
+
+		li{
+
+			a{
+				@media #{$small-only}{
+					font-size: 0.8em;
+				}
+			}
 		}
 	}
 }
@@ -211,6 +222,37 @@ $include-html-classes: false;
 			font-size: 1em;
 			font-weight: bold;
 			margin-bottom: 0px;
+
+			@media #{$small-only}{
+				font-size: 2em;
+				font-weight: normal;
+			}
+		}
+
+		ul{
+			@include side-nav;
+
+			li{
+				@media #{$small-only}{
+					@include grid-column(6);
+					padding: 0px;
+				}
+				margin-bottom: 0px;
+
+				a{
+					@media #{$small-only}{
+						// @include button(rem-calc(10));
+						color: #FFF;
+					}
+				}
+			}
+
+			li:first-child{
+				@media #{$small-only}{
+					@include grid-column(12);
+					padding: 0px;
+				}
+			}
 		}
 	}
 
@@ -218,13 +260,6 @@ $include-html-classes: false;
 		margin-left: 0px;
 	}
 
-	ul{
-		@include side-nav;
-
-		li{
-			margin-bottom: 0px;
-		}
-	}
 }
 /*end quicklinks*/
 
@@ -300,7 +335,10 @@ $include-html-classes: false;
 		dd{
 			a{
 				font-size: 0.7em;
-				padding-right: 0px;
+
+				@media #{$medium-up}{
+					padding-right: 0px;
+				}
 			}
 		}
 
