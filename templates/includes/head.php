@@ -23,7 +23,12 @@
 <?php print $head; ?>
 <?php print $styles; ?>
 <?php print $scripts; ?>
-<script src="/sites/all/themes/ncsulib_foundation/scripts/global.js"></script>
+<script>
+  // instantiate foundation
+(function ($, Drupal, window, document, undefined) {
+  $(document).foundation();
+})(jQuery, Drupal, this, this.document);
+</script>
 <?php endif; ?>
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
