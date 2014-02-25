@@ -38,7 +38,7 @@
 // We use these to control various global styles
 // $body-bg: #fff;
 $body-font-color: #555;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -63,6 +63,7 @@ $secondary-color-f: #556677;
 $secondary-color-g: #A20000;
 $alert-color: #c60f13;
 $border-color: #ccc;
+
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
@@ -77,8 +78,8 @@ $global-rounded: 0px;
 // $shiny-edge-active-color: rgba(#000, .2);
 
 // Media Query Ranges
-$small-range: (0em, 48em);
-$medium-range: (48.063em, 64em);
+$small-range: (0em, 47.937em);
+$medium-range: (48em, 64em);
 // $large-range: (64.063em, 90em);
 // $xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em);
@@ -123,7 +124,7 @@ $small: $small-only;
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-// $header-font-weight: 300;
+$header-font-weight: normal;
 // $header-font-style: normal;
 $header-font-color: #555;
 // $header-line-height: 1.4;
@@ -168,8 +169,8 @@ $code-font-weight: 300;
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-font-color: #4C83AF;
+$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -909,7 +910,7 @@ $panel-font-color: $body-font-color;
 // $side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-// $side-nav-link-color: $primary-color;
+$side-nav-link-color: $anchor-font-color;//$primary-color;
 // $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
 // $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
 // $side-nav-font-size: rem-calc(14);

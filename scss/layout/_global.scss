@@ -94,7 +94,7 @@ dl.tabs{
 
         @media #{$small-only}{
             border-left: 1px solid $border-color;
-            width: 100%;
+            // width: 100%;
         }
 
         a{
@@ -119,16 +119,22 @@ dl.tabs.vertical{
 
         @media #{$small-only}{
             border-right: 1px solid $border-color;
+            top: 1px;
         }
     }
     dd:first-child{
         border-left: 1px solid $border-color;
+        border-right: 0px;
     }
     dd{
-        border-bottom: 1px solid $border-color;
         border-left: 1px solid $border-color;
         border-right: 1px solid $border-color;
         border-top: 1px solid $border-color;
+
+        @media #{$small-only}{
+            border-bottom: 0px solid $border-color;
+            float: left;
+        }
 
         a{
             padding: rem-calc(12);
