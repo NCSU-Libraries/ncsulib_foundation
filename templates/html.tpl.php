@@ -20,7 +20,7 @@
                 <?php print $page_bottom; ?>
 
                 <?php include 'includes/footer.html'; ?>
-                <a class="exit-off-canvas"></a>
+
             </div>
         </div>
     </body>
