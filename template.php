@@ -22,6 +22,7 @@ variable_set('htdocs_root', str_replace(strrchr(DRUPAL_ROOT, "/"), "/htdocs", DR
  *  and other various and sundry activities
  */
 function ncsulib_foundation_preprocess_page(&$variables) {
+    // Begin CSS suggestions
     if (module_exists('path')) {
         $alias = drupal_get_path_alias(str_replace('/edit','',$_GET['q']));
         // If the alias is a clean URL
@@ -67,58 +68,27 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       }
     }
 
-    // If this is the front/home page of the site
-    if ($variables['is_front']) {
-
-      // Add the following Conditional CSS suggestions to Drupal
-      drupal_add_css(path_to_theme() . '/styles/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
-      drupal_add_css(path_to_theme() . '/styles/ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 6', '!IE' => FALSE), 'preprocess' => FALSE));
-
-      function ncsulib_foundation_css_alter(&$css) {
-          $css['sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css']['weight'] = -1;
-// kpr($css);
-
-        // Remove unused CSS files for performance
-        if (isset($css['modules/aggregator/aggregator.css'])) {
-          unset($css['modules/aggregator/aggregator.css']);
-        }
-        if (isset($css['modules/book/book.css'])) {
-          unset($css['modules/book/book.css']);
-        }
-        if (isset($css['modules/field/theme/field.css'])) {
-          unset($css['modules/field/theme/field.css']);
-        }
-        if (isset($css['modules/node/node.css'])) {
-          unset($css['modules/node/node.css']);
-        }
-        if (isset($css['modules/system/system.messages.css'])) {
-          unset($css['modules/system/system.messages.css']);
-        }
-        if (isset($css['modules/user/user.css'])) {
-          unset($css['modules/user/user.css']);
-        }
-        if (isset($css['sites/all/modules/ctools/css/ctools.css'])) {
-          unset($css['sites/all/modules/ctools/css/ctools.css']);
-        }
-        if (isset($css['sites/all/modules/mollom/mollom.css'])) {
-          unset($css['sites/all/modules/mollom/mollom.css']);
-        }
-        if (isset($css['sites/all/modules/views/css/views.css'])) {
-          unset($css['sites/all/modules/views/css/views.css']);
-        }
-        if (isset($css['sites/all/modules/views_slideshow/views_slideshow.css'])) {
-          unset($css['sites/all/modules/views_slideshow/views_slideshow.css']);
-        }
-      }
-    }
-
     // If there are CSS suggestions to include
     if (isset($include_style)) {
       foreach ($include_style as $included_styles) {
-        //Add the CSS suggestion to Drupal
+        // Add the CSS suggestion to Drupal
         drupal_add_css($included_styles);
       }
     }
+    // End CSS suggestions
+
+    // Stub for css removal and manipulation, if we are interested in removing drupal-provided css
+    // function ncsulib_foundation_css_alter(&$css) {
+    // if (isset($css['modules/aggregator/aggregator.css'])) {
+    //    unset($css['modules/aggregator/aggregator.css']);
+    //  }
+    //  // experimenting with css weighting, though it doesn't seem to do much
+    //  $css['sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css']['weight'] = -1;
+    // }
+    // If this is the front/home page of the site
+
+
+
   }
 
 
