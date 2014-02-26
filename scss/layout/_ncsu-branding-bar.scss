@@ -2,7 +2,7 @@
 #ncsu_branding_bar{
 	display: none;
 
-	@media #{$small}{
+	@media #{$medium-up}{
 		display: block;
 	}
 }
