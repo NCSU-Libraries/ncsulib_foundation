@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
 
   tech.init();
 
-})
+});
 
 
 // Load Availability Data
