@@ -6,8 +6,26 @@ footer {
 	p,h2,h3,h4,h5, i{
 		color: $footer-font-color;
 	}
+	h3 {
+		font-size: (($h3-font-size)*.75);
+	}
+	h4 {
+		font-size: (($h4-font-size)*.75);
+	}
+	p, li {
+		font-size: (($paragraph-font-size)*.85);
+		line-height: 1.3;
+	}
+	li {
+		padding-bottom: rem-calc(5);
+	}
 	a{
 		color: $footer-font-color;
+	}
+	ul {
+				list-style-type: none;
+				margin: 0 0 rem-calc(10) 0;
+				padding: 0px;
 	}
 	a:hover{
 		color: #FFF;
@@ -15,83 +33,65 @@ footer {
 
 	#footer{
 		@include grid-row;
-		padding: 0px emCalc(15);
+		padding: 0px rem-calc(15);
 		padding-bottom: 20px;
 
 
 
 		#f-address{
-			@media #{$small} {
+			@media #{$small-only} {
+				border-bottom: 1px solid darken($footer-font-color, 30%);
+				margin-bottom: rem-calc(20);
+			}
+
+			@media #{$medium-up} {
 				@include grid-column(4);
 				border-right: 1px solid darken($footer-font-color, 30%);
-				height: 300px;
 				padding-left: 0px;
-				padding-bottom: emCalc(30);
+				padding-bottom: rem-calc(30);
+			}
+			p {
+				line-height: 1.3;
 			}
 		}
 
 		#f-libraries{
-			@media #{$small} {
+			@media #{$small-only} {
+				border-bottom: 1px solid darken($footer-font-color, 30%);
+				margin-bottom: rem-calc(20);
+			}
+
+			@media #{$medium-up} {
 				@include grid-column(4);
 				border-right: 1px solid darken($footer-font-color, 30%);
 				height: 300px;
 			}
-			padding-bottom: emCalc(30);
 
-			ul{
-				list-style-type: none;
-				margin: 0px;
-				padding: 0px;
-			}
 		}
 
 		#f-social{
-			@media #{$small} {
+
+			@media #{$medium-up} {
 				@include grid-column(4);
-				height: 300px;
-			}
-			padding-bottom: emCalc(30);
 
-			i{
+				a {
+					font-size: (($paragraph-font-size)*1.25);
+				}
+			}
+			.giving {
+				margin-bottom: rem-calc(10);
+				display: block;
+			}
+			i {
 				font-weight: normal;
-			}
-
-			@media #{$small}{
-				a{
-					font-size: 1.5em;
-				}
-			}
-			a:hover i{
-				color: #FFF;
-			}
-		}
-
-		#f-util{
-			@include grid-row;
-
-			ul#util-links{
-				@include grid-column(12);
-				margin-left: 0px;
-				padding: 15px 0px;
+				width: rem-calc(25);
 				text-align: center;
+				padding-right: rem-calc(8);
 
+			}
 
-				li{
-					border-left: 1px solid darken($footer-font-color, 20%);
-					display: inline-block;
-					line-height: 0.8em;
-					margin: 0px 5px;
-					padding: 0px 0px 0px 10px;
-
-					a{
-						font-size: 0.8em;
-					}
-				}
-				li:first-child{
-					border-left: 0px;
-					margin-left: 0px;
-					padding-left: 0px;
-				}
+			a:hover i {
+				color: #FFF;
 			}
 		}
 	}
