@@ -501,51 +501,44 @@ header#minimum-bar{
 
 	#utility-search{
 		@include grid-column(6);
-		padding-left: rem-calc(15);
+
+		display: none;
+		padding: rem-calc(15);
+		width: 100%;
+
+		@media #{$medium-up} {
+			display: block;
+			padding: 0px;
+			width: 45%;
+		}
 
 		#search-form{
 			margin: 0px;
 		}
 
-		@media #{$small-only}{
-			display: none;
-			padding: rem-calc(15);
-			width: 100%;
-		}
-
-		@media #{$medium-only}{
-			padding-right: 0px;
-			width: 45%;
-		}
-
 		#search-all{
-			@media #{$small-only}{
-				border-radius: 0px;
-				height: 50px;
-				margin-bottom: rem-calc(10);
-				width: 100%;
-			}
+			border-radius: 0px;
+			height: 50px;
+			margin-bottom: rem-calc(10);
+			width: 100%;
+			float: left;
+			height: 25px;
+			margin-bottom: 0px;
+			padding: 0px 10px;
+			@include single-transition(all, .5s);
+			width: 235px;
 
 			@media #{$small-only}{
-				float: left;
-				height: 25px;
-				margin-bottom: 0px;
-				padding: 0px 10px;
-				transition: height 0.5s, width 0.5s;
-				-moz-transition: height 0.5s, width 0.5s;
-				-webkit-transition: height 0.5s, width 0.5s;
-				transition-delay: 0.25s;
-				-moz-transition-delay: 0.25s; /* Safari */
-				-webkit-transition-delay: 0.25s; /* Safari */
-				width: 235px;
+			}
+			@media #{$medium-up} {
 			}
 		}
 		#search-all:focus, #search-all.active{
 			@media #{$small-only}{
 				height: 40px;
-				width: 290px;
+				width: 75%;
 			}
-			@media #{$medium-only}{
+			@media #{$medium-up}{
 				height: 40px;
 				width: 335px;
 			}
@@ -554,36 +547,28 @@ header#minimum-bar{
 		#search-submit{
 			@include button;
 
+			margin: 0 0 rem-calc(9) 0;
+			background: #900;
+			font-size: rem-calc(11);
+			height: 25px;
+			margin-bottom: 0px;
+			padding: 0px 10px;
+			@include single-transition(height, .5s);
 			@media #{$small-only}{
-				float: right;
-				margin: 0px 0px rem-calc(9) 0px;
 			}
 
-			@media #{$small-only}{
-				background: #990000;
-				border: 0px;
-				color: #FFF;
-				float: left;
-				font-size: 0.7em;
-				font-weight: normal;
-				height: 25px;
-				margin-bottom: 0px;
-				padding: 0px 10px;
-				transition: height 0.5s;
-				-moz-transition: height 0.5s;
-				-webkit-transition: height 0.5s;
-				transition-delay: 0.25s;
-				-moz-transition-delay: 0.25s; /* Safari */
-				-webkit-transition-delay: 0.25s; /* Safari */
+			&:hover {
+				background: darken(#990000, 10%);
+				@include single-transition(background, .5s);
 			}
 		}
 		#search-all:focus + #search-submit, #search-submit.active{
+			height: 40px;
+			width: 18%;
+
 			@media #{$small-only}{
-				height: 40px;
+				width: 25%%;
 			}
-		}
-		#search-submit:hover{
-			background: darken(#990000, 10%);
 		}
 	}
 
