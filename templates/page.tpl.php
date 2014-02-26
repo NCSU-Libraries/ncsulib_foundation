@@ -47,13 +47,13 @@
 
 
         <?php if (!empty($page['sidebar_first'])): ?>
-            <aside id="subnav" role="complementary" class="large-3 sidebar-first columns sidebar">
+            <aside id="subnav" role="complementary" class="medium-3 sidebar-first columns sidebar">
                 <?php print render($page['sidebar_first']); ?>
             </aside>
         <?php endif; ?>
 
         <?php if (!empty($page['sidebar_second'])): ?>
-            <aside role="complementary" class="large-3 sidebar-second columns sidebar">
+            <aside role="complementary" class="medium-3 sidebar-second columns sidebar">
                 <?php print render($page['sidebar_second']); ?>
             </aside>
         <?php endif; ?>
