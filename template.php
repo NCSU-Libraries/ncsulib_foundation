@@ -22,37 +22,72 @@ variable_set('htdocs_root', str_replace(strrchr(DRUPAL_ROOT, "/"), "/htdocs", DR
  *  and other various and sundry activities
  */
 function ncsulib_foundation_preprocess_page(&$variables) {
-    // Begin CSS suggestions
-    if (module_exists('path')) {
-        $alias = drupal_get_path_alias(str_replace('/edit','',$_GET['q']));
+  /**
+   * The code below is take directly from https://drupal.org/project/zurb-foundation
+   * We forked away from this project in order to be more agile, with the limitation
+   * that we have to keep this code up-to-date
+   */
+
+  // Add page--node_type.tpl.php suggestions
+  if (!empty($variables['node'])) {
+    $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
+  }
+
+  // Convenience variables
+  if (!empty($variables['page']['sidebar_first'])){
+    $left = $variables['page']['sidebar_first'];
+  }
+
+  if (!empty($variables['page']['sidebar_second'])) {
+    $right = $variables['page']['sidebar_second'];
+  }
+
+  // Dynamic sidebars (this is critical)
+  if (!empty($left) && !empty($right)) {
+    $variables['main_grid'] = 'medium-6 push-3';
+  } elseif (empty($left) && !empty($right)) {
+    $variables['main_grid'] = 'medium-9';
+  } elseif (!empty($left) && empty($right)) {
+    $variables['main_grid'] = 'medium-9 push-3';
+  } else {
+    $variables['main_grid'] = 'medium-12';
+  }
+
+  /**
+   * End d.o Foundation code
+   */
+
+  // Begin CSS suggestions
+  if (module_exists('path')) {
+    $alias = drupal_get_path_alias(str_replace('/edit','',$_GET['q']));
         // If the alias is a clean URL
-        if ($alias != $_GET['q'] || empty($variables['node'])) {
+    if ($alias != $_GET['q'] || empty($variables['node'])) {
             // Break the alias into its parts and iterate through the alias part by part
-            $i=0;
-            foreach (explode('/', $alias) as $path_part) {
-                if ($i==0) {
+      $i=0;
+      foreach (explode('/', $alias) as $path_part) {
+        if ($i==0) {
                     // If this is the first time through the loop, create the template suggestion
-                    $template_suggestion = $path_part;
-                    $css_suggestion = $path_part;
-                } elseif ($i>=1) {
-                    if ($i==1) {
+          $template_suggestion = $path_part;
+          $css_suggestion = $path_part;
+        } elseif ($i>=1) {
+          if ($i==1) {
                         // If this is the second time through the loop, create a variable to append each $path_part to
-                        $path_part_holder = $css_suggestion . '--' . $path_part;
-                    } elseif ($i>=2) {
-                        $path_part_holder .= '--' . $path_part;
-                    }
+            $path_part_holder = $css_suggestion . '--' . $path_part;
+          } elseif ($i>=2) {
+            $path_part_holder .= '--' . $path_part;
+          }
 
                     // If this is the second time or more through the loop, continue to append the alias path to the template suggestion
-                    $template_suggestion = $template_suggestion . '__' . $path_part;
-                    $css_suggestions[] = $path_part_holder;
-                }
-                $i++;
-            }
-
-            $template_suggestion = 'page__' . $template_suggestion;
-            // Add the template suggestion to the template suggestions hook
-            $variables['theme_hook_suggestions'][] = $template_suggestion;
+          $template_suggestion = $template_suggestion . '__' . $path_part;
+          $css_suggestions[] = $path_part_holder;
         }
+        $i++;
+      }
+
+      $template_suggestion = 'page__' . $template_suggestion;
+            // Add the template suggestion to the template suggestions hook
+      $variables['theme_hook_suggestions'][] = $template_suggestion;
+    }
 
     // Create the CSS suggestion(s)
     if (isset($css_suggestion)) {
@@ -86,8 +121,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
     //  $css['sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css']['weight'] = -1;
     // }
     // If this is the front/home page of the site
-
-
 
   }
 
@@ -178,7 +211,7 @@ function ncsulib_foundation_breadcrumb($variables) {
   }
 }
 
-function ncsulibraries_form_user_login_alter(&$form, &$form_state, $form_id) {
+function ncsulib_foundation_form_user_login_alter(&$form, &$form_state, $form_id) {
   //Alters the text on the user login form
   drupal_set_title(t('Website editing login'));
   $form['name']['#title'] = t('Unity ID');
@@ -187,7 +220,7 @@ function ncsulibraries_form_user_login_alter(&$form, &$form_state, $form_id) {
   $form['pass']['#description'] = t('Enter your NCSU Libraries Active Directory password');
 }
 
-function ncsulibraries_more_link ($array) {
+function ncsulib_foundation_more_link ($array) {
   if (stristr($array['url'], 'aggregator')) {
     return "";
   }
@@ -202,7 +235,7 @@ function ncsulibraries_more_link ($array) {
  *
  *  -Charlie Morris 11/20/2012
  */
-function ncsulibraries_preprocess_block(&$variables) {
+function ncsulib_foundation_preprocess_block(&$variables) {
   if ($variables['block_html_id'] == 'block-views-upcoming-events-block-3') {
     $variables['classes_array'][] = 'grid-12';
     $variables['classes_array'][] = 'alpha';
@@ -225,7 +258,7 @@ function ncsulibraries_preprocess_block(&$variables) {
  *
  * -Charlie Morris, 1/2/13
  */
-function ncsulibraries_views_pre_render(&$view) {
+function ncsulib_foundation_views_pre_render(&$view) {
   // The following two loops add month and day formatted dates to events
   if ($view->name == 'upcoming_events' && $view->current_display == 'block_3') {
     if (!empty($view->result)) {
@@ -271,7 +304,7 @@ function ncsulibraries_views_pre_render(&$view) {
  * Author: Charlie Morris
  * For SCRC
  */
-function ncsulibraries_aggregator_block_item($variables) {
+function ncsulib_foundation_aggregator_block_item($variables) {
   if ($variables['item']->fid == '8') {
     // Display the external link to the item.
     return '<a href="' . check_url($variables['item']->link) . '">' . check_plain($variables['item']->title) . "</a>\n<br />" . filter_xss($variables['item']->description);
@@ -288,7 +321,7 @@ function ncsulibraries_aggregator_block_item($variables) {
  * Author: Charlie Morris
  *
  */
-function ncsulibraries_preprocess_image(&$variables) {
+function ncsulib_foundation_preprocess_image(&$variables) {
   // Only perform preprocessing on images with defined style
   if (isset($variables['style_name'])) {
     // Add the image-outline style for images with half-page-width style
@@ -305,7 +338,7 @@ function ncsulibraries_preprocess_image(&$variables) {
  * Using this to change the markup delivered to the Field Request Form URL
  * field.  Turning it into a button.
  */
-function ncsulibraries_field__field_request_form_url__device($variables) {
+function ncsulib_foundation_field__field_request_form_url__device($variables) {
   $output ='';
   $device_nid = $variables['element']['#object']->nid;
   $building = " (Hill only)";
@@ -329,7 +362,7 @@ function ncsulibraries_field__field_request_form_url__device($variables) {
  * Using this to change the markup delivered to the Building field on Space
  * nodes
  */
-function ncsulibraries_field__field_building_name__space($variables) {
+function ncsulib_foundation_field__field_building_name__space($variables) {
   $output ='';
   foreach ($variables['items'] as $delta => $item) {
     $output = drupal_render($item);
@@ -342,7 +375,7 @@ function ncsulibraries_field__field_building_name__space($variables) {
  *
  * Adding heading 2 for label
  */
-function ncsulibraries_field__space($variables) {
+function ncsulib_foundation_field__space($variables) {
   $output = '';
 
   // Render the label, if it's not hidden and display it as a heading 2
@@ -368,9 +401,8 @@ function ncsulibraries_field__space($variables) {
  * Helper function that adjusts date to current timezone. Especially for
  * daylight savings
  */
-function ncsulibraries_adjust_for_timezone($time){
+function ncsulib_foundation_adjust_for_timezone($time){
     $origin_dtz = new DateTimeZone(date_default_timezone_get());
     $origin_dt = new DateTime($time, $origin_dtz);
     return $origin_dtz->getOffset($origin_dt);
 }
-

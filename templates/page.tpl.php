@@ -22,38 +22,40 @@
     <?php endif; ?>
 
     <main role="main" class="row l-main">
+        <div class="<?php print $main_grid; ?> main columns">
 
-        <a id="main-content"></a>
+            <a id="main-content"></a>
 
-
-        <?php if ($title && !$is_front): ?>
-            <?php print render($title_prefix); ?>
-                <h1 id="page-title" class="title"><?php print $title; ?></h1>
-            <?php print render($title_suffix); ?>
-        <?php endif; ?>
-
-        <?php if (!empty($tabs)): ?>
-            <?php print render($tabs); ?>
-            <?php if (!empty($tabs2)): print render($tabs2); endif; ?>
+            <?php if ($title && !$is_front): ?>
+                <?php print render($title_prefix); ?>
+                    <h1 id="page-title" class="title"><?php print $title; ?></h1>
+                <?php print render($title_suffix); ?>
             <?php endif; ?>
 
-            <?php if ($action_links): ?>
-            <ul class="action-links">
-                <?php print render($action_links); ?>
-            </ul>
-        <?php endif; ?>
+            <?php if (!empty($tabs)): ?>
+                <?php print render($tabs); ?>
+                <?php if (!empty($tabs2)): print render($tabs2); endif; ?>
+                <?php endif; ?>
 
-        <?php print render($page['content']); ?>
+                <?php if ($action_links): ?>
+                <ul class="action-links">
+                    <?php print render($action_links); ?>
+                </ul>
+            <?php endif; ?>
+
+            <?php print render($page['content']); ?>
+        </div>
+        <!--/.l-main region -->
 
 
         <?php if (!empty($page['sidebar_first'])): ?>
-            <aside id="subnav" role="complementary" class="medium-3 sidebar-first columns sidebar">
+            <aside id="subnav" role="complementary" class="medium-3 pull-9 l-sidebar-first columns sidebar">
                 <?php print render($page['sidebar_first']); ?>
             </aside>
         <?php endif; ?>
 
         <?php if (!empty($page['sidebar_second'])): ?>
-            <aside role="complementary" class="medium-3 sidebar-second columns sidebar">
+            <aside role="complementary" class="medium-3 l-sidebar-second columns sidebar">
                 <?php print render($page['sidebar_second']); ?>
             </aside>
         <?php endif; ?>
