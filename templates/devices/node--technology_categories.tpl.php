@@ -12,12 +12,13 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-    <ul class="crumbs">
+    <ul class="breadcrumbs">
+      <li><a href="/">Home</a></li>
       <li><a href="/techlending">Technology Lending</a></li>
-      <li><?php print $title; ?></li>
+      <li class="current"><?php print $title; ?></li>
     </ul>
 
-  <div class="content"<?php print $content_attributes; ?>>
+
     <?php print render($content);
 
     // 22469 is the nid for DSLRs
@@ -25,5 +26,5 @@
       print render($content['body']);
     }
     ?>
-  </div>
+
 </div>

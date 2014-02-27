@@ -25,10 +25,12 @@
     $manufacturer = field_get_items('node', $node, 'field_device_manufacturer');
     $manufacturer_name = field_view_value('node', $node, 'field_device_manufacturer', $manufacturer[0]);
     ?>
-      <ul class="crumbs">
+
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
         <li><a href="/techlending">Technology Lending</a></li>
         <li><a href="/<?php print $category_alias; ?>"><?php print render($category_name); ?></a></li>
-        <li><?php print render($manufacturer_name) . " " . $title ?></li>
+        <li class="current"><?php print render($manufacturer_name) . " " . $title ?></li>
       </ul>
   <?php endif; ?>
 
