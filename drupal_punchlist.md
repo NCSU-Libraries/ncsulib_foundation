@@ -1,9 +1,9 @@
 drupal layouts to take care of:
 
 * Homepage
-* pages with left-sidebar
-* pages with a right-sidebar
-* pages with a left-sidebar and a right-sidebar
+* ~~pages with left-sidebar~~
+* ~~pages with a right-sidebar~~
+* ~~pages with a left-sidebar and a right-sidebar~~
 * /askus
 * /biology
 * /bookmove (keep?)
@@ -12,14 +12,14 @@ drupal layouts to take care of:
 * /cdsc
 * /celebratingfaculty
 * /departments
-* /giving 
+* /giving
 	* Giving thank you
 * ~~/hours~~
 * Techlending home
   	* Device node
   	* Tech category
 * Events home
-  	* Event node 
+  	* Event node
 * Naming Opportunities
 * Hunt Library home
   	* /huntlibrary/sustainability
@@ -38,3 +38,4 @@ drupal layouts to take care of:
 * /nrl
 * /borrow/privileges
 * /reservearoom
+* Designing Libraries II
