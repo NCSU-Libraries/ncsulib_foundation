@@ -91,14 +91,14 @@ function ncsulib_foundation_preprocess_page(&$variables) {
 
     // Create the CSS suggestion(s)
     if (isset($css_suggestion)) {
-      $css_suggestion = path_to_theme() .'/styles/'. $css_suggestion .'.css';
+      $css_suggestion = path_to_theme() .'/styles/core/custom/'. $css_suggestion .'.css';
       // CSS suggestion for the top level alias path
       $include_style[] = $css_suggestion;
       // If the page resides at a deep level and more specific CSS is desired,
       // add more specific page CSS suggestions
       if (isset($css_suggestions)) {
         foreach ($css_suggestions as $suggestion) {
-          $include_style[] = path_to_theme() .'/styles/'. $suggestion .'.css';
+          $include_style[] = path_to_theme() .'/styles/core/custom/'. $suggestion .'.css';
         }
       }
     }
