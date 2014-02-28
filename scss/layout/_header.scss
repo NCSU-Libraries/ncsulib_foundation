@@ -399,10 +399,11 @@ header#minimum-bar{
 /*begin utility*/
 #utility{
 	background: $topbar-dropdown-bg;
-	margin-bottom: rem-calc(15);
+	padding-bottom: rem-calc(0);
 
 	@media #{$small-only}{
-		margin-bottom: rem-calc(20);
+		margin: 0px;
+		padding-bottom: rem-calc(0);
 	}
 
 
