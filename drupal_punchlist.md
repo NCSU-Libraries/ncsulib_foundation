@@ -39,3 +39,5 @@ drupal layouts to take care of:
 * /borrow/privileges
 * /reservearoom
 * Designing Libraries II
+* Dataviews blocks
+* Primary nav landing pages
