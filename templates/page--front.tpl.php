@@ -22,30 +22,31 @@
                         </ul>
                     </div>
 
-                    <ul id="home-quicklinks">
-                        <li>
-                            <ul>
-                                <li><h2>Technology</h2></li>
-                                <li><a href="/cdm/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Technology', 'Create Digital Media']);">Create Digital Media</a></li>
-                                <li><a href="/spaces/makerspace/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Technology', 'Makerspace']);">Makerspace</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <ul>
-                                <li><h2>Studying</h2></li>
-                                <li><a href="/reservearoom/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Studying', 'Reserve a Room']);">Reserve a Room</a></li>
-                                <li><a href="/groupfinder/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Studying', 'GroupFinder']);">GroupFinder</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <ul>
-                                <li><h2>Courses</h2></li>
-                                <li><a href="/course" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Courses', 'Course Tools']);">Course Tools</a></li>
-                                <li><a href="http://reserves.lib.ncsu.edu/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Courses', 'Course Reserves']);">Course Reserves</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
+                    <div id="home-quicklinks">
+                        <ul id="quicklinks">
+                            <li>
+                                <ul>
+                                    <li><h2>Technology</h2></li>
+                                    <li><a href="/cdm/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Technology', 'Create Digital Media']);">Create Digital Media</a></li>
+                                    <li><a href="/spaces/makerspace/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Technology', 'Makerspace']);">Makerspace</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><h2>Studying</h2></li>
+                                    <li><a href="/reservearoom/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Studying', 'Reserve a Room']);">Reserve a Room</a></li>
+                                    <li><a href="/groupfinder/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Studying', 'GroupFinder']);">GroupFinder</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><h2>Courses</h2></li>
+                                    <li><a href="/course" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Courses', 'Course Tools']);">Course Tools</a></li>
+                                    <li><a href="http://reserves.lib.ncsu.edu/" onClick="_gaq.push(['_trackEvent', 'Quicklinks', 'Courses', 'Course Reserves']);">Course Reserves</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- artbox stub -->
