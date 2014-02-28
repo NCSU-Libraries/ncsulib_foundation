@@ -94,7 +94,6 @@ dl.tabs{
 
         @media #{$small-only}{
             border-left: 1px solid $border-color;
-            // width: 100%;
         }
 
         a{
@@ -113,8 +112,9 @@ div.tabs-content{
 
 dl.tabs.vertical{
     dd.active{
-        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
         border-right: 1px solid #FFF;
+        border-top: 1px solid $border-color;
         position: relative;
 
         @media #{$small-only}{
@@ -161,7 +161,16 @@ dl.tabs.vertical{
   input[type="url"],
   input[type="search"],
   input[type="tel"],
-  input[type="color"] { font-size: 1em !important; }
+  input[type="color"] { font-size: 1em !important; border-radius: 0px;}
+}
+// ensure there is no border radius on iOS devices
+input[type="submit"]{
+    border-radius: 0px;
+}
+
+body .panel.callout{
+    border: 0px solid #CCC;
+    background: #f5f5f5;
 }
 
 

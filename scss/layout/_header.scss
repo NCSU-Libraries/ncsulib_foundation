@@ -424,16 +424,14 @@ header#minimum-bar{
 				font-size: rem-calc(12);
 				font-weight: 700;
 				margin: 0;
-				line-height: 1.16;
 
 				@media #{$small-only}{
 					float: left;
+					line-height: 1.16;
 					margin:0 10px 0 14px;
 					width: 53px;
 				}
 				@media #{$medium-up}{
-					// @include grid-column(4);
-					width: 101px;
 					float: left;
 				}
 

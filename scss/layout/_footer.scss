@@ -3,8 +3,11 @@ footer {
 	background: $footer-bg-color;
 	padding-top: $footer-padding-top;
 
-	p,h2,h3,h4,h5, i{
+	p,h2,h3,h4,h5,i{
 		color: $footer-font-color;
+	}
+	h2{
+		font-size: (($h2-font-size)*.75);
 	}
 	h3 {
 		font-size: (($h3-font-size)*.75);
@@ -23,9 +26,14 @@ footer {
 		color: $footer-font-color;
 	}
 	ul {
-				list-style-type: none;
-				margin: 0 0 rem-calc(10) 0;
-				padding: 0px;
+		list-style-type: none;
+		margin: 0 0 rem-calc(10) 0;
+		padding: 0px;
+	}
+	hr{
+		background: darken($footer-font-color, 50%);
+		border: 0px;
+		height: 1px;
 	}
 	a:hover{
 		color: #FFF;
@@ -40,13 +48,13 @@ footer {
 
 		#f-address{
 			@media #{$small-only} {
-				border-bottom: 1px solid darken($footer-font-color, 30%);
+				border-bottom: 1px solid darken($footer-font-color, 50%);
 				margin-bottom: rem-calc(20);
 			}
 
 			@media #{$medium-up} {
 				@include grid-column(4);
-				border-right: 1px solid darken($footer-font-color, 30%);
+				border-right: 1px solid darken($footer-font-color, 50%);
 				padding-left: 0px;
 				padding-bottom: rem-calc(30);
 			}
@@ -57,13 +65,13 @@ footer {
 
 		#f-libraries{
 			@media #{$small-only} {
-				border-bottom: 1px solid darken($footer-font-color, 30%);
+				border-bottom: 1px solid darken($footer-font-color, 50%);
 				margin-bottom: rem-calc(20);
 			}
 
 			@media #{$medium-up} {
 				@include grid-column(4);
-				border-right: 1px solid darken($footer-font-color, 30%);
+				border-right: 1px solid darken($footer-font-color, 50%);
 				height: 300px;
 			}
 
@@ -87,7 +95,6 @@ footer {
 				width: rem-calc(25);
 				text-align: center;
 				padding-right: rem-calc(8);
-
 			}
 
 			a:hover i {
