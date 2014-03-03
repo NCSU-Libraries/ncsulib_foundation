@@ -263,9 +263,7 @@ header{
 					padding: 0px;
 				}
 				li a.open{
-					@media #{$small-only} {
-						background: $topbar-dropdown-bg;
-					}
+					background: $topbar-dropdown-bg;
 				}
 
 				li.has-dropdown{

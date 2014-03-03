@@ -176,4 +176,11 @@ body .panel.callout{
     background: #f5f5f5;
 }
 
+// begin subnav
+.sub-nav{
+    border-bottom: 1px solid $border-color;
+    margin-bottom: rem-calc(30);
+}
+// end subnav
+
 
