@@ -5,7 +5,6 @@ $include-html-classes: false;
 
 .content {
   @include grid-row($behavior: nest);
-  background: papayawhip;
 }
 .field-type-image {
   @include grid-column($columns: 5, $push: 7, $position: true);
@@ -13,26 +12,38 @@ $include-html-classes: false;
 .left-part {
   @include grid-column($columns: 7, $pull: 5, $position: true);
   .hb {
-    @include grid-row();
+    @include grid-row($behavior: nest);
     .top-row {
-      @include grid-row($behavior: nest);
+      @include grid-row();
       .one, .two, .three {
+        font-size: 1.1em;
+        font-weight: 700;
         @include grid-column(4);
       }
     }
     .row {
-      @include grid-row($behavior: nest);
-      .lending-info {
-        @include grid-column(8);
-      }
+      @include grid-row;
+      margin: rem-calc(40) 0;
       .library {
         @include grid-column(4);
       }
-      .lending-period, .number-available{
-        @include grid-column(4);
-        // @include grid-row($behavior: nest);
+      .lending-info {
+        // @include grid-column($columns: 8);
 
+        .lending-period, .number-available{
+          @include grid-column(4);
+        }
       }
+
+      .lending-info + .lending-info {
+        clear: left;
+        margin-left: 33.3333333%;
+
+          .lending-period, .number-available{
+          @include grid-column(6);
+        }
+      }
+
     }
   }
 }

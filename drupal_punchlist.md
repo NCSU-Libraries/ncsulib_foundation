@@ -15,9 +15,9 @@ drupal layouts to take care of:
 * /giving
 	* Giving thank you
 * ~~/hours~~
-* Techlending home
-  	* Device node
-  	* Tech category
+* ~~Techlending home~~
+  	* ~~Device node~~
+  	* ~~Tech category~~
 * Events home
   	* Event node
 * Naming Opportunities
