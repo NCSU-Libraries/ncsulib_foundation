@@ -42,9 +42,11 @@
 <?php print $scripts; ?>
 <script>
   // instantiate foundation
-(function ($, Drupal, window, document, undefined) {
-  $(document).foundation();
-})(jQuery, Drupal, this, this.document);
+  (function ($, Drupal, window, document, undefined) {
+    $(window).load( function (){
+      $(document).foundation()
+    });
+  })(jQuery, Drupal, this, this.document);
 </script>
 <?php endif; ?>
 <!--[if lt IE 9]>
