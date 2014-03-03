@@ -139,6 +139,14 @@ function ncsulib_foundation_preprocess_page(&$variables) {
     $variables['page']['content']['system_main']['nodes'][$node_id]['#node']->sidebar_first = TRUE;
   }
 
+  // Add custom JS
+  $current_path = current_path();
+  switch ($current_path) {
+    case 'techlending':
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+      break;
+  }
+
 } // End tremendous template_preprocess_page function
 
 /**
