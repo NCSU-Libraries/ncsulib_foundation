@@ -128,7 +128,7 @@ $header-font-weight: normal;
 // $header-font-style: normal;
 $header-font-color: #555;
 // $header-line-height: 1.4;
-// $header-top-margin: .2rem;
+$header-top-margin: 2rem;
 // $header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
 
@@ -144,7 +144,7 @@ $header-font-color: #555;
 // $subheader-line-height: 1.4;
 // $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 // $subheader-font-weight: 300;
-// $subheader-top-margin: .2rem;
+// $subheader-top-margin: .4rem;
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
@@ -853,13 +853,13 @@ $panel-font-color: $body-font-color;
 
 // We use these to control the border styles
 // $progress-bar-border-color: scale-color(#fff, $lightness: -20%);
-// $progress-bar-border-size: 1px;
+$progress-bar-border-size: 0px;
 // $progress-bar-border-style: solid;
 // $progress-bar-border-radius: $global-radius;
 
 // We use these to control the margin & padding
-// $progress-bar-pad: rem-calc(2);
-// $progress-bar-margin-bottom: rem-calc(10);
+$progress-bar-pad: rem-calc(0);
+$progress-bar-margin-bottom: rem-calc(20);
 
 // We use these to set the meter colors
 // $progress-meter-color: $primary-color;
@@ -968,13 +968,13 @@ $side-nav-link-color: $anchor-font-color;//$primary-color;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use these to control margin and padding
-// $sub-nav-list-margin: rem-calc(-4 0 18);
-// $sub-nav-list-padding-top: rem-calc(4);
+$sub-nav-list-margin: rem-calc(0);
+$sub-nav-list-padding-top: rem-calc(10);
 
 // We use this to control the definition
 // $sub-nav-font-family: $body-font-family;
 // $sub-nav-font-size: rem-calc(14);
-// $sub-nav-font-color: #999;
+$sub-nav-font-color: $primary-color;
 // $sub-nav-font-weight: normal;
 // $sub-nav-text-decoration: none;
 // $sub-nav-border-radius: 3px;
