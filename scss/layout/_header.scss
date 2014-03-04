@@ -602,7 +602,19 @@ header#minimum-bar{
 				border-left: 0;
 			}
 		}
+		@media #{$large-up} {
+			width: rem-calc(399);
+			li a {
+					font-size: rem-calc(12);
+				}
+		}
 	}
+}
+// chat now icon
+.globalchat::after {
+	content: "\f086";
+	font-family: "FontAwesome";
+	padding-left: rem-calc(5);
 }
 
 /*end utility*/
