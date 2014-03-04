@@ -608,7 +608,6 @@ td {
   margin-bottom: 0;
   max-width: none;
   *zoom: 1;
-  background: papayawhip;
 }
 /* line 130, ../../../scss/foundation/components/_global.scss */
 .content:before, .content:after {
@@ -620,7 +619,7 @@ td {
   clear: both;
 }
 
-/* line 10, ../../../scss/custom/devices.scss */
+/* line 9, ../../../scss/custom/devices.scss */
 .field-type-image {
   position: relative;
   padding-left: 0.9375rem;
@@ -631,7 +630,7 @@ td {
   float: left;
 }
 
-/* line 13, ../../../scss/custom/devices.scss */
+/* line 12, ../../../scss/custom/devices.scss */
 .left-part {
   position: relative;
   padding-left: 0.9375rem;
@@ -641,14 +640,14 @@ td {
   left: auto;
   float: left;
 }
-/* line 15, ../../../scss/custom/devices.scss */
+/* line 14, ../../../scss/custom/devices.scss */
 .left-part .hb {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  width: auto;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem;
+  max-width: none;
   *zoom: 1;
 }
 /* line 130, ../../../scss/foundation/components/_global.scss */
@@ -660,14 +659,14 @@ td {
 .left-part .hb:after {
   clear: both;
 }
-/* line 17, ../../../scss/custom/devices.scss */
+/* line 16, ../../../scss/custom/devices.scss */
 .left-part .hb .top-row {
-  width: auto;
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: none;
+  max-width: 62.5rem;
   *zoom: 1;
 }
 /* line 130, ../../../scss/foundation/components/_global.scss */
@@ -679,22 +678,25 @@ td {
 .left-part .hb .top-row:after {
   clear: both;
 }
-/* line 19, ../../../scss/custom/devices.scss */
+/* line 18, ../../../scss/custom/devices.scss */
 .left-part .hb .top-row .one, .left-part .hb .top-row .two, .left-part .hb .top-row .three {
+  font-size: 1.1em;
+  font-weight: 700;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 33.33333%;
   float: left;
 }
-/* line 23, ../../../scss/custom/devices.scss */
+/* line 24, ../../../scss/custom/devices.scss */
 .left-part .hb .row {
-  width: auto;
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: none;
+  max-width: 62.5rem;
   *zoom: 1;
+  margin: 2.5rem 0;
 }
 /* line 130, ../../../scss/foundation/components/_global.scss */
 .left-part .hb .row:before, .left-part .hb .row:after {
@@ -705,24 +707,29 @@ td {
 .left-part .hb .row:after {
   clear: both;
 }
-/* line 25, ../../../scss/custom/devices.scss */
-.left-part .hb .row .lending-info {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 66.66667%;
-  float: left;
-}
-/* line 28, ../../../scss/custom/devices.scss */
+/* line 27, ../../../scss/custom/devices.scss */
 .left-part .hb .row .library {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 33.33333%;
   float: left;
 }
-/* line 31, ../../../scss/custom/devices.scss */
-.left-part .hb .row .lending-period, .left-part .hb .row .number-available {
+/* line 33, ../../../scss/custom/devices.scss */
+.left-part .hb .row .lending-info .lending-period, .left-part .hb .row .lending-info .number-available {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 33.33333%;
+  float: left;
+}
+/* line 38, ../../../scss/custom/devices.scss */
+.left-part .hb .row .lending-info + .lending-info {
+  clear: left;
+  margin-left: 33.3333333%;
+}
+/* line 42, ../../../scss/custom/devices.scss */
+.left-part .hb .row .lending-info + .lending-info .lending-period, .left-part .hb .row .lending-info + .lending-info .number-available {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 50%;
   float: left;
 }

@@ -298,7 +298,11 @@ header{
 			}
 		}
 	}
+
 }
+
+
+
 body.front header nav.top-bar #search-toggle{
 	display: none;
 }
@@ -310,27 +314,31 @@ header.sticky{
 }
 
 header#minimum-bar{
-	height: 60px;
+	height: auto;
+	margin-bottom: rem-calc(20);
 	width: 100%;
 
 	.top-bar{
-		height: 60px;
+		height: auto;
 
 		.name{
-			height: 60px;
-			padding: 5px 0px 0px rem-calc(15);
-			width: 248px;
+			height: auto;
+			padding: 5px 0px rem-calc(10) rem-calc(15);
+			width: auto;
 
 			a{
 				color: #FFF;
+				font-size: 0.85em;
 			}
 
 			a:hover{
 				text-decoration: underline;
 			}
 
-			h2{
+			h2#app-title{
 				color: #FFF;
+				font-size: 1.2em;
+				line-height: 1;
 				margin: 0px;
 			}
 		}

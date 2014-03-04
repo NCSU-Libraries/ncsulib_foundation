@@ -280,6 +280,7 @@ $include-html-classes: false;
 				@media #{$small-only}{
 					font-size: 2em;
 					font-weight: normal;
+					margin-top: 10px;
 				}
 			}
 
@@ -359,6 +360,10 @@ $include-html-classes: false;
 
 			@media #{$small-only}{
 				padding-top: 0px;
+			}
+
+			h2{
+				margin-top: rem-calc(5);
 			}
 
 			a{

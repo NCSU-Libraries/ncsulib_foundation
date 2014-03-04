@@ -21,10 +21,11 @@ html #content{
     background: #FFF;
     margin: 0px;
     padding-bottom: 30px;
-	padding-top: 30px;
+	padding-top: 50px;
 
 	@media #{$small-only}{
-		margin-top: 0px;
+        padding-top: 0px;
+        margin-top: 0px;
 	}
 }
 .content .featured-image{
@@ -145,6 +146,30 @@ dl.tabs.vertical{
     }
 }
 
+// accordions
+.accordion{
+    margin-bottom: rem-calc(30);
+
+    dd{
+        border-bottom: 1px solid $border-color;
+
+        a{
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+        }
+
+        .content{
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+            border-top: 1px solid $border-color;
+        }
+    }
+
+    dd:first-child{
+        border-top: 1px solid $border-color;
+    }
+}
+
 // end global UI style overwrite
 
 // hacky way to prevent mobile devices from zooming in on input elements
@@ -184,6 +209,10 @@ dl.sub-nav{
     margin: 0px 0px rem-calc(20) 0px;
     padding-bottom: rem-calc(10);
     text-align: center;
+
+    @media #{$small-only}{
+        margin-left: -1rem;
+    }
 
     dd{
         display: inline-block;
