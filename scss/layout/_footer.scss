@@ -51,13 +51,11 @@ footer {
 
 		#f-address{
 			@media #{$small-only} {
-				border-bottom: 1px solid darken($footer-font-color, 50%);
 				margin-bottom: rem-calc(20);
 			}
 
 			@media #{$medium-up} {
 				@include grid-column(4);
-				border-right: 1px solid darken($footer-font-color, 50%);
 				padding-left: 0px;
 				padding-bottom: rem-calc(30);
 			}
@@ -67,17 +65,18 @@ footer {
 		}
 
 		#f-libraries{
+			margin-bottom: rem-calc(20);
 			@media #{$small-only} {
-				border-bottom: 1px solid darken($footer-font-color, 50%);
-				margin-bottom: rem-calc(20);
 			}
 
 			@media #{$medium-up} {
 				@include grid-column(4);
-				border-right: 1px solid darken($footer-font-color, 50%);
-				height: 300px;
+				// height: 300px;
 			}
+		}
 
+		#f-lib-links{
+			margin-bottom: rem-calc(20);
 		}
 
 		#f-social{
@@ -90,7 +89,7 @@ footer {
 				}
 			}
 			.giving {
-				margin-bottom: rem-calc(10);
+				margin-bottom: rem-calc(20);
 				display: block;
 			}
 			i {
