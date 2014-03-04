@@ -1,5 +1,4 @@
 <?php
-  drupal_add_css(drupal_get_path('theme', 'ncsulibraries').'/styles/node-technology_categories.css');
   hide($content['comments']);
   hide($content['links']);
   hide($content['body']);

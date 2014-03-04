@@ -1,24 +1,25 @@
 @import "../foundation/settings";
 $include-html-classes: false;
 @import "foundation";
-
-.view-content {
-  @include block-grid(1);
-  @media #{$medium-only} {
-    @include block-grid(3);
-  }
-  @media #{$large-up} {
-    @include block-grid(4);
-  }
-}
+@import "silent_type";
 
 .views-row {
-  // make each view row behave like a list-item inside a Foundation block grid
-  @extend li;
+  @media #{$small-only}{
+    @include grid-column($columns: 9, $center: true);
+    padding: rem-calc(20);
 
-  border-left: 1px solid #F0F0F0;
-  border-bottom: 1px solid #F0F0F0;
-  height: 344px !important;
+  }
+
+  @media #{$medium-up} {
+    @include grid-column(3);
+    // make each view row behave like a list-item inside a Foundation block grid
+    padding-bottom: 10px;
+
+  }
+
+  .views-field-title {
+    @extend %h4;
+  }
 
   .views-field-field-image,
   .views-field-field-device-image {
@@ -32,4 +33,28 @@ $include-html-classes: false;
       vertical-align: middle;
     }
   }
+
+  .views-field-body {
+    .field-content {
+      @extend %p;
+
+      @media #{$small-only}{
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .views-field-field-lending-method,
+  .views-field-field-device-lending-period {
+    padding-top: 10px;
+    color: gray;
+    font-style: italic;
+    font-size: .9em;
+  }
+}
+
+.view-footer {
+  margin-top:rem-calc(20);
 }

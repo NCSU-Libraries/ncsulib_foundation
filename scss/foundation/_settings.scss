@@ -298,7 +298,7 @@ $crumb-bg: scale-color($secondary-color, $lightness: 95%);
 
 // We use these to control border styles.
 // $crumb-function-factor: -10%;
-// $crumb-border-size: 0px;
+$crumb-border-size: 0px;
 // $crumb-border-style: solid;
 // $crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor);
 // $crumb-radius: $global-radius;
@@ -362,7 +362,7 @@ $crumb-bg: scale-color($secondary-color, $lightness: 95%);
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 // $button-bar-margin-opposite: rem-calc(10);
-// $button-group-border-width: 1px;
+// $button-group-border-width: 0;
 
 // Clearing
 
