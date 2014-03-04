@@ -7,4 +7,4 @@ robots.txt
 ._DS_Store
 ._.DS_Store
 vendor
-.bundle/config
+.bundle/
