@@ -2,7 +2,7 @@ body.is-sticky{
 	padding-top: $topbar-height + 30;
 }
 body.nav-open{
-	padding-top: 0px;
+	padding-top: 0;
 }
 body.nav-expanded{
 	left: -80%;
@@ -14,7 +14,7 @@ body.nav-expanded{
 		float: right;
 		left: 100%;
 		position: absolute;
-		top: 0px;
+		top: 0;
 		width: 80%;
 	}
 
@@ -24,7 +24,7 @@ body.nav-expanded{
 		.top-bar-section{
 
 			ul#primary-nav{
-				padding: 3% 0px;
+				padding: 3% 0;
 
 				li{
 					background: none;
@@ -47,7 +47,7 @@ body.nav-expanded{
 					.dropdown{
 						background: darken($topbar-dropdown-bg, 5%);
 						display: block;
-						padding: 0px 0px 5px 0px;
+						padding: 0 0 5px 0;
 						position: static;
 
 						li{
@@ -88,7 +88,7 @@ body.nav-expanded{
 					color: darken($topbar-link-color, 20%);
 					display: block;
 					font-size: 1.3em;
-					padding: 0px 0px rem-calc(20);
+					padding: 0 0 rem-calc(20);
 					text-transform: uppercase;
 				}
 
@@ -112,7 +112,7 @@ body.nav-expanded{
 					color: darken($topbar-link-color, 20%);
 					display: block;
 					font-size: 0.9em;
-					padding: 0px 0px rem-calc(15);
+					padding: 0 0 rem-calc(15);
 					text-transform: uppercase;
 				}
 			}
@@ -243,7 +243,7 @@ header{
 				}
 				li > a{
 					@media #{$small-only} {
-						padding: 0px rem-calc(20);
+						padding: 0 rem-calc(20);
 						line-height: $topbar-height - 13;
 					}
 					text-transform: uppercase;
@@ -259,8 +259,8 @@ header{
 				}
 
 				li > a:after{
-					border: 0px;
-					padding: 0px;
+					border: 0;
+					padding: 0;
 				}
 				li a.open{
 					background: $topbar-dropdown-bg;
@@ -269,7 +269,7 @@ header{
 				li.has-dropdown{
 					.dropdown{
 						background: $topbar-dropdown-bg;
-						padding: rem-calc(10) 0px;
+						padding: rem-calc(10) 0;
 						li{
 							a{
 								background: $topbar-dropdown-bg;
@@ -299,7 +299,7 @@ body.front header nav.top-bar #search-toggle{
 
 header.sticky{
 	position: fixed;
-	top: 0px;
+	top: 0;
 	z-index: 99;
 }
 
@@ -312,7 +312,7 @@ header#minimum-bar{
 
 		.name{
 			height: 60px;
-			padding: 5px 0px 0px rem-calc(15);
+			padding: 5px 0 0 rem-calc(15);
 			width: 248px;
 
 			a{
@@ -325,7 +325,7 @@ header#minimum-bar{
 
 			h2{
 				color: #FFF;
-				margin: 0px;
+				margin: 0;
 			}
 		}
 
@@ -347,17 +347,17 @@ header#minimum-bar{
 	.primary-menu-list{
 		@include grid-row;
 		display: none;
-		padding: 25px 0px;
+		padding: 25px 0;
 
 		ul{
 			@include grid-column(3, $float: right);
-			margin: 0px;
-			padding: 0px;
+			margin: 0;
+			padding: 0;
 
 			li{
 				display: block;
-				margin-top: 0px;
-				padding: 0px 0px;
+				margin-top: 0;
+				padding: 0 0;
 			}
 			li:last-child{
 				border-bottom: none;
@@ -374,7 +374,7 @@ header#minimum-bar{
 				font-size: 0.875em;
 				line-height: 1.6em;
 				margin-top: rem-calc(0);
-				padding: 0px;
+				padding: 0;
 				@media #{$small-only} {
 					padding: rem-calc(0) rem-calc(10);
 				}
@@ -400,7 +400,7 @@ header#minimum-bar{
 	padding-bottom: rem-calc(0);
 
 	@media #{$small-only}{
-		margin: 0px;
+		margin: 0;
 		padding-bottom: rem-calc(0);
 	}
 
@@ -413,10 +413,12 @@ header#minimum-bar{
 			background: $topbar-dropdown-bg;
 
 			@media #{$medium-only} {
-				@include grid-column(6, $pull:6);
+				@include grid-column(6);
+				width: 48%;
 			}
 			@media #{$large-up} {
-				@include grid-column(7, $pull:5);
+				@include grid-column(7);
+				width: 54.63333%;
 			}
 
 			p#hours-title{
@@ -505,30 +507,25 @@ header#minimum-bar{
 
 		@media #{$medium-up} {
 			display: block;
-			padding: 0px;
+			padding: 0;
 			width: 45%;
 		}
 
 		#search-form{
-			margin: 0px;
+			margin: 0;
 		}
 
 		#search-all{
-			border-radius: 0px;
+			border-radius: 0;
 			height: 50px;
 			margin-bottom: rem-calc(10);
 			width: 100%;
 			float: left;
 			height: 25px;
-			margin-bottom: 0px;
-			padding: 0px 10px;
+			margin-bottom: 0;
+			padding: 0 10px;
 			@include single-transition(all, .5s);
 			width: 235px;
-
-			@media #{$small-only}{
-			}
-			@media #{$medium-up} {
-			}
 		}
 		#search-all:focus, #search-all.active{
 			@media #{$small-only}{
@@ -548,8 +545,8 @@ header#minimum-bar{
 			background: #900;
 			font-size: rem-calc(11);
 			height: 25px;
-			margin-bottom: 0px;
-			padding: 0px 10px;
+			margin-bottom: 0;
+			padding: 0 10px;
 			@include single-transition(height, .5s);
 			@media #{$small-only}{
 			}
@@ -572,12 +569,13 @@ header#minimum-bar{
 	ul#utility-links {
 		display: none;
 
-
 		@media #{$medium-up}{
 			display: inline-block;
-			margin: 0 20px 0 0;
+			margin-left: 0;
 			list-style: none;
+			width: rem-calc(374);
 			float: right;
+			margin: 0 20px 0 0;
 
 			li {
 				float: left;
@@ -587,13 +585,12 @@ header#minimum-bar{
 					border-left: 1px solid #555555;
 					color: #CCC;
 					display: block;
-					font-size: rem-calc(12);
-					@media #{$medium-only}{font-size: rem-calc(11);}
+					font-size: rem-calc(11);
 					margin-left: rem-calc(5.5);
-					padding: 0px 0px 0px rem-calc(5.5);
+					padding: 0 0 0 rem-calc(5.5);
 				}
 
-				a:hover{
+				a:hover {
 					text-decoration: underline;
 				}
 			}
