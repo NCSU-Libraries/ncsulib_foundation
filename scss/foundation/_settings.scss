@@ -170,7 +170,8 @@ $code-font-weight: 300;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 $anchor-font-color: #4C83AF;  // Steel Blue
-$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+$anchor-font-color-hover: #4C83AF ;//scale-color($anchor-font-color, $lightness: -75%);
+$anchor-text-hover-decoration: underline;
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -290,10 +291,10 @@ $block-grid-default-spacing: rem-calc(30);
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-$crumb-bg: scale-color($secondary-color, $lightness: 95%);
+$crumb-bg: #fff;//scale-color($secondary-color, $lightness: 95%);
 
 // We use these to set the padding around the breadcrumbs.
-// $crumb-padding: rem-calc(9 14 0 0);
+$crumb-padding: rem-calc(9 0 9 0);
 // $crumb-side-padding: rem-calc(12);
 
 // We use these to control border styles.
@@ -911,12 +912,13 @@ $progress-bar-margin-bottom: rem-calc(20);
 
 // We use these to control link styles.
 $side-nav-link-color: $anchor-font-color;//$primary-color;
-// $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-link-color-active: $secondary-color;// scale-color($side-nav-link-color, $lightness: 30%);
 // $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
-// $side-nav-font-size: rem-calc(14);
+$side-nav-font-size: rem-calc(16);
 // $side-nav-font-weight: normal;
 // $side-nav-font-family: $body-font-family;
 // $side-nav-active-font-family: $side-nav-font-family;
+$side-nav-heading-size: rem-calc(20);
 
 
 
@@ -1168,11 +1170,11 @@ $topbar-link-hover-lightness: -30%; // Darken by 10%
 
 // $topbar-button-font-size: 0.75rem;
 
-// $topbar-dropdown-label-color: #777;
+$topbar-dropdown-label-color: #FFF;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: #333;
+$topbar-dropdown-label-bg: darken($primary-color, 10%);
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
