@@ -111,16 +111,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       }
     }
     // End CSS suggestions
-
-    // Stub for css removal and manipulation, if we are interested in removing
-    // drupal-provided css
-    function ncsulib_foundation_css_alter(&$css) {
-      if (isset($css['modules/system/system.menus.css'])) {
-        unset($css['modules/system/system.menus.css']);
-      }
-    //  // experimenting with css weighting, though it doesn't seem to do much
-    //  $css['sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css']['weight'] = -1;
-    }
   }
 
 
