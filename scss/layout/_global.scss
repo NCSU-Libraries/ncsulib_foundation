@@ -36,9 +36,7 @@ html #content{
 }
 
 // main
-.main {
-    padding-top: rem-calc(50);
-}
+.main {}
 
 .content .featured-image{
     @media #{$small}{
