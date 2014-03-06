@@ -290,7 +290,7 @@ $block-grid-default-spacing: rem-calc(30);
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-$crumb-bg: scale-color($secondary-color, $lightness: 95%);
+$crumb-bg: #fff;
 
 // We use these to set the padding around the breadcrumbs.
 // $crumb-padding: rem-calc(9 14 0 0);
