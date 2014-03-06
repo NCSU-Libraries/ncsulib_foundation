@@ -7,14 +7,7 @@
  *
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if ($content['field_technology_category']): ?>
     <?php
     $category = field_get_items('node', $node, 'field_technology_category');
@@ -33,6 +26,19 @@
       </ul>
   <?php endif; ?>
 
+  <?php if ($title && !$is_front): ?>
+      <?php print render($title_prefix); ?>
+          <h1 id="page-title" class="title"><?php print $title; ?></h1>
+      <?php print render($title_suffix); ?>
+  <?php endif; ?>
+
+  <?php print render($title_prefix); ?>
+  <?php if (!$page): ?>
+    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+  <?php endif; ?>
+  <?php print render($title_suffix); ?>
+
+
   <div class="content"<?php print $content_attributes; ?>>
     <?php print render($content['field_device_image']); ?>
     <div class="left-part">
@@ -41,4 +47,4 @@
       <div class="hb"></div>
     </div> <!-- /.left-part -->
   </div>
-</div>
+</article>
