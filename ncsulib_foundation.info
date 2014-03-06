@@ -4,67 +4,25 @@ screenshot = images/foundation4_yeti_ncsulib.png
 
 core = 7.x
 engine = phptemplate
-;base theme = zurb_foundation
 
-; This section controls the CSS files for your theme. There are 3 different
-; things you can do with a "stylesheets" line:
-; - Add a new stylesheet for your theme.
-; - Override a module's stylesheet. If the stylesheet you are adding uses the
-;   same filename as a stylesheet from a Drupal core or contrib module, your CSS
-;   file will be used instead of the module's file.
-; - Remove a module's stylesheet. If you specify the name of a Drupal core or
-;   contrib module's stylesheets, Drupal will remove that stylesheet if you do
-;   NOT include a file with that name with your theme.
-;
-; stylesheets[MEDIA][] = FILE
-;
-; The "FILE" is the name of the stylesheet to add/override/remove.
-; The "MEDIA" in the first set of brackets is a media type or a media query.
-; Typical CSS media types include "all", "screen", "print", and "handheld". A
-; typical media query is "screen and (max-width: 320px)".
-;
-; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
-; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
+;;;; Stylesheets
 
-; For CSS users, load the app.css file:
-; stylesheets[all][] = styles/core/app.css
-; Comment the app.css file (above) if you're using sass to preprocess css:
+; Base
 stylesheets[all][] = styles/core/ncsulib_foundation.css
 
-; Foundation JavaScript.
+; Overrides
+stylesheets[all][] = styles/core/custom/system.menus.css
 
-;jQuery
-;scripts[] = scripts/vendor/jquery-1.10.2.min.js
+; Removals
+;  see https://drupal.org/node/263967 to add some
 
-; Modernizr acts as a shim for HTML5 elements for older browsers
-; as well as detection for mobile devices.
-;scripts[] = scripts/vendor/custom.modernizr.js
+;;;; JavaScript
+
+; Important: jQuery and Modernizr are being added by /templates/html.tpl.php
 
 ; Foundation framework scripts (minified).
-; If you prefer to have more control over which components are included you
-; can comment this line and uncomment the ones below you want.
 scripts[] = scripts/vendor/foundation.min.js
 
-; Foundation framework scripts (uncompressed).
-
-;scripts[] = scripts/vendor/foundation/foundation.js
-;scripts[] = scripts/vendor/foundation/foundation.abide.js
-;scripts[] = scripts/vendor/foundation/foundation.alerts.js
-;scripts[] = scripts/vendor/foundation/foundation.clearing.js
-;scripts[] = scripts/vendor/foundation/foundation.cookie.js
-;scripts[] = scripts/vendor/foundation/foundation.dropdown.js
-;scripts[] = scripts/vendor/foundation/foundation.forms.js
-;scripts[] = scripts/vendor/foundation/foundation.interchange.js
-;scripts[] = scripts/vendor/foundation/foundation.joyride.js
-;scripts[] = scripts/vendor/foundation/foundation.magellan.js
-;scripts[] = scripts/vendor/foundation/foundation.orbit.js
-;scripts[] = scripts/vendor/foundation/foundation.placeholder.js
-;scripts[] = scripts/vendor/foundation/foundation.reveal.js
-;scripts[] = scripts/vendor/foundation/foundation.section.js
-;scripts[] = scripts/vendor/foundation/foundation.tooltips.js
-;scripts[] = scripts/vendor/foundation/foundation.topbar.js
-
-; Other vendor scripts
 ; mega menus
 scripts[] = scripts/vendor/jquery.hoverIntent.minified.js
 
@@ -80,7 +38,6 @@ scripts[] = scripts/vendor/jquery.mockjax.js
 scripts[] = scripts/global.js
 scripts[] = scripts/primary-nav.js
 scripts[] = scripts/search-bar.js
-; scripts[] = scripts/mobile-nav.js
 scripts[] = scripts/modernizr-tests.js
 
 ; This section lists the regions defined in the page.tpl.php. The name in
@@ -98,20 +55,3 @@ regions[featured]            = Featured
 regions[content]             = Content
 regions[sidebar_first]       = Left Sidebar
 regions[sidebar_second]      = Right Sidebar
-
-; Various page elements output by the theme can be toggled on and off. The
-; "features" control which of these check boxes display on the
-; admin/appearance config page. This is useful for suppressing check boxes
-; for elements not used by your sub-theme. To add a check box, uncomment the
-; entry for it below. See the Drupal 7 Theme Guide for more info:
-; http://drupal.org/node/171205#features
-
-; features[] = logo
-; features[] = name
-; features[] = slogan
-; features[] = node_user_picture
-; features[] = comment_user_picture
-; features[] = favicon
-; features[] = main_menu
-; features[] = secondary_menu
-

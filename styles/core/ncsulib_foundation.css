@@ -9074,8 +9074,7 @@ a:hover, a:focus {
 html #content {
   background: #FFF;
   margin: 0px;
-  padding-bottom: 30px;
-  padding-top: 50px;
+  padding: 3.125rem 0 1.875rem 0;
 }
 @media only screen and (max-width: 47.937em) {
   /* line 27, ../../scss/layout/_global.scss */
@@ -9085,24 +9084,29 @@ html #content {
   }
 }
 
+/* line 39, ../../scss/layout/_global.scss */
+.main {
+  padding-top: 3.125rem;
+}
+
 @media only screen and (min-width: 48em) {
-  /* line 39, ../../scss/layout/_global.scss */
+  /* line 43, ../../scss/layout/_global.scss */
   .content .featured-image {
     margin-left: 0px;
   }
 }
-/* line 44, ../../scss/layout/_global.scss */
+/* line 48, ../../scss/layout/_global.scss */
 .content .featured-image p {
   background: none;
   color: #555;
   padding: 15px 0px;
 }
-/* line 50, ../../scss/layout/_global.scss */
+/* line 54, ../../scss/layout/_global.scss */
 .content .featured-image img {
   width: 100%;
 }
 
-/* line 56, ../../scss/layout/_global.scss */
+/* line 60, ../../scss/layout/_global.scss */
 .skip-link {
   left: -999px;
   position: absolute;
@@ -9113,7 +9117,7 @@ html #content {
   z-index: -999;
 }
 
-/* line 65, ../../scss/layout/_global.scss */
+/* line 69, ../../scss/layout/_global.scss */
 .skip-link:focus, .skip-link:active {
   color: #fff;
   background-color: #000;
@@ -9131,39 +9135,39 @@ html #content {
   z-index: 999;
 }
 
-/* line 89, ../../scss/layout/_global.scss */
+/* line 93, ../../scss/layout/_global.scss */
 dl.tabs dd.active {
   border-left: 0px solid #cccccc;
   border-bottom: 1px solid #FFF;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 89, ../../scss/layout/_global.scss */
+  /* line 93, ../../scss/layout/_global.scss */
   dl.tabs dd.active {
     border-left: 1px solid #cccccc;
   }
 }
-/* line 97, ../../scss/layout/_global.scss */
+/* line 101, ../../scss/layout/_global.scss */
 dl.tabs dd:first-child {
   border-left: 1px solid #cccccc;
 }
-/* line 100, ../../scss/layout/_global.scss */
+/* line 104, ../../scss/layout/_global.scss */
 dl.tabs dd {
   border-bottom: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 100, ../../scss/layout/_global.scss */
+  /* line 104, ../../scss/layout/_global.scss */
   dl.tabs dd {
     border-left: 1px solid #cccccc;
   }
 }
-/* line 109, ../../scss/layout/_global.scss */
+/* line 113, ../../scss/layout/_global.scss */
 dl.tabs dd a {
   padding: 0.75rem;
 }
 
-/* line 115, ../../scss/layout/_global.scss */
+/* line 119, ../../scss/layout/_global.scss */
 div.tabs-content {
   border-bottom: 1px solid #cccccc;
   border-left: 1px solid #cccccc;
@@ -9172,71 +9176,71 @@ div.tabs-content {
   padding: 0px 1rem;
 }
 
-/* line 124, ../../scss/layout/_global.scss */
+/* line 128, ../../scss/layout/_global.scss */
 dl.tabs.vertical dd.active {
   border-bottom: 1px solid #cccccc;
   border-right: 1px solid #FFF;
   position: relative;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 124, ../../scss/layout/_global.scss */
+  /* line 128, ../../scss/layout/_global.scss */
   dl.tabs.vertical dd.active {
     border-bottom: 0px;
     border-right: 1px solid #cccccc;
     top: 1px;
   }
 }
-/* line 135, ../../scss/layout/_global.scss */
+/* line 139, ../../scss/layout/_global.scss */
 dl.tabs.vertical dd:first-child {
   border-left: 1px solid #cccccc;
   border-right: 0px;
   border-top: 1px solid #cccccc;
 }
-/* line 140, ../../scss/layout/_global.scss */
+/* line 144, ../../scss/layout/_global.scss */
 dl.tabs.vertical dd {
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
   border-top: 0px solid #cccccc;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 140, ../../scss/layout/_global.scss */
+  /* line 144, ../../scss/layout/_global.scss */
   dl.tabs.vertical dd {
     border-bottom: 0px solid #cccccc;
     border-top: 1px solid #cccccc;
     float: left;
   }
 }
-/* line 151, ../../scss/layout/_global.scss */
+/* line 155, ../../scss/layout/_global.scss */
 dl.tabs.vertical dd a {
   padding: 0.75rem;
 }
 
-/* line 158, ../../scss/layout/_global.scss */
+/* line 162, ../../scss/layout/_global.scss */
 .accordion {
   margin-bottom: 1.875rem;
 }
-/* line 161, ../../scss/layout/_global.scss */
+/* line 165, ../../scss/layout/_global.scss */
 .accordion dd {
   border-bottom: 1px solid #cccccc;
 }
-/* line 164, ../../scss/layout/_global.scss */
+/* line 168, ../../scss/layout/_global.scss */
 .accordion dd a {
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
 }
-/* line 169, ../../scss/layout/_global.scss */
+/* line 173, ../../scss/layout/_global.scss */
 .accordion dd .content {
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
 }
-/* line 176, ../../scss/layout/_global.scss */
+/* line 180, ../../scss/layout/_global.scss */
 .accordion dd:first-child {
   border-top: 1px solid #cccccc;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 200, ../../scss/layout/_global.scss */
+  /* line 204, ../../scss/layout/_global.scss */
   select,
   textarea,
   input[type="text"],
@@ -9257,18 +9261,18 @@ dl.tabs.vertical dd a {
     border-radius: 0px;
   }
 }
-/* line 203, ../../scss/layout/_global.scss */
+/* line 207, ../../scss/layout/_global.scss */
 input[type="submit"] {
   border-radius: 0px;
 }
 
-/* line 207, ../../scss/layout/_global.scss */
+/* line 211, ../../scss/layout/_global.scss */
 body .panel.callout {
   border: 0px solid #CCC;
   background: #f5f5f5;
 }
 
-/* line 213, ../../scss/layout/_global.scss */
+/* line 217, ../../scss/layout/_global.scss */
 dl.sub-nav {
   background: none;
   border-bottom: 1px solid #cccccc;
@@ -9278,19 +9282,19 @@ dl.sub-nav {
   text-align: center;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 213, ../../scss/layout/_global.scss */
+  /* line 217, ../../scss/layout/_global.scss */
   dl.sub-nav {
     margin-left: -1rem;
   }
 }
-/* line 225, ../../scss/layout/_global.scss */
+/* line 229, ../../scss/layout/_global.scss */
 dl.sub-nav dd {
   display: inline-block;
   float: none;
   margin-bottom: 0px;
 }
 
-/* line 235, ../../scss/layout/_global.scss */
+/* line 239, ../../scss/layout/_global.scss */
 code {
   background: #383838;
   display: inline-block;
@@ -9301,48 +9305,41 @@ code {
 }
 
 /*sidenav*/
-/* line 248, ../../scss/layout/_global.scss */
+/* line 251, ../../scss/layout/_global.scss */
 .side-nav h2, .side-nav h3, .side-nav h4, .side-nav h5, .side-nav h6 {
   font-size: 1.25rem;
   margin-top: 0px;
   text-transform: uppercase;
 }
-/* line 256, ../../scss/layout/_global.scss */
+/* line 259, ../../scss/layout/_global.scss */
 .side-nav li ul {
   margin-top: 0.4375rem;
   list-style-type: none;
 }
-/* line 261, ../../scss/layout/_global.scss */
+/* line 264, ../../scss/layout/_global.scss */
 .side-nav li ul li a {
   font-size: 0.875rem;
 }
 
 /*sidenav*/
-/* line 272, ../../scss/layout/_global.scss */
+/* line 275, ../../scss/layout/_global.scss */
 .top-bar-section .has-form {
   padding-top: 10px;
 }
 
 /* line 3, ../../scss/layout/_aside.scss */
 #subnav {
-  padding-top: 0.625rem;
+  padding-top: 3.125rem;
 }
-@media only screen and (min-width: 48em) {
-  /* line 3, ../../scss/layout/_aside.scss */
-  #subnav {
-    border-top: 1px solid #cccccc;
-    padding-top: 0.9375em;
-  }
+/* line 6, ../../scss/layout/_aside.scss */
+#subnav .side-nav {
+  padding: 0.3125rem 0;
 }
 /* line 10, ../../scss/layout/_aside.scss */
-#subnav ul.menu {
-  list-style-type: none;
-  margin-left: 0px;
-}
-/* line 14, ../../scss/layout/_aside.scss */
-#subnav ul.menu li {
-  margin-bottom: 5px;
-  padding: 0px;
+#subnav h3 {
+  text-transform: uppercase;
+  font-size: .9em;
+  margin: 1.25rem 0 0.3125rem 0;
 }
 
 /*begin footer*/

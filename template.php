@@ -111,17 +111,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       }
     }
     // End CSS suggestions
-
-    // Stub for css removal and manipulation, if we are interested in removing drupal-provided css
-    // function ncsulib_foundation_css_alter(&$css) {
-    // if (isset($css['modules/aggregator/aggregator.css'])) {
-    //    unset($css['modules/aggregator/aggregator.css']);
-    //  }
-    //  // experimenting with css weighting, though it doesn't seem to do much
-    //  $css['sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css']['weight'] = -1;
-    // }
-    // If this is the front/home page of the site
-
   }
 
 
@@ -148,6 +137,13 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   }
 
 } // End tremendous template_preprocess_page function
+
+/**
+ * Implements theme_menu_link()
+ */
+function ncsulib_foundation_menu_tree($variables) {
+  return '<ul class="side-nav">' . $variables['tree'] . '</ul>';
+}
 
 /**
  * Implements hook_js_alter()
