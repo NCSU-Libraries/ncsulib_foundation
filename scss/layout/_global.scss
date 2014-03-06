@@ -20,13 +20,16 @@ h6{ font-size: $h6-font-size;}
 html #content{
     background: #FFF;
     margin: 0px;
-    padding-bottom: 30px;
-	padding-top: 50px;
+    padding: rem-calc(0 0 30 0);
 
 	@media #{$small-only}{
         padding-top: 0px;
         margin-top: 0px;
 	}
+}
+// main
+.main {
+    padding-top: rem-calc(50);
 }
 .content .featured-image{
 	@media #{$small}{
@@ -233,10 +236,3 @@ code{
     width: 100%;
 }
 // code
-
-/*sidenav*/
-.side-nav{
-
-}
-/*sidenav*/
-
