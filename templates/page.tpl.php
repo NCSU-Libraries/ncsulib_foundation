@@ -28,7 +28,7 @@
 
             <?php
             // kpr();
-            if ($title && !$node): ?>
+            if ($title && !isset($node)): ?>
                   <?php print render($title_prefix); ?>
                       <h1 id="page-title" class="title"><?php print $title; ?></h1>
                   <?php print render($title_suffix); ?>
