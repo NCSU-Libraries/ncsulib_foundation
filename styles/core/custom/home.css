@@ -557,7 +557,7 @@ html, body {
 /* line 57, ../../../scss/foundation/components/_side-nav.scss */
 #home-quicklinks ul#quicklinks li ul li {
   margin: 0 0 0.4375rem 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 /* line 61, ../../../scss/foundation/components/_side-nav.scss */
 #home-quicklinks ul#quicklinks li ul li a:not(.button) {
@@ -570,7 +570,7 @@ html, body {
 }
 /* line 68, ../../../scss/foundation/components/_side-nav.scss */
 #home-quicklinks ul#quicklinks li ul li.active > a:first-child:not(.button) {
-  color: #81a8c8;
+  color: #383838;
   font-weight: normal;
   font-family: Arial, sans-serif;
 }

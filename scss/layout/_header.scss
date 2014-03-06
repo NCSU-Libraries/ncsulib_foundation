@@ -328,7 +328,13 @@ header#minimum-bar{
 
 			a{
 				color: #FFF;
-				font-size: 0.85em;
+				float: left;
+				margin-right: rem-calc(15);
+				// font-size: 0.85em;
+
+				img{
+					vertical-align: baseline;
+				}
 			}
 
 			a:hover{
@@ -337,8 +343,9 @@ header#minimum-bar{
 
 			h2#app-title{
 				color: #FFF;
-				font-size: 1.2em;
-				line-height: 1;
+				float: left;
+				font-size: 1.9em;
+				line-height: 1.9em;
 				margin: 0px;
 
 			}
@@ -522,7 +529,9 @@ header#minimum-bar{
 
 		@media #{$medium-up} {
 			display: block;
-			padding: 0;
+			padding-bottom: 0;
+			padding-right: 0;
+			padding-top: 0;
 			width: 45%;
 		}
 
@@ -563,8 +572,6 @@ header#minimum-bar{
 			margin-bottom: 0;
 			padding: 0 10px;
 			@include single-transition(height, .5s);
-			@media #{$small-only}{
-			}
 
 			&:hover {
 				background: darken(#990000, 10%);
@@ -588,7 +595,7 @@ header#minimum-bar{
 			display: inline-block;
 			margin-left: 0;
 			list-style: none;
-			width: rem-calc(374);
+			// width: rem-calc(374);
 			float: right;
 			margin: 0 20px 0 0;
 
@@ -615,7 +622,7 @@ header#minimum-bar{
 			}
 		}
 		@media #{$large-up} {
-			width: rem-calc(399);
+			// width: rem-calc(399);
 			li a {
 					font-size: rem-calc(12);
 				}
