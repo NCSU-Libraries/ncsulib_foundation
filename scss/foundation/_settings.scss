@@ -180,7 +180,7 @@ $anchor-text-hover-decoration: underline;
 // $hr-margin: rem-calc(20);
 
 // We use these to style lists
-$list-style-position: inside;
+$list-style-position: outside;
 // $list-side-margin: 1.1rem;
 // $list-ordered-side-margin: 1.4rem;
 // $list-side-margin-no-bullet: 0;
@@ -624,7 +624,7 @@ $crumb-border-size: 0px;
 // $include-html-label-classes: $include-html-classes;
 
 // We use these to style the labels
-// $label-padding: rem-calc(4 8 6);
+$label-padding: rem-calc(6 8 6);
 // $label-radius: $global-radius;
 
 // We use these to style the label text
