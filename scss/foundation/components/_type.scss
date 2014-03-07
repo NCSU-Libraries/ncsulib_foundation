@@ -135,14 +135,14 @@ $text-breakpoint-up-queries:
 
 @mixin text-alignment-loop {
   $text-alignments: left, right, center, justify;
-  
+
   // Global Text Styles
   @each $alignment in $text-alignments {
     .text-#{$alignment} {
       text-align: #{$alignment} !important;
     }
   }
-  
+
   @each $current-text-breakpoint in $text-breakpoint-sizes {
     @media #{nth($text-breakpoint-only-queries, index($text-breakpoint-sizes, $current-text-breakpoint))} {
       @each $alignment in $text-alignments {
@@ -161,7 +161,6 @@ $text-breakpoint-up-queries:
   }
 }
 
-@include text-alignment-loop;
 
 //
 // Typography Placeholders
@@ -182,6 +181,8 @@ $text-breakpoint-up-queries:
 }
 @include exports("type") {
   @if $include-html-type-classes {
+
+    @include text-alignment-loop;
 
     // Global Text Styles
     .text-left    { text-align: left !important; }
