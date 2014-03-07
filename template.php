@@ -106,8 +106,9 @@ function ncsulib_foundation_preprocess_page(&$variables) {
     // If there are CSS suggestions to include
     if (isset($include_style)) {
       foreach ($include_style as $included_styles) {
-        // Add the CSS suggestion to Drupal
-        drupal_add_css($included_styles);
+        // Add the CSS suggestion to Drupal, add it after the 100 group which
+        // contains the global theme-level css
+        drupal_add_css($included_styles, array('group' => 101));
       }
     }
     // End CSS suggestions
