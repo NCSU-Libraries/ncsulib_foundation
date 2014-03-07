@@ -9,3 +9,4 @@ robots.txt
 vendor
 .bundle/
 styles/core/
+styles/core/ncsulib_foundation.css
