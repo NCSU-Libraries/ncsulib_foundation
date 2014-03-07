@@ -1,0 +1,116 @@
+.views-row.dataviews {
+    @include grid-column(12, $collapse: true);
+    @media #{$small-only} {
+        margin:rem-calc(50 0);
+
+        .views-field-expression {
+            font-size: rem-calc(30);
+        }
+        .views-field-body {
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @media #{$medium-up} {
+        background-clip: content-box;
+
+        .views-field-expression {
+            height: rem-calc(46);
+            font-size: rem-calc(40);
+            margin: rem-calc(32 0);
+            font-weight: 700;
+            padding: rem-calc(0 16);
+        }
+        .views-field-body {
+            height: rem-calc(76);
+            padding: rem-calc(0 16);
+
+            p {
+                color: rgb(49, 49, 49);
+                line-height: 1.2;
+                font-size: rem-calc(14);
+            }
+        }
+        .views-field-field-dv-pre {
+            padding: rem-calc(0 16);
+            margin: rem-calc(16 0);
+            height: rem-calc(16);
+            color: rgb(49, 49, 49);
+            font-size: rem-calc(14);
+
+            + .views-field-expression {
+                margin: rem-calc(16 0);
+            }
+        }
+        .views-field-field-dv-date,
+        .views-field-field-dv-action-text {
+            margin: rem-calc(10 0);
+            font-size: rem-calc(12);
+        }
+        .views-field-field-dv-date {
+            width: 40%;
+            float: left;
+            padding-left: rem-calc(16);
+        }
+        .views-field-field-dv-action-text {
+            text-align: right;
+            padding-right: rem-calc(16);
+
+            a {
+                color: whitesmoke;
+
+                &:before {
+                    content: "\f105";
+                    font-family: "FontAwesome";
+                    padding-right: rem-calc(5);
+                }
+            }
+        }
+    }
+}
+
+
+/* DV: backgrounds */
+@media #{$medium-up} {
+    .courseviews {
+        background: url("/sites/default/files/dataviews/webpage_widget.jpg") no-repeat 50% 0 #99AA77;
+    }
+    .device-lending {
+        background: url("/sites/default/files/dataviews/laptop_widget.jpg") no-repeat 50% 0 #99AA77;
+    }
+    .online-access {
+        background: url("/sites/default/files/dataviews/mouse_widget.jpg") no-repeat 50% 0 #99AA77;
+
+        .views-field-expression .field-content:after {
+            content:"%";
+        }
+    }
+    .new-books {
+        background: url("/sites/default/files/dataviews/book_widget.jpg") no-repeat 50% 0 #99AA77;
+    }
+    .computer-logins {
+        background: url("/sites/default/files/dataviews/keyboard_widget.jpg") no-repeat 50% 0 #99AA77;
+    }
+    .cost-per-use {
+        background: url("/sites/default/files/dataviews/serial_widget.jpg") no-repeat 50% 0 #99AA77;
+
+        .views-field-expression .field-content:before {
+            content:"$";
+        }
+    }
+    .collection-use {
+        background: url("/sites/default/files/dataviews/distorted_spider_widget.jpg") no-repeat 50% 0 #99AA77;
+
+        .views-field-expression .field-content:after {
+            content:" million";
+        }
+    }
+    .gate-counts {
+        background: url("/sites/default/files/dataviews/dh_hill_widget.jpg") no-repeat 50% 0 #99AA77;
+    }
+    .hours-open {
+        background: url("/sites/default/files/dataviews/clock_widget.jpg") no-repeat 50% 0 #99AA77;
+    }
+}
+

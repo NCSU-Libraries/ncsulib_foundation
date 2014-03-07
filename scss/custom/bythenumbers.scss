@@ -1,0 +1,18 @@
+/* DV: By the Numbers */
+@import "../foundation/settings";
+$include-html-classes: false;
+@import "foundation";
+@import "silent_type";
+@import "compass";
+.view {
+    @include grid-row($behavior: collapse);
+
+    .views-row.dataviews {
+        @media #{$medium-up} {
+            @include grid-column(4);
+            background-clip: content-box;
+            margin-bottom: rem-calc(30);
+        }
+    }
+
+}
