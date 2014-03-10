@@ -242,6 +242,11 @@ code{
     padding: rem-calc(20);
     width: 100%;
 }
+pre {
+    background: $secondary-color;
+    color: $code-color;
+    display: inline;
+}
 
 /*sidenav*/
 .side-nav{
