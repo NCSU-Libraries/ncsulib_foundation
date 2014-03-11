@@ -88,17 +88,9 @@ html #content{
 
 // begin global UI style overwrite
 dl.tabs{
-    dd.active{
-        border-left: 0px solid $border-color;
-        border-bottom: 1px solid #FFF;
+    position: relative;
+    top: 1px;
 
-        @media #{$small-only}{
-            border-left: 1px solid $border-color;
-        }
-    }
-    dd:first-child{
-        border-left: 1px solid $border-color;
-    }
     dd{
         border-bottom: 1px solid $border-color;
         border-right: 1px solid $border-color;
@@ -110,6 +102,25 @@ dl.tabs{
 
         a{
             padding: rem-calc(12);
+        }
+
+        @media #{$small-only}{
+            border-left: 1px solid $border-color;
+        }
+
+        &.active{
+            border-left: 0px solid $border-color;
+
+            a{
+                border-bottom: 1px solid #FFF;
+                margin-bottom: -1px;
+            }
+        }
+
+
+        &:first-child{
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
         }
     }
 }
@@ -123,22 +134,9 @@ div.tabs-content{
 }
 
 dl.tabs.vertical{
-    dd.active{
-        border-bottom: 1px solid $border-color;
-        border-right: 1px solid #FFF;
-        position: relative;
+    right: -1px;
+    top: 0px;
 
-        @media #{$small-only}{
-            border-bottom: 0px;
-            border-right: 1px solid $border-color;
-            top: 1px;
-        }
-    }
-    dd:first-child{
-        border-left: 1px solid $border-color;
-        border-right: 0px;
-        border-top: 1px solid $border-color;
-    }
     dd{
         border-left: 1px solid $border-color;
         border-right: 1px solid $border-color;
@@ -150,10 +148,41 @@ dl.tabs.vertical{
             float: left;
         }
 
+        &:first-child{
+            border-bottom: 1px solid $border-color;
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+            border-top: 1px solid $border-color;
+        }
+
+        &.active{
+            border-bottom: 1px solid $border-color;
+            border-right: 0px solid #FFF;
+            position: relative;
+
+            @media #{$small-only}{
+                border-bottom: 0px;
+                border-right: 1px solid $border-color;
+                top: 1px;
+            }
+
+            a{
+                margin-bottom: 0px;
+            }
+        }
+
         a{
             padding: rem-calc(12);
         }
     }
+}
+
+div.tabs-content.vertical{
+    border-bottom: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+    padding: 0px rem-calc(16);
 }
 
 // accordions
