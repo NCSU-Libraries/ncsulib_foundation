@@ -1,10 +1,36 @@
 // Non-modular or client styles for asides or sidebars.
 
 #subnav{
-	padding-top: rem-calc(50);
+	padding-top: rem-calc(20);
 
 	.side-nav {
 		padding: rem-calc(5 0);
+
+		li{
+
+			a{
+				font-size: 0.9em;
+
+				&.active-trail{
+					color: $secondary-color-b;
+					font-weight: bold;
+				}
+			}
+
+			ul{
+				margin-bottom: rem-calc(0);
+				margin-left: rem-calc(15);
+				margin-top: rem-calc(10);
+				padding: 0px;
+
+				li{
+
+					a{
+						font-size: 0.85em;
+					}
+				}
+			}
+		}
 	}
 
 	h3 {

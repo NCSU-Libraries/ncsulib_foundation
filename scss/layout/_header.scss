@@ -1,3 +1,4 @@
+/*begin header*/
 body.is-sticky{
 	padding-top: $topbar-height + 30;
 }
@@ -127,11 +128,15 @@ body.nav-expanded{
 // NCSU branding bar
 #ncsu_branding_bar{
 	background: $primary-color;
+	display: none;
+
+	@media #{$medium-up}{
+		display: block;
+	}
 }
 // NCSU branding bar
 
 
-/*begin header*/
 header{
 	margin-top: -3px; /* fix the spacing problem with the University nav iframe */
 	background: $primary-color;
@@ -356,7 +361,6 @@ header#minimum-bar{
 		}
 	}
 }
-/*end header*/
 
 /*begin dropdown menus*/
 #primary-nav-menus{
@@ -636,5 +640,34 @@ header#minimum-bar{
 	padding-left: rem-calc(5);
 }
 
+// mobile app alertbox
+#mobile-app-alert{
+	display: none;
+
+	@media #{$medium-up}{
+		@include grid-row;
+		display: block;
+		margin-bottom: 0px;
+
+		i{
+			@include grid-column(2);
+			float: left;
+			font-size: 20em;
+			line-height: 1em;
+			padding-left: 0px;
+		}
+
+		h2{
+			@include grid-column(10);
+			color: #FFF;
+			font-size: 8em;
+			line-height: 1em;
+			margin: 0px;
+			padding-right: 0px;
+		}
+	}
+}
+
 /*end utility*/
 
+/*end header*/
