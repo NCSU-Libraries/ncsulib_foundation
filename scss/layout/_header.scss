@@ -229,9 +229,11 @@ header{
 		}
 
 		.top-bar-section{
+
 			@media #{$small-only} {
 				padding-right: rem-calc(0);
 			}
+
 			ul#primary-nav{
 				background: $topbar-dropdown-bg;
 				float: right;
@@ -244,20 +246,23 @@ header{
 				}
 
 				li{
+					background: $primary-color;
+
 					@media #{$small-only} {
 						border: none;
 						max-width: 250px;
 					}
 
-					background: $primary-color;
-
 				}
+
 				li > a{
+					font-size: 1em;
+					text-transform: uppercase;
+
 					@media #{$small-only} {
 						padding: 0 rem-calc(20);
 						line-height: $topbar-height - 13;
 					}
-					text-transform: uppercase;
 				}
 
 				li:hover > a{
@@ -641,31 +646,55 @@ header#minimum-bar{
 }
 
 // mobile app alertbox
-#mobile-app-alert{
+body #mobile-app-alert{
+	background: $secondary-color;
+	border: 0px;
 	display: none;
+	// display: inline-block;
+	float: none;
+	margin-bottom: 0px;
+	padding: rem-calc(40) 0px;
+	text-align: center;
+	width: 100%;
 
-	@media #{$medium-up}{
-		@include grid-row;
+	> a{
 		display: block;
-		margin-bottom: 0px;
+		width: 90%;
+	}
 
-		i{
-			@include grid-column(2);
-			float: left;
-			font-size: 20em;
-			line-height: 1em;
-			padding-left: 0px;
-		}
 
-		h2{
-			@include grid-column(10);
-			color: #FFF;
-			font-size: 8em;
-			line-height: 1em;
-			margin: 0px;
-			padding-right: 0px;
+	i{
+		color: #FFF;
+		display: inline-block;
+		font-size: 5em;
+		line-height: 1em;
+		margin-right: 3%;
+		padding-left: 0px;
+	}
+
+	h2{
+		color: #FFF;
+		display: inline-block;
+		font-size: 3.5em;
+		line-height: 1.5em;
+		margin: 0px;
+		padding-right: 0px;
+		vertical-align: super;
+	}
+
+	.close{
+		color: #FFF;
+		font-size: 6em;
+		height: 60px;
+		position: absolute;
+		width: auto;
+		z-index: 10;
+
+		&:hover{
+			text-decoration: none;
 		}
 	}
+
 }
 
 /*end utility*/
