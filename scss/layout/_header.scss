@@ -1,3 +1,4 @@
+/*begin header*/
 body.is-sticky{
 	padding-top: $topbar-height + 30;
 }
@@ -127,11 +128,15 @@ body.nav-expanded{
 // NCSU branding bar
 #ncsu_branding_bar{
 	background: $primary-color;
+	display: none;
+
+	@media #{$medium-up}{
+		display: block;
+	}
 }
 // NCSU branding bar
 
 
-/*begin header*/
 header{
 	margin-top: -3px; /* fix the spacing problem with the University nav iframe */
 	background: $primary-color;
@@ -224,9 +229,11 @@ header{
 		}
 
 		.top-bar-section{
+
 			@media #{$small-only} {
 				padding-right: rem-calc(0);
 			}
+
 			ul#primary-nav{
 				background: $topbar-dropdown-bg;
 				float: right;
@@ -239,20 +246,23 @@ header{
 				}
 
 				li{
+					background: $primary-color;
+
 					@media #{$small-only} {
 						border: none;
 						max-width: 250px;
 					}
 
-					background: $primary-color;
-
 				}
+
 				li > a{
+					font-size: 1em;
+					text-transform: uppercase;
+
 					@media #{$small-only} {
 						padding: 0 rem-calc(20);
 						line-height: $topbar-height - 13;
 					}
-					text-transform: uppercase;
 				}
 
 				li:hover > a{
@@ -356,7 +366,6 @@ header#minimum-bar{
 		}
 	}
 }
-/*end header*/
 
 /*begin dropdown menus*/
 #primary-nav-menus{
@@ -636,5 +645,58 @@ header#minimum-bar{
 	padding-left: rem-calc(5);
 }
 
+// mobile app alertbox
+body #mobile-app-alert{
+	background: $secondary-color;
+	border: 0px;
+	display: none;
+	// display: inline-block;
+	float: none;
+	margin-bottom: 0px;
+	padding: rem-calc(40) 0px;
+	text-align: center;
+	width: 100%;
+
+	> a{
+		display: block;
+		width: 90%;
+	}
+
+
+	i{
+		color: #FFF;
+		display: inline-block;
+		font-size: 5em;
+		line-height: 1em;
+		margin-right: 3%;
+		padding-left: 0px;
+	}
+
+	h2{
+		color: #FFF;
+		display: inline-block;
+		font-size: 3.5em;
+		line-height: 1.5em;
+		margin: 0px;
+		padding-right: 0px;
+		vertical-align: super;
+	}
+
+	.close{
+		color: #FFF;
+		font-size: 6em;
+		height: 60px;
+		position: absolute;
+		width: auto;
+		z-index: 10;
+
+		&:hover{
+			text-decoration: none;
+		}
+	}
+
+}
+
 /*end utility*/
 
+/*end header*/

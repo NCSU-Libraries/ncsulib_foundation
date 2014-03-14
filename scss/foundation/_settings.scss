@@ -56,17 +56,17 @@ $primary-color-b: #000;
 $primary-color-c: #FFF;
 $secondary-color: #383838;
 $secondary-color-b: #666666;
-$secondary-color-c: #E1E1E1;
-$secondary-color-d: #5C5541;
-$secondary-color-e: #666633;
-$secondary-color-f: #556677;
+$secondary-color-c: #CCCCCC;
+$secondary-color-d: #E1E1E1;
+$secondary-color-e: #5C5541;
+$secondary-color-f: #666633;
 $secondary-color-g: #A20000;
-$alert-color: #c60f13;
+$alert-color: #A20000;
 $border-color: #ccc;
 
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$success-color: #778855;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 0px;
@@ -133,16 +133,16 @@ $header-top-margin: 2rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(46);
+$h2-font-size: rem-calc(30);
+$h3-font-size: rem-calc(25);
+$h4-font-size: rem-calc(21);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
-// $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+$subheader-font-color: $header-font-color; //scale-color($header-font-color, $lightness: 35%);
 // $subheader-font-weight: 300;
 // $subheader-top-margin: .4rem;
 // $subheader-bottom-margin: .5rem;
@@ -154,7 +154,7 @@ $header-top-margin: 2rem;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -914,8 +914,8 @@ $progress-bar-margin-bottom: rem-calc(20);
 // We use these to control link styles.
 $side-nav-link-color: $anchor-font-color;//$primary-color;
 $side-nav-link-color-active: $secondary-color;// scale-color($side-nav-link-color, $lightness: 30%);
-// $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
-$side-nav-font-size: rem-calc(16);
+$side-nav-link-color-hover: $side-nav-link-color;//scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-font-size: $paragraph-font-size;
 // $side-nav-font-weight: normal;
 // $side-nav-font-family: $body-font-family;
 // $side-nav-active-font-family: $side-nav-font-family;

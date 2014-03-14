@@ -1,0 +1,42 @@
+@import "../foundation/settings";
+$include-html-classes: false;
+
+.brand-tile{
+	color: #FFF;
+	height: 100px;
+	padding: 10px;
+	text-align: center;
+
+	&.primary-a{
+		background: $primary-color;
+	}
+	&.primary-b{
+		background: $primary-color-b;
+	}
+	&.primary-c{
+		background: $primary-color-c;
+		border: 1px solid $border-color;
+	}
+
+	&.secondary-a{
+		background: $secondary-color;
+	}
+	&.secondary-b{
+		background: $secondary-color-b;
+	}
+	&.secondary-c{
+		background: $secondary-color-c;
+	}
+	&.secondary-d{
+		background: $secondary-color-d;
+	}
+	&.secondary-e{
+		background: $secondary-color-e;
+	}
+	&.secondary-f{
+		background: $secondary-color-f;
+	}
+	&.secondary-g{
+		background: $secondary-color-g;
+	}
+}
