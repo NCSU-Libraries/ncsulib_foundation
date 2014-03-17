@@ -159,8 +159,8 @@ header{
 			}
 
 			@media #{$small-only} {
-				padding-top: rem-calc(14);
-				width: 250px;
+				padding-top: rem-calc(20);
+				width: 200px;
 			}
 
 			@media #{$medium-only} {
@@ -536,6 +536,10 @@ header#minimum-bar{
 		padding: rem-calc(15);
 		width: 100%;
 
+		@media #{$small-only}{
+			padding: 5px;
+		}
+
 		@media #{$medium-up} {
 			display: block;
 			padding-bottom: 0;
@@ -549,21 +553,25 @@ header#minimum-bar{
 		}
 
 		#search-all{
+			@include single-transition(all, .3s);
 			border-radius: 0;
-			height: 50px;
-			margin-bottom: rem-calc(10);
-			width: 100%;
 			float: left;
-			height: 25px;
+			font-size: 1em;
 			margin-bottom: 0;
 			padding: 0 10px;
-			@include single-transition(all, .5s);
 			width: 235px;
+
+			@media #{$small-only}{
+				height: 50px;
+				margin-bottom: rem-calc(5);
+				width: 100%;
+			}
 		}
 		#search-all:focus, #search-all.active{
 			@media #{$small-only}{
-				height: 40px;
-				width: 75%;
+				height: 50px;
+				margin-bottom: rem-calc(5);
+				width: 100%;
 			}
 			@media #{$medium-up}{
 				height: 40px;
@@ -575,16 +583,21 @@ header#minimum-bar{
 			@include button;
 
 			margin: 0 0 rem-calc(9) 0;
-			background: #900;
 			font-size: rem-calc(11);
 			height: 25px;
 			margin-bottom: 0;
 			padding: 0 10px;
-			@include single-transition(height, .5s);
+			@include single-transition(height, .3s);
 
 			&:hover {
 				background: darken(#990000, 10%);
-				@include single-transition(background, .5s);
+				@include single-transition(background, .3s);
+			}
+
+			@media #{$small-only}{
+				float: right;
+				height: 44px;
+				width: 33.3333334%;
 			}
 		}
 		#search-all:focus + #search-submit, #search-submit.active{
@@ -592,7 +605,9 @@ header#minimum-bar{
 			width: 18%;
 
 			@media #{$small-only}{
-				width: 25%%;
+				float: right;
+				height: 44px;
+				width: 33.3333334%;
 			}
 		}
 	}

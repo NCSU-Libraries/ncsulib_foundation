@@ -8,7 +8,7 @@ var searchbar = {
 
     // show or hide for small breakpoint
     jQuery('#search-toggle').click( function() {
-      jQuery('#utility-search').toggle('slow');
+      jQuery('#utility-search').slideToggle('fast');
     });
 
     // show the searchbar if the window is resized over the medium breakpoint
