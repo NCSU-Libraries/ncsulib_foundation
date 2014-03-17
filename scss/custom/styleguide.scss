@@ -40,3 +40,28 @@ $include-html-classes: false;
 		background: $secondary-color-g;
 	}
 }
+
+.toggle-code{
+	display: block;
+	font-size: 0.9em;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+
+
+.row.display{
+	background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #C6C6C6;
+    font-size: 11px;
+    line-height: 2rem;
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.row.display .columns:nth-child(2),
+.row.display .columns.small-centered,
+.row.display .columns.large-centered {
+    background: #E1E1E1;
+}
+
