@@ -1,0 +1,42 @@
+/* line 5, ../../../scss/custom/databases.scss */
+.tabs .content {
+  display: none;
+}
+/* line 9, ../../../scss/custom/databases.scss */
+.tabs .content.active {
+  display: block;
+}
+
+/* line 14, ../../../scss/custom/databases.scss */
+.tabs-content.vertical, .tabs-content {
+  padding: 0px;
+}
+/* line 17, ../../../scss/custom/databases.scss */
+.tabs-content.vertical .content, .tabs-content.vertical .content-vertical, .tabs-content .content, .tabs-content .content-vertical {
+  padding: 0.625rem 0px 0px 0px;
+}
+/* line 20, ../../../scss/custom/databases.scss */
+.tabs-content.vertical .content ul, .tabs-content.vertical .content-vertical ul, .tabs-content .content ul, .tabs-content .content-vertical ul {
+  margin: 0px;
+  padding: 1.25rem;
+}
+/* line 24, ../../../scss/custom/databases.scss */
+.tabs-content.vertical .content ul li, .tabs-content.vertical .content-vertical ul li, .tabs-content .content ul li, .tabs-content .content-vertical ul li {
+  list-style-type: none;
+  margin-bottom: 0.625rem;
+}
+
+/* line 32, ../../../scss/custom/databases.scss */
+.alpha-content, .subject-content {
+  display: none;
+}
+
+/* line 39, ../../../scss/custom/databases.scss */
+.alpha-content ul, .subject-content ul {
+  list-style-type: none;
+  margin: 0px;
+}
+/* line 43, ../../../scss/custom/databases.scss */
+.alpha-content ul li, .subject-content ul li {
+  padding: 0px 0px 0.625rem;
+}

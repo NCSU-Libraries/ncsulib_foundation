@@ -1,0 +1,48 @@
+/* line 4, ../../../scss/custom/styleguide.scss */
+.brand-tile {
+  color: #FFF;
+  height: 100px;
+  padding: 10px;
+  text-align: center;
+}
+/* line 10, ../../../scss/custom/styleguide.scss */
+.brand-tile.primary-a {
+  background: #cc0000;
+}
+/* line 13, ../../../scss/custom/styleguide.scss */
+.brand-tile.primary-b {
+  background: black;
+}
+/* line 16, ../../../scss/custom/styleguide.scss */
+.brand-tile.primary-c {
+  background: white;
+  border: 1px solid #cccccc;
+}
+/* line 21, ../../../scss/custom/styleguide.scss */
+.brand-tile.secondary-a {
+  background: #383838;
+}
+/* line 24, ../../../scss/custom/styleguide.scss */
+.brand-tile.secondary-b {
+  background: #666666;
+}
+/* line 27, ../../../scss/custom/styleguide.scss */
+.brand-tile.secondary-c {
+  background: #cccccc;
+}
+/* line 30, ../../../scss/custom/styleguide.scss */
+.brand-tile.secondary-d {
+  background: #e1e1e1;
+}
+/* line 33, ../../../scss/custom/styleguide.scss */
+.brand-tile.secondary-e {
+  background: #5c5541;
+}
+/* line 36, ../../../scss/custom/styleguide.scss */
+.brand-tile.secondary-f {
+  background: #666633;
+}
+/* line 39, ../../../scss/custom/styleguide.scss */
+.brand-tile.secondary-g {
+  background: #a20000;
+}
