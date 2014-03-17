@@ -16,7 +16,8 @@ module.exports = function(grunt) {
         'scripts/search-bar.js',
         'scripts/vendor/jquery.autocomplete.js',
         'scripts/vendor/jquery.mockjax.js',
-        'scripts/vendor/jquery.hoverIntent.minified.js'],
+        'scripts/vendor/jquery.hoverIntent.minified.js',
+        'scripts/global-htdocs.js'],
         dest: 'templates/includes/scripts/<%= pkg.name %>.min.js'
       }
     }
