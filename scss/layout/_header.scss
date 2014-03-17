@@ -557,21 +557,23 @@ header#minimum-bar{
 			border-radius: 0;
 			float: left;
 			font-size: 1em;
+			height: 27px;
 			margin-bottom: 0;
 			padding: 0 10px;
 			width: 235px;
 
 			@media #{$small-only}{
 				height: 50px;
-				margin-bottom: rem-calc(5);
-				width: 100%;
+				margin-bottom: rem-calc(0);
+				width: 80%;
 			}
 		}
+
 		#search-all:focus, #search-all.active{
 			@media #{$small-only}{
 				height: 50px;
-				margin-bottom: rem-calc(5);
-				width: 100%;
+				margin-bottom: rem-calc(0);
+				width: 80%;
 			}
 			@media #{$medium-up}{
 				height: 40px;
@@ -581,10 +583,10 @@ header#minimum-bar{
 
 		#search-submit{
 			@include button;
-
+			background: darken($primary-color, 10%);
 			margin: 0 0 rem-calc(9) 0;
 			font-size: rem-calc(11);
-			height: 25px;
+			height: 27px;
 			margin-bottom: 0;
 			padding: 0 10px;
 			@include single-transition(height, .3s);
@@ -595,19 +597,22 @@ header#minimum-bar{
 			}
 
 			@media #{$small-only}{
+				background: $primary-color;
 				float: right;
-				height: 44px;
-				width: 33.3333334%;
+				height: 50px;
+				padding: 0px;
+				width: 20%;
 			}
 		}
+
 		#search-all:focus + #search-submit, #search-submit.active{
 			height: 40px;
 			width: 18%;
 
 			@media #{$small-only}{
 				float: right;
-				height: 44px;
-				width: 33.3333334%;
+				height: 50px;
+				width: 20%;
 			}
 		}
 	}

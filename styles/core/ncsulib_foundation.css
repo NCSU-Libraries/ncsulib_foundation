@@ -10189,6 +10189,7 @@ header#minimum-bar .top-bar .top-bar-section a {
   border-radius: 0;
   float: left;
   font-size: 1em;
+  height: 27px;
   margin-bottom: 0;
   padding: 0 10px;
   width: 235px;
@@ -10197,26 +10198,26 @@ header#minimum-bar .top-bar .top-bar-section a {
   /* line 555, ../../scss/layout/_header.scss */
   #utility #utility-search #search-all {
     height: 50px;
-    margin-bottom: 0.3125rem;
-    width: 100%;
+    margin-bottom: 0;
+    width: 80%;
   }
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 570, ../../scss/layout/_header.scss */
+  /* line 572, ../../scss/layout/_header.scss */
   #utility #utility-search #search-all:focus, #utility #utility-search #search-all.active {
     height: 50px;
-    margin-bottom: 0.3125rem;
-    width: 100%;
+    margin-bottom: 0;
+    width: 80%;
   }
 }
 @media only screen and (min-width: 48em) {
-  /* line 570, ../../scss/layout/_header.scss */
+  /* line 572, ../../scss/layout/_header.scss */
   #utility #utility-search #search-all:focus, #utility #utility-search #search-all.active {
     height: 40px;
     width: 335px;
   }
 }
-/* line 582, ../../scss/layout/_header.scss */
+/* line 584, ../../scss/layout/_header.scss */
 #utility #utility-search #search-submit {
   border-style: solid;
   border-width: 0px;
@@ -10238,9 +10239,10 @@ header#minimum-bar .top-bar .top-bar-section a {
   background-color: #cc0000;
   border-color: #a30000;
   color: white;
+  background: #990000;
   margin: 0 0 0.5625rem 0;
   font-size: 0.6875rem;
-  height: 25px;
+  height: 27px;
   margin-bottom: 0;
   padding: 0 10px;
   -webkit-transition: height 0.3s;
@@ -10256,7 +10258,7 @@ header#minimum-bar .top-bar .top-bar-section a {
 #utility #utility-search #search-submit:hover, #utility #utility-search #search-submit:focus {
   color: white;
 }
-/* line 592, ../../scss/layout/_header.scss */
+/* line 594, ../../scss/layout/_header.scss */
 #utility #utility-search #search-submit:hover {
   background: #660000;
   -webkit-transition: background 0.3s;
@@ -10265,32 +10267,34 @@ header#minimum-bar .top-bar .top-bar-section a {
   transition: background 0.3s;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 582, ../../scss/layout/_header.scss */
+  /* line 584, ../../scss/layout/_header.scss */
   #utility #utility-search #search-submit {
+    background: #cc0000;
     float: right;
-    height: 44px;
-    width: 33.3333334%;
+    height: 50px;
+    padding: 0px;
+    width: 20%;
   }
 }
-/* line 603, ../../scss/layout/_header.scss */
+/* line 608, ../../scss/layout/_header.scss */
 #utility #utility-search #search-all:focus + #search-submit, #utility #utility-search #search-submit.active {
   height: 40px;
   width: 18%;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 603, ../../scss/layout/_header.scss */
+  /* line 608, ../../scss/layout/_header.scss */
   #utility #utility-search #search-all:focus + #search-submit, #utility #utility-search #search-submit.active {
     float: right;
-    height: 44px;
-    width: 33.3333334%;
+    height: 50px;
+    width: 20%;
   }
 }
-/* line 615, ../../scss/layout/_header.scss */
+/* line 620, ../../scss/layout/_header.scss */
 #utility ul#utility-links {
   display: none;
 }
 @media only screen and (min-width: 48em) {
-  /* line 615, ../../scss/layout/_header.scss */
+  /* line 620, ../../scss/layout/_header.scss */
   #utility ul#utility-links {
     display: inline-block;
     margin-left: 0;
@@ -10298,12 +10302,12 @@ header#minimum-bar .top-bar .top-bar-section a {
     float: right;
     margin: 0 20px 0 0;
   }
-  /* line 626, ../../scss/layout/_header.scss */
+  /* line 631, ../../scss/layout/_header.scss */
   #utility ul#utility-links li {
     float: left;
     margin-top: 0.25rem;
   }
-  /* line 630, ../../scss/layout/_header.scss */
+  /* line 635, ../../scss/layout/_header.scss */
   #utility ul#utility-links li a {
     border-left: 1px solid #555555;
     color: #CCC;
@@ -10312,30 +10316,30 @@ header#minimum-bar .top-bar .top-bar-section a {
     margin-left: 0.34375rem;
     padding: 0 0 0 0.34375rem;
   }
-  /* line 639, ../../scss/layout/_header.scss */
+  /* line 644, ../../scss/layout/_header.scss */
   #utility ul#utility-links li a:hover {
     text-decoration: underline;
   }
-  /* line 644, ../../scss/layout/_header.scss */
+  /* line 649, ../../scss/layout/_header.scss */
   #utility ul#utility-links li:first-child a {
     border-left: 0;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 650, ../../scss/layout/_header.scss */
+  /* line 655, ../../scss/layout/_header.scss */
   #utility ul#utility-links li a {
     font-size: 0.75rem;
   }
 }
 
-/* line 657, ../../scss/layout/_header.scss */
+/* line 662, ../../scss/layout/_header.scss */
 .globalchat::after {
   content: "\f086";
   font-family: "FontAwesome";
   padding-left: 0.3125rem;
 }
 
-/* line 664, ../../scss/layout/_header.scss */
+/* line 669, ../../scss/layout/_header.scss */
 body #mobile-app-alert {
   background: #383838;
   border: 0px;
@@ -10346,12 +10350,12 @@ body #mobile-app-alert {
   text-align: center;
   width: 100%;
 }
-/* line 675, ../../scss/layout/_header.scss */
+/* line 680, ../../scss/layout/_header.scss */
 body #mobile-app-alert > a {
   display: block;
   width: 90%;
 }
-/* line 681, ../../scss/layout/_header.scss */
+/* line 686, ../../scss/layout/_header.scss */
 body #mobile-app-alert i {
   color: #FFF;
   display: inline-block;
@@ -10360,7 +10364,7 @@ body #mobile-app-alert i {
   margin-right: 3%;
   padding-left: 0px;
 }
-/* line 690, ../../scss/layout/_header.scss */
+/* line 695, ../../scss/layout/_header.scss */
 body #mobile-app-alert h2 {
   color: #FFF;
   display: inline-block;
@@ -10370,7 +10374,7 @@ body #mobile-app-alert h2 {
   padding-right: 0px;
   vertical-align: super;
 }
-/* line 700, ../../scss/layout/_header.scss */
+/* line 705, ../../scss/layout/_header.scss */
 body #mobile-app-alert .close {
   color: #FFF;
   font-size: 6em;
@@ -10379,7 +10383,7 @@ body #mobile-app-alert .close {
   width: auto;
   z-index: 10;
 }
-/* line 708, ../../scss/layout/_header.scss */
+/* line 713, ../../scss/layout/_header.scss */
 body #mobile-app-alert .close:hover {
   text-decoration: none;
 }
