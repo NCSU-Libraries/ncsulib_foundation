@@ -39,6 +39,10 @@ $include-html-classes: false;
 
 		padding: 0px;
 	}
+
+	h2{
+		margin-top: 0px;
+	}
 }
 
 /*begin tabs */
@@ -88,6 +92,8 @@ $include-html-classes: false;
 #all-submit{
 	@include grid-column(2, false, false, false, false, false, false, right);
 	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 	height: 4.3em;
 
 	@media #{$small-only}{
@@ -124,6 +130,8 @@ $include-html-classes: false;
 #article-submit{
 	@include grid-column(2, false, false, false, false, false, false, right);
 	margin: 0px 0px rem-calc(5);
+	padding-left: 0px;
+	padding-right: 0px;
 	height: 4.3em;
 
 	@media #{$small-only}{
@@ -179,6 +187,8 @@ $include-html-classes: false;
 	@include grid-column(2);
 	height: 4.3em;
 	margin-bottom: emCalc(5);
+	padding-left: 0px;
+	padding-right: 0px;
 
 	@media #{$small-only}{
 		@include grid-column(12);
@@ -211,6 +221,8 @@ $include-html-classes: false;
 	@include grid-column(2);
 	height: 4.3em;
 	margin-bottom: rem-calc(10);
+	padding-left: 0px;
+	padding-right: 0px;
 
 	@media #{$small-only}{
 		@include grid-column(12);
