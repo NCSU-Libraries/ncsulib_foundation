@@ -6,7 +6,7 @@
  * Date: 7/2/13
  */
 ?>
-<ul id="exhibits-content">
+<dl id="exhibits-content">
 <?php foreach($variables['view']->result as $val): ?>
 
 	<?php
@@ -30,14 +30,14 @@
 		$library = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
 	?>
 
-		<li class="exhibit-item row">
+		<dd class="exhibit-item row">
 			<?php if($img_url): ?>
 			<div class="exhibit-photo large-4 columns">
 				<img src="<?php echo $img_url; ?>" width="100%" />
 			</div>
 			<?php endif; ?>
 			<div class="exhibit-content large-8 columns">
-				<h2><?php echo $url; ?></h2>
+				<h2 class="subheader"><?php echo $url; ?></h2>
 				<?php if($space_title): ?>
 				<h4>Where: <a href="<?php echo url('node/'.$where[0]['target_id']); ?>"><?php echo $space_title; ?></a> at <?php echo $library['#markup']; ?></h4>
 				<?php endif; ?>
@@ -48,6 +48,6 @@
 				<?php echo $body; ?>
 				<?php endif; ?>
 			</div>
-		</li>
+		</dd>
 <?php endforeach; ?>
-</ul>
+</dl>
