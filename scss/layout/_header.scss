@@ -157,11 +157,8 @@ header{
 
 			@media #{$small-only}{
 				float: left;
-			}
-
-			@media #{$small-only} {
 				padding-top: rem-calc(20);
-				width: 200px;
+				width: rem-calc(170);
 			}
 
 			@media #{$medium-only} {
