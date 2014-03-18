@@ -22,7 +22,7 @@
 
 	<div class="regular-schedule large-12">
 		<div class="reg-hours <?php echo strtolower($all_semester_ary[$key]['semester']); ?>">&nbsp;</div>
-		<h4><?php echo $all_semester_ary[$key]['semester']; ?> Hours <span class="sem-dates">(<?php echo $sem_start.'-'.$sem_end; ?>)</span></h4>
+		<h4 class="subheader"><?php echo $all_semester_ary[$key]['semester']; ?> Hours <span class="sem-dates">(<?php echo $sem_start.'-'.$sem_end; ?>)</span></h4>
 		<table>
 			<?php
 				foreach ($sem as $item):
@@ -59,7 +59,7 @@
 	?>
 	<?php if($exam_hours): ?>
 	<div class="exceptions-schedule large-12">
-		<h4>Exam Hours <div class="exam-hours">&nbsp;</div></h4>
+		<h4 class="subheader">Exam Hours <div class="exam-hours">&nbsp;</div></h4>
 		<table>
 			<?php
 				foreach ($json_data as $key => $sem):
@@ -104,7 +104,7 @@
 
 	<?php if($exceptions): ?>
 	<div class="exceptions-schedule large-12">
-		<h4>Exceptions <div class="exception-hours">&nbsp;</div></h4>
+		<h4 class="subheader">Exceptions <div class="exception-hours">&nbsp;</div></h4>
 		<table>
 			<?php
 				foreach ($json_data as $key => $sem):

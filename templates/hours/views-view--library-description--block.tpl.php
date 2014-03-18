@@ -9,10 +9,10 @@
 		<a href="<?php echo drupal_lookup_path('alias','node/'.$content->nid); ?>"><img src="<?php echo image_style_url('large',$img_node[0]['uri']);?>" alt="<?php echo $img_node[0]['alt']; ?>" width="100%" /></a>
 	</div>
 	<div id="lib-meta">
-		<h2><a href="<?php echo drupal_lookup_path('alias','node/'.$content->nid); ?>"><?php echo $content->node_title; ?></a></h2>
-		<h3>Address</h3>
+		<h3 class="subheader"><a href="<?php echo drupal_lookup_path('alias','node/'.$content->nid); ?>"><?php echo $content->node_title; ?></a></h3>
+		<h4>Address</h4>
 		<p><?php echo $address_node[0]['value']; ?></p>
-		<h3>Information</h3>
+		<h4>Information</h4>
 		<p><?php echo $phone_node[0]['value']; ?></p>
 	</div>
 </div>

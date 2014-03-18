@@ -3,15 +3,15 @@
 #sidebar-left {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 100%;
+  width: 41.66667%;
   float: left;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 47.937em) {
   /* line 8, ../../../scss/custom/hours.scss */
   #sidebar-left {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
-    width: 41.66667%;
+    width: 100%;
     float: left;
   }
 }
@@ -32,7 +32,7 @@
   padding: 0px 26px 0px 0px;
   text-decoration: none;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 47.937em) {
   /* line 23, ../../../scss/custom/hours.scss */
   #sidebar-left ul#libraries li a {
     padding: 0px;
@@ -42,35 +42,36 @@
 #sidebar-left ul#libraries li a.nav-active, #sidebar-left ul#libraries li a.nav-active:hover {
   background: #f0f0f0;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 47.937em) {
   /* line 34, ../../../scss/custom/hours.scss */
   #sidebar-left ul#libraries li a.nav-active, #sidebar-left ul#libraries li a.nav-active:hover {
     background: #f0f0f0 url(../images/hours-nav-arrow.png) no-repeat 100% center;
     background-size: auto 100%;
+    padding: 0px;
   }
 }
-/* line 42, ../../../scss/custom/hours.scss */
+/* line 43, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li a.nav-active p, #sidebar-left ul#libraries li a.nav-active:hover p {
   color: #555;
 }
-/* line 46, ../../../scss/custom/hours.scss */
+/* line 47, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li a.nav-active ul.schedule .location, #sidebar-left ul#libraries li a.nav-active:hover ul.schedule .location {
   text-decoration: none;
 }
-/* line 51, ../../../scss/custom/hours.scss */
+/* line 52, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li a:hover {
   background: #FFF;
   text-decoration: none;
 }
-/* line 55, ../../../scss/custom/hours.scss */
+/* line 56, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li a:hover ul.schedule {
   background: #f0f0f0;
 }
-/* line 60, ../../../scss/custom/hours.scss */
+/* line 61, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li a:hover ul.schedule .location {
   text-decoration: underline;
 }
-/* line 65, ../../../scss/custom/hours.scss */
+/* line 66, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li .location {
   border-left: 1px solid #DDD;
   border-top: 1px solid #DDD;
@@ -80,14 +81,14 @@
   padding: 0px 0px 0px 4%;
   width: 73%;
 }
-/* line 74, ../../../scss/custom/hours.scss */
+/* line 75, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li .location p.location-title {
   font-size: 0.9em;
   display: table-cell;
   height: 64px;
   vertical-align: middle;
 }
-/* line 82, ../../../scss/custom/hours.scss */
+/* line 83, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li .availability {
   border-left: 1px solid #DDD;
   border-right: 1px solid #DDD;
@@ -99,56 +100,56 @@
   vertical-align: middle;
   width: 20%;
 }
-/* line 93, ../../../scss/custom/hours.scss */
+/* line 94, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li .availability .hstatus {
   font-size: 1.2em;
   font-weight: normal;
   margin: 0px 0px 0px 0px;
   text-transform: uppercase;
 }
-@media only screen and (min-width: 48em) {
-  /* line 93, ../../../scss/custom/hours.scss */
+@media only screen and (max-width: 47.937em) {
+  /* line 94, ../../../scss/custom/hours.scss */
   #sidebar-left ul#libraries li .availability .hstatus {
     font-size: 1em;
   }
 }
 @media only screen and (min-width: 48em) {
-  /* line 93, ../../../scss/custom/hours.scss */
+  /* line 94, ../../../scss/custom/hours.scss */
   #sidebar-left ul#libraries li .availability .hstatus {
     font-size: 1.2em;
   }
 }
-/* line 107, ../../../scss/custom/hours.scss */
+/* line 108, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li .availability .hstatus.open {
   color: #1D8C14;
   font-weight: bold;
 }
-/* line 111, ../../../scss/custom/hours.scss */
+/* line 112, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li .availability .hstatus.appointment {
   margin: -4px 0px 0px 0px;
 }
-/* line 114, ../../../scss/custom/hours.scss */
+/* line 115, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li .availability .hstatus.closed {
   color: #cc0000;
   font-weight: bold;
 }
-/* line 118, ../../../scss/custom/hours.scss */
+/* line 119, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li .availability .time {
   color: #999;
   font-size: 0.8em;
 }
-/* line 124, ../../../scss/custom/hours.scss */
+/* line 125, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li ul {
   list-style-type: none;
   margin: 0px;
 }
-/* line 128, ../../../scss/custom/hours.scss */
+/* line 129, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li ul .schedule {
   padding: 0px 0px 0px 0px;
   position: relative;
   width: 100%;
 }
-/* line 133, ../../../scss/custom/hours.scss */
+/* line 134, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries li ul .schedule p.location-title {
   font-size: 0.6em;
   display: table-cell;
@@ -156,61 +157,61 @@
   padding-left: 15px;
   vertical-align: middle;
 }
-/* line 145, ../../../scss/custom/hours.scss */
+/* line 146, ../../../scss/custom/hours.scss */
 #sidebar-left ul#libraries > li:last-child ul {
   border-bottom: 1px solid #DDD;
 }
-/* line 149, ../../../scss/custom/hours.scss */
+/* line 150, ../../../scss/custom/hours.scss */
 #sidebar-left #hours-download {
   list-style-type: none;
   margin: 0px;
 }
-@media only screen and (min-width: 48em) {
-  /* line 149, ../../../scss/custom/hours.scss */
+@media only screen and (max-width: 47.937em) {
+  /* line 150, ../../../scss/custom/hours.scss */
   #sidebar-left #hours-download {
     margin-bottom: 40px;
   }
 }
-/* line 157, ../../../scss/custom/hours.scss */
+/* line 158, ../../../scss/custom/hours.scss */
 #sidebar-left #hours-download li {
   margin: 0px 0px 10px 0px;
 }
-/* line 160, ../../../scss/custom/hours.scss */
+/* line 161, ../../../scss/custom/hours.scss */
 #sidebar-left #hours-download li a {
   padding: 8px 0px 8px 0px;
 }
-/* line 164, ../../../scss/custom/hours.scss */
+/* line 165, ../../../scss/custom/hours.scss */
 #sidebar-left #hours-download li img {
   float: left;
   margin: 3px 5px 0px 0px;
 }
 
-/* line 171, ../../../scss/custom/hours.scss */
+/* line 172, ../../../scss/custom/hours.scss */
 #page #sidebar-left > ul.schedule .location, #page #sidebar-left > ul.schedule .availability {
   background: #f5f5f5;
 }
 
 /*end sidebar styles*/
 /*begin main schedule block*/
-/* line 201, ../../../scss/custom/hours.scss */
+/* line 202, ../../../scss/custom/hours.scss */
 #page #main {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 100%;
+  width: 58.33333%;
   float: left;
 }
-@media only screen and (min-width: 48em) {
-  /* line 201, ../../../scss/custom/hours.scss */
+@media only screen and (max-width: 47.937em) {
+  /* line 202, ../../../scss/custom/hours.scss */
   #page #main {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
-    width: 58.33333%;
+    width: 100%;
     float: left;
   }
 }
 
 /*end main schedule block*/
-/* line 212, ../../../scss/custom/hours.scss */
+/* line 213, ../../../scss/custom/hours.scss */
 #schedule-block {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -222,42 +223,42 @@
   margin: 0px 0px 40px 0px;
   padding: 20px 20px 20px;
 }
-/* line 221, ../../../scss/custom/hours.scss */
+/* line 222, ../../../scss/custom/hours.scss */
 #schedule-block #schedules {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 100%;
+  width: 50%;
   float: left;
-  padding: 0px;
+  padding-left: 0px;
 }
-@media only screen and (min-width: 48em) {
-  /* line 221, ../../../scss/custom/hours.scss */
+@media only screen and (max-width: 47.937em) {
+  /* line 222, ../../../scss/custom/hours.scss */
   #schedule-block #schedules {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
-    width: 50%;
+    width: 100%;
     float: left;
-    padding-left: 0px;
+    padding: 0px;
   }
 }
 
 /*begin mini calendar*/
-/* line 242, ../../../scss/custom/hours.scss */
+/* line 243, ../../../scss/custom/hours.scss */
 #cal {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 100%;
+  width: 50%;
   float: left;
-  padding: 0px;
+  padding-right: 0px;
 }
-@media only screen and (min-width: 48em) {
-  /* line 242, ../../../scss/custom/hours.scss */
+@media only screen and (max-width: 47.937em) {
+  /* line 243, ../../../scss/custom/hours.scss */
   #cal {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
-    width: 50%;
+    width: 100%;
     float: left;
-    padding-right: 0px;
+    padding: 0px;
     padding-top: 15px;
   }
 }
@@ -270,7 +271,7 @@
   margin: 0px 0px 0px 0px;
   padding: 0px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 47.937em) {
   /* line 254, ../../../scss/custom/hours.scss */
   #cal .hours-calendar {
     padding-right: 0px;
@@ -462,7 +463,7 @@
   font-size: 0.6em;
   font-weight: normal;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 47.937em) {
   /* line 463, ../../../scss/custom/hours.scss */
   .regular-schedule h4 span.sem-dates {
     display: block;
@@ -490,7 +491,7 @@
   margin: 8px 10px 10px 0px;
   width: 18px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 47.937em) {
   /* line 482, ../../../scss/custom/hours.scss */
   .regular-schedule .reg-hours {
     margin-top: 0px;
@@ -551,7 +552,7 @@
   margin: 8px 10px 10px 0px;
   width: 18px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 47.937em) {
   /* line 536, ../../../scss/custom/hours.scss */
   .exceptions-schedule .exception-hours {
     margin-top: 0px;
@@ -643,7 +644,7 @@
 #lib-info:after {
   clear: both;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 47.937em) {
   /* line 621, ../../../scss/custom/hours.scss */
   #lib-info #lib-photo {
     padding-left: 0.9375rem;
@@ -664,7 +665,7 @@
     padding-left: 0px;
   }
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (max-width: 47.937em) {
   /* line 634, ../../../scss/custom/hours.scss */
   #lib-info #lib-meta {
     padding-left: 0.9375rem;

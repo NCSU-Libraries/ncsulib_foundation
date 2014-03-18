@@ -6,10 +6,10 @@ $include-html-classes: false;
 
 /*begin sidebar styles*/
 #sidebar-left{
-	@include grid-column(12);
+	@include grid-column(5);
 
-	@media #{$small}{
-		@include grid-column(5);
+	@media #{$small-only}{
+		@include grid-column(12);
 	}
 
 	ul#libraries{
@@ -26,7 +26,7 @@ $include-html-classes: false;
 				padding: 0px 26px 0px 0px;
 				text-decoration: none;
 
-				@media #{$small}{
+				@media #{$small-only}{
 					padding: 0px;
 				}
 			}
@@ -34,9 +34,10 @@ $include-html-classes: false;
 			a.nav-active, a.nav-active:hover{
 				background: #f0f0f0;
 
-				@media #{$small}{
+				@media #{$small-only}{
 					background: #f0f0f0 url(../images/hours-nav-arrow.png) no-repeat 100% center;
 					background-size: auto 100%;
+					padding: 0px;
 				}
 
 				p{
@@ -96,11 +97,11 @@ $include-html-classes: false;
 					margin: 0px 0px 0px 0px;
 					text-transform: uppercase;
 
-					@media #{$small}{
+					@media #{$small-only}{
 						font-size: 1em;
 					}
 
-					@media #{$medium}{
+					@media #{$medium-up}{
 						font-size: 1.2em;
 					}
 				}
@@ -147,7 +148,7 @@ $include-html-classes: false;
 	}
 
 	#hours-download {
-		@media #{$small}{
+		@media #{$small-only}{
 			margin-bottom: 40px;
 		}
 
@@ -199,10 +200,10 @@ $include-html-classes: false;
 
 /*begin main schedule block*/
 #page #main{
-	@include grid-column(12);
+	@include grid-column(7);
 
-	@media #{$small}{
-		@include grid-column(7);
+	@media #{$small-only}{
+		@include grid-column(12);
 	}
 }
 /*end main schedule block*/
@@ -219,12 +220,12 @@ $include-html-classes: false;
 	padding: 20px 20px 20px;
 
 	#schedules{
-		@include grid-column(12);
-		padding: 0px;
+		@include grid-column(6);
+		padding-left: 0px;
 
-		@media #{$small}{
-			@include grid-column(6);
-			padding-left: 0px;
+		@media #{$small-only}{
+			@include grid-column(12);
+			padding: 0px;
 		}
 	}
 }
@@ -240,13 +241,12 @@ $include-html-classes: false;
 
 /*begin mini calendar*/
 #cal{
+	@include grid-column(6);
+	padding-right: 0px;
 
-	@include grid-column(12);
-	padding: 0px;
-
-	@media #{$small}{
-		@include grid-column(6);
-		padding-right: 0px;
+	@media #{$small-only}{
+		@include grid-column(12);
+		padding: 0px;
 		padding-top: 15px;
 	}
 
@@ -257,7 +257,7 @@ $include-html-classes: false;
 		margin: 0px 0px 0px 0px;
 		padding: 0px;
 
-		@media #{$small}{
+		@media #{$small-only}{
 			padding-right: 0px;
 		}
 
@@ -464,11 +464,11 @@ $include-html-classes: false;
 			font-size: 0.6em;
 			font-weight: normal;
 
-			@media #{$small}{
+			@media #{$small-only}{
 				display: block;
 			}
 
-			@media #{$medium}{
+			@media #{$medium-up}{
 				display: auto;
 			}
 		}
@@ -489,7 +489,7 @@ $include-html-classes: false;
 		margin: 8px 10px 10px 0px;
 		width: 18px;
 
-		@media #{$small}{
+		@media #{$small-only}{
 			margin-top: 0px;
 		}
 	}
@@ -544,7 +544,7 @@ $include-html-classes: false;
 		margin: 8px 10px 10px 0px;
 		width: 18px;
 
-		@media #{$small}{
+		@media #{$small-only}{
 			margin-top: 0px;
 		}
 	}
@@ -619,25 +619,25 @@ $include-html-classes: false;
 	@include grid-row;
 
 	#lib-photo{
-		@media #{$small}{
+		@media #{$small-only}{
 			@include grid-column(12);
 			margin-bottom: 10px;
 			padding: 0px;
 		}
 
-		@media #{$medium}{
+		@media #{$medium-up}{
 			@include grid-column(7);
 			padding-left: 0px;
 		}
 	}
 
 	#lib-meta{
-		@media #{$small}{
+		@media #{$small-only}{
 			@include grid-column(12);
 			padding: 0px;
 		}
 
-		@media #{$medium}{
+		@media #{$medium-up}{
 			@include grid-column(5);
 			padding-right: 0px;
 		}

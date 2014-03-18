@@ -49,7 +49,7 @@
 	<div class="date-nav-wrapper clearfix">
 		<div class="date-nav item-list">
 			<div class="date-heading">
-				<h3><?php echo $month; ?></h3>
+				<h3 class="subheader"><?php echo $month; ?></h3>
 			</div>
 			<ul class="page">
 				<li class="date-prev">

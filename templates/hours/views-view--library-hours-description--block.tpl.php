@@ -1,7 +1,7 @@
 <?php
 	foreach($variables['view']->result as $data):
 ?>
-	<h2>
+	<h2 class="subheader">
 		<?php
 			$node=hours_get_node_by_field_value('library', 'field_library_short_name', segment(1), 'title');
 			echo ($data->node_title == 'General') ? $node->title: $data->node_title;

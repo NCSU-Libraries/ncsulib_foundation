@@ -8451,12 +8451,12 @@ h1 {
 
 /* line 336, ../../scss/foundation/components/_type.scss */
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 /* line 337, ../../scss/foundation/components/_type.scss */
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
 }
 
 /* line 338, ../../scss/foundation/components/_type.scss */
@@ -8693,12 +8693,12 @@ blockquote p {
 
   /* line 516, ../../scss/foundation/components/_type.scss */
   h2 {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   /* line 517, ../../scss/foundation/components/_type.scss */
   h3 {
-    font-size: 1.5625rem;
+    font-size: 1.5rem;
   }
 
   /* line 518, ../../scss/foundation/components/_type.scss */
@@ -10418,12 +10418,12 @@ h1 {
 
 /* line 17, ../../scss/layout/_global.scss */
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 
 /* line 18, ../../scss/layout/_global.scss */
 h3 {
-  font-size: 1.5625rem;
+  font-size: 1.5rem;
 }
 
 /* line 19, ../../scss/layout/_global.scss */
@@ -10815,11 +10815,11 @@ footer p, footer h2, footer h3, footer h4, footer h5, footer i {
 }
 /* line 12, ../../scss/layout/_footer.scss */
 footer h2 {
-  font-size: 1.40625rem;
+  font-size: 1.3125rem;
 }
 /* line 15, ../../scss/layout/_footer.scss */
 footer h3 {
-  font-size: 1.17188rem;
+  font-size: 1.125rem;
 }
 /* line 18, ../../scss/layout/_footer.scss */
 footer h4 {
@@ -11347,11 +11347,11 @@ footer p, footer h2, footer h3, footer h4, footer h5, footer i {
 }
 /* line 12, ../../scss/layout/_footer.scss */
 footer h2 {
-  font-size: 1.40625rem;
+  font-size: 1.3125rem;
 }
 /* line 15, ../../scss/layout/_footer.scss */
 footer h3 {
-  font-size: 1.17188rem;
+  font-size: 1.125rem;
 }
 /* line 18, ../../scss/layout/_footer.scss */
 footer h4 {
