@@ -11,9 +11,11 @@
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 </div>
 
-<link rel="stylesheet" type="text/css" href="http://www.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" />
-<iframe title="NC State Utility Links" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="http://www.ncsu.edu/brand/utility-bar/iframe/index.php?color=red&amp;inurl=lib.ncsu.edu&amp;center=yes" scrolling="no">
-	Your browser does not support inline frames or is currently configured  not to display inline frames.<br /> Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.
+<link rel="stylesheet" type="text/css" href="https://ssl.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /> 
+<iframe title="NC State Utility Links" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="https://ssl.ncsu.edu/brand/utility-bar/iframe/index.php?color=red&amp;inurl=www.lib.ncsu.edu&amp;center=yes" scrolling="no">  
+Your browser does not support inline frames or  
+is currently configured  not to display inline frames.<br /> 
+Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.
 </iframe>
 
 
