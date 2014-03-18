@@ -1,0 +1,22 @@
+@media #{$small-up} {
+  .feedback-form {
+    position: fixed;
+    right: rem-calc(-27);
+    top: 50%;
+    @include rotate(270deg);
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(204, 0, 0, 0.82);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@media #{$small-only} {
+  .feedback-form {
+    top: 83%;
+    font-size: rem-calc(14);
+  }
+}
