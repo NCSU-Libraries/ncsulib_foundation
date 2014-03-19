@@ -148,8 +148,8 @@ $subheader-font-color: $header-font-color; //scale-color($header-font-color, $li
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-// $small-font-size: 60%;
-// $small-font-color: scale-color($header-font-color, $lightness: 35%);
+$small-font-size: 70%;
+$small-font-color: scale-color($header-font-color, $lightness: 100%);
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
@@ -754,12 +754,12 @@ $label-padding: rem-calc(6 8 6);
 
 // We use these for the pagination anchor links
 // $pagination-link-pad: rem-calc(1 10 1);
-// $pagination-link-font-color: #999;
+$pagination-link-font-color: $header-font-color;
 // $pagination-link-active-bg: scale-color(#fff, $lightness: -10%);
 
 // We use these for disabled anchor links
 // $pagination-link-unavailable-cursor: default;
-// $pagination-link-unavailable-font-color: #999;
+$pagination-link-unavailable-font-color: lighten(#999, 30%);
 // $pagination-link-unavailable-bg-active: transparent;
 
 // We use these for currently selected anchor links

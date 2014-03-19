@@ -1,6 +1,6 @@
 <?php
 
-function ncsulibraries_process_html(&$vars){
+function ncsulib_foundation_process_html(&$vars){
     foreach (array('head', 'styles', 'scripts', 'page_bottom') as $replace) {
         if (!isset($vars[$replace])) {
             continue;
@@ -45,13 +45,17 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   // Dynamic sidebars (this is critical)
   if (!empty($left) && !empty($right)) {
     $variables['main_grid'] = 'medium-6 push-3';
+    $variables['sidebar_left'] = 'pull-6';
   } elseif (empty($left) && !empty($right)) {
     $variables['main_grid'] = 'medium-9';
+    $variables['sidebar_left'] = '';
   } elseif (!empty($left) && empty($right)) {
     $variables['main_grid'] = 'medium-9 push-3';
+    $variables['sidebar_left'] = 'pull-9';
   } else {
     $variables['main_grid'] = 'medium-12';
   }
+
 
   /**
    * End d.o Foundation code
@@ -243,22 +247,25 @@ function ncsulib_foundation_more_link ($array) {
  *  Adds classes to blocks on the scrc page.
  *
  *  -Charlie Morris 11/20/2012
+ *
+ * adapted for foundation
+ *
+ * -EO 3.19.14
  */
 function ncsulib_foundation_preprocess_block(&$variables) {
   if ($variables['block_html_id'] == 'block-views-upcoming-events-block-3') {
-    $variables['classes_array'][] = 'grid-12';
-    $variables['classes_array'][] = 'alpha';
-    $variables['classes_array'][] = 'omega';
+    $variables['classes_array'][] = 'medium-8';
+    $variables['classes_array'][] = 'columns';
     // $variables['elements']['#block']->subject = date('l, M jS', strtotime('today'));
   }
   // adding classes to blocks on /scrc
   if ($variables['block_html_id']  == "block-aggregator-feed-8") {
-    $variables['classes_array'][] = 'grid-12';
-    $variables['classes_array'][] = 'alpha';
+    $variables['classes_array'][] = 'medium-8';
+    $variables['classes_array'][] = 'columns';
   }
   if ($variables['block_html_id']  == "block-block-78"){
-    $variables['classes_array'][] = 'grid-4';
-    $variables['classes_array'][] = 'omega';
+    $variables['classes_array'][] = 'medium-3';
+    $variables['classes_array'][] = 'columns';
   }
 }
 
@@ -287,8 +294,8 @@ function ncsulib_foundation_views_pre_render(&$view) {
         // Set event dates
         $timestamp = filter_xss($view->result[$i]->field_data_field_time_field_time_value);
         $timestamp2 = filter_xss($view->result[$i]->field_data_field_time_field_time_value2);
-        $open = strtotime($timestamp)+ncsulibraries_adjust_for_timezone($timestamp);
-        $close = strtotime($timestamp2)+ncsulibraries_adjust_for_timezone($timestamp2);
+        $open = strtotime($timestamp)+ncsulib_foundation_adjust_for_timezone($timestamp);
+        $close = strtotime($timestamp2)+ncsulib_foundation_adjust_for_timezone($timestamp2);
         $view->result[$i]->date_display = (date('m j Y', $open) == date('m j Y', $close)) ? date('M j, Y', $open) : date('M j, Y', $open) . ' - ' . date('M j, Y', $close);
       }
     }
