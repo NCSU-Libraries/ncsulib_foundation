@@ -747,7 +747,7 @@ $label-padding: rem-calc(6 8 6);
 
 // We use these to set the list-item properties
 // $pagination-li-float: $default-float;
-// $pagination-li-height: rem-calc(24);
+$pagination-li-height: inherit;
 // $pagination-li-font-color: #222;
 // $pagination-li-font-size: rem-calc(14);
 // $pagination-li-margin: rem-calc(5);
