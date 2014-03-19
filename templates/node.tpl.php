@@ -5,7 +5,6 @@
   <?php print render($title_suffix); ?>
 <?php endif; ?>
 
-<h1 id="page-title" class="title"><?php print $title; ?></h1>
 <?php print render($title_prefix); ?>
 <?php if (!$page): ?>
   <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>

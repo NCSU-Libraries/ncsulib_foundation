@@ -22,7 +22,7 @@
     <?php endif; ?>
 
     <main role="main" class="row l-main">
-        <div class="<?php print $main_grid; ?> main columns">
+        <div class="<?= $main_grid; ?> main columns">
 
             <a id="main-content"></a>
             <?php if ($title && !isset($node)): ?>
@@ -46,9 +46,8 @@
         </div>
         <!--/.l-main region -->
 
-
         <?php if (!empty($page['sidebar_first'])): ?>
-            <aside id="subnav" role="complementary" class="medium-3 pull-9 l-sidebar-first columns sidebar">
+            <aside id="subnav" role="complementary" class="medium-3 <?= $sidebar_left; ?> l-sidebar-first columns sidebar">
                 <?php print render($page['sidebar_first']); ?>
             </aside>
         <?php endif; ?>
