@@ -742,12 +742,12 @@ $label-padding: rem-calc(6 8 6);
 // $include-html-nav-classes: $include-html-classes;
 
 // We use these to control the pagination container
-// $pagination-height: rem-calc(24);
+$pagination-height: inherit;
 // $pagination-margin: rem-calc(-5);
 
 // We use these to set the list-item properties
 // $pagination-li-float: $default-float;
-$pagination-li-height: inherit;
+// $pagination-li-height: rem-calc(24);
 // $pagination-li-font-color: #222;
 // $pagination-li-font-size: rem-calc(14);
 // $pagination-li-margin: rem-calc(5);
