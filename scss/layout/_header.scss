@@ -19,10 +19,15 @@ body.nav-expanded{
 		width: 80%;
 	}
 
+	// top bar
 	.top-bar{
 		overflow: visible;
 
 		.top-bar-section{
+
+			.has-form{
+			    padding-top: 10px;
+			}
 
 			ul#primary-nav{
 				padding: 3% 0;
