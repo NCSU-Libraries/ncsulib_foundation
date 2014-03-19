@@ -1,0 +1,90 @@
+/* begin global styles*/
+div.workbench-info-block{
+    display: none;
+}
+
+// htdocs
+#page, .page{
+    background: #FFF;
+    margin-bottom: 40px;
+}
+
+.l-main {
+    background-color: #fff;
+}
+
+h1{ font-size: $h1-font-size; margin-top: 0px; }
+h2{ font-size: $h2-font-size;}
+h3{ font-size: $h3-font-size;}
+h4{
+    font-size: $h4-font-size*0.75;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+h5{ font-size: $h5-font-size;}
+h6{ font-size: $h6-font-size;}
+
+a:hover, a:focus{
+    text-decoration: $anchor-text-hover-decoration;
+}
+
+// begin page styles
+html #content{
+    background: #FFF;
+    margin: 0px;
+    padding: rem-calc(50 0 30 0);
+
+    @media #{$small-only}{
+        padding-top: rem-calc(20);
+        margin-top: 0px;
+    }
+}
+
+// main
+.main {}
+
+.content .featured-image{
+    @media #{$small}{
+        margin-left: 0px;
+    }
+
+    p{
+        background: none;
+        color: #555;
+        padding: 15px 0px;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+// end page styles
+
+.skip-link {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:scroll;
+    z-index:-999;
+}
+.skip-link:focus, .skip-link:active {
+    color: #fff;
+    background-color:#000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 15px;
+    border:4px solid yellow;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
+
+
+

@@ -47,11 +47,12 @@
 // Each section of the document has it's own partial seperated out to improve
 // developer experience. Additionally, grids can be declared in layouts as well.
 @import "layout/header";
-@import "layout/global";
+@import "layout/main";
 @import "layout/aside";
 @import "layout/footer";
 @import "layout/footer-styles"; //for external apps
 @import "layout/editor-styles";
+@import "layout/global-overrides";
 
 // Components
 // @import "components/buttons";

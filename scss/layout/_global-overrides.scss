@@ -1,92 +1,3 @@
-/* begin global styles*/
-div.workbench-info-block{
-    display: none;
-}
-
-// htdocs
-#page, .page{
-    background: #FFF;
-    margin-bottom: 40px;
-}
-
-.l-main {
-    background-color: #fff;
-}
-
-h1{ font-size: $h1-font-size; margin-top: 0px; }
-h2{ font-size: $h2-font-size;}
-h3{ font-size: $h3-font-size;}
-h4{
-    font-size: $h4-font-size*0.75;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-h5{ font-size: $h5-font-size;}
-h6{ font-size: $h6-font-size;}
-
-a:hover, a:focus{
-    text-decoration: $anchor-text-hover-decoration;
-}
-
-// begin page styles
-html #content{
-    background: #FFF;
-    margin: 0px;
-    padding: rem-calc(50 0 30 0);
-
-    @media #{$small-only}{
-        padding-top: rem-calc(20);
-        margin-top: 0px;
-    }
-}
-
-// main
-.main {}
-
-.content .featured-image{
-    @media #{$small}{
-        margin-left: 0px;
-    }
-
-    p{
-        background: none;
-        color: #555;
-        padding: 15px 0px;
-    }
-
-    img{
-        width: 100%;
-    }
-}
-// end page styles
-
-.skip-link {
-    left:-999px;
-    position:absolute;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:scroll;
-    z-index:-999;
-}
-.skip-link:focus, .skip-link:active {
-    color: #fff;
-    background-color:#000;
-    left: auto;
-    top: auto;
-    width: 30%;
-    height: auto;
-    overflow:auto;
-    margin: 10px 35%;
-    padding:5px;
-    border-radius: 15px;
-    border:4px solid yellow;
-    text-align:center;
-    font-size:1.2em;
-    z-index:999;
-}
-
-
 
 
 
@@ -182,6 +93,7 @@ dl.tabs.vertical{
     }
 }
 
+
 div.tabs-content.vertical{
     border-bottom: 1px solid $border-color;
     border-left: 1px solid $border-color;
@@ -216,6 +128,9 @@ div.tabs-content.vertical{
 
 // end global UI style overwrite
 
+
+
+
 // hacky way to prevent mobile devices from zooming in on input elements
 @media #{$small}{
   select,
@@ -240,12 +155,15 @@ input[type="submit"]{
     border-radius: 0px;
 }
 
+
 body .panel.callout{
     border: 0px solid #CCC;
     background: #f5f5f5;
 }
 
-// begin subnav
+
+
+// begin subnav (horizontal nav below promary top bar nav)
 dl.sub-nav{
     background: none;
     border-bottom: 1px solid $border-color;
@@ -282,36 +200,10 @@ pre {
     display: inline;
 }
 
-/*sidenav*/
-.side-nav{
-
-    h2,h3,h4,h5,h6{
-        font-size: $side-nav-heading-size;
-        margin-top: 0px;
-        text-transform: uppercase;
-    }
-
-    li{
-
-        ul{
-            margin-top: rem-calc(7);
-            list-style-type: none;
-
-            li{
-                a{
-                    font-size: rem-calc(14);
-                }
-            }
-        }
-    }
-}
-/*sidenav*/
 
 
-// top bar
-.top-bar-section .has-form{
-    padding-top: 10px;
-}
+
+
 
 // orbit slider
 @media #{$small-only}{
