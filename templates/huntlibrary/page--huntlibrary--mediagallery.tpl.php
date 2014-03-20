@@ -50,19 +50,19 @@
 					}
 				?>
 			</div>
+
+			<?php if (!empty($page['sidebar_first'])): ?>
+	            <aside id="subnav" role="complementary" class="medium-3 <?= $sidebar_left; ?> l-sidebar-first columns sidebar">
+	                <?php print render($page['sidebar_first']); ?>
+	            </aside>
+	        <?php endif; ?>
+
+	        <?php if (!empty($page['sidebar_second'])): ?>
+	            <aside role="complementary" class="medium-3 l-sidebar-second columns sidebar">
+	                <?php print render($page['sidebar_second']); ?>
+	            </aside>
+	        <?php endif; ?>
 		</main>
-
-		<?php if (!empty($page['sidebar_first'])): ?>
-            <aside id="subnav" role="complementary" class="medium-3 <?= $sidebar_left; ?> l-sidebar-first columns sidebar">
-                <?php print render($page['sidebar_first']); ?>
-            </aside>
-        <?php endif; ?>
-
-        <?php if (!empty($page['sidebar_second'])): ?>
-            <aside role="complementary" class="medium-3 l-sidebar-second columns sidebar">
-                <?php print render($page['sidebar_second']); ?>
-            </aside>
-        <?php endif; ?>
 	</div>
 </div>
 <?php include DRUPAL_ROOT."/".$GLOBALS['theme_path']."/includes/footer.html"; ?>
