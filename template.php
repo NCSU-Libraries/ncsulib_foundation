@@ -133,7 +133,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
     $variables['page']['content']['system_main']['nodes'][$node_id]['#node']->sidebar_first = TRUE;
   }
 
-  // Add custom JS
+  // Add custom JS/CSS
   $url_comp = explode('/', request_uri());
 
   // for entire directory (ex: /find)
@@ -159,9 +159,12 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
       break;
     case 'huntlibrary--namingopportunities':
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/jquery.imagemapster.min.js', 'file');
+      drupal_add_css('sites/all/themes/ncsulib_foundation/styles/blitzer/jquery-ui-1.10.4.custom.min.css', 'file');
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery-ui-1.10.4.custom.min.js', 'file');
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery.imagemapster.min.js', 'file');
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/namingopps.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/jquery.tablesorter.min.js', 'file');
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery.tablesorter.min.js', 'file');
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/namingopps.js', 'file');
       break;
   }
 

@@ -15,7 +15,8 @@
 /* Microformats */
 /* tables */
 /* line 8, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page table.tablesorter {
+table.tablesorter {
+  display: none;
   font-family: arial;
   background-color: #CDCDCD;
   margin: 10px 0pt 15px;
@@ -23,81 +24,93 @@
   width: 100%;
   text-align: left;
 }
+@media only screen and (max-width: 47.937em) {
+  /* line 8, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+  table.tablesorter {
+    display: block;
+  }
+}
 
-/* line 17, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page table.tablesorter thead tr th, #page table.tablesorter tfoot tr th {
+/* line 21, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
   background-color: #e6EEEE;
   border: 1px solid #FFF;
   font-size: 8pt;
   padding: 4px;
 }
 
-/* line 24, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page table.tablesorter thead tr .header {
-  background-image: url(/sites/default/files/huntlibrary/css/bg.gif);
+/* line 28, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+table.tablesorter thead tr .header {
+  background-image: url(/sites/all/themes/ncsulib_foundation/styles/blitzer/images/bg.gif);
   background-repeat: no-repeat;
   background-position: center right;
   cursor: pointer;
 }
 
-/* line 31, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page table.tablesorter tbody td {
+/* line 35, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+table.tablesorter tbody td {
   color: #3D3D3D;
   padding: 4px;
   background-color: #FFF;
   vertical-align: top;
 }
 
-/* line 38, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page table.tablesorter tbody tr.odd td {
+/* line 42, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+table.tablesorter tbody tr.odd td {
   background-color: #F0F0F6;
 }
 
-/* line 42, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page table.tablesorter thead tr .headerSortUp {
-  background-image: url(/sites/default/files/huntlibrary/css/asc.gif);
-}
-
 /* line 46, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page table.tablesorter thead tr .headerSortDown {
-  background-image: url(/sites/default/files/huntlibrary/css/desc.gif);
+table.tablesorter thead tr .headerSortUp {
+  background-image: url(/sites/all/themes/ncsulib_foundation/styles/blitzer/images/asc.gif);
 }
 
 /* line 50, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+table.tablesorter thead tr .headerSortDown {
+  background-image: url(/sites/all/themes/ncsulib_foundation/styles/blitzer/images/desc.gif);
+}
+
+/* line 54, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
   background-color: #8dbdd8;
 }
 
-/* line 56, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page #hunt-subpagenav {
+/* line 60, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+#hunt-subpagenav {
   width: 162px;
 }
 
-/* line 60, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page #hunt-subpagenav li {
+/* line 64, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+#hunt-subpagenav li {
   width: 153px;
 }
 
-/* line 64, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page div.floor {
+/* line 68, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+div.floor {
   display: block;
-  /*width: 737px;*/
+  width: 737px;
   margin-top: 4px;
 }
+@media only screen and (max-width: 47.937em) {
+  /* line 68, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+  div.floor {
+    display: none;
+  }
+}
 
-/* line 70, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .ui-tabs .ui-tabs-nav {
+/* line 77, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.ui-tabs .ui-tabs-nav {
   height: 37px;
 }
 
-/* line 74, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content .ui-tabs-panel ul {
+/* line 81, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main .ui-tabs-panel ul {
   line-height: 1;
   vertical-align: top;
 }
 
-/* line 79, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content .data-targets li {
+/* line 87, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main .data-targets li {
   margin: 0 5px 0 0;
   line-height: 1.1;
   text-align: right;
@@ -106,9 +119,8 @@
   padding: 0;
   background: none;
 }
-
-/* line 89, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .data-targets li span {
+/* line 96, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main .data-targets li .name-opp {
   font-style: normal;
   float: left;
   width: 73%;
@@ -116,9 +128,8 @@
   text-align: left;
   color: black;
 }
-
-/* line 98, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content .data-targets li a {
+/* line 105, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main .data-targets li a {
   padding: 6px 8px;
   font-style: normal;
   color: #737373;
@@ -128,38 +139,38 @@
   /*font-size: 87%;*/
 }
 
-/* line 109, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page #tabs-1 ul {
+/* line 117, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+#tabs-1 ul {
   margin: 34px 0 0 46px;
 }
 
-/* line 113, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page #tabs-1 ul li a {
+/* line 121, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+#tabs-1 ul li a {
   font-size: 1.5em;
   line-height: .9;
   font-weight: 700;
 }
 
-/* line 119, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page #tabs {
+/* line 127, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+#tabs {
   margin-bottom: 60px;
   overflow: auto;
-  background: url(/sites/default/files/huntlibrary/css/noisy_grid.png);
+  background: url(/sites/all/themes/ncsulib_foundation/styles/blitzer/images/noisy_grid.png);
 }
 
-/* line 130, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .floorplan {
+/* line 138, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.floorplan {
   float: left;
   margin: 0 25px 10px;
 }
 
-/* line 135, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content {
+/* line 143, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main {
   background: #fff;
 }
 
-/* line 139, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content .ui-tabs-panel .data-targets {
+/* line 147, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main .ui-tabs-panel .data-targets {
   overflow: hidden;
   margin-top: 10px;
   background: #FBFBFB;
@@ -170,8 +181,8 @@
   box-shadow: 0 0 4px #000;
 }
 
-/* line 150, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .data-targets li a:hover, #page .data-targets .highlighter {
+/* line 158, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.data-targets li a:hover, .data-targets .highlighter {
   background: rgba(255, 0, 0, 0.3);
   /*previous yellow color: rgba(255, 208, 22, 0.38)*/
   border-radius: .3em;
@@ -179,32 +190,32 @@
   text-decoration: none;
 }
 
-/* line 158, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .data-targets li a.reserved:hover, #page .data-targets .highlighter-reserved {
+/* line 166, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.data-targets li a.reserved:hover, .data-targets .highlighter-reserved {
   background: rgba(23, 41, 176, 0.24);
 }
 
-/* line 162, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .ui-widget-header .ui-state-hover {
+/* line 170, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.ui-widget-header .ui-state-hover {
   background: #fff;
   color: #c00;
 }
 
-/* line 167, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page #master_wrap_0 {
+/* line 175, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+#master_wrap_0 {
   margin-bottom: 10px;
 }
 
-/* line 171, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page h3 {
+/* line 179, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main h3 {
   text-align: center;
   font-size: 24px;
   text-transform: uppercase;
   color: #B80D0D;
 }
 
-/* line 178, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content .instructions {
+/* line 186, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main .instructions {
   margin: -60px 11px 0 21px;
   padding: 10px 10px 10px 20px;
   margin-top: -60px;
@@ -214,45 +225,45 @@
   border-bottom-left-radius: .5em;
   border-bottom-right-radius: .5em;
   line-height: 1;
-  background: url(/sites/default/files/huntlibrary/css/arrow-link.png) no-repeat 7px 12px;
+  background: url(/sites/all/themes/ncsulib_foundation/styles/blitzer/images/arrow-link.png) no-repeat 7px 12px;
 }
 
-/* line 191, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page #mapster_wrap_1 img, #page #mapster_wrap_1 canvas {
+/* line 199, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+#mapster_wrap_1 img, #mapster_wrap_1 canvas {
   margin-left: 27px;
 }
 
 /**
  * jQuery UI overrides
  */
-/* line 198, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .ui-state-active a, #page .ui-state-active a:link, #page .ui-state-active a:visited {
+/* line 206, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
   color: #B80D0D;
 }
 
 /**
  * jQuery Tablesorter plugin overrides and styles needed to enable switching views between tabs and table
  */
-/* line 205, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page table.tablesorter {
+/* line 213, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+table.tablesorter {
   /*margin-left: 182px;*/
   /*width: 726px;*/
   /*position: absolute;*/
   /*top: 389px;*/
 }
 
-/* line 212, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .tablesorter td, #page .tablesorter .header {
+/* line 220, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.tablesorter td, .tablesorter .header {
   border: 1px solid #cfcfcf;
 }
 
-/* line 216, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .extra-height {
+/* line 224, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.extra-height {
   height: 2378px;
 }
 
-/* line 220, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content .no-utility-nav li {
+/* line 228, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main .no-utility-nav li {
   list-style: none;
   display: inline;
   cursor: pointer;
@@ -263,45 +274,51 @@
   border: 1px solid;
   padding: 1px 6px 1px 14px;
   background-clip: padding-box;
-  background: #e9e9e9 url("/sites/default/files/huntlibrary/css/arrow-link.png") no-repeat 4px 46%;
+  background: #e9e9e9 url("/sites/all/themes/ncsulib_foundation/styles/blitzer/images/arrow-link.png") no-repeat 4px 46%;
 }
 
-/* line 234, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content .no-utility-nav li:hover {
+/* line 242, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main .no-utility-nav li:hover {
   color: #000;
-  background: rgba(255, 0, 0, 0.63) url("/sites/default/files/huntlibrary/css/arrow-link.png") no-repeat 4px 46%;
+  background: rgba(255, 0, 0, 0.63) url("/sites/all/themes/ncsulib_foundation/styles/blitzer/images/arrow-link.png") no-repeat 4px 46%;
 }
 
-/* line 239, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content .no-utility-nav {
+/* line 247, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main .no-utility-nav {
   border-bottom: 1px solid #CCC;
   height: 36px;
   /*    margin-left: 184px;
      margin-right: -10px;*/
 }
+@media only screen and (max-width: 47.937em) {
+  /* line 247, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+  .main .no-utility-nav {
+    display: none;
+  }
+}
 
-/* line 246, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content ul li.no-util-all {
+/* line 257, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main ul li.no-util-all {
   margin-right: 0;
 }
 
-/* line 250, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .main-content p.note {
+/* line 261, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.main p.note {
   margin-left: 323px;
 }
 
-/* line 254, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .ui-tabs .ui-tabs-panel {
+/* line 265, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.ui-tabs .ui-tabs-panel {
   padding: 14px 4px 0 4px;
 }
 
-/* line 258, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .ui-tabs .ui-tabs-nav li {
+/* line 269, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.ui-tabs .ui-tabs-nav li {
   top: 6px;
   margin: 0 .2em 1px .2em;
 }
 
-/* line 262, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+/* line 273, ../../../scss/custom/huntlibrary--namingopportunities.scss */
 .other-ways {
   position: absolute;
   bottom: 7px;
@@ -309,9 +326,14 @@
   width: 368px;
 }
 
-/* line 269, ../../../scss/custom/huntlibrary--namingopportunities.scss */
-#page .other-ways h3, #page h3.other-way {
+/* line 280, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.other-ways h3, h3.other-way {
   font-size: 1em;
   text-align: center;
   text-transform: none;
+}
+
+/* line 287, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  font-size: 0.7125rem;
 }
