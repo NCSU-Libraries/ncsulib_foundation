@@ -135,8 +135,9 @@ function ncsulib_foundation_preprocess_page(&$variables) {
 
   // Add custom JS
   $url_comp = explode('/', request_uri());
-  $current_path = $url_comp[1]; //current_path();
-  switch ($current_path) {
+
+  // for entire directory (ex: /find)
+  switch ($url_comp[1]) {
     case 'techlending':
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
       break;
@@ -144,6 +145,14 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
       break;
   }
+
+  // for two dirs deep (ex: find/books)
+  switch ($url_comp[1] . '/' . $url_comp[2]) {
+    case 'borrow/privileges':
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/borrow-privileges.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+      break;
+  }
+
 
 } // End tremendous template_preprocess_page function
 
