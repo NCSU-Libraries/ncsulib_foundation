@@ -24,11 +24,12 @@
     $phone = $node->field_contact_phone['und'][0]['value'];
     $email = $node->field_contact_email['und'][0]['email'];
 ?>
+<h1><?php echo $title; ?></h1>
 <div id="event-node" class="row">
     <div class="columns large-7">
         <div class="event-meta">
-            <h5><?php echo $date = ($end) ? $start . ' to ' . $end . ', '.$start_time : $start.', '.$start_time; ?></h5>
-            <h5><?php echo '<div class="at">at the <a href="/node/' . $space_nid  . '">' . $space_node->title . '</a>'; ?></h5>
+            <h5><strong>When:</strong> <?php echo $date = ($end) ? $start . ' to ' . $end . ', '.$start_time : $start.', '.$start_time; ?></h5>
+            <h5 class="subheader"><strong>Where:</strong> <?php echo 'at the <a href="/node/' . $space_nid  . '">' . $space_node->title . '</a>'; ?></h5>
         </div>
         <?php echo $node->body['und'][0]['value']; ?>
         <div class="contact">
