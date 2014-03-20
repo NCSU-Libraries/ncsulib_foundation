@@ -60,5 +60,13 @@
   </main>
   <!--/.main-->
 
+   <div class="row above-footer">
+       <div class="medium-12 columns">
+            <?php print render($page['above_footer']); ?>
+       </div>
+   </div>
+   <!-- /.above-footer -->
+
+
 </div>
 <!--/.page -->
