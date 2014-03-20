@@ -262,11 +262,6 @@ function ncsulib_foundation_more_link ($array) {
  * -EO 3.19.14
  */
 function ncsulib_foundation_preprocess_block(&$variables) {
-  if ($variables['block_html_id'] == 'block-views-upcoming-events-block-3') {
-    $variables['classes_array'][] = 'medium-8';
-    $variables['classes_array'][] = 'columns';
-    // $variables['elements']['#block']->subject = date('l, M jS', strtotime('today'));
-  }
   // adding classes to blocks on /scrc
   if ($variables['block_html_id']  == "block-aggregator-feed-8") {
     $variables['classes_array'][] = 'medium-8';
