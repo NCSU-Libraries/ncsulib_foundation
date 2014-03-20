@@ -1,0 +1,311 @@
+.event-item{
+    margin-bottom: 30px;
+}
+
+
+/*
+.event-image {
+    float:left;
+    margin: 0px 4% 0px 0px;
+    width:16%;
+}
+.event-image img {
+    border: 1px solid #DCDCDC;
+    height: auto;
+    padding: 5px;
+    width:100%;
+}
+.event-content {
+    float:left;
+    width:76%;
+}
+.event-content h2.event-title a {
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    margin: 0px;
+    padding: 0px;
+}
+.event-content h2.event-title {
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+}
+.event-content h4 {
+    color: #999999;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.views-field {
+    display: block;
+    line-height: 1.2;
+}
+.view-slideshows .views-field-title a {
+    font-size: 1.4em;
+}
+.view-slideshows .views-field {
+    margin-bottom: 6px;
+}
+#page .view-slideshows .field-content {
+    font-size: 1.2em;
+}
+.block-block, .block-views {
+    margin-bottom: 30px;
+}
+.view-upcoming-events .views-row {
+    clear: left;
+    margin: 20px 0 30px;
+    overflow: hidden;
+    /*padding: 1px 0 0 18px;*/
+    width: 100%;
+}
+.view-empty {
+    margin: 57px 0 0 66px;
+    color: #AAA;
+}
+.row-month {
+    display: block;
+    text-align: center;
+}
+#page p.row-month-date {
+    float: left;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    border: 1px solid;
+    padding: 10px 20px;
+    background: #CCC;
+    color: #8B8B8B;
+    box-shadow: 1px 1px 1px #8B8B8B;
+}
+.row-date {
+    text-align: center;
+    display: block;
+}
+.views-row {
+    clear: left;
+}
+.view-upcoming-events .views-field-title {
+    margin: 0px 17px 10px 92px;
+    display: block;
+    line-height: 1.5;
+}
+@media only screen and (max-width : 767px) {
+    .view-upcoming-events .views-field-title {
+        float: left;
+        line-height: 1.5;
+        margin: 0px;
+        width: 55%;
+    }
+}
+.view-upcoming-events .views-field-field-time,
+.view-upcoming-events .views-field-field-event-start,
+.view-upcoming-events .views-field-field-space {
+    font-size: 0.85em;
+    overflow-x: auto;
+    padding-left: 0px;
+}
+.views-field-field-time ul,
+.views-field-field-event-start ul,
+.views-field-field-space ul{
+    list-style-type: none;
+}
+.page .view-id-upcoming_events .views-field-title a {
+    font-size: 1.3em;
+    line-height: 1;
+}
+.date-display-single, .views-field-field-space, .grey {
+    color: rgb(153, 153, 153);
+}
+
+
+.block {
+    line-height: 1;
+}
+.page #subnav .region-sidebar-first .block {
+    margin-bottom: 20px;
+}
+.page #subnav #block-block-81 h2 {
+    padding: 5px 0 5px 5px;
+    margin: -5px -5px 6px -5px;
+    background: gainsboro;
+    color: black;
+    text-transform: none;
+}
+.block-views-upcoming-events-block-3{
+    float: left;
+    width: 100%;
+}
+.block-views-upcoming-events-block-3 > h2 {
+    border-bottom: 1px solid gainsboro;
+    padding: 6px;
+    margin: -5px;
+    background: gainsboro;
+}
+.block-views-slideshows-block-6{
+    display: block;
+}
+.views-slideshow-controls-bottom {
+    text-align: left;
+    position: relative;
+    top: -27px;
+    z-index: 50;
+    margin-left: 6px;
+}
+.views_slideshow_controls_text_previous {
+    height: 17px;
+    width: 17px;
+    background: url('/artbox/includes/artbox-prev.png') no-repeat;
+    display: inline-block;
+    background-size: 17px 17px;
+    opacity: .5;
+}
+.views_slideshow_controls_text_pause.control-resume {
+    background-image: url('/artbox/includes/artbox-resume.png');
+}
+.views_slideshow_controls_text_pause {
+    height: 17px;
+    width: 17px;
+    background-image: url('/artbox/includes/artbox-pause.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 17px 17px;
+    opacity: .5;
+}
+.views_slideshow_controls_text_next {
+    height: 17px;
+    width: 17px;
+    background: url('/artbox/includes/artbox-next.png') no-repeat;
+    display: inline-block;
+    background-size: 17px 17px;
+    opacity: .5;
+}
+.views_slideshow_controls_text_previous:hover, .views_slideshow_controls_text_pause:hover, .views_slideshow_controls_text_next:hover {
+    opacity: 1;
+}
+.views-slideshow-controls-bottom a {
+    display: none;
+}
+
+.grid-8.views-field-field-image {
+    margin-right: -2px;
+}
+.view-slideshows {
+    /*height: 250px;*/
+}
+.page .views-slideshow-cycle-main-frame-row ul {
+    margin: 0;
+    padding: 0;
+}
+.page .views-slideshow-cycle-main-frame-row li {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.view-slideshows .views-field {
+    margin-bottom: 0;
+}
+.view-slideshows .views-field-title {
+    margin-bottom: 10px;
+}
+#block-system-main, #node-13445 {
+    margin-bottom: 0;
+}
+.page .field-content ul li {
+    background-position-y: 3px;
+}
+.views-field-field-image-for-event {
+    float:left;
+    margin-right:18px;
+    width: 15%;
+}
+@media only screen and (max-width : 767px) {
+    .views-field-field-image-for-event {
+        float: left;
+        margin-right: 5%;
+        width: 40%;
+    }
+}
+.views-field-field-image-for-event img {
+    height: auto;
+    width:100%;
+}
+.artbox-event {
+    float: left;
+    margin-right: 3%;
+    width: 57%;
+}
+.artbox-event img{
+    width: 100%;
+}
+.override-slidetext {
+    float: right;
+    margin-left: 0;
+    overflow: hidden;
+    width: 40%;
+}
+
+@media only screen and (max-width : 767px) {
+    .block-views-slideshows-block-6 .artbox-event {
+        float: none;
+        margin-bottom: 20px;
+        margin-right: 0%;
+        width: 100%;
+    }
+
+    .override-slidetext {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+
+/*calendar styles*/
+.page .calendar-calendar th.mini,
+.page .calendar-calendar td.mini {
+    background: #FFF;
+    border: 0px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 14.2857142%;
+}
+.page .calendar-calendar td.mini.today{
+    border: 1px solid #DDD;
+}
+.view .date-nav-wrapper .date-heading h3{
+    font-size: 1em;
+}
+.page .calendar-calendar td.mini a{
+    text-decoration: none;
+}
+
+.page #subnav .date-nav {
+    padding: 0px;
+}
+.page #subnav .date-nav ul li {
+    border-bottom: none;
+}
+.page #subnav .date-nav .date-prev {
+    background: none;
+    float: left;
+    margin: 0px;
+}
+.page #subnav .date-nav .date-prev a{
+    margin-left: 8px;
+}
+.page #subnav .date-nav .date-next {
+    background: none;
+    margin: 0px;
+    top: 0px;
+}
+.page #subnav .date-nav .date-next a{
+    /*float: left;*/
+    margin: 0px;
+    padding: 0 8px 0px 1px;
+}
+.calendar-calendar th.days{
+    background: #fff;
+    border: 0px;
+}
+*/
