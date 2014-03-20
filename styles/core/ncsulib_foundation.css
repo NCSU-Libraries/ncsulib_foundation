@@ -6148,12 +6148,12 @@ kbd {
 /* line 137, ../../scss/foundation/components/_pagination.scss */
 ul.pagination {
   display: block;
-  height: 1.5rem;
+  height: inherit;
   margin-left: -0.3125rem;
 }
 /* line 100, ../../scss/foundation/components/_pagination.scss */
 ul.pagination li {
-  height: inherit;
+  height: 1.5rem;
   color: #222222;
   font-size: 0.875rem;
   margin-left: 0.3125rem;
@@ -11544,6 +11544,11 @@ ul.orbit-slider li img {
 /* line 236, ../../scss/layout/_global-overrides.scss */
 ul.pagination {
   overflow: auto;
+}
+
+/* line 242, ../../scss/layout/_global-overrides.scss */
+.calendar-calendar td a {
+  color: #FFF;
 }
 
 /* end global styles*/
