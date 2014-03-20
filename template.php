@@ -134,16 +134,27 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   }
 
   // Add custom JS
-  $url_comp = explode('/', request_uri());
+  $url_comp = explode('/', request_path());
+  $url_comp = implode('--', $url_comp);
 
-  // for entire directory (ex: /find)
-  switch ($url_comp[1]) {
+  // target a specific single page
+  switch ($url_comp) {
     case 'techlending':
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
       break;
+    case 'huntlibrary--namingopportunities':
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/jquery.imagemapster.min.js', 'file');
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/namingopps.js', 'file');
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/jquery.tablesorter.min.js', 'file');
+      break;
+  }
+
+  // for entire directory (ex: /find)
+  switch ($url_comp[0]) {
     case 'styleguide':
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
       break;
+    // case 'huntlibar'
   }
 
   // for two dirs deep (ex: find/books)
