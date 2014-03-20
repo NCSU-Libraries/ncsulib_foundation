@@ -134,20 +134,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   }
 
   // Add custom JS
-  $url_comp = explode('/', request_path());
-  $url_comp = implode('--', $url_comp);
-
-  // target a specific single page
-  switch ($url_comp) {
-    case 'techlending':
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
-      break;
-    case 'huntlibrary--namingopportunities':
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/jquery.imagemapster.min.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/namingopps.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/jquery.tablesorter.min.js', 'file');
-      break;
-  }
+  $url_comp = explode('/', request_uri());
 
   // for entire directory (ex: /find)
   switch ($url_comp[0]) {
@@ -161,6 +148,20 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   switch ($url_comp[1] . '/' . $url_comp[2]) {
     case 'borrow/privileges':
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/borrow-privileges.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+      break;
+  }
+
+  // target a specific single page
+  $url_comp = explode('/', request_path());
+  $url_comp = implode('--', $url_comp);
+  switch ($url_comp) {
+    case 'techlending':
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+      break;
+    case 'huntlibrary--namingopportunities':
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/jquery.imagemapster.min.js', 'file');
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/namingopps.js', 'file');
+      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/jquery.tablesorter.min.js', 'file');
       break;
   }
 
