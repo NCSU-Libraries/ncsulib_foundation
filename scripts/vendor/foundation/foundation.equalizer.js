@@ -28,10 +28,11 @@
           vals = equalizer.find('[' + this.attr_name() + '-watch]'),
           firstTopOffset = vals.first().offset().top,
           settings = equalizer.data(this.attr_name(true)+'-init');
-      
+
       if (vals.length === 0) return;
       settings.before_height_change();
       equalizer.trigger('before-height-change');
+
       vals.height('inherit');
       vals.each(function(){
         var el = $(this);
@@ -40,7 +41,7 @@
         }
       });
       if (isStacked) return;
-      
+
       var heights = vals.map(function(){ return $(this).outerHeight() });
       if (settings.use_tallest) {
         var max = Math.max.apply(null, heights);
