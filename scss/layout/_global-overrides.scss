@@ -233,13 +233,19 @@ ul.orbit-slider li{
 ul.orbit-slider li img{
     width: 100%;
 }
-ul.pagination {
-    overflow:auto;
-
+.orbit-slider .orbit-caption a{
+    color: #FFF;
+    text-decoration: underline;
 }
 
-// calendar
-.calendar-calendar td a{
+
+// pagination
+ul.pagination {
+    overflow:auto;
+}
+
+// monthly calendar event
+.calendar-calendar td .contents a{
     color: #FFF;
 }
 
