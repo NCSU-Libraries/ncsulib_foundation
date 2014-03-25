@@ -15,5 +15,8 @@
 		<h4>Information</h4>
 		<p><?php echo $phone_node[0]['value']; ?></p>
 	</div>
+	<div class="notification">
+		<p><small>*After 10:00 p.m. a valid Wolfpack One Card is required for access to the Libraries.</small></p>
+	</div>
 </div>
 

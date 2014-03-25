@@ -4,6 +4,7 @@
  * Additionally, lays out real-time hours for each library and service
  */
 ?>
+
 <ul id="libraries">
 	<?php
 		// load library json
@@ -18,7 +19,7 @@
 		<a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$library->name.'/'.'general'; ?>" <?php if(segment(2)=='general' && segment(1)==$library->name) echo 'class="nav-active"'; ?>>
 			<ul class="schedule">
 				<li class="location">
-					<p class="location-title"><?php echo $library->node_title; ?></p>
+					<p class="location-title"><?php echo $library->node_title; if($library->node_title == 'D. H. Hill Library' || $library->node_title == 'James B. Hunt Jr. Library'){echo '*';}?></p>
 				</li>
 				<li class="availability">
 					<?php $time = hours_get_library_hours_status($library->nid, '22485',$real_time); ?>
@@ -55,9 +56,8 @@
 </ul>
 
 <!-- pdf link -->
-<h3>Download Hours Schedule</h3>
+<h2>Download Hours Schedule</h2>
 <ul id="hours-download">
-	<li><img src="/images/pdf.gif"><a href="/documents/hours/2013-fall-hours.pdf">Fall 2013 hours</a></li>
 	<li><img src="/images/pdf.gif"><a href="/documents/hours/2014-spring-hours.pdf">Spring 2014 hours</a></li>
 </ul>
 
