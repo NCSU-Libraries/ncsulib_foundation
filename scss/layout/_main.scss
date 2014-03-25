@@ -38,26 +38,13 @@ html #content{
         padding-top: rem-calc(20);
         margin-top: 0px;
     }
-}
 
-// main
-.main {}
+    .content{
 
-.content .featured-image{
-    @media #{$small}{
-        margin-left: 0px;
-    }
 
-    p{
-        background: none;
-        color: #555;
-        padding: 15px 0px;
-    }
-
-    img{
-        width: 100%;
     }
 }
+
 // end page styles
 
 .skip-link {
@@ -85,6 +72,7 @@ html #content{
     font-size:1.2em;
     z-index:999;
 }
+
 
 
 
