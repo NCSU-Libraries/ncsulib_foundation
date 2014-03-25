@@ -281,6 +281,8 @@ $include-html-classes: false;
 
 			@media #{$small-only}{
 				margin-left: 0px;
+				padding-right: 0px;
+				text-align: center;
 				width: 100%;
 			}
 
@@ -359,39 +361,59 @@ $include-html-classes: false;
 	margin-bottom: emCalc(30);
 
 	#available-links{
+		width: 100%;
 
-		li{
-			line-height: 1em;
-			margin-left: emCalc(10);
-			padding: emCalc(13) 0px 0px 0px;
-
-			@media #{$small-only}{
-				padding-top: 0px;
-			}
-
-			h2{
-				margin-top: rem-calc(5);
-			}
-
-			a{
-				border-left: 1px solid #CCC;
-				font-size: 0.95em;
-				margin-top: emCalc(10);
-				margin-left: emCalc(0);
-				padding: emCalc(3) 0px emCalc(3) emCalc(10);
-			}
+		@media #{$small-only}{
+			margin-bottom: rem-calc(30);
 		}
 
-		li:first-child{
-			margin-left: emCalc(20);
-			padding-top: 0px;
+		h2{
+			display: inline;
+		}
 
-			@media #{$small-only}{
-				width: 100%;
+		ul{
+			display: inline-block;
+			margin: 0px;
+
+			li{
+				list-style-type: none;
+				line-height: 1em;
+				float: left;
+				margin-left: emCalc(10);
+				padding: emCalc(13) 0px 0px 0px;
+
+				@media #{$small-only}{
+					padding-top: 0px;
+				}
+
+				h2{
+					margin-top: rem-calc(5);
+				}
+
+				a{
+					border-left: 1px solid #CCC;
+					font-size: 0.95em;
+					margin-top: emCalc(10);
+					margin-left: emCalc(0);
+					padding: emCalc(3) 0px emCalc(3) emCalc(10);
+				}
 			}
-			a{
-				border: 0px;
-				margin-left: 0px;
+
+			li:first-child{
+				// margin-left: emCalc(20);
+				// padding-top: 0px;
+
+				@media #{$small-only}{
+					margin-left: 0px;
+
+					a{
+						padding-left: 0px;
+					}
+				}
+				a{
+					border: 0px;
+					margin-left: 0px;
+				}
 			}
 		}
 	}
