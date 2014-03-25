@@ -6,12 +6,9 @@ var allLinks = [];            // to apply jQuery view switch to two links
   allLinks[1] = '.text-link-all';
 
 jQuery(function($) {
-  $('.no-util-fp').hide(0);
+  $('.no-util-fp').hide();
 
-  //fancybox modal window activate on click
-  for (i=2; i<8; i++){
-    $("#tabs-"+i+" li a").fancybox();
-  }
+
 
   //jQuery UI tabbed interface
   $('#tabs').tabs();
@@ -19,7 +16,7 @@ jQuery(function($) {
   //bind a tab switch to an area click on the map of the building
   $('[data-tab]').click(function() {
     tabNum = $(this).attr('data-tab');
-      $('#tabs').tabs('select', tabNum);
+      $('#tabs').tabs('load', tabNum);
   });
 
   //hover over a floor and highlight the corresponding tab
@@ -114,7 +111,8 @@ jQuery(function($) {
   // creating table from existing lists in tabbed view of interface
   $('ul.data-targets a').each(function() {
     floorForTable = $(this).parents('ul').attr('data-image') === "floor6" ? "Grounds" : $(this).parents('ul').attr('data-image').replace(/floor/g, "Floor ");
-    space = $(this).find('span').text();
+    space = $('span:first-child', this).text();
+    price = $('.price', this).text();
     botCount++;  // iterator used to filter out certain naming opportunities
     // console.log(space + ' ' + botCount);
     if  (space.match(/bot/gi) !== null ) {
@@ -126,12 +124,10 @@ jQuery(function($) {
     // don't count certain items as they appear on multiple floors
     if ((botCount > 30 && botCount < 36) || botCount == 39 || botCount == 40 || botCount == 43){
     } else {
-      $('.all-spaces tbody').append('<tr><td><a class="fancy-space" href="'+ $(this).attr('href') +'">' + space +'</a.</td><td>'+ floorForTable +'</td><td>'+ $(this).contents(':not(span)').text()+'</td></tr>');
+      $('.all-spaces tbody').append('<tr><td><a data-reveal-id="opp-modal" data-reveal-ajax="true" class="reveal-space" href="'+ $(this).attr('href') +'">' + space +'</a></td><td>'+ floorForTable +'</td><td>'+ price +'</td></tr>');
     }
   });
-  $(".fancy-space").fancybox({
-    'hideOnContentClick': true
-    });
+
 
   // add parser through the tablesorter addParser method
     $.tablesorter.addParser({
@@ -166,7 +162,7 @@ jQuery(function($) {
       widgets: ['zebra'],
       headers: {  1: {sorter:"floors"},
                   2: {sorter:"cost"}},
-      sortList: [[2,0]] }).hide();
+      sortList: [[2,0]] });
 
   // Show the new table if a user clicks on the corresponding toggle
   for (var i = 0; i < allLinks.length; i++) {
@@ -175,8 +171,8 @@ jQuery(function($) {
         $('.floor').hide(0, function() {
           $('.tablesorter').slideDown(0);
           $('.main-content').addClass('extra-height');
-          $('.no-util-all').hide(0);
-          $('.no-util-fp').slideDown(0);
+          $('.no-util-all').hide();
+          $('.no-util-fp').show();
         });
       }
     });
@@ -198,5 +194,6 @@ jQuery(function($) {
       });
     }
   });
+    $('.data-targets li a').attr('data-reveal-id', 'opp-modal').attr('data-reveal-ajax', 'true');
 
 });

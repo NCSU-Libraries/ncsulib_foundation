@@ -399,8 +399,14 @@
   </main>
   <!--/.main-->
 
+  <div class="row above-footer">
+       <div class="medium-12 columns">
+            <?php print render($page['above_footer']); ?>
+       </div>
+   </div>
+   <!-- /.above-footer -->
 
-  <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
+
 </div>
 <!--/.page -->
 

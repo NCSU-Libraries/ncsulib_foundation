@@ -11,7 +11,8 @@ module.exports = function(grunt) {
         preserveComments: false
       },
       build: {
-        src: ['scripts/modernizr-tests.js',
+        src: ['scripts/foundation.min.js',
+        'scripts/modernizr-tests.js',
         'scripts/primary-nav.js',
         'scripts/search-bar.js',
         'scripts/vendor/jquery.autocomplete.js',
