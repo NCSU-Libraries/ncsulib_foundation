@@ -67,11 +67,13 @@
 
             <!-- middle row -->
             <section id="tier-two">
-                <ul id="available-links" class="inline-list">
-                    <li><h2>Available Now</h2></li>
-                    <li><a href="/reservearoom/">Reserve a Room</a></li>
-                    <li><a href="/techlending/">Borrow Technology</a></li>
-                </ul>
+                <div id="available-links">
+                    <h2>Available Now</h2>
+                    <ul>
+                        <li><a href="/reservearoom/">Reserve a Room</a></li>
+                        <li><a href="/techlending/">Borrow Technology</a></li>
+                    </ul>
+                </div>
 
                 <!-- availability tabs stub -->
                 <div id="availability">
