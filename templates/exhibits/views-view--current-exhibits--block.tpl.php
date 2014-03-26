@@ -28,6 +28,8 @@
 		$space_node = node_load($space[0]['entity']->nid);
 		$building_field = field_get_items('node', $space_node, 'field_building_name');
 		$library = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
+		$ongoing = field_get_items('node', $node, 'field_ongoing');
+		$ongoing = $ongoing[0]['value'];
 	?>
 		<dd class="exhibit-item row">
 			<?php if($img_url): ?>
@@ -40,8 +42,11 @@
 				<?php if($space_title): ?>
 				<h4>Where: <a href="<?php echo url('node/'.$where[0]['target_id']); ?>"><?php echo $space_title; ?></a> at <?php echo $library['#markup']; ?></h4>
 				<?php endif; ?>
-				<?php if($start_time || $end_time): ?>
-				<h4>When: <?php echo $start_time . ' - ' . $end_time; ?></h4>
+
+				<?php if(($start_time || $end_time) && !$ongoing): ?>
+				<h4 class="subheader">When: <?php echo $start_time . ' - ' . $end_time; ?></h4>
+				<?php else: ?>
+				<h4 class="subheader">When: Ongoing</h4>
 				<?php endif; ?>
 				<?php if($body): ?>
 				<?php echo $body; ?>
