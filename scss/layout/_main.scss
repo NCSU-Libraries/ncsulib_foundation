@@ -16,7 +16,7 @@ div.workbench-info-block{
 h1{ font-size: $h1-font-size; margin-top: 0px; }
 h2{ font-size: $h2-font-size;}
 h3{ font-size: $h3-font-size;}
-h4{
+h4, h4.subheader{
     font-size: $h4-font-size*0.75;
     font-weight: 900;
     text-transform: uppercase;

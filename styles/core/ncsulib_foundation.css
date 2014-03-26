@@ -10426,7 +10426,7 @@ h3 {
 }
 
 /* line 19, ../../scss/layout/_main.scss */
-h4 {
+h4, h4.subheader {
   font-size: 0.98438rem;
   font-weight: 900;
   text-transform: uppercase;
