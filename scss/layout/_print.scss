@@ -1,0 +1,43 @@
+@media print {
+	// homepage
+	#search-tabs,
+	footer,
+	.orbit-prev,
+	.orbit-next,
+	.feedback-form,
+	#nav-toggle,
+	#primary-nav{
+		display: none;
+	}
+
+	// logo
+	.name{
+		display: none;
+	}
+	#logo{
+		height: 40px;
+	}
+
+	// tabs
+	.tabs-content > .content{
+		display: block;
+	}
+
+	// orbit slider
+	.orbit-container{
+
+		.orbit-slides-container{
+			height: auto !important;
+
+			li{
+				margin: 0px;
+				position: relative;
+			}
+		}
+
+		.orbit-slides-container > *{
+			transform: none;
+		}
+	}
+}
+
