@@ -1,4 +1,3 @@
-/* DV: By the Numbers */
 /**
  * This file is used for extending existing type styles into custom css
  */
@@ -14,16 +13,24 @@
 /* Abbreviations */
 /* Blockquotes */
 /* Microformats */
-/* line 7, ../../../scss/custom/bythenumbers.scss */
+/* line 6, ../../../scss/custom/bythenumbers.scss */
 .view {
   width: 100%;
   margin: 0;
   max-width: 62.5rem;
-  overflow: hidden;
   *zoom: 1;
 }
+/* line 145, ../../../scss/foundation/components/_global.scss */
+.view:before, .view:after {
+  content: " ";
+  display: table;
+}
+/* line 146, ../../../scss/foundation/components/_global.scss */
+.view:after {
+  clear: both;
+}
 @media only screen and (min-width: 48em) {
-  /* line 10, ../../../scss/custom/bythenumbers.scss */
+  /* line 9, ../../../scss/custom/bythenumbers.scss */
   .view .views-row.dataviews {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
