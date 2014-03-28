@@ -137,18 +137,21 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   $url_comp = explode('/', request_uri());
 
   // for entire directory (ex: /find)
-  switch ($url_comp[0]) {
-    case 'styleguide':
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
-      break;
-    // case 'huntlibar'
-  }
+  if (isset($url_comp[0])) {
+    switch ($url_comp[0]) {
+      case 'styleguide':
+        drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        break;
+    }
 
-  // for two dirs deep (ex: find/books)
-  switch ($url_comp[1] . '/' . $url_comp[2]) {
-    case 'borrow/privileges':
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/borrow-privileges.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
-      break;
+    if (isset($url_comp[1]) && isset($url_comp[2])) {
+      // for two dirs deep (ex: find/books)
+      switch ($url_comp[1] . '/' . $url_comp[2]) {
+        case 'borrow/privileges':
+          drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/borrow-privileges.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+          break;
+      }
+    }
   }
 
   // target a specific single page
@@ -164,7 +167,6 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery.imagemapster.min.js', 'file');
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/namingopps.js', 'file');
       drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery.tablesorter.min.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/namingopps.js', 'file');
       break;
   }
 
