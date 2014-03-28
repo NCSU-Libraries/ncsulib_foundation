@@ -37,7 +37,7 @@
         case 'By Mediated Email Form':
           // Get the node items that we're interested in
           $reservation_url = isset($content['field_request_form_url'][0]['#element']['url']) ? $content['field_request_form_url'][0]['#element']['url'] :  '/huntlibrary/roomrequest';
-          print '<a class="reserve-button" href="' . $reservation_url . '">Request a reservation</a>';
+          print '<a class="reserve-button" href="' . $reservation_url . '">Request this room</a>';
           break;
 
         case 'By Room Reservation System':

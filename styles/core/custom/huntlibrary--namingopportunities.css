@@ -287,8 +287,6 @@ table.tablesorter {
 .main .no-utility-nav {
   border-bottom: 1px solid #CCC;
   height: 36px;
-  /*    margin-left: 184px;
-     margin-right: -10px;*/
 }
 @media only screen and (max-width: 47.937em) {
   /* line 247, ../../../scss/custom/huntlibrary--namingopportunities.scss */
@@ -297,28 +295,28 @@ table.tablesorter {
   }
 }
 
-/* line 257, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+/* line 256, ../../../scss/custom/huntlibrary--namingopportunities.scss */
 .main ul li.no-util-all {
   margin-right: 0;
 }
 
-/* line 261, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+/* line 260, ../../../scss/custom/huntlibrary--namingopportunities.scss */
 .main p.note {
   margin-left: 323px;
 }
 
-/* line 265, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+/* line 264, ../../../scss/custom/huntlibrary--namingopportunities.scss */
 .ui-tabs .ui-tabs-panel {
   padding: 14px 4px 0 4px;
 }
 
-/* line 269, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+/* line 268, ../../../scss/custom/huntlibrary--namingopportunities.scss */
 .ui-tabs .ui-tabs-nav li {
   top: 6px;
   margin: 0 .2em 1px .2em;
 }
 
-/* line 273, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+/* line 272, ../../../scss/custom/huntlibrary--namingopportunities.scss */
 .other-ways {
   position: absolute;
   bottom: 7px;
@@ -326,14 +324,14 @@ table.tablesorter {
   width: 368px;
 }
 
-/* line 280, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+/* line 279, ../../../scss/custom/huntlibrary--namingopportunities.scss */
 .other-ways h3, h3.other-way {
   font-size: 1em;
   text-align: center;
   text-transform: none;
 }
 
-/* line 287, ../../../scss/custom/huntlibrary--namingopportunities.scss */
+/* line 286, ../../../scss/custom/huntlibrary--namingopportunities.scss */
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
   font-size: 0.7125rem;
 }
