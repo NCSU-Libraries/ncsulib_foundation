@@ -1,0 +1,44 @@
+/**
+ * This file is used for extending existing type styles into custom css
+ */
+/* Typography resets */
+/* Default Link Styles */
+/* Default paragraph styles */
+/* Default header styles */
+/* Helpful Typography Defaults */
+/* Lists */
+/* Unordered Lists */
+/* Ordered Lists */
+/* Definition Lists */
+/* Abbreviations */
+/* Blockquotes */
+/* Microformats */
+/* line 6, ../../../scss/custom/nrl.scss */
+.availability .line {
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* line 10, ../../../scss/custom/nrl.scss */
+.tab {
+  width: 10.875rem;
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+
+/* line 15, ../../../scss/custom/nrl.scss */
+.availability i {
+  width: 27px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 20, ../../../scss/custom/nrl.scss */
+.data {
+  font-weight: 700;
+}
+
+/* line 23, ../../../scss/custom/nrl.scss */
+.numbers {
+  margin: 20px 0 40px 0;
+}
