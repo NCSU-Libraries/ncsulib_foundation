@@ -1,0 +1,133 @@
+@import "../foundation/settings";
+$include-html-classes: false;
+@import "../foundation";
+@import "silent_type";
+
+table {
+    width: 100%;
+}
+tr {
+    border-top: 1px solid #DDD;
+}
+td {
+    vertical-align: top;
+}
+img {
+    @media #{$medium-up}{
+        min-width: 160px;
+    }
+}
+.view-header {
+    margin-top: rem-calc(40);
+
+    .vml-text {
+        @include grid-column(3, $float: right, $collapse: true);
+        @media #{$small-only}{
+            @include grid-column(4, $float: right, $collapse: true);
+            font-size: rem-calc(12);
+            line-height: 1.3;
+        }
+    }
+}
+.view-filters {
+    form {
+        @include grid-column(4, $collapse: true);
+        @media #{$small-only}{
+            @include grid-column(8, $collapse: true);
+        }
+        label[for="edit-field-building-name-value"] {
+            @extend %h2;
+            margin-top: 0;
+            float: left;
+            display: block;
+
+            @media #{$small-only}{
+                float: none;
+            }
+        }
+    }
+    .views-widget {
+        float: left;
+        margin-left: rem-calc(33);
+        margin-top: rem-calc(10);
+
+        @media #{$small-only}{
+            float: none;
+            margin-left: 0;
+        }
+
+        .option {
+            font-weight: 700;
+        }
+    }
+}
+.view-content {
+    table {
+        @include grid-column(12);
+    }
+
+}
+.bef-checkboxes label {
+    font-weight: 400;
+}
+.form-item-edit-field-building-name-value-design,
+.form-item-edit-field-building-name-value-nrl,
+.form-item-edit-field-building-name-value-vetmed,
+.form-item-edit-field-building-name-value-cvm {
+    display:none;
+}
+.room-name {
+    @extend %h3;
+    margin-top: 0;
+    display: block;
+}
+.building-name {
+    @extend %h4;
+    @media #{$small-only} {
+        font-weight: 700;
+
+        &:before {
+            content: "Building: ";
+            font-weight: 400;
+        }
+    }
+}
+.building-name, .floor {
+    line-height: 1.1;
+}
+.capacity {
+    margin-bottom: 10px;
+}
+.views-field-title span{
+    display: block;
+}
+.views-field-title {
+    width: 25%;
+    @media #{$small-only} {
+        width: 75%;
+    }
+}
+.views-field-body, .views-field-body p {
+    font-size: rem-calc(13);
+}
+.views-field-field-reservation-method {
+    text-align: center;
+}
+@media #{$small-only}{
+    .views-field-title span {
+        display: inline;
+    }
+    .views-field-body,
+    .views-field-title .capacity,
+    .views-field-title .floor,
+    .views-field-field-image {
+        display: none;
+    }
+    .views-field-title .room-name {
+        display: block;
+    }
+    .button {
+        padding: rem-calc(10 16);
+        font-size: rem-calc(13);
+    }
+}
