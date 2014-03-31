@@ -10490,69 +10490,89 @@ html #content {
   z-index: 999;
 }
 
-/* line 3, ../../scss/layout/_aside.scss */
-#subnav, .l-sidebar-second {
+/* line 4, ../../scss/layout/_aside.scss */
+.l-sidebar-first,
+.l-sidebar-second {
   padding-top: 1.25rem;
 }
-/* line 6, ../../scss/layout/_aside.scss */
-#subnav .side-nav, .l-sidebar-second .side-nav {
-  padding: 0.3125rem 0;
-}
-/* line 9, ../../scss/layout/_aside.scss */
-#subnav .side-nav h2, #subnav .side-nav h3, #subnav .side-nav h4, #subnav .side-nav h5, #subnav .side-nav h6, .l-sidebar-second .side-nav h2, .l-sidebar-second .side-nav h3, .l-sidebar-second .side-nav h4, .l-sidebar-second .side-nav h5, .l-sidebar-second .side-nav h6 {
-  font-size: 1.25rem;
+/* line 7, ../../scss/layout/_aside.scss */
+.l-sidebar-first h2, .l-sidebar-first h3, .l-sidebar-first h4, .l-sidebar-first h5, .l-sidebar-first h6,
+.l-sidebar-second h2,
+.l-sidebar-second h3,
+.l-sidebar-second h4,
+.l-sidebar-second h5,
+.l-sidebar-second h6 {
+  font-size: 1.1em;
   margin-top: 0px;
   text-transform: uppercase;
 }
-/* line 17, ../../scss/layout/_aside.scss */
-#subnav .side-nav li a, .l-sidebar-second .side-nav li a {
+/* line 13, ../../scss/layout/_aside.scss */
+.l-sidebar-first .side-nav, .l-sidebar-first .menu,
+.l-sidebar-second .side-nav,
+.l-sidebar-second .menu {
+  padding: 0 0 1.875rem;
+}
+/* line 19, ../../scss/layout/_aside.scss */
+.l-sidebar-first .side-nav li a, .l-sidebar-first .menu li a,
+.l-sidebar-second .side-nav li a,
+.l-sidebar-second .menu li a {
   font-size: 0.9em;
 }
-/* line 20, ../../scss/layout/_aside.scss */
-#subnav .side-nav li a.active-trail, .l-sidebar-second .side-nav li a.active-trail {
+/* line 22, ../../scss/layout/_aside.scss */
+.l-sidebar-first .side-nav li a.active-trail, .l-sidebar-first .menu li a.active-trail,
+.l-sidebar-second .side-nav li a.active-trail,
+.l-sidebar-second .menu li a.active-trail {
   color: #666666;
   font-weight: bold;
 }
-/* line 26, ../../scss/layout/_aside.scss */
-#subnav .side-nav li ul, .l-sidebar-second .side-nav li ul {
+/* line 28, ../../scss/layout/_aside.scss */
+.l-sidebar-first .side-nav li ul, .l-sidebar-first .menu li ul,
+.l-sidebar-second .side-nav li ul,
+.l-sidebar-second .menu li ul {
   list-style-type: none;
   margin-bottom: 0;
   margin-left: 0.9375rem;
   margin-top: 0.625rem;
   padding: 0px;
 }
-/* line 35, ../../scss/layout/_aside.scss */
-#subnav .side-nav li ul li a, .l-sidebar-second .side-nav li ul li a {
+/* line 37, ../../scss/layout/_aside.scss */
+.l-sidebar-first .side-nav li ul li a, .l-sidebar-first .menu li ul li a,
+.l-sidebar-second .side-nav li ul li a,
+.l-sidebar-second .menu li ul li a {
   font-size: 0.875rem;
 }
-/* line 43, ../../scss/layout/_aside.scss */
-#subnav h2, #subnav h3, .l-sidebar-second h2, .l-sidebar-second h3 {
-  text-transform: uppercase;
-  font-size: .9em;
-  margin: 1.25rem 0 0.3125rem 0;
+
+/* line 46, ../../scss/layout/_aside.scss */
+ul.menu {
+  margin: 0px;
+  padding: 0px;
+}
+/* line 50, ../../scss/layout/_aside.scss */
+ul.menu li {
+  list-style-type: none;
 }
 
 /**
  * Default sidebar box styling, see /articles for an example
  */
-/* line 55, ../../scss/layout/_aside.scss */
+/* line 60, ../../scss/layout/_aside.scss */
 .sidebox {
   margin-bottom: 80px;
 }
 
-/* line 58, ../../scss/layout/_aside.scss */
+/* line 63, ../../scss/layout/_aside.scss */
 .sidebox h2 {
   font-size: 1.4em;
   padding-bottom: 14px;
 }
 
-/* line 62, ../../scss/layout/_aside.scss */
+/* line 67, ../../scss/layout/_aside.scss */
 .sidebox ul li {
   list-style: none;
   padding-bottom: 9px;
 }
 
-/* line 66, ../../scss/layout/_aside.scss */
+/* line 71, ../../scss/layout/_aside.scss */
 .sidebox ul {
   margin: 0;
   padding: 0;
@@ -10627,21 +10647,19 @@ footer #footer {
   padding: 0px 0.625rem;
   padding-bottom: 20px;
 }
+/* line 54, ../../scss/layout/_footer.scss */
+footer #footer #f-address {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
+  padding-left: 0px;
+  padding-bottom: 1.875rem;
+}
 @media only screen and (max-width: 47.937em) {
   /* line 54, ../../scss/layout/_footer.scss */
   footer #footer #f-address {
     margin-bottom: 1.25rem;
-  }
-}
-@media only screen and (min-width: 48em) {
-  /* line 54, ../../scss/layout/_footer.scss */
-  footer #footer #f-address {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 33.33333%;
-    float: left;
-    padding-left: 0px;
-    padding-bottom: 1.875rem;
   }
 }
 /* line 65, ../../scss/layout/_footer.scss */
@@ -10654,47 +10672,42 @@ footer #footer #f-address p {
 }
 /* line 74, ../../scss/layout/_footer.scss */
 footer #footer #f-libraries {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
   margin-bottom: 1.25rem;
 }
-@media only screen and (min-width: 48em) {
-  /* line 74, ../../scss/layout/_footer.scss */
-  footer #footer #f-libraries {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 33.33333%;
-    float: left;
-  }
-}
-/* line 85, ../../scss/layout/_footer.scss */
+/* line 80, ../../scss/layout/_footer.scss */
 footer #footer #f-lib-links {
   margin-bottom: 1.875rem;
 }
 @media only screen and (min-width: 48em) {
-  /* line 89, ../../scss/layout/_footer.scss */
+  /* line 84, ../../scss/layout/_footer.scss */
   footer #footer #f-social {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     width: 33.33333%;
     float: left;
   }
-  /* line 94, ../../scss/layout/_footer.scss */
+  /* line 89, ../../scss/layout/_footer.scss */
   footer #footer #f-social a {
     font-size: 1.25rem;
   }
 }
-/* line 98, ../../scss/layout/_footer.scss */
+/* line 93, ../../scss/layout/_footer.scss */
 footer #footer #f-social .giving {
   margin-bottom: 1.25rem;
   display: block;
 }
-/* line 102, ../../scss/layout/_footer.scss */
+/* line 97, ../../scss/layout/_footer.scss */
 footer #footer #f-social i {
   font-weight: normal;
   width: 1.5625rem;
   text-align: center;
   padding-right: 0.5rem;
 }
-/* line 109, ../../scss/layout/_footer.scss */
+/* line 104, ../../scss/layout/_footer.scss */
 footer #footer #f-social a:hover i {
   color: #FFF;
 }
@@ -11167,21 +11180,19 @@ footer #footer:before, footer #footer:after {
 footer #footer:after {
   clear: both;
 }
+/* line 54, ../../scss/layout/_footer.scss */
+footer #footer #f-address {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
+  padding-left: 0px;
+  padding-bottom: 1.875rem;
+}
 @media only screen and (max-width: 47.937em) {
   /* line 54, ../../scss/layout/_footer.scss */
   footer #footer #f-address {
     margin-bottom: 1.25rem;
-  }
-}
-@media only screen and (min-width: 48em) {
-  /* line 54, ../../scss/layout/_footer.scss */
-  footer #footer #f-address {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 33.33333%;
-    float: left;
-    padding-left: 0px;
-    padding-bottom: 1.875rem;
   }
 }
 /* line 65, ../../scss/layout/_footer.scss */
@@ -11194,47 +11205,42 @@ footer #footer #f-address p {
 }
 /* line 74, ../../scss/layout/_footer.scss */
 footer #footer #f-libraries {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
   margin-bottom: 1.25rem;
 }
-@media only screen and (min-width: 48em) {
-  /* line 74, ../../scss/layout/_footer.scss */
-  footer #footer #f-libraries {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 33.33333%;
-    float: left;
-  }
-}
-/* line 85, ../../scss/layout/_footer.scss */
+/* line 80, ../../scss/layout/_footer.scss */
 footer #footer #f-lib-links {
   margin-bottom: 1.875rem;
 }
 @media only screen and (min-width: 48em) {
-  /* line 89, ../../scss/layout/_footer.scss */
+  /* line 84, ../../scss/layout/_footer.scss */
   footer #footer #f-social {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     width: 33.33333%;
     float: left;
   }
-  /* line 94, ../../scss/layout/_footer.scss */
+  /* line 89, ../../scss/layout/_footer.scss */
   footer #footer #f-social a {
     font-size: 1.25rem;
   }
 }
-/* line 98, ../../scss/layout/_footer.scss */
+/* line 93, ../../scss/layout/_footer.scss */
 footer #footer #f-social .giving {
   margin-bottom: 1.25rem;
   display: block;
 }
-/* line 102, ../../scss/layout/_footer.scss */
+/* line 97, ../../scss/layout/_footer.scss */
 footer #footer #f-social i {
   font-weight: normal;
   width: 1.5625rem;
   text-align: center;
   padding-right: 0.5rem;
 }
-/* line 109, ../../scss/layout/_footer.scss */
+/* line 104, ../../scss/layout/_footer.scss */
 footer #footer #f-social a:hover i {
   color: #FFF;
 }
@@ -11544,6 +11550,47 @@ ul.pagination {
 }
 
 /* end global styles*/
+@media print {
+  /* line 9, ../../scss/layout/_print.scss */
+  #search-tabs,
+  footer,
+  .orbit-prev,
+  .orbit-next,
+  .feedback-form,
+  #nav-toggle,
+  #primary-nav {
+    display: none;
+  }
+
+  /* line 14, ../../scss/layout/_print.scss */
+  .name {
+    display: none;
+  }
+
+  /* line 17, ../../scss/layout/_print.scss */
+  #logo {
+    height: 40px;
+  }
+
+  /* line 22, ../../scss/layout/_print.scss */
+  .tabs-content > .content {
+    display: block;
+  }
+
+  /* line 29, ../../scss/layout/_print.scss */
+  .orbit-container .orbit-slides-container {
+    height: auto !important;
+  }
+  /* line 32, ../../scss/layout/_print.scss */
+  .orbit-container .orbit-slides-container li {
+    margin: 0px;
+    position: relative;
+  }
+  /* line 38, ../../scss/layout/_print.scss */
+  .orbit-container .orbit-slides-container > * {
+    transform: none;
+  }
+}
 /*  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
