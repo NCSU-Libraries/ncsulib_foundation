@@ -393,7 +393,7 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
       // 23583 = projectors
       $building = '';
     }
-    $output = '<div class="clear-left"><a href="'.drupal_render($item).'" class="reserve-button">Request'.$building.'</a></div>';
+    $output = '<div class="clear-left"><a href="'.drupal_render($item).'" class="button">Request'.$building.'</a></div>';
   }
   return $output;
 }
@@ -436,6 +436,42 @@ function ncsulib_foundation_field__space($variables) {
   // Render the top-level DIV.
   $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
 
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Using this to change the markup delivered to the Reservation Method
+ * field.  Turning it into a button.
+ */
+function ncsulib_foundation_field__field_reservation_method__space($variables) {
+  $output = '';
+
+  // Create a button based on the method chosen
+  $res_method   = $variables['items'][0]['#markup'];
+  $today        = date('m-d-Y');
+  $nid          = $variables['element']['#object']->nid;
+  $node         = node_load($nid);
+
+
+  switch ($res_method) {
+    case 'By Room Reservation System':
+      $room_res_id  = field_get_items('node', $node, 'field_room_res_id');
+      $schedule_id  = render(field_view_value('node', $node, 'field_room_res_id', $room_res_id[0]));
+      $output = '<a class="button" href="http://www.lib.ncsu.edu/roomreservations/schedule.php?date='.$today.'&scheduleid='. $schedule_id .'">Reserve this room</a>';
+      break;
+
+    case 'By Mediated Email Form':
+      $request_form_url = field_get_items('node', $node, 'field_request_form_url');
+      $form_url  = field_view_value('node', $node, 'field_request_form_url', $request_form_url[0]);
+      $output = '<a class="button" href="'. $form_url['#element']['url'] .'">Request this room</a>';
+      break;
+
+    default:
+      $output = '';
+      break;
+  }
   return $output;
 }
 
