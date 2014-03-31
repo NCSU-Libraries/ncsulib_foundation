@@ -75,21 +75,19 @@ footer #footer:before, footer #footer:after {
 footer #footer:after {
   clear: both;
 }
+/* line 54, ../../../scss/layout/_footer.scss */
+footer #footer #f-address {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
+  padding-left: 0px;
+  padding-bottom: 1.875rem;
+}
 @media only screen and (max-width: 47.937em) {
   /* line 54, ../../../scss/layout/_footer.scss */
   footer #footer #f-address {
     margin-bottom: 1.25rem;
-  }
-}
-@media only screen and (min-width: 48em) {
-  /* line 54, ../../../scss/layout/_footer.scss */
-  footer #footer #f-address {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 33.33333%;
-    float: left;
-    padding-left: 0px;
-    padding-bottom: 1.875rem;
   }
 }
 /* line 65, ../../../scss/layout/_footer.scss */
@@ -102,47 +100,42 @@ footer #footer #f-address p {
 }
 /* line 74, ../../../scss/layout/_footer.scss */
 footer #footer #f-libraries {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left;
   margin-bottom: 1.25rem;
 }
-@media only screen and (min-width: 48em) {
-  /* line 74, ../../../scss/layout/_footer.scss */
-  footer #footer #f-libraries {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 33.33333%;
-    float: left;
-  }
-}
-/* line 85, ../../../scss/layout/_footer.scss */
+/* line 80, ../../../scss/layout/_footer.scss */
 footer #footer #f-lib-links {
   margin-bottom: 1.875rem;
 }
 @media only screen and (min-width: 48em) {
-  /* line 89, ../../../scss/layout/_footer.scss */
+  /* line 84, ../../../scss/layout/_footer.scss */
   footer #footer #f-social {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     width: 33.33333%;
     float: left;
   }
-  /* line 94, ../../../scss/layout/_footer.scss */
+  /* line 89, ../../../scss/layout/_footer.scss */
   footer #footer #f-social a {
     font-size: 1.25rem;
   }
 }
-/* line 98, ../../../scss/layout/_footer.scss */
+/* line 93, ../../../scss/layout/_footer.scss */
 footer #footer #f-social .giving {
   margin-bottom: 1.25rem;
   display: block;
 }
-/* line 102, ../../../scss/layout/_footer.scss */
+/* line 97, ../../../scss/layout/_footer.scss */
 footer #footer #f-social i {
   font-weight: normal;
   width: 1.5625rem;
   text-align: center;
   padding-right: 0.5rem;
 }
-/* line 109, ../../../scss/layout/_footer.scss */
+/* line 104, ../../../scss/layout/_footer.scss */
 footer #footer #f-social a:hover i {
   color: #FFF;
 }
