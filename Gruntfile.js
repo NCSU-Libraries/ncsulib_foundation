@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         preserveComments: false
       },
       build: {
-        src: ['scripts/foundation.min.js',
+        src: ['scripts/vendor/foundation.min.js',
         'scripts/modernizr-tests.js',
         'scripts/primary-nav.js',
         'scripts/search-bar.js',
