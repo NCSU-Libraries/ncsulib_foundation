@@ -904,6 +904,7 @@
 #happenings .happenings-content p {
   font-size: 0.85em;
   line-height: 1.35em;
+  margin-bottom: 0px;
 }
 
 /*end tier three*/
