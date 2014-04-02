@@ -117,51 +117,6 @@
                     </div>
                 </div>
 
-
-
-
-
-
-                    <!--div class="section-container auto search-tabs vertical-tabs" data-section="vertical-tabs">
-                        <section class="active">
-                            <p class="title" data-section-title><a href="#panel1">D. H. Hill Library</a></p>
-                            <div class="content" data-section-content>
-                                <ul>
-                                    <li>
-                                        <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hill', 'study rooms']);">Study Rooms</a>:</span>
-                                        <span class="item-count count" id="hill-study"></span>
-                                    </li>
-                                    <li>
-                                        <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hill', 'laptops']);">Laptops</a>:</span>
-                                        <span class="item-count count" id="hill-laptops"></span>
-                                    </li>
-                                    <li>
-                                        <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hill', 'tablets']);">Tablets</a>:</span>
-                                        <span class="item-count count" id="hill-tablets"></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section>
-                            <p class="title" data-section-title><a href="#panel2">James B. Hunt Jr. Library</a></p>
-                            <div class="content" data-section-content>
-                                <ul>
-                                    <li>
-                                        <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hunt', 'Study Rooms']);">Study Rooms</a>:</span>
-                                        <span class="item-count count" id="hunt-study"></span>
-                                    </li>
-                                    <li>
-                                        <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hunt', 'laptops']);">Laptops</a>:</span>
-                                        <span class="item-count count" id="hunt-laptops"></span>
-                                    </li>
-                                    <li>
-                                        <span class="item"><a href="/studyrooms/getaroom.php" onClick="_gaq.push(['_trackEvent', 'Availability', 'Hunt', 'tablets']);">Tablets</a>:</span>
-                                        <span class="item-count count" id="hunt-tablets"></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div-->
             </section>
 
             <!-- bottom row -->
