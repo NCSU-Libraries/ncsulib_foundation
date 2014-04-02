@@ -1,0 +1,47 @@
+#mobile-app-alert{
+    background: #333;
+    border: 0px;
+    display: none;
+    float: none;
+    margin-bottom: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+#mobile-app-alert > a{
+    display: block;
+    padding: 40px 0px;
+    width: 90%;
+}
+
+#mobile-app-alert i{
+    color: #FFF;
+    display: inline-block;
+    font-size: 5em;
+    line-height: 1em;
+    margin-right: 3%;
+    padding-left: 0px;
+}
+
+#mobile-app-alert h2{
+    color: #FFF;
+    display: inline-block;
+    font-size: 2.5em;
+    line-height: 1.5em;
+    margin: 0px;
+    padding-right: 0px;
+    vertical-align: super;
+}
+
+#mobile-app-alert > a.close{
+    color: #FFF;
+    font-size: 6em;
+    position: absolute;
+    right: 2%;
+    width: 5%;
+    top: 31px;
+    z-index: 10;
+}
+#mobile-app-alert .close:hover{
+    text-decoration: none;
+}
