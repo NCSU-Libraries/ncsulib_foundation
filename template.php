@@ -1,15 +1,5 @@
 <?php
 
-function ncsulib_foundation_process_html(&$vars){
-    foreach (array('head', 'styles', 'scripts', 'page_bottom') as $replace) {
-        if (!isset($vars[$replace])) {
-            continue;
-        }
-
-        $vars[$replace] = preg_replace('/(src|href|@import )(url\(|=)(")http(s?):/', '$1$2$3', $vars[$replace]);
-    }
-}
-
 /**
  * Setting custom variable htdocs root path
  */
@@ -140,7 +130,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   if (isset($url_comp[0])) {
     switch ($url_comp[0]) {
       case 'styleguide':
-        drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        drupal_add_js(path_to_theme() . '/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
     }
 
@@ -148,7 +138,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       // for two dirs deep (ex: find/books)
       switch ($url_comp[1] . '/' . $url_comp[2]) {
         case 'borrow/privileges':
-          drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/borrow-privileges.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+          drupal_add_js(path_to_theme() . '/scripts/borrow-privileges.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
           break;
       }
     }
@@ -159,14 +149,14 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   $url_comp = implode('--', $url_comp);
   switch ($url_comp) {
     case 'techlending':
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+      drupal_add_js(path_to_theme() . '/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
       break;
     case 'huntlibrary--namingopportunities':
-      drupal_add_css('sites/all/themes/ncsulib_foundation/styles/blitzer/jquery-ui-1.10.4.custom.min.css', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery-ui-1.10.4.custom.min.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery.imagemapster.min.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/namingopps.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery.tablesorter.min.js', 'file');
+      drupal_add_css(path_to_theme() . '/styles/blitzer/jquery-ui-1.10.4.custom.min.css', 'file');
+      drupal_add_js(path_to_theme() . '/scripts/vendor/jquery-ui-1.10.4.custom.min.js', 'file');
+      drupal_add_js(path_to_theme() . '/scripts/vendor/jquery.imagemapster.min.js', 'file');
+      drupal_add_js(path_to_theme() . '/scripts/namingopps.js', 'file');
+      drupal_add_js(path_to_theme() . '/scripts/vendor/jquery.tablesorter.min.js', 'file');
       break;
   }
 
@@ -334,36 +324,6 @@ function ncsulib_foundation_more_link ($array) {
 }
 
 /**
- *  Blocks preprocessor
- *
- *  Handles adding additional classes to the blocks on the "/upcomingevents"
- *  page.
- *  Adds classes to blocks on the scrc page.
- *
- *  -Charlie Morris 11/20/2012
- *
- * adapted for foundation
- *
- * -EO 3.19.14
- */
-function ncsulib_foundation_preprocess_block(&$variables) {
-  if ($variables['block_html_id'] == 'block-views-upcoming-events-block-3') {
-    $variables['classes_array'][] = 'medium-8';
-    $variables['classes_array'][] = 'columns';
-    // $variables['elements']['#block']->subject = date('l, M jS', strtotime('today'));
-  }
-  // adding classes to blocks on /scrc
-  if ($variables['block_html_id']  == "block-aggregator-feed-8") {
-    $variables['classes_array'][] = 'medium-8';
-    $variables['classes_array'][] = 'columns';
-  }
-  if ($variables['block_html_id']  == "block-block-78"){
-    $variables['classes_array'][] = 'medium-3';
-    $variables['classes_array'][] = 'columns';
-  }
-}
-
-/**
  * Modify the output of views
  *
  * -Charlie Morris, 1/2/13
@@ -413,6 +373,7 @@ function ncsulib_foundation_views_pre_render(&$view) {
  *
  * Author: Charlie Morris
  * For SCRC
+ * TODO: Can this be deleted?
  */
 function ncsulib_foundation_aggregator_block_item($variables) {
   if ($variables['item']->fid == '8') {
@@ -423,24 +384,6 @@ function ncsulib_foundation_aggregator_block_item($variables) {
   }
 }
 
-/**
- * Implements template_preprocess_image
- *
- * Image preprocessor
- *
- * Author: Charlie Morris
- *
- */
-function ncsulib_foundation_preprocess_image(&$variables) {
-  // Only perform preprocessing on images with defined style
-  if (isset($variables['style_name'])) {
-    // Add the image-outline style for images with half-page-width style
-    // applied
-    if ($variables['style_name'] == 'half-page-width') {
-      $variables['attributes']['class'][] = 'image-outline';
-    }
-  }
-}
 
 /**
  * Implements theme_field()
