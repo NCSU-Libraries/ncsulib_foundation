@@ -1,0 +1,261 @@
+/**
+ * This file is used for extending existing type styles into custom css
+ */
+/* Typography resets */
+/* line 159, ../../../scss/custom/_silent_type.scss */
+.view-filters form label[for="edit-field-building-name-value"],
+.room-name,
+.building-name {
+  margin: 0;
+  padding: 0;
+}
+
+/* Default Link Styles */
+/* Default paragraph styles */
+/* Default header styles */
+/* line 195, ../../../scss/custom/_silent_type.scss */
+.view-filters form label[for="edit-field-building-name-value"], .room-name, .building-name {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #555555;
+  text-rendering: optimizeLegibility;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+/* line 213, ../../../scss/custom/_silent_type.scss */
+.view-filters form label[for="edit-field-building-name-value"] {
+  font-size: 1.125rem;
+}
+
+/* line 214, ../../../scss/custom/_silent_type.scss */
+.room-name {
+  font-size: 1.0625rem;
+}
+
+/* line 215, ../../../scss/custom/_silent_type.scss */
+.building-name {
+  font-size: 1rem;
+}
+
+/* Helpful Typography Defaults */
+/* Lists */
+/* Unordered Lists */
+/* Ordered Lists */
+/* Definition Lists */
+/* Abbreviations */
+/* Blockquotes */
+/* Microformats */
+@media only screen and (min-width: 48em) {
+  /* line 391, ../../../scss/custom/_silent_type.scss */
+  .view-filters form label[for="edit-field-building-name-value"], .room-name, .building-name {
+    line-height: 1.4;
+  }
+
+  /* line 393, ../../../scss/custom/_silent_type.scss */
+  .view-filters form label[for="edit-field-building-name-value"] {
+    font-size: 1.75rem;
+  }
+
+  /* line 394, ../../../scss/custom/_silent_type.scss */
+  .room-name {
+    font-size: 1.375rem;
+  }
+
+  /* line 395, ../../../scss/custom/_silent_type.scss */
+  .building-name {
+    font-size: 1.3125rem;
+  }
+}
+/* line 6, ../../../scss/custom/reservearoom.scss */
+table {
+  width: 100%;
+}
+
+/* line 9, ../../../scss/custom/reservearoom.scss */
+tr {
+  border-top: 1px solid #DDD;
+}
+
+/* line 12, ../../../scss/custom/reservearoom.scss */
+td {
+  vertical-align: top;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 15, ../../../scss/custom/reservearoom.scss */
+  img {
+    min-width: 160px;
+  }
+}
+
+/* line 20, ../../../scss/custom/reservearoom.scss */
+.view-header {
+  margin-top: 2.5rem;
+}
+/* line 23, ../../../scss/custom/reservearoom.scss */
+.view-header .vml-text {
+  padding-left: 0;
+  padding-right: 0;
+  width: 25%;
+  float: right;
+}
+@media only screen and (max-width: 47.937em) {
+  /* line 23, ../../../scss/custom/reservearoom.scss */
+  .view-header .vml-text {
+    padding-left: 0;
+    padding-right: 0;
+    width: 33.33333%;
+    float: right;
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+}
+
+/* line 33, ../../../scss/custom/reservearoom.scss */
+.view-filters form {
+  padding-left: 0;
+  padding-right: 0;
+  width: 33.33333%;
+  float: left;
+}
+@media only screen and (max-width: 47.937em) {
+  /* line 33, ../../../scss/custom/reservearoom.scss */
+  .view-filters form {
+    padding-left: 0;
+    padding-right: 0;
+    width: 66.66667%;
+    float: left;
+  }
+}
+/* line 38, ../../../scss/custom/reservearoom.scss */
+.view-filters form label[for="edit-field-building-name-value"] {
+  margin-top: 0;
+  float: left;
+  display: block;
+}
+@media only screen and (max-width: 47.937em) {
+  /* line 38, ../../../scss/custom/reservearoom.scss */
+  .view-filters form label[for="edit-field-building-name-value"] {
+    float: none;
+  }
+}
+/* line 49, ../../../scss/custom/reservearoom.scss */
+.view-filters .views-widget {
+  float: left;
+  margin-left: 2.0625rem;
+  margin-top: 0.625rem;
+}
+@media only screen and (max-width: 47.937em) {
+  /* line 49, ../../../scss/custom/reservearoom.scss */
+  .view-filters .views-widget {
+    float: none;
+    margin-left: 0;
+  }
+}
+/* line 59, ../../../scss/custom/reservearoom.scss */
+.view-filters .views-widget .option {
+  font-weight: 700;
+}
+
+/* line 65, ../../../scss/custom/reservearoom.scss */
+.view-content table {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+
+/* line 70, ../../../scss/custom/reservearoom.scss */
+.bef-checkboxes label {
+  font-weight: 400;
+}
+
+/* line 76, ../../../scss/custom/reservearoom.scss */
+.form-item-edit-field-building-name-value-design,
+.form-item-edit-field-building-name-value-nrl,
+.form-item-edit-field-building-name-value-vetmed,
+.form-item-edit-field-building-name-value-cvm {
+  display: none;
+}
+
+/* line 79, ../../../scss/custom/reservearoom.scss */
+.room-name {
+  margin-top: 0;
+  display: block;
+}
+
+@media only screen and (max-width: 47.937em) {
+  /* line 84, ../../../scss/custom/reservearoom.scss */
+  .building-name {
+    font-weight: 700;
+  }
+  /* line 89, ../../../scss/custom/reservearoom.scss */
+  .building-name:before {
+    content: "Building: ";
+    font-weight: 400;
+  }
+}
+
+/* line 95, ../../../scss/custom/reservearoom.scss */
+.building-name, .floor {
+  line-height: 1.1;
+}
+
+/* line 98, ../../../scss/custom/reservearoom.scss */
+.capacity {
+  margin-bottom: 10px;
+}
+
+/* line 101, ../../../scss/custom/reservearoom.scss */
+.views-field-title span {
+  display: block;
+}
+
+/* line 104, ../../../scss/custom/reservearoom.scss */
+.views-field-title {
+  width: 25%;
+}
+@media only screen and (max-width: 47.937em) {
+  /* line 104, ../../../scss/custom/reservearoom.scss */
+  .views-field-title {
+    width: 75%;
+  }
+}
+
+/* line 110, ../../../scss/custom/reservearoom.scss */
+.views-field-body, .views-field-body p {
+  font-size: 0.8125rem;
+}
+
+/* line 113, ../../../scss/custom/reservearoom.scss */
+.views-field-field-reservation-method {
+  text-align: center;
+}
+
+@media only screen and (max-width: 47.937em) {
+  /* line 117, ../../../scss/custom/reservearoom.scss */
+  .views-field-title span {
+    display: inline;
+  }
+
+  /* line 123, ../../../scss/custom/reservearoom.scss */
+  .views-field-body,
+  .views-field-title .capacity,
+  .views-field-title .floor,
+  .views-field-field-image {
+    display: none;
+  }
+
+  /* line 126, ../../../scss/custom/reservearoom.scss */
+  .views-field-title .room-name {
+    display: block;
+  }
+
+  /* line 129, ../../../scss/custom/reservearoom.scss */
+  .button {
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+  }
+}

@@ -1,0 +1,53 @@
+@import "../foundation/settings";
+$include-html-classes: false;
+@import "../foundation";
+@import "silent_type";
+
+/**
+ * For the Space node content type
+ */
+@media #{$medium-up} {
+    .field-name-field-image {
+        @include grid-column(6, $float: right);
+    }
+}
+.building-name {
+    display: block;
+    float: left;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.room-numbers {
+    margin-left: rem-calc(97);
+
+    li {
+        display: inline;
+    }
+}
+
+.field-name-body {
+    clear: left;
+
+    .field-item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: none;
+    }
+}
+.room-list {
+    line-height: 1.6;
+    float: left;
+    // margin-bottom: rem-calc(16);
+}
+
+@media #{$small-only} {
+    .room-list {
+        margin-bottom: 0;
+    }
+
+    .field-name-field-image {
+        max-width: 330px;
+        margin: rem-calc(0 0 10 0);
+    }
+}

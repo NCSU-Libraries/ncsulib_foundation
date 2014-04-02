@@ -1,15 +1,5 @@
 <?php
 
-function ncsulib_foundation_process_html(&$vars){
-    foreach (array('head', 'styles', 'scripts', 'page_bottom') as $replace) {
-        if (!isset($vars[$replace])) {
-            continue;
-        }
-
-        $vars[$replace] = preg_replace('/(src|href|@import )(url\(|=)(")http(s?):/', '$1$2$3', $vars[$replace]);
-    }
-}
-
 /**
  * Setting custom variable htdocs root path
  */
@@ -140,7 +130,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   if (isset($url_comp[0])) {
     switch ($url_comp[0]) {
       case 'styleguide':
-        drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        drupal_add_js(path_to_theme() . '/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
     }
 
@@ -148,7 +138,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       // for two dirs deep (ex: find/books)
       switch ($url_comp[1] . '/' . $url_comp[2]) {
         case 'borrow/privileges':
-          drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/borrow-privileges.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+          drupal_add_js(path_to_theme() . '/scripts/borrow-privileges.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
           break;
       }
     }
@@ -159,19 +149,87 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   $url_comp = implode('--', $url_comp);
   switch ($url_comp) {
     case 'techlending':
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+      drupal_add_js(path_to_theme() . '/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
       break;
     case 'huntlibrary--namingopportunities':
-      drupal_add_css('sites/all/themes/ncsulib_foundation/styles/blitzer/jquery-ui-1.10.4.custom.min.css', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery-ui-1.10.4.custom.min.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery.imagemapster.min.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/namingopps.js', 'file');
-      drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/vendor/jquery.tablesorter.min.js', 'file');
+      drupal_add_css(path_to_theme() . '/styles/blitzer/jquery-ui-1.10.4.custom.min.css', 'file');
+      drupal_add_js(path_to_theme() . '/scripts/vendor/jquery-ui-1.10.4.custom.min.js', 'file');
+      drupal_add_js(path_to_theme() . '/scripts/vendor/jquery.imagemapster.min.js', 'file');
+      drupal_add_js(path_to_theme() . '/scripts/namingopps.js', 'file');
+      drupal_add_js(path_to_theme() . '/scripts/vendor/jquery.tablesorter.min.js', 'file');
       break;
   }
 
 
 } // End tremendous template_preprocess_page function
+
+/**
+ * Impelments template_preprocess_node()
+ *
+ */
+function ncsulib_foundation_preprocess_node(&$variables) {
+  // Add space.css for space content type
+  if ($variables['type'] == 'space') {
+    drupal_add_css(path_to_theme() . '/styles/core/custom/space.css', array('group' => 101));
+  }
+}
+
+
+/**
+ *  Blocks preprocessor
+ *
+ *  Handles adding additional classes to the blocks on the "/upcomingevents"
+ *  page. Adds classes to blocks on the scrc page.
+ */
+function ncsulib_foundation_preprocess_block(&$variables) {
+  if ($variables['block_html_id'] == 'block-views-upcoming-events-block-3') {
+    $variables['classes_array'][] = 'medium-8';
+    $variables['classes_array'][] = 'columns';
+  }
+  // adding classes to blocks on /scrc
+  if ($variables['block_html_id']  == "block-aggregator-feed-8") {
+    $variables['classes_array'][] = 'medium-8';
+    $variables['classes_array'][] = 'columns';
+  }
+  if ($variables['block_html_id']  == "block-block-78"){
+    $variables['classes_array'][] = 'medium-3';
+    $variables['classes_array'][] = 'columns';
+  }
+}
+
+/**
+ * Implements template_preprocess_image
+ *
+ * Image preprocessor
+ *
+ * Author: Charlie Morris
+ *
+ */
+function ncsulib_foundation_preprocess_image(&$variables) {
+  // Only perform preprocessing on images with defined style
+  if (isset($variables['style_name'])) {
+    // Add the image-outline style for images with half-page-width style
+    // applied
+    if ($variables['style_name'] == 'half-page-width') {
+      $variables['attributes']['class'][] = 'image-outline';
+    }
+  }
+}
+
+/**
+ * Implements hook_process_HOOK()
+ *
+ * Making our resource references (css and js) themeless
+ */
+function ncsulib_foundation_process_html(&$vars){
+    foreach (array('head', 'styles', 'scripts', 'page_bottom') as $replace) {
+        if (!isset($vars[$replace])) {
+            continue;
+        }
+
+        $vars[$replace] = preg_replace('/(src|href|@import )(url\(|=)(")http(s?):/', '$1$2$3', $vars[$replace]);
+    }
+}
 
 /**
  * Implements theme_menu_link()
@@ -266,36 +324,6 @@ function ncsulib_foundation_more_link ($array) {
 }
 
 /**
- *  Blocks preprocessor
- *
- *  Handles adding additional classes to the blocks on the "/upcomingevents"
- *  page.
- *  Adds classes to blocks on the scrc page.
- *
- *  -Charlie Morris 11/20/2012
- *
- * adapted for foundation
- *
- * -EO 3.19.14
- */
-function ncsulib_foundation_preprocess_block(&$variables) {
-  if ($variables['block_html_id'] == 'block-views-upcoming-events-block-3') {
-    $variables['classes_array'][] = 'medium-8';
-    $variables['classes_array'][] = 'columns';
-    // $variables['elements']['#block']->subject = date('l, M jS', strtotime('today'));
-  }
-  // adding classes to blocks on /scrc
-  if ($variables['block_html_id']  == "block-aggregator-feed-8") {
-    $variables['classes_array'][] = 'medium-8';
-    $variables['classes_array'][] = 'columns';
-  }
-  if ($variables['block_html_id']  == "block-block-78"){
-    $variables['classes_array'][] = 'medium-3';
-    $variables['classes_array'][] = 'columns';
-  }
-}
-
-/**
  * Modify the output of views
  *
  * -Charlie Morris, 1/2/13
@@ -345,6 +373,7 @@ function ncsulib_foundation_views_pre_render(&$view) {
  *
  * Author: Charlie Morris
  * For SCRC
+ * TODO: Can this be deleted?
  */
 function ncsulib_foundation_aggregator_block_item($variables) {
   if ($variables['item']->fid == '8') {
@@ -355,24 +384,6 @@ function ncsulib_foundation_aggregator_block_item($variables) {
   }
 }
 
-/**
- * Implements template_preprocess_image
- *
- * Image preprocessor
- *
- * Author: Charlie Morris
- *
- */
-function ncsulib_foundation_preprocess_image(&$variables) {
-  // Only perform preprocessing on images with defined style
-  if (isset($variables['style_name'])) {
-    // Add the image-outline style for images with half-page-width style
-    // applied
-    if ($variables['style_name'] == 'half-page-width') {
-      $variables['attributes']['class'][] = 'image-outline';
-    }
-  }
-}
 
 /**
  * Implements theme_field()
@@ -393,7 +404,7 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
       // 23583 = projectors
       $building = '';
     }
-    $output = '<div class="clear-left"><a href="'.drupal_render($item).'" class="reserve-button">Request'.$building.'</a></div>';
+    $output = '<div class="clear-left"><a href="'.drupal_render($item).'" class="button">Request'.$building.'</a></div>';
   }
   return $output;
 }
@@ -407,7 +418,45 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
 function ncsulib_foundation_field__field_building_name__space($variables) {
   $output ='';
   foreach ($variables['items'] as $delta => $item) {
-    $output = drupal_render($item);
+    $output = '<span class="building-name">'. $variables['items'][0]['#markup'] .',&nbsp;</span>';
+  }
+  return $output;
+}
+
+
+/**
+ * Implements theme_field()
+ *
+ * Using this to change the markup delivered to the Reservation Method
+ * field.  Turning it into a button.
+ */
+function ncsulib_foundation_field__field_reservation_method__space($variables) {
+  $output = '';
+
+  // Create a button based on the method chosen
+  $res_method   = $variables['items'][0]['#markup'];
+  $today        = date('m-d-Y');
+  $nid          = $variables['element']['#object']->nid;
+  $node         = node_load($nid);
+
+
+  switch ($res_method) {
+    case 'By Room Reservation System':
+      $room_res_id  = field_get_items('node', $node, 'field_room_res_id');
+      $schedule_id_render_array  = field_view_value('node', $node, 'field_room_res_id', $room_res_id[0]);
+      $schedule_id = $schedule_id_render_array['#markup'];
+      $output = '<div class="button-wrap"><a class="button" href="http://www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve this room</a></div>';
+      break;
+
+    case 'By Mediated Email Form':
+      $request_form_url = field_get_items('node', $node, 'field_request_form_url');
+      $form_url  = field_view_value('node', $node, 'field_request_form_url', $request_form_url[0]);
+      $output = '<a class="button" href="'. $form_url['#element']['url'] .'">Request this room</a>';
+      break;
+
+    default:
+      $output = '';
+      break;
   }
   return $output;
 }
@@ -415,7 +464,90 @@ function ncsulib_foundation_field__field_building_name__space($variables) {
 /**
  * Implements theme_field()
  *
- * Adding heading 2 for label
+ * Make room numbers a comma separated list
+ */
+function ncsulib_foundation_field__field_room_number__space($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . ':&nbsp;</div>';
+  }
+
+  // Render the items as a comma separated inline list
+
+  if (count($variables['items']) > 1) {
+    $output .= '<span class="room-list">Rooms&nbsp;</span>';
+    $output .= '<ul class="room-numbers"' . $variables['content_attributes'] . '>';
+    for ($i=0; $i < count($variables['items']); $i++) {
+      $output .= '<li>'. drupal_render($variables['items'][$i]);
+      $output .= ($i == count($variables['items'])-1) ? '</li>' : ', </li>';
+    }
+    $output .= '</ul>';
+  } else {
+    $output .= '<span class="room-list">Room&nbsp;' . drupal_render($variables['items'][0]) . '</span>';
+  }
+
+
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Make an unordered list
+ */
+function ncsulib_foundation_field__field_policies__space($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<h2' . $variables['title_attributes'] . '>' . $variables['label'] . '</h2>';
+  }
+
+  // Render the items as a comma separated inline list
+  $output .= '<ul class="field-items"' . $variables['content_attributes'] . '>';
+
+  foreach ($variables['items'] as $delta => $item) {
+    $output .= '<li>' . drupal_render($item) . '</li>';
+  }
+
+
+  $output .= '</ul>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Make an unordered list
+ */
+function ncsulib_foundation_field__field_get_help__space($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<h2' . $variables['title_attributes'] . '>' . $variables['label'] . '</h2>';
+  }
+
+  // Render the items as a comma separated inline list
+  $output .= '<ul class="field-items"' . $variables['content_attributes'] . '>';
+
+  foreach ($variables['items'] as $delta => $item) {
+    $output .= '<li>' . drupal_render($item) . '</li>';
+  }
+
+
+  $output .= '</ul>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Turns field labels into heading2
  */
 function ncsulib_foundation_field__space($variables) {
   $output = '';
