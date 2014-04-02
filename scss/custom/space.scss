@@ -5,40 +5,49 @@ $include-html-classes: false;
 
 /**
  * For the Space node content type
- * -Charlie Morris
  */
- .space-attributes {
-    margin-bottom: 10px;
+@media #{$medium-up} {
+    .field-name-field-image {
+        @include grid-column(6, $float: right);
+    }
 }
-.space-photo {
-    width: 480px;
-    height: auto;
-    margin: 0 0 10px 50px;
-    float: right;
+.building-name {
+    display: block;
+    float: left;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
-a.reserve-button {
-    margin-bottom: 35px;
+.room-numbers {
+    margin-left: rem-calc(97);
+
+    li {
+        display: inline;
+    }
 }
-#page .description p {
-    line-height: 1.7;
+
+.field-name-body {
+    clear: left;
+
+    .field-item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: none;
+    }
 }
-.not-reservable {
-    color: #B3B3B3;
-    font-style: italic;
+.room-list {
+    line-height: 1.6;
+    float: left;
+    // margin-bottom: rem-calc(16);
 }
-.field-item {
-    margin: 4px 6px 3px 0;
-    padding: 0 0 2px 18px;
-    list-style: none;
-    background: url(/sites/all/themes/ncsulibraries/images/graybullet.png) 5px 5px no-repeat;
-    line-height: 1.4;
-}
-.description {
-    margin-top: 36px;
-}
-.field-name-body .field-item {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background: none;
+
+@media #{$small-only} {
+    .room-list {
+        margin-bottom: 0;
+    }
+
+    .field-name-field-image {
+        max-width: 330px;
+        margin: rem-calc(0 0 10 0);
+    }
 }
