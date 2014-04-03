@@ -636,6 +636,7 @@ $include-html-classes: false;
 // begin library meta info
 #lib-info{
 	@include grid-row;
+	float: left;
 
 	#lib-photo{
 		@media #{$small-only}{

@@ -645,6 +645,7 @@
   margin-bottom: 0;
   max-width: 62.5rem;
   *zoom: 1;
+  float: left;
 }
 /* line 145, ../../../scss/foundation/components/_global.scss */
 #lib-info:before, #lib-info:after {
@@ -656,7 +657,7 @@
   clear: both;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 640, ../../../scss/custom/hours.scss */
+  /* line 641, ../../../scss/custom/hours.scss */
   #lib-info #lib-photo {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -667,7 +668,7 @@
   }
 }
 @media only screen and (min-width: 48em) {
-  /* line 640, ../../../scss/custom/hours.scss */
+  /* line 641, ../../../scss/custom/hours.scss */
   #lib-info #lib-photo {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -677,7 +678,7 @@
   }
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 653, ../../../scss/custom/hours.scss */
+  /* line 654, ../../../scss/custom/hours.scss */
   #lib-info #lib-meta {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -687,7 +688,7 @@
   }
 }
 @media only screen and (min-width: 48em) {
-  /* line 653, ../../../scss/custom/hours.scss */
+  /* line 654, ../../../scss/custom/hours.scss */
   #lib-info #lib-meta {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -696,7 +697,7 @@
     padding-right: 0px;
   }
 }
-/* line 665, ../../../scss/custom/hours.scss */
+/* line 666, ../../../scss/custom/hours.scss */
 #lib-info .notification {
   float: left;
   margin-top: 1.25rem;
