@@ -249,5 +249,16 @@ ul.pagination {
     color: #FFF;
 }
 
+ul.pager{
+    @include pagination();
+
+    li.pager-current {
+        @include pagination-current-item($has-anchor: false);
+    }
+    li.pager-ellipsis {
+        @include pagination-unavailable-item;
+    }
+}
+
 /* end global styles*/
 
