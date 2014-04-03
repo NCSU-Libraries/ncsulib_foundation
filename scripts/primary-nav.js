@@ -8,13 +8,14 @@ var nav = {
 			out : nav.handleOut,
 			timeout: 250
 		});
-
 		// mouse on primary nav link
 		jQuery('.primary-nav a.primary-menu-item').mouseenter(function(){
 			nav.index = jQuery(this).parent().index();
 
 			// show nav item
-			if(window.innerWidth > 768 && nav.navActive){
+			var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+				// alert(nav.navActive);
+			if(width > 768 && nav.navActive){
 				nav.openNav();
 			}
 		})
@@ -58,7 +59,8 @@ var nav = {
 	},
 
 	openNav : function(){
-		if(window.innerWidth > 768){
+		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		if(width > 768){
 			jQuery('.primary-nav li:eq('+nav.index+') a').addClass('open');
 			jQuery('.primary-menu-list:eq('+nav.index+')').addClass('open');
 		}

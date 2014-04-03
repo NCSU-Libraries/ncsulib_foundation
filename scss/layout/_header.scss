@@ -5,130 +5,8 @@ body.is-sticky{
 body.nav-open{
 	padding-top: 0;
 }
-body.nav-expanded{
-	left: -80%;
-	position: absolute;
-	width: 100%;
-
-	#mobile-nav, #primary-nav{
-		display: block;
-		float: right;
-		left: 100%;
-		position: absolute;
-		top: 0;
-		width: 80%;
-	}
-
-	// top bar
-	.top-bar{
-		overflow: visible;
-
-		.top-bar-section{
-
-			.has-form{
-			    padding-top: 10px;
-			}
-
-			ul#primary-nav{
-				padding: 3% 0;
-
-				li{
-					background: none;
-					a{
-						color: #CCC;
-						font-size: 1.3em;
-					}
-				}
-
-				li.title{
-					display: none;
-				}
-
-				li a.parent-link{
-					display: none;
-				}
-
-				li.has-dropdown{
-
-					.dropdown{
-						background: darken($topbar-dropdown-bg, 5%);
-						display: block;
-						padding: 0 0 5px 0;
-						position: static;
-
-						li{
-							padding-left: rem-calc(20);
-
-							a{
-								background: none;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-/*end nav styles*/
-
-/*begin mobile nav*/
-#mobile-nav{
-	background: $topbar-dropdown-bg;
-	// display: none;
-	padding: 0 10%;
-
-	#primary-nav-mobile{
-		width: 100%;
-
-		ul#primary-nav{
-			border-bottom: 1px solid darken($topbar-link-color, 65%);
-			float: none;
-			list-style-type: none;
-			margin: 10% 0 0 0;
-			position: static;
 
 
-			li{
-
-				a{
-					color: darken($topbar-link-color, 20%);
-					display: block;
-					font-size: 1.3em;
-					padding: 0 0 rem-calc(20);
-					text-transform: uppercase;
-				}
-
-				a:hover{
-					text-decoration: none;
-				}
-			}
-		}
-	}
-
-	#utility-nav-mobile{
-		width: 100%;
-
-		ul#utility-links{
-			float: none;
-			list-style-type: none;
-			margin: 10% 0 0 0;
-
-			li{
-				a{
-					color: darken($topbar-link-color, 20%);
-					display: block;
-					font-size: 0.9em;
-					padding: 0 0 rem-calc(15);
-					text-transform: uppercase;
-				}
-			}
-		}
-	}
-
-	#subnav{
-		color: #CCC;
-	}
-}
 
 // NCSU branding bar
 #ncsu_branding_bar{
@@ -158,7 +36,7 @@ header{
 		.title-area .name{
 			padding-left: rem-calc(15);
 			padding-top: rem-calc(22);
-			width: 200px;
+			width: 348px;
 
 			@media #{$small-only}{
 				float: left;
@@ -264,6 +142,11 @@ header{
 					margin-top: 12px;
 					text-transform: uppercase;
 
+					// hack for ipad
+					@media screen and (min-width: 768px) and (max-width: 810px){
+						padding: 0px 15px;
+					}
+
 					@media #{$small-only} {
 						padding: 0 rem-calc(20);
 						line-height: $topbar-height - 13;
@@ -283,15 +166,19 @@ header{
 					border: 0;
 					padding: 0;
 				}
+
 				li a.open{
 					background: $topbar-dropdown-bg;
 				}
 
 				li.has-dropdown{
+
 					.dropdown{
 						background: $topbar-dropdown-bg;
 						padding: rem-calc(10) 0;
+
 						li{
+
 							a{
 								background: $topbar-dropdown-bg;
 								font-size: 0.9em;
@@ -670,58 +557,75 @@ header#minimum-bar{
 	padding-left: rem-calc(5);
 }
 
-// mobile app alertbox
-body #mobile-app-alert{
-	background: $secondary-color;
-	border: 0px;
-	display: none;
-	// display: inline-block;
-	float: none;
-	margin-bottom: 0px;
-	padding: rem-calc(40) 0px;
-	text-align: center;
-	width: 100%;
-
-	> a{
-		display: block;
-		width: 90%;
-	}
-
-
-	i{
-		color: #FFF;
-		display: inline-block;
-		font-size: 5em;
-		line-height: 1em;
-		margin-right: 3%;
-		padding-left: 0px;
-	}
-
-	h2{
-		color: #FFF;
-		display: inline-block;
-		font-size: 3.5em;
-		line-height: 1.5em;
-		margin: 0px;
-		padding-right: 0px;
-		vertical-align: super;
-	}
-
-	.close{
-		color: #FFF;
-		font-size: 6em;
-		height: 60px;
-		position: absolute;
-		width: auto;
-		z-index: 10;
-
-		&:hover{
-			text-decoration: none;
-		}
-	}
-
-}
-
 /*end utility*/
 
+
+
+
+/*begin mobile nav*/
+@media #{$small-only}{
+
+	#mobile-nav{
+		background: $topbar-dropdown-bg;
+		// display: none;
+		padding: 0 10%;
+
+		#primary-nav-mobile{
+			width: 100%;
+
+			ul#primary-nav{
+				border-bottom: 1px solid darken($topbar-link-color, 65%);
+				float: none;
+				list-style-type: none;
+				margin: 10% 0 0 0;
+				position: static;
+
+
+				li{
+
+					a{
+						color: darken($topbar-link-color, 20%);
+						display: block;
+						font-size: 1.3em;
+						padding: 0 0 rem-calc(20);
+						text-transform: uppercase;
+					}
+
+					a:hover{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		#utility-nav-mobile{
+			width: 100%;
+
+			ul#utility-links{
+				float: none;
+				list-style-type: none;
+				margin: 10% 0 0 0;
+
+				li{
+					a{
+						color: darken($topbar-link-color, 20%);
+						display: block;
+						font-size: 0.9em;
+						padding: 0 0 rem-calc(15);
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+
+		#subnav{
+			color: #CCC;
+		}
+	}
+}
+
 /*end header*/
+
+
+
+

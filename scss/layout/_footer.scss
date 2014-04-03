@@ -47,20 +47,17 @@ footer {
 		padding: 0px rem-calc(10);
 		padding-bottom: 20px;
 
-		@media #{$medium-up}{
-			// padding: 0px;
-		}
-
 		#f-address{
-
-			@include grid-column(4);
-			padding-left: 0px;
-			padding-bottom: rem-calc(30);
 
 			@media #{$small-only} {
 				margin-bottom: rem-calc(20);
 			}
 
+			@media #{$medium-up}{
+				@include grid-column(4);
+				padding-left: 0px;
+				padding-bottom: rem-calc(30);
+			}
 
 			h3{
 				margin-top: rem-calc(10);
@@ -72,9 +69,11 @@ footer {
 		}
 
 		#f-libraries{
-			@include grid-column(4);
-			margin-bottom: rem-calc(20);
+			@media #{$medium-up}{
+				@include grid-column(4);
+			}
 
+			margin-bottom: rem-calc(20);
 		}
 
 		#f-lib-links{
@@ -90,6 +89,7 @@ footer {
 					font-size: (($paragraph-font-size)*1.25);
 				}
 			}
+
 			.giving {
 				margin-bottom: rem-calc(20);
 				display: block;

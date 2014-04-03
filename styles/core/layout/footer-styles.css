@@ -75,50 +75,57 @@ footer #footer:before, footer #footer:after {
 footer #footer:after {
   clear: both;
 }
-/* line 54, ../../../scss/layout/_footer.scss */
-footer #footer #f-address {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 33.33333%;
-  float: left;
-  padding-left: 0px;
-  padding-bottom: 1.875rem;
-}
 @media only screen and (max-width: 47.937em) {
-  /* line 54, ../../../scss/layout/_footer.scss */
+  /* line 50, ../../../scss/layout/_footer.scss */
   footer #footer #f-address {
     margin-bottom: 1.25rem;
   }
 }
-/* line 65, ../../../scss/layout/_footer.scss */
+@media only screen and (min-width: 48em) {
+  /* line 50, ../../../scss/layout/_footer.scss */
+  footer #footer #f-address {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left;
+    padding-left: 0px;
+    padding-bottom: 1.875rem;
+  }
+}
+/* line 62, ../../../scss/layout/_footer.scss */
 footer #footer #f-address h3 {
   margin-top: 0.625rem;
 }
-/* line 69, ../../../scss/layout/_footer.scss */
+/* line 66, ../../../scss/layout/_footer.scss */
 footer #footer #f-address p {
   line-height: 1.3;
 }
-/* line 74, ../../../scss/layout/_footer.scss */
+/* line 71, ../../../scss/layout/_footer.scss */
 footer #footer #f-libraries {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 33.33333%;
-  float: left;
   margin-bottom: 1.25rem;
 }
-/* line 80, ../../../scss/layout/_footer.scss */
+@media only screen and (min-width: 48em) {
+  /* line 71, ../../../scss/layout/_footer.scss */
+  footer #footer #f-libraries {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left;
+  }
+}
+/* line 79, ../../../scss/layout/_footer.scss */
 footer #footer #f-lib-links {
   margin-bottom: 1.875rem;
 }
 @media only screen and (min-width: 48em) {
-  /* line 84, ../../../scss/layout/_footer.scss */
+  /* line 83, ../../../scss/layout/_footer.scss */
   footer #footer #f-social {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     width: 33.33333%;
     float: left;
   }
-  /* line 89, ../../../scss/layout/_footer.scss */
+  /* line 88, ../../../scss/layout/_footer.scss */
   footer #footer #f-social a {
     font-size: 1.25rem;
   }
