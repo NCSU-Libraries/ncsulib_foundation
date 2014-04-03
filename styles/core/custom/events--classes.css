@@ -22,6 +22,7 @@
   margin-bottom: 0;
   max-width: 62.5rem;
   *zoom: 1;
+  margin-bottom: 0.625rem;
 }
 /* line 145, ../../../scss/foundation/components/_global.scss */
 .views-row:before, .views-row:after {
@@ -33,7 +34,7 @@
   clear: both;
 }
 
-/* line 9, ../../../scss/custom/events--classes.scss */
+/* line 10, ../../../scss/custom/events--classes.scss */
 .views-field-title {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -41,16 +42,16 @@
   float: left;
 }
 
-/* line 12, ../../../scss/custom/events--classes.scss */
-.views-field-title-time {
+/* line 13, ../../../scss/custom/events--classes.scss */
+.views-field-field-time {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 33.33333%;
   float: left;
 }
 
-/* line 15, ../../../scss/custom/events--classes.scss */
-.views-field-title-space {
+/* line 16, ../../../scss/custom/events--classes.scss */
+.views-field-field-space {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 33.33333%;
