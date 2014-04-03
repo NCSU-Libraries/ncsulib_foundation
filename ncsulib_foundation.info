@@ -14,7 +14,7 @@ stylesheets[all][] = styles/core/ncsulib_foundation.css
 stylesheets[all][] = styles/core/custom/system.menus.css
 
 ; Removals
-;  see https://drupal.org/node/263967 to add some
+stylesheets[all][] = system.theme.css
 
 ;;;; JavaScript
 
