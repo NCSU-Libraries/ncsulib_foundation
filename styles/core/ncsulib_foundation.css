@@ -8435,7 +8435,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 /* line 328, ../../scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
@@ -8446,7 +8446,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 /* line 335, ../../scss/foundation/components/_type.scss */
 h1 {
-  font-size: 2.25rem;
+  font-size: 1.875rem;
 }
 
 /* line 336, ../../scss/foundation/components/_type.scss */
@@ -8683,12 +8683,12 @@ blockquote p {
 @media only screen and (min-width: 48em) {
   /* line 514, ../../scss/foundation/components/_type.scss */
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   /* line 515, ../../scss/foundation/components/_type.scss */
   h1 {
-    font-size: 2.875rem;
+    font-size: 2.5rem;
   }
 
   /* line 516, ../../scss/foundation/components/_type.scss */
@@ -10308,7 +10308,7 @@ div.workbench-info-block {
 
 /* line 16, ../../scss/layout/_main.scss */
 h1 {
-  font-size: 2.875rem;
+  font-size: 2.5rem;
   margin-top: 0px;
 }
 
@@ -11468,6 +11468,82 @@ ul.pagination {
 /* line 248, ../../scss/layout/_global-overrides.scss */
 .calendar-calendar td .contents a {
   color: #FFF;
+}
+
+/* line 252, ../../scss/layout/_global-overrides.scss */
+ul.pager {
+  display: block;
+  height: inherit;
+  margin-left: -0.3125rem;
+}
+/* line 100, ../../scss/foundation/components/_pagination.scss */
+ul.pager li {
+  height: 1.5rem;
+  color: #222222;
+  font-size: 0.875rem;
+  margin-left: 0.3125rem;
+}
+/* line 106, ../../scss/foundation/components/_pagination.scss */
+ul.pager li a {
+  display: block;
+  padding: 0.0625rem 0.625rem 0.0625rem;
+  color: #555555;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+/* line 114, ../../scss/foundation/components/_pagination.scss */
+ul.pager li:hover a,
+ul.pager li a:focus {
+  background: #e6e6e6;
+}
+/* line 51, ../../scss/foundation/components/_pagination.scss */
+ul.pager li.unavailable a {
+  cursor: default;
+  color: #e6e6e6;
+}
+/* line 56, ../../scss/foundation/components/_pagination.scss */
+ul.pager li.unavailable:hover a, ul.pager li.unavailable a:focus {
+  background: transparent;
+}
+/* line 64, ../../scss/foundation/components/_pagination.scss */
+ul.pager li.current a {
+  background: #cc0000;
+  color: white;
+  font-weight: bold;
+  cursor: default;
+}
+/* line 71, ../../scss/foundation/components/_pagination.scss */
+ul.pager li.current a:hover, ul.pager li.current a:focus {
+  background: #cc0000;
+}
+/* line 124, ../../scss/foundation/components/_pagination.scss */
+ul.pager li {
+  float: left;
+  display: block;
+}
+/* line 255, ../../scss/layout/_global-overrides.scss */
+ul.pager li.pager-current {
+  height: auto;
+  padding: 0.0625rem 0.625rem 0.0625rem;
+  background: #cc0000;
+  color: white;
+  font-weight: bold;
+  cursor: default;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+/* line 83, ../../scss/foundation/components/_pagination.scss */
+ul.pager li.pager-current:hover, ul.pager li.pager-current:focus {
+  background: #cc0000;
+}
+/* line 51, ../../scss/foundation/components/_pagination.scss */
+ul.pager li.pager-ellipsis a {
+  cursor: default;
+  color: #e6e6e6;
+}
+/* line 56, ../../scss/foundation/components/_pagination.scss */
+ul.pager li.pager-ellipsis:hover a, ul.pager li.pager-ellipsis a:focus {
+  background: transparent;
 }
 
 /* end global styles*/
