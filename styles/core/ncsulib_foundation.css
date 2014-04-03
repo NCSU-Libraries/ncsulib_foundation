@@ -11369,20 +11369,21 @@ div.tabs-content.vertical {
   input[type="color"] {
     font-size: 1em !important;
     border-radius: 0px;
+    height: 2.8rem;
   }
 }
-/* line 154, ../../scss/layout/_global-overrides.scss */
+/* line 158, ../../scss/layout/_global-overrides.scss */
 input[type="submit"] {
   border-radius: 0px;
 }
 
-/* line 159, ../../scss/layout/_global-overrides.scss */
+/* line 165, ../../scss/layout/_global-overrides.scss */
 body .panel.callout {
   border: 0px solid #CCC;
   background: #f5f5f5;
 }
 
-/* line 167, ../../scss/layout/_global-overrides.scss */
+/* line 173, ../../scss/layout/_global-overrides.scss */
 dl.sub-nav {
   background: none;
   border-bottom: 1px solid #cccccc;
@@ -11392,19 +11393,19 @@ dl.sub-nav {
   text-align: center;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 167, ../../scss/layout/_global-overrides.scss */
+  /* line 173, ../../scss/layout/_global-overrides.scss */
   dl.sub-nav {
     margin-left: -1rem;
   }
 }
-/* line 179, ../../scss/layout/_global-overrides.scss */
+/* line 185, ../../scss/layout/_global-overrides.scss */
 dl.sub-nav dd {
   display: inline-block;
   float: none;
   margin-bottom: 0px;
 }
 
-/* line 189, ../../scss/layout/_global-overrides.scss */
+/* line 195, ../../scss/layout/_global-overrides.scss */
 code {
   background: #383838;
   display: inline-block;
@@ -11414,7 +11415,7 @@ code {
   width: 100%;
 }
 
-/* line 197, ../../scss/layout/_global-overrides.scss */
+/* line 203, ../../scss/layout/_global-overrides.scss */
 pre {
   background: #383838;
   color: white;
@@ -11422,26 +11423,26 @@ pre {
 }
 
 @media only screen and (max-width: 47.937em) {
-  /* line 211, ../../scss/layout/_global-overrides.scss */
+  /* line 217, ../../scss/layout/_global-overrides.scss */
   .orbit-container {
     margin-bottom: 1.875rem;
   }
 }
-/* line 217, ../../scss/layout/_global-overrides.scss */
+/* line 223, ../../scss/layout/_global-overrides.scss */
 .orbit-container .orbit-timer {
   left: 0px;
   top: 0px;
   width: 100%;
 }
 
-/* line 222, ../../scss/layout/_global-overrides.scss */
+/* line 228, ../../scss/layout/_global-overrides.scss */
 .orbit-container .orbit-timer .orbit-progress {
   left: 0px;
   top: 0px;
   width: 100%;
 }
 
-/* line 228, ../../scss/layout/_global-overrides.scss */
+/* line 234, ../../scss/layout/_global-overrides.scss */
 ul.orbit-slider,
 ul.orbit-slider li {
   list-style-type: none;
@@ -11449,28 +11450,28 @@ ul.orbit-slider li {
   padding: 0px;
 }
 
-/* line 233, ../../scss/layout/_global-overrides.scss */
+/* line 239, ../../scss/layout/_global-overrides.scss */
 ul.orbit-slider li img {
   width: 100%;
 }
 
-/* line 236, ../../scss/layout/_global-overrides.scss */
+/* line 242, ../../scss/layout/_global-overrides.scss */
 .orbit-slider .orbit-caption a {
   color: #FFF;
   text-decoration: underline;
 }
 
-/* line 243, ../../scss/layout/_global-overrides.scss */
+/* line 249, ../../scss/layout/_global-overrides.scss */
 ul.pagination {
   overflow: auto;
 }
 
-/* line 248, ../../scss/layout/_global-overrides.scss */
+/* line 254, ../../scss/layout/_global-overrides.scss */
 .calendar-calendar td .contents a {
   color: #FFF;
 }
 
-/* line 252, ../../scss/layout/_global-overrides.scss */
+/* line 258, ../../scss/layout/_global-overrides.scss */
 ul.pager {
   display: block;
   height: inherit;
@@ -11521,7 +11522,7 @@ ul.pager li {
   float: left;
   display: block;
 }
-/* line 255, ../../scss/layout/_global-overrides.scss */
+/* line 261, ../../scss/layout/_global-overrides.scss */
 ul.pager li.pager-current {
   height: auto;
   padding: 0.0625rem 0.625rem 0.0625rem;

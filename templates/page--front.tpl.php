@@ -13,10 +13,10 @@
             <section id="tier-one">
                 <div id="search-options">
                     <div id="home-search">
-                        <?php if(device_is_mobile()): ?>
-                            <?php require_once('/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search-mobile.html'); ?>
+                        <?php if(device_is('phone')): ?>
+                            <!--#include virtual="/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search-mobile.html" -->
                         <?php else: ?>
-                            <?php require_once('/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search_tabs-desktop.html'); ?>
+                            <!--#include virtual="/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search_tabs-desktop.html" -->
                         <?php endif; ?>
                     </div>
                     <div id="research-tools">
