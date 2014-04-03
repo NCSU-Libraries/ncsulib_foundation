@@ -278,3 +278,21 @@ body #home-quicklinks ul#quicklinks li ul li:first-child{
 	float:  left;
 	width: 33%;
 }
+
+
+/*browser warning*/
+#browser_warning{
+	background: MediumSeaGreen;
+	padding: 10px;
+	text-align: center;
+}
+#browser_warning h4{
+	color: white;
+	margin: 0px;
+}
+#browser_warning a{
+	color: white;
+	text-decoration: underline;
+}
+
+
