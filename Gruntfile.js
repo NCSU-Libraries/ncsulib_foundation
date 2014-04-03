@@ -25,7 +25,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-hash');
+  // grunt.loadNpmTasks('grunt-hash');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
   // clean out the old js, compress new js
