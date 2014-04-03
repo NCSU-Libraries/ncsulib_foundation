@@ -12,7 +12,13 @@
             <!-- top row -->
             <section id="tier-one">
                 <div id="search-options">
-                    <div data-interchange="[/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search-mobile.html, (small)], [/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search_tabs-desktop.html, (medium)]"></div>
+                    <div id="home-search">
+                        <?php if(device_is_mobile()): ?>
+                            <?php require_once('/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search-mobile.html'); ?>
+                        <?php else: ?>
+                            <?php require_once('/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search_tabs-desktop.html'); ?>
+                        <?php endif; ?>
+                    </div>
                     <div id="research-tools">
                         <h2>More Research Tools:</h2>
                         <ul>
@@ -49,7 +55,7 @@
                     </div>
                 </div>
 
-                <!-- artbox stub -->
+                <!-- artbox stub-->
                 <div id="home-artbox">
                     <ul data-orbit>
                         <li>

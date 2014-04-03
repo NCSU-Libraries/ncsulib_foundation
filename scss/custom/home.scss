@@ -81,7 +81,9 @@ $include-html-classes: false;
 
 
 	@media #{$small-only}{
-		@include grid-column(12);
+		@include grid-column(10);
+		border-radius: 0px;
+		font-size: 1rem;
 		margin-bottom: rem-calc(10);
 	}
 
@@ -97,7 +99,8 @@ $include-html-classes: false;
 	height: 4.3em;
 
 	@media #{$small-only}{
-		@include grid-column(12);
+		@include grid-column(2);
+		height: 5.1em;
 	}
 
 	@media all and (min-width: 768px) and (max-width: 820px){

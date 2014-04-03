@@ -2,14 +2,23 @@
 
 p.caption {
     float: right;
+    font-size: 0.9em;
     font-style: italic;
     text-align: center;
     margin: 15px;
+    // width: 100%;
 
     img {
         display: block;
         margin-bottom: 5px;
     }
+}
+
+.float-right, .flow-right {
+    float: right;
+}
+.float-left, .flow-left {
+    float: left;
 }
 
 .featured-image {
@@ -25,16 +34,13 @@ p.caption {
         width: 100%;
     }
 
-    p {
-
+    p{
+        font-style: italic;
+        font-size: 0.9em;
+        text-align: center;
+        width: 100%;
     }
 
-    .float-right {
-        float: right;
-    }
-    .float-left {
-        float: left;
-    }
     .right-image {
         float: right;
         clear: right;
