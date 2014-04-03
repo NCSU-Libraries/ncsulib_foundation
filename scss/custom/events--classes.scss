@@ -5,13 +5,14 @@ $include-html-classes: false;
 
 .views-row {
     @include grid-row();
+    margin-bottom: rem-calc(10);
 }
 .views-field-title {
     @include grid-column(4);
 }
-.views-field-title-time {
+.views-field-field-time {
     @include grid-column(4);
 }
-.views-field-title-space {
+.views-field-field-space {
     @include grid-column(4);
 }
