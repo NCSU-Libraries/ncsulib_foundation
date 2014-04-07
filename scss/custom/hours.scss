@@ -7,6 +7,7 @@ $include-html-classes: false;
 /*begin sidebar styles*/
 #sidebar-left{
 	@include grid-column(5);
+	padding-right: 0px;
 
 	@media #{$small-only}{
 		@include grid-column(12);
@@ -23,7 +24,7 @@ $include-html-classes: false;
 			a{
 				display: block;
 				margin: 0;
-				padding: 0px 26px 0px 0px;
+				padding: 0px 30px 0px 0px;
 				text-decoration: none;
 
 				@media #{$small-only}{
@@ -32,7 +33,7 @@ $include-html-classes: false;
 			}
 
 			a.nav-active, a.nav-active:hover{
-				background: #f0f0f0 url("/sites/all/themes/ncsulib_foundation/images/hours-nav-arrow.png") no-repeat 100% center;
+				background: #f0f0f0 url("/sites/all/themes/ncsulib_foundation/images/hours-nav-arrow.png") no-repeat 100% top;
 				background-size: auto 100%;
 
 				@media #{$small-only}{
@@ -86,7 +87,7 @@ $include-html-classes: false;
 				border-top: 1px solid #DDD;
 			    display: table-cell;
 				height: 64px;
-				min-width: 78px;
+				min-width: 15px;
 				padding: 0px 0% 0px 0px;
 			    text-align: center;
 			    vertical-align: middle;
