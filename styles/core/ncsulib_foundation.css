@@ -13902,14 +13902,15 @@ ul.pager li.pager-ellipsis:hover a, ul.pager li.pager-ellipsis a:focus {
     padding: 10px;
     margin: 0;
     background-color: rgba(204, 0, 0, 0.82);
+    z-index: 9999;
   }
-  /* line 11, ../../scss/components/_feedback_button.scss */
+  /* line 12, ../../scss/components/_feedback_button.scss */
   .feedback-form:hover {
     text-decoration: none;
   }
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 18, ../../scss/components/_feedback_button.scss */
+  /* line 19, ../../scss/components/_feedback_button.scss */
   .feedback-form {
     top: 83%;
     font-size: 0.875rem;
