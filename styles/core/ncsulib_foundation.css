@@ -11604,8 +11604,8 @@ ul.pager li.pager-ellipsis:hover a, ul.pager li.pager-ellipsis a:focus {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.0.3");
-  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
+  src: url("//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/fonts/fontawesome/fontawesome-webfont.eot?v=4.0.3");
+  src: url("//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/fonts/fontawesome/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/fonts/fontawesome/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/fonts/fontawesome/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
