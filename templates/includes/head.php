@@ -4,6 +4,9 @@
 <meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" />
 <meta http-equiv="ImageToolbar" content="false" />
 <meta name="viewport" content="width=device-width" />
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-114x114.png" />
 
 <?php if(!$_SERVER['REMOTE_ADDR']): ?>
 <!-- css -->
