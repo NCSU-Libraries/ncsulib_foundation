@@ -13,11 +13,13 @@
             <section id="tier-one">
                 <div id="search-options">
                     <div id="home-search">
-                        <?php if(device_is('phone')): ?>
-                            <!--#include virtual="/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search-mobile.html" -->
-                        <?php else: ?>
-                            <!--#include virtual="/sites/all/themes/ncsulib_foundation/templates/includes/partials/home-search_tabs-desktop.html" -->
-                        <?php endif; ?>
+                        <?php
+                            if (device_is('phone')) {
+                                include DRUPAL_ROOT.'/'.$GLOBALS['theme_path'].'/templates/includes/partials/home-search-mobile.html';
+                            } else {
+                                include DRUPAL_ROOT.'/'.$GLOBALS['theme_path'].'/templates/includes/partials/home-search_tabs-desktop.html';
+                            }
+                        ?>
                     </div>
                     <div id="research-tools">
                         <h2>More Research Tools:</h2>
