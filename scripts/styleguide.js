@@ -34,6 +34,7 @@ var code = {
 }
 
 jQuery(function(){
+	console.log('hit');
 	code.init();
 })
 
