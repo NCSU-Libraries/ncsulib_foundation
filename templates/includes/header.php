@@ -128,7 +128,7 @@ Your browser does not support inline frames or is currently configured  not to d
 		</div>
 		<?php else: ?>
 		<div id="utility-search">
-			<form id="search-form" accept-charset="utf-8" method="get" action="/search/" tabindex="1">
+			<form id="search-form" accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu" tabindex="1">
 				<input type="text" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, &amp; library website">
 				<input type="submit" id="search-submit" value="SEARCH">
 			</form>
