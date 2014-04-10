@@ -127,8 +127,8 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   $url_comp = explode('/', request_uri());
 
   // for entire directory (ex: /find)
-  if (isset($url_comp[0])) {
-    switch ($url_comp[0]) {
+  if (isset($url_comp[1])) {
+    switch ($url_comp[1]) {
       case 'styleguide':
         drupal_add_js(path_to_theme() . '/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;

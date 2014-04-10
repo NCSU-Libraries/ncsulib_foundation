@@ -57,7 +57,9 @@
 
                 <!-- artbox stub-->
                 <div id="home-artbox">
-                    <ul data-orbit>
+
+                    <?php include_once 'block--nivo_slider.tpl.php'; ?>
+<!--                     <ul data-orbit>
                         <li>
                             <img src="http://lib.ncsu.edu/artbox/images/0114-04.jpg" width="100%" />
                         </li>
@@ -67,7 +69,7 @@
                         <li>
                             <img src="http://lib.ncsu.edu/artbox/images/0114-08.jpg" width="100%"/>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </section> <!-- /top row -->
 
