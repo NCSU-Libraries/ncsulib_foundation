@@ -3,7 +3,8 @@
 <meta charset="utf-8" />
 <meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" />
 <meta http-equiv="ImageToolbar" content="false" />
-<meta name="viewport" content="width=device-width" />
+<!-- <meta name="viewport" content="width=device-width" /> -->
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-72x72.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-114x114.png" />
