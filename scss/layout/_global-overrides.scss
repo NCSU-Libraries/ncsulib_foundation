@@ -156,7 +156,12 @@ div.tabs-content.vertical{
 }
 // ensure there is no border radius on iOS devices
 input[type="submit"]{
+    @include button;
     border-radius: 0px;
+}
+
+select{
+    padding: 10px 5px;
 }
 
 
@@ -191,7 +196,7 @@ dl.sub-nav{
 // end subnav
 
 
-// code
+// <code>
 code{
     background: $secondary-color;
     display: inline-block;
@@ -267,4 +272,26 @@ ul.pager{
 }
 
 /* end global styles*/
+
+
+// global table defaults
+table{
+
+    tr{
+
+       tr, td{
+            text-align: left;
+            vertical-align: top;
+        }
+    }
+}
+
+
+// arrange form module overrides
+.webform-container-inline{
+
+    select{
+        width: auto;
+    }
+}
 
