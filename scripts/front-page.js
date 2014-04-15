@@ -4,6 +4,7 @@ jQuery(document).ready(function($){
     orbit: {
       animation: 'fade',
       slide_number: false,
+      stack_on_small: true
     }
   });
 
