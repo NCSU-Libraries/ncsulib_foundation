@@ -27,6 +27,7 @@ $include-html-classes: false;
 	margin-bottom: rem-calc(30);
 
 	@media #{$small-only}{
+		margin-bottom: 0px;
 		margin-top: 0px;
 	}
 }
@@ -254,6 +255,7 @@ $include-html-classes: false;
 	ul{
 		@include inline-list;
 		margin-bottom: rem-calc(20);
+		overflow: visible;
 
 		li{
 
@@ -393,12 +395,31 @@ $include-html-classes: false;
 		height: 294px;
 
 		@media #{$small-only}{
-			// height: auto;
+			height: auto;
+		}
+	}
+
+	.orbit-container{
+
+		@media #{$small-only}{
+			margin-bottom: 0px;
+		}
+
+		.orbit-slides-container > *{
+			@media #{$small-only}{
+				margin-bottom: rem-calc(10);
+				transform:none;
+				-ms-transform:none;
+				-webkit-transform:none;
+			}
 		}
 	}
 
 	.orbit-bullets-container{
-		height: 30px;
+		@media #{$medium-up}{
+			height: 30px;
+		}
+
 		margin-bottom: 0px;
 	}
 

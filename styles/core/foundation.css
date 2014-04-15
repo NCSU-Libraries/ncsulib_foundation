@@ -7264,7 +7264,7 @@ meta.foundation-mq-topbar {
   .top-bar .button {
     font-size: 0.875rem;
     position: relative;
-    top: 7px;
+    top: 17px;
   }
   /* line 464, ../../scss/foundation/components/_top-bar.scss */
   .top-bar.expanded {

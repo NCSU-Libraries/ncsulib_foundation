@@ -20,10 +20,21 @@ body.nav-open{
 // NCSU branding bar
 
 
+
+nav.top-bar{
+	.alert.button.small{
+		padding-bottom: 9px;
+		padding-top: 8px;
+	}
+
+	.has-form input{
+		height: auto;
+	}
+}
+
 header{
 	margin-top: -3px; /* fix the spacing problem with the University nav iframe */
 	background: $primary-color;
-	margin-top: rem-calc(-3);
 
 	nav.top-bar{
 		@include grid-row;
@@ -202,7 +213,6 @@ header{
 	}
 
 }
-
 
 
 body.front header nav.top-bar #search-toggle{

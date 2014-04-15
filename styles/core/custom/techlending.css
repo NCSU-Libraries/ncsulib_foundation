@@ -42,7 +42,7 @@
   text-rendering: optimizeLegibility;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 /* line 215, ../../../scss/custom/_silent_type.scss */
 .views-row .views-field-title {
@@ -60,7 +60,7 @@
 @media only screen and (min-width: 48em) {
   /* line 391, ../../../scss/custom/_silent_type.scss */
   .views-row .views-field-title {
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   /* line 395, ../../../scss/custom/_silent_type.scss */

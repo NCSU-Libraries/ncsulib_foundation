@@ -22,7 +22,7 @@
   text-rendering: optimizeLegibility;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 /* line 213, ../../../scss/custom/_silent_type.scss */
 .view-filters form label[for="edit-field-building-name-value"] {
@@ -50,7 +50,7 @@
 @media only screen and (min-width: 48em) {
   /* line 391, ../../../scss/custom/_silent_type.scss */
   .view-filters form label[for="edit-field-building-name-value"], .room-name, .building-name {
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   /* line 393, ../../../scss/custom/_silent_type.scss */

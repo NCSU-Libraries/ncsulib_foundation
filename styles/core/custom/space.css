@@ -15,55 +15,60 @@
 /* Microformats */
 /**
  * For the Space node content type
- * -Charlie Morris
  */
-/* line 10, ../../../scss/custom/space.scss */
-.space-attributes {
-  margin-bottom: 10px;
+@media only screen and (min-width: 48em) {
+  /* line 10, ../../../scss/custom/space.scss */
+  .field-name-field-image {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: right;
+  }
+}
+/* line 14, ../../../scss/custom/space.scss */
+.building-name {
+  display: block;
+  float: left;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
-/* line 13, ../../../scss/custom/space.scss */
-.space-photo {
-  width: 480px;
-  height: auto;
-  margin: 0 0 10px 50px;
-  float: right;
+/* line 20, ../../../scss/custom/space.scss */
+.room-numbers {
+  margin-left: 6.0625rem;
+}
+/* line 23, ../../../scss/custom/space.scss */
+.room-numbers li {
+  display: inline;
 }
 
-/* line 19, ../../../scss/custom/space.scss */
-a.reserve-button {
-  margin-bottom: 35px;
+/* line 28, ../../../scss/custom/space.scss */
+.field-name-body {
+  clear: left;
 }
-
-/* line 22, ../../../scss/custom/space.scss */
-#page .description p {
-  line-height: 1.7;
-}
-
-/* line 25, ../../../scss/custom/space.scss */
-.not-reservable {
-  color: #B3B3B3;
-  font-style: italic;
-}
-
-/* line 29, ../../../scss/custom/space.scss */
-.field-item {
-  margin: 4px 6px 3px 0;
-  padding: 0 0 2px 18px;
-  list-style: none;
-  background: url(/sites/all/themes/ncsulibraries/images/graybullet.png) 5px 5px no-repeat;
-  line-height: 1.4;
-}
-
-/* line 36, ../../../scss/custom/space.scss */
-.description {
-  margin-top: 36px;
-}
-
-/* line 39, ../../../scss/custom/space.scss */
+/* line 31, ../../../scss/custom/space.scss */
 .field-name-body .field-item {
   margin: 0;
   padding: 0;
   list-style: none;
   background: none;
+}
+
+/* line 38, ../../../scss/custom/space.scss */
+.room-list {
+  line-height: 1.6;
+  float: left;
+}
+
+@media only screen and (max-width: 47.937em) {
+  /* line 45, ../../../scss/custom/space.scss */
+  .room-list {
+    margin-bottom: 0;
+  }
+
+  /* line 49, ../../../scss/custom/space.scss */
+  .field-name-field-image {
+    max-width: 330px;
+    margin: 0 0 0.625rem 0;
+  }
 }
