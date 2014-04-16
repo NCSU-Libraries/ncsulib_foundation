@@ -1,5 +1,5 @@
 jQuery(function($){
-    $("#books-media-search").autosuggest({
+    $("#Ntt").autosuggest({
         source: "ncsu",
         indexInput: "#books-more-options-drop",
         queryForm: "#searchbooksform",
