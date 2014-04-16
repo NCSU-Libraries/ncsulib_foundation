@@ -6,5 +6,5 @@ robots.txt
 .DS_Store
 ._DS_Store
 ._.DS_Store
-vendor
+/vendor
 .bundle/
