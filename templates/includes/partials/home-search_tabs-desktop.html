@@ -50,7 +50,10 @@
         <div class="content" id="search-3">
             <form accept-charset="utf-8" method="get" action="http://catalog.lib.ncsu.edu/" id="searchbooksform">
                 <div class="search-body clearfix">
-                    <input type="text" value="" id="books-media-search" name="Ntt" class="books-media-search-field ac_input" placeholder="Search for ebooks, journals, movies..." autocomplete="off">
+                    <input type="hidden" value="1" name="Nty">
+                    <input type="hidden" value="0" name="N">
+                    <input type="hidden" value="" id="sugg" name="sugg">
+                    <input type="text" value="" id="books-media-search" name="books-media-search" class="books-media-search-field ac_input" placeholder="Search for ebooks, journals, movies..." autocomplete="off">
                     <input type="submit" class="front-page-submit button small prefix" value="SEARCH" id="searchbookssubmit">
                     <p class="search-example">Example: Freakonomics</p>
 
@@ -70,9 +73,6 @@
                     <label class="access" for="worldcat"><input type="radio" value="worldcat" name="scope" id="worldcat" /> UNC System Libraries &amp; Beyond</label></li>
                     <p class="search-more"><a href="/catalog/" id="books-media-search-more">More search options »</a></p>
                 </div>
-                <input type="hidden" value="1" name="Nty">
-                <input type="hidden" value="0" name="N">
-                <input type="hidden" value="" id="sugg" name="sugg">
             </form>
         </div>
 
