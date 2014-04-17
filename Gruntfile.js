@@ -8,7 +8,10 @@ module.exports = function(grunt) {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
         wrap: 'wrapper',
-        preserveComments: false
+        preserveComments: false,
+        mangle: {
+          except: 'nav'
+        }
       },
       build: {
         src: ['scripts/vendor/foundation.min.js',
