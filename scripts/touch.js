@@ -44,7 +44,8 @@ var touchHover = {
         jQuery('body').on('click', function (e) {
             touchHover.parentNotMenu    = (jQuery(e.target).parent() !== touchHover.$el);
             touchHover.parentNotHover   = (jQuery(e.target).parent()[0] !== jQuery('#primary-nav-menus')[0]);
-
+            console.log('parentNotMenu ' + touchHover.parentNotMenu);
+            console.log('touchHover.parentNotHover ' + touchHover.parentNotHover );
             if (touchHover.parentNotMenu && touchHover.parentNotHover) {
                 touchHover.doubleTap = 0;
                 nav.closeNav();
