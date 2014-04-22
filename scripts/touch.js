@@ -1,11 +1,11 @@
-/**
+ /**
  * Have touch enabled devices mimic mousehover on the primary desktop nav
  *
  * Dependent on primary-nav.js
  */
 
 var touchHover = {
-    $el             : jQuery('.primary-menu-item'),
+    $el             : jQuery('.top-bar-section .primary-menu-item'),
     doubleTap       : 0,
     tapped          : [],
     parentNotMenu   : false,
