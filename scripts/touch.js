@@ -35,13 +35,6 @@ var touchHover = {
             touchHover.menuActive = true;
             nav.openNav();
 
-            // Sub-menu disappears after 10 seconds
-            setTimeout( function() {
-                touchHover.doubleTap    = 0;
-                touchHover.menuActive   = false;
-                nav.closeNav();
-            }, 10000);
-
         });
 
         // Taps off of the menu close the menu
