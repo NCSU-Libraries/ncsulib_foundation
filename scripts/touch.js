@@ -10,8 +10,10 @@ var touchHover = {
     tapped          : [],
     parentNotMenu   : false,
     parentNotHover  : false,
+    menuActive      : false,
 
     init : function () {
+
         touchHover.$el.on("touchstart", function(evt) {
             evt.preventDefault();
 
@@ -30,24 +32,33 @@ var touchHover = {
             // Opens the sub nav
             nav.closeNav();
             nav.index = jQuery(this).parent().index();
+            touchHover.menuActive = true;
             nav.openNav();
 
             // Sub-menu disappears after 10 seconds
             setTimeout( function() {
-                touchHover.doubleTap = 0;
+                touchHover.doubleTap    = 0;
+                touchHover.menuActive   = false;
                 nav.closeNav();
             }, 10000);
 
         });
 
         // Taps off of the menu close the menu
-        jQuery('body').on('click', function (e) {
-            touchHover.parentNotMenu    = (jQuery(e.target).parent() !== touchHover.$el);
-            touchHover.parentNotHover   = (jQuery(e.target).parent()[0] !== jQuery('#primary-nav-menus')[0]);
+        jQuery('body').on('touchstart', function (e) {
+            if (touchHover.menuActive === true) {
+                // parentNotMenu means that the area you touched is not within the primary nav area
+                // parentNotHover means that the area you touched isn't in the hover menu.
+                // Was forced to use .attr('id') to actually get the comparison to work properly
+                // which seems to be an iOS quirk.
+                touchHover.parentNotMenu    = (jQuery(e.target).parents()[1] !== jQuery('ul#primary-nav')[0]);
+                touchHover.parentNotHover   = (jQuery(e.target).parent().attr('id') !== jQuery('#primary-nav-menus').attr('id'));
 
-            if (touchHover.parentNotMenu && touchHover.parentNotHover) {
-                touchHover.doubleTap = 0;
-                nav.closeNav();
+                if (touchHover.parentNotMenu && touchHover.parentNotHover) {
+                    touchHover.doubleTap    = 0;
+                    touchHover.menuActive   = false;
+                    nav.closeNav();
+                }
             }
         });
     },
