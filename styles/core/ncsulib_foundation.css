@@ -10258,8 +10258,7 @@ header#minimum-bar .top-bar .top-bar-section a {
 @media only screen and (max-width: 47.937em) {
   /* line 578, ../../scss/layout/_header.scss */
   #mobile-nav {
-    background: #383838;
-    padding: 0 10%;
+    padding: 0px;
   }
   /* line 583, ../../scss/layout/_header.scss */
   #mobile-nav #primary-nav-mobile {
@@ -10270,40 +10269,46 @@ header#minimum-bar .top-bar .top-bar-section a {
     border-bottom: 1px solid #595959;
     float: none;
     list-style-type: none;
-    margin: 10% 0 0 0;
+    margin: 5% 0 0 0;
+    padding: 0 0 5% 0;
     position: static;
   }
-  /* line 596, ../../scss/layout/_header.scss */
+  /* line 597, ../../scss/layout/_header.scss */
   #mobile-nav #primary-nav-mobile ul#primary-nav li a {
     color: #cccccc;
     display: block;
     font-size: 1.3em;
-    padding: 0 0 1.25rem;
+    padding: 5% 10%;
     text-transform: uppercase;
   }
-  /* line 604, ../../scss/layout/_header.scss */
+  /* line 605, ../../scss/layout/_header.scss */
   #mobile-nav #primary-nav-mobile ul#primary-nav li a:hover {
+    background: #1f1f1f;
     text-decoration: none;
   }
-  /* line 611, ../../scss/layout/_header.scss */
+  /* line 613, ../../scss/layout/_header.scss */
   #mobile-nav #utility-nav-mobile {
     width: 100%;
   }
-  /* line 614, ../../scss/layout/_header.scss */
+  /* line 616, ../../scss/layout/_header.scss */
   #mobile-nav #utility-nav-mobile ul#utility-links {
     float: none;
     list-style-type: none;
     margin: 10% 0 0 0;
   }
-  /* line 620, ../../scss/layout/_header.scss */
+  /* line 622, ../../scss/layout/_header.scss */
   #mobile-nav #utility-nav-mobile ul#utility-links li a {
     color: #cccccc;
     display: block;
     font-size: 0.9em;
-    padding: 0 0 0.9375rem;
+    padding: 5% 10%;
     text-transform: uppercase;
   }
-  /* line 631, ../../scss/layout/_header.scss */
+  /* line 630, ../../scss/layout/_header.scss */
+  #mobile-nav #utility-nav-mobile ul#utility-links li a:hover {
+    background: #1f1f1f;
+  }
+  /* line 637, ../../scss/layout/_header.scss */
   #mobile-nav #subnav {
     color: #CCC;
   }

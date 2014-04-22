@@ -576,9 +576,9 @@ header#minimum-bar{
 @media #{$small-only}{
 
 	#mobile-nav{
-		background: $topbar-dropdown-bg;
+		// background: $topbar-dropdown-bg;
 		// display: none;
-		padding: 0 10%;
+		padding: 0px;
 
 		#primary-nav-mobile{
 			width: 100%;
@@ -587,7 +587,8 @@ header#minimum-bar{
 				border-bottom: 1px solid darken($topbar-link-color, 65%);
 				float: none;
 				list-style-type: none;
-				margin: 10% 0 0 0;
+				margin: 5% 0 0 0;
+				padding: 0 0 5% 0;
 				position: static;
 
 
@@ -597,11 +598,12 @@ header#minimum-bar{
 						color: darken($topbar-link-color, 20%);
 						display: block;
 						font-size: 1.3em;
-						padding: 0 0 rem-calc(20);
+						padding: 5% 10%;
 						text-transform: uppercase;
 					}
 
 					a:hover{
+						background: darken($topbar-dropdown-bg, 10%);
 						text-decoration: none;
 					}
 				}
@@ -621,8 +623,12 @@ header#minimum-bar{
 						color: darken($topbar-link-color, 20%);
 						display: block;
 						font-size: 0.9em;
-						padding: 0 0 rem-calc(15);
+						padding: 5% 10%;
 						text-transform: uppercase;
+					}
+
+					a:hover{
+						background: darken($topbar-dropdown-bg, 10%);
 					}
 				}
 			}
