@@ -37,7 +37,6 @@ scripts[] = scripts/vendor/jquery.hoverIntent.minified.js
 
 ; typeahead
 ;scripts[] = scripts/vendor/jquery.autocomplete.js
-;scripts[] = scripts/vendor/jquery.mockjax.js
 
 ; Theme scripts.
 ; This file is empty, just uncomment this line and start editing!
