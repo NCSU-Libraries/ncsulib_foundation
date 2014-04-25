@@ -202,5 +202,4 @@
 
         </div> <!--/.main region -->
     </main> <!--/.main-->
-    <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
 </div> <!--/.page -->
