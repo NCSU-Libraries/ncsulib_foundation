@@ -361,6 +361,7 @@ header#minimum-bar{
 
 				@media #{$small-only}{
 					float: left;
+					font-size: rem-calc(10);
 					line-height: 1.16;
 					margin:0 10px 0 14px;
 					width: 53px;
