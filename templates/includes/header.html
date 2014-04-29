@@ -9,23 +9,23 @@ Your browser does not support inline frames or is currently configured  not to d
 </iframe>
 
 
-<header class="contain-to-grid">
-	<nav class="top-bar">
-		<ul class="title-area">
-			<li class="name">
+<header class="contain-to-grid" role="banner">
+	<div class="top-bar">
+		<div class="title-area">
+			<div class="name">
 			  	<a href="//webdev.lib.ncsu.edu" title="NCSU Library" rel="home" id="logo">
 					<img src="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="Home" />
 			  	</a>
-			</li>
-			<li id="nav-toggle" class="right-off-canvas-toggle">
+			</div>
+			<nav id="nav-toggle" class="right-off-canvas-toggle" role="navigation" aria-label="mobile navigation">
 				<a href="#"><i class="fa fa-bars"></i></a>
-			</li>
-			<li id="search-toggle">
+			</nav>
+			<span id="search-toggle">
 				<a href="#"><i class="fa fa-search"></i></a>
-			</li>
-		</ul>
+			</span>
+		</div>
 
-		<section class="top-bar-section primary-nav home">
+		<nav class="top-bar-section primary-nav home" role="navigation" aria-label="main navigation">
 			<ul id="primary-nav">
 	<li><a href="//webdev.lib.ncsu.edu/find" data-menu="find" class="primary-menu-item">Find</a></li>
 	<li><a href="//webdev.lib.ncsu.edu/gethelp" data-menu="help" class="primary-menu-item">Get Help</a></li>
@@ -33,11 +33,11 @@ Your browser does not support inline frames or is currently configured  not to d
 	<li><a href="//webdev.lib.ncsu.edu/hours/hill/general" data-menu="libraries" class="primary-menu-item">Libraries</a></li>
 	<li><a href="//webdev.lib.ncsu.edu/about" data-menu="about" class="primary-menu-item">About</a></li>
 </ul>
-		</section>
-	</nav>
+		</nav>
+	</div>
 
 	<aside class="right-off-canvas-menu">
-  <nav id="mobile-nav">
+  <nav id="mobile-nav" role="navigation" aria-label="mobile navigation">
   	<div id="primary-nav-mobile">
   		<ul id="primary-nav">
 	<li><a href="//webdev.lib.ncsu.edu/find" data-menu="find" class="primary-menu-item">Find</a></li>
@@ -60,14 +60,14 @@ Your browser does not support inline frames or is currently configured  not to d
   </nav>
 </aside></header>
 
-<nav id="primary-nav-menus">
+<nav id="primary-nav-menus" role="navigation" aria-label="main navigation">
 	<div id="menu-find" class="primary-menu-list" >
 		<ul>
 			<li><a href="//webdev.lib.ncsu.edu/catalog">Books &amp; Media</a></li>
 			<li><a href="//webdev.lib.ncsu.edu/articles">Articles</a></li>
 			<li><a href="//webdev.lib.ncsu.edu/journals">Journal Titles</a></li>
 			<li><a href="//webdev.lib.ncsu.edu/databases">Databases</a></li>
-			<li><a href="https://reserves.lib.ncsu.edu">Course Reserves</a></li>
+			<li><a href="//reserves.lib.ncsu.edu">Course Reserves</a></li>
 		</ul>
 		<ul>
 			<li><a href="//webdev.lib.ncsu.edu/data">Spatial &amp; Numerical Data</a></li>
@@ -137,13 +137,14 @@ Your browser does not support inline frames or is currently configured  not to d
 
 <section id="utility">
 	<div id="utility-bar">
-				<div id="utility-search">
+				<div id="utility-search" role="search">
 			<form id="search-form" accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu" tabindex="1">
 				<input type="text" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, &amp; library website">
 				<input type="submit" id="search-submit" value="SEARCH">
 			</form>
 		</div>
-				<ul id="utility-links">
+				<nav role="navigation" aria-label="utility navigation">
+			<ul id="utility-links">
 	<li><a href="//webdev.lib.ncsu.edu/askus">ASK US</a></li>
 	<li><a href="//myaccount.lib.ncsu.edu">MY ACCOUNT</a></li>
 	<li><a href="//webdev.lib.ncsu.edu/hours/">HOURS</a></li>
@@ -151,5 +152,6 @@ Your browser does not support inline frames or is currently configured  not to d
 	<li><a href="//webdev.lib.ncsu.edu/website/logout.php">LOG OUT</a></li>
 	<li><a href="http://libraryh3lp.com/chat/ref-desk@chat.libraryh3lp.com" class="globalchat">CHAT NOW</a></li>
 </ul>
+		</nav>
 	</div>
 </section>
