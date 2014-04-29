@@ -17,7 +17,7 @@ Your browser does not support inline frames or is currently configured  not to d
 </iframe>
 
 
-<header class="contain-to-grid">
+<header class="contain-to-grid" role="banner">
 	<nav class="top-bar">
 		<ul class="title-area">
 			<li class="name">
@@ -33,7 +33,7 @@ Your browser does not support inline frames or is currently configured  not to d
 			</li>
 		</ul>
 
-		<section class="top-bar-section primary-nav home">
+		<section class="top-bar-section primary-nav home" role="navigation">
 			<?php include 'primary-nav.php'; ?>
 		</section>
 	</nav>
@@ -127,7 +127,7 @@ Your browser does not support inline frames or is currently configured  not to d
 			</ul>
 		</div>
 		<?php else: ?>
-		<div id="utility-search">
+		<div id="utility-search" role="search">
 			<form id="search-form" accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu" tabindex="1">
 				<input type="text" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, &amp; library website">
 				<input type="submit" id="search-submit" value="SEARCH">

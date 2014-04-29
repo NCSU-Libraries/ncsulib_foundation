@@ -22,9 +22,8 @@
     <?php endif; ?>
 
     <main role="main" class="row l-main">
-        <div class="<?= $main_grid; ?> main columns">
+        <div class="<?= $main_grid; ?> main columns" id="main-content">
 
-            <a id="main-content"></a>
             <?php if ($title && !isset($node)): ?>
                 <?php print render($title_prefix); ?>
                 <h1 id="page-title" class="title"><?php print $title; ?></h1>
