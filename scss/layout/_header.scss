@@ -21,7 +21,7 @@ body.nav-open{
 
 
 
-nav.top-bar{
+.top-bar{
 	.alert.button.small{
 		padding-bottom: 9px;
 		padding-top: 8px;
@@ -36,7 +36,7 @@ header{
 	margin-top: -3px; /* fix the spacing problem with the University nav iframe */
 	background: $primary-color;
 
-	nav.top-bar{
+	.top-bar{
 		@include grid-row;
 
 		a{
@@ -46,22 +46,19 @@ header{
 
 		.title-area .name{
 			padding-left: rem-calc(15);
-			padding-top: rem-calc(22);
+			padding-top: rem-calc(0);
 			width: 348px;
 
 			@media #{$small-only}{
 				float: left;
-				padding-top: rem-calc(20);
 				width: rem-calc(200);
 			}
 
 			@media #{$medium-only} {
-				padding-top: rem-calc(23);
 				width: 230px;
 			}
 
 			@media #{$large-up} {
-				padding-top: rem-calc(6);
 				width: 348px;
 			}
 
@@ -215,7 +212,7 @@ header{
 }
 
 
-body.front header nav.top-bar #search-toggle{
+body.front header .top-bar #search-toggle{
 	display: none;
 }
 

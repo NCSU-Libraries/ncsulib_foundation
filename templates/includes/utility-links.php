@@ -1,4 +1,4 @@
-<ul id="utility-links" role="navigation">
+<ul id="utility-links">
 	<li><a href="//webdev.lib.ncsu.edu/askus">ASK US</a></li>
 	<li><a href="//myaccount.lib.ncsu.edu">MY ACCOUNT</a></li>
 	<li><a href="//webdev.lib.ncsu.edu/hours/">HOURS</a></li>
