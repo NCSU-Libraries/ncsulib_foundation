@@ -585,7 +585,7 @@
 /* line 62, ../../../scss/foundation/components/_side-nav.scss */
 #home-quicklinks ul#quicklinks li ul li {
   margin: 0 0 0.4375rem 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 /* line 66, ../../../scss/foundation/components/_side-nav.scss */
 #home-quicklinks ul#quicklinks li ul li a:not(.button) {

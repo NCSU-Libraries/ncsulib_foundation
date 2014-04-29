@@ -15,7 +15,7 @@ footer p, footer h2, footer h3, footer h4, footer h5, footer i {
 }
 /* line 12, ../../../scss/layout/_footer.scss */
 footer h2 {
-  font-size: 1.575rem;
+  font-size: 1.4625rem;
 }
 /* line 15, ../../../scss/layout/_footer.scss */
 footer h3 {
@@ -27,7 +27,7 @@ footer h4 {
 }
 /* line 21, ../../../scss/layout/_footer.scss */
 footer p, footer li {
-  font-size: 0.85rem;
+  font-size: 0.765rem;
   line-height: 1.3;
 }
 /* line 25, ../../../scss/layout/_footer.scss */
@@ -127,7 +127,7 @@ footer #footer #f-lib-links {
   }
   /* line 88, ../../../scss/layout/_footer.scss */
   footer #footer #f-social a {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 /* line 93, ../../../scss/layout/_footer.scss */

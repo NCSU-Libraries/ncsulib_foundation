@@ -15,14 +15,14 @@
 .views-row .views-field-body .field-content {
   font-family: inherit;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility;
 }
 /* line 185, ../../../scss/custom/_silent_type.scss */
 .views-row .views-field-body .lead.field-content {
-  font-size: 1.21875rem;
+  font-size: 1.11875rem;
   line-height: 1.6;
 }
 /* line 187, ../../../scss/custom/_silent_type.scss */
