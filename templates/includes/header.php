@@ -18,37 +18,37 @@ Your browser does not support inline frames or is currently configured  not to d
 
 
 <header class="contain-to-grid" role="banner">
-	<nav class="top-bar">
-		<ul class="title-area">
-			<li class="name">
+	<div class="top-bar">
+		<div class="title-area">
+			<div class="name">
 			  	<a href="//webdev.lib.ncsu.edu" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
 					<img src="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
 			  	</a>
-			</li>
-			<li id="nav-toggle" class="right-off-canvas-toggle">
+			</div>
+			<nav id="nav-toggle" class="right-off-canvas-toggle" role="navigation" aria-label="mobile navigation">
 				<a href="#"><i class="fa fa-bars"></i></a>
-			</li>
-			<li id="search-toggle">
+			</nav>
+			<span id="search-toggle">
 				<a href="#"><i class="fa fa-search"></i></a>
-			</li>
-		</ul>
+			</span>
+		</div>
 
-		<section class="top-bar-section primary-nav home" role="navigation">
+		<nav class="top-bar-section primary-nav home" role="navigation" aria-label="main navigation">
 			<?php include 'primary-nav.php'; ?>
-		</section>
-	</nav>
+		</nav>
+	</div>
 
 	<?php include 'mobile-nav.php'; ?>
 </header>
 
-<nav id="primary-nav-menus">
+<nav id="primary-nav-menus" role="navigation" aria-label="main navigation">
 	<div id="menu-find" class="primary-menu-list" >
 		<ul>
 			<li><a href="//webdev.lib.ncsu.edu/catalog">Books &amp; Media</a></li>
 			<li><a href="//webdev.lib.ncsu.edu/articles">Articles</a></li>
 			<li><a href="//webdev.lib.ncsu.edu/journals">Journal Titles</a></li>
 			<li><a href="//webdev.lib.ncsu.edu/databases">Databases</a></li>
-			<li><a href="https://reserves.lib.ncsu.edu">Course Reserves</a></li>
+			<li><a href="//reserves.lib.ncsu.edu">Course Reserves</a></li>
 		</ul>
 		<ul>
 			<li><a href="//webdev.lib.ncsu.edu/data">Spatial &amp; Numerical Data</a></li>
@@ -134,6 +134,8 @@ Your browser does not support inline frames or is currently configured  not to d
 			</form>
 		</div>
 		<?php endif; ?>
-		<?php include 'utility-links.php'; ?>
+		<nav role="navigation" aria-label="utility navigation">
+			<?php include 'utility-links.php'; ?>
+		</nav>
 	</div>
 </section>
