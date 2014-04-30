@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# Pre-commit hooks
+
+# Grunt minify js
+echo "grunting..."
+grunt mini
+echo "grunting done."
+
+# create header.html
+echo "1"
+php templates/includes/header.php > templates/includes/somefile.txt
+echo "2"
+git add templates/includes/somefile.txt
+echo "3"
