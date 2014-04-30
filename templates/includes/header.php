@@ -1,7 +1,15 @@
 <?php
+
+	// $_SERVER['REMOTE_ADDR'] is only set when a PHP page is rendered by Apache,
+	// When PHP runs from the command line it is unset
   	if(!$_SERVER['REMOTE_ADDR']){
 		$_SERVER['REMOTE_ADDR'] = '';
-  		define('DRUPAL_ROOT', '/var/www/webdev/drupal');
+
+		// If we move header.php somewhere else in the file tree this will break!
+		$magic_number = strlen("/sites/all/themes/ncsulib_foundation/templates/includes/header.php");
+  		define('DRUPAL_ROOT', substr(__FILE__, 0, -$magic_number));
+
+  		// Boot drupal so t() functions and other drupal functions run
   		require_once (DRUPAL_ROOT.'/includes/bootstrap.inc');
   		drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
   	}
