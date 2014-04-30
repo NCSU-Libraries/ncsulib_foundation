@@ -1,0 +1,4 @@
+
+Warning: require_once(/var/www/webdev/drupal/includes/bootstrap.inc): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/ncsulib_z/zurb/sites/all/themes/ncsulib_foundation/templates/includes/header.php on line 5
+
+Fatal error: require_once(): Failed opening required '/var/www/webdev/drupal/includes/bootstrap.inc' (include_path='.:') in /Applications/MAMP/htdocs/ncsulib_z/zurb/sites/all/themes/ncsulib_foundation/templates/includes/header.php on line 5
