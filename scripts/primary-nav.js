@@ -11,7 +11,7 @@ var nav = {
 		// mouse on primary nav link
 		jQuery('.primary-nav a.primary-menu-item').mouseenter(function(){
 			nav.index = jQuery(this).parent().index();
-			console.log('test');
+
 			// show nav item
 			var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 			if(width > 200 && nav.navActive){

@@ -8,6 +8,7 @@
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autocomplete.min.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/books-media-tab-autosuggest.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-search-tabs-logging.js');
+    // drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.orbit.js', array('scope'=>'footer'));
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
 ?>
 
@@ -67,6 +68,7 @@
                 <div id="home-artbox">
                     <?php include_once 'block--nivo_slider.tpl.php'; ?>
                 </div>
+
             </section> <!-- /top row -->
 
             <!-- middle row -->
