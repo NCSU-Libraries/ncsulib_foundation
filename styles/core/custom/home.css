@@ -46,7 +46,7 @@
 #search-options {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 50%;
+  width: 58.33333%;
   float: left;
   padding-left: 0px;
 }
@@ -596,11 +596,11 @@
 /* line 66, ../../../scss/foundation/components/_side-nav.scss */
 #home-quicklinks ul#quicklinks li ul li a:not(.button) {
   display: block;
-  color: #4c83af;
+  color: #4a7aa9;
 }
 /* line 70, ../../../scss/foundation/components/_side-nav.scss */
 #home-quicklinks ul#quicklinks li ul li a:not(.button):hover, #home-quicklinks ul#quicklinks li ul li a:not(.button):focus {
-  color: #4c83af;
+  color: #4a7aa9;
 }
 /* line 73, ../../../scss/foundation/components/_side-nav.scss */
 #home-quicklinks ul#quicklinks li ul li.active > a:first-child:not(.button) {
@@ -677,7 +677,7 @@
 #home-artbox {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 50%;
+  width: 41.66667%;
   float: left;
   padding-right: 0px;
 }
@@ -693,7 +693,7 @@
 }
 /* line 435, ../../../scss/custom/home.scss */
 #home-artbox .orbit-slider {
-  height: 294px;
+  height: 244px;
 }
 @media only screen and (max-width: 47.937em) {
   /* line 435, ../../../scss/custom/home.scss */

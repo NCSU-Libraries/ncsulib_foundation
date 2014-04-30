@@ -6566,11 +6566,11 @@ dialog[open] {
 /* line 66, ../../scss/foundation/components/_side-nav.scss */
 .side-nav li a:not(.button) {
   display: block;
-  color: #4c83af;
+  color: #4a7aa9;
 }
 /* line 70, ../../scss/foundation/components/_side-nav.scss */
 .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
-  color: #4c83af;
+  color: #4a7aa9;
 }
 /* line 73, ../../scss/foundation/components/_side-nav.scss */
 .side-nav li.active > a:first-child:not(.button) {
@@ -8390,13 +8390,13 @@ td {
 /* Default Link Styles */
 /* line 288, ../../scss/foundation/components/_type.scss */
 a {
-  color: #4c83af;
+  color: #4a7aa9;
   text-decoration: none;
   line-height: inherit;
 }
 /* line 294, ../../scss/foundation/components/_type.scss */
 a:hover, a:focus {
-  color: #4c83af;
+  color: #4a7aa9;
 }
 /* line 296, ../../scss/foundation/components/_type.scss */
 a img {
@@ -11192,14 +11192,16 @@ p.caption img {
 /* line 17, ../../scss/layout/_editor-styles.scss */
 .float-right, .flow-right {
   float: right;
+  margin-left: 1.25rem;
 }
 
-/* line 20, ../../scss/layout/_editor-styles.scss */
+/* line 21, ../../scss/layout/_editor-styles.scss */
 .float-left, .flow-left {
   float: left;
+  margin-right: 1.25rem;
 }
 
-/* line 24, ../../scss/layout/_editor-styles.scss */
+/* line 26, ../../scss/layout/_editor-styles.scss */
 .featured-image {
   clear: right;
   float: right;
@@ -11208,27 +11210,27 @@ p.caption img {
   width: 40%;
 }
 @media only screen and (max-width: 47.937em) {
-  /* line 24, ../../scss/layout/_editor-styles.scss */
+  /* line 26, ../../scss/layout/_editor-styles.scss */
   .featured-image {
     float: none;
     margin-left: 0px;
     width: 100%;
   }
 }
-/* line 37, ../../scss/layout/_editor-styles.scss */
+/* line 39, ../../scss/layout/_editor-styles.scss */
 .featured-image p {
   font-style: italic;
   font-size: 0.9em;
   text-align: center;
   width: 100%;
 }
-/* line 44, ../../scss/layout/_editor-styles.scss */
+/* line 46, ../../scss/layout/_editor-styles.scss */
 .featured-image .right-image {
   float: right;
   clear: right;
   margin: 20px 0 20px 20px;
 }
-/* line 50, ../../scss/layout/_editor-styles.scss */
+/* line 52, ../../scss/layout/_editor-styles.scss */
 .featured-image img {
   width: 100%;
 }

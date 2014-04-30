@@ -32,7 +32,7 @@ $include-html-classes: false;
 	}
 }
 #search-options{
-	@include grid-column(6);
+	@include grid-column(7);
 	padding-left: 0px;
 
 	@media #{$small-only}{
@@ -424,7 +424,7 @@ $include-html-classes: false;
 
 /*begin artbox*/
 #home-artbox{
-	@include grid-column(6);
+	@include grid-column(5);
 	padding-right: 0px;
 
 	@media #{$small-only}{
@@ -433,7 +433,7 @@ $include-html-classes: false;
 	}
 
 	.orbit-slider{
-		height: 294px;
+		height: 244px;
 
 		@media #{$small-only}{
 			height: auto;
