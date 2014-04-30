@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
     shell: {
       hooks: {
-        command: 'cp git-hooks/pre-commit .git/hooks/'
+        command: 'cp git-hooks/pre-commit .git/hooks/ && chmod -R +x .git/hooks/'
       }
     }
   });

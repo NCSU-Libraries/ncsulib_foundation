@@ -3,13 +3,15 @@
 # Pre-commit hooks
 
 # Grunt minify js
-echo "grunting..."
+echo "Grunt running to create concatenated and minified javascript."
 grunt mini
-echo "grunting done."
+echo "File generated, adding to commit"
+git add templates/includes/scripts/ncsulib-website.min.js
+echo "File included in commit"
 
 # create header.html
-echo "1"
-php templates/includes/header.php > templates/includes/somefile.txt
-echo "2"
-git add templates/includes/somefile.txt
-echo "3"
+echo "Generating a new header.html file"
+php templates/includes/header.php > templates/includes/header.html
+echo "File generated, adding to commit"
+git add templates/includes/header.html
+echo "File included in commit"
