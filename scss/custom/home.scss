@@ -294,6 +294,10 @@ $include-html-classes: false;
 		margin-bottom: rem-calc(20);
 		overflow: visible;
 
+		@media #{$small-only}{
+			float: left;
+		}
+
 		li{
 
 			@media #{$medium-up}{
@@ -445,9 +449,9 @@ $include-html-classes: false;
 		.orbit-slides-container > *{
 			@media #{$small-only}{
 				margin-bottom: rem-calc(10);
-				transform:none;
-				-ms-transform:none;
-				-webkit-transform:none;
+				// transform:none;
+				// -ms-transform:none;
+				// -webkit-transform:none;
 			}
 		}
 	}
@@ -460,6 +464,8 @@ $include-html-classes: false;
 		margin-bottom: 0px;
 	}
 
+
+
 	.orbit-timer{
 		span{
 			margin-top: 5px;
@@ -471,6 +477,12 @@ $include-html-classes: false;
 	}
 
 }
+
+	.touch .orbit-bullets{
+		@media #{$small-only}{
+				display: block;
+		}
+	}
 /*end artbox*/
 
 /*end tier one*/
