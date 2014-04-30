@@ -3,7 +3,10 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    clean: ['templates/includes/scripts/*'],
+    clean: {
+      scripts: ['templates/includes/scripts/*'],
+      hooks: ['.git/hooks/pre-commit']
+    },
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
@@ -23,13 +26,20 @@ module.exports = function(grunt) {
         'scripts/global-htdocs.js'],
         dest: 'templates/includes/scripts/<%= pkg.name %>.min.js'
       }
+    },
+    shell: {
+      hooks: {
+        command: 'cp git-hooks/pre-commit .git/hooks/ && chmod -R +x .git/hooks/'
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  // grunt.loadNpmTasks('grunt-hash');
+  grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
   // clean out the old js, compress new js
-  grunt.registerTask('default', ['clean', 'uglify']);
+  grunt.registerTask('mini', ['clean:scripts', 'uglify']);
+  // create pre-commit hook
+  grunt.registerTask('githook', ['clean:hooks', 'shell:hooks']);
 };

@@ -1,22 +1,6 @@
-<?php
-
-	// $_SERVER['REMOTE_ADDR'] is only set when a PHP page is rendered by Apache,
-	// When PHP runs from the command line it is unset
-  	if(!$_SERVER['REMOTE_ADDR']){
-		$_SERVER['REMOTE_ADDR'] = '';
-
-		// If we move header.php somewhere else in the file tree this will break!
-		$magic_number = strlen("/sites/all/themes/ncsulib_foundation/templates/includes/header.php");
-  		define('DRUPAL_ROOT', substr(__FILE__, 0, -$magic_number));
-
-  		// Boot drupal so t() functions and other drupal functions run
-  		require_once (DRUPAL_ROOT.'/includes/bootstrap.inc');
-  		drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
-  	}
-?>
 
 <div class="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
 </div>
 
 <link rel="stylesheet" type="text/css" href="https://ssl.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" />
@@ -29,8 +13,8 @@ Your browser does not support inline frames or is currently configured  not to d
 	<div class="top-bar">
 		<div class="title-area">
 			<div class="name">
-			  	<a href="//webdev.lib.ncsu.edu" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
-					<img src="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
+			  	<a href="//webdev.lib.ncsu.edu" title="NCSU Library" rel="home" id="logo">
+					<img src="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="Home" />
 			  	</a>
 			</div>
 			<nav id="nav-toggle" class="right-off-canvas-toggle" role="navigation" aria-label="mobile navigation">
@@ -42,12 +26,39 @@ Your browser does not support inline frames or is currently configured  not to d
 		</div>
 
 		<nav class="top-bar-section primary-nav home" role="navigation" aria-label="main navigation">
-			<?php include 'primary-nav.php'; ?>
+			<ul id="primary-nav">
+	<li><a href="//webdev.lib.ncsu.edu/find" data-menu="find" class="primary-menu-item">Find</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/gethelp" data-menu="help" class="primary-menu-item">Get Help</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/services" data-menu="services" class="primary-menu-item">Services</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/hours/hill/general" data-menu="libraries" class="primary-menu-item">Libraries</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/about" data-menu="about" class="primary-menu-item">About</a></li>
+</ul>
 		</nav>
 	</div>
 
-	<?php include 'mobile-nav.php'; ?>
-</header>
+	<aside class="right-off-canvas-menu">
+  <nav id="mobile-nav" role="navigation" aria-label="mobile navigation">
+  	<div id="primary-nav-mobile">
+  		<ul id="primary-nav">
+	<li><a href="//webdev.lib.ncsu.edu/find" data-menu="find" class="primary-menu-item">Find</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/gethelp" data-menu="help" class="primary-menu-item">Get Help</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/services" data-menu="services" class="primary-menu-item">Services</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/hours/hill/general" data-menu="libraries" class="primary-menu-item">Libraries</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/about" data-menu="about" class="primary-menu-item">About</a></li>
+</ul>
+  	</div>
+  	<div id="utility-nav-mobile">
+  		<ul id="utility-links">
+	<li><a href="//webdev.lib.ncsu.edu/askus">ASK US</a></li>
+	<li><a href="//myaccount.lib.ncsu.edu">MY ACCOUNT</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/hours/">HOURS</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/faq/">FAQ</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/website/logout.php">LOG OUT</a></li>
+	<li><a href="http://libraryh3lp.com/chat/ref-desk@chat.libraryh3lp.com" class="globalchat">CHAT NOW</a></li>
+</ul>
+  	</div>
+  </nav>
+</aside></header>
 
 <nav id="primary-nav-menus" role="navigation" aria-label="main navigation">
 	<div id="menu-find" class="primary-menu-list" >
@@ -126,24 +137,21 @@ Your browser does not support inline frames or is currently configured  not to d
 
 <section id="utility">
 	<div id="utility-bar">
-		<?php if(drupal_is_front_page() && $_SERVER['REMOTE_ADDR']): ?>
-		<div id="home-hours">
-			<p id="hours-title"><a href="/hours">TODAY'S HOURS</a>:</p>
-			<ul>
-				<li><a href="//webdev.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
-				<li><a href="//webdev.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
-			</ul>
-		</div>
-		<?php else: ?>
-		<div id="utility-search" role="search">
+				<div id="utility-search" role="search">
 			<form id="search-form" accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu" tabindex="1">
 				<input type="text" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, &amp; library website">
 				<input type="submit" id="search-submit" value="SEARCH">
 			</form>
 		</div>
-		<?php endif; ?>
-		<nav role="navigation" aria-label="utility navigation">
-			<?php include 'utility-links.php'; ?>
+				<nav role="navigation" aria-label="utility navigation">
+			<ul id="utility-links">
+	<li><a href="//webdev.lib.ncsu.edu/askus">ASK US</a></li>
+	<li><a href="//myaccount.lib.ncsu.edu">MY ACCOUNT</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/hours/">HOURS</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/faq/">FAQ</a></li>
+	<li><a href="//webdev.lib.ncsu.edu/website/logout.php">LOG OUT</a></li>
+	<li><a href="http://libraryh3lp.com/chat/ref-desk@chat.libraryh3lp.com" class="globalchat">CHAT NOW</a></li>
+</ul>
 		</nav>
 	</div>
 </section>
