@@ -1,32 +1,29 @@
 <?php
-    drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css', array('weight' => 999, 'group' => 101));
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-artbox.js');
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/availability-data.js');
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-tracking-events.js');
-    //drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/jquery.autocomplete.js');
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autosuggest.min.js');
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autocomplete.min.js');
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/books-media-tab-autosuggest.js');
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-search-tabs-logging.js');
-    // drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.orbit.js', array('scope'=>'footer'));
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
+drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css', array('weight' => 999, 'group' => 101));
+drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-artbox.js');
+drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/availability-data.js');
+drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-tracking-events.js');
+drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autosuggest.min.js');
+drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autocomplete.min.js');
+drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/books-media-tab-autosuggest.js');
+drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-search-tabs-logging.js');
+drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
 ?>
 
 <!--.page -->
 <div role="document" class="page" id="content">
     <main role="main" class="row l-main">
-        <!-- <h1>NCSU Libraries Homepage</h1> -->
         <div class="<?php print $main_grid; ?> main columns" id="main-content">
             <!-- top row -->
             <section id="tier-one">
                 <div id="search-options">
                     <div id="home-search">
                         <?php
-                            if (device_is('phone')) {
-                                include DRUPAL_ROOT.'/'.$GLOBALS['theme_path'].'/templates/includes/partials/home-search-mobile.html';
-                            } else {
-                                include DRUPAL_ROOT.'/'.$GLOBALS['theme_path'].'/templates/includes/partials/home-search_tabs-desktop.html';
-                            }
+                        if (device_is('phone')) {
+                            include DRUPAL_ROOT.'/'.$GLOBALS['theme_path'].'/templates/includes/partials/home-search-mobile.html';
+                        } else {
+                            include DRUPAL_ROOT.'/'.$GLOBALS['theme_path'].'/templates/includes/partials/home-search_tabs-desktop.html';
+                        }
                         ?>
                     </div>
                     <div id="research-tools">
@@ -148,60 +145,49 @@
                     </ul>
                 </div>
 
-<!--                 <div id="story-2">
-                    <div class="story-photo">
-                        <a href="http://d.lib.ncsu.edu/myhuntlibrary" id="story-2-photo">
-                            <img src="http://lib.ncsu.edu/sites/default/files/myhunt-front.jpg" alt="Students posing on the monumental stairs" title="photo credit: @emily_reeves12" width="100%" />
-                        </a>
-                    </div>
-                    <h2><a href="http://d.lib.ncsu.edu/myhuntlibrary" id="story-2-heading">MY &#35;HuntLibrary</a></h2>
-                    <p>We're archiving Instagram photographs tagged #HuntLibrary to help document the story of the James B. Hunt Jr. Library -- the best learning and collaborative space in the country.</p>
-                    <p>See recent and popular photos, staff picks, and vote for your favorites. </p>
-                </div> -->
-
                 <div id="story-2">
                     <div class="story-photo">
                         <a href="/proposed-hours-2014" id="story-2-photo">
-                           <img src="/sites/default/files/homepage-hours-change.jpg" alt="Possible changes in hours for the D. H. Hill and Hunt Libraries, Fall 2014" width="100%" />
-                        </a>
-                    </div>
-                    <h2><a href="/proposed-hours-2014" id="story-2-heading">Possible Changes To Hours</a></h2>
-                    <p>Budget reductions are requiring the Libraries to propose changes to the overnight hours at the D. H. Hill and Hunt Libraries.</p>
-                    <p><a href="https://www.lib.ncsu.edu/proposed-hours-2014" class="story-2-link">See the proposed new hours and learn more about the reductions to library staff and cuts to the Libraries’ collections budget.</a></p>
-                </div>
+                         <img src="/sites/default/files/homepage-hours-change.jpg" alt="Possible changes in hours for the D. H. Hill and Hunt Libraries, Fall 2014" width="100%" />
+                     </a>
+                 </div>
+                 <h2><a href="/proposed-hours-2014" id="story-2-heading">Possible Changes To Hours</a></h2>
+                 <p>Budget reductions are requiring the Libraries to propose changes to the overnight hours at the D. H. Hill and Hunt Libraries.</p>
+                 <p><a href="https://www.lib.ncsu.edu/proposed-hours-2014" class="story-2-link">See the proposed new hours and learn more about the reductions to library staff and cuts to the Libraries’ collections budget.</a></p>
+             </div>
 
-                <div id="happenings">
-                    <div id="home-news">
-                        <div class="happenings-photo">
-                            <a href="/news/" class="news-link"><img src="/sites/default/files/news-front.jpg" alt="Library News" width="100%" /></a>
-                        </div>
-                        <div class="happenings-content">
-                            <h2><a href="/news/" class="news-link">News</a></h2>
-                            <p>Technology, innovative spaces, new library resources, and more…</p>
-                        </div>
+             <div id="happenings">
+                <div id="home-news">
+                    <div class="happenings-photo">
+                        <a href="/news/" class="news-link"><img src="/sites/default/files/news-front.jpg" alt="Library News" width="100%" /></a>
                     </div>
-                    <div id="home-events">
-                        <div class="happenings-photo">
-                            <a href="/events/" class="events-link"><img src="/sites/default/files/events-front.jpg" alt="Library Happenings" width="100%" /></a>
-                        </div>
-                        <div class="happenings-content">
-                            <h2><a href="/events/" class="events-link">Events</a></h2>
-                            <p>Speaker series’, book discussions, campus and community events...</p>
-                        </div>
-                    </div>
-                    <div id="home-exhibits">
-                        <div class="happenings-photo">
-                            <a href="/exhibits/" class="exhibits-link"><img src="/sites/default/files/exhibits-front.jpg" alt="Library Exhibits" width="100%" /></a>
-                        </div>
-                        <div class="happenings-content">
-                            <h2><a href="/exhibits/" class="exhibits-link">Exhibits</a></h2>
-                            <p>Featured collections, visiting exhibits, digital immersion experiences…</p>
-                        </div>
+                    <div class="happenings-content">
+                        <h2><a href="/news/" class="news-link">News</a></h2>
+                        <p>Technology, innovative spaces, new library resources, and more…</p>
                     </div>
                 </div>
+                <div id="home-events">
+                    <div class="happenings-photo">
+                        <a href="/events/" class="events-link"><img src="/sites/default/files/events-front.jpg" alt="Library Happenings" width="100%" /></a>
+                    </div>
+                    <div class="happenings-content">
+                        <h2><a href="/events/" class="events-link">Events</a></h2>
+                        <p>Speaker series’, book discussions, campus and community events...</p>
+                    </div>
+                </div>
+                <div id="home-exhibits">
+                    <div class="happenings-photo">
+                        <a href="/exhibits/" class="exhibits-link"><img src="/sites/default/files/exhibits-front.jpg" alt="Library Exhibits" width="100%" /></a>
+                    </div>
+                    <div class="happenings-content">
+                        <h2><a href="/exhibits/" class="exhibits-link">Exhibits</a></h2>
+                        <p>Featured collections, visiting exhibits, digital immersion experiences…</p>
+                    </div>
+                </div>
+            </div>
 
-            </section> <!-- /bottom row -->
+        </section> <!-- /bottom row -->
 
-        </div> <!--/.main region -->
-    </main> <!--/.main-->
+    </div> <!--/.main region -->
+</main> <!--/.main-->
 </div> <!--/.page -->
