@@ -9707,32 +9707,32 @@ header .top-bar #nav-toggle i {
   }
 }
 /* line 128, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav {
+header .top-bar .top-bar-section ul.primary-nav {
   background: #383838;
   float: right;
   padding-bottom: 1.25rem;
 }
 @media only screen and (max-width: 47.937em) {
   /* line 128, ../../scss/layout/_header.scss */
-  header .top-bar .top-bar-section ul#primary-nav {
+  header .top-bar .top-bar-section ul.primary-nav {
     background: #cc0000;
     margin-top: 13px;
     padding-bottom: 0;
   }
 }
 /* line 139, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li {
+header .top-bar .top-bar-section ul.primary-nav li {
   background: #cc0000;
 }
 @media only screen and (max-width: 47.937em) {
   /* line 139, ../../scss/layout/_header.scss */
-  header .top-bar .top-bar-section ul#primary-nav li {
+  header .top-bar .top-bar-section ul.primary-nav li {
     border: none;
     max-width: 250px;
   }
 }
 /* line 149, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li > a {
+header .top-bar .top-bar-section ul.primary-nav li > a {
   font-size: 1em;
   line-height: 3.5em;
   margin-top: 12px;
@@ -9740,42 +9740,42 @@ header .top-bar .top-bar-section ul#primary-nav li > a {
 }
 @media screen and (min-width: 768px) and (max-width: 810px) {
   /* line 149, ../../scss/layout/_header.scss */
-  header .top-bar .top-bar-section ul#primary-nav li > a {
+  header .top-bar .top-bar-section ul.primary-nav li > a {
     padding: 0px 15px;
   }
 }
 @media only screen and (max-width: 47.937em) {
   /* line 149, ../../scss/layout/_header.scss */
-  header .top-bar .top-bar-section ul#primary-nav li > a {
+  header .top-bar .top-bar-section ul.primary-nav li > a {
     padding: 0 1.25rem;
     line-height: 55px;
   }
 }
 /* line 166, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li:hover > a {
+header .top-bar .top-bar-section ul.primary-nav li:hover > a {
   background: #383838;
 }
 /* line 170, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li > a:hover, header .top-bar .top-bar-section ul#primary-nav li a:hover:not(.button) {
+header .top-bar .top-bar-section ul.primary-nav li > a:hover, header .top-bar .top-bar-section ul.primary-nav li a:hover:not(.button) {
   background: #383838;
   text-decoration: none;
 }
 /* line 175, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li > a:after {
+header .top-bar .top-bar-section ul.primary-nav li > a:after {
   border: 0;
   padding: 0;
 }
 /* line 180, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li a.open {
+header .top-bar .top-bar-section ul.primary-nav li a.open {
   background: #383838;
 }
 /* line 186, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li.has-dropdown .dropdown {
+header .top-bar .top-bar-section ul.primary-nav li.has-dropdown .dropdown {
   background: #383838;
   padding: 0.625rem 0;
 }
 /* line 192, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li.has-dropdown .dropdown li a {
+header .top-bar .top-bar-section ul.primary-nav li.has-dropdown .dropdown li a {
   background: #383838;
   font-size: 0.9em;
   line-height: 1.5em;
@@ -9783,11 +9783,11 @@ header .top-bar .top-bar-section ul#primary-nav li.has-dropdown .dropdown li a {
   text-transform: none;
 }
 /* line 200, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li.has-dropdown .dropdown li a:hover {
+header .top-bar .top-bar-section ul.primary-nav li.has-dropdown .dropdown li a:hover {
   text-decoration: underline;
 }
 /* line 206, ../../scss/layout/_header.scss */
-header .top-bar .top-bar-section ul#primary-nav li.has-dropdown a {
+header .top-bar .top-bar-section ul.primary-nav li.has-dropdown a {
   padding-right: 1.25rem !important;
 }
 
@@ -10259,7 +10259,7 @@ header#minimum-bar .top-bar .top-bar-section a {
     width: 100%;
   }
   /* line 586, ../../scss/layout/_header.scss */
-  #mobile-nav #primary-nav-mobile ul#primary-nav {
+  #mobile-nav #primary-nav-mobile ul.primary-nav {
     border-bottom: 1px solid #595959;
     float: none;
     list-style-type: none;
@@ -10268,7 +10268,7 @@ header#minimum-bar .top-bar .top-bar-section a {
     position: static;
   }
   /* line 597, ../../scss/layout/_header.scss */
-  #mobile-nav #primary-nav-mobile ul#primary-nav li a {
+  #mobile-nav #primary-nav-mobile ul.primary-nav li a {
     color: #cccccc;
     display: block;
     font-size: 1.3em;
@@ -10276,7 +10276,7 @@ header#minimum-bar .top-bar .top-bar-section a {
     text-transform: uppercase;
   }
   /* line 605, ../../scss/layout/_header.scss */
-  #mobile-nav #primary-nav-mobile ul#primary-nav li a:hover {
+  #mobile-nav #primary-nav-mobile ul.primary-nav li a:hover {
     background: #1f1f1f;
     text-decoration: none;
   }

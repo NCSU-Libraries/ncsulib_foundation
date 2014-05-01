@@ -1,5 +1,5 @@
 <div id="content" role="document" class="page">
-	<div id="page" class="row">
+	<div id="page" class="row" role="main">
 		<div class="content-border">
 			<div class="columns large-12">
 				<?php if ($tabs): ?>
