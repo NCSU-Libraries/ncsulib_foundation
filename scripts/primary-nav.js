@@ -3,7 +3,7 @@ var nav = {
 	init : function() {
 
 		// set hoverintent
-		jQuery("#primary-nav li").hoverIntent({
+		jQuery(".primary-nav li").hoverIntent({
 			over: nav.handleIn,
 			out : nav.handleOut,
 			timeout: 250

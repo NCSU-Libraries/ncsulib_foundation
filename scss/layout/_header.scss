@@ -125,7 +125,7 @@ header{
 				padding-right: rem-calc(0);
 			}
 
-			ul#primary-nav{
+			ul.primary-nav{
 				background: $topbar-dropdown-bg;
 				float: right;
 				padding-bottom: rem-calc(20);
@@ -583,7 +583,7 @@ header#minimum-bar{
 		#primary-nav-mobile{
 			width: 100%;
 
-			ul#primary-nav{
+			ul.primary-nav{
 				border-bottom: 1px solid darken($topbar-link-color, 65%);
 				float: none;
 				list-style-type: none;
