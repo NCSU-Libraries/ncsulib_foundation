@@ -15,6 +15,7 @@
 <!--.page -->
 <div role="document" class="page" id="content">
     <main role="main" class="row l-main">
+        <!-- <h1>NCSU Libraries Homepage</h1> -->
         <div class="<?php print $main_grid; ?> main columns" id="main-content">
             <!-- top row -->
             <section id="tier-one">
@@ -161,7 +162,7 @@
                 <div id="story-2">
                     <div class="story-photo">
                         <a href="/proposed-hours-2014" id="story-2-photo">
-                           <img src="/sites/default/files/homepage-hours-change.jpg" alt="Proposed Hours Changes" alt="Possible changes in hours for the D. H. Hill and Hunt Libraries, Fall 2014" width="100%" />
+                           <img src="/sites/default/files/homepage-hours-change.jpg" alt="Possible changes in hours for the D. H. Hill and Hunt Libraries, Fall 2014" width="100%" />
                         </a>
                     </div>
                     <h2><a href="/proposed-hours-2014" id="story-2-heading">Possible Changes To Hours</a></h2>
@@ -172,7 +173,7 @@
                 <div id="happenings">
                     <div id="home-news">
                         <div class="happenings-photo">
-                            <a href="/news/" class="news-link"><img src="/sites/default/files/news-front.jpg" alt="" width="100%" /></a>
+                            <a href="/news/" class="news-link"><img src="/sites/default/files/news-front.jpg" alt="Library News" width="100%" /></a>
                         </div>
                         <div class="happenings-content">
                             <h2><a href="/news/" class="news-link">News</a></h2>
@@ -181,7 +182,7 @@
                     </div>
                     <div id="home-events">
                         <div class="happenings-photo">
-                            <a href="/events/" class="events-link"><img src="/sites/default/files/events-front.jpg" alt="" width="100%" /></a>
+                            <a href="/events/" class="events-link"><img src="/sites/default/files/events-front.jpg" alt="Library Happenings" width="100%" /></a>
                         </div>
                         <div class="happenings-content">
                             <h2><a href="/events/" class="events-link">Events</a></h2>
@@ -190,7 +191,7 @@
                     </div>
                     <div id="home-exhibits">
                         <div class="happenings-photo">
-                            <a href="/exhibits/" class="exhibits-link"><img src="/sites/default/files/exhibits-front.jpg" alt="" width="100%" /></a>
+                            <a href="/exhibits/" class="exhibits-link"><img src="/sites/default/files/exhibits-front.jpg" alt="Library Exhibits" width="100%" /></a>
                         </div>
                         <div class="happenings-content">
                             <h2><a href="/exhibits/" class="exhibits-link">Exhibits</a></h2>

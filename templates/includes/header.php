@@ -34,10 +34,10 @@ Your browser does not support inline frames or is currently configured  not to d
 			  	</a>
 			</div>
 			<nav id="nav-toggle" class="right-off-canvas-toggle" role="navigation" aria-label="mobile navigation">
-				<a href="#"><i class="fa fa-bars"></i></a>
+				<a href="#"><i class="fa fa-bars"></i>menu</a>
 			</nav>
 			<span id="search-toggle">
-				<a href="#"><i class="fa fa-search"></i></a>
+				<a href="#"><i class="fa fa-search"></i>search</a>
 			</span>
 		</div>
 
@@ -137,7 +137,7 @@ Your browser does not support inline frames or is currently configured  not to d
 		<?php else: ?>
 		<div id="utility-search" role="search">
 			<form id="search-form" accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu" tabindex="1">
-				<input type="text" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, &amp; library website">
+				<input type="text" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, &amp; library website" title="Search books, articles, journals, &amp; library website">
 				<input type="submit" id="search-submit" value="SEARCH">
 			</form>
 		</div>
