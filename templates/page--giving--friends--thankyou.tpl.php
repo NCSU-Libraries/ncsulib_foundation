@@ -352,18 +352,11 @@
     <?php endif; ?>
 
     <main role="main" class="row l-main">
-        <div class="columns">
-        <?php if ($breadcrumb): print $breadcrumb; endif; ?>
-        </div>
-
-        <div class="<?php print $main_grid; ?> main columns">
-
-            <a id="main-content"></a>
-
+        <div class="<?= $main_grid; ?> main columns" id="main-content">
 
             <?php if ($title && !$is_front): ?>
                 <?php print render($title_prefix); ?>
-                    <h1 id="page-title" class="title"><?php print $title; ?></h1>
+                  <h1 id="page-title" class="title"><?php print $title; ?></h1>
                 <?php print render($title_suffix); ?>
             <?php endif; ?>
 
@@ -386,13 +379,13 @@
         <!--/.main region -->
 
         <?php if (!empty($page['sidebar_first'])): ?>
-            <aside id="subnav" role="complementary" class="<?php print $sidebar_first_grid; ?> sidebar-first columns sidebar">
+            <aside id="subnav" role="complementary" class="medium-3 <?= $sidebar_left; ?> l-sidebar-first columns sidebar">
                 <?php print render($page['sidebar_first']); ?>
             </aside>
         <?php endif; ?>
 
         <?php if (!empty($page['sidebar_second'])): ?>
-            <aside role="complementary" class="<?php print $sidebar_sec_grid; ?> sidebar-second columns sidebar">
+            <aside role="complementary" class="medium-3 l-sidebar-second columns sidebar">
                 <?php print render($page['sidebar_second']); ?>
             </aside>
         <?php endif; ?>
