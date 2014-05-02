@@ -1,4 +1,7 @@
-
+// add outline to links for accessibility
+a:active, a:focus {
+    outline: green dotted thick;
+}
 
 
 

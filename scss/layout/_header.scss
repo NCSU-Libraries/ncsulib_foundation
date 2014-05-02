@@ -11,6 +11,7 @@ body.nav-open{
 // NCSU branding bar
 #ncsu_branding_bar{
 	background: $primary-color;
+	color: #FFF; //for accessibility
 	display: none;
 
 	@media #{$medium-up}{
@@ -18,6 +19,12 @@ body.nav-open{
 	}
 }
 // NCSU branding bar
+
+
+// skip link
+.skip-link a{
+	color: #FFF;
+}
 
 
 
@@ -78,7 +85,7 @@ header{
 			}
 
 			a{
-				color: $primary-color;
+				color: #FFF; //$primary-color;
 				display: block;
 				height: $topbar-height;
 				padding-top: rem-calc(24);
@@ -86,6 +93,7 @@ header{
 			}
 
 			i{
+				background: $primary-color;
 				color: #FFF;
 				font-size: 1.5em;
 				font-weight: 100;
@@ -101,7 +109,7 @@ header{
 			}
 
 			a{
-				color: $primary-color;
+				color: #FFF; //$primary-color;
 				display: block;
 				height: $topbar-height;
 				padding-top: rem-calc(24);
@@ -147,6 +155,8 @@ header{
 				}
 
 				li > a{
+					background: $primary-color;
+					color: #FFF;
 					font-size: 1em;
 					line-height: 3.5em;
 					margin-top: 12px;
@@ -555,8 +565,8 @@ header#minimum-bar{
 		@media #{$large-up} {
 			// width: rem-calc(399);
 			li a {
-					font-size: rem-calc(12);
-				}
+				font-size: rem-calc(12);
+			}
 		}
 	}
 }
@@ -573,6 +583,11 @@ header#minimum-bar{
 
 
 /*begin mobile nav*/
+#mobile-nav ul.primary-nav li a,
+#utility-nav-mobile ul#utility-links li a{
+	color: #FFF;
+}
+
 @media #{$small-only}{
 
 	#mobile-nav{
@@ -595,6 +610,7 @@ header#minimum-bar{
 				li{
 
 					a{
+						background: $topbar-dropdown-bg;
 						color: darken($topbar-link-color, 20%);
 						display: block;
 						font-size: 1.3em;
