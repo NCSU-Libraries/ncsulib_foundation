@@ -24,6 +24,10 @@ h4, h4.subheader{
 h5{ font-size: $h5-font-size;}
 h6{ font-size: $h6-font-size;}
 
+// add outline to links for accessibility
+a:active, a:focus {
+    outline: 1px dotted #999;
+}
 a:hover, a:focus{
     text-decoration: $anchor-text-hover-decoration;
 }

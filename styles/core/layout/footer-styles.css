@@ -27,7 +27,7 @@ footer h4 {
 }
 /* line 21, ../../../scss/layout/_footer.scss */
 footer p, footer li {
-  font-size: 0.765rem;
+  font-size: 0.8075rem;
   line-height: 1.3;
 }
 /* line 25, ../../../scss/layout/_footer.scss */
@@ -127,7 +127,7 @@ footer #footer #f-lib-links {
   }
   /* line 88, ../../../scss/layout/_footer.scss */
   footer #footer #f-social a {
-    font-size: 1.125rem;
+    font-size: 1.1875rem;
   }
 }
 /* line 93, ../../../scss/layout/_footer.scss */
