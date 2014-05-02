@@ -1,23 +1,38 @@
-@media #{$small-up} {
-  .feedback-form {
-    position: fixed;
-    right: rem-calc(-27);
-    top: 50%;
-    @include rotate(270deg);
-    padding: 10px;
-    margin: 0;
-    background-color: rgba(204, 0, 0, 0.82);
-    z-index: 9999;
+.feedback-form {
+  position: fixed;
+  right: rem-calc(-84);
+  top: 57%;
+  @include rotate(270deg);
+  padding: 10px;
+  margin: 0;
+  z-index: 9999;
 
-    &:hover {
-      text-decoration: none;
+  span {
+    margin: 0;
+    padding: 0;
+    &.feedback-yes {
+      border-right: 1px solid #fff;
+      a:hover {
+        background-color: rgba(0, 128, 0, 0.7);
+      }
+    }
+    a {
+      padding: rem-calc(10);
+      background-color: rgba(204, 0, 0,  0.7);
+      color: #fff;
+      @include single-transition(background-color);
+
+      &:hover {
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
     }
   }
 }
 
 @media #{$small-only} {
   .feedback-form {
-    top: 83%;
+    top: 77%;
     font-size: rem-calc(14);
   }
 }
