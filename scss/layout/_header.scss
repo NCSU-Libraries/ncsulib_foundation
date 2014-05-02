@@ -411,7 +411,7 @@ header#minimum-bar{
 				li {
 					@media #{$large-up}{
 						display: inline-block;
-						border-left: 1px solid #FFF;
+						border-left: 1px solid #777;
 						margin: 0 0 0 10px;
 
 						&:first-child {

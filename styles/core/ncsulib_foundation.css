@@ -10045,7 +10045,7 @@ header#minimum-bar .top-bar .top-bar-section a {
   /* line 411, ../../scss/layout/_header.scss */
   #utility #utility-bar #home-hours ul li {
     display: inline-block;
-    border-left: 1px solid #FFF;
+    border-left: 1px solid #777;
     margin: 0 0 0 10px;
   }
   /* line 417, ../../scss/layout/_header.scss */
