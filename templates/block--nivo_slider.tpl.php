@@ -1,7 +1,7 @@
 <?php
 	$slider_vars = variable_get('nivo_slider_banner_settings', array());
 ?>
-<ul id="artbox" class="orbit-slider" data-orbit="">
+<ul id="artbox" class="orbit-slider" data-orbit>
 
 <?php
 	foreach($slider_vars as $slide):
@@ -18,9 +18,9 @@
 		$title = $slide['title'];
 
 ?>
-    <li><a href="<?= $url; ?>" data-title="<?= $title; ?>" data-destination="<?= $url_dest; ?>"><img src="<?= file_create_url($file->uri); ?>" alt="<?= $title; ?>" /></a></li>
+    <li><a href="<?= $url; ?>" data-title="<?= $title; ?>" data-destination="<?= $url_dest; ?>"></a><img src="<?= file_create_url($file->uri); ?>" alt="<?= $title; ?>" /></li>
+    <!-- <li data-url="<?= $url; ?>"><img src="<?= file_create_url($file->uri); ?>" alt="<?= $title; ?>" /></li> -->
 	<?php endif; ?>
 <?php endforeach; ?>
 
 </ul>
-

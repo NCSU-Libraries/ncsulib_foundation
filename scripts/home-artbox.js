@@ -14,16 +14,21 @@ var orb = {
 	    	orbit: {
 				animation: 'fade',
 	      		slide_number: false,
-	      		resume_on_mouseout: true
+	      		animation_speed: 300,
+	      		timer_speed: 5000
 	    	}
 	  	})
+
 	},
 
 	mobileSlider : function(){
 		jQuery(document).foundation({
 			orbit: {
 				animation: 'fade',
-	      		slide_number: false
+	      		slide_number: false,
+	      		animation_speed: 200,
+	      		timer_show_progress_bar: false,
+	      		timer_speed: 5000
 	    	}
 	  	})
 
