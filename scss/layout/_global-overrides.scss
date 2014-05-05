@@ -1,9 +1,9 @@
 // pretty link
-.link{
+.styled{
     position: relative;
     text-decoration: none;
 }
-.link:before{
+.styled:before{
     color: $primary-color;
     content: "\f0a9";
     font-family: "FontAwesome";
