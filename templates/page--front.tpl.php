@@ -40,22 +40,22 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
                             <li>
                                 <ul>
                                     <li><h2>Technology</h2></li>
-                                    <li><a href="/cdm/" id="ql_cdm" class="link">Create Digital Media</a></li>
-                                    <li><a href="/spaces/makerspace/" class="link" id="ql_makersace">Makerspace</a></li>
+                                    <li><a href="/cdm/" id="ql_cdm" class="styled">Create Digital Media</a></li>
+                                    <li><a href="/spaces/makerspace/" class="styled" id="ql_makersace">Makerspace</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul>
                                     <li><h2>Studying</h2></li>
-                                    <li><a href="/reservearoom/" class="link" id="ql_reservearoom">Reserve a Room</a></li>
-                                    <li><a href="/groupfinder/" class="link" id="ql_group_finder">GroupFinder</a></li>
+                                    <li><a href="/reservearoom/" class="styled" id="ql_reservearoom">Reserve a Room</a></li>
+                                    <li><a href="/groupfinder/" class="styled" id="ql_group_finder">GroupFinder</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul>
                                     <li><h2>Courses</h2></li>
-                                    <li><a href="/course" class="link" id="ql_searchtools">Course Tools</a></li>
-                                    <li><a href="//reserves.lib.ncsu.edu/" class="link" id="ql_course_reserves">Course Reserves</a></li>
+                                    <li><a href="/course" class="styled" id="ql_searchtools">Course Tools</a></li>
+                                    <li><a href="//reserves.lib.ncsu.edu/" class="styled" id="ql_course_reserves">Course Reserves</a></li>
                                 </ul>
                             </li>
                         </ul>
