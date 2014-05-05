@@ -1,4 +1,14 @@
-
+// pretty link
+.link{
+    position: relative;
+    text-decoration: none;
+}
+.link:before{
+    color: $primary-color;
+    content: "\f0a9";
+    font-family: "FontAwesome";
+    padding-right: 5px;
+}
 
 // begin global UI style overwrite
 dl.tabs{
