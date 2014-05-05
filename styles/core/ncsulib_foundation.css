@@ -11328,13 +11328,13 @@ p.caption img {
 }
 
 /* line 2, ../../scss/layout/_global-overrides.scss */
-.link {
+.styled {
   position: relative;
   text-decoration: none;
 }
 
 /* line 6, ../../scss/layout/_global-overrides.scss */
-.link:before {
+.styled:before {
   color: #cc0000;
   content: "\f0a9";
   font-family: "FontAwesome";
