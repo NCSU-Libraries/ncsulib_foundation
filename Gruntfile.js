@@ -23,7 +23,8 @@ module.exports = function(grunt) {
         'scripts/vendor/jquery.autocomplete.js',
         'scripts/vendor/jquery.mockjax.js',
         'scripts/vendor/jquery.hoverIntent.minified.js',
-        'scripts/global-htdocs.js'],
+        'scripts/global-htdocs.js',
+        'scripts/feedback-button.js'],
         dest: 'templates/includes/scripts/<%= pkg.name %>.min.js'
       }
     },
