@@ -1,3 +1,18 @@
+// search clear
+@media #{$small-only}{
+    ::-webkit-search-cancel-button{
+        cursor: pointer;
+        padding: 5px 0px 5px 5px;
+    }
+    ::-webkit-search-cancel-button:after {  /* generate content after all "X" buttons */
+        content: "\f057";
+        cursor: pointer;
+        display: block;
+        font-family: "FontAwesome";
+    }
+}
+
+
 // pretty link
 .styled{
     position: relative;
@@ -140,7 +155,7 @@ div.tabs-content.vertical{
 
 
 // hacky way to prevent mobile devices from zooming in on input elements
-@media #{$small}{
+@media #{$small-only}{
   select,
   textarea,
   input[type="text"],

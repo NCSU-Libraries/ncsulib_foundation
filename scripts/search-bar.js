@@ -4,11 +4,13 @@ var searchbar = {
 		jQuery('#search-submit').click(function(e){
 			jQuery(this).addClass('active');
 			jQuery('#search-all').addClass('active');
-		});
+    });
 
     // show or hide for small breakpoint
-    jQuery('#search-toggle').click( function() {
+    jQuery('#search-toggle').click( function(e) {
       jQuery('#utility-search').slideToggle('fast');
+
+      e.preventDefault();
     });
 
     // show the searchbar if the window is resized over the medium breakpoint

@@ -137,8 +137,10 @@ Your browser does not support inline frames or is currently configured  not to d
 		<?php else: ?>
 		<div id="utility-search" role="search">
 			<form id="search-form" accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu" tabindex="1">
-				<input type="text" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, &amp; library website" title="Search books, articles, journals, &amp; library website">
-				<input type="submit" id="search-submit" value="SEARCH">
+				<input type="search" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, website" title="Search books, articles, journals, &amp; library website">
+				<!-- <input type="submit" id="search-submit" value="/f002"> -->
+				<button class="button show-for-small" id="search-submit" type="submit">Search</button>
+				<button class="button hide-for-small" id="search-submit" type="submit"><i class="fa fa-search"></i></button>
 			</form>
 		</div>
 		<?php endif; ?>
