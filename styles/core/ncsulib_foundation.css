@@ -14075,21 +14075,22 @@ table tr tr, table tr td {
 }
 /* line 19, ../../scss/components/_feedback_button.scss */
 .feedback-form span a {
-  padding: 0.625rem;
+  padding: 0.625rem 0.625rem 1.875rem 0.625rem;
+  border-radius: 0.3em 0.3em 0 0;
   background-color: rgba(204, 0, 0, 0.7);
   color: #fff;
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
   transition: background-color 300ms ease-out;
 }
-/* line 25, ../../scss/components/_feedback_button.scss */
+/* line 26, ../../scss/components/_feedback_button.scss */
 .feedback-form span a:hover {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
 @media only screen and (max-width: 47.937em) {
-  /* line 34, ../../scss/components/_feedback_button.scss */
+  /* line 35, ../../scss/components/_feedback_button.scss */
   .feedback-form {
     top: 77%;
     font-size: 0.875rem;
