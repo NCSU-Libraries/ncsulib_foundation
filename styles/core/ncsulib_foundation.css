@@ -11698,6 +11698,14 @@ table tr tr, table tr td {
   width: auto;
 }
 
+/* line 332, ../../scss/layout/_global-overrides.scss */
+.element-invisible {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+}
+
 @media print {
   /* line 9, ../../scss/layout/_print.scss */
   #search-tabs,
