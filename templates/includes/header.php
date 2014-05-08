@@ -1,7 +1,11 @@
 <?php
 
+	// for current library hours
+	include 'partials/util-hours.php';
+
 	// $_SERVER['REMOTE_ADDR'] is only set when a PHP page is rendered by Apache,
 	// When PHP runs from the command line it is unset
+
   	if(!$_SERVER['REMOTE_ADDR']){
 		$_SERVER['REMOTE_ADDR'] = '';
 
@@ -128,15 +132,15 @@ Your browser does not support inline frames or is currently configured  not to d
 	<div id="utility-bar">
 		<?php if(drupal_is_front_page() && $_SERVER['REMOTE_ADDR']): ?>
 		<div id="home-hours">
-			<p id="hours-title"><a href="/hours">TODAY'S HOURS</a>:</p>
+			<p id="hours-title"><a href="/hours" tabindex="-1">TODAY'S HOURS</a>:</p>
 			<ul>
-				<li><a href="//webdev.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
-				<li><a href="//webdev.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">Open 24 Hours</span></a></li>
+				<li><a href="//webdev.lib.ncsu.edu/hours/hill/general" tabindex="-1"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours"><?= $ary['hill']; ?></span></a></li>
+				<li><a href="//webdev.lib.ncsu.edu/hours/hunt/general" tabindex="-1"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours"><?= $ary['hunt']; ?></span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>
 		<div id="utility-search" role="search">
-			<form id="search-form" accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu" tabindex="1">
+			<form id="search-form" accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu">
 				<input type="search" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, website" title="Search books, articles, journals, &amp; library website">
 				<!-- <input type="submit" id="search-submit" value="/f002"> -->
 				<button class="button show-for-small" id="search-submit" type="submit">Search</button>
