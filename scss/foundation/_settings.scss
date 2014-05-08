@@ -80,6 +80,7 @@ $global-rounded: 0px;
 // Media Query Ranges
 $small-range: (0em, 47.937em);
 $medium-range: (48em, 64em);
+$ipad-range: (48em, 51em);
 // $large-range: (64.063em, 90em);
 // $xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em);
@@ -103,6 +104,10 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
 
 // $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 // $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+$ipad-down: "#{$screen} and (max-width:#{upper-bound($ipad-range)})";
+$ipad-only: "#{$screen} and (min-width:#{lower-bound($ipad-range)}) and (max-width:#{upper-bound($ipad-range)})";
+$ipad-up: "#{$screen} and (min-width:#{upper-bound($ipad-range)})";
 
 // Legacy
 $small: $small-only;

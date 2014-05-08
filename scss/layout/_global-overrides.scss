@@ -1,14 +1,24 @@
-// search clear
-@media #{$small-only}{
-    ::-webkit-search-cancel-button{
-        cursor: pointer;
-        padding: 5px 0px 5px 5px;
-    }
-    ::-webkit-search-cancel-button:after {  /* generate content after all "X" buttons */
-        content: "\f057";
-        cursor: pointer;
+// clear search button
+.search-cancel-button{
+    @media #{$ipad-down}{
+        -moz-box-shadow:    0px 0px 0px 0px #FFF;
+        -webkit-box-shadow: 0px 0px 0px 0px #FFF;
+        box-shadow:         0px 0px 0px 0px #FFF;
+        border: 0px solid red;
+        color: #999;
         display: block;
-        font-family: "FontAwesome";
+        position: relative;
+
+        i{
+            display: block;
+            height: 30px;
+            position: absolute;
+            width: 21px;
+        }
+    }
+
+    @media #{$ipad-up}{
+        display: none;
     }
 }
 

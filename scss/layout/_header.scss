@@ -447,10 +447,10 @@ header#minimum-bar{
 
 		display: none;
 		padding: rem-calc(15);
-		width: 100%;
 
 		@media #{$small-only}{
 			padding: 5px;
+			width: 100%;
 		}
 
 		@media #{$medium-up} {
@@ -458,7 +458,10 @@ header#minimum-bar{
 			padding-bottom: 0;
 			padding-right: 0;
 			padding-top: 0;
-			width: 45%;
+			width: 48%;
+		}
+		@media #{$large-up} {
+			width: 57%;
 		}
 
 		#search-form{
@@ -466,47 +469,45 @@ header#minimum-bar{
 		}
 
 		#search-all{
-			@include single-transition(all, .3s);
 			border-radius: 0;
 			float: left;
-			font-size: 1em;
-			height: 27px;
+			font-size: 0.9em;
+			height: 30px;
 			margin-bottom: 0;
 			padding: 0 10px;
 			width: 235px;
 
 			@media #{$small-only}{
 				height: 50px;
+				font-size: 1em;
 				margin-bottom: rem-calc(0);
 				width: 80%;
 			}
-		}
 
-		#search-all:focus, #search-all.active{
-			@media #{$small-only}{
-				height: 50px;
-				margin-bottom: rem-calc(0);
-				width: 80%;
-			}
 			@media #{$medium-up}{
-				height: 40px;
-				width: 335px;
+				width: 288px;
 			}
+
+			&::-webkit-search-cancel-button:after{
+				font-size: 1.2em;
+	            // height: 20px;
+	            padding: 0px;
+	            margin: 0px;
+	            // width: 20px;
+			}
+
 		}
 
 		#search-submit{
-			@include button;
 			background: darken($primary-color, 10%);
-			margin: 0 0 rem-calc(9) 0;
-			font-size: rem-calc(11);
-			height: 27px;
-			margin-bottom: 0;
+			font-size: rem-calc(16);
+			height: 30px;
+			margin: 0;
 			padding: 0 10px;
-			@include single-transition(height, .3s);
+			width: 7%;
 
 			&:hover {
 				background: darken(#990000, 10%);
-				@include single-transition(background, .3s);
 			}
 
 			@media #{$small-only}{
@@ -518,16 +519,6 @@ header#minimum-bar{
 			}
 		}
 
-		#search-all:focus + #search-submit, #search-submit.active{
-			height: 40px;
-			width: 18%;
-
-			@media #{$small-only}{
-				float: right;
-				height: 50px;
-				width: 20%;
-			}
-		}
 	}
 
 	ul#utility-links {
@@ -537,19 +528,20 @@ header#minimum-bar{
 			display: inline-block;
 			margin-left: 0;
 			list-style: none;
-			// width: rem-calc(374);
 			float: right;
 			margin: 0 20px 0 0;
 
 			li {
 				float: left;
-				margin-top: rem-calc(4);
+				margin-bottom: rem-calc(8);
+				margin-top: rem-calc(9);
 
 				a {
 					border-left: 1px solid #555555;
 					color: #CCC;
 					display: block;
 					font-size: rem-calc(11);
+					line-height: 0.8rem;
 					margin-left: rem-calc(5.5);
 					padding: 0 0 0 rem-calc(5.5);
 				}

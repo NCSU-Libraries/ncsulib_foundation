@@ -41,6 +41,7 @@ $include-html-classes: false;
 	}
 
 	h2{
+		font-size: 1.8rem;
 		margin-top: 0px;
 	}
 }
@@ -78,23 +79,27 @@ $include-html-classes: false;
 		width: 100%;
 	}
 }
+
 #searchall{
 	@include grid-column(10);
+	border-radius: 0px;
 	height: 3.5rem;
+	font-size: 1rem;
 	margin-bottom: 0px;
-
 
 	@media #{$small-only}{
 		@include grid-column(10);
 		border-radius: 0px;
-		font-size: 1rem;
 		margin-bottom: rem-calc(10);
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	@media all and (min-width: 768px) and (max-width: 820px){
-		@include grid-column(9);
+		width: 80%;
 	}
 }
+
 #all-submit{
 	@include grid-column(2, false, false, false, false, false, false, right);
 	margin: 0px;
@@ -107,7 +112,7 @@ $include-html-classes: false;
 	}
 
 	@media all and (min-width: 768px) and (max-width: 820px){
-		@include grid-column(3);
+		width: 20%;
 	}
 }
 
@@ -341,10 +346,21 @@ $include-html-classes: false;
 		> li{
 			@include grid-column(4);
 			padding-left: 0px;
+
+			@media all and (min-width: 768px) and (max-width: 820px){
+				width: 33%;
+			}
+
+			&:last-child{
+				padding-right: 0px;
+			}
 		}
 
 		li{
 
+			@media all and (min-width: 768px) and (max-width: 820px){
+				padding-right: 0px;
+			}
 
 			@media #{$small-only}{
 				margin-left: 0px;
@@ -358,7 +374,7 @@ $include-html-classes: false;
 				margin-bottom: 10px;
 
 				@media #{$small-only}{
-					font-size: 2rem;
+					font-size: 1.5rem;
 					font-weight: normal;
 					margin-top: 10px;
 				}
@@ -372,33 +388,31 @@ $include-html-classes: false;
 
 
 					@media #{$small-only}{
-						@include grid-column(6);
-						padding: 0px;
+						margin-right: 10px;
+						padding: 0px 0px 5px 0px;
+						padding-right: 10px;
 						width: auto;
 
-						border-right: 1px solid #CCC;
-						margin-right: 10px;
-						padding-right: 10px;
-
 						&:first-child{
-							border-right: 0px;
 							margin-right: 0px;
 							padding-right: 0px;
 						}
 
 						&:last-child{
-							border-right: 0px;
 							margin-right: 0px;
 							padding-right: 0px;
 						}
 					}
 
 					a{
-						font-size: 0.9rem;
 
 						@media #{$small-only}{
-							// @include button(rem-calc(10));
+							font-size: 1.1rem;
 							color: #FFF;
+						}
+
+						@media all and (min-width: 768px) and (max-width: 820px){
+							font-size: 0.8rem;
 						}
 					}
 				}
@@ -542,7 +556,7 @@ $include-html-classes: false;
 
 				a{
 					border-left: 1px solid #CCC;
-					font-size: 0.95rem;
+					font-size: 0.9rem;
 					margin-top: emCalc(10);
 					margin-left: emCalc(0);
 					padding: emCalc(3) 0px emCalc(3) emCalc(10);

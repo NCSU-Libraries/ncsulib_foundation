@@ -24,6 +24,7 @@ module.exports = function(grunt) {
         'scripts/vendor/jquery.mockjax.js',
         'scripts/vendor/jquery.hoverIntent.minified.js',
         'scripts/global-htdocs.js',
+        'scripts/search-cancel-button.js',
         'scripts/feedback-button.js'],
         dest: 'templates/includes/scripts/<%= pkg.name %>.min.js'
       }

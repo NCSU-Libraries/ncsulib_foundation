@@ -25,10 +25,16 @@ h5{ font-size: $h5-font-size;}
 h6{ font-size: $h6-font-size;}
 
 // add outline to links for accessibility
-a:active, a:focus {
-    outline: 1px dotted #999;
+// a:active, a:focus {
+//     outline: 1px dotted #999;
+// }
+
+a:focus, select:focus, textarea:focus{
+  outline-width: 1px !important;
+  outline-style: dotted !important;
+  outline-color: #999 !important;
 }
-a:hover, a:focus{
+a:hover{
     text-decoration: $anchor-text-hover-decoration;
 }
 
