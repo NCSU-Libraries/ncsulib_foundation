@@ -198,25 +198,6 @@ function ncsulib_foundation_preprocess_block(&$variables) {
 }
 
 /**
- * Implements template_preprocess_image
- *
- * Image preprocessor
- *
- * Author: Charlie Morris
- *
- */
-function ncsulib_foundation_preprocess_image(&$variables) {
-  // Only perform preprocessing on images with defined style
-  if (isset($variables['style_name'])) {
-    // Add the image-outline style for images with half-page-width style
-    // applied
-    if ($variables['style_name'] == 'half-page-width') {
-      $variables['attributes']['class'][] = 'image-outline';
-    }
-  }
-}
-
-/**
  * Implements hook_process_HOOK()
  *
  * Making our resource references (css and js) themeless
@@ -233,6 +214,8 @@ function ncsulib_foundation_process_html(&$vars){
 
 /**
  * Implements theme_menu_link()
+ *
+ * Adding Foundation 5 class for side navigation
  */
 function ncsulib_foundation_menu_tree($variables) {
   return '<ul class="side-nav">' . $variables['tree'] . '</ul>';
@@ -242,7 +225,7 @@ function ncsulib_foundation_menu_tree($variables) {
  * Implements hook_js_alter()
  */
 function ncsulib_foundation_js_alter(&$javascript) {
-  // kill old jquery
+  // Remove old jquery
   unset($javascript['misc/jquery.js']);
 }
 
@@ -251,8 +234,6 @@ function ncsulib_foundation_js_alter(&$javascript) {
  * Implements theme_breadrumb().
  *
  * Print breadcrumbs as a list, with separators.
- * Note: this was a default hook that came packaged with the Zurb Foundation
- * child theme
  */
 function ncsulib_foundation_breadcrumb($variables) {
   $links = array();
@@ -301,15 +282,18 @@ function ncsulib_foundation_breadcrumb($variables) {
     }
 
     $title = strip_tags(drupal_get_title());
-    // $breadcrumbs .= '<li class="current"><a href="#">' . $title. '</a></li>';
     $breadcrumbs .= '</ul>';
 
     return $breadcrumbs;
   }
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter()
+ *
+ */
 function ncsulib_foundation_form_user_login_alter(&$form, &$form_state, $form_id) {
-  //Alters the text on the user login form
+  // Alters the text on the user login form
   drupal_set_title(t('Website editing login'));
   $form['name']['#title'] = t('Unity ID');
   $form['name']['#description'] = t('Enter your NCSU Unity ID');
@@ -317,6 +301,10 @@ function ncsulib_foundation_form_user_login_alter(&$form, &$form_state, $form_id
   $form['pass']['#description'] = t('Enter your NCSU Libraries Active Directory password');
 }
 
+/**
+ * Do we still need this?
+ *
+ */
 function ncsulib_foundation_more_link ($array) {
   if (stristr($array['url'], 'aggregator')) {
     return "";
@@ -326,7 +314,6 @@ function ncsulib_foundation_more_link ($array) {
 /**
  * Modify the output of views
  *
- * -Charlie Morris, 1/2/13
  */
 function ncsulib_foundation_views_pre_render(&$view) {
   // The following two loops add month and day formatted dates to events
