@@ -132,10 +132,10 @@ Your browser does not support inline frames or is currently configured  not to d
 	<div id="utility-bar">
 		<?php if(drupal_is_front_page() && $_SERVER['REMOTE_ADDR']): ?>
 		<div id="home-hours">
-			<p id="hours-title"><a href="/hours" tabindex="-1">TODAY'S HOURS</a>:</p>
+			<p id="hours-title"><a href="/hours">TODAY'S HOURS</a>:</p>
 			<ul>
-				<li><a href="//webdev.lib.ncsu.edu/hours/hill/general" tabindex="-1"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours"><?= $ary['hill']; ?></span></a></li>
-				<li><a href="//webdev.lib.ncsu.edu/hours/hunt/general" tabindex="-1"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours"><?= $ary['hunt']; ?></span></a></li>
+				<li><a href="//webdev.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours"><?= $ary['hill']; ?></span></a></li>
+				<li><a href="//webdev.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours"><?= $ary['hunt']; ?></span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>
@@ -154,4 +154,4 @@ Your browser does not support inline frames or is currently configured  not to d
 	</div>
 </section>
 
-<a name="#main-content" class="element-invisible element-focusable">Skip Content</a>
+<a name="#main-content" class="element-invisible element-focusable" tabindex="-1">Skip Content</a>
