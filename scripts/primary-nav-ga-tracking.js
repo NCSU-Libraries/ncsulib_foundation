@@ -5,18 +5,18 @@ jQuery(function($){
 var ga_nav = {
 	init : function(){
 		// top level nav
-		$('#primary-nav li a').hover(function(e){
+		$('.primary-nav li a').hover(function(e){
 			ga_nav.primary_page = $(this).text();
 		})
 
-		$('#primary-nav li a').click(function(e){
+		$('.primary-nav li a').click(function(e){
 			var page = $(this).text();
 			_gaq.push(['_trackEvent', 'Global Nav', page, page]);
 			ga_nav.pause();
 		})
 
 		// secondary level nav
-		$('#primary-nav-menus ul li a').click(function(e){
+		$('.primary-nav-menus ul li a').click(function(e){
 			var page = $(this).text();
 			_gaq.push(['_trackEvent', 'Global Nav', ga_nav.primary_page, page]);
 			ga_nav.pause();

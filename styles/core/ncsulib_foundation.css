@@ -10205,7 +10205,7 @@ header#minimum-bar .top-bar .top-bar-section a {
   margin: 0px;
 }
 /* line 499, ../../scss/layout/_header.scss */
-#utility #utility-search #search-submit {
+#utility #utility-search .search-submit {
   background: #990000;
   font-size: 1rem;
   height: 30px;
@@ -10214,12 +10214,12 @@ header#minimum-bar .top-bar .top-bar-section a {
   text-align: center;
 }
 /* line 508, ../../scss/layout/_header.scss */
-#utility #utility-search #search-submit:hover {
+#utility #utility-search .search-submit:hover {
   background: #660000;
 }
 @media only screen and (max-width: 47.937em) {
   /* line 499, ../../scss/layout/_header.scss */
-  #utility #utility-search #search-submit {
+  #utility #utility-search .search-submit {
     background: #cc0000;
     float: right;
     height: 50px;
