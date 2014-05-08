@@ -149,3 +149,5 @@ Your browser does not support inline frames or is currently configured  not to d
 		</nav>
 	</div>
 </section>
+
+<a name="#main-content" class="element-invisible element-focusable">Skip Content</a>
