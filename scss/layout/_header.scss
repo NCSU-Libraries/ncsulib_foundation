@@ -490,10 +490,8 @@ header#minimum-bar{
 
 			&::-webkit-search-cancel-button:after{
 				font-size: 1.2em;
-	            // height: 20px;
 	            padding: 0px;
 	            margin: 0px;
-	            // width: 20px;
 			}
 
 		}
@@ -504,7 +502,8 @@ header#minimum-bar{
 			height: 30px;
 			margin: 0;
 			padding: 0 10px;
-			width: 7%;
+			text-align: center;
+			// width: 7%;
 
 			&:hover {
 				background: darken(#990000, 10%);
