@@ -58,7 +58,7 @@ var nav = {
 
 	openNav : function(){
 		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-		if(width > 768){
+		if(width > 767){
 			jQuery('.primary-nav li:eq('+nav.index+') a').addClass('open');
 			jQuery('.primary-menu-list:eq('+nav.index+')').addClass('open');
 		}

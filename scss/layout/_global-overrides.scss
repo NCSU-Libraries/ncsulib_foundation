@@ -1,9 +1,39 @@
-// add outline to links for accessibility
-a:active, a:focus {
-    outline: green dotted thick;
+// clear search button
+.search-cancel-button{
+    @media #{$ipad-down}{
+        -moz-box-shadow:    0px 0px 0px 0px #FFF;
+        -webkit-box-shadow: 0px 0px 0px 0px #FFF;
+        box-shadow:         0px 0px 0px 0px #FFF;
+        border: 0px solid red;
+        color: #999;
+        display: block;
+        position: relative;
+
+        i{
+            display: block;
+            height: 30px;
+            position: absolute;
+            width: 21px;
+        }
+    }
+
+    @media #{$ipad-up}{
+        display: none;
+    }
 }
 
 
+// pretty link
+.styled{
+    position: relative;
+    text-decoration: none;
+}
+.styled:before{
+    color: $primary-color;
+    content: "\f0a9";
+    font-family: "FontAwesome";
+    padding-right: 5px;
+}
 
 // begin global UI style overwrite
 dl.tabs{
@@ -135,7 +165,7 @@ div.tabs-content.vertical{
 
 
 // hacky way to prevent mobile devices from zooming in on input elements
-@media #{$small}{
+@media #{$small-only}{
   select,
   textarea,
   input[type="text"],
