@@ -41,6 +41,7 @@ var clear = {
 		var input_font_size = input_font_size[0];
 		var input_height = jQuery(elem).outerHeight();
 		var input_width = jQuery(elem).outerWidth();
+		jQuery(elem).css('padding-right', Number(input_font_size)+5+'px');
 		jQuery('.search-cancel-button').css({
 			'font-size' : input_font_size,
 			'width' : input_font_size+10,
