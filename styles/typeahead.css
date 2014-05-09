@@ -1,0 +1,101 @@
+/*
+ * Typeahead dropdown styling
+ */
+
+
+/* Ensure the search bar doesn't change size due to typeahead.js */
+.twitter-typeahead
+{
+  width: 100%;
+}
+
+/* styling for the dropdown menu */
+.tt-dropdown-menu {
+  padding: 0;
+  width: 100%;
+  background-color: white;
+  font-size: 12px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+  z-index: 80 !important;
+}
+
+/* styling for each section of the dropdown menu (eg. bestbets, faqs, etc)*/
+div[class*='tt-section-'] {
+  padding: 0.25em;
+}
+
+div[class*='tt-section-'] hr {
+  margin: 0;
+}
+
+.cat-header span {
+  font-weight: bold;
+  color: #999;
+}
+
+/* styling when you hover over a suggestion */
+.tt-cursor {
+  background-color: #DDD;
+}
+
+/* styling for individual suggestions */
+.tt-suggestion {
+  font-size: 1.25em;
+  padding: 0.25em;
+}
+.tt-suggestion p {
+  margin-bottom: 0;
+}
+.suggestion-title {
+  font-weight: bold;
+}
+
+
+/*
+ * Styling for specific types of suggestions
+ */
+
+/* TODO: fix the sizing of the image for smaller interfaces */
+.space-container {
+  width: 100%;
+}
+
+.space-image {
+  float: left;
+  max-width: 70%;
+  height: auto;
+  display: inline;
+  margin-right: 5px;
+}
+
+.space-footer {
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  font-size: 1.25em;
+  padding:0.5em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 40em) {
+  .bestbet-description {
+    display: none;
+  }
+  .space-image {
+    display: none;
+  }
+  .greybox {
+    display: none;
+  }
+  .tt-section-faqs {
+    display: none;
+  }
+  .tt-section-spaces {
+    display:none;
+  }
+  .tt-suggestion {
+    padding: 0.5em;
+  }
+}
