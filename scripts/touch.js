@@ -44,7 +44,7 @@ var touchHover = {
                 // parentNotHover means that the area you touched isn't in the hover menu.
                 // Was forced to use .attr('id') to actually get the comparison to work properly
                 // which seems to be an iOS quirk.
-                touchHover.parentNotMenu    = (jQuery(e.target).parents()[1] !== jQuery('ul#primary-nav')[0]);
+                touchHover.parentNotMenu    = (jQuery(e.target).parents()[1] !== jQuery('ul.primary-nav')[0]);
                 touchHover.parentNotHover   = (jQuery(e.target).parent().attr('id') !== jQuery('#primary-nav-menus').attr('id'));
 
                 if (touchHover.parentNotMenu && touchHover.parentNotHover) {
