@@ -23,12 +23,11 @@ $include-html-classes: false;
     }
     .row {
       @include grid-row;
-      margin: rem-calc(40) 0;
+      margin: rem-calc(40 0);
       .library {
         @include grid-column(4);
       }
       .lending-info {
-        // @include grid-column($columns: 8);
 
         .lending-period, .number-available{
           @include grid-column(4);

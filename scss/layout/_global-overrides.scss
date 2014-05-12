@@ -190,9 +190,10 @@ div.tabs-content.vertical{
     }
 }
 // ensure there is no border radius on iOS devices
-input[type="submit"]{
+input[type="submit"] {
     @include button;
     border-radius: 0px;
+    margin-top: rem-calc(10);
 }
 
 select{
