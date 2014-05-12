@@ -23,11 +23,11 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
                 <div id="search-options">
                     <div id="home-search">
                         <?php
-                        if (device_is('phone')) {
-                            include DRUPAL_ROOT.'/'.$GLOBALS['theme_path'].'/templates/includes/partials/home-search-mobile.html';
-                        } else {
+                       // if (device_is('phone')) {
+                         //   include DRUPAL_ROOT.'/'.$GLOBALS['theme_path'].'/templates/includes/partials/home-search-mobile.html';
+                       // } else {
                             include DRUPAL_ROOT.'/'.$GLOBALS['theme_path'].'/templates/includes/partials/home-search_tabs-desktop.html';
-                        }
+                       // }
                         ?>
                     </div>
                     <div id="research-tools">
