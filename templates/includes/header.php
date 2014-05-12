@@ -33,8 +33,8 @@ Your browser does not support inline frames or is currently configured  not to d
 	<div class="top-bar">
 		<div class="title-area">
 			<div class="name">
-			  	<a href="//webdev.lib.ncsu.edu" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
-					<img src="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
+			  	<a href="//www.lib.ncsu.edu" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
+					<img src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
 			  	</a>
 			</div>
 			<nav id="nav-toggle" class="right-off-canvas-toggle" role="navigation" aria-label="mobile navigation">
@@ -56,74 +56,74 @@ Your browser does not support inline frames or is currently configured  not to d
 <nav id="primary-nav-menus" role="navigation" aria-label="main navigation">
 	<div id="menu-find" class="primary-menu-list" >
 		<ul>
-			<li><a href="//webdev.lib.ncsu.edu/catalog">Books &amp; Media</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/articles">Articles</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/journals">Journal Titles</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/databases">Databases</a></li>
+			<li><a href="//www.lib.ncsu.edu/catalog">Books &amp; Media</a></li>
+			<li><a href="//www.lib.ncsu.edu/articles">Articles</a></li>
+			<li><a href="//www.lib.ncsu.edu/journals">Journal Titles</a></li>
+			<li><a href="//www.lib.ncsu.edu/databases">Databases</a></li>
 			<li><a href="//reserves.lib.ncsu.edu">Course Reserves</a></li>
 		</ul>
 		<ul>
-			<li><a href="//webdev.lib.ncsu.edu/data">Spatial &amp; Numerical Data</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/specialcollections">Special Collections</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/repository">NC State Publications</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/repository">Theses &amp; Dissertations</a></li>
+			<li><a href="//www.lib.ncsu.edu/data">Spatial &amp; Numerical Data</a></li>
+			<li><a href="//www.lib.ncsu.edu/specialcollections">Special Collections</a></li>
+			<li><a href="//www.lib.ncsu.edu/repository">NC State Publications</a></li>
+			<li><a href="//www.lib.ncsu.edu/repository">Theses &amp; Dissertations</a></li>
 		</ul>
 	</div>
 	<div id="menu-help" class="primary-menu-list">
 		<ul>
-			<li><a href="//webdev.lib.ncsu.edu/askus">Ask Us</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/researchconsultation">Research Consultation</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/digital-media-lab/techconsult">Technology Consultation</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/researchworkshops">Research Workshops</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/cdsc">Copyright Guidance</a></li>
+			<li><a href="//www.lib.ncsu.edu/askus">Ask Us</a></li>
+			<li><a href="//www.lib.ncsu.edu/researchconsultation">Research Consultation</a></li>
+			<li><a href="//www.lib.ncsu.edu/digital-media-lab/techconsult">Technology Consultation</a></li>
+			<li><a href="//www.lib.ncsu.edu/researchworkshops">Research Workshops</a></li>
+			<li><a href="//www.lib.ncsu.edu/cdsc">Copyright Guidance</a></li>
 		</ul>
 		<ul>
-			<li><a href="//webdev.lib.ncsu.edu/course">Course Tools</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/tools-citation">Citation</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/reference-tools">Reference</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/guides">Guides</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/tutorials">Tutorials</a></li>
+			<li><a href="//www.lib.ncsu.edu/course">Course Tools</a></li>
+			<li><a href="//www.lib.ncsu.edu/tools-citation">Citation</a></li>
+			<li><a href="//www.lib.ncsu.edu/reference-tools">Reference</a></li>
+			<li><a href="//www.lib.ncsu.edu/guides">Guides</a></li>
+			<li><a href="//www.lib.ncsu.edu/tutorials">Tutorials</a></li>
 		</ul>
 	</div>
 	<div id="menu-services" class="primary-menu-list">
 		<ul>
-			<li><a href="//webdev.lib.ncsu.edu/borrow">Borrow, Renew, Request</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/computing">Computing</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/digital-media-lab">Create Digital Media</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/disabilityservices">Disability Services</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/distance">Distance Learning</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/faculty">Faculty/Instructor Support</a></li>
+			<li><a href="//www.lib.ncsu.edu/borrow">Borrow, Renew, Request</a></li>
+			<li><a href="//www.lib.ncsu.edu/computing">Computing</a></li>
+			<li><a href="//www.lib.ncsu.edu/digital-media-lab">Create Digital Media</a></li>
+			<li><a href="//www.lib.ncsu.edu/disabilityservices">Disability Services</a></li>
+			<li><a href="//www.lib.ncsu.edu/distance">Distance Learning</a></li>
+			<li><a href="//www.lib.ncsu.edu/faculty">Faculty/Instructor Support</a></li>
 		</ul>
 		<ul>
-			<li><a href="//webdev.lib.ncsu.edu/groupfinder">GroupFinder</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/reservearoom">Reserve a Room</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/printing">Print, Copy, Scan</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/collections/suggestpurchase">Suggest a Purchase</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/techlending">Technology Lending</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/tripsaver">Tripsaver</a></li>
+			<li><a href="//www.lib.ncsu.edu/groupfinder">GroupFinder</a></li>
+			<li><a href="//www.lib.ncsu.edu/reservearoom">Reserve a Room</a></li>
+			<li><a href="//www.lib.ncsu.edu/printing">Print, Copy, Scan</a></li>
+			<li><a href="//www.lib.ncsu.edu/collections/suggestpurchase">Suggest a Purchase</a></li>
+			<li><a href="//www.lib.ncsu.edu/techlending">Technology Lending</a></li>
+			<li><a href="//www.lib.ncsu.edu/tripsaver">Tripsaver</a></li>
 		</ul>
 	</div>
 	<div id="menu-libraries" class="primary-menu-list">
 		<ul>
-			<li><a href="//webdev.lib.ncsu.edu/">D. H. Hill Library</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/huntlibrary">James B. Hunt Jr. Library</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/design">Design Library</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/nrl">Natural Resources Library</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/vetmed">Veterinary Medicine Library</a></li>
+			<li><a href="//www.lib.ncsu.edu/">D. H. Hill Library</a></li>
+			<li><a href="//www.lib.ncsu.edu/huntlibrary">James B. Hunt Jr. Library</a></li>
+			<li><a href="//www.lib.ncsu.edu/design">Design Library</a></li>
+			<li><a href="//www.lib.ncsu.edu/nrl">Natural Resources Library</a></li>
+			<li><a href="//www.lib.ncsu.edu/vetmed">Veterinary Medicine Library</a></li>
 		</ul>
 	</div>
 	<div id="menu-about" class="primary-menu-list">
 		<ul>
-			<li><a href="//webdev.lib.ncsu.edu/contact">Contact Us</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/parking">Directions &amp; Parking</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/hours">Hours</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/jobs">Jobs</a></li>
+			<li><a href="//www.lib.ncsu.edu/contact">Contact Us</a></li>
+			<li><a href="//www.lib.ncsu.edu/parking">Directions &amp; Parking</a></li>
+			<li><a href="//www.lib.ncsu.edu/hours">Hours</a></li>
+			<li><a href="//www.lib.ncsu.edu/jobs">Jobs</a></li>
 		</ul>
 		<ul>
-			<li><a href="//webdev.lib.ncsu.edu/staff">Staff</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/directories">Directories</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/giving/friends">Friends of the Library</a></li>
-			<li><a href="//webdev.lib.ncsu.edu/specialcollections">Special Collections</a></li>
+			<li><a href="//www.lib.ncsu.edu/staff">Staff</a></li>
+			<li><a href="//www.lib.ncsu.edu/directories">Directories</a></li>
+			<li><a href="//www.lib.ncsu.edu/giving/friends">Friends of the Library</a></li>
+			<li><a href="//www.lib.ncsu.edu/specialcollections">Special Collections</a></li>
 		</ul>
 	</div>
 </nav>
@@ -134,8 +134,8 @@ Your browser does not support inline frames or is currently configured  not to d
 		<div id="home-hours">
 			<p id="hours-title"><a href="/hours">TODAY'S HOURS</a>:</p>
 			<ul>
-				<li><a href="//webdev.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours"><?= $ary['hill']; ?></span></a></li>
-				<li><a href="//webdev.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours"><?= $ary['hunt']; ?></span></a></li>
+				<li><a href="//www.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours"><?= $ary['hill']; ?></span></a></li>
+				<li><a href="//www.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours"><?= $ary['hunt']; ?></span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>
