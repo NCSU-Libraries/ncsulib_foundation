@@ -225,10 +225,10 @@ function ncsulib_foundation_menu_tree($variables) {
  * Implements hook_js_alter()
  */
 function ncsulib_foundation_js_alter(&$javascript) {
-  // kpr($javascript);
   // Remove old jquery
   unset($javascript['misc/jquery.js']);
-    // kpr($javascript);
+  unset($javascript['https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js']);
+  unset($javascript['https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js']);
 }
 
 
