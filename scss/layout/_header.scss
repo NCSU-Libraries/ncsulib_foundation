@@ -505,14 +505,14 @@ header#minimum-bar{
 			padding: 0 10px;
 			text-align: center;
 
-			@media #{$medium-up}{
-				content: "ccc";
+			// @media #{$medium-up}{
+			// 	content: "ccc";
 
-				&:before{
-					content: "\f002";
-					font-family: "FontAwesome";
-				}
-			}
+			// 	&:before{
+			// 		content: "\f002";
+			// 		font-family: "FontAwesome";
+			// 	}
+			// }
 
 			@media #{$small-only}{
 				background: $primary-color;
