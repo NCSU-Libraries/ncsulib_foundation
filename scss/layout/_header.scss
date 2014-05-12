@@ -498,15 +498,20 @@ header#minimum-bar{
 
 		.search-submit{
 			background: darken($primary-color, 10%);
+
 			font-size: rem-calc(16);
 			height: 30px;
 			margin: 0;
 			padding: 0 10px;
 			text-align: center;
-			// width: 7%;
 
-			&:hover {
-				background: darken(#990000, 10%);
+			@media #{$medium-up}{
+				content: "ccc";
+
+				&:before{
+					content: "\f002";
+					font-family: "FontAwesome";
+				}
 			}
 
 			@media #{$small-only}{
@@ -515,6 +520,10 @@ header#minimum-bar{
 				height: 50px;
 				padding: 0px;
 				width: 20%;
+			}
+
+			&:hover {
+				background: darken(#990000, 10%);
 			}
 		}
 
@@ -645,6 +654,11 @@ header#minimum-bar{
 		#subnav{
 			color: #CCC;
 		}
+	}
+}
+@media #{$medium-up}{
+	#mobile-nav{
+		display: none;
 	}
 }
 

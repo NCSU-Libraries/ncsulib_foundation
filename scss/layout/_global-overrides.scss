@@ -11,9 +11,9 @@
 
         i{
             display: block;
-            height: 30px;
+            // height: 30px;
             position: absolute;
-            width: 21px;
+            // width: 21px;
         }
     }
 
@@ -21,6 +21,8 @@
         display: none;
     }
 }
+
+
 
 
 // pretty link
@@ -331,6 +333,7 @@ table{
 // hide skip to content text
 .element-invisible {
     clip: rect(1px, 1px, 1px, 1px);
+    color: #FFF;
     height: 1px;
     overflow: hidden;
     position: absolute !important;
