@@ -3,6 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
     <head>
+
         <title><?php print $head_title; ?></title>
         <script src="/sites/all/themes/ncsulib_foundation/scripts/vendor/jquery-1.10.2.min.js"></script>
         <script src="/sites/all/themes/ncsulib_foundation/scripts/vendor/custom.modernizr.js"></script>

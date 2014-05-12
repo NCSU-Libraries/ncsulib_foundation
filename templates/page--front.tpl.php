@@ -10,8 +10,8 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/books-med
 drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-search-tabs-logging.js');
 drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/typeahead.bundle.min.js');
 drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
-drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/handlebars-v1.3.0.js', array('scope'=>'footer'));
-drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/quicksearch-typeahead.js', array('scope'=>'footer'));
+//drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/handlebars-v1.3.0.js', array('scope'=>'footer'));
+//drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/quicksearch-typeahead.js', array('scope'=>'footer'));
 ?>
 
 <!--.page -->

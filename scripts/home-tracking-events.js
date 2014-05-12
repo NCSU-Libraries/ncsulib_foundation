@@ -60,7 +60,7 @@ function pause() {
 
 
     // Artbox
-    $('ul.#artbox.orbit-slider li a').on('click',function(e){
+    $('ul#artbox li a').on('click',function(e){
         var title = $(this).data('title');
         var destination = $(this).data('destination');
         _gaq.push(['_trackEvent', 'Artbox', title, destination]);

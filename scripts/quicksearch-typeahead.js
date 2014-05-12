@@ -169,7 +169,7 @@ var typeaheadUtility = (function () {
 
   function sendEventData (eventValues, link) {
       if (environment == 'development') {
-          console.log('click_tracking', [eventValues.category, eventValues.action, eventValues.label]);
+          // console.log('click_tracking', [eventValues.category, eventValues.action, eventValues.label]);
           jQuery.when(logEventToDatabase(eventValues)).then(function () {
               if (link !== '') {
                   document.location.href = link.href;
