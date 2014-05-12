@@ -137,7 +137,6 @@ header{
 			ul.primary-nav{
 				background: $topbar-dropdown-bg;
 				float: right;
-				padding-bottom: rem-calc(20);
 
 				@media #{$small-only} {
 					background: $primary-color;
