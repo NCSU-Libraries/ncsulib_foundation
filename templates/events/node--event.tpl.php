@@ -26,7 +26,7 @@
 ?>
 <h1><?php echo $title; ?></h1>
 <div id="event-node" class="row">
-    <div class="columns large-7">
+    <div class="columns medium-7">
         <div class="event-meta">
             <h5><strong>When:</strong> <?php echo $date = ($end) ? $start . ' to ' . $end . ', '.$start_time : $start.', '.$start_time; ?></h5>
             <h5 class="subheader"><strong>Where:</strong> <?php echo 'at the <a href="/node/' . $space_nid  . '">' . $space_node->title . '</a>'; ?></h5>
@@ -43,7 +43,7 @@
             <?php endif; ?>
         </div>
     </div>
-    <div class="columns large-5">
+    <div class="columns medium-5">
         <?php if($img): ?>
         <img src="<?php echo image_style_url('half-page-width', $img); ?>" width="100%" alt="<?php echo $node->title; ?>" />
         <?php endif; ?>

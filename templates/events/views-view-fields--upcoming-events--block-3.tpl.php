@@ -5,7 +5,7 @@
    * Date: December 2013
    */
 ?>
-<div class="row">
+<div class="row event-item">
 	<div class="columns medium-4">
 	<?php foreach ($fields as $id => $field): ?>
 		<?php if($field->class == 'field-image-for-event'): ?>
