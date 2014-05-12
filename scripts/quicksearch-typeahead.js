@@ -68,7 +68,7 @@ var spaces_template = Handlebars.compile([
         '<div class="row space-container">',
           '<div class="large-2 medium-2 small-2">',
             '{{#if image}}<img class="space-image" src="{{image}}" />',
-            '{{else}}<img src="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/greybox.png" class="space-image" alt="" >',
+            '{{else}}<img src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/greybox.png" class="space-image" alt="" >',
             '{{/if}}',
           '</div>',
           '<div class="large-10 medium-10 small-10">',
