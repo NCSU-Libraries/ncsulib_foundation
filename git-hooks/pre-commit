@@ -10,8 +10,10 @@ git add templates/includes/scripts/ncsulib-website.min.js
 echo "File included in commit"
 
 # create header.html
-echo "Generating a new header.html file"
+echo "Generating new head.html and header.html files"
+php templates/includes/head.php > templates/includes/head.html
 php templates/includes/header.php > templates/includes/header.html
-echo "File generated, adding to commit"
+echo "Files generated, adding to commit"
+git add templates/includes/head.html
 git add templates/includes/header.html
 echo "File included in commit"
