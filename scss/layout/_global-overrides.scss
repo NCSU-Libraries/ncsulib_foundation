@@ -340,3 +340,17 @@ table{
     position: absolute !important;
 }
 
+// form
+.webform-component {
+    margin: 50px 0 0 0;
+
+    label:first-child {
+        font-weight: 700;
+        font-size: 17px;
+        margin-bottom: 13px;
+    }
+    .description {
+        font-style: italic;
+        padding: 7px;
+    }
+}
