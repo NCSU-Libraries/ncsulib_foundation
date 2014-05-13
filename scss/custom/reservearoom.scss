@@ -50,6 +50,16 @@ img {
     @include grid-row();
     form {
 
+        .edit-field-types-of-spaces-value-wrapper{
+            @include grid-column(6);
+            max-height: 160px;
+
+            .form-item{
+                float: left;
+                width: 50%;
+            }
+        }
+
         .views-exposed-widget {
             @include grid-column(3);
             padding: 0px;
@@ -140,6 +150,7 @@ img {
 }
 .views-field-title {
     width: 25%;
+
     @media #{$small-only} {
         width: 75%;
     }
@@ -170,5 +181,15 @@ img {
     #edit-field-special-access-value-wrapper,
     #edit-field-types-of-spaces-value-wrapper {
         display:none;
+    }
+}
+
+
+// set max height for filtered checkboxes
+.form-item-field-types-of-spaces-value{
+    max-height: 50px;
+
+    .form-item{
+        float: left;
     }
 }
