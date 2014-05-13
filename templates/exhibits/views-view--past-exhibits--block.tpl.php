@@ -6,7 +6,7 @@
  * Date: 10/7/13
  */
 ?>
-<ul id="exhibits-content">
+<dl id="exhibits-content">
 <?php foreach($variables['view']->result as $val): ?>
 
 	<?php
@@ -31,14 +31,14 @@
 		$ongoing = field_get_items('node', $node, 'field_ongoing');
 		$event_url = field_get_items('node', $node, 'field_event_url');
 	?>
-		<li class="exhibit-item">
+		<dd class="exhibit-item row">
 			<?php if($img_url): ?>
-			<div class="exhibit-photo">
+			<div class="exhibit-photo columns medium-3">
 				<img src="<?php echo $img_url; ?>" width="100%" />
 			</div>
 			<?php endif; ?>
-			<div class="exhibit-content">
-				<h2><?php echo $url; ?></h2>
+			<div class="exhibit-content columns medium-9">
+				<h2 class="subheader"><?php echo $url; ?></h2>
 				<?php if($space_title): ?>
 					<?php if($space_title == 'Online only'): ?>
 						<?php if($event_url): ?>
@@ -60,6 +60,6 @@
 				<?php echo $body; ?>
 				<?php endif; ?>
 			</div>
-		</li>
+		</dd>
 <?php endforeach; ?>
-</ul>
+</dl>
