@@ -18,7 +18,7 @@
 		$title = $slide['title'];
 
 ?>
-    <li><a href="<?= $url; ?>" data-title="<?= $title; ?>" data-destination="<?= $url_dest; ?>"></a><img src="<?= file_create_url($file->uri); ?>" alt="<?= $title; ?>" /></li>
+    <li><a href="<?= $url; ?>" data-title="<?= $title; ?>" data-destination="<?= $url_dest; ?>"><?= $title; ?></a><img src="<?= file_create_url($file->uri); ?>" alt="<?= $title; ?>" /></li>
     <!-- <li data-url="<?= $url; ?>"><img src="<?= file_create_url($file->uri); ?>" alt="<?= $title; ?>" /></li> -->
 	<?php endif; ?>
 <?php endforeach; ?>

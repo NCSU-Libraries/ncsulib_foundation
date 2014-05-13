@@ -1,12 +1,12 @@
 <?php
 /*
- * Past Exhibits View
+ * Current Exhibits View
  * Path: /exhibits
  * Author: Erik Olson
- * Date: 7/2/13
+ * Date: 10/7/13
  */
 ?>
-<dl id="exhibits-content">
+<ul id="exhibits-content">
 <?php foreach($variables['view']->result as $val): ?>
 
 	<?php
@@ -28,26 +28,38 @@
 		$space_node = node_load($space[0]['entity']->nid);
 		$building_field = field_get_items('node', $space_node, 'field_building_name');
 		$library = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
+		$ongoing = field_get_items('node', $node, 'field_ongoing');
+		$event_url = field_get_items('node', $node, 'field_event_url');
 	?>
-
-		<dd class="exhibit-item row">
+		<li class="exhibit-item">
 			<?php if($img_url): ?>
-			<div class="exhibit-photo large-4 columns">
+			<div class="exhibit-photo">
 				<img src="<?php echo $img_url; ?>" width="100%" />
 			</div>
 			<?php endif; ?>
-			<div class="exhibit-content large-8 columns">
-				<h2 class="subheader"><?php echo $url; ?></h2>
+			<div class="exhibit-content">
+				<h2><?php echo $url; ?></h2>
 				<?php if($space_title): ?>
-				<h4>Where: <a href="<?php echo url('node/'.$where[0]['target_id']); ?>"><?php echo $space_title; ?></a> at <?php echo $library['#markup']; ?></h4>
+					<?php if($space_title == 'Online only'): ?>
+						<?php if($event_url): ?>
+						<h5>Where: <a href="<?= $event_url[0]['url']; ?>">Online Exhibit</a></h5>
+						<?php else: ?>
+						<h5>Where: Online Exhibit</h5>
+						<?php endif; ?>
+
+					<?php else: ?>
+					<h5>Where: <a href="<?php echo url('node/'.$where[0]['target_id']); ?>"><?php echo $space_title; ?></a> at <?php echo $library['#markup']; ?></h5>
+					<?php endif; ?>
 				<?php endif; ?>
-				<?php if($start_time || $end_time): ?>
-				<h4>When: <?php echo $start_time . ' - ' . $end_time; ?></h4>
+				<?php if(($start_time || $end_time) && !$ongoing): ?>
+				<h5>When: <?php echo $start_time . ' - ' . $end_time; ?></h5>
+				<?php else: ?>
+				<h5>When: Ongoing</h5>
 				<?php endif; ?>
 				<?php if($body): ?>
 				<?php echo $body; ?>
 				<?php endif; ?>
 			</div>
-		</dd>
+		</li>
 <?php endforeach; ?>
-</dl>
+</ul>
