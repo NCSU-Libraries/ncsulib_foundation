@@ -89,7 +89,7 @@ Your browser does not support inline frames or is currently configured  not to d
 		<ul>
 			<li><a href="//www.lib.ncsu.edu/borrow">Borrow, Renew, Request</a></li>
 			<li><a href="//www.lib.ncsu.edu/computing">Computing</a></li>
-			<li><a href="//www.lib.ncsu.edu/digital-media-lab">Create Digital Media</a></li>
+			<li><a href="//www.lib.ncsu.edu/cdm">Create Digital Media</a></li>
 			<li><a href="//www.lib.ncsu.edu/disabilityservices">Disability Services</a></li>
 			<li><a href="//www.lib.ncsu.edu/distance">Distance Learning</a></li>
 			<li><a href="//www.lib.ncsu.edu/faculty">Faculty/Instructor Support</a></li>
