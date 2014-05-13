@@ -14,19 +14,19 @@
     &.feedback-yes {
       border-right: 1px solid #fff;
       a:hover {
-        background-color: rgba(0, 128, 0, 0.7);
+        background-color: #ac0000;
       }
     }
     a {
       padding: rem-calc(10 10 30 10);
       border-radius: 0.3em 0.3em 0 0;
-      background-color: rgba(204, 0, 0,  0.7);
+      background-color: #ac0000;
       color: #fff;
       @include single-transition(background-color);
 
       &:hover {
         text-decoration: none;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 1);
       }
     }
   }
