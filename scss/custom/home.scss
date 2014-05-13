@@ -48,7 +48,11 @@ $include-html-classes: false;
 
 /*begin tabs */
 /*main search*/
+#mobile-search-form {
+	@media #{$medium-up} { display:none; }
+}
 #search-tabs{
+	@media #{$small-only} { display:none; }
 	padding: 0px;
 
 	.tabs-content{
