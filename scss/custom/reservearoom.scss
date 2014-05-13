@@ -56,8 +56,11 @@ img {
             max-height: 160px;
 
             .form-item{
-                float: left;
-                width: 50%;
+
+                .form-type-bef-checkbox{
+                    float: left;
+                    width: 50%;
+                }
             }
         }
 
