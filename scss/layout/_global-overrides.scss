@@ -193,7 +193,6 @@ div.tabs-content.vertical{
 input[type="submit"] {
     @include button;
     border-radius: 0px;
-    margin-top: rem-calc(10);
 }
 
 select{
