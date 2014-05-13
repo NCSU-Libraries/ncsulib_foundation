@@ -193,7 +193,6 @@ div.tabs-content.vertical{
 input[type="submit"] {
     @include button;
     border-radius: 0px;
-    margin-top: rem-calc(10);
 }
 
 select{
@@ -353,4 +352,11 @@ table{
         font-style: italic;
         padding: 7px;
     }
+}
+/* Adjust margin for form elements below */
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  margin: 0;
 }

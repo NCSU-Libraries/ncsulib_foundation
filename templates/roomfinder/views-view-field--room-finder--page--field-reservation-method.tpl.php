@@ -10,7 +10,7 @@
 
         case 'By Room Reservation System':
           $today = date('m-d-Y');
-          print '<a class="button" href="http://www.lib.ncsu.edu/roomreservations/schedule.php?date='.$today.'&scheduleid='.$row->_field_data['nid']['entity']->field_room_res_id['und'][0]['value'].'">Reserve</a>';
+          print '<a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='.$today.'&scheduleid='.$row->_field_data['nid']['entity']->field_room_res_id['und'][0]['value'].'">Reserve</a>';
           break;
       }
     }

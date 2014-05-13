@@ -7,9 +7,15 @@ $include-html-classes: false;
   @include grid-row($behavior: nest);
 }
 .field-type-image {
+  @media #{$small-only} {
+    @include grid-column($columns: 12, $push: 0, $position: false);
+  }
   @include grid-column($columns: 5, $push: 7, $position: true);
 }
 .left-part {
+  @media #{$small-only} {
+    @include grid-column($columns: 12, $pull: 0, $position: false);
+  }
   @include grid-column($columns: 7, $pull: 5, $position: true);
   .hb {
     @include grid-row($behavior: nest);
