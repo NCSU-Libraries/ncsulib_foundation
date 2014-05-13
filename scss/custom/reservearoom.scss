@@ -4,14 +4,23 @@ $include-html-classes: false;
 @import "silent_type";
 
 table {
+    border: 0px;
+    background: none;
     width: 100%;
 }
 tr {
     border-top: 1px solid #DDD;
 }
 td {
+    background: none;
+    padding-bottom: 25px;
+    padding-top: 25px;
     vertical-align: top;
 }
+table tr.even, table tr.alt, table tr:nth-of-type(2n){
+    background: none;
+}
+
 img {
     @media #{$medium-up}{
         min-width: 160px;
@@ -37,6 +46,8 @@ img {
 
         .views-exposed-widget {
             @include grid-column(3);
+            padding: 0px;
+
             @media #{$small-only} {
                 @include grid-column(12);
             }
@@ -51,6 +62,7 @@ img {
                     font-weight: 700;
                 }
             }
+
             #edit-reset {
                 margin-top: 0;
                 padding: rem-calc(5 10);
@@ -61,19 +73,24 @@ img {
         }
     }
     .views-widget {
-        margin-left: rem-calc(10);
+        margin-left: rem-calc(0);
 
         input[type="checkbox"] {
             float: left;
             margin-right: 10px;
             margin-top: 2px;
         }
+
         .option {
             display: block;
             margin-left: 24px;
             line-height: 1.3;
         }
     }
+}
+
+.views-exposed-form .form-item{
+    margin-bottom: 10px;
 }
 .view-content {
     table {
