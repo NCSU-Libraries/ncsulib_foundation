@@ -11,7 +11,13 @@ table {
 tr {
     border-top: 1px solid #DDD;
 }
-td {
+table tr td:first-child{
+    padding-left: 0px;
+}
+table tr td:last-child{
+    padding-right: 0px;
+}
+table tr td {
     background: none;
     padding-bottom: 25px;
     padding-top: 25px;
