@@ -26,6 +26,17 @@
  * - http://smacss.com/
  */
 
+/*  Font Awesome 3.2.1
+ *  the iconic font designed for Bootstrap
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ */
+
+@import "components/font-awesome";
+
+
 // Base
 //
 // Init file contains required imports. Here's where we include normalize,
@@ -60,14 +71,6 @@
 // @import "components/type";
 // @import "components/forms";
 
-/*  Font Awesome 3.2.1
- *  the iconic font designed for Bootstrap
- *  ------------------------------------------------------------------------------
- *  The full suite of pictographic icons, examples, and documentation can be
- *  found at http://fontawesome.io.  Stay up to date on Twitter at
- *  http://twitter.com/fontawesome.
- */
 
-@import "components/font-awesome";
 @import "components/dataviews";
 @import "components/feedback_button";
