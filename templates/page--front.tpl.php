@@ -90,15 +90,15 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
                         <div class="content active" id="panel-hill">
                             <ul>
                                 <li>
-                                    <span class="item"><a href="/studyrooms/getaroom.php" id="al_hill_study_rooms">Study Rooms</a> </span>
+                                    <span class="item"><a href="/reservearoom" id="al_hill_study_rooms">Study Rooms</a> </span>
                                     <span class="item-count count" id="hill-study"></span>
                                 </li>
                                 <li>
-                                    <span class="item"><a href="/studyrooms/getaroom.php" id="al_hill_laptops">Laptops</a> </span>
+                                    <span class="item"><a href="/techlending/laptops-netbooks" id="al_hill_laptops">Laptops</a> </span>
                                     <span class="item-count count" id="hill-laptops"></span>
                                 </li>
                                 <li>
-                                    <span class="item"><a href="/studyrooms/getaroom.php" id="al_hill_tablets">Tablets</a> </span>
+                                    <span class="item"><a href="/techlending/tablets-and-ipods" id="al_hill_tablets">Tablets</a> </span>
                                     <span class="item-count count" id="hill-tablets"></span>
                                 </li>
                             </ul>
@@ -106,15 +106,15 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
                         <div class="content" id="panel-hunt">
                             <ul>
                                 <li>
-                                    <span class="item"><a href="/studyrooms/getaroom.php" id="al_hunt_study_rooms">Study Rooms</a> </span>
+                                    <span class="item"><a href="/reservearoom" id="al_hunt_study_rooms">Study Rooms</a> </span>
                                     <span class="item-count count" id="hunt-study"></span>
                                 </li>
                                 <li>
-                                    <span class="item"><a href="/studyrooms/getaroom.php" id="al_hunt_laptops">Laptops</a> </span>
+                                    <span class="item"><a href="/techlending/laptops-netbooks" id="al_hunt_laptops">Laptops</a> </span>
                                     <span class="item-count count" id="hunt-laptops"></span>
                                 </li>
                                 <li>
-                                    <span class="item"><a href="/studyrooms/getaroom.php" id="al_hunt_tablets">Tablets</a> </span>
+                                    <span class="item"><a href="/techlending/tablets-and-ipods" id="al_hunt_tablets">Tablets</a> </span>
                                     <span class="item-count count" id="hunt-tablets"></span>
                                 </li>
                             </ul>
