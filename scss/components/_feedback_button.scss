@@ -1,10 +1,11 @@
 .feedback-form {
   position: fixed;
   right: rem-calc(-84);
-  top: 57%;
   @include rotate(270deg);
-  padding: 10px;
   margin: 0;
+  overflow: hidden;
+  padding: 10px;
+  top: 57%;
   z-index: 9999;
 
   span {
