@@ -18,10 +18,12 @@ img {
     }
 }
 .view-header {
-    margin-top: rem-calc(40);
+    @media #{$small-only} { display:none; }
+    @include grid-row();
 
     .vml-text {
-        @include grid-column(3, $float: right, $collapse: true);
+        @include grid-column(4, $push: 8, $position: true);
+        line-height: 1.1;
         @media #{$small-only}{
             @include grid-column(4, $float: right, $collapse: true);
             font-size: rem-calc(12);
@@ -30,34 +32,46 @@ img {
     }
 }
 .view-filters {
+    @include grid-row();
     form {
-        @include grid-column(4, $collapse: true);
-        @media #{$small-only}{
-            @include grid-column(8, $collapse: true);
-        }
-        label[for="edit-field-building-name-value"] {
-            @extend %h2;
-            margin-top: 0;
-            float: left;
-            display: block;
 
-            @media #{$small-only}{
-                float: none;
+        .views-exposed-widget {
+            @include grid-column(3);
+            @media #{$small-only} {
+                @include grid-column(12);
+            }
+
+            label:first-child {
+                @extend %h2;
+                margin-top: 0;
+                display: block;
+
+                @media #{$small-only}{
+                    float: none;
+                    font-weight: 700;
+                }
+            }
+            #edit-reset {
+                margin-top: 0;
+                padding: rem-calc(5 10);
+                @media #{$small-only}{
+                    display: none;
+                }
             }
         }
     }
     .views-widget {
-        float: left;
-        margin-left: rem-calc(33);
-        margin-top: rem-calc(10);
+        margin-left: rem-calc(10);
 
-        @media #{$small-only}{
-            float: none;
-            margin-left: 0;
+        input[type="checkbox"] {
+            float: left;
+            margin-right: 10px;
+            margin-top: 2px;
         }
-
         .option {
-            font-weight: 700;
+            display: block;
+            margin-left: 24px;
+            line-height: 1.3;
         }
     }
 }
@@ -129,5 +143,9 @@ img {
     .button {
         padding: rem-calc(10 16);
         font-size: rem-calc(13);
+    }
+    #edit-field-special-access-value-wrapper,
+    #edit-field-types-of-spaces-value-wrapper {
+        display:none;
     }
 }
