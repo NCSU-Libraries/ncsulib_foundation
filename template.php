@@ -437,7 +437,7 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
       $room_res_id  = field_get_items('node', $node, 'field_room_res_id');
       $schedule_id_render_array  = field_view_value('node', $node, 'field_room_res_id', $room_res_id[0]);
       $schedule_id = $schedule_id_render_array['#markup'];
-      $output = '<div class="button-wrap"><a class="button" href="http://www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve this room</a></div>';
+      $output = '<div class="button-wrap"><a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve this room</a></div>';
       break;
 
     case 'By Mediated Email Form':
