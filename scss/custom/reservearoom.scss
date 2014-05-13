@@ -33,8 +33,11 @@ img {
     }
 }
 .view-header {
-    @media #{$small-only} { display:none; }
     @include grid-row();
+    position: absolute;
+    top: 0px;
+
+    @media #{$small-only} { display:none; }
 
     .vml-text {
         @include grid-column(4, $push: 8, $position: true);
