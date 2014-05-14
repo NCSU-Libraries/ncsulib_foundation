@@ -144,7 +144,7 @@ Your browser does not support inline frames or is currently configured  not to d
 				<input type="search" id="search-all" name="q" class="main-search-field search-header" placeholder="Search books, articles, journals, website" title="Search books, articles, journals, &amp; library website">
 				<!-- <input type="submit" id="search-submit" value="/f002"> -->
 				<button class="search-submit button show-for-small" type="submit">Search</button>
-				<button class="search-submit button hide-for-small" type="submit"><i class="fa fa-search"></i></button>
+				<button class="search-submit button hide-for-small" type="submit"><i class="fa fa-search"></i><span class="text-for-fa">Search</span></button>
 			</form>
 		</div>
 		<?php endif; ?>
