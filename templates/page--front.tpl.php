@@ -149,7 +149,7 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
                 <div id="story-2">
                     <div class="story-photo">
                         <a href="/proposed-hours-2014" id="story-2-photo">
-                         <img src="/sites/default/files/homepage-hours-change.jpg" alt="Possible changes in hours for the D. H. Hill and Hunt Libraries, Fall 2014" width="100%" />
+                         <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hours_notice_image.jpg" alt="Possible changes in hours for the D. H. Hill and Hunt Libraries, Fall 2014" width="100%" />
                      </a>
                  </div>
                  <h2><a href="/proposed-hours-2014" id="story-2-heading">Possible Changes To Hours</a></h2>
@@ -160,7 +160,7 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
              <div id="happenings">
                 <div id="home-news">
                     <div class="happenings-photo">
-                        <a href="/news/" class="news-link"><img src="/sites/default/files/news-front.jpg" alt="Library News" width="100%" /></a>
+                        <a href="/news/" class="news-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/news.jpg" alt="" width="100%" /></a>
                     </div>
                     <div class="happenings-content">
                         <h2><a href="/news/" class="news-link">News</a></h2>
@@ -169,7 +169,7 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
                 </div>
                 <div id="home-events">
                     <div class="happenings-photo">
-                        <a href="/events/" class="events-link"><img src="/sites/default/files/events-front.jpg" alt="Library Happenings" width="100%" /></a>
+                        <a href="/events/" class="events-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/events.jpg" alt="" width="100%" /></a>
                     </div>
                     <div class="happenings-content">
                         <h2><a href="/events/" class="events-link">Events</a></h2>
@@ -178,7 +178,7 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
                 </div>
                 <div id="home-exhibits">
                     <div class="happenings-photo">
-                        <a href="/exhibits/" class="exhibits-link"><img src="/sites/all/themes/ncsulib_foundation/images/exhibits-front.jpg" alt="Library Exhibits" width="100%" /></a>
+                        <a href="/exhibits/" class="exhibits-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/exhibits.jpg" alt="" width="100%" /></a>
                     </div>
                     <div class="happenings-content">
                         <h2><a href="/exhibits/" class="exhibits-link">Exhibits</a></h2>
