@@ -751,3 +751,25 @@ $include-html-classes: false;
 
 
 
+/* Artbox (orbit) overrides */
+.orbit-container .orbit-prev {
+	left: 84%;
+	top: 84%;
+}
+.orbit-container .orbit-prev>span {
+	border-right-color: rgba(114, 114, 114, 0.45);
+}
+.orbit-container .orbit-next {
+	right: 0;
+	top: 84%;
+}
+.orbit-container .orbit-next>span {
+	border-left-color: rgba(114, 114, 114, 0.45);
+}
+.orbit-container .orbit-prev, .orbit-container .orbit-next {
+	width: 31px;
+	height: 35px;
+}
+.orbit-container .orbit-prev:hover, .orbit-container .orbit-next:hover {
+	background-color: none;
+}
