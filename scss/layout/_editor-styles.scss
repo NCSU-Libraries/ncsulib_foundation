@@ -5,7 +5,8 @@ p.caption {
     font-size: 0.9em;
     font-style: italic;
     margin: 15px;
-    padding-top: 5px
+    padding-top: 5px;
+    text-align: left;
 
     img {
         display: block;
@@ -38,7 +39,8 @@ p.caption {
     p{
         font-style: italic;
         font-size: 0.9em;
-        text-align: center;
+        padding-top: 5px;
+        text-align: left;
         width: 100%;
     }
 

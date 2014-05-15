@@ -178,7 +178,7 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
                 </div>
                 <div id="home-exhibits">
                     <div class="happenings-photo">
-                        <a href="/exhibits/" class="exhibits-link"><img src="/sites/default/files/exhibits-front.jpg" alt="Library Exhibits" width="100%" /></a>
+                        <a href="/exhibits/" class="exhibits-link"><img src="/sites/all/themes/ncsulib_foundation/images/exhibits-front.jpg" alt="Library Exhibits" width="100%" /></a>
                     </div>
                     <div class="happenings-content">
                         <h2><a href="/exhibits/" class="exhibits-link">Exhibits</a></h2>
