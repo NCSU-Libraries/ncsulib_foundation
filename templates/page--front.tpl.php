@@ -130,7 +130,7 @@ drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/fo
                 <div id="story-1">
                     <div class="story-photo">
                         <a href="/huntlibrary/" id="story-1-photo">
-                            <img src="/sites/all/themes/ncsulib_foundation/images/hunt_at_night_767x550.jpg" title="&copy; Jeff Goldberg/ESTO" alt="The James B. Hunt Jr. Library" width="100%">
+                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt.jpg" title="&copy; Jeff Goldberg/ESTO" alt="The James B. Hunt Jr. Library" width="100%">
                         </a>
                     </div>
                     <h2>
