@@ -758,8 +758,21 @@ $include-html-classes: false;
 		left: 95%;
 		top: -1.4rem;
 	}
+
+	.orbit-prev:hover, .orbit-next:hover {
+		background-color: none;
+	}
+
+	.orbit-next>span {
+		border-left-color: rgba(114, 114, 114, 0.45);
+	}
+
 	.orbit-prev {
 		left: 83%;
+
+		>span {
+			border-right-color: rgba(114, 114, 114, 0.45);
+		}
 	}
 }
 @media #{$small-only} {
@@ -771,18 +784,4 @@ $include-html-classes: false;
 			left: 87%;
 		}
 	}
-}
-.orbit-container .orbit-prev>span {
-	border-right-color: rgba(114, 114, 114, 0.45);
-}
-
-.orbit-container .orbit-next>span {
-	border-left-color: rgba(114, 114, 114, 0.45);
-}
-.orbit-container .orbit-prev, .orbit-container .orbit-next {
-	// width: 31px;
-	// height: 35px;
-}
-.orbit-container .orbit-prev:hover, .orbit-container .orbit-next:hover {
-	background-color: none;
 }
