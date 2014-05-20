@@ -231,6 +231,7 @@ function ncsulib_foundation_js_alter(&$javascript) {
   // Unset jQuery from the jQuery Update module
   unset($javascript['https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js']);
   unset($javascript['https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js']);
+  unset($javascript['sites/all/modules/modules/panels/js/panels.js']);
   unset($javascript[0]);
 }
 
