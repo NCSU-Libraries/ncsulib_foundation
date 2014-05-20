@@ -36,7 +36,7 @@ p.caption {
         width: 100%;
     }
 
-    p{
+    p {
         font-style: italic;
         font-size: 0.9em;
         padding-top: 5px;
@@ -45,14 +45,15 @@ p.caption {
         line-height: 1.2;
     }
 
-    .right-image {
-        float: right;
-        clear: right;
-        margin: 20px 0 20px 20px;
-    }
 
-    img{
+    img {
         width: 100%;
     }
 
+}
+
+.right-image {
+    float: right;
+    clear: right;
+    margin: 20px 0 20px 20px;
 }

@@ -33,7 +33,7 @@
         $caption  = $content['field_featured_image']['#items'][0]['title'];
         print '<div class="featured-image"><img src="'. $featured_image_url .'" alt="'. $alt .'">';
         if (!empty($caption)){
-          print '<p class="'. $image_style .'">'. $caption . '</p>';
+          print '<p>'. $caption . '</p>';
         }
         print '</div>';
       }
