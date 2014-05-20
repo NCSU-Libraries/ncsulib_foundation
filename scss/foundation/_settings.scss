@@ -248,9 +248,9 @@ $list-style-position: outside;
 // $include-html-alert-classes: $include-html-classes;
 
 // We use this to control alert padding.
-// $alert-padding-top: rem-calc(14);
+$alert-padding-top: rem-calc(14);
 // $alert-padding-default-float: $alert-padding-top;
-// $alert-padding-opposite-direction: $alert-padding-top + rem-calc(10);
+$alert-padding-opposite-direction: $alert-padding-top + rem-calc(20);
 // $alert-padding-bottom: $alert-padding-top;
 
 // We use these to control text style.
@@ -276,9 +276,9 @@ $list-style-position: outside;
 // $alert-close-opacity: 0.3;
 // $alert-close-opacity-hover: 0.5;
 // $alert-close-padding: 9px 6px 4px;
-
+$alert-line-height: 1.2rem;
 // We use this to control border radius
-// $alert-radius: $global-radius;
+$alert-radius: 0; //$global-radius;
 
 // Block Grid
 

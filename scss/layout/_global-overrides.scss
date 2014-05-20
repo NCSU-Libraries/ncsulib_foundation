@@ -364,3 +364,12 @@ input[type="radio"],
 select {
   margin: 0;
 }
+
+// alert
+.alert-box{
+    line-height: $alert-line-height;
+
+    p{
+        font-size: 0.8125rem;
+    }
+}
