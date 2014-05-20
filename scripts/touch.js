@@ -22,9 +22,9 @@ var touchHover = {
         });
 
         jQuery('body').on('touchstart', function (e) {
-            e.preventDefault();
 
             if (touchHover.menuActive === true) {
+            e.preventDefault();
                 touchHover.tapped.push(jQuery(e.target).attr('data-menu'));
                 var last    = String(touchHover.tapped.slice(touchHover.tapped.length-2, touchHover.tapped.length-1));
                 var current = String(touchHover.tapped.slice(touchHover.tapped.length-1, touchHover.tapped.length));
