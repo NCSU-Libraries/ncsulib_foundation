@@ -12,10 +12,11 @@ var orb = {
 	 desktopSlider : function(){
 	 	jQuery(document).foundation({
 	    	orbit: {
+	      		timer_show_progress_bar: false,
 				animation: 'fade',
 	      		slide_number: false,
 	      		animation_speed: 300,
-	      		timer_speed: 5000
+	      		timer_speed: 7000
 	    	}
 	  	})
 
@@ -24,11 +25,11 @@ var orb = {
 	mobileSlider : function(){
 		jQuery(document).foundation({
 			orbit: {
+	      		timer_show_progress_bar: false,
 				animation: 'fade',
 	      		slide_number: false,
 	      		animation_speed: 200,
-	      		timer_show_progress_bar: false,
-	      		timer_speed: 5000
+	      		timer_speed: 7000
 	    	}
 	  	})
 
