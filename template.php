@@ -389,8 +389,9 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
   $building = " (Hill only)";
 
   foreach ($variables['items'] as $delta => $item) {
-    if ($device_nid == 22470 ) {
+    if ($device_nid == 22470 || $device_nid == 24518) {
       // 22470 = Canon EOS Rebel T4i
+      // 24518 = Google Glass
       $building = " (Hunt only)";
     } else if ($device_nid == 23583){
       // 23583 = projectors
