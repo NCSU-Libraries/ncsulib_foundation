@@ -1,13 +1,17 @@
 var clear = {
 	button : '<a href="#" class="search-cancel-button"><i class="fa fa-times-circle"></i></a>',
+	buttonIsAdded : false,
 
 	init: function(){
 		// add button to page on focus
 		jQuery("input[type='search']").on('input', function(e){
 			var val = jQuery(this).val();
-			if(val.length <= 1){
+			if(val.length != 0 && !clear.buttonIsAdded){ //if input has any text
 				clear.activate_button();
+			 } else if(val.length == 0 && clear.buttonIsAdded){ //remove button if text has been deleted
+				clear.deactivate_button();
 			}
+
 		})
 
 		// remove button from page on blur
@@ -18,10 +22,25 @@ var clear = {
 			}
 		})
 
+		jQuery("input[type='search']").focus(function(e){
+			var val = jQuery(this).val();
+
+			if(val.length != 0 && !clear.buttonIsAdded){ //if input has any text
+				clear.activate_button();
+			}
+		})
+
+		// resize in case some jerk decises to resize the browser while the cancel button is visible
+		window.onresize = function(){
+			if(clear.buttonIsAdded){
+				clear.position_button();
+			}
+		}
 	},
 
 	activate_button : function(){
 			jQuery("input[type='search']").after(clear.button);
+			clear.buttonIsAdded = true;
 
 			// set position of button
 			clear.position_button();
@@ -31,7 +50,8 @@ var clear = {
 	deactivate_button : function(){
 		jQuery('.search-cancel-button').remove();
 		jQuery(clear.input).css('padding-right', clear.inputPaddingLeft+'px');
-		// console.log(clear.inputPaddingLeft);
+
+		clear.buttonIsAdded = false;
 	},
 
 	position_button : function(){
@@ -39,34 +59,25 @@ var clear = {
 		var button = jQuery('.search-cancel-button');
 		var input_font = jQuery(clear.input).css('font-size');
 		var input_font_size = input_font.split('px');
-		var input_font_size = input_font_size[0];
+		var input_font_size = Number(input_font_size[0]);
 		var input_height = jQuery(clear.input).outerHeight();
-		var input_width = jQuery(clear.input).outerWidth();
-		var parentWidth = jQuery(clear.input).offsetParent().outerWidth();
-		var percent = (100*(input_width/parentWidth));
-		var inputPaddingLeft = jQuery(clear.input).css('padding-left');
-		clear.inputPaddingLeft = inputPaddingLeft.split('px');
-		clear.inputPaddingLeft = clear.inputPaddingLeft[0];
-		console.log(clear.inputPaddingLeft);
-		// goddamn that is a lot of vars
-
-		// console.log(jQuery(input).css('width'));
+		var button_width = input_font_size+5;
 
 		jQuery(button).css({
-			'font-size' : input_font_size,
-			'width' : input_font_size+10,
-			'right' : -(percent)+'%',
+			'width' : input_font_size,
+			'float' : 'left',
+			'margin-left' : 0
 		});
 
 		jQuery('.search-cancel-button i').css({
-			'left' : '-13px',
+			'font-size' : input_font_size+'px',
+			'left' : -button_width+'px',
 			'height' : input_height,
 			'padding-top' : (input_height-input_font_size)*0.5
 		});
 
 		// add padding to input box so text doesn't disappear begin cancel button
-		var p = jQuery('.search-cancel-button').position();
-		jQuery(clear.input).css('padding-right', input_width-p.left+'%');
+		jQuery(clear.input).css('padding-right', button_width+'px');
 
 	},
 
@@ -79,9 +90,9 @@ var clear = {
 
 			e.preventDefault();
 		})
-	}
+	},
 }
 
 jQuery(function(){
-	// clear.init();
+	clear.init();
 })
