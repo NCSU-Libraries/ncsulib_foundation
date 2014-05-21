@@ -4,16 +4,17 @@
         -moz-box-shadow:    0px 0px 0px 0px #FFF;
         -webkit-box-shadow: 0px 0px 0px 0px #FFF;
         box-shadow:         0px 0px 0px 0px #FFF;
-        border: 0px solid red;
         color: #999;
         display: block;
         position: relative;
 
+        &:hover{
+            color: #333;
+        }
+
         i{
             display: block;
-            // height: 30px;
             position: absolute;
-            // width: 21px;
         }
     }
 
