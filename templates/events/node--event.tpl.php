@@ -13,6 +13,7 @@
     $start = date('F j, Y', strtotime($time[0]['value']));
     $end = date('F j, Y', strtotime($time[0]['value2']));
     $start_time = date('g:ia', strtotime($time[0]['value']));
+    echo $start_time;
 
     $space_nid = $node->field_space['und'][0]['target_id'];
     $space_node = node_load($space_nid);
