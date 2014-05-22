@@ -5,6 +5,8 @@ var clear = {
 	init: function(){
 		// add button to page on focus
 		jQuery("input[type='search']").on('input', function(e){
+			clear.input = jQuery(this);
+
 			var val = jQuery(this).val();
 			if(val.length != 0 && !clear.buttonIsAdded){ //if input has any text
 				clear.activate_button();
@@ -39,7 +41,8 @@ var clear = {
 	},
 
 	activate_button : function(){
-			jQuery("input[type='search']").after(clear.button);
+			// jQuery("input[type='search']").after(clear.button);
+			clear.input.after(clear.button);
 			clear.buttonIsAdded = true;
 
 			// set position of button
@@ -86,8 +89,8 @@ var clear = {
 	enable_button : function(){
 		jQuery(".search-cancel-button").click(function(e){
 
-			jQuery("input[type='search']").val('');
-			jQuery("input[type='search']").focus();
+			clear.input.val('');
+			clear.input.focus();
 			clear.deactivate_button();
 
 			e.preventDefault();
