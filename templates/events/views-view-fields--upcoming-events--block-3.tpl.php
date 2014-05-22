@@ -5,6 +5,7 @@
    * Date: December 2013
    */
 ?>
+
 <div class="row event-item">
 	<div class="columns medium-4">
 	<?php foreach ($fields as $id => $field): ?>
