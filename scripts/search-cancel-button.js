@@ -7,7 +7,6 @@ var clear = {
 		jQuery("input[type='search']").on('input', function(e){
 
 			var val = jQuery(this).val();
-			// if(val.length != 0 && !clear.buttonIsAdded){ //if input has any text
 			if(!clear.input && val.length != 0){
 				clear.input = jQuery(this);
 				clear.activate_button();
@@ -19,8 +18,6 @@ var clear = {
 
 		// remove button from page on blur
 		jQuery("input[type='search']").blur(function(e){
-			clear.input.active = false;
-
 			var val = jQuery(this).val();
 			if(val.length == ''){
 				clear.deactivate_button();
@@ -53,15 +50,16 @@ var clear = {
 	},
 
 	deactivate_button : function(){
-		clear.input = undefined;
 		jQuery('.search-cancel-button').remove();
-		jQuery(clear.input).css('padding-right', clear.inputPaddingLeft+'px');
+		jQuery(clear.input).css('padding-right', clear.inputPaddingLeft);
 
+		clear.input = undefined;
 		clear.buttonIsAdded = false;
 	},
 
 	position_button : function(){
-		clear.input = jQuery('.search-cancel-button').prev();
+		clear.inputPaddingLeft = jQuery(clear.input).css('padding-left');
+		console.log(clear.inputPaddingLeft);
 		var button = jQuery('.search-cancel-button');
 		var input_font = jQuery(clear.input).css('font-size');
 		var input_font_size = input_font.split('px');
@@ -102,5 +100,7 @@ var clear = {
 }
 
 jQuery(function(){
-	clear.init();
+	if(Modernizr.touch){
+		clear.init();
+	}
 })

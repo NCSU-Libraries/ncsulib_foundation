@@ -1,25 +1,19 @@
 // clear search button
 .search-cancel-button{
-    @media #{$ipad-down}{
-        -moz-box-shadow:    0px 0px 0px 0px #FFF;
-        -webkit-box-shadow: 0px 0px 0px 0px #FFF;
-        box-shadow:         0px 0px 0px 0px #FFF;
-        color: #999;
-        display: block;
-        position: relative;
+    -moz-box-shadow:    0px 0px 0px 0px #FFF;
+    -webkit-box-shadow: 0px 0px 0px 0px #FFF;
+    box-shadow:         0px 0px 0px 0px #FFF;
+    color: #999;
+    display: block;
+    position: relative;
 
-        &:hover{
-            color: #333;
-        }
-
-        i{
-            display: block;
-            position: absolute;
-        }
+    &:hover{
+        color: #333;
     }
 
-    @media #{$ipad-up}{
-        display: none;
+    i{
+        display: block;
+        position: absolute;
     }
 }
 
