@@ -100,7 +100,7 @@ var clear = {
 }
 
 jQuery(function(){
-	// if(Modernizr.touch){
+	if(Modernizr.touch){
 		clear.init();
-	// }
+	}
 })
