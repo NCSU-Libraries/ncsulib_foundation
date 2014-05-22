@@ -5,10 +5,11 @@ var clear = {
 	init: function(){
 		// add button to page on focus
 		jQuery("input[type='search']").on('input', function(e){
-			clear.input = jQuery(this);
 
 			var val = jQuery(this).val();
-			if(val.length != 0 && !clear.buttonIsAdded){ //if input has any text
+			// if(val.length != 0 && !clear.buttonIsAdded){ //if input has any text
+			if(!clear.input && val.length != 0){
+				clear.input = jQuery(this);
 				clear.activate_button();
 			 } else if(val.length == 0 && clear.buttonIsAdded){ //remove button if text has been deleted
 				clear.deactivate_button();
@@ -18,6 +19,8 @@ var clear = {
 
 		// remove button from page on blur
 		jQuery("input[type='search']").blur(function(e){
+			clear.input.active = false;
+
 			var val = jQuery(this).val();
 			if(val.length == ''){
 				clear.deactivate_button();
@@ -41,7 +44,6 @@ var clear = {
 	},
 
 	activate_button : function(){
-			// jQuery("input[type='search']").after(clear.button);
 			clear.input.after(clear.button);
 			clear.buttonIsAdded = true;
 
@@ -51,6 +53,7 @@ var clear = {
 	},
 
 	deactivate_button : function(){
+		clear.input = undefined;
 		jQuery('.search-cancel-button').remove();
 		jQuery(clear.input).css('padding-right', clear.inputPaddingLeft+'px');
 
