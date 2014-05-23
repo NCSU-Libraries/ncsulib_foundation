@@ -63,7 +63,7 @@ Your browser does not support inline frames or is currently configured  not to d
 			<li><a href="//reserves.lib.ncsu.edu">Course Reserves</a></li>
 		</ul>
 		<ul>
-			<li><a href="//www.lib.ncsu.edu/data">Spatial &amp; Numerical Data</a></li>
+			<li><a href="//www.lib.ncsu.edu/data">Spatial &amp; Numeric Data</a></li>
 			<li><a href="//www.lib.ncsu.edu/specialcollections">Special Collections</a></li>
 			<li><a href="//www.lib.ncsu.edu/repository">NC State Publications</a></li>
 			<li><a href="//www.lib.ncsu.edu/repository">Theses &amp; Dissertations</a></li>
