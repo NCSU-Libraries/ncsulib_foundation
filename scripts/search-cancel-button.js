@@ -58,32 +58,6 @@ var clear = {
 	},
 
 	position_button : function(){
-		// clear.inputPaddingLeft = jQuery(clear.input).css('padding-left');
-		// var button = jQuery('.search-cancel-button');
-		// var input_font = jQuery(clear.input).css('font-size');
-		// var input_font_size = input_font.split('px');
-		// var input_font_size = Number(input_font_size[0]);
-		// var input_height = jQuery(clear.input).outerHeight();
-		// var button_width = input_font_size+15;
-
-		// jQuery(button).css({
-		// 	'float' : 'left',
-		// 	'margin-left' : 0
-		// });
-
-		// jQuery('.search-cancel-button i').css({
-		// 	'font-size' : input_font_size+'px',
-		// 	'left' : -button_width+'px',
-		// 	'height' : input_height,
-		// 	'padding-top' : (input_height-input_font_size)*0.5
-		// });
-
-		// // add padding to input box so text doesn't disappear begin cancel button
-		// clear.input.css({
-		// 	'padding-right' : button_width+5+'px',
-		// 	'float' : 'left'
-		// });
-		//
 		jQuery("input[type='search']").each(function(){
 			clear.inputPaddingLeft = jQuery(this).css('padding-left');
 			var button = jQuery('.search-cancel-button');
@@ -91,7 +65,7 @@ var clear = {
 			var input_font_size = input_font.split('px');
 			var input_font_size = Number(input_font_size[0]);
 			var input_height = jQuery(this).outerHeight();
-			var button_width = input_font_size+15;
+			var button_width = input_font_size+10;
 
 			jQuery(this).parent().find('.search-cancel-button').css({
 				'float' : 'left',
@@ -100,14 +74,17 @@ var clear = {
 
 			jQuery(this).parent().find('.search-cancel-button i').css({
 				'font-size' : input_font_size+'px',
-				'left' : -button_width+'px',
+				'left' : -(button_width*1.5)+'px',
 				'height' : input_height,
-				'padding-top' : (input_height-input_font_size)*0.5
+				'padding-top' : (input_height-input_font_size)*0.5,
+				'padding-left' : (button_width*0.5)+'px',
+				'padding-right' : (button_width*0.5)+'px',
+				'display' : 'block'
 			});
 
 			// add padding to input box so text doesn't disappear begin cancel button
 			jQuery(this).css({
-				'padding-right' : button_width+5+'px',
+				'padding-right' : button_width+'px',
 				'float' : 'left'
 			});
 
