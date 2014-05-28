@@ -307,7 +307,7 @@
     // TESTING:
     // $to = "eric_pauley@ncsu.edu";
     // LIVE:
-    $to = "jan_brock@ncsu.edu,ledroll@ncsu.edu";
+    $to = "friends_of_the_library@ncsu.edu";
 
     $from = "Friends of the Library <friends_of_the_library@ncsu.edu>";
 
