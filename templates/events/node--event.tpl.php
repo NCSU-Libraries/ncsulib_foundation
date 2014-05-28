@@ -14,8 +14,11 @@
 
     $start_date = date('F j, Y', $value1);
     $end_date = date('F j, Y', $value2);
+    $date_display = ($start_date != $end_date) ? $start_date . ' to ' . $end_date : $start_date;
+
     $start_time = date('g:ia', $value1);
     $end_time = date('g:ia', $value2);
+    $time_display = ($start_time != $end_time) ? $start_time . ' - ' . $end_time : $start_time;
 
     $space_nid = $node->field_space['und'][0]['target_id'];
     $space_node = node_load($space_nid);
@@ -31,7 +34,7 @@
 <div id="event-node" class="row">
     <div class="columns medium-7">
         <div class="event-meta">
-            <h5><strong>When:</strong> <?php echo $date = ($end_date) ? $start_date . ' to ' . $end_date . ', '.$start_time . ' - ' . $end_time: $start_date.', '.$start_time . ' - ' . $end_time; ?></h5>
+            <h5><strong>When:</strong> <?= $date_display.', '.$time_display; ?></h5>
             <!--h5 class="subheader"><strong>Where:</strong> <?php echo 'at the <a href="/node/' . $space_nid  . '">' . $space_node->title . '</a>'; ?></h5-->
             <?php
                 // Loading date from the associated space node, including title,
@@ -68,19 +71,34 @@
                   }
                   print '</h5>';
                 }
+
             ?>
         </div>
+
         <?php echo $node->body['und'][0]['value']; ?>
-        <div class="contact">
-            <?php if($name || $phone || $email): ?>
-            <h3>Contact Info</h3>
-            <p>
-                <?php echo $node->field_contact_name['und'][0]['value']; ?><br />
-                <?php echo $node->field_contact_phone['und'][0]['value']; ?><br />
-                <?php echo $node->field_contact_email['und'][0]['email']; ?>
-            </p>
-            <?php endif; ?>
-        </div>
+
+        <!-- contact -->
+        <?php if($name || $phone || $email): ?>
+        <h3>Contact Info</h3>
+        <p>
+            <?php echo $node->field_contact_name['und'][0]['value']; ?><br />
+            <?php echo $node->field_contact_phone['und'][0]['value']; ?><br />
+            <?php echo $node->field_contact_email['und'][0]['email']; ?>
+        </p>
+        <?php endif; ?>
+
+        <!-- admission -->
+        <?php if($node->field_admission_information): ?>
+        <h3>Admission Info</h3>
+        <p><?php echo $node->field_admission_information['und'][0]['value']; ?></p>
+        <?php endif; ?>
+
+        <!-- other -->
+        <?php if($node->field_other_information): ?>
+        <h3>More Info</h3>
+        <p><?php echo $node->field_other_information['und'][0]['value']; ?></p>
+        <?php endif; ?>
+
     </div>
     <div class="columns medium-5">
         <?php if($img): ?>
