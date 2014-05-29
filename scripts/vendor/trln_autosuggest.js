@@ -18,6 +18,7 @@ $.fn.extend({
 });
 
 $.Autosuggest = function(input, options){
+
 	var searchId = $(input).attr('id');
 	var currentIndex = "";
 
@@ -25,7 +26,7 @@ $.Autosuggest = function(input, options){
 	defaults = {
 			searchId: '',
 			searchInput: '',
-			indexInput: '#Ntk',
+			indexInput: '#Ntt',
 			index: null,
 			sourceInput: '#source',
 			source: null,
@@ -68,8 +69,8 @@ $.Autosuggest = function(input, options){
 			max: 15,
 			minChars: 3,
 			selectFirst: false,
-			delay: 150,
-			scrollHeight: 200
+			delay: 50,
+			scrollHeight: 185
 	};
 
 	//Override default autocomplete options with user specified options if any are present.
@@ -113,10 +114,11 @@ $.Autosuggest = function(input, options){
 		}
 	}).bind('keyup', function() {
 		//Hide suggestion list when user clears out input field
-		if ($input.val() == "")
+		if ($input.val() == ""){
 			$input.hideSuggestions();
-	}).result(function (event, data, formatted) {{
-		console.log('hit');
+		}
+	}).result(function (event, data, formatted) {
+		{
 			//Submit when user selects a suggestion.
 			var index = formatted;
 			index = index.substring(0,1).toUpperCase() + index.substring(1);

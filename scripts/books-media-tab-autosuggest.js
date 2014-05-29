@@ -1,8 +1,8 @@
 jQuery(function($){
     $("#Ntt").autosuggest({
         source: "ncsu",
-        indexInput: "#books-more-options-drop",
-        queryForm: "#searchbooksform",
+        indexInput: "#Ntk",
+        queryForm: "#search",
         querySubmit: "#searchbookssubmit",
         hiddenOnDefaultIndex: "",
         autocompleteOptions: {

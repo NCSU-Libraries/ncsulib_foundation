@@ -22,6 +22,7 @@
 
 $.fn.extend({
 	autocomplete: function(urlOrData, options) {
+
 		var isUrl = typeof urlOrData == "string";
 		options = $.extend({}, $.Autocompleter.defaults, {
 			url: isUrl ? urlOrData : null,
@@ -88,10 +89,10 @@ $.Autocompleter = function(input, options) {
 	};
 	var select = $.Autocompleter.Select(options, input, selectCurrent, config);
 
-	var blockSubmit;
+	// var blockSubmit;
 	var lastTimestamp = 0;
 
-	// prevent form submit in opera when selecting with return key
+	// // prevent form submit in opera when selecting with return key
 	// $.browser.opera && $(input.form).bind("submit.autocomplete", function() {
 	// 	if (blockSubmit) {
 	// 		blockSubmit = false;
@@ -100,7 +101,9 @@ $.Autocompleter = function(input, options) {
 	// });
 
 	// only opera doesn't trigger keydown multiple times while pressed, others don't work with keypress at all
-	$input.bind(".autocomplete", function(event) {
+	// $input.bind(".autocomplete", function(event) {
+	$input.keydown(function(event) {
+
 		// track last key pressed
 		lastKeyPressCode = event.keyCode;
 		switch(event.keyCode) {
@@ -152,7 +155,7 @@ $.Autocompleter = function(input, options) {
 				if( selectCurrent() ) {
 					// stop default to prevent a form submit, Opera needs special handling
 					event.preventDefault();
-					blockSubmit = true;
+					// blockSubmit = true;
 					return false;
 				}
 				break;
@@ -252,6 +255,7 @@ $.Autocompleter = function(input, options) {
 	}
 
 	function onChange(crap, skipPrevCheck) {
+
 		if( lastKeyPressCode == KEY.DEL ) {
 			select.hide();
 			return;
