@@ -99,6 +99,7 @@ var clear = {
 			clear.input.val('');
 			clear.input.focus();
 			clear.deactivate_button();
+			jQuery('.quicksearch-typeahead').typeahead('val', '');
 
 			e.preventDefault();
 		})
