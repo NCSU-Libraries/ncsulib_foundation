@@ -21,9 +21,9 @@
 }
 
 /* styling for each section of the dropdown menu (eg. bestbets, faqs, etc)*/
-// div[class*='tt-section-']
-  // padding: 0.25em;
-// }
+/*div[class*='tt-section-']
+  padding: 0.25em;
+}*/
 
 div[class*='tt-section-'] hr {
   margin: 0;
@@ -39,15 +39,15 @@ div[class*='tt-section-'] hr {
   background-color: #DDD;
 }
 
-// styling for each header
+/*styling for each header*/
 .cat-header {
   padding: 0.7rem;
 }
 /* styling for individual suggestions */
 .tt-suggestion {
   font-size: 1.25em;
-  margin-bottom: 0.7rem;
-  padding: 0em 0.7rem;
+  /*margin-bottom: 0.7rem;*/
+  padding: 0.35em 0.7rem;
 }
 .tt-suggestion p {
     line-height: 1.2;
@@ -69,7 +69,7 @@ div[class*='tt-section-'] hr {
 
 .space-image {
   float: left;
-  // max-width: 70%;
+  /*max-width: 70%;*/
   height: auto;
   display: inline;
   margin-right: 5px;
