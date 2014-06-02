@@ -59,7 +59,7 @@ var bestbets_template = Handlebars.compile([
         '<div class="row">',
           '<div class="small-12 columns bestbet-container">',
             '<span class="suggestion-title">{{value}}</span>',
-            '{{#description}}<p class="bestbet-description">{{description}}</p>{{/description}}',
+            '{{#if description}}<p class="bestbet-description">{{description}}</p>{{/if}}',
           '</div>',
         '</div>',
 ].join(''));
