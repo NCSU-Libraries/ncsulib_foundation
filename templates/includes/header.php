@@ -1,7 +1,5 @@
 <?php
 
-	// for current library hours
-	include '/sites/all/themes/ncsulib_foundation/templates/includes/partials/util-hours.php';
 
 	// $_SERVER['REMOTE_ADDR'] is only set when a PHP page is rendered by Apache,
 	// When PHP runs from the command line it is unset
@@ -16,6 +14,9 @@
   		// Boot drupal so t() functions and other drupal functions run
   		require_once (DRUPAL_ROOT.'/includes/bootstrap.inc');
   		drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
+
+		// for current library hours
+		include DRUPAL_ROOT.'/includes/partials/util-hours.php';
   	}
 ?>
 
