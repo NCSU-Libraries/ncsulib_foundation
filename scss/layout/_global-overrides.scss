@@ -1,30 +1,13 @@
-// clear search button
-.search-cancel-button{
-    -moz-box-shadow:    0px 0px 0px 0px #FFF;
-    -webkit-box-shadow: 0px 0px 0px 0px #FFF;
-    box-shadow:         0px 0px 0px 0px #FFF;
-    color: #999;
-    display: block;
-    position: relative;
-
-    &:hover{
-        color: #333;
-    }
-
-    i{
-        display: block;
-        position: absolute;
-    }
-}
 
 
-// text that is added because screen reasers can't read font awesome
+
+/* text that is added because screen reasers can't read font awesome*/
 .text-for-fa{
     left: -9999px;
     position: absolute;
 }
 
-// pretty link
+/*pretty link*/
 .styled{
     position: relative;
     text-decoration: none;
@@ -36,7 +19,7 @@
     padding-right: 5px;
 }
 
-// begin global UI style overwrite
+/*begin global UI style overwrite*/
 dl.tabs{
     position: relative;
     top: 1px;
@@ -136,7 +119,7 @@ div.tabs-content.vertical{
     padding: 0px rem-calc(16);
 }
 
-// accordions
+/*accordions*/
 .accordion{
     margin-bottom: rem-calc(30);
 
@@ -160,12 +143,12 @@ div.tabs-content.vertical{
     }
 }
 
-// end global UI style overwrite
+/*end global UI style overwrite*/
 
 
 
 
-// hacky way to prevent mobile devices from zooming in on input elements
+/*hacky way to prevent mobile devices from zooming in on input elements*/
 @media #{$small-only}{
   select,
   textarea,
@@ -208,7 +191,7 @@ body .panel.callout{
 
 
 
-// begin subnav (horizontal nav below promary top bar nav)
+/*begin subnav (horizontal nav below promary top bar nav)*/
 dl.sub-nav{
     background: none;
     border-bottom: 1px solid $border-color;
@@ -227,10 +210,10 @@ dl.sub-nav{
         margin-bottom: 0px;
     }
 }
-// end subnav
+/*end subnav*/
 
 
-// <code>
+/*<code>*/
 code{
     background: $secondary-color;
     display: inline-block;
@@ -250,7 +233,7 @@ pre {
 
 
 
-// orbit slider
+/*orbit slider*/
 @media #{$small-only}{
 
     .orbit-container{
@@ -284,12 +267,12 @@ ul.orbit-slider li img{
 }
 
 
-// pagination
+/*pagination*/
 ul.pagination {
     overflow:auto;
 }
 
-// monthly calendar event
+/*monthly calendar event*/
 .calendar-calendar td .contents a{
     // color: #FFF;
 }
@@ -308,7 +291,7 @@ ul.pager{
 /* end global styles*/
 
 
-// global table defaults
+/*global table defaults*/
 table{
 
     tr{
@@ -321,7 +304,7 @@ table{
 }
 
 
-// arrange form module overrides
+/*arrange form module overrides*/
 .webform-container-inline{
 
     select{
@@ -329,7 +312,7 @@ table{
     }
 }
 
-// hide skip to content text
+/*hide skip to content text*/
 .element-invisible {
     clip: rect(1px, 1px, 1px, 1px);
     color: #FFF;
@@ -338,7 +321,7 @@ table{
     position: absolute !important;
 }
 
-// form
+/*form*/
 .webform-component {
     margin: 50px 0 0 0;
 
@@ -360,7 +343,7 @@ select {
   margin: 0;
 }
 
-// alert
+/*alert*/
 .alert-box{
     line-height: $alert-line-height;
 
