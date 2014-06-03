@@ -157,7 +157,7 @@ main{
 }
 
 /*header*/
-header nav.top-bar{
+header .top-bar{
 	/*position: relative;*/
 	overflow: visible;
 	/*z-index: 9999;*/
@@ -168,35 +168,41 @@ header nav.top-bar{
 	display: none;
 }
 
-header nav.top-bar .title-area{
+header .top-bar .title-area{
 	width: 325px !important;
 }
-header nav.top-bar .title-area .name{
+header .top-bar .title-area .name{
 	width: 100% !important;
 }
-header nav.top-bar .top-bar-section{
+header .top-bar .top-bar-section{
 	float: right;
 	margin-top: -68px;
 }
-header nav.top-bar .top-bar-section ul#primary-nav{
+header .top-bar .top-bar-section ul.primary-nav{
 	background: none !important;
-	float: none;
-	width: 589px;
+	float: right;
+	width: 550px;
 }
-header nav.top-bar .top-bar-section ul#primary-nav li{
+header .top-bar .top-bar-section ul.primary-nav li{
+	/*float: left;*/
 	display: inline-block;
 }
-header nav.top-bar .top-bar-section ul#primary-nav li:hover{
+header .top-bar .top-bar-section ul.primary-nav li:hover{
 	background: #333;
 }
-header nav.top-bar .top-bar-section ul#primary-nav li a{
+header .top-bar .top-bar-section ul.primary-nav li a{
 	background: none !important;
+	padding: 0px 15px;
 }
-header nav.top-bar .top-bar-section ul#primary-nav li a:hover{
+header .top-bar .top-bar-section ul.primary-nav li a:hover{
 	background: #333;
 }
 
 /*utility nav*/
+#utility #utility-bar{
+	background: #383838;
+	float: left;
+}
 #utility #utility-bar #home-hours{
 	float: left;
 	width: 56%;
@@ -216,16 +222,19 @@ header nav.top-bar .top-bar-section ul#primary-nav li a:hover{
 
 
 #utility #utility-bar #utility-links{
+	background: #383838;
 	display: block;
-	float: left;
+	float: right;
 	width: 40%;
 }
 #utility #utility-bar #utility-links li{
 	list-style-type: none;
 	float: left;
+	margin-right: 15px;
 }
 #utility #utility-bar #utility-links li a{
 	color: #FFF;
+	font-size: 12px;
 }
 
 body .page .main{
@@ -235,16 +244,29 @@ body .page .main{
 
 /*feedback form button*/
 .feedback-form{
+	padding: 0px;
 	position: fixed;
-	top: 50%;
+	top: 95%;
+}
+.feedback-form .feedback-yes a,
+.feedback-form .feedback-no a{
+	background: #AC0000;
+	display: block;
+	float: left;
+	padding: 10px;
+	width: auto;
 }
 
+#tier-one,
+#tier-two{
+	margin-bottom: 25px;
+}
 
 
 /*homepage*/
 #searcheverything #searchall,
 .search-body #searcharticle,
-.search-body #books-media-search,
+.search-body #Ntt,
 #websitesearch #searchweb{
 	height: 4em;
 }
@@ -252,7 +274,8 @@ body .page .main{
 .search-body #article-submit,
 .search-body #searchbookssubmit,
 #websitesearch #web-submit{
-	padding: 0px;
+	padding-bottom: 23px;
+	padding-top: 23px;
 }
 body #search-options{
 	padding-left: 0px;
@@ -274,6 +297,9 @@ body #home-quicklinks ul#quicklinks li ul li:first-child{
 
 
 /*footer*/
+#footer{
+	padding: 30px;
+}
 #f-address, #f-libraries, #f-social{
 	float:  left;
 	width: 33%;
@@ -295,4 +321,64 @@ body #home-quicklinks ul#quicklinks li ul li:first-child{
 	text-decoration: underline;
 }
 
+/*mobile search*/
+body #mobile-search-form{
+	display: none;
+}
+body{
+	margin: 20px;
+}
 
+/*tabs*/
+dl.tabs dd a{
+	padding: 10px;
+}
+.tabs-content{
+	padding: 20px;
+}
+
+
+#research-tools{
+	float: left;
+	margin-bottom: 20px;
+}
+#research-tools h2{
+	font-size: 14px;
+	padding-top: 5px;
+	margin-right: 10px;
+}
+#research-tools ul li{
+	margin-right: 15px;
+}
+
+
+#search-tabs{
+	padding-right: 40px
+}
+
+
+#availability,
+#available-links{
+	display: none;
+}
+#tier-two #available-links ul{
+	margin-top: 5px;
+}
+#tier-two #available-links ul li{
+	margin-right: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#story-1,
+#story-2{
+	padding-right: 30px;
+}
+#home-news,
+#home-events,
+#home-exhibits{
+	margin-bottom: 30px;
+}
+.happenings-content{
+	padding-left: 5px;
+}
