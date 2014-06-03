@@ -70,7 +70,7 @@ $.Autosuggest = function(input, options){
 			minChars: 3,
 			selectFirst: false,
 			delay: 50,
-			scrollHeight: 185
+			scrollHeight: 300
 	};
 
 	//Override default autocomplete options with user specified options if any are present.

@@ -7,7 +7,7 @@ jQuery(function($){
         querySubmit: "#searchbookssubmit",
         hiddenOnDefaultIndex: "",
         autocompleteOptions: {
-            // width: ntt_width
+            // width: 400
         }
     });
 });

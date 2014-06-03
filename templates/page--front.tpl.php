@@ -1,6 +1,5 @@
 <?php
     drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css', array('weight' => 998, 'group' => 101));
-    // drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/typeahead.css', array('weight' => 999, 'group' => 101));
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-artbox.js');
     drupal_add_js('http://www.lib.ncsu.edu/catalog/scripts/app.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/availability-data.js');
@@ -10,9 +9,6 @@
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/books-media-tab-autosuggest.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-search-tabs-logging.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
-    // drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/typeahead.bundle.min.js');
-    // drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/handlebars-v1.3.0.js', array('scope'=>'footer'));
-    // drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/quicksearch-typeahead.js', array('scope'=>'footer'));
 ?>
 
 <!--.page -->
