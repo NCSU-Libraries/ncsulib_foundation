@@ -11,8 +11,10 @@
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
 ?>
 
+
 <!--.page -->
 <div role="document" class="page" id="content">
+<?php include variable_get('htdocs_root')."/notice/notice.php"; ?>
     <main role="main" class="row l-main">
         <div class="<?php print $main_grid; ?> main columns" id="main-content">
             <!-- top row -->
