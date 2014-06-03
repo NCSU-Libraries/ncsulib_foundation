@@ -1,7 +1,7 @@
 <?php
 
 	// for current library hours
-	include 'partials/util-hours.php';
+	include '/sites/all/themes/ncsulib_foundation/templates/includes/partials/util-hours.php';
 
 	// $_SERVER['REMOTE_ADDR'] is only set when a PHP page is rendered by Apache,
 	// When PHP runs from the command line it is unset
