@@ -384,7 +384,8 @@ header#minimum-bar{
 			}
 			@media #{$large-up} {
 				@include grid-column(7);
-				width: 54.63333%;
+				width: 58.03333%;
+				height: 30px;
 			}
 
 			p#hours-title{
@@ -425,19 +426,17 @@ header#minimum-bar{
 				line-height: 1;
 
 				.library {
-					@media #{$small-only}{
-						display: inline-block;
-						width: 120px;
+					display: inline-block;
+					width: 120px;
+					@media #{$large-up}{
+						display: inline;
+						width: inherit;
 					}
 				}
 
-				.hours{
+				.hours {
 					@media #{$small-only}{
 						font-weight: bold;
-					}
-
-					@media #{$medium-only}{
-						float: right;
 					}
 				}
 
