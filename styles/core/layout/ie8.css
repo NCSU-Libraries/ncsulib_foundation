@@ -200,7 +200,7 @@ header .top-bar .top-bar-section ul.primary-nav li a:hover{
 
 /*utility nav*/
 #utility #utility-bar{
-	background: #383838;
+	/*background: #383838;*/
 	float: left;
 }
 #utility #utility-bar #home-hours{
@@ -225,12 +225,13 @@ header .top-bar .top-bar-section ul.primary-nav li a:hover{
 	background: #383838;
 	display: block;
 	float: right;
+	margin-bottom: 0px;
 	width: 40%;
 }
 #utility #utility-bar #utility-links li{
 	list-style-type: none;
 	float: left;
-	/*margin-right: 15px;*/
+	margin: 0px;
 }
 #utility #utility-bar #utility-links li a{
 	color: #FFF;
