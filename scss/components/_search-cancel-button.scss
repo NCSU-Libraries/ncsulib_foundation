@@ -1,0 +1,18 @@
+/*clear search button*/
+.search-cancel-button{
+    -moz-box-shadow:    0px 0px 0px 0px #FFF;
+    -webkit-box-shadow: 0px 0px 0px 0px #FFF;
+    box-shadow:         0px 0px 0px 0px #FFF;
+    color: #999;
+    display: block;
+    position: relative;
+
+    &:hover{
+        color: #333;
+    }
+
+    i{
+        display: block;
+        position: absolute;
+    }
+}
