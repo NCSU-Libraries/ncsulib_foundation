@@ -199,8 +199,11 @@ header .top-bar .top-bar-section ul.primary-nav li a:hover{
 }
 
 /*utility nav*/
+#utility{
+	background: #383838;
+}
 #utility #utility-bar{
-	/*background: #383838;*/
+	background: #383838;
 	float: left;
 }
 #utility #utility-bar #home-hours{
@@ -212,6 +215,9 @@ header .top-bar .top-bar-section ul.primary-nav li a:hover{
 	float: left;
 	padding-right: 15px;
 }
+#utility #utility-bar #home-hours #hours-title .library{
+	width: 95px;
+}
 #utility #utility-bar #home-hours ul{
 	float: left;
 	width: auto;
@@ -219,8 +225,6 @@ header .top-bar .top-bar-section ul.primary-nav li a:hover{
 #utility #utility-bar #home-hours ul li{
 	padding-left: 0px;
 }
-
-
 #utility #utility-bar #utility-links{
 	background: #383838;
 	display: block;
@@ -248,6 +252,7 @@ body .page .main{
 	padding: 0px;
 	position: fixed;
 	top: 95%;
+	left: 0px;
 }
 .feedback-form .feedback-yes a,
 .feedback-form .feedback-no a{
@@ -269,14 +274,22 @@ body .page .main{
 .search-body #searcharticle,
 .search-body #Ntt,
 #websitesearch #searchweb{
-	height: 4em;
+	height: 3.6em;
+	padding-top: 17px;
 }
 #searcheverything #all-submit,
-.search-body #article-submit,
+.search-body #article-submit{
+	padding-bottom: 23px;
+	padding-top: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
 .search-body #searchbookssubmit,
 #websitesearch #web-submit{
 	padding-bottom: 23px;
-	padding-top: 23px;
+	padding-top: 11px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 body #search-options{
 	padding-left: 0px;
@@ -382,4 +395,8 @@ dl.tabs dd a{
 }
 .happenings-content{
 	/*padding-left: 5px;*/
+}
+
+.ac_results{
+	background: #FFF;
 }

@@ -17,9 +17,9 @@
 <link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css">
 
 <!-- js -->
-<script src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/vendor/jquery-1.10.2.min.js"></script>
-<script src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/vendor/custom.modernizr.js"></script>
-<script src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/templates/includes/scripts/ncsulib-website.min.js"></script>
+<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/vendor/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/vendor/custom.modernizr.js"></script>
+<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/templates/includes/scripts/ncsulib-website.min.js"></script>
 
 <script type="text/javascript">
     // instantiate foundation
@@ -47,6 +47,7 @@
 <?php print $head; ?>
 <?php print $styles; ?>
 <?php print $scripts; ?>
+
 <script>
   // instantiate foundation
   (function ($, Drupal, window, document, undefined) {
@@ -62,9 +63,10 @@
 <![endif]-->
 
 <!--[if lt IE 9]>
-<script src="http://code.jquery.com/jquery-1.7.2.min.js "></script>
-<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/ie8.js"></script>
-<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie8.css">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+<link rel="stylesheet" type="text/css" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie8.css">
+<script type="text/javascript" src="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/ie8.js"></script>
 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/rem.js"></script>
 <![endif]-->
