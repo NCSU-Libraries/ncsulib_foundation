@@ -8,6 +8,23 @@
   width: auto;
 }
 
+.ie9 #searcheverything .twitter-typeahead{
+  width: 83% !important;
+}
+.ie9 #searcheverything .twitter-typeahead #searchall{
+  width: 100% !important;
+}
+.ie9 .tt-dropdown-menu{
+  background: #FFFFFF;
+  border: 1px solid #DDD;
+  padding: 10px;
+}
+.ie9 .tt-cursor{
+  background: #DDD;
+}
+
+
+
 /* styling for the dropdown menu */
 .tt-dropdown-menu {
   padding: 0;
