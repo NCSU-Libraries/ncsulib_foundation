@@ -1,0 +1,62 @@
+/*
+Syntax error: File to import not found or unreadable: fa/variables.
+              Load paths:
+                /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/scss
+                /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/frameworks/blueprint/stylesheets
+                /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets
+                Compass::SpriteImporter
+        on line 6 of /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/scss/components/fa/font-awesome.scss
+
+1: /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/scss/components/fa/font-awesome.scss
+
+Backtrace:
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/scss/components/fa/font-awesome.scss:6
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/import_node.rb:45:in `import'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/import_node.rb:28:in `imported_file'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/import_node.rb:37:in `css_import?'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/tree/root_node.rb:20:in `render'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/commands/update_project.rb:45:in `perform'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/bin/compass:44:in `call'
+/var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.1.0/bin/compass:23:in `load'
+/usr/local/rvm/gems/ruby-2.1.0/bin/compass:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.1.0/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.1.0/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: fa/variables.\A               Load paths:\A                 /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/scss\A                 /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/vendor/bundle/ruby/2.1.0/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 6 of /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/scss/components/fa/font-awesome.scss\A \A 1: /var/www/webdev/drupal/sites/all/themes/ncsulib_foundation/scss/components/fa/font-awesome.scss"; }

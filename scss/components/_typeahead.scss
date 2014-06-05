@@ -9,6 +9,7 @@
 }
 
 .ie9 #searcheverything .twitter-typeahead{
+  display: inline !important;
   width: 83% !important;
 }
 .ie9 #searcheverything .twitter-typeahead #searchall{
