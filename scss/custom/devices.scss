@@ -18,7 +18,7 @@ $include-html-classes: false;
   }
   @include grid-column($columns: 7, $pull: 5, $position: true);
   .hb {
-    @include grid-row($behavior: nest);
+    @include grid-row();
     .top-row {
       @include grid-row();
       .one, .two, .three {
