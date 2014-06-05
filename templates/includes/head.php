@@ -59,7 +59,7 @@
 <?php endif; ?>
 
 <!--[if IE 9]>
-<link rel="stylesheet" type="text/css" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie9.css">
+<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie9.css">
 <![endif]-->
 
 <!--[if lt IE 9]>

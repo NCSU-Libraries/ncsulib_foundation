@@ -2,6 +2,9 @@
 .right-off-canvas-menu{
 	display: none;
 }
+.ie9 .off-canvas-wrap{
+	overflow-y: hidden;
+}
 
 .ie9 #searcheverything .twitter-typeahead{
   	display: inline !important;
