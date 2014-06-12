@@ -43,8 +43,8 @@
     <?php print render($content['field_device_image']); ?>
     <div class="left-part">
       <?php print render($content['field_request_form_url']); ?>
-      <?php print render($content['body']); ?>
       <div class="hb"></div>
+      <?php print render($content['body']); ?>
     </div> <!-- /.left-part -->
   </div>
 </article>
