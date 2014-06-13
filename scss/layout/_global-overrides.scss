@@ -18,7 +18,7 @@
 }
 .styled:before{
     color: $primary-color;
-    content: "\f0a9";
+    content: "\f105";
     font-family: "FontAwesome";
     padding-right: 5px;
 }
@@ -69,6 +69,7 @@ div.tabs-content{
     border-top: 1px solid $border-color;
     padding: 0px rem-calc(16);
 }
+
 
 dl.tabs.vertical{
     right: -1px;
@@ -122,6 +123,11 @@ div.tabs-content.vertical{
     border-top: 1px solid $border-color;
     padding: 0px rem-calc(16);
 }
+
+
+
+
+
 
 /*accordions*/
 .accordion{
@@ -261,6 +267,12 @@ ul.orbit-slider li{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
+}
+html ul.orbit-slider li:before{
+	color: $body-font-family;
+	content: "";
+	margin: 0px;
+	padding: 0px;
 }
 ul.orbit-slider li img{
     width: 100%;

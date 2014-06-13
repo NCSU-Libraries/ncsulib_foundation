@@ -132,9 +132,9 @@
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt.jpg" title="&copy; Jeff Goldberg/ESTO" alt="The James B. Hunt Jr. Library" width="100%">
                         </a>
                     </div>
-                    <h2>
+                    <h3>
                         <a href="/huntlibrary/" id="story-1-heading">James B. Hunt Jr. Library</a>
-                    </h2>
+                    </h3>
 
                     <ul class="hunt-list">
                         <li><a href="/huntlibrary/#storify" class="story-1-link">Hunt Library on Storify</a></li>
@@ -151,7 +151,7 @@
                          <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hours_notice_image.jpg" alt="Possible changes in hours for the D. H. Hill and Hunt Libraries, Fall 2014" width="100%" />
                      </a>
                  </div>
-                 <h2><a href="/proposed-hours-2014" id="story-2-heading">Possible Changes To Hours</a></h2>
+                 <h3><a href="/proposed-hours-2014" id="story-2-heading">Possible Changes To Hours</a></h3>
                  <p>Budget reductions are requiring the Libraries to propose changes to the overnight hours at the D. H. Hill and Hunt Libraries.</p>
                  <p><a href="https://www.lib.ncsu.edu/proposed-hours-2014" class="story-2-link">See the proposed new hours and learn more about the reductions to library staff and cuts to the Libraries’ collections budget.</a></p>
              </div>

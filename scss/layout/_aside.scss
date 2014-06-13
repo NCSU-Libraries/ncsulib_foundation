@@ -1,5 +1,4 @@
 // Non-modular or client styles for asides or sidebars.
-
 .l-sidebar-first,
 .l-sidebar-second{
 	padding-top: rem-calc(20);
@@ -13,16 +12,19 @@
 	.side-nav, .menu {
 		padding: rem-calc(0);
 
-
 		li{
 
 			a{
-				font-size: 0.9em;
+				font-size: 0.875rem;
 
 				&.active-trail{
 					color: $secondary-color-b;
 					font-weight: bold;
 				}
+			}
+
+			a:hover{
+				text-decoration: underline;
 			}
 
 			ul{
@@ -35,10 +37,16 @@
 				li{
 
 					a{
-						font-size: rem-calc(14);
+						font-size: 90%;
 					}
 				}
 			}
+		}
+
+		li:before{
+			content: "";
+			padding: 0px;
+			margin: 0px;
 		}
 	}
 }

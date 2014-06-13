@@ -1,3 +1,5 @@
+@import "../components/list-styling";
+
 /* begin global styles*/
 div.workbench-info-block{
     display: none;
@@ -13,30 +15,66 @@ div.workbench-info-block{
     background-color: #fff;
 }
 
-h1{ font-size: $h1-font-size; margin-top: 0px; }
-h2{ font-size: $h2-font-size;}
-h3{ font-size: $h3-font-size;}
-h4, h4.subheader{
-    font-size: $h4-font-size*0.75;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-h5{ font-size: $h5-font-size;}
-h6{ font-size: $h6-font-size;}
+#main-content{
 
-// add outline to links for accessibility
-// a:active, a:focus {
-//     outline: 1px dotted #999;
-// }
+    h1{ font-size: $h1-font-size; margin-top: 0px; }
+    h2{
+        // color: $primary-color;
+        font-size: $h2-font-size;
 
-a:focus, select:focus, textarea:focus{
-  outline-width: 1px !important;
-  outline-style: dotted !important;
-  outline-color: #999 !important;
+        a{
+            color: #4C83AF;
+        }
+    }
+    h3{
+        font-size: $h3-font-size;
+        font-weight: bold;
+
+        a{
+            color: #4C83AF;
+        }
+    }
+    h4, h4.subheader{
+        font-size: $h4-font-size*0.75;
+        text-transform: uppercase;
+
+        a{
+            color: #4C83AF;
+        }
+    }
+    h5{
+        font-size: $h5-font-size;
+
+        a{
+            color: #4C83AF;
+        }
+    }
+    h6{
+        font-size: $h6-font-size;
+
+        a{
+            color: #4C83AF;
+        }
+    }
+    a:focus, select:focus, textarea:focus{
+      outline-width: 1px !important;
+      outline-style: dotted !important;
+      outline-color: #999 !important;
+    }
+    a:hover{
+        text-decoration: $anchor-text-hover-decoration;
+    }
 }
-a:hover{
-    text-decoration: $anchor-text-hover-decoration;
+
+body.page-node main{ // drupal content only
+    ul{
+        @include styled-list;
+    }
 }
+
+
+
+
 
 // begin page styles
 html #content{

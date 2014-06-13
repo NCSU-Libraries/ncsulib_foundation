@@ -19,10 +19,11 @@ footer {
 		font-size: (($h4-font-size)*.90);
 	}
 	p, li {
-		font-size: (($paragraph-font-size)*.85);
+		font-size: (($paragraph-font-size)*.90);
 		line-height: 1.3;
 	}
 	li {
+		list-style-position: outside;
 		padding-bottom: rem-calc(5);
 	}
 	a{

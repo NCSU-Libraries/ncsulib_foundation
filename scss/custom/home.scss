@@ -255,10 +255,11 @@ $include-html-classes: false;
 
 #research-tools{
 	h2{
+		color: $secondary-color;
 		font-size: 0.8rem;
 		font-weight: bold;
 		float: left;
-		// line-height: 1.3rem;
+		line-height: 1.15rem;
 
 		@media #{$small-only}{
 			float: none;
@@ -294,6 +295,12 @@ $include-html-classes: false;
 					font-size: 0.8rem;
 				}
 			}
+		}
+
+		li:before{
+			content: "";
+			padding: 0px;
+			margin: 0px;
 		}
 	}
 }
@@ -341,8 +348,8 @@ $include-html-classes: false;
 			}
 
 			h2{
+				color: $secondary-color;
 				font-size: 1.1rem;
-				font-weight: bold;
 				margin-bottom: 10px;
 
 				@media #{$small-only}{
@@ -401,6 +408,12 @@ $include-html-classes: false;
 		li:first-child{
 			margin-left: 0px;
 		}
+
+		li:before{
+			content: "";
+			padding: 0px;
+			margin: 0px;
+		}
 	}
 }
 /*end quicklinks*/
@@ -437,6 +450,12 @@ $include-html-classes: false;
 
 				}
 			}
+		}
+
+		li:before{
+			content: "";
+			padding: 0px;
+			margin: 0px;
 		}
 	}
 
@@ -502,6 +521,7 @@ $include-html-classes: false;
 		}
 
 		h2{
+			font-size: 1.4rem;
 			display: inline;
 
 			@media #{$small-only}{
@@ -516,9 +536,10 @@ $include-html-classes: false;
 
 			li{
 				list-style-type: none;
-				line-height: 1rem;
+				list-style-position: inherit;
+				line-height: 0.75rem;
 				float: left;
-				margin-left: emCalc(10);
+				margin: emCalc(0) emCalc(10) emCalc(0) emCalc(0) ;
 				padding: emCalc(13) 0px 0px 0px;
 
 				@media #{$small-only}{
@@ -554,6 +575,12 @@ $include-html-classes: false;
 					margin-left: 0px;
 				}
 			}
+
+			li:before{
+				content: "";
+				padding: 0px;
+				margin: 0px;
+			}
 		}
 	}
 
@@ -587,7 +614,7 @@ $include-html-classes: false;
 
 	.tabs-content{
 		.content{
-			padding: 0px;
+			padding: 0.74rem 0px;
 
 			ul{
 				margin: 0px;
@@ -596,7 +623,7 @@ $include-html-classes: false;
 					@include grid-column(4);
 					float: left;
 					list-style-type: none;
-					padding: rem-calc(13) 0px rem-calc(14);
+					padding: rem-calc(14) 0px rem-calc(6);
 					text-align: center;
 
 					@media #{$small-only}{
@@ -626,6 +653,12 @@ $include-html-classes: false;
 						position: relative;
 						top: 2px;
 					}
+				}
+
+				li:before{
+					content: "";
+					padding: 0px;
+					margin: 0px;
 				}
 			}
 		}
@@ -659,13 +692,13 @@ $include-html-classes: false;
 		font-size: emCalc(28);
 		line-height: 2.2rem;
 
-		a{
-			color: inherit;
-		}
+		// a{
+		// 	color: inherit;
+		// }
 
-		a:hover{
-			color: $primary-color;
-		}
+		// a:hover{
+		// 	color: $primary-color;
+		// }
 	}
 }
 #story-2{}
@@ -698,7 +731,6 @@ $include-html-classes: false;
 			line-height: 1rem;
 			margin-bottom: 5px;
 			margin-top: 0px;
-			text-transform: uppercase;
 
 			a{
 				color: inherit;

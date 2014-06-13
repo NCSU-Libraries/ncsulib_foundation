@@ -419,8 +419,16 @@ $include-html-classes: false;
 		}
 	}
 
-	ul.page li{
-		background: none;
+	ul.page{
+		li{
+			background: none;
+		}
+
+		li:before{
+			content: "";
+			padding: 0px;
+			margin: 0px;
+		}
 	}
 
 	li.date-prev{
