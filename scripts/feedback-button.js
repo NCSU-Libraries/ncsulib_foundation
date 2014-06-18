@@ -48,6 +48,7 @@ var toggleFeedback = {
             jQuery('.feedback-form').hide();
             toggleFeedback.setCookie();
         });
+        jQuery('#feedback-form').attr('href', '//www.lib.ncsu.edu/feedback?referring_page=' + document.location.href);
     },
     setCookie : function() {
         // Session only
