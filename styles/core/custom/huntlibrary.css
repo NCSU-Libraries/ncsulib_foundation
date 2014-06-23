@@ -2,3 +2,11 @@
     margin-top: 290px;
     border-top: 1px solid #ddd;
 }
+
+.view-slideshows .view-content ul{
+	margin-left: 0px;
+}
+
+.view-slideshows .view-content ul li{
+	margin: 0px;
+}
