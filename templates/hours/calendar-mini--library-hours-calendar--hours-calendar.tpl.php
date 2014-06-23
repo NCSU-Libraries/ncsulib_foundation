@@ -16,7 +16,7 @@
  *
  */
 	// js for popup
-	drupal_add_js('sites/all/themes/ncsulibraries/scripts/hours.js', 'file');
+	drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/hours.js', 'file');
 
 	$params = array(
 	  'view' => $view,

@@ -1,5 +1,4 @@
-	console.log('hit');
-$(document).ready(function($){
+jQuery(document).ready(function($){
 	$('.mini td').mouseover(function(e){
 		if(!$(this).hasClass('empty') && !$(this).hasClass('has-no-events')){
 			var date = $(this).data('date');
@@ -25,7 +24,6 @@ $(document).ready(function($){
 			var cellH = $(this).height();
 			var cellW = $(this).width();
 			$('.date-popup-wrapper').css({'left':pos.left-(popupW*0.5)+(cellW*0.5)+5,'top':pos.top-popupH-11}); //yeah. this is hacky
-			// console.log(pos.left);
 		}
 	})
 
