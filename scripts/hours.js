@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+	console.log('hit');
 	$('.mini td').mouseover(function(e){
 		if(!$(this).hasClass('empty') && !$(this).hasClass('has-no-events')){
 			var date = $(this).data('date');
