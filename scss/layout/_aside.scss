@@ -1,63 +1,71 @@
 // Non-modular or client styles for asides or sidebars.
-.l-sidebar-first,
-.l-sidebar-second{
-	padding-top: rem-calc(20);
+#content{
 
-	h2,h3,h4,h5,h6{
-        font-size: 1.1em;
-        margin-top: 0px;
-        text-transform: uppercase;
-    }
+	.l-sidebar-first,
+	.l-sidebar-second{
+		padding-top: rem-calc(20);
 
-	.side-nav, .menu {
-		padding: rem-calc(0);
-		margin-left: 0px;
+		h2,h3,h4,h5,h6{
+	        font-size: 1.1em;
+	        font-weight: bold;
+	        margin-top: 0px;
+	        text-transform: uppercase;
+	    }
 
-		li{
+	    p,a{
+	    	font-size: rem-calc(14);
+	    }
 
-			a{
-				font-size: 0.875rem;
+		ul, .side-nav, .menu {
+			padding: rem-calc(0);
+			margin-left: 0px;
 
-				&.active-trail{
-					color: $secondary-color-b;
-					font-weight: bold;
+			li{
+
+				a{
+					font-size: 0.875rem;
+
+					&.active-trail{
+						color: $secondary-color-b;
+						font-weight: bold;
+					}
 				}
-			}
 
-			a:hover{
-				text-decoration: underline;
-			}
+				a:hover{
+					text-decoration: underline;
+				}
 
-			ul{
-            	list-style-type: none;
-				margin-bottom: rem-calc(0);
-				margin-left: rem-calc(15);
-				margin-top: rem-calc(10);
-				padding: 0px;
+				ul{
+	            	list-style-type: none;
+					margin-bottom: rem-calc(0);
+					margin-left: rem-calc(15);
+					margin-top: rem-calc(10);
+					padding: 0px;
 
-				li{
+					li{
 
-					a{
-						font-size: 90%;
+						a{
+							font-size: 90%;
+						}
 					}
 				}
 			}
-		}
 
-		li:before{
-			content: "";
-			padding: 0px;
-			margin: 0px;
+			li:before{
+				content: none;
+				padding: 0px;
+				margin: -4px;
+			}
 		}
 	}
-}
 
-ul.menu{
-	margin: 0px;
-	padding: 0px;
+	ul.menu{
+		margin: 0px;
+		padding: 0px;
 
-	li{
-		list-style-type: none;
+		li{
+			list-style-type: none;
+		}
 	}
 }
 

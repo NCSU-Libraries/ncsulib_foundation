@@ -270,7 +270,7 @@ ul.orbit-slider li{
 }
 html ul.orbit-slider li:before{
 	color: $body-font-family;
-	content: "";
+	content: none;
 	margin: 0px;
 	padding: 0px;
 }

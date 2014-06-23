@@ -543,15 +543,6 @@ header#minimum-bar{
 			padding: 0 10px;
 			text-align: center;
 
-			// @media #{$medium-up}{
-			// 	content: "ccc";
-
-			// 	&:before{
-			// 		content: "\f002";
-			// 		font-family: "FontAwesome";
-			// 	}
-			// }
-
 			@media #{$small-only}{
 				background: $primary-color;
 				float: right;
@@ -602,7 +593,7 @@ header#minimum-bar{
 			}
 
 			li:before{
-				content: "";
+				content: none;
 				padding: 0px;
 				margin: 0px;
 			}

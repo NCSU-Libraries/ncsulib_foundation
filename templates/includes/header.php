@@ -105,7 +105,7 @@ Your browser does not support inline frames or is currently configured  not to d
 	</div>
 	<div id="menu-libraries" class="primary-menu-list">
 		<ul>
-			<li><a href="//www.lib.ncsu.edu/">D. H. Hill Library</a></li>
+			<li><a href="//www.lib.ncsu.edu/hours/hill/general">D. H. Hill Library</a></li>
 			<li><a href="//www.lib.ncsu.edu/huntlibrary">James B. Hunt Jr. Library</a></li>
 			<li><a href="//www.lib.ncsu.edu/design">Design Library</a></li>
 			<li><a href="//www.lib.ncsu.edu/nrl">Natural Resources Library</a></li>

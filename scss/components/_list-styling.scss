@@ -6,7 +6,7 @@
     margin-left: 0.9rem;
 
     li{
-    	list-style-position: inside;
+    	list-style-position: outside;
         margin-bottom: 5px;
 
         ul{
@@ -44,7 +44,7 @@
 #main-content ul[class*='large-block-grid'],
 #main-content ul.pagination{
 	li:before{
-		content: "";
+		content: none;
 		padding: 0px;
 		margin: 0px;
 	}
