@@ -5,11 +5,33 @@
 	.l-sidebar-second{
 		padding-top: rem-calc(20);
 
-		h2,h3,h4,h5,h6{
+		h2{
 	        font-size: 1.1em;
 	        font-weight: bold;
 	        margin-top: 0px;
 	        text-transform: uppercase;
+
+	        a{
+	        	font-size: inherit;
+	        }
+	    }
+	    h3{
+	    	font-size: 1.1em;
+	        font-weight: normal;
+	        margin-top: 0px;
+	        text-transform: uppercase;
+
+	        a{
+	        	font-size: inherit;
+	        }
+	    }
+	    h4,h5,h6{
+	        font-size: 1em;
+	        margin-top: 0px;
+
+	        a{
+	        	font-size: inherit;
+	        }
 	    }
 
 	    p,a{
