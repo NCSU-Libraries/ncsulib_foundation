@@ -172,6 +172,10 @@ function ncsulib_foundation_preprocess_node(&$variables) {
   if ($variables['type'] == 'space') {
     drupal_add_css(path_to_theme() . '/styles/core/custom/space.css', array('group' => 101));
   }
+  // Add projects.css for space content type
+  if ($variables['type'] == 'project') {
+    drupal_add_css(path_to_theme() . '/styles/core/custom/projects.css', array('group' => 101));
+  }
 }
 
 
