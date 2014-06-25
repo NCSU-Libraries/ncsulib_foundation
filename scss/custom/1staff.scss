@@ -1,11 +1,19 @@
-.meta-header{
-	margin-bottom: 0px;
-}
+@import "../foundation/settings";
+$include-html-classes: false;
+@import "foundation/components/buttons";
 
-.meta-section{
-	margin-bottom: 30px;
-}
+#main-content{
 
-i.fa-comments{
-	color: #cc0000;
+
+	.meta-header{
+		margin-bottom: 0px;
+	}
+
+	.meta-section{
+		margin-bottom: 30px;
+	}
+
+	i.fa-comments{
+		color: #cc0000;
+	}
 }

@@ -1,0 +1,24 @@
+@import "../foundation/settings";
+$include-html-classes: false;
+@import "foundation/components/buttons";
+
+#main-content{
+
+	form#views-exposed-form-staff-page-1{
+
+		#edit-submit-staff{
+			@include button($button-tny);
+			margin-top: 1.3rem;
+		}
+
+	}
+
+	ul.pagination{
+		margin-left: -0.4em;
+	}
+
+	#department-select{
+		height: 2.5rem;
+	}
+
+}
