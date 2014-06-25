@@ -47,7 +47,8 @@ function get_user_info($uid) {
  * $user_info is the array of values returned by get_user_info()
  */
 function print_user_info($user_info) {
-  // print user's photo thumbnail, user first and last name (linked), user title
+  // print user's photo thumbnail, user first and last name (linked), user
+  // title
   print '<div class="user-info">
           <div class="user-photo">
             ' . render($user_info['image']) . '
