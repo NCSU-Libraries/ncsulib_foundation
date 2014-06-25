@@ -15,14 +15,18 @@ function get_user_info($uid) {
 
   $user_info = array();
 
-  $image = field_get_items('user', $user, 'field_staff_photo');
-  $user_info['image'] = field_view_value('user', $user, 'field_staff_photo', $image[0], array(
-    'type' => 'image',
-    'settings' => array(
-      'image_style' => 'half-page-width',
-      'image_link' => 'content',
-    ),
-  ));
+  if (field_get_items('user', $user, 'field_staff_photo')) {
+    $image = field_get_items('user', $user, 'field_staff_photo');
+    $user_info['image'] = field_view_value('user', $user, 'field_staff_photo', $image[0], array(
+      'type' => 'image',
+      'settings' => array(
+        'image_style' => 'half-page-width',
+        'image_link' => 'content',
+      ),
+    ));
+  } else {
+    $user_info['image'] = '<img src="http://www.placecage.com/288/370">';
+  }
 
   $delta = 0;
   $field = field_get_items('user', $user, 'field_firstname');
