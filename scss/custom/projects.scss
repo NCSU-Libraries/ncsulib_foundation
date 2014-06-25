@@ -1,0 +1,75 @@
+@import "../foundation/settings";
+$include-html-classes: false;
+@import "foundation";
+@import "silent_type";
+
+.story {
+  @media #{$medium-up} {@include grid-column($columns:10, $center: true)};
+
+  .intro{
+    @include grid-row;
+    margin-bottom: rem-calc(120);
+
+    .story-title {
+      @media #{$medium-up} {@include grid-column($columns:12)};
+      margin-bottom: rem-calc(30);
+    }
+
+    .field-name-field-problem-statement {
+      @media #{$medium-up} {@include grid-column($columns:7)};
+
+      * {
+        font-size: rem-calc(20);
+      }
+    }
+
+    .field-name-field-featured-image {
+      @media #{$medium-up} { @include grid-column($columns:5); }
+    }
+  }
+
+  .story-body {
+    @include grid-row;
+
+    .story-statement {
+      @media #{$medium-up} {@include grid-column($columns:8)};
+    }
+
+    aside {
+      @media #{$medium-up} {@include grid-column($columns:4)};
+
+      h2:first-child {
+        margin-top: 0;
+      }
+
+      .field-label {
+        @extend %h4;
+      }
+
+
+      .user-info {
+        @include grid-row($behavior: nest);
+        margin-bottom: rem-calc(10);
+
+        .user-photo {
+          @include grid-column($columns:4);
+        }
+        .user-details {
+          @include grid-column($columns:8, $collapse: true);
+
+          .user-name {
+            line-height: 1.6;
+            display: block;
+          }
+          .user-title {
+            font-size: rem-calc(13);
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
