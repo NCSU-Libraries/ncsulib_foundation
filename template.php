@@ -605,3 +605,5 @@ function ncsulib_foundation_adjust_for_timezone($time){
     $origin_dt = new DateTime($time, $origin_dtz);
     return $origin_dtz->getOffset($origin_dt);
 }
+
+include_once(__DIR__.'/theme/user.inc');
