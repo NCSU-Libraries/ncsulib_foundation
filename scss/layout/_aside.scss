@@ -1,54 +1,71 @@
 // Non-modular or client styles for asides or sidebars.
+#content{
 
-.l-sidebar-first,
-.l-sidebar-second{
-	padding-top: rem-calc(20);
+	.l-sidebar-first,
+	.l-sidebar-second{
+		padding-top: rem-calc(20);
 
-	h2,h3,h4,h5,h6{
-        font-size: 1.1em;
-        margin-top: 0px;
-        text-transform: uppercase;
-    }
+		h2,h3,h4,h5,h6{
+	        font-size: 1.1em;
+	        font-weight: bold;
+	        margin-top: 0px;
+	        text-transform: uppercase;
+	    }
 
-	.side-nav, .menu {
-		padding: rem-calc(0);
+	    p,a{
+	    	font-size: rem-calc(14);
+	    }
 
+		ul, .side-nav, .menu {
+			padding: rem-calc(0);
+			margin-left: 0px;
 
-		li{
+			li{
 
-			a{
-				font-size: 0.9em;
+				a{
+					font-size: 0.875rem;
 
-				&.active-trail{
-					color: $secondary-color-b;
-					font-weight: bold;
+					&.active-trail{
+						color: $secondary-color-b;
+						font-weight: bold;
+					}
 				}
-			}
 
-			ul{
-            	list-style-type: none;
-				margin-bottom: rem-calc(0);
-				margin-left: rem-calc(15);
-				margin-top: rem-calc(10);
-				padding: 0px;
+				a:hover{
+					text-decoration: underline;
+				}
 
-				li{
+				ul{
+	            	list-style-type: none;
+					margin-bottom: rem-calc(0);
+					margin-left: rem-calc(15);
+					margin-top: rem-calc(10);
+					padding: 0px;
 
-					a{
-						font-size: rem-calc(14);
+					li{
+
+						a{
+							font-size: 90%;
+						}
 					}
 				}
 			}
+
+			li:before{
+				content: none;
+				padding: 0px;
+				margin: -4px;
+			}
 		}
 	}
-}
 
-ul.menu{
-	margin: 0px;
-	padding: 0px;
+	ul.menu{
+		margin: 0px;
+		padding: 0px;
 
-	li{
-		list-style-type: none;
+		li{
+			list-style-type: none;
+		}
 	}
 }
 

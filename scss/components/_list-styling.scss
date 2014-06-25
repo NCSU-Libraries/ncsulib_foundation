@@ -1,0 +1,51 @@
+// red bullets for content
+@mixin styled-list{
+	// if you want to add this to your list (for htdocs)
+	line-height: 1.6em;
+    list-style: none outside none;
+    margin-left: 0.9rem;
+
+    li{
+    	list-style-position: outside;
+        margin-bottom: 5px;
+
+        ul{
+
+        	li:before{
+        		color: $secondary-color;
+        	}
+        }
+    }
+
+    li:before{
+        color: #CC0000;
+        content: "\f105";
+        font-family: "FontAwesome";
+        margin-left: -0.8em;
+        padding-right: 0.5em;
+    }
+}
+
+
+.styled-list{
+	@include styled-list;
+}
+
+
+
+// white list these
+#main-content ul.tabs.primary,
+#main-content ul.contextual-links,
+#main-content ul.inline-list,
+#main-content ul.vcard,
+#main-content .panel ul,
+#main-content ul[class*='small-block-grid'],
+#main-content ul[class*='medium-block-grid'],
+#main-content ul[class*='large-block-grid'],
+#main-content ul.pagination{
+	li:before{
+		content: none;
+		padding: 0px;
+		margin: 0px;
+	}
+}

@@ -375,7 +375,7 @@ header#minimum-bar{
 		@media #{$large-up}{}
 
 		#home-hours{
-			padding:rem-calc(5) 0;
+			padding: rem-calc(5) 0;
 			background: $topbar-dropdown-bg;
 
 			@media #{$medium-only} {
@@ -384,7 +384,7 @@ header#minimum-bar{
 			}
 			@media #{$large-up} {
 				@include grid-column(7);
-				width: 58.03333%;
+				width: 57.03333%;
 				height: 30px;
 			}
 
@@ -393,6 +393,7 @@ header#minimum-bar{
 				font-size: rem-calc(12);
 				font-weight: 700;
 				margin: 0;
+				padding-top: 3px;
 
 				@media #{$small-only}{
 					font-size: rem-calc(10);
@@ -422,8 +423,9 @@ header#minimum-bar{
 			ul {
 				display: inline;
 				list-style-type: none;
-				margin: 0;
 				line-height: 1;
+				margin: 0;
+				padding-top: 2px;
 
 				.library {
 					display: inline-block;
@@ -541,15 +543,6 @@ header#minimum-bar{
 			padding: 0 10px;
 			text-align: center;
 
-			// @media #{$medium-up}{
-			// 	content: "ccc";
-
-			// 	&:before{
-			// 		content: "\f002";
-			// 		font-family: "FontAwesome";
-			// 	}
-			// }
-
 			@media #{$small-only}{
 				background: $primary-color;
 				float: right;
@@ -597,6 +590,12 @@ header#minimum-bar{
 
 			li:first-child a{
 				border-left: 0;
+			}
+
+			li:before{
+				content: none;
+				padding: 0px;
+				margin: 0px;
 			}
 		}
 		@media #{$large-up} {

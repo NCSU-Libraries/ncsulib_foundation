@@ -38,8 +38,7 @@
 // We use these to control various global styles
 // $body-bg: #fff;
 $body-font-color: #555;
-$body-font-family: "UniversRoman", Arial,sans-serif;
-// $body-font-family: Arial, sans-serif;
+$body-font-family: Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -130,21 +129,21 @@ $small: $small-only;
 
 // We use these to control header font styles
 $header-font-family: $body-font-family; //"UniversLTW01-67BoldCn",Arial,sans-serif; //$body-font-family;
-$header-font-weight: 500;
+$header-font-weight: normal;
 // $header-font-style: normal;
 $header-font-color: #555;
-$header-line-height: 1.3;
-$header-top-margin: rem-calc(22);
-$header-bottom-margin: rem-calc(11);
+$header-line-height: 1.2;
+$header-top-margin: 2rem;
+// $header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(42);
-$h2-font-size: rem-calc(30);
-$h3-font-size: rem-calc(21);
-$h4-font-size: rem-calc(20);
-$h5-font-size: rem-calc(14);
-$h6-font-size: rem-calc(14);
+$h1-font-size: rem-calc(40);
+$h2-font-size: rem-calc(26);
+$h3-font-size: rem-calc(22);
+$h4-font-size: rem-calc(21);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -154,15 +153,15 @@ $subheader-font-color: $header-font-color; //scale-color($header-font-color, $li
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-$small-font-size: 80%;
+$small-font-size: 70%;
 $small-font-color: scale-color($header-font-color, $lightness: 100%);
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-$paragraph-font-size: 0.9375rem;
+$paragraph-font-size: 0.95rem;
 // $paragraph-line-height: 1.6;
-$paragraph-margin-bottom: rem-calc(11);
+// $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
@@ -187,8 +186,8 @@ $anchor-text-hover-decoration: underline;
 
 // We use these to style lists
 $list-style-position: outside;
-$list-side-margin: 1rem;
-$list-ordered-side-margin: rem-calc(32);
+// $list-side-margin: 1.1rem;
+// $list-ordered-side-margin: 1.4rem;
 // $list-side-margin-no-bullet: 0;
 // $list-nested-margin: rem-calc(20);
 // $definition-list-header-weight: bold;
