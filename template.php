@@ -608,9 +608,4 @@ function ncsulib_foundation_adjust_for_timezone($time){
     return $origin_dtz->getOffset($origin_dt);
 }
 
-<<<<<<< HEAD
-include_once(__DIR__.'/theme/user.inc');
-=======
 
-
->>>>>>> staff
