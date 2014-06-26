@@ -1,7 +1,7 @@
 <h1><?= $title; ?></h1>
 <div class="row">
 	<div class="medium-8 columns">
-		<p><?php print strip_tags(render($content['field_dept_about'])); ?></p>
+		<p><?php print render($content['field_dept_about']); ?></p>
 
 		<h2>Staff</h2>
 		<?= render($content['field_dept_head']); ?>

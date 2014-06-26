@@ -183,7 +183,7 @@ div.tabs-content.vertical{
 }
 // ensure there is no border radius on iOS devices
 input[type="submit"] {
-    @include button;
+    @include button($button-tny);
     border-radius: 0px;
 }
 

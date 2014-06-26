@@ -305,11 +305,13 @@ function ncsulib_foundation_breadcrumb($variables) {
 function ncsulib_foundation_form_user_login_alter(&$form, &$form_state, $form_id) {
   // Alters the text on the user login form
   drupal_set_title(t('Website editing login'));
-  $form['name']['#title'] = t('Unity ID');
-  $form['name']['#description'] = t('Enter your NCSU Unity ID');
-  $form['pass']['#title'] = t('Active Directory password');
-  $form['pass']['#description'] = t('Enter your NCSU Libraries Active Directory password');
+  $form['name']['#title'] = t('Enter your Unity ID:');
+  $form['name']['#description'] = t('');  // Enter descriptive text here, if desired
+  $form['pass']['#title'] = t('Enter your Unity password:');
+  $form['pass']['#description'] = t('');  // Enter descriptive text here, if desired
 }
+
+
 
 /**
  * Do we still need this?
@@ -606,4 +608,9 @@ function ncsulib_foundation_adjust_for_timezone($time){
     return $origin_dtz->getOffset($origin_dt);
 }
 
+<<<<<<< HEAD
 include_once(__DIR__.'/theme/user.inc');
+=======
+
+
+>>>>>>> staff
