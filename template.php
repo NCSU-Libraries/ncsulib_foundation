@@ -305,9 +305,11 @@ function ncsulib_foundation_breadcrumb($variables) {
 function ncsulib_foundation_form_user_login_alter(&$form, &$form_state, $form_id) {
   // Alters the text on the user login form
   drupal_set_title(t('Website editing login'));
-  $form['name']['#title'] = t('Enter your Unity ID:');
+  // $form['name']['#title'] = t('Enter your Unity ID:');
+  $form['name']['#title'] = t('Enter your Active Directory Id:');
   $form['name']['#description'] = t('');  // Enter descriptive text here, if desired
-  $form['pass']['#title'] = t('Enter your Unity password:');
+  // $form['pass']['#title'] = t('Enter your Unity password:');
+  $form['pass']['#title'] = t('Enter your Active Directory password:');
   $form['pass']['#description'] = t('');  // Enter descriptive text here, if desired
 }
 
