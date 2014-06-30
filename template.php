@@ -611,3 +611,7 @@ function ncsulib_foundation_adjust_for_timezone($time){
 }
 
 
+/**
+ * Theming related to staff
+ */
+include_once(__DIR__.'/theme/user.inc');
