@@ -29,15 +29,17 @@ jQuery(function($) {
 
   //hover or click an area, highlight or activate a corresponding list item/link
   $('area[data-room]').each(function() {
-    var room = $(this).attr('data-room');
+    var room      = $(this).attr('data-room');
     var className = '';
-    var $roomLink= $('a[data-target-room="' + room + '"]');
+    var $roomLink = $('a[data-target-room="' + room + '"]');
 
     className = $(this).attr('data-nameable') === 'yes' ? 'highlighter' : 'highlighter-reserved';
 
     //this will apply only to the floorplans
     $(this).click(function() {
-      $('a[data-target-room="'+room+'"]').click(); //activate the link for the corresponding list item
+      // voodoo
+      window.location.href = $('a[data-target-room="'+room+'"]').attr('href');
+      $('a[data-target-room="'+room+'"]').click(); //activate the link for the
       thisMapsterImgID = $('area[data-room]').parents('div.ui-tabs-panel').children('.floorplan').children('.floor').attr('id');
       $(thisMapsterImgID).mapster('onClick', false); //clear the color fill on click
     });
@@ -50,7 +52,7 @@ jQuery(function($) {
       );
   });
 
-  //hover over a list item/link, highlight the corresponding map area
+  // hover over a list item/link, highlight the corresponding map area
   $('a[data-target-room]').each(function() {
     var $targetRoom = $(this).attr('data-target-room');
 
