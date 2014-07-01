@@ -43,10 +43,12 @@
 #main-content ul[class*='medium-block-grid'],
 #main-content ul[class*='large-block-grid'],
 #main-content ul.pagination,
-body .unstyle-list{
+body.page-node main ul.unstyle-list,
+body.html main ul.unstyle-list,
+ul.unstyle-list{
 	li:before{
-		content: none;
-		padding: 0px;
-		margin: 0px;
+		content: none !important;
+		padding: 0px !important;
+		margin: 0px !important;
 	}
 }
