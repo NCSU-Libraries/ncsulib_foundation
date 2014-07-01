@@ -115,7 +115,7 @@ $crumb-slash: "/" !default;
 
 @include exports("breadcrumbs") {
   @if $include-html-nav-classes {
-    .breadcrumbs {
+    body.page-node main .breadcrumbs {
       @include crumb-container;
       @include radius($crumb-radius);
 
