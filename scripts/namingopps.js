@@ -6,10 +6,6 @@ var allLinks = [];            // to apply jQuery view switch to two links
   allLinks[1] = '.text-link-all';
 
 jQuery(function($) {
-  $('.no-util-fp').hide();
-
-
-
   //jQuery UI tabbed interface
   $('#tabs').tabs();
 
