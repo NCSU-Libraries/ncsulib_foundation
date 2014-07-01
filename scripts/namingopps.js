@@ -107,10 +107,12 @@ jQuery(function($) {
   // creating table from existing lists in tabbed view of interface
   $('ul.data-targets a').each(function() {
     floorForTable = $(this).parents('ul').attr('data-image') === "floor6" ? "Grounds" : $(this).parents('ul').attr('data-image').replace(/floor/g, "Floor ");
+    list = $(this).html();
     space = $('span:first-child', this).text();
-    price = $('.price', this).text();
+    price = list.slice(list.lastIndexOf('>')+1);
+
     botCount++;  // iterator used to filter out certain naming opportunities
-    // console.log(space + ' ' + botCount);
+
     if  (space.match(/bot/gi) !== null ) {
       floorForTable = "Floors 1 and 2";
     }
@@ -130,7 +132,7 @@ jQuery(function($) {
         // set a unique id
         id: 'cost',
         is: function (s) {
-            return /^[£$€?.]/.test(s);
+            return (/^[£$€?.]/).test(s);
         }, format: function (s) {
             return $.tablesorter.formatFloat(s.replace(new RegExp(/[$]/g), "").replace(/RESERVED/g, "").replace(/,/g, ""));
         }, type: "numeric"
