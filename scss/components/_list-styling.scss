@@ -42,7 +42,8 @@
 #main-content ul[class*='small-block-grid'],
 #main-content ul[class*='medium-block-grid'],
 #main-content ul[class*='large-block-grid'],
-#main-content ul.pagination{
+#main-content ul.pagination,
+.unstyle-list{
 	li:before{
 		content: none;
 		padding: 0px;
