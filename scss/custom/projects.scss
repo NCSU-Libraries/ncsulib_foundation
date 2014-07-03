@@ -15,7 +15,7 @@ $include-html-classes: false;
       margin-bottom: rem-calc(30);
     }
 
-    .field-name-field-problem-statement {
+    .field-name-field-teaser {
       @media #{$medium-up} {@include grid-column($columns:7)};
 
       * {
@@ -73,3 +73,6 @@ $include-html-classes: false;
 
 
 
+.date-posted {
+  font-style: italic;
+}
