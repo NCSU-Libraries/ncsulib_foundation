@@ -600,6 +600,9 @@ function ncsulib_foundation_field__space($variables) {
   return $output;
 }
 
+/**
+ * Implements theme_username()
+ */
 function ncsulib_foundation_username($variables) {
   $author = user_load($variables['uid']);
   $photo = get_user_image($author);
