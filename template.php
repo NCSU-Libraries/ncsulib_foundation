@@ -182,9 +182,16 @@ function ncsulib_foundation_preprocess_node(&$variables) {
   if ($variables['type'] == 'space') {
     drupal_add_css(path_to_theme() . '/styles/core/custom/space.css', array('group' => 101));
   }
+
   // Add projects.css for space content type
   if ($variables['type'] == 'project') {
     drupal_add_css(path_to_theme() . '/styles/core/custom/projects.css', array('group' => 101));
+  }
+
+  // Make "node--NODETYPE--VIEWMODE.tpl.php" templates available for nodes
+  if($variables['view_mode'] == 'teaser') {
+    $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->type . '__teaser';
+    $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->nid . '__teaser';
   }
 }
 
