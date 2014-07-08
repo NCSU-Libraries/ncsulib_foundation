@@ -14,11 +14,14 @@
 
 <?php print render($content['field_teaser']); ?>
 
+
+
 <div class="project-details">
   <div class="project-author">
     <?php print $name; ?>
   </div>
   <div class="project-meta">
+    <p class="read-more">Read more &rarr;</p>
     <p class="date"><?php print date('F j, Y', $created); ?></p>
     <?php if(isset($content['field_project_user_activities'])): ?>
       <h3>Topics covered</h3>
