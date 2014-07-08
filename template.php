@@ -160,6 +160,16 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       break;
   }
 
+  // hide default 'no content' text for taxonomy terms
+  if(isset($variables['page']['content']['system_main']['no_content'])) {
+    unset($variables['page']['content']['system_main']['no_content']);
+  }
+
+  // overwrite 'user activity' taxonomy template page
+  if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
+    $term = taxonomy_term_load(arg(2));
+    $variables['theme_hook_suggestions'][] = 'page__taxonomy_' . $term->vocabulary_machine_name;
+  }
 
 } // End tremendous template_preprocess_page function
 
