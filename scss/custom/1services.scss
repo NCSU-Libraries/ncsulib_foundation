@@ -1,0 +1,35 @@
+@import "compass/css3";
+
+.user-activity-list{
+
+	ol{
+
+		li{
+			text-align: center;
+
+			h2{
+				height: 110px;
+
+				i{
+					background: #4c83af;
+					border-radius: 100px;
+					color: #FFF;
+					font-size: 4rem;
+					min-width: 110px;
+					padding: 25px;
+					text-shadow: 2px 2px rgba(0,0,0, 0.3);
+					// @include transition-property(font-size,padding,min-width);
+					// @include transition-duration(0.25s);
+				}
+			}
+		}
+
+		li:hover{
+
+			i{
+				background: #FFF;
+				color: #4c83af;
+			}
+		}
+	}
+}
