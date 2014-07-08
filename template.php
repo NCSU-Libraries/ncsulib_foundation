@@ -611,6 +611,79 @@ function ncsulib_foundation_field__space($variables) {
 }
 
 /**
+ * Implements theme_username()
+ */
+function ncsulib_foundation_username($variables) {
+  $author = user_load($variables['uid']);
+  $photo = get_user_image($author);
+
+  // Add user's title
+  $field_title = field_get_items('user', $author, 'field_title');
+  $title = field_view_value('user', $author, 'field_title', $field_title[0]);
+
+  if (isset($variables['link_path'])) {
+    // We have a link path, so we should generate a link using l().
+    $output  = '<div class="user-photo">'. render($photo) .'</div>';
+    $output .= '<div class="user-details">';
+    $output .= '<span class="user-name">'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
+    $output .= '<span class="user-title">'. render($title) .'</span>';
+    $output .= '</div>';
+    $output  = '<div class="user-info">'. $output .'</div>';
+  }
+  else {
+    // Modules may have added important attributes so they must be included
+    // in the output. Additional classes may be added as array elements like
+    // $variables['attributes_array']['class'][] = 'myclass';
+    $output  = '<span' . drupal_attributes($variables['attributes_array']) . '>';
+    $output .=  render($photo);
+    $output .=  $variables['name'];
+    $output .=  $variables['extra'];
+    $output .= '</span>';
+  }
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Make collaborators show up with name, title and thumbnail image
+ */
+function ncsulib_foundation_field__field_staff__project($variables) {
+  $output = '';
+
+  // Load all collaborators' fields
+  $collaborators = array();
+  foreach ($variables['element']['#items'] as $key => $value) {
+    $collaborators[] = user_load($value['target_id']);
+
+    // Add link to user's page
+    $variables['items'][$key]['link'] = 'user/'. $collaborators[$key]->uid;
+
+    // Add user's image
+    $variables['items'][$key]['image'] = get_user_image($collaborators[$key]);
+
+    // Add user's title
+    $field = field_get_items('user', $collaborators[$key], 'field_title');
+    $variables['items'][$key]['title'] = field_view_value('user', $collaborators[$key], 'field_title', $field[0]);
+
+  }
+
+  // The HTML template for user info
+  foreach ($variables['items'] as $delta => $item) {
+    $output .= '<div class="user-info">';
+    $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
+    $output .= '<div class="user-details">';
+    $output .= '<span class="user-name">'. l(render($item), $item['link']) .'</span>';
+    $output .= '<span class="user-title">'. render($item['title']) .'</span>';
+    $output .= '</div>';
+    $output .= '</div>';
+
+  }
+
+  return $output;
+}
+
+/**
  * Helper function that adjusts date to current timezone. Especially for
  * daylight savings
  */
@@ -622,6 +695,22 @@ function ncsulib_foundation_adjust_for_timezone($time){
 
 
 /**
- * Theming related to staff
+ * Helper function for getting an image render array
  */
-include_once(__DIR__.'/theme/user.inc');
+function get_user_image($user) {
+  $image_array = '';
+
+  if (field_get_items('user', $user, 'field_staff_photo')) {
+      $image = field_get_items('user', $user, 'field_staff_photo');
+      $image_array = field_view_value('user', $user, 'field_staff_photo', $image[0], array(
+        'type' => 'image',
+        'settings' => array(
+          'image_style' => 'half-page-width',
+          'image_link' => 'content',
+        ),
+      ));
+    } else {
+      $image_array  = '<img src="http://www.placecage.com/288/370">';
+    }
+  return $image_array;
+}

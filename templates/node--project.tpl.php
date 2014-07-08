@@ -1,21 +1,3 @@
-<?php
-
-// First, getting the data we need to print author and associated staff
-$author = get_user_info($uid);
-
-$associated_staff_uids = array();
-foreach ($content['field_staff']['#items'] as $user) {
-  $associated_staff_uids[] = $user['target_id'];
-}
-$associated_staff = array();
-foreach ($associated_staff_uids as $staff_member) {
-  $associated_staff[] = get_user_info($staff_member);
-}
-
-// Since we won't be using this directly
-hide($content['field_staff']);
-
-?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
     <div class="story">
@@ -35,7 +17,7 @@ hide($content['field_staff']);
           <?php endif; ?>
           <?php print render($title_suffix); ?>
         </div>
-        <?php print render($content['field_problem_statement']); ?>
+        <?php print render($content['field_teaser']); ?>
         <?php print render($content['field_featured_image']); ?>
 
       </div>
@@ -43,22 +25,23 @@ hide($content['field_staff']);
       <div class="story-body">
 
           <div class="story-statement">
+            <?php print $user_picture;?>
+            <h2>Problem Statement</h2>
+            <?php print render($content['field_problem_statement']); ?>
+            <h2>What Happened</h2>
             <?php print render($content['body']); ?>
+            <h2>Assessment</h2>
             <?php print render($content['field_assessments']); ?>
+            <p class="date-posted">Written on <?php print date('F j, Y', $created); ?></p>
           </div>
           <aside class="story-statement-aside">
             <h2>About the Author</h2>
 
-            <?php print_user_info($author); ?>
+            <?php print $name; ?>
 
             <h2>Collaborators</h2>
 
-            <?php
-              foreach ($associated_staff as $collaborator) {
-                print_user_info($collaborator);
-              }
-            ?>
-
+            <?php print render($content['field_staff']); ?>
             <?php print render($content); ?>
 
           </aside>
