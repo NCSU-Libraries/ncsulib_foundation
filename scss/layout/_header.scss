@@ -375,7 +375,7 @@ header#minimum-bar{
 		@media #{$large-up}{}
 
 		#home-hours{
-			padding: rem-calc(5) 0;
+			padding: rem-calc(5) 0 rem-calc(2);
 			background: $topbar-dropdown-bg;
 
 			@media #{$medium-only} {
