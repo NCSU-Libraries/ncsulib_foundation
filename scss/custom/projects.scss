@@ -76,3 +76,90 @@ $include-html-classes: false;
 .date-posted {
   font-style: italic;
 }
+
+// For the landing page
+#content .view-capture-and-promote {
+  .views-row {
+    margin-bottom: 100px;
+  }
+
+  .centering-container {
+    display: table;
+    width: 100%;
+
+    .title-container {
+      display: table-row;
+
+      a.project-title {
+        background: no-repeat;
+        height: 300px;
+        width: 100%;
+        color: #fff;
+        display: table-cell;
+        vertical-align: middle;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        h2 {
+          color: #FFF;
+          background: rgba(0, 0, 0, 0.7);
+          display: block;
+          padding: 40px;
+          margin:0 auto;
+          width: 70%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .field-name-field-teaser {
+    margin: 20px 0;
+
+    p {
+      font-size: rem-calc(23);
+    }
+  }
+
+
+  .project-details {
+    @include grid-row($behavior: nest);
+
+    .project-author {
+      @include grid-column($columns:6);
+
+      .user-info {
+        @include grid-row($behavior: nest);
+
+        .user-photo {
+          @include grid-column($columns:4);
+        }
+        .user-details {
+          @include grid-column($columns:8);
+          font-size: 1.7em;
+
+          .user-name {
+            line-height: 1.6;
+            display: block;
+          }
+          .user-title {
+            font-size: rem-calc(17);
+            display: block;
+            line-height: 1.1;
+          }
+        }
+      }
+    }
+
+
+    .project-meta {
+      @include grid-column($columns:6);
+
+      .date {
+        font-size: rem-calc(22);
+      }
+    }
+  }
+}
