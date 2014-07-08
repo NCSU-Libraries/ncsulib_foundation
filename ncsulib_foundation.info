@@ -32,15 +32,8 @@ stylesheets[all][] = search.css
 ; Foundation framework scripts (minified).
 scripts[] = scripts/vendor/foundation.min.js
 
-; mega menus
+; Other 3rd party/vendor
 scripts[] = scripts/vendor/jquery.hoverIntent.minified.js
-
-; typeahead
-;scripts[] = scripts/vendor/jquery.autocomplete.js
-
-; Theme scripts.
-; This file is empty, just uncomment this line and start editing!
-;scripts[] = scripts/ncsulib_foundation.js
 
 ; Custom
 scripts[] = scripts/global.js

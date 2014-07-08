@@ -160,7 +160,11 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       break;
   }
 
+<<<<<<< HEAD
     // hide default 'no content' text for taxonomy terms
+=======
+  // hide default 'no content' text for taxonomy terms
+>>>>>>> 3f5b5467ff4e6a721253a0b0fb1e868fafe46789
   if(isset($variables['page']['content']['system_main']['no_content'])) {
     unset($variables['page']['content']['system_main']['no_content']);
   }
@@ -170,7 +174,10 @@ function ncsulib_foundation_preprocess_page(&$variables) {
     $term = taxonomy_term_load(arg(2));
     $variables['theme_hook_suggestions'][] = 'page__taxonomy_' . $term->vocabulary_machine_name;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3f5b5467ff4e6a721253a0b0fb1e868fafe46789
 
 } // End tremendous template_preprocess_page function
 
@@ -182,6 +189,17 @@ function ncsulib_foundation_preprocess_node(&$variables) {
   // Add space.css for space content type
   if ($variables['type'] == 'space') {
     drupal_add_css(path_to_theme() . '/styles/core/custom/space.css', array('group' => 101));
+  }
+
+  // Add projects.css for space content type
+  if ($variables['type'] == 'project') {
+    drupal_add_css(path_to_theme() . '/styles/core/custom/projects.css', array('group' => 101));
+  }
+
+  // Make "node--NODETYPE--VIEWMODE.tpl.php" templates available for nodes
+  if($variables['view_mode'] == 'teaser') {
+    $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->type . '__teaser';
+    $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->nid . '__teaser';
   }
 }
 
@@ -242,7 +260,7 @@ function ncsulib_foundation_js_alter(&$javascript) {
   // Unset jQuery from the jQuery Update module
   unset($javascript['https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js']);
   unset($javascript['https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js']);
-  unset($javascript['sites/all/modules/modules/panels/js/panels.js']);
+  unset($javascript['sites/all/modules/panels/js/panels.js']);
   unset($javascript[0]);
 }
 
@@ -312,9 +330,11 @@ function ncsulib_foundation_breadcrumb($variables) {
 function ncsulib_foundation_form_user_login_alter(&$form, &$form_state, $form_id) {
   // Alters the text on the user login form
   drupal_set_title(t('Website editing login'));
-  $form['name']['#title'] = t('Enter your Unity ID:');
+  // $form['name']['#title'] = t('Enter your Unity ID:');
+  $form['name']['#title'] = t('Enter your Active Directory Id:');
   $form['name']['#description'] = t('');  // Enter descriptive text here, if desired
-  $form['pass']['#title'] = t('Enter your Unity password:');
+  // $form['pass']['#title'] = t('Enter your Unity password:');
+  $form['pass']['#title'] = t('Enter your Active Directory password:');
   $form['pass']['#description'] = t('');  // Enter descriptive text here, if desired
 }
 
@@ -390,6 +410,33 @@ function ncsulib_foundation_aggregator_block_item($variables) {
   }
 }
 
+
+/**
+ * Implements theme_field()
+ *
+ * Just to get rid of stupid colons
+ */
+function ncsulib_foundation_field($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . '&nbsp;</div>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
 
 /**
  * Implements theme_field()
@@ -579,6 +626,79 @@ function ncsulib_foundation_field__space($variables) {
 }
 
 /**
+ * Implements theme_username()
+ */
+function ncsulib_foundation_username($variables) {
+  $author = user_load($variables['uid']);
+  $photo = get_user_image($author);
+
+  // Add user's title
+  $field_title = field_get_items('user', $author, 'field_title');
+  $title = field_view_value('user', $author, 'field_title', $field_title[0]);
+
+  if (isset($variables['link_path'])) {
+    // We have a link path, so we should generate a link using l().
+    $output  = '<div class="user-photo">'. render($photo) .'</div>';
+    $output .= '<div class="user-details">';
+    $output .= '<span class="user-name">'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
+    $output .= '<span class="user-title">'. render($title) .'</span>';
+    $output .= '</div>';
+    $output  = '<div class="user-info">'. $output .'</div>';
+  }
+  else {
+    // Modules may have added important attributes so they must be included
+    // in the output. Additional classes may be added as array elements like
+    // $variables['attributes_array']['class'][] = 'myclass';
+    $output  = '<span' . drupal_attributes($variables['attributes_array']) . '>';
+    $output .=  render($photo);
+    $output .=  $variables['name'];
+    $output .=  $variables['extra'];
+    $output .= '</span>';
+  }
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Make collaborators show up with name, title and thumbnail image
+ */
+function ncsulib_foundation_field__field_staff__project($variables) {
+  $output = '';
+
+  // Load all collaborators' fields
+  $collaborators = array();
+  foreach ($variables['element']['#items'] as $key => $value) {
+    $collaborators[] = user_load($value['target_id']);
+
+    // Add link to user's page
+    $variables['items'][$key]['link'] = 'user/'. $collaborators[$key]->uid;
+
+    // Add user's image
+    $variables['items'][$key]['image'] = get_user_image($collaborators[$key]);
+
+    // Add user's title
+    $field = field_get_items('user', $collaborators[$key], 'field_title');
+    $variables['items'][$key]['title'] = field_view_value('user', $collaborators[$key], 'field_title', $field[0]);
+
+  }
+
+  // The HTML template for user info
+  foreach ($variables['items'] as $delta => $item) {
+    $output .= '<div class="user-info">';
+    $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
+    $output .= '<div class="user-details">';
+    $output .= '<span class="user-name">'. l(render($item), $item['link']) .'</span>';
+    $output .= '<span class="user-title">'. render($item['title']) .'</span>';
+    $output .= '</div>';
+    $output .= '</div>';
+
+  }
+
+  return $output;
+}
+
+/**
  * Helper function that adjusts date to current timezone. Especially for
  * daylight savings
  */
@@ -589,4 +709,23 @@ function ncsulib_foundation_adjust_for_timezone($time){
 }
 
 
+/**
+ * Helper function for getting an image render array
+ */
+function get_user_image($user) {
+  $image_array = '';
 
+  if (field_get_items('user', $user, 'field_staff_photo')) {
+      $image = field_get_items('user', $user, 'field_staff_photo');
+      $image_array = field_view_value('user', $user, 'field_staff_photo', $image[0], array(
+        'type' => 'image',
+        'settings' => array(
+          'image_style' => 'half-page-width',
+          'image_link' => 'content',
+        ),
+      ));
+    } else {
+      $image_array  = '<img src="http://www.placecage.com/288/370">';
+    }
+  return $image_array;
+}

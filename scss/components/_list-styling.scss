@@ -26,6 +26,15 @@
     }
 }
 
+// Remove red bullets
+@mixin unstyled-list {
+    li:before{
+        content: none !important;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+}
+
 
 .styled-list{
 	@include styled-list;
@@ -42,10 +51,9 @@
 #main-content ul[class*='small-block-grid'],
 #main-content ul[class*='medium-block-grid'],
 #main-content ul[class*='large-block-grid'],
-#main-content ul.pagination{
-	li:before{
-		content: none;
-		padding: 0px;
-		margin: 0px;
-	}
+#main-content ul.pagination,
+body.page-node main ul.unstyle-list,
+body.html main ul.unstyle-list,
+ul.unstyle-list{
+	@include unstyled-list;
 }

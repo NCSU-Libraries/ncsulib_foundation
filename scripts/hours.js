@@ -24,7 +24,6 @@ jQuery(document).ready(function($){
 			var cellH = $(this).height();
 			var cellW = $(this).width();
 			$('.date-popup-wrapper').css({'left':pos.left-(popupW*0.5)+(cellW*0.5)+5,'top':pos.top-popupH-11}); //yeah. this is hacky
-			// console.log(pos.left);
 		}
 	})
 

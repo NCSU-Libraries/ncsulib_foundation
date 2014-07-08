@@ -2,6 +2,7 @@
 $include-html-classes: false;
 @import "foundation";
 @import "silent_type";
+@import "components/list-styling";
 
 
 /* tables */
@@ -75,7 +76,7 @@ div.floor {
 }
 
 .ui-tabs .ui-tabs-nav {
-    height: 37px
+    height: 47px
 }
 
 .main .ui-tabs-panel ul {
@@ -83,7 +84,7 @@ div.floor {
     vertical-align: top
 }
 
-.main .data-targets{
+#content .data-targets{
     li {
         margin: 0 5px 0 0;
         line-height: 1.1;
@@ -93,7 +94,7 @@ div.floor {
         padding: 0;
         background: none;
 
-        .name-opp {
+        span {
             font-style: normal;
             float: left;
             width: 73%;
@@ -109,7 +110,6 @@ div.floor {
             display: block;
             overflow: auto;
             font-style: italic;
-            /*font-size: 87%;*/
         }
     }
 }
@@ -253,8 +253,14 @@ table.tablesorter {
 
 }
 
-.main ul li.no-util-all {
-    margin-right: 0;
+.main ul {
+    @include unstyled-list;
+    .no-util-all {
+        margin-right: 0;
+    }
+    .no-util-fp {
+        display: none;
+    }
 }
 
 .main p.note {
@@ -283,6 +289,6 @@ table.tablesorter {
 }
 
 // overrides
-.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-    font-size: rem-calc(11.4);
+#content .ui-tabs-anchor {
+    font-size: rem-calc(13.5);
     }

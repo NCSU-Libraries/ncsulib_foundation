@@ -16,7 +16,7 @@
  *
  */
 	// js for popup
-	drupal_add_js('sites/all/themes/ncsulibraries/scripts/hours.js', 'file');
+	drupal_add_js('sites/all/themes/ncsulib_foundation/scripts/hours.js', 'file');
 
 	$params = array(
 	  'view' => $view,
@@ -49,14 +49,14 @@
 	<div class="date-nav-wrapper clearfix">
 		<div class="date-nav item-list">
 			<div class="date-heading">
-				<h3 class="subheader"><?php echo $month; ?></h3>
+				<h3 class="subheader" id="hours-month"><?php echo $month; ?></h3>
 			</div>
 			<ul class="page">
 				<li class="date-prev">
-					<a href="<?php echo $prev_url; ?>">«</a>
+					<a href="<?php echo $prev_url; ?>#hours-month">«</a>
 				</li>
 				<li class="date-next">
-					<a href="<?php echo $next_url; ?>">»</a>
+					<a href="<?php echo $next_url; ?>#hours-month">»</a>
 				</li>
 			</ul>
 		</div>

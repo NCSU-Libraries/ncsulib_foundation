@@ -6,10 +6,6 @@ var allLinks = [];            // to apply jQuery view switch to two links
   allLinks[1] = '.text-link-all';
 
 jQuery(function($) {
-  $('.no-util-fp').hide();
-
-
-
   //jQuery UI tabbed interface
   $('#tabs').tabs();
 
@@ -33,15 +29,17 @@ jQuery(function($) {
 
   //hover or click an area, highlight or activate a corresponding list item/link
   $('area[data-room]').each(function() {
-    var room = $(this).attr('data-room');
+    var room      = $(this).attr('data-room');
     var className = '';
-    var $roomLink= $('a[data-target-room="' + room + '"]');
+    var $roomLink = $('a[data-target-room="' + room + '"]');
 
     className = $(this).attr('data-nameable') === 'yes' ? 'highlighter' : 'highlighter-reserved';
 
     //this will apply only to the floorplans
     $(this).click(function() {
-      $('a[data-target-room="'+room+'"]').click(); //activate the link for the corresponding list item
+      // voodoo
+      window.location.href = $('a[data-target-room="'+room+'"]').attr('href');
+      $('a[data-target-room="'+room+'"]').click(); //activate the link for the
       thisMapsterImgID = $('area[data-room]').parents('div.ui-tabs-panel').children('.floorplan').children('.floor').attr('id');
       $(thisMapsterImgID).mapster('onClick', false); //clear the color fill on click
     });
@@ -54,7 +52,7 @@ jQuery(function($) {
       );
   });
 
-  //hover over a list item/link, highlight the corresponding map area
+  // hover over a list item/link, highlight the corresponding map area
   $('a[data-target-room]').each(function() {
     var $targetRoom = $(this).attr('data-target-room');
 
@@ -111,10 +109,12 @@ jQuery(function($) {
   // creating table from existing lists in tabbed view of interface
   $('ul.data-targets a').each(function() {
     floorForTable = $(this).parents('ul').attr('data-image') === "floor6" ? "Grounds" : $(this).parents('ul').attr('data-image').replace(/floor/g, "Floor ");
+    list = $(this).html();
     space = $('span:first-child', this).text();
-    price = $('.price', this).text();
+    price = list.slice(list.lastIndexOf('>')+1);
+
     botCount++;  // iterator used to filter out certain naming opportunities
-    // console.log(space + ' ' + botCount);
+
     if  (space.match(/bot/gi) !== null ) {
       floorForTable = "Floors 1 and 2";
     }
@@ -134,7 +134,7 @@ jQuery(function($) {
         // set a unique id
         id: 'cost',
         is: function (s) {
-            return /^[£$€?.]/.test(s);
+            return (/^[£$€?.]/).test(s);
         }, format: function (s) {
             return $.tablesorter.formatFloat(s.replace(new RegExp(/[$]/g), "").replace(/RESERVED/g, "").replace(/,/g, ""));
         }, type: "numeric"

@@ -375,7 +375,7 @@ header#minimum-bar{
 		@media #{$large-up}{}
 
 		#home-hours{
-			padding: rem-calc(5) 0;
+			padding: rem-calc(3) 0 rem-calc(2);
 			background: $topbar-dropdown-bg;
 
 			@media #{$medium-only} {
@@ -496,7 +496,7 @@ header#minimum-bar{
 			padding-bottom: 0;
 			padding-right: 0;
 			padding-top: 0;
-			width: 48%;
+			width: 47.5%;
 		}
 		@media #{$large-up} {
 			width: 57%;
