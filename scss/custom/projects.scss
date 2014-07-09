@@ -78,9 +78,10 @@ $include-html-classes: false;
 }
 
 // For the landing page
-#content .view-capture-and-promote {
+#content .view-display-id-page {
   .views-row {
-    margin-bottom: 100px;
+    padding-bottom: 50px;
+    margin-bottom: 200px;
   }
 
   .centering-container {
@@ -104,12 +105,14 @@ $include-html-classes: false;
 
         h2 {
           color: #FFF;
-          background: rgba(0, 0, 0, 0.7);
+          background: rgba(0, 0, 0, 0.8);
           display: block;
-          padding: 40px;
-          margin:0 auto;
+          padding: 28px;
+          margin: 0 auto;
           width: 70%;
           text-align: center;
+          font-size: rem-calc(45);
+          font-weight: 700;
         }
       }
     }
@@ -122,7 +125,6 @@ $include-html-classes: false;
       font-size: rem-calc(23);
     }
   }
-
 
   .project-details {
     @include grid-row($behavior: nest);
@@ -157,9 +159,50 @@ $include-html-classes: false;
     .project-meta {
       @include grid-column($columns:6);
 
+      .read-more {
+        float: right;
+        @include button($bg: rgb(0, 112, 255));
+      }
+
       .date {
         font-size: rem-calc(22);
       }
     }
+  }
+
+  .view-footer {
+    @include grid-column(7, $center: true);
+    margin-top: 175px;
+    text-align: center;
+
+    p {
+      font-size: rem-calc(30);
+    }
+
+    a {
+      @include button($bg: rgb(0, 112, 255));
+      font-size: rem-calc(30);
+    }
+  }
+}
+
+.view-display-id-page_1 {
+  .views-row {
+    margin-bottom: 20px;
+  }
+
+  .views-field-field-lastname,
+  .views-field-field-lastname .field-content,
+  .views-field-created {
+    display: inline;
+  }
+
+  .views-field-field-lastname {
+    font-style: italic;
+    color: rgba(128, 128, 128, 1);
+  }
+
+  .views-field.views-field-created {
+    color: rgba(128, 128, 128, 1);
   }
 }
