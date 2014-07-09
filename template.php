@@ -169,7 +169,13 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   // overwrite 'user activity' taxonomy template page
   if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
     $term = taxonomy_term_load(arg(2));
-    $variables['theme_hook_suggestions'][] = 'page__taxonomy_' . $term->vocabulary_machine_name;
+    // $variables['theme_hook_suggestions'][] = 'page__taxonomy_' . $term->vocabulary_machine_name;
+
+    // unset all content from user activity taxonomy page
+    if($term->vocabulary_machine_name == 'user_activities'){
+      unset($variables['page']['content']['system_main']['nodes']);
+      unset($variables['page']['content']['system_main']['term_heading']['term']);
+    };
   }
 
 

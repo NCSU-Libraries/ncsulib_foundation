@@ -1,36 +1,56 @@
 @import "compass/css3";
 
-.user-activity-list{
+#content .user-activity-list{
 
 	ol{
+		list-style: none;
+		margin: 0px;
 
 		li{
+			padding: 0px;
 			text-align: center;
 
-			h2{
-				height: 110px;
+			> a{
+				display: block;
+				padding: 25px;
 
-				i{
-					background: #4c83af;
-					border-radius: 100px;
-					color: #FFF;
-					font-size: 4rem;
-					min-width: 110px;
-					padding: 25px;
-					text-shadow: 2px 2px rgba(0,0,0, 0.3);
-					// @include transition-property(font-size,padding,min-width);
-					// @include transition-duration(0.25s);
+				h2{
+					margin-top: 0px;
+
+					i{
+						color: #4c83af;
+						font-size: 5rem;
+						min-width: 110px;
+						padding: 0px 20px 20px 20px;
+						text-shadow: 2px 2px rgba(0,0,0, 0.3);
+					}
 				}
 			}
+
+			a:hover{
+				background: #f5f5f5;
+				text-decoration: none;
+			}
 		}
+	}
+}
 
-		li:hover{
+// staff sidebar
+#content .l-sidebar-first{
 
-			i{
-				background: #FFF;
-				border: 5px solid #4c83af;
-				color: #4c83af;
-				padding: 20px;
+	.staff-member{
+		margin-bottom: 20px;
+
+		.staff-meta{
+			padding-left: 0px;
+
+			h4{
+				margin-bottom: 5px;
+				text-transform: none;
+			}
+
+			p{
+				font-size: 12px;
 			}
 		}
 	}

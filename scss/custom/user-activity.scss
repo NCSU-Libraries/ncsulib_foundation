@@ -3,17 +3,31 @@
 }
 
 
-// staff block (left column)
-.sidebar .staff-member{
-	margin-bottom: 20px;
-	width: 100%;
 
-	img{
-		margin-bottom: 15px;
-	}
-}
 
 // project block (right column)
 .sidebar .project-item{
 	margin-bottom: 40px;
+}
+
+
+// staff sidebar
+#content .l-sidebar-first{
+
+	.staff-member{
+		margin-bottom: 20px;
+
+		.staff-meta{
+			padding-left: 0px;
+
+			h4{
+				margin-bottom: 5px;
+				text-transform: none;
+			}
+
+			p{
+				font-size: 12px;
+			}
+		}
+	}
 }
