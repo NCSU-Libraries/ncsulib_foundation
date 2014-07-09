@@ -1,3 +1,15 @@
+<?php
+// Firing the Foundation modal (Reveal) for the purpose of displaying attached image files.
+$data = ' (function ($) {
+            $(\'span.file a\').click( function(e) {
+              e.preventDefault();
+              $(\'#modal-general\').html(\'<img src="\'+ this.href +\'">\');
+              $(\'#modal-general\').foundation(\'reveal\', \'open\');
+            });
+          })(jQuery);';
+drupal_add_js($data, array('type' => 'inline', 'scope' => 'footer'));
+?>
+
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
     <div class="story">
@@ -52,3 +64,6 @@
     </div>
 
 </article>
+
+<!-- Reveal Modals begin -->
+<div id="modal-general" class="reveal-modal" data-reveal></div>
