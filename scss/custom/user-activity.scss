@@ -37,10 +37,11 @@
 }
 
 // workshops sidebar
-.workshop-item{
+#content .workshop-item{
 	margin-bottom: 30px;
 
 	.workshop-date{
+		margin-top: 6px;
 		padding-right: 0px;
 	}
 
@@ -51,6 +52,7 @@
 		h4{
 			color: #fff;
 			margin-bottom: 0px;
+			text-transform: uppercase;
 		}
 	}
 
