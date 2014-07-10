@@ -1,6 +1,7 @@
 @import "../foundation/settings";
 $include-html-classes: false;
 @import "../foundation";
+@import "../components/list-styling";
 @import "silent_type";
 
 /**
@@ -19,6 +20,7 @@ $include-html-classes: false;
 }
 .room-numbers {
     margin-left: rem-calc(97);
+    @include unstyled-list;
 
     li {
         display: inline;
