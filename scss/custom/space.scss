@@ -7,49 +7,59 @@ $include-html-classes: false;
 /**
  * For the Space node content type
  */
-@media #{$medium-up} {
-    .field-name-field-image {
-        @include grid-column(6, $float: right);
+body.html main {
+    @media #{$medium-up} {
+        .field-name-field-image {
+            @include grid-column(6, $float: right);
+        }
     }
-}
-.building-name {
-    display: block;
-    float: left;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-.room-numbers {
-    margin-left: rem-calc(97);
-    @include unstyled-list;
-
-    li {
-        display: inline;
-    }
-}
-
-.field-name-body {
-    clear: left;
-
-    .field-item {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        background: none;
-    }
-}
-.room-list {
-    line-height: 1.6;
-    float: left;
-    // margin-bottom: rem-calc(16);
-}
-
-@media #{$small-only} {
-    .room-list {
+    .building-name {
+        display: block;
+        float: left;
+        line-height: 1.6;
         margin-bottom: 0;
     }
+     .room-numbers {
+        margin-left: rem-calc(97);
+        line-height: 1.7;
+        @include unstyled-list;
 
-    .field-name-field-image {
-        max-width: 330px;
-        margin: rem-calc(0 0 10 0);
+        li {
+            display: inline;
+        }
+    }
+
+    .button-reserve {
+        @include button($full-width: false);
+        @media #{$small-only} {
+            display: none;
+        }
+    }
+
+    .field-name-body {
+        clear: left;
+
+        .field-item {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background: none;
+        }
+    }
+    .room-list {
+        line-height: 1.6;
+        float: left;
+        // margin-bottom: rem-calc(16);
+    }
+
+    @media #{$small-only} {
+        .room-list {
+            margin: 0;
+        }
+
+        .field-name-field-image {
+            max-width: 330px;
+            margin: rem-calc(0 0 10 0);
+        }
     }
 }
