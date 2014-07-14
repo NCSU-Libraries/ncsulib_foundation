@@ -140,6 +140,8 @@ div[class*='tt-section-'] hr {
             }
 
             #search-all{
+                font-size: rem-calc(13);
+
                 @media #{$small-only}{
                     width: 100%;
                 }
