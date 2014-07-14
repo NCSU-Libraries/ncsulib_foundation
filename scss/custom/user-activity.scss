@@ -41,7 +41,7 @@ $include-html-classes: false;
 
 // project block (right column)
 #content .sidebar .project-item{
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 
 	.project-photo{
 		height: 165px;
@@ -50,35 +50,25 @@ $include-html-classes: false;
 
 	.project-info{
 
-		// h4{
-		// 	background: #FFF;
-		// 	margin-bottom: 0px;
-		// 	margin-left: 5%;
-		// 	margin-top: -46px;
-		// 	padding: 10px;
-		// 	text-decoration: none;
-		// 	width: 90%;
-		// }
-
 		h4 {
 			width:100%;
 			position:relative;
 		}
 
 		h4 > a {
-		    border-left: 20px solid #111;
-		    bottom: 150px;
+		    border-left: 20px solid #333;
 		    color: #fff;
-		    font-size: 1.5rem;
-		    left: 0;
+		    font-size: 1rem;
+		    left: -5px;
 		    line-height: 1.14;
 		    padding: 11px 0px;
 		    position: absolute;
 		    text-decoration: none;
 		    text-transform: uppercase;
+		    top: -150px;
 		}
 		h4 > a > span {
-		    background: #111;
+		    background: #333;
 		    padding: 10px 0px;
 		}
 		h4 > a > span > span {
@@ -89,27 +79,6 @@ $include-html-classes: false;
 
 }
 
-
-// staff sidebar
-// #content .l-sidebar-first{
-
-// 	.staff-member{
-// 		margin-bottom: 20px;
-
-// 		.staff-meta{
-// 			padding-left: 0px;
-
-// 			h4{
-// 				margin-bottom: 5px;
-// 				text-transform: none;
-// 			}
-
-// 			p{
-// 				font-size: 12px;
-// 			}
-// 		}
-// 	}
-// }
 
 // workshops sidebar
 #content .workshop-item{
