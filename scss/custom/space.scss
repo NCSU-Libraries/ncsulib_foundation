@@ -36,11 +36,10 @@ body.html main {
         }
     }
 
-    .email-button {
+    .button {
         @include button($full-width: false);
-        display: block;
+        float: left;
         clear: left;
-        width: 26%;
 
         @media #{$small-only} {
             width: 100%;
