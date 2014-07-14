@@ -44,21 +44,45 @@ $include-html-classes: false;
 	margin-bottom: 40px;
 
 	.project-photo{
-
+		height: 150px;
+		overflow: hidden;
 	}
 
 	.project-info{
 
-		h4{
-			background: #FFF;
-			margin-bottom: 0px;
-			margin-left: 5%;
-			margin-top: -46px;
-			padding: 10px;
-			text-decoration: none;
-			width: 90%;
+		// h4{
+		// 	background: #FFF;
+		// 	margin-bottom: 0px;
+		// 	margin-left: 5%;
+		// 	margin-top: -46px;
+		// 	padding: 10px;
+		// 	text-decoration: none;
+		// 	width: 90%;
+		// }
+
+		.h4 {width:80%; height:200px; position:relative; background:rgba(0,0,0,0.6)}
+
+		.h4 > a {
+		    border-left: 20px solid #000;
+		    bottom: 60px;
+		    color: #fff;
+		    font-size: 1.5rem;
+		    left: 0;
+		    line-height: 1.14;
+		    padding: 0;
+		    position: absolute;
+		    text-decoration: none;
+		    text-transform: uppercase;
+		}
+		.h4 > a > span {
+		    background: #000
+		}
+		.h4 > a > span > span {
+		    left: -10px;
+		    position: relative;
 		}
 	}
+
 }
 
 
