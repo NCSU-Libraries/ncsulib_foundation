@@ -60,9 +60,9 @@ $include-html-classes: false;
 		// 	width: 90%;
 		// }
 
-		.h4 {width:80%; height:200px; position:relative; background:rgba(0,0,0,0.6)}
+		h4 {width:80%; height:200px; position:relative; background:rgba(0,0,0,0.6)}
 
-		.h4 > a {
+		h4 > a {
 		    border-left: 20px solid #000;
 		    bottom: 60px;
 		    color: #fff;
@@ -74,10 +74,10 @@ $include-html-classes: false;
 		    text-decoration: none;
 		    text-transform: uppercase;
 		}
-		.h4 > a > span {
+		h4 > a > span {
 		    background: #000
 		}
-		.h4 > a > span > span {
+		h4 > a > span > span {
 		    left: -10px;
 		    position: relative;
 		}
