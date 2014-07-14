@@ -36,6 +36,17 @@ body.html main {
         }
     }
 
+    .email-button {
+        @include button($full-width: false);
+        display: block;
+        clear: left;
+        width: 26%;
+
+        @media #{$small-only} {
+            width: 100%;
+        }
+    }
+
     .field-name-body {
         clear: left;
 
