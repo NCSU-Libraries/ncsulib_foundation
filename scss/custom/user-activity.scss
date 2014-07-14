@@ -15,7 +15,7 @@ $include-html-classes: false;
 }
 
 #main-content{
-	section.block.block-views.contextual-links-region{
+	section.block.block-views{
 		@include grid-row;
 		margin-bottom: 30px;
 
