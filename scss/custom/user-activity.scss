@@ -44,7 +44,7 @@ $include-html-classes: false;
 	margin-bottom: 40px;
 
 	.project-photo{
-		height: 150px;
+		height: 165px;
 		overflow: hidden;
 	}
 
@@ -60,22 +60,26 @@ $include-html-classes: false;
 		// 	width: 90%;
 		// }
 
-		h4 {width:80%; height:200px; position:relative; background:rgba(0,0,0,0.6)}
+		h4 {
+			width:100%;
+			position:relative;
+		}
 
 		h4 > a {
-		    border-left: 20px solid #000;
-		    bottom: 60px;
+		    border-left: 20px solid 111;
+		    bottom: 150px;
 		    color: #fff;
 		    font-size: 1.5rem;
 		    left: 0;
 		    line-height: 1.14;
-		    padding: 0;
+		    padding: 11px 0px;
 		    position: absolute;
 		    text-decoration: none;
 		    text-transform: uppercase;
 		}
 		h4 > a > span {
-		    background: #000
+		    background: 111;
+		    padding: 10px 0px;
 		}
 		h4 > a > span > span {
 		    left: -10px;
