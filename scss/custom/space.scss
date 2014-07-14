@@ -36,6 +36,16 @@ body.html main {
         }
     }
 
+    .button {
+        @include button($full-width: false);
+        float: left;
+        clear: left;
+
+        @media #{$small-only} {
+            width: 100%;
+        }
+    }
+
     .field-name-body {
         clear: left;
 

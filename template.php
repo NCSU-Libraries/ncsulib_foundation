@@ -500,7 +500,7 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
       $schedule_id_render_array  = field_view_value('node', $node, 'field_room_res_id', $room_res_id[0]);
       $schedule_id = $schedule_id_render_array['#markup'];
       $output  = '<a class="button show-for-small-only" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">Reserve</a>';
-      $output .= '<a class="button-reserve" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
+      $output .= '<a class="button show-for-medium-up" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
       break;
 
     case 'By Mediated Email Form':
@@ -508,7 +508,6 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
       $form_url  = field_view_value('node', $node, 'field_request_form_url', $request_form_url[0]);
       $output = '<a class="button" href="'. $form_url['#element']['url'] .'">Request this room</a>';
       break;
-
 
     default:
       $output = '';
