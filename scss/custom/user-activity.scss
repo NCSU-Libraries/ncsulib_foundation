@@ -1,13 +1,42 @@
+$include-html-classes: false;
+@import "foundation/components/global";
+@import "foundation/components/grid";
+
+
 .user-activity-content-hidden{
 	display: none;
 }
 
+#back-to-link{
+	float: right;
+	position: relative;
+	top: -47px;
+}
+
+#main-content{
+	section.block.block-views.contextual-links-region{
+		@include grid-row;
+
+		h2{
+			@include grid-column(3);
+			font-size: 1rem;
+		}
+
+		.view{
+			@include grid-column(9);
+		}
+	}
+}
 
 
 
 // project block (right column)
 #content .sidebar .project-item{
 	margin-bottom: 40px;
+
+	.project-photo{
+
+	}
 
 	.project-info{
 
@@ -25,25 +54,25 @@
 
 
 // staff sidebar
-#content .l-sidebar-first{
+// #content .l-sidebar-first{
 
-	.staff-member{
-		margin-bottom: 20px;
+// 	.staff-member{
+// 		margin-bottom: 20px;
 
-		.staff-meta{
-			padding-left: 0px;
+// 		.staff-meta{
+// 			padding-left: 0px;
 
-			h4{
-				margin-bottom: 5px;
-				text-transform: none;
-			}
+// 			h4{
+// 				margin-bottom: 5px;
+// 				text-transform: none;
+// 			}
 
-			p{
-				font-size: 12px;
-			}
-		}
-	}
-}
+// 			p{
+// 				font-size: 12px;
+// 			}
+// 		}
+// 	}
+// }
 
 // workshops sidebar
 #content .workshop-item{
