@@ -26,7 +26,7 @@
     }
 }
 
-// Remove red bullets
+// Completely unstyle ul's
 @mixin unstyled-list {
     margin-left: 0px;
 
@@ -37,7 +37,7 @@
     }
 }
 
-ul.unstyled-list{
+.unstyled-list{
     @include unstyled-list;
 }
 .styled-list{
