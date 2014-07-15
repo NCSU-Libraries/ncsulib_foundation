@@ -37,8 +37,8 @@
     }
 }
 
-html body.page-node main ul.unstyled-list,
-html body.html main ul.unstyled-list{
+html body.page-node .l-main ul.unstyled-list,
+html body.html .l-main ul.unstyled-list{
     @include unstyled-list;
 }
 .styled-list{
