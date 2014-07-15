@@ -28,6 +28,8 @@
 
 // Remove red bullets
 @mixin unstyled-list {
+    margin-left: 0px;
+
     li:before{
         content: none !important;
         padding: 0px !important;
@@ -35,7 +37,7 @@
     }
 }
 
-.unstyled-list{
+ul.unstyled-list{
     @include unstyled-list;
 }
 .styled-list{
