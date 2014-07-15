@@ -21,7 +21,7 @@
     <?php print $name; ?>
   </div>
   <div class="project-meta">
-    <p class="read-more">Read more &rarr;</p>
+    <a href="<?php print $node_url; ?>" class="read-more">Read more &rarr;</a>
     <p class="date"><?php print date('F j, Y', $created); ?></p>
     <?php if(isset($content['field_project_user_activities'])): ?>
       <h3>Topics covered</h3>
