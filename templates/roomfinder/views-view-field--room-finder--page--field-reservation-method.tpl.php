@@ -1,5 +1,6 @@
 <?php
   if (!empty($output)){
+      kpr($row->nid);
       switch ($output) {
           case 'By Mediated Email Form':
           // Print out the url depending on whether or not there is a value
@@ -10,8 +11,23 @@
 
         case 'By Room Reservation System':
           $today = date('m-d-Y');
-          print '<a class="button tiny right show-for-small-only" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='.$row->_field_data['nid']['entity']->field_room_res_id['und'][0]['value'].'">Reserve</a>';
-          print '<a class="button tiny right show-for-medium-up" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='.$today.'&scheduleid='.$row->_field_data['nid']['entity']->field_room_res_id['und'][0]['value'].'">Reserve</a>';
+
+          // Check for exceptions on small-only button
+          $space_nid = $row->nid;
+          $nodes_that_use_desktop_version = array(
+            'Mini theater' => 1736,
+            'Fishbowl' => 2092,
+            'DML Studio' => 23924,
+            'DML Workstations' => 24235
+            );
+          $schedule_id = $row->_field_data['nid']['entity']->field_room_res_id['und'][0]['value'];
+
+          $mlib_option = '<a class="button show-for-small-only" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">Reserve</a>';
+          $mlib_option .= '<a class="button show-for-medium-up" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
+          $desktop_only = '<a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
+
+          $output = in_array($space_nid, $nodes_that_use_desktop_version) ? $desktop_only : $mlib_option;
+          print $output;
           break;
       }
     }
