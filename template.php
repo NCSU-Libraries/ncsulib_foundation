@@ -494,11 +494,25 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
 
   switch ($res_method) {
     case 'By Room Reservation System':
+      // Getting the phpScheduleIt id
       $room_res_id  = field_get_items('node', $node, 'field_room_res_id');
       $schedule_id_render_array  = field_view_value('node', $node, 'field_room_res_id', $room_res_id[0]);
       $schedule_id = $schedule_id_render_array['#markup'];
-      $output  = '<a class="button show-for-small-only" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">Reserve</a>';
-      $output .= '<a class="button show-for-medium-up" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
+
+      // Check for exceptions on small-only button, issue discovered by Cory Lown
+      $space_nid = $variables['element']['#object']->nid;
+      $nodes_that_use_desktop_version = array(
+        'Mini theater' => 1736,
+        'Fishbowl' => 2092,
+        'DML Studio' => 23924,
+        'DML Workstations' => 24235
+        );
+
+      $mlib_option = '<a class="button show-for-small-only" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">Reserve</a>';
+      $mlib_option .= '<a class="button show-for-medium-up" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
+      $desktop_only = '<a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
+
+      $output = in_array($space_nid, $nodes_that_use_desktop_version) ? $desktop_only : $mlib_option;
       break;
 
     case 'By Mediated Email Form':
