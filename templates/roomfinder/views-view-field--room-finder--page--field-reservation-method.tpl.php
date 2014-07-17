@@ -1,6 +1,5 @@
 <?php
   if (!empty($output)){
-      kpr($row->nid);
       switch ($output) {
           case 'By Mediated Email Form':
           // Print out the url depending on whether or not there is a value
