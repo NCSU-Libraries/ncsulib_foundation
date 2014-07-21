@@ -58,9 +58,9 @@ div.workbench-info-block{
     }
     a{
         font-family: inherit;
-        font-size: inherit;
-        font-weight: normal;
-        line-height: 1.6;
+    //     font-size: inherit;
+    //     font-weight: normal;
+    //     line-height: 1.6;
         text-rendering: optimizelegibility;
     }
     a:focus, select:focus, textarea:focus{
@@ -93,11 +93,6 @@ html #content{
     @media #{$small-only}{
         padding-top: rem-calc(20);
         margin-top: 0px;
-    }
-
-    .content{
-
-
     }
 }
 

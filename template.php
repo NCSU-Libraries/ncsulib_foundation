@@ -491,7 +491,6 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
   $nid          = $variables['element']['#object']->nid;
   $node         = node_load($nid);
 
-
   switch ($res_method) {
     case 'By Room Reservation System':
       // Getting the phpScheduleIt id
@@ -508,8 +507,8 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
         'DML Workstations' => 24235
         );
 
-      $mlib_option = '<a class="button show-for-small-only" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">Reserve</a>';
-      $mlib_option .= '<a class="button show-for-medium-up" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
+      $mlib_option = '<a class="button show-for-small-only small" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">Reserve</a>';
+      $mlib_option .= '<a class="button show-for-medium-up small" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
       $desktop_only = '<a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
 
       $output = in_array($space_nid, $nodes_that_use_desktop_version) ? $desktop_only : $mlib_option;
@@ -518,7 +517,11 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
     case 'By Mediated Email Form':
       $request_form_url = field_get_items('node', $node, 'field_request_form_url');
       $form_url  = field_view_value('node', $node, 'field_request_form_url', $request_form_url[0]);
-      $output = '<a class="button" href="'. $form_url['#element']['url'] .'">Request this room</a>';
+      $output = '<a class="button tiny" href="'. $form_url['#element']['url'] .'">Request this room</a>';
+      break;
+
+    case 'Not Reservable':
+      $output = '<a class="button disabled tiny secondary">Not Reservable</a>';
       break;
 
     default:

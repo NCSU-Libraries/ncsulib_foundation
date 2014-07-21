@@ -37,7 +37,7 @@ body.html main {
     }
 
     .button {
-        @include button($full-width: false);
+        // @include button($full-width: false);
         float: left;
         clear: left;
 
@@ -59,7 +59,7 @@ body.html main {
     .room-list {
         line-height: 1.6;
         float: left;
-        // margin-bottom: rem-calc(16);
+        margin-bottom: rem-calc(10);
     }
 
     @media #{$small-only} {
