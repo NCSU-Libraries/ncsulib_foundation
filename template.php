@@ -487,12 +487,13 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
 
   // Create a button based on the method chosen
   $res_method   = $variables['items'][0]['#markup'];
-  $today        = date('m-d-Y');
   $nid          = $variables['element']['#object']->nid;
   $node         = node_load($nid);
 
   switch ($res_method) {
     case 'By Room Reservation System':
+      $today        = date('m-d-Y');
+
       // Getting the phpScheduleIt id
       $room_res_id  = field_get_items('node', $node, 'field_room_res_id');
       $schedule_id_render_array  = field_view_value('node', $node, 'field_room_res_id', $room_res_id[0]);
@@ -521,11 +522,8 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
       break;
 
     case 'Not Reservable':
-      $output = '<a class="button disabled tiny secondary">Not Reservable</a>';
-      break;
-
     default:
-      $output = '';
+      $output = ' ';
       break;
   }
   return $output;
