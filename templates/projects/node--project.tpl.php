@@ -28,6 +28,7 @@ drupal_add_js($data, array('type' => 'inline', 'scope' => 'footer'));
             <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
+          <a href="/stories">&crarr; Back to Library Stories</a>
         </div>
         <?php print render($content['field_teaser']); ?>
         <?php print render($content['field_featured_image']); ?>
@@ -38,7 +39,7 @@ drupal_add_js($data, array('type' => 'inline', 'scope' => 'footer'));
 
           <div class="story-statement">
             <?php print $user_picture;?>
-            <h2>Problem Statement</h2>
+            <h2>How it Got Started</h2>
             <?php print render($content['field_problem_statement']); ?>
             <h2>What Happened</h2>
             <?php print render($content['body']); ?>
