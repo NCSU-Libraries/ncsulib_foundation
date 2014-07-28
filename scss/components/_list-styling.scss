@@ -55,6 +55,7 @@
 #main-content ul.pagination,
 body.page-node main ul.unstyle-list,
 body.html main ul.unstyle-list,
-ul.unstyle-list{
+ul.unstyle-list,
+ul.pager{
 	@include unstyled-list;
 }
