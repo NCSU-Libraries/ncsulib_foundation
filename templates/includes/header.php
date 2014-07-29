@@ -56,6 +56,7 @@ Your browser does not support inline frames or is currently configured  not to d
 <nav id="primary-nav-menus" role="navigation" aria-label="main navigation">
 	<div id="menu-find" class="primary-menu-list" >
 		<ul>
+			<li><a href="//www.lib.ncsu.edu/textbookservice/">Textbooks</a></li>
 			<li><a href="//www.lib.ncsu.edu/data">Spatial &amp; Numeric Data</a></li>
 			<li><a href="//www.lib.ncsu.edu/specialcollections">Special Collections</a></li>
 			<li><a href="//www.lib.ncsu.edu/repository">NC State Publications</a></li>
