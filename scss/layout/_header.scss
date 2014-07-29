@@ -393,7 +393,7 @@ header#minimum-bar{
 				font-size: rem-calc(12);
 				font-weight: 700;
 				margin: 0;
-				padding-top: 3px;
+				padding-top: 5px;
 
 				@media #{$small-only}{
 					font-size: rem-calc(10);
@@ -425,7 +425,7 @@ header#minimum-bar{
 				list-style-type: none;
 				line-height: 1;
 				margin: 0;
-				padding-top: 2px;
+				padding-top: 4px;
 
 				.library {
 					display: inline-block;
