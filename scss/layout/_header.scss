@@ -393,7 +393,7 @@ header#minimum-bar{
 				font-size: rem-calc(12);
 				font-weight: 700;
 				margin: 0;
-				padding-top: 5px;
+				padding-top: 4px;
 
 				@media #{$small-only}{
 					font-size: rem-calc(10);
