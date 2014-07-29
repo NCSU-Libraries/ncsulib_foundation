@@ -75,7 +75,7 @@ Your browser does not support inline frames or is currently configured  not to d
 			<li><a href="//www.lib.ncsu.edu/tools-citation">Citation</a></li>
 			<li><a href="//www.lib.ncsu.edu/reference-tools">Reference</a></li>
 			<li><a href="//www.lib.ncsu.edu/guides">Guides</a></li>
-			<li><a href="//www.lib.ncsu.edu/tutorials">Tutorials</a></li>
+			<li><a href="//www.lib.ncsu.edu/tutorials">Videos and Tutorials</a></li>
 		</ul>
 		<ul>
 			<li><a href="//www.lib.ncsu.edu/askus">Ask Us</a></li>
@@ -134,8 +134,8 @@ Your browser does not support inline frames or is currently configured  not to d
 		<div id="home-hours">
 			<p id="hours-title"><a href="/hours">TODAY'S HOURS</a>:</p>
 			<ul>
-				<li><a href="//www.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours">7am - 11pm<?= $ary['hill']; ?></span></a></li>
-				<li><a href="//www.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">7am - 11pm<?= $ary['hunt']; ?></span></a></li>
+				<li><a href="//www.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours"><?= $ary['hill']; ?></span></a></li>
+				<li><a href="//www.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours"><?= $ary['hunt']; ?></span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>
