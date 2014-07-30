@@ -186,14 +186,19 @@ function ncsulib_foundation_preprocess_page(&$variables) {
  *
  */
 function ncsulib_foundation_preprocess_node(&$variables) {
-  // Add space.css for space content type
-  if ($variables['type'] == 'space') {
-    drupal_add_css(path_to_theme() . '/styles/core/custom/space.css', array('group' => 101));
-  }
+  switch ($variables['type']) {
+    case 'space':
+      drupal_add_css(path_to_theme() . '/styles/core/custom/space.css', array('group' => 101));
+      break;
 
-  // Add projects.css for space content type
-  if ($variables['type'] == 'project') {
-    drupal_add_css(path_to_theme() . '/styles/core/custom/projects.css', array('group' => 101));
+    case 'report':
+      drupal_add_css(path_to_theme() . '/styles/core/custom/report.css', array('group' => 101));
+      break;
+
+    case 'project':
+      drupal_add_css(path_to_theme() . '/styles/core/custom/projects.css', array('group' => 101));
+      break;
+
   }
 
   // Make "node--NODETYPE--VIEWMODE.tpl.php" templates available for nodes
@@ -677,7 +682,7 @@ function ncsulib_foundation_username($variables) {
  *
  * Make collaborators show up with name, title and thumbnail image
  */
-function ncsulib_foundation_field__field_staff__project($variables) {
+function ncsulib_foundation_field__field_staff($variables) {
   $output = '';
 
   // Load all collaborators' fields
