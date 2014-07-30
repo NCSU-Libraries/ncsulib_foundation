@@ -10,26 +10,15 @@ $include-html-classes: false;
 #back-to-link{
 	float: left;
 	font-size: 0.8rem;
-	left: -14px;
-	position: relative;
+
+	a{
+		font-size: 0.75rem;
+	}
 }
 
 #main-content{
 	section.block.block-views{
-		// @include grid-row;
 		margin-bottom: 30px;
-
-		h2{
-			// @include grid-column(3);
-			// font-size: 1rem;
-			// font-weight: bold;
-			// margin-top: 4px;
-			// padding-left: 0px;
-		}
-
-		.view{
-			// @include grid-column(9);
-		}
 	}
 }
 
