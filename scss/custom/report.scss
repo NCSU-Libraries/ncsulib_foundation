@@ -1,0 +1,123 @@
+@import "../foundation/settings";
+$include-html-classes: false;
+@import "foundation";
+@import "silent_type";
+@import "components/list-styling";
+
+.report {
+
+  .field-label {
+    @extend %h2;
+  }
+
+  .report-title {
+    margin-bottom: rem-calc(30);
+
+    .field.field-name-body {
+      background: #D3D3D3;
+      padding: 9px 9px 1px 9px;
+      font-family: Univers;
+
+      p {
+        color: #838383;
+        font-size: 1.25rem;
+        font-style: italic;
+      }
+    }
+  }
+
+  .report-body {
+    @include grid-row($behavior: nest);
+
+
+    .report-statement {
+      @media #{$medium-up} {@include grid-column($columns:8)};
+
+      .report-team {
+        @include grid-row($behavior: nest);
+
+        h2 {@include grid-column($columns:12);}
+
+
+        .user-info {
+          @include grid-column($columns:4);
+          margin-bottom: rem-calc(10);
+
+          .user-photo {
+            @include grid-column($columns:4, $collapse: true);
+          }
+          .user-details {
+            @include grid-column($columns:8);
+
+            .user-name {
+              line-height: 1.2;
+              display: block;
+              font-size: rem-calc(14);
+            }
+            .user-title {
+              font-size: rem-calc(13);
+            }
+          }
+        }
+      }
+
+    }
+
+    aside {
+      @media #{$medium-up} {@include grid-column($columns:4)};
+
+      .user-info {
+        @include grid-row($behavior: nest);
+        margin-bottom: rem-calc(10);
+
+        .user-photo {
+          @include grid-column($columns:4);
+        }
+        .user-details {
+          @include grid-column($columns:8, $collapse: true);
+
+          .user-name {
+            line-height: 1.6;
+            display: block;
+          }
+          .user-title {
+            font-size: rem-calc(13);
+          }
+        }
+      }
+
+      .field-name-field-links,
+      .field-name-field-repo-or-license,
+      .field-name-field-release-date {
+
+
+        .field-items {
+          @extend %ul;
+          @include styled-list;
+
+          .field-item {
+            @extend %li;
+          }
+        }
+      }
+
+
+
+      h2:first-child {
+        margin-top: 0;
+      }
+
+      .field-label {
+        @extend %h4;
+      }
+
+
+
+    }
+
+  }
+}
+
+.date-posted {
+  font-style: italic;
+}
