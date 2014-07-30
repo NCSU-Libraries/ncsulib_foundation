@@ -17,7 +17,7 @@
         }
     }
 
-    li:before{
+    >*:before{
         color: #CC0000;
         content: "\f105";
         font-family: "FontAwesome";
