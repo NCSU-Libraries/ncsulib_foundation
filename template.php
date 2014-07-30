@@ -12,12 +12,6 @@ variable_set('htdocs_root', str_replace(strrchr(DRUPAL_ROOT, "/"), "/htdocs", DR
  *  and other various and sundry activities
  */
 function ncsulib_foundation_preprocess_page(&$variables) {
-  /**
-   * The code below is take directly from https://drupal.org/project/zurb-foundation
-   * We forked away from this project in order to be more agile, with the limitation
-   * that we have to keep this code up-to-date
-   */
-
   // Add page--node_type.tpl.php suggestions
   if (!empty($variables['node'])) {
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
@@ -54,24 +48,28 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   // Begin CSS suggestions
   if (module_exists('path')) {
     $alias = drupal_get_path_alias(str_replace('/edit','',$_GET['q']));
-        // If the alias is a clean URL
+    // If the alias is a clean URL
     if ($alias != $_GET['q'] || empty($variables['node'])) {
-            // Break the alias into its parts and iterate through the alias part by part
+      // Break the alias into its parts and iterate through the alias part by
+      // part
       $i=0;
       foreach (explode('/', $alias) as $path_part) {
         if ($i==0) {
-                    // If this is the first time through the loop, create the template suggestion
+          // If this is the first time through the loop, create the template
+          // suggestion
           $template_suggestion = $path_part;
           $css_suggestion = $path_part;
         } elseif ($i>=1) {
           if ($i==1) {
-                        // If this is the second time through the loop, create a variable to append each $path_part to
+            // If this is the second time through the loop, create a variable
+            // to append each $path_part to
             $path_part_holder = $css_suggestion . '--' . $path_part;
           } elseif ($i>=2) {
             $path_part_holder .= '--' . $path_part;
           }
 
-                    // If this is the second time or more through the loop, continue to append the alias path to the template suggestion
+          // If this is the second time or more through the loop, continue to
+          // append the alias path to the template suggestion
           $template_suggestion = $template_suggestion . '__' . $path_part;
           $css_suggestions[] = $path_part_holder;
         }
@@ -79,7 +77,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       }
 
       $template_suggestion = 'page__' . $template_suggestion;
-            // Add the template suggestion to the template suggestions hook
+      // Add the template suggestion to the template suggestions hook
       $variables['theme_hook_suggestions'][] = $template_suggestion;
     }
 
@@ -716,6 +714,7 @@ function ncsulib_foundation_field__field_staff($variables) {
 
   return $output;
 }
+
 
 /**
  * Helper function that adjusts date to current timezone. Especially for
