@@ -10,7 +10,7 @@
 ?>
 	<p>
 		<strong><?= $building_name; ?></strong><br/>
-		<?= $office_number; ?><br/>
+		<?php if($office_number){ echo $office_number;} ?><br/>
 		<?= nl2br($building_address); ?><br/>
 	</p>
 
