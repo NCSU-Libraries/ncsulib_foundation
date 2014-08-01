@@ -19,6 +19,17 @@ $include-html-classes: false;
 #main-content{
 	section.block.block-views{
 		margin-bottom: 30px;
+
+		.view-ontent{
+
+			>ul{
+
+				li{
+					float: left;
+					width: 50%;
+				}
+			}
+		}
 	}
 }
 
