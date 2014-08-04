@@ -26,9 +26,9 @@
 ?>
 	<li class="unavailable"><a href=""><?= strtoupper($letter); ?></a></li>
 	<?php else: ?>
-	<li><a href="/2staff/results?field_firstname_value=&field_lastname_value=<?=$letter;?>"><?= strtoupper($letter); ?></a></li>
+	<li><a href="/1staff/results?field_firstname_value=&field_lastname_value=<?=$letter;?>"><?= strtoupper($letter); ?></a></li>
 	<?php endif; ?>
 <?php endforeach; ?>
 </ul>
-<a href="/2staff/results" class="styled">or view all</a>
+<a href="/1staff/results" class="styled">or view all</a>
 <hr />
