@@ -81,7 +81,7 @@ $include-html-classes: false;
 #content .view-display-id-page {
   .views-row {
     padding-bottom: 50px;
-    margin-bottom: 200px;
+    margin-bottom: rem-calc(100);
   }
 
   .centering-container {
