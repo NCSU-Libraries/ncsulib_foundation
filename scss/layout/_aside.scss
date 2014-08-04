@@ -97,17 +97,19 @@
 /**
  * Default sidebar box styling, see /articles for an example
  */
-.sidebox {
-    margin-bottom: 80px;
-}
-.sidebox h2 {
-    font-size: 1.4em;
-    padding-bottom: 14px;
-}
-.sidebox ul li {
-    list-style: none;
-    padding-bottom: 9px;
-}
-.sidebox ul {
-    padding: 0;
+#content {
+	.sidebox {
+	    margin-bottom: 80px;
+	}
+	.sidebox h2 {
+	    font-size: 1.4em;
+	    padding-bottom: 14px;
+	}
+	.sidebox ul li {
+	    list-style: none;
+	    padding-bottom: 9px;
+	}
+	.sidebox ul {
+	    padding: 0;
+	}
 }
