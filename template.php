@@ -560,6 +560,22 @@ function ncsulib_foundation_field__field_room_number__space($variables) {
     $output .= '<span class="room-list">Room&nbsp;' . drupal_render($variables['items'][0]) . '</span>';
   }
 
+  // Building map
+  $building_value = $variables['element']['#object']->field_building_name['und'][0]['value'];
+  switch ($building_value) {
+    case 'hill':
+      $output .= '<div class="building-map-hill"><a href="/libmaps"><i class="fa fa-map-marker"></i> building map</a></div>';
+      break;
+
+    case 'hunt':
+      $output .= '<div class="building-map-hunt"><a href="/sites/default/files/files/pdfs/HuntLibrary-detailed-map.pdf"><i class="fa fa-map-marker"></i> building map</a></div>';
+      break;
+
+    default:
+      $output .= '';
+      break;
+  }
+
 
   return $output;
 }

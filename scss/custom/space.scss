@@ -20,13 +20,24 @@ body.html main {
         margin-bottom: 0;
     }
      .room-numbers {
-        margin-left: rem-calc(103);
+
         line-height: 1.8;
         @include unstyled-list;
+        margin-bottom: rem-calc(4);
 
         li {
             display: inline;
         }
+    }
+
+    .building-map-hunt {
+        margin: rem-calc(0 0 15 103);
+        @media #{$small-only} {margin-left: 0;}
+    }
+
+    .building-map-hill {
+        margin: rem-calc(0 0 15 130);
+        @media #{$small-only} {margin-left: 0;}
     }
 
     .button-reserve {
