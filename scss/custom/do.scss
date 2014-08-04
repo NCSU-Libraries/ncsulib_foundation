@@ -7,6 +7,10 @@ $include-html-classes: false;
 	display: none;
 }
 
+.item-list ul.pager{
+	display: none;
+}
+
 #content #back-to-link{
 	float: left;
 	font-size: 0.8rem;
@@ -18,15 +22,25 @@ $include-html-classes: false;
 
 #main-content{
 	section.block.block-views{
+		float: left;
 		margin-bottom: 30px;
 
-		.view-ontent{
+		h2{
+			float: left;
+			width: 100%;
+		}
 
-			>ul{
+		.view-content{
+
+			ul{
 
 				li{
 					float: left;
-					width: 50%;
+					width: 48%;
+				}
+
+				li:nth-child(odd){
+					margin-right: 2%;
 				}
 			}
 		}

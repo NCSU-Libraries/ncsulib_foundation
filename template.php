@@ -179,6 +179,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
 
 } // End tremendous template_preprocess_page function
 
+
 /**
  * Impelments template_preprocess_node()
  *
