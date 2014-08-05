@@ -443,6 +443,20 @@ function ncsulib_foundation_field($variables) {
 /**
  * Implements theme_field()
  *
+ * Using this to change the markup delivered to the Building field on Space
+ * nodes
+ */
+function ncsulib_foundation_field__field_building_name__space($variables) {
+  $output ='';
+  foreach ($variables['items'] as $delta => $item) {
+    $output = '<span class="building-name">at the '. $variables['items'][0]['#markup'] .'</span>';
+  }
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
  * Using this to change the markup delivered to the Field Request Form URL
  * field.  Turning it into a button.
  */
@@ -464,21 +478,6 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
   }
   return $output;
 }
-
-/**
- * Implements theme_field()
- *
- * Using this to change the markup delivered to the Building field on Space
- * nodes
- */
-function ncsulib_foundation_field__field_building_name__space($variables) {
-  $output ='';
-  foreach ($variables['items'] as $delta => $item) {
-    $output = '<span class="building-name">'. $variables['items'][0]['#markup'] .',&nbsp;</span>';
-  }
-  return $output;
-}
-
 
 /**
  * Implements theme_field()
@@ -512,9 +511,9 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
         'DML Workstations' => 24235
         );
 
-      $mlib_option = '<a class="button show-for-small-only small" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">Reserve</a>';
-      $mlib_option .= '<a class="button show-for-medium-up small" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
-      $desktop_only = '<a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
+      $mlib_option = '<a class="button show-for-small-only small" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">&rdsh; Reserve</a>';
+      $mlib_option .= '<a class="button show-for-medium-up small" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">&rdsh; Reserve</a>';
+      $desktop_only = '<a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">&rdsh; Reserve</a>';
 
       $output = in_array($space_nid, $nodes_that_use_desktop_version) ? $desktop_only : $mlib_option;
       break;
@@ -522,7 +521,7 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
     case 'By Mediated Email Form':
       $request_form_url = field_get_items('node', $node, 'field_request_form_url');
       $form_url  = field_view_value('node', $node, 'field_request_form_url', $request_form_url[0]);
-      $output = '<a class="button tiny" href="'. $form_url['#element']['url'] .'">Request this room</a>';
+      $output = '<a class="button tiny" href="'. $form_url['#element']['url'] .'">&rdsh; Request this room</a>';
       break;
 
     case 'Not Reservable':
@@ -543,13 +542,13 @@ function ncsulib_foundation_field__field_room_number__space($variables) {
 
   // Render the label, if it's not hidden.
   if (!$variables['label_hidden']) {
-    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . ':&nbsp;</div>';
+    $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
   }
 
   // Render the items as a comma separated inline list
 
   if (count($variables['items']) > 1) {
-    $output .= '<span class="room-list">Rooms&nbsp;</span>';
+    $output .= '<span class="room-list">Room Numbers:&nbsp;</span>';
     $output .= '<ul class="room-numbers"' . $variables['content_attributes'] . '>';
     for ($i=0; $i < count($variables['items']); $i++) {
       $output .= '<li>'. drupal_render($variables['items'][$i]);
@@ -557,18 +556,18 @@ function ncsulib_foundation_field__field_room_number__space($variables) {
     }
     $output .= '</ul>';
   } else {
-    $output .= '<span class="room-list">Room&nbsp;' . drupal_render($variables['items'][0]) . '</span>';
+    $output .= '<span class="room-list">Room Number:&nbsp;' . drupal_render($variables['items'][0]) . '</span>';
   }
 
   // Building map
   $building_value = $variables['element']['#object']->field_building_name['und'][0]['value'];
   switch ($building_value) {
     case 'hill':
-      $output .= '<div class="building-map-hill"><a href="/libmaps"><i class="fa fa-map-marker"></i> building map</a></div>';
+      $output .= '<div class="building-map"><a href="/libmaps"><i class="fa fa-map-marker"></i> building map</a></div>';
       break;
 
     case 'hunt':
-      $output .= '<div class="building-map-hunt"><a href="/sites/default/files/files/pdfs/HuntLibrary-detailed-map.pdf"><i class="fa fa-map-marker"></i> building map</a></div>';
+      $output .= '<div class="building-map"><a href="/sites/default/files/files/pdfs/HuntLibrary-detailed-map.pdf"><i class="fa fa-map-marker"></i> building map</a></div>';
       break;
 
     default:
@@ -590,7 +589,7 @@ function ncsulib_foundation_field__field_policies__space($variables) {
 
   // Render the label, if it's not hidden.
   if (!$variables['label_hidden']) {
-    $output .= '<h2' . $variables['title_attributes'] . '>' . $variables['label'] . '</h2>';
+    $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
   }
 
   // Render the items as a comma separated inline list
@@ -616,7 +615,7 @@ function ncsulib_foundation_field__field_get_help__space($variables) {
 
   // Render the label, if it's not hidden.
   if (!$variables['label_hidden']) {
-    $output .= '<h2' . $variables['title_attributes'] . '>' . $variables['label'] . '</h2>';
+    $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
   }
 
   // Render the items as a comma separated inline list
@@ -642,7 +641,7 @@ function ncsulib_foundation_field__space($variables) {
 
   // Render the label, if it's not hidden and display it as a heading 2
   if (!$variables['label_hidden']) {
-    $output .= '<h2' . $variables['title_attributes'] . '>' . $variables['label'] . '</h2>';
+    $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
   }
 
   // Render the items.
@@ -760,7 +759,7 @@ function get_user_image($user) {
         ),
       ));
     } else {
-      $image_array  = '<img src="http://www.placecage.com/288/370">';
+      $image_array  = '<img src="http://www.placecage.com/460/460">';
     }
   return $image_array;
 }
