@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
 				date_str = 'Open 24 Hours';
 			} else if($(this).hasClass('closed')){
 				date_str = 'Closed';
-			} else if($(this).hasClass('by_appointment')){
+			} else if($(this).hasClass('appointment_only')){
 				date_str = 'By Appointment';
 			} else if(open == '12:00am'){
 				date_str = 'Closes at ' + close;
