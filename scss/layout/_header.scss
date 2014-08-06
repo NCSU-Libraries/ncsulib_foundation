@@ -13,6 +13,27 @@ body.nav-open{
 	background: $primary-color;
 	color: #FFF; //for accessibility
 	display: none;
+	padding-top: 5px;
+	height: 30px;
+	margin: auto;
+
+	#ncsu_branding_bar_container{
+		margin: auto;
+		width: 612px;
+
+		ul{
+			margin: 2px 0px 0px 0px;
+
+			li{
+
+				a{
+					color: #FFF;
+					font-size: 0.6rem;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
 
 	@media #{$medium-up}{
 		display: block;
