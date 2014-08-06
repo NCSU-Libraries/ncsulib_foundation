@@ -21,7 +21,7 @@ body.html main {
         margin-bottom: 0;
         color: #808080;
         font-size: 15px;
-       margin-bottom: 41px;
+        margin-bottom: rem-calc(20);
     }
      .room-numbers {
 
@@ -49,7 +49,8 @@ body.html main {
     }
 
     .button {
-        float: right;
+        clear: left;
+        float: left;
     }
 
     .field-name-body {
