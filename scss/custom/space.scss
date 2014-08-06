@@ -11,6 +11,7 @@ body.html main {
     @media #{$medium-up} {
         .field-name-field-image {
             @include grid-column(6, $float: right);
+            margin-bottom: rem-calc(30);
         }
     }
     .building-name {
@@ -18,25 +19,25 @@ body.html main {
         float: left;
         line-height: 1.6;
         margin-bottom: 0;
+        color: #808080;
+        font-size: 15px;
+        margin-bottom: rem-calc(20);
     }
      .room-numbers {
 
-        line-height: 1.8;
         @include unstyled-list;
-        margin-bottom: rem-calc(4);
+        line-height: 1.4;
 
         li {
             display: inline;
+            font-size: rem-calc(16);
         }
     }
 
-    .building-map-hunt {
-        margin: rem-calc(0 0 15 103);
-        @media #{$small-only} {margin-left: 0;}
-    }
-
-    .building-map-hill {
-        margin: rem-calc(0 0 15 130);
+    .building-map {
+        margin: rem-calc(10 0 15 0);
+        font-size: rem-calc(16);
+        clear: left;
         @media #{$small-only} {margin-left: 0;}
     }
 
@@ -48,17 +49,13 @@ body.html main {
     }
 
     .button {
-        // @include button($full-width: false);
-        float: left;
         clear: left;
-
-        @media #{$small-only} {
-            width: 100%;
-        }
+        float: left;
     }
 
     .field-name-body {
         clear: left;
+        margin-bottom: rem-calc(20);
 
         .field-item {
             margin: 0;
@@ -68,9 +65,7 @@ body.html main {
         }
     }
     .room-list {
-        line-height: 1.6;
-        float: left;
-        margin-bottom: rem-calc(10);
+        font-size: rem-calc(16);
     }
 
     @media #{$small-only} {
@@ -79,8 +74,11 @@ body.html main {
         }
 
         .field-name-field-image {
-            max-width: 330px;
             margin: rem-calc(0 0 10 0);
         }
+    }
+
+    h3:first-of-type {
+        clear: both;
     }
 }
