@@ -26,23 +26,23 @@ div#utility_bar {
     text-align:left;margin:0 auto;}
 
 
-#utility_bar div#head_in {
+div#head_in {
     width: 670px;
 }
 
 
-#utility_bar div#head_in{
+div#head_in{
     height: 31px;
     position: relative;
     overflow: hidden;
     border: none;
 }
 
-#utility_bar div#utility_bar div.logo{
-    background:url(../images/red_brick_old.gif) no-repeat 0px 2px;
+div#utility_bar div.logo{
+    background:url(images/red_brick_old.gif) no-repeat 0px 2px;
     height: 31px;
-	width: 165px;
-	float: left;
+    width: 165px;
+    float: left;
 }
 
 div#utility_bar div.logo a{
@@ -65,10 +65,10 @@ div#utility_bar #topnav {
 
 div#utility_bar #topnav li {
     float:left;
-    font-size:1em;
+    font-size:0.6em;
     text-transform:uppercase;
     padding:3px 8px 3px 7px;
-    background:url(../images/white_lines.gif) no-repeat right center;
+    background:url(images/white_lines.gif) no-repeat right center;
 }
 
 div#utility_bar #topnav li.last {
@@ -114,13 +114,13 @@ div#utility_bar .sitesearch_form input.search {
  ****************** Search Bar ***********************
  *****************************************************/
 
-#utility_bar  div#ncsu_bar {
+div#ncsu_bar {
     margin:0;
     padding:0;text-align:center;
     background-color:#C00;
 }
 
-#utility_bar #open {
+#open {
     text-transform:uppercase;
     color:#FFF;
     z-index: 2;
@@ -133,9 +133,9 @@ div#utility_bar .sitesearch_form input.search {
     height:31px;
     text-align:left;margin:0 auto;}
 
-#utility_bar #open{width: 670px;}
+    #open{width: 670px;}
 
-#utility_bar #open h3 {
+#open h3 {
     float: left;
     text-transform:uppercase;
     margin: 10px 10px 0 0;
@@ -145,20 +145,20 @@ div#utility_bar .sitesearch_form input.search {
     font-size:110%;
 }
 
-#utility_bar #open #search_button,
-#utility_bar #open #closeh_button {position: relative; top: 5px;}
-#utility_bar #open #search {margin-left: 5px;}
+#open #search_button,
+#open #closeh_button {position: relative; top: 5px;}
+#open #search {margin-left: 5px;}
 #utility_bar { width:100%; display: block;}
 
-#utility_bar div#open div {
+div#open div {
     margin:0;
     padding:0;
-    background:url(../images/red_brick_old.gif) no-repeat 0px 2px;
+    background:url(images/red_brick_old.gif) no-repeat 0px 2px;
     height: 31px;
     float: left;
 }
 
-#utility_bar div#open div.logo a{
+div#open div.logo a{
     width:165px;
     height:31px;
     overflow:hidden;
@@ -168,20 +168,20 @@ div#utility_bar .sitesearch_form input.search {
     padding:0;
     text-align:center;}
 
-#utility_bar div#open div.logo span a{width: 100px;}
+div#open div.logo span a{width: 100px;}
 
-#utility_bar #open form.sitesearch_form {
-	padding-top: 0px;
-	padding-left: 200px
+#open form.sitesearch_form {
+    padding-top: 0px;
+    padding-left: 200px
 }
 
-#utility_bar .sitesearch_form input#search {
+.sitesearch_form input#search {
     width:150px;
-    background: #fff url(../images/head_txtbox_shadow.gif) no-repeat;
+    background: #fff url(images/head_txtbox_shadow.gif) no-repeat;
     border:none;
 }
 
-#utility_bar form fieldset{
+form fieldset{
     display: inline;
     border: none;
     padding: 0px;
@@ -190,13 +190,13 @@ div#utility_bar .sitesearch_form input.search {
     width: 200px;
 }
 
-#utility_bar form fieldset legend{
+form fieldset legend{
     text-indent: -9999px;
     overflow: hidden;
     position: absolute;
 }
 
-#utility_bar form label.access{
+form label.access{
     text-indent: -9999px;
     overflow: hidden;
     position: absolute;

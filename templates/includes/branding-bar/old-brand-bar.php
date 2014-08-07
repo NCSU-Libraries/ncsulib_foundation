@@ -20,7 +20,7 @@
 </div> -->
 
 
-<link rel="stylesheet" type="text/css" href="/sites/all/themes/ncsulib_foundation/templates/includes/old-branding-bar.css">
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/ncsulib_foundation/templates/includes/branding-bar/old-branding-bar.css">
 <div id="utility_bar">
 
         <div id="head_in">
@@ -50,7 +50,7 @@
 
             <div class="logo"><a href="http://www.ncsu.edu/" title="North Carolina State University Homepage">North Carolina State University</a></div>
 
-            <form action="http://www.google.com/search" method="get" name="mySearch" id="mySearch" class="sitesearch_form" role="search">
+<!--             <form action="http://www.google.com/search" method="get" name="mySearch" id="mySearch" class="sitesearch_form" role="search">
 
                 <input type="hidden" name="as_sitesearch" value="ncsu.edu" />
 
@@ -75,7 +75,7 @@
                 <input class="btn_qlinks" src="images/head_btn_search.gif" id="search_button" alt="search" title="search" type="image" />
                 <input class="btn_close" src="images/head_btn_close.gif" id="closeh_button" alt="close" title="close" type="image"  onClick="swaptabs('utility_bar','open'); return false;" />
 
-            </form>
+            </form> -->
 
         </div>
 
