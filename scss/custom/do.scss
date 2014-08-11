@@ -35,25 +35,22 @@ $include-html-classes: false;
 		.view-content{
 
 			ul{
-				columns: 2;
 			  	-webkit-columns: 2;
 				-moz-columns: 2;
+				-o-columns: 2;
+				-ms-columns: 2;
+				columns: 2;
+				-webkit-column-break-inside:avoid;
+				-moz-column-break-inside:avoid;
+				-o-column-break-inside:avoid;
+				-ms-column-break-inside:avoid;
+				column-break-inside:avoid;
 				float: left;
 				margin-left: 2px;
 				width: 100%;
 
-				li{
-					// float: left;
-					// width: 46%;
-				}
-
 				li:before{
 					margin-left: 0px;
-				}
-
-				li:nth-child(odd){
-					// margin-right: 2%;
-					// width: 46%;
 				}
 			}
 		}
