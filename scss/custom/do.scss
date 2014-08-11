@@ -35,14 +35,25 @@ $include-html-classes: false;
 		.view-content{
 
 			ul{
+				columns: 2;
+			  	-webkit-columns: 2;
+				-moz-columns: 2;
+				float: left;
+				margin-left: 2px;
+				width: 100%;
 
 				li{
-					float: left;
-					width: 48%;
+					// float: left;
+					// width: 46%;
+				}
+
+				li:before{
+					margin-left: 0px;
 				}
 
 				li:nth-child(odd){
-					margin-right: 2%;
+					// margin-right: 2%;
+					// width: 46%;
 				}
 			}
 		}
