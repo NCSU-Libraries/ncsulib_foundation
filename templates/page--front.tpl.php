@@ -173,7 +173,7 @@
                     </div>
                     <div class="happenings-content">
                         <h2><a href="/events/" class="events-link">Events</a></h2>
-                        <p>Speaker series’, book discussions, campus and community events...</p>
+                        <p>Speaker series, book discussions, campus and community events...</p>
                     </div>
                 </div>
                 <div id="home-exhibits">
