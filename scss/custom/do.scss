@@ -49,6 +49,10 @@ $include-html-classes: false;
 				margin-left: 2px;
 				width: 100%;
 
+				li{
+					float: left;
+				}
+
 				li:before{
 					margin-left: 0px;
 				}
