@@ -46,15 +46,19 @@ $include-html-classes: false;
 				-ms-column-break-inside:avoid;
 				column-break-inside:avoid;
 				float: left;
-				margin-left: 2px;
+				list-style: disc;
+				margin-left: 13px;
 				width: 100%;
 
 				li{
 					float: left;
+					width: 100%;
 				}
 
 				li:before{
+					content: none;
 					margin-left: 0px;
+					padding: 0px;
 				}
 			}
 		}
@@ -78,7 +82,9 @@ $include-html-classes: false;
 
 		h4{
 			color: #fff;
+			line-height: 1.3rem;
 			margin-bottom: 0px;
+			padding-top: 2px;
 			text-transform: uppercase;
 		}
 	}
