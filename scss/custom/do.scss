@@ -43,7 +43,8 @@ $include-html-classes: false;
 
 		.view-content{
 
-			ul{
+			.item-list{
+
 			  	-webkit-columns: 2;
 				-moz-columns: 2;
 				-o-columns: 2;
@@ -59,21 +60,24 @@ $include-html-classes: false;
 				-o-column-break-inside:avoid;
 				-ms-column-break-inside:avoid;
 				column-break-inside:avoid;
-				float: left;
-				list-style: disc;
-				margin-left: 13px;
-				width: 100%;
 
-				li{
+				ul{
 					float: left;
-					list-style-position: inside;
-					width: 83%;
-				}
+					list-style: disc;
+					margin-left: 13px;
+					width: 100%;
 
-				li:before{
-					content: none;
-					margin-left: 0px;
-					padding: 0px;
+					li{
+						float: left;
+						list-style-position: inside;
+						width: 83%;
+					}
+
+					li:before{
+						content: none;
+						margin-left: 0px;
+						padding: 0px;
+					}
 				}
 			}
 		}
