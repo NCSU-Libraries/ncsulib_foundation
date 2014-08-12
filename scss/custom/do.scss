@@ -60,9 +60,9 @@ $include-html-classes: false;
 				-o-column-break-inside:avoid;
 				-ms-column-break-inside:avoid;
 				column-break-inside:avoid;
+				float: left;
 
 				ul{
-					float: left;
 					list-style: disc;
 					margin-left: 13px;
 					width: 100%;
