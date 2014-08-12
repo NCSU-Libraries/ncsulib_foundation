@@ -79,6 +79,13 @@ $include-html-classes: false;
 					}
 				}
 			}
+
+			.device-list{
+				img{
+					height: 150px;
+					width: auto;
+				}
+			}
 		}
 	}
 }
