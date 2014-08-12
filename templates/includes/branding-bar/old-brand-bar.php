@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/sites/all/themes/ncsulib_foundation/templates/includes/branding-bar/old-branding-bar.css">
+<link rel="stylesheet" type="text/css" href="//lib.ncsu.edu/sites/all/themes/ncsulib_foundation/templates/includes/branding-bar/old-branding-bar.css">
 <div id="utility_bar">
 
     <div id="head_in">
