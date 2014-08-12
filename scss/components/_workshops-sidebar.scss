@@ -1,0 +1,40 @@
+// workshops sidebar
+#content .workshop-item{
+	margin-bottom: 30px;
+
+	.workshop-date{
+		margin-top: 6px;
+		padding-right: 0px;
+	}
+
+	.workshop-month{
+		background: #cc0000;
+		text-align:center;
+
+		h4{
+			color: #fff;
+			line-height: 1.3rem;
+			margin-bottom: 0px;
+			padding-top: 2px;
+			text-transform: uppercase;
+		}
+	}
+
+	.workshop-day{
+		border-left:1px solid #DDD;
+		border-bottom:1px solid #DDD;
+		border-right:1px solid #DDD;
+		text-align: center;
+
+		h2{
+			font-size: 2rem;
+			line-height: 2rem;
+			margin-bottom: 0px;
+			padding: 6px 0px 0px 0px;
+		}
+	}
+
+	.workshop-title{
+		padding-right: 0px;
+	}
+}
