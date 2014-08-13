@@ -81,12 +81,10 @@ $include-html-classes: false;
 			}
 
 			.device-list{
+
 				li{
-					a{
-						img{
-							// height: 150px;
-							// width: auto;
-						}
+					.device-photo{
+						width: auto;
 					}
 				}
 			}
