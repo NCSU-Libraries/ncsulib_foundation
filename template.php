@@ -634,7 +634,7 @@ function ncsulib_foundation_field__field_get_help__space($variables) {
 /**
  * Implements theme_field()
  *
- * Turns field labels into heading2
+ * Turns field labels into heading3
  */
 function ncsulib_foundation_field__space($variables) {
   $output = '';
