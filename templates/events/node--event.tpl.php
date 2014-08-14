@@ -22,9 +22,6 @@
 
     $space_nid = $node->field_space['und'][0]['target_id'];
     $space_node = node_load($space_nid);
-
-    $img = $node->field_image_for_event['und'][0]['uri'];
-
 ?>
 <h1><?php echo $title; ?></h1>
 <div id="event-node" class="row">
@@ -95,8 +92,6 @@
 
     </div>
     <div class="columns medium-5">
-        <?php if($img): ?>
-        <img src="<?php echo image_style_url('half-page-width', $img); ?>" width="100%" alt="<?php echo $node->title; ?>" />
-        <?php endif; ?>
+        <?php print drupal_render($content['field_image_for_event']); ?>
     </div>
 </div>
