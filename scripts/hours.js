@@ -11,7 +11,11 @@ jQuery(document).ready(function($){
 			} else if($(this).hasClass('appointment_only')){
 				date_str = 'By Appointment';
 			} else if(open == '12:00am'){
-				date_str = 'Closes at ' + close;
+				if(close == '12:00am'){
+					date_str = 'Closes at Midnight';
+				} else{
+					date_str = 'Closes at ' + close;
+				}
 			} else if(close == '12:00am'){
 				date_str = 'Opens at ' + open;
 			} else{
