@@ -148,13 +148,15 @@
 
                 <div id="story-2">
                     <div class="story-photo">
-                        <a href="/proposed-hours-2014" id="story-2-photo">
-                         <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hours_notice_image.jpg" alt="Possible changes in hours for the D. H. Hill and Hunt Libraries, Fall 2014" width="100%" />
+                        <a href="http://www.lib.ncsu.edu/proposed-hours-2014-staged" id="story-2-photo">
+                         <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hours_notice_image.jpg" alt="New this fall: Changes to D. H. Hill and the Hunt Library Hours" width="100%" />
                      </a>
                  </div>
-                 <h3><a href="/proposed-hours-2014" id="story-2-heading">Possible Changes To Hours</a></h3>
-                 <p>Budget reductions are requiring the Libraries to propose changes to the overnight hours at the D. H. Hill and Hunt Libraries.</p>
-                 <p><a href="https://www.lib.ncsu.edu/proposed-hours-2014" class="story-2-link">See the proposed new hours and learn more about the reductions to library staff and cuts to the Libraries’ collections budget.</a></p>
+                 <h3><a href="http://www.lib.ncsu.edu/proposed-hours-2014-staged" id="story-2-heading">Only One Main Library Open Overnight</a></h3>
+                    <p>Budget reductions have required some changes to the
+                    overnight hours at the D. H. Hill and Hunt Libraries.  D. H. Hill will now close at midnight on Sundays and Mondays,
+                    while Hunt will close at midnight on Tuesdays, Wednesdays,
+                    and Thursdays.</p>
              </div>
 
              <div id="happenings">

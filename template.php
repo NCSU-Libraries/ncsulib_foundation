@@ -634,9 +634,36 @@ function ncsulib_foundation_field__field_get_help__space($variables) {
 /**
  * Implements theme_field()
  *
- * Turns field labels into heading2
+ * Turns field labels into heading3
  */
 function ncsulib_foundation_field__space($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden and display it as a heading 2
+  if (!$variables['label_hidden']) {
+    $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Turns field labels into heading3
+ */
+function ncsulib_foundation_field__event($variables) {
   $output = '';
 
   // Render the label, if it's not hidden and display it as a heading 2

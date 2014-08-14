@@ -1,108 +1,82 @@
-<?php
-  /**
-   * Event node
-   * Author: Charlie Morris
-   * Date: 3/28/13
-   */
-  drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/event.css');
-?>
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+  <?php if ($title): ?>
+  <?php print render($title_prefix); ?>
+  <h1 id="page-title" class="title"><?php print $title; ?></h1>
+  <?php print render($title_suffix); ?>
+<?php endif; ?>
 
-<?php
-    $time = field_get_items('node', node_load($node->nid), 'field_time');
-    $value1 = strtotime($time[0]['value'])+ncsulib_foundation_adjust_for_timezone($time[0]['value']);
-    $value2 = strtotime($time[0]['value2'])+ncsulib_foundation_adjust_for_timezone($time[0]['value2']);
+<?php print render($title_prefix); ?>
+<?php if (!$page): ?>
+  <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+<?php endif; ?>
+<?php print render($title_suffix); ?>
 
-    $start_date = date('F j, Y', $value1);
-    $end_date = date('F j, Y', $value2);
-    $date_display = ($start_date != $end_date) ? $start_date . ' to ' . $end_date : $start_date;
+    <div id="event-node" class="row">
+        <div class="columns medium-7">
+            <div class="event-meta">
+                <?php print drupal_render($content['field_time']); ?>
 
-    $start_time = date('g:ia', $value1);
-    $end_time = date('g:ia', $value2);
-    $time_display = ($start_time != $end_time) ? $start_time . ' - ' . $end_time : $start_time;
+                <?php
+                    // Loading date from the associated space node, including title,
+                    // building_name and, if CVRL, the body
+                    if (!empty($node->field_space)) {
+                        $space_nid = $node->field_space['und'][0]['target_id'];
+                        $space_node = node_load($space_nid);
+                        // The nid of the related space
+                        $space_nid = $node->field_space['und'][0]['target_id'];
 
-    $space_nid = $node->field_space['und'][0]['target_id'];
-    $space_node = node_load($space_nid);
+                        // Load the node into the page
+                        $space_node = node_load($space_nid);
 
-    $img = $node->field_image_for_event['und'][0]['uri'];
+                        // Get the node items that we're interested in
+                        $building_field = field_get_items('node', $space_node, 'field_building_name');
+                        $space_body = field_get_items('node', $space_node, 'body');
 
-    // contact
-    $name = $node->field_contact_name['und'][0]['value'];
-    $phone = $node->field_contact_phone['und'][0]['value'];
-    $email = $node->field_contact_email['und'][0]['email'];
-?>
-<h1><?php echo $title; ?></h1>
-<div id="event-node" class="row">
-    <div class="columns medium-7">
-        <div class="event-meta">
-            <h5><strong>When:</strong> <?= $date_display.', '.$time_display; ?></h5>
-            <!--h5 class="subheader"><strong>Where:</strong> <?php echo 'at the <a href="/node/' . $space_nid  . '">' . $space_node->title . '</a>'; ?></h5-->
-            <?php
-                // Loading date from the associated space node, including title,
-                // building_name and, if CVRL, the body
-                if (!empty($node->field_space)) {
-                    // The nid of the related space
-                    $space_nid = $node->field_space['und'][0]['target_id'];
+                        // Display related node's fields
+                        print '<h3>Where</h3><p>The <a href="/node/' . $space_nid  . '">' . $space_node->title . '</a>';
+                        switch ($space_node->title) {
+                            // A bit of a stopgap for CVRL and Brickyard until a better
+                            // alternative can be constructed/architected
+                            case 'Cameron Village Regional Library':
+                                $cvrl_body = field_view_value('node', $space_node, 'body', $space_body[0]);
+                                print render($cvrl_body);
+                                break;
 
-                    // Load the node into the page
-                    $space_node = node_load($space_nid);
+                            case 'Brickyard':
+                            case 'Oval':
+                                break;
 
-                    // Get the node items that we're interested in
-                    $building_field = field_get_items('node', $space_node, 'field_building_name');
-                    $space_body = field_get_items('node', $space_node, 'body');
+                            default:
+                                $building_out = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
+                                print ' in ' . render($building_out);
+                                break;
+                      }
+                      print '</p>';
+                    }
 
-                    // Display related node's fields
-                    print '<h5 class="subheader"><strong>Where:</strong> The <a href="/node/' . $space_nid  . '">' . $space_node->title . '</a>';
-                    switch ($space_node->title) {
-                        // A bit of a stopgap for CVRL and Brickyard until a better
-                        // alternative can be constructed/architected
-                        case 'Cameron Village Regional Library':
-                            $cvrl_body = field_view_value('node', $space_node, 'body', $space_body[0]);
-                            print render($cvrl_body);
-                            break;
+                ?>
+            </div>
 
-                        case 'Brickyard':
-                        case 'Oval':
-                            break;
+            <?php print drupal_render($content['body']); ?>
 
-                        default:
-                            $building_out = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
-                            print ' in ' . render($building_out);
-                            break;
-                  }
-                  print '</h5>';
-                }
+            <!-- contact -->
+            <?php if( isset($content['field_contact_name']) || isset($content['field_contact_phone']) || isset($content['field_contact_email'])): ?>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-details">
+                    <?php print drupal_render($content['field_contact_name']); ?>
+                    <?php print drupal_render($content['field_contact_phone']); ?>
+                    <?php print drupal_render($content['field_contact_email']); ?>
+                </div>
+            </div>
+            <?php endif; ?>
+            <?php print drupal_render($content['field_admission_information']); ?>
+            <?php print drupal_render($content['field_other_information']); ?>
 
-            ?>
+
         </div>
-
-        <?php echo $node->body['und'][0]['value']; ?>
-
-        <!-- contact -->
-        <?php if($name || $phone || $email): ?>
-        <h3>Contact Info</h3>
-        <p>
-            <?php echo $node->field_contact_name['und'][0]['value']; ?><br />
-            <?php echo $node->field_contact_phone['und'][0]['value']; ?><br />
-            <?php echo $node->field_contact_email['und'][0]['email']; ?>
-        </p>
-        <?php endif; ?>
-
-        <!-- admission -->
-        <?php if($node->field_admission_information): ?>
-        <h3>Admission Info</h3>
-        <p><?php echo $node->field_admission_information['und'][0]['value']; ?></p>
-        <?php endif; ?>
-
-        <!-- other -->
-        <?php if($node->field_other_information): ?>
-        <h3>More Info</h3>
-        <p><?php echo $node->field_other_information['und'][0]['value']; ?></p>
-        <?php endif; ?>
-
+        <div class="columns medium-5">
+            <?php print drupal_render($content['field_image_for_event']); ?>
+        </div>
     </div>
-    <div class="columns medium-5">
-        <?php if($img): ?>
-        <img src="<?php echo image_style_url('half-page-width', $img); ?>" width="100%" alt="<?php echo $node->title; ?>" />
-        <?php endif; ?>
-    </div>
-</div>
+</article>
