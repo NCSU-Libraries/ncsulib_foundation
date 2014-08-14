@@ -154,8 +154,7 @@
                  </div>
                  <h3><a href="/proposed-hours-2014" id="story-2-heading">Only One Main Library Open Overnight</a></h3>
                     <p>Budget reductions have required some changes to the
-                    overnight hours at the D. H. Hill and Hunt Libraries.  D. H
-                    . Hill will now close at midnight on Sundays and Mondays,
+                    overnight hours at the D. H. Hill and Hunt Libraries.  D. H. Hill will now close at midnight on Sundays and Mondays,
                     while Hunt will close at midnight on Tuesdays, Wednesdays,
                     and Thursdays.</p>
              </div>
