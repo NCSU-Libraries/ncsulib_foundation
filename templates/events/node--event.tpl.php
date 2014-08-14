@@ -25,10 +25,6 @@
 
     $img = $node->field_image_for_event['und'][0]['uri'];
 
-    // contact
-    $name = $node->field_contact_name['und'][0]['value'];
-    $phone = $node->field_contact_phone['und'][0]['value'];
-    $email = $node->field_contact_email['und'][0]['email'];
 ?>
 <h1><?php echo $title; ?></h1>
 <div id="event-node" class="row">
@@ -78,14 +74,12 @@
         <?php echo $node->body['und'][0]['value']; ?>
 
         <!-- contact -->
-        <?php if($name || $phone || $email): ?>
-        <h3>Contact Info</h3>
-        <p>
-            <?php echo $node->field_contact_name['und'][0]['value']; ?><br />
-            <?php echo $node->field_contact_phone['und'][0]['value']; ?><br />
-            <?php echo $node->field_contact_email['und'][0]['email']; ?>
-        </p>
+        <?php if( isset($content['field_contact_name']) || isset($content['field_contact_phone']) || isset($content['field_contact_email'])): ?>
+            <h3>Contact Info</h3>
         <?php endif; ?>
+        <?php print drupal_render($content['field_contact_name']); ?>
+        <?php print drupal_render($content['field_contact_phone']); ?>
+        <?php print drupal_render($content['field_contact_email']); ?>
 
         <!-- admission -->
         <?php if($node->field_admission_information): ?>
