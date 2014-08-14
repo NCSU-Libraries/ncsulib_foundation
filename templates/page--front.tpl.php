@@ -149,7 +149,7 @@
                 <div id="story-2">
                     <div class="story-photo">
                         <a href="/proposed-hours-2014" id="story-2-photo">
-                         <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hours_notice_image.jpg" alt="Possible changes in hours for the D. H. Hill and Hunt Libraries, Fall 2014" width="100%" />
+                         <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hours_notice_image.jpg" alt="New this fall: Changes to D. H. Hill and the Hunt Library Hours" width="100%" />
                      </a>
                  </div>
                  <h3><a href="/proposed-hours-2014" id="story-2-heading">Possible Changes To Hours</a></h3>
