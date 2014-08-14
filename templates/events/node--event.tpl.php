@@ -72,12 +72,15 @@
 
         <!-- contact -->
         <?php if( isset($content['field_contact_name']) || isset($content['field_contact_phone']) || isset($content['field_contact_email'])): ?>
+        <div class="contact-info">
             <h3>Contact Info</h3>
+            <div class="contact-details">
+                <?php print drupal_render($content['field_contact_name']); ?>
+                <?php print drupal_render($content['field_contact_phone']); ?>
+                <?php print drupal_render($content['field_contact_email']); ?>
+            </div>
+        </div>
         <?php endif; ?>
-        <?php print drupal_render($content['field_contact_name']); ?>
-        <?php print drupal_render($content['field_contact_phone']); ?>
-        <?php print drupal_render($content['field_contact_email']); ?>
-
         <!-- admission -->
         <?php if($node->field_admission_information): ?>
         <h3>Admission Info</h3>
