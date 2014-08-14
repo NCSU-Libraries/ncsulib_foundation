@@ -10,6 +10,12 @@ jQuery(document).ready(function($){
 				date_str = 'Closed';
 			} else if($(this).hasClass('appointment_only')){
 				date_str = 'By Appointment';
+			} else if($(this).hasClass('midnight')){
+				if(open == '12:00am'){
+					date_str = 'closes at Midnight';
+				} else{
+					date_str = open + ' - Midnight';
+				}
 			} else if(open == '12:00am'){
 				if(close == '12:00am'){
 					date_str = 'Closes at Midnight';
@@ -17,7 +23,11 @@ jQuery(document).ready(function($){
 					date_str = 'Closes at ' + close;
 				}
 			} else if(close == '12:00am'){
-				date_str = 'Opens at ' + open;
+				if(close == '12:00am'){
+					date_str = open + '- Midnight';
+				} else{
+					date_str = 'Opens at ' + open;
+				}
 			} else{
 				date_str = open +' - '+close;
 			}
