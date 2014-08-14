@@ -12,19 +12,19 @@ jQuery(document).ready(function($){
 				date_str = 'By Appointment';
 			} else if($(this).hasClass('midnight')){
 				if(open == '12:00am'){
-					date_str = 'closes at Midnight';
+					date_str = 'closes at midnight';
 				} else{
-					date_str = open + ' - Midnight';
+					date_str = open + ' - midnight';
 				}
 			} else if(open == '12:00am'){
 				if(close == '12:00am'){
-					date_str = 'Closes at Midnight';
+					date_str = 'Closes at midnight';
 				} else{
 					date_str = 'Closes at ' + close;
 				}
 			} else if(close == '12:00am'){
 				if(close == '12:00am'){
-					date_str = open + '- Midnight';
+					date_str = open + '- midnight';
 				} else{
 					date_str = 'Opens at ' + open;
 				}
