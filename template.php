@@ -463,14 +463,17 @@ function ncsulib_foundation_field__field_building_name__space($variables) {
 function ncsulib_foundation_field__field_request_form_url__device($variables) {
   $output ='';
   $device_nid = $variables['element']['#object']->nid;
+  // default is Hill only
   $building = " (Hill only)";
+  // NIDs that represent devices that can be lent anywhere
+  $building_agnostic = array(23583, 23564, 22470);
 
   foreach ($variables['items'] as $delta => $item) {
-    if ($device_nid == 22470 || $device_nid == 24518) {
-      // 22470 = Canon EOS Rebel T4i
+    // Change value to "Hunt only" if it's a Hunt only lend device
+    if ($device_nid == 24518) {
       // 24518 = Google Glass
       $building = " (Hunt only)";
-    } else if ($device_nid == 23583){
+    } else if (in_array($device_nid, $building_agnostic)) {
       // 23583 = projectors
       $building = '';
     }
