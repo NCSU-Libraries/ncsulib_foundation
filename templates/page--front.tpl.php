@@ -157,7 +157,7 @@
                     overnight hours at the D. H. Hill and Hunt Libraries.  D. H
                     . Hill will now close at midnight on Sundays and Mondays,
                     while Hunt will close at midnight on Tuesdays, Wednesdays,
-                    and Thursdays."</p>
+                    and Thursdays.</p>
              </div>
 
              <div id="happenings">
