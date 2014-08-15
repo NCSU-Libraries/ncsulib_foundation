@@ -634,6 +634,7 @@ function ncsulib_foundation_field__field_get_help__space($variables) {
   return $output;
 }
 
+
 /**
  * Implements theme_field()
  *
@@ -657,6 +658,43 @@ function ncsulib_foundation_field__space($variables) {
 
   // Render the top-level DIV.
   $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Print the building along with the room name
+ */
+function ncsulib_foundation_field__field_space__event($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
+  }
+
+  // Render the items as a comma separated inline list
+  $output .= '<ul class="field-items"' . $variables['content_attributes'] . '>';
+
+  foreach ($variables['items'] as $delta => $item) {
+    // Print space name
+    $output .= '<li>' . drupal_render($item);
+    $space_nid = $variables['element']['#items'][$delta]['entity']->nid;
+    $space_node = node_load($space_nid);
+
+    // Load building info, if present, print it
+    $building_field = field_get_items('node', $space_node, 'field_building_name');
+    $building_yes = !empty($building_field);
+    if (!empty($building_field)) {
+      $building_out = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
+      $output .= ' at the '. drupal_render($building_out) .'</li>';
+    }
+    $output .= '</li>';
+
+  }
+  $output .= '</ul>';
 
   return $output;
 }

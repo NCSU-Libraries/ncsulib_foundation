@@ -3,6 +3,7 @@ $include-html-classes: false;
 @import "foundation";
 @import "silent_type";
 @import "../components/list-styling";
+@import "../components/awesomify";
 
 .contact-info {
   .field-label {
@@ -17,4 +18,8 @@ $include-html-classes: false;
       @extend %li;
     }
   }
+}
+
+.date-display-single {
+  @include awesomify("\f073");
 }
