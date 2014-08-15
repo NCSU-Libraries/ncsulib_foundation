@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
 				date_str = 'By Appointment';
 			} else if($(this).hasClass('midnight')){
 				if(open == '12:00am'){
-					date_str = 'closes at idnight';
+					date_str = 'closes at midnight';
 				} else{
 					date_str = open + ' - midnight';
 				}
