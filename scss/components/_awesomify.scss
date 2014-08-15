@@ -1,0 +1,13 @@
+/**
+ * Mixin for Font Awesome icons used as backgrounds
+ */
+
+@mixin awesomify($unicode_icon) {
+  position: relative;
+
+  &:before{
+    content: $unicode_icon;
+    font-family: "FontAwesome";
+    padding-right: 0.5em;
+  }
+}
