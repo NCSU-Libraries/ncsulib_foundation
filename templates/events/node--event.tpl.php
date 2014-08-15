@@ -14,7 +14,6 @@
     <div id="event-node" class="row">
         <div class="columns medium-7">
             <div class="event-meta">
-                <? //kpr($content); ?>
                 <?php print drupal_render($content['field_time']); ?>
                 <?php print drupal_render($content['field_space']); ?>
             </div>
