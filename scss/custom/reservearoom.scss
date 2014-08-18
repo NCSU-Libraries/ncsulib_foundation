@@ -140,7 +140,7 @@ img {
     display: block;
 }
 .building-name {
-    @extend %h4;
+    // @extend %h4;
     @media #{$small-only} {
         font-weight: 700;
 
