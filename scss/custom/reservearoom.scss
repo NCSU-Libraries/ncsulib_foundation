@@ -140,7 +140,8 @@ img {
     display: block;
 }
 .building-name {
-    // @extend %h4;
+    font-weight: bold;
+
     @media #{$small-only} {
         font-weight: 700;
 
@@ -152,6 +153,7 @@ img {
 }
 .building-name, .floor {
     line-height: 1.1;
+    margin-bottom: 20px;
 }
 .capacity {
     margin-bottom: 10px;
