@@ -51,7 +51,7 @@ img {
 }
 .view-filters {
     @include grid-row();
-
+    margin-top: 30px;
     form {
 
         #edit-field-types-of-spaces-value-wrapper{
@@ -69,6 +69,7 @@ img {
 
         .views-exposed-widget {
             @include grid-column(6);
+            margin-bottom: 0px;
             padding: 0px;
 
             @media #{$small-only} {
