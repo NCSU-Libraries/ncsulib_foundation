@@ -151,12 +151,16 @@ img {
         }
     }
 }
-.building-name, .floor {
+
+.building-name{
+    margin-bottom: 5px;
+}
+.floor {
     line-height: 1.1;
     margin-bottom: 20px;
 }
 .capacity {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .views-field-title span{
     display: block;
