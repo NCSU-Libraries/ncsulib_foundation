@@ -143,10 +143,12 @@ img {
     font-weight: bold;
 
     @media #{$small-only} {
+        float: left;
         font-weight: 700;
+        margin-bottom: 15px;
 
         &:before {
-            content: "Building: ";
+            content: "Building: &nbsp;";
             font-weight: 400;
         }
     }
