@@ -141,6 +141,7 @@ img {
 }
 .building-name {
     font-weight: bold;
+    margin-bottom: 5px;
 
     @media #{$small-only} {
         float: left;
@@ -154,9 +155,6 @@ img {
     }
 }
 
-.building-name{
-    margin-bottom: 5px;
-}
 .floor {
     line-height: 1.1;
     margin-bottom: 20px;
