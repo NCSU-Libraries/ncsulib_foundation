@@ -68,7 +68,7 @@ img {
         }
 
         .views-exposed-widget {
-            @include grid-column(3);
+            @include grid-column(6);
             padding: 0px;
 
             @media #{$small-only} {
