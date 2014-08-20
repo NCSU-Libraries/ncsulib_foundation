@@ -132,7 +132,7 @@
 			<p id="hours-title"><a href="/hours">TODAY'S HOURS</a>:</p>
 			<ul>
 				<li><a href="//www.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours"><?= $ary['hill']; ?></span></a></li>
-				<li><a href="//www.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">Closes at midnight<?php echo '';//$ary['hunt']; ?></span></a></li>
+				<li><a href="//www.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours"><?= $ary['hunt']; ?></span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>
