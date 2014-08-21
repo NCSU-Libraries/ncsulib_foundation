@@ -16,7 +16,8 @@ module.exports = function(grunt) {
         }
       },
       build: {
-        src: ['scripts/vendor/foundation.min.js',
+        src: ['scripts/vendor/foundation/foundation.js',
+        'scripts/vendor/foundation/foundation.*.js',
         'scripts/modernizr-tests.js',
         'scripts/primary-nav.js',
         'scripts/search-bar.js',
