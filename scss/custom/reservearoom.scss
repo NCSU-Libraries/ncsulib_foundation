@@ -9,7 +9,7 @@ table {
     width: 100%;
 }
 tr {
-    border-top: 1px solid #DDD;
+    // border-top: 1px solid #DDD;
 }
 table tr td:first-child{
     padding-left: 0px;
@@ -51,7 +51,7 @@ img {
 }
 .view-filters {
     @include grid-row();
-
+    margin-top: 30px;
     form {
 
         #edit-field-types-of-spaces-value-wrapper{
@@ -68,7 +68,8 @@ img {
         }
 
         .views-exposed-widget {
-            @include grid-column(3);
+            @include grid-column(6);
+            margin-bottom: 0px;
             padding: 0px;
 
             @media #{$small-only} {
@@ -140,27 +141,36 @@ img {
     display: block;
 }
 .building-name {
-    @extend %h4;
+    font-weight: bold;
+    margin-bottom: 5px;
+
     @media #{$small-only} {
+        float: left;
         font-weight: 700;
+        margin-bottom: 15px;
 
         &:before {
-            content: "Building: ";
+            content: "Building:  ";
             font-weight: 400;
         }
     }
 }
-.building-name, .floor {
+
+.floor {
     line-height: 1.1;
+    margin-bottom: 20px;
 }
 .capacity {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.space-type{
+    margin-bottom: 20px;
 }
 .views-field-title span{
     display: block;
 }
 .views-field-title {
-    width: 25%;
+    // width: 25%;
 
     @media #{$small-only} {
         width: 75%;
