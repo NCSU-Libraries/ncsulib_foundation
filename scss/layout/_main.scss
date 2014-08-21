@@ -15,8 +15,15 @@ div.workbench-info-block{
     background-color: #fff;
 }
 
-#main-content{
+.one-sidebar.sidebar-second #main-content{
     padding-right: 40px;
+}
+.one-sidebar.sidebar-first #main-content{
+    padding-left: 40px;
+}
+.two-sidebars #main-content{
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #content{
