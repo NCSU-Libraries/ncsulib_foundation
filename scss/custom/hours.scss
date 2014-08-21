@@ -188,23 +188,11 @@ $include-html-classes: false;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*begin main schedule block*/
 #page #main{
 	@include grid-column(7);
+	padding-left: 0px;
+	padding-right: 0px;
 
 	@media #{$small-only}{
 		@include grid-column(12);
