@@ -827,7 +827,7 @@ function get_user_image($user) {
         ),
       ));
     } else {
-      $image_array  = '<img src="http://www.placecage.com/460/460">';
+      $image_array  = '<img src="http://www.placebabies.com/460/460/'. rand(1,99) .'">';
     }
   return $image_array;
 }
