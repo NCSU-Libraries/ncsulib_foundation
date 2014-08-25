@@ -83,8 +83,10 @@ $include-html-classes: false;
 			.device-list{
 
 				li{
+					padding-bottom: 10px;
+
 					.device-photo{
-						height: 200px;
+						margin-bottom: 10px;
 						width: auto;
 					}
 				}
