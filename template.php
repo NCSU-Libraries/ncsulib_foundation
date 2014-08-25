@@ -397,22 +397,6 @@ function ncsulib_foundation_views_pre_render(&$view) {
 }
 
 /**
- * Returns HTML for an individual feed item for display in the block.
- *
- * Author: Charlie Morris
- * For SCRC
- * TODO: Can this be deleted?
- */
-function ncsulib_foundation_aggregator_block_item($variables) {
-  if ($variables['item']->fid == '8') {
-    // Display the external link to the item.
-    return '<a href="' . check_url($variables['item']->link) . '">' . check_plain($variables['item']->title) . "</a>\n<br />" . filter_xss($variables['item']->description);
-  } else {
-    return '<a href="' . check_url($variables['item']->link) . '">' . check_plain($variables['item']->title) . "</a>\n";
-  }
-}
-
-/**
  * Helper function that adjusts date to current timezone. Especially for
  * daylight savings
  */
