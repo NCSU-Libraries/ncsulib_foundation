@@ -18,7 +18,7 @@ $include-html-classes: false;
 
 			> a{
 				display: block;
-				padding: 25px;
+				padding: 25px 10px;
 
 				h2{
 					margin-top: 0px;
@@ -51,10 +51,10 @@ $include-html-classes: false;
 			height: auto;
 
 			> a:nth-child(odd){
-				padding: 25px 25px 25px 0px;
+				padding: 25px 10px;
 			}
 			> a:nth-child(even){
-				padding: 25px 0px 25px 25px;
+				padding: 25px 10px;
 			}
 
 			h2{
