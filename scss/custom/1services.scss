@@ -22,6 +22,10 @@
 						color: #4c83af;
 						font-size: 5rem;
 					}
+					img{
+						max-height: 81px;
+						width: auto;
+					}
 				}
 			}
 
@@ -46,6 +50,14 @@
 			}
 			> a:nth-child(even){
 				padding: 25px 0px 25px 25px;
+			}
+
+			h2{
+
+				img{
+					max-height: 400px;
+					width: auto;
+				}
 			}
 		}
 	}
