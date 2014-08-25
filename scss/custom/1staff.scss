@@ -25,10 +25,10 @@ $include-html-classes: false;
 
     @media #{$medium-up}{
         aside#subnav{
-            @include grid-column(4);
+            @include grid-column(4, $pull:8);
         }
         #main-content{
-            @include grid-column(8);
+            @include grid-column(8, $push:4);
         }
     }
 
