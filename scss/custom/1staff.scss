@@ -1,6 +1,8 @@
 @import "../foundation/settings";
 $include-html-classes: false;
+@import "foundation/components/grid";
 @import "foundation/components/buttons";
+@import "foundation/components/global";
 
 .sidebar{
 
@@ -15,4 +17,19 @@ $include-html-classes: false;
 	i.fa-comments{
 		color: #cc0000;
 	}
+}
+
+
+// change size of staff photo section
+.one-sidebar.sidebar-first{
+
+    @media #{$medium-up}{
+        aside#subnav{
+            @include grid-column(4);
+        }
+        #main-content{
+            @include grid-column(8);
+        }
+    }
+
 }
