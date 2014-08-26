@@ -344,7 +344,7 @@ header#minimum-bar{
 				text-transform: capitalize;
 			}
 			li a:hover{
-				@media #{$small-only} {
+				@media #{$medium-up} {
 					text-decoration: underline;
 				}
 			}
