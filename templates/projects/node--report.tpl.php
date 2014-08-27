@@ -38,6 +38,7 @@
             <p class="date-posted">Last updated on <?php print date('F j, Y', $created); ?></p>
             <h2>Project Lead</h2>
             <?php print $name; ?>
+            <?php print render($content['field_contact']); ?>
             <?php print render($content['field_release_date']); ?>
             <?php print render($content['field_repo_or_license']); ?>
             <?php print render($content['field_links']); ?>
