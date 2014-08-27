@@ -320,7 +320,7 @@ function ncsulib_foundation_field__field_get_help__space($variables) {
 function ncsulib_foundation_field__space($variables) {
   $output = '';
 
-  // Render the label, if it's not hidden and display it as a heading 2
+  // Render the label, if it's not hidden and display it as a heading 3
   if (!$variables['label_hidden']) {
     $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
   }
