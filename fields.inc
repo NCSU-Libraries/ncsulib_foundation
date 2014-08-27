@@ -381,6 +381,46 @@ function ncsulib_foundation_field__field_space__event($variables) {
 /**
  * Implements theme_field()
  *
+ * Make collaborators show up with name, title and thumbnail image
+ */
+function ncsulib_foundation_field__field_event_leads__event($variables) {
+  $output = '';
+
+  // Load all collaborators' fields
+  $collaborators = array();
+  foreach ($variables['element']['#items'] as $key => $value) {
+    $collaborators[] = user_load($value['target_id']);
+
+    // Add link to user's page
+    $variables['items'][$key]['link'] = 'user/'. $collaborators[$key]->uid;
+
+    // Add user's image
+    $variables['items'][$key]['image'] = get_user_image($collaborators[$key]);
+
+    // Add user's title
+    $field = field_get_items('user', $collaborators[$key], 'field_title');
+    $variables['items'][$key]['title'] = field_view_value('user', $collaborators[$key], 'field_title', $field[0]);
+
+  }
+
+  // The HTML template for user info
+  foreach ($variables['items'] as $delta => $item) {
+    $output .= '<div class="user-info">';
+    $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
+    $output .= '<div class="user-details">';
+    $output .= '<span class="user-name">'. l(render($item), $item['link']) .'</span>';
+    $output .= '<span class="user-title">'. render($item['title']) .'</span>';
+    $output .= '</div>';
+    $output .= '</div>';
+
+  }
+
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
  * Turns field labels into heading3
  */
 function ncsulib_foundation_field__event($variables) {
