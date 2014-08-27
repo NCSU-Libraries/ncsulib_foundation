@@ -87,7 +87,7 @@ function ncsulib_foundation_field__field_staff($variables) {
     $collaborators[] = user_load($value['target_id']);
 
     // Add link to user's page
-    $variables['items'][$key]['link'] = 'user/'. $collaborators[$key]->uid;
+    $variables['items'][$key]['link'] = 'staff/'. $collaborators[$key]->name;
 
     // Add user's image
     $variables['items'][$key]['image'] = get_user_image($collaborators[$key]);
@@ -392,7 +392,8 @@ function ncsulib_foundation_field__field_event_leads__event($variables) {
     $collaborators[] = user_load($value['target_id']);
 
     // Add link to user's page
-    $variables['items'][$key]['link'] = 'user/'. $collaborators[$key]->uid;
+    kpr($collaborators);
+    $variables['items'][$key]['link'] = 'staff/'. $collaborators[$key]->name;
 
     // Add user's image
     $variables['items'][$key]['image'] = get_user_image($collaborators[$key]);
