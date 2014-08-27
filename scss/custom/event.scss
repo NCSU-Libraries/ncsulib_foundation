@@ -23,3 +23,24 @@ $include-html-classes: false;
 .date-display-single {
   @include awesomify("\f073");
 }
+
+.user-info {
+    @include grid-row();
+
+    .user-photo {
+        @include grid-column(5);
+    }
+
+    .user-details {
+        @include grid-column(7, $collapse: true);
+
+        .user-name {
+          display: block;
+        }
+
+        .user-title {
+          font-size: rem-calc(14);
+          font-style: italic;
+        }
+    }
+}
