@@ -55,7 +55,7 @@
                                 <ul>
                                     <li><h2>Courses</h2></li>
                                     <li><a href="/course" class="styled" id="ql_searchtools">Course Tools</a></li>
-                                    <li><a href="//reserves.lib.ncsu.edu/" class="styled" id="ql_course_reserves">Course Reserves</a></li>
+                                    <li><a href="//reserves.lib.ncsu.edu/auth/" class="styled" id="ql_course_reserves">Course Reserves</a></li>
                                     <li><a href="/textbookservice/" class="styled" id="ql_textbooks">Textbooks</a></li>
                                 </ul>
                             </li>
