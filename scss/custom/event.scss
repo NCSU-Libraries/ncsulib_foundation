@@ -25,7 +25,7 @@ $include-html-classes: false;
 }
 
 .user-info {
-    @include grid-row();
+    @include grid-row($behavior: nest);
 
     .user-photo {
         @include grid-column(5);
