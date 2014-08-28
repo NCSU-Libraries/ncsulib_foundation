@@ -1,6 +1,5 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="report">
-
         <div class="report-title">
           <?php if ($title): ?>
           <?php print render($title_prefix); ?>
@@ -22,7 +21,6 @@
           <div class="report-statement">
             <?php print render($content['field_problem_statement']); ?>
             <?php print render($content['field_technical_details']); ?>
-            <?php print $user_picture;?>
 
             <div class="report-team">
               <h2>Team</h2>
@@ -31,17 +29,15 @@
 
             <?php print render($content['field_pubs_and_presos']); ?>
 
-
           </div>
           <aside class="report-statement-aside">
+
             <?php print render($content['field_featured_image']); ?>
             <p class="date-posted">Last updated on <?php print date('F j, Y', $created); ?></p>
-            <h2>Project Lead</h2>
-            <?php print $name; ?>
-            <?php print render($content['field_release_date']); ?>
+            <?php print render($content['field_contact']); ?>
             <?php print render($content['field_repo_or_license']); ?>
             <?php print render($content['field_links']); ?>
-
+            <?php print render($content['field_awards']); ?>
 
           </aside>
         </div>

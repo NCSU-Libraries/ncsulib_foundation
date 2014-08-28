@@ -38,6 +38,7 @@
         </div>
         <div class="columns medium-5">
             <?php print drupal_render($content['field_image_for_event']); ?>
+            <?php print drupal_render($content['field_event_leads']); ?>
         </div>
     </div>
 </article>

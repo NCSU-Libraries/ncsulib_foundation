@@ -14,7 +14,7 @@
       <div role="document" class="page" id="content">
         <?php include variable_get('htdocs_root')."/notice/notice.php"; ?>
         <main role="main" class="row l-main">
-          <div class="<?php print $main_grid; ?> main columns" id="main-content">
+          <div class="main columns" id="main-content">
             <!-- top row -->
             <section id="tier-one">
               <h1>Site currently under maintenance</h1>
