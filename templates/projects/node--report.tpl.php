@@ -1,6 +1,6 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="report">
-
+<? kpr($content); ?>
         <div class="report-title">
           <?php if ($title): ?>
           <?php print render($title_prefix); ?>
@@ -29,17 +29,16 @@
             </div>
 
             <?php print render($content['field_pubs_and_presos']); ?>
-            <?php print render($content['field_awards']); ?>
 
           </div>
           <aside class="report-statement-aside">
+
             <?php print render($content['field_featured_image']); ?>
             <p class="date-posted">Last updated on <?php print date('F j, Y', $created); ?></p>
             <?php print render($content['field_contact']); ?>
-            <?php print render($content['field_release_date']); ?>
             <?php print render($content['field_repo_or_license']); ?>
             <?php print render($content['field_links']); ?>
-
+            <?php print render($content['field_awards']); ?>
 
           </aside>
         </div>
