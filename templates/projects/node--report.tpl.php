@@ -30,7 +30,7 @@
             </div>
 
             <?php print render($content['field_pubs_and_presos']); ?>
-
+            <?php print render($content['field_awards']); ?>
 
           </div>
           <aside class="report-statement-aside">
