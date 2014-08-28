@@ -1,6 +1,5 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="report">
-<? kpr($content); ?>
         <div class="report-title">
           <?php if ($title): ?>
           <?php print render($title_prefix); ?>
