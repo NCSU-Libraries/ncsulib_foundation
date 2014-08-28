@@ -397,10 +397,12 @@ function ncsulib_foundation_field__field_event_leads__event($variables) {
     $collaborators[] = user_load($value['target_id']);
 
     // Add link to user's page
-    $variables['items'][$key]['link'] = 'staff/'. $collaborators[$key]->name;
+    $staff_link = 'staff/'. $collaborators[$key]->name;
+    $variables['items'][$key]['link'] = $staff_link;
 
     // Add user's image
     $variables['items'][$key]['image'] = get_user_image($collaborators[$key]);
+    $variables['items'][$key]['image']['#path']['path'] = $staff_link;
 
     // Add user's title
     $field = field_get_items('user', $collaborators[$key], 'field_title');
