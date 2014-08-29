@@ -169,6 +169,10 @@ img {
 }
 .space-type{
     margin-bottom: 20px;
+
+    @media #{$small-only} {
+        float: left;
+    }
 }
 .views-field-title span{
     display: block;
