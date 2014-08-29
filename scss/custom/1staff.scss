@@ -44,3 +44,8 @@ $include-html-classes: false;
         margin-top: 0px;
     }
 }
+
+// hide department search box (hack =/)
+#edit-department-wrapper{
+    display: none;
+}
