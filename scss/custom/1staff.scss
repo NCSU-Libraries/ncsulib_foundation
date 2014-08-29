@@ -46,6 +46,12 @@ $include-html-classes: false;
 }
 
 // hide department search box (hack =/)
-#edit-department-wrapper{
-    display: none;
+.views-exposed-form{
+    #edit-submit-staff{
+        margin-top: 1.3rem;
+    }
+
+    #edit-department-wrapper{
+        display: none;
+    }
 }
