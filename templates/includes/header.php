@@ -84,20 +84,23 @@
 	</div>
 	<div id="menu-services" class="primary-menu-list">
 		<ul>
+			<li><a href="//www.lib.ncsu.edu/faculty">Faculty/Instructors</a></li>
+			<li><a href="//www.lib.ncsu.edu/graduatestudents">Graduate Students</a></li>
+		</ul>
+		<ul>
 			<li><a href="//www.lib.ncsu.edu/groupfinder">GroupFinder</a></li>
 			<li><a href="//www.lib.ncsu.edu/reservearoom">Reserve a Room</a></li>
 			<li><a href="//www.lib.ncsu.edu/printing">Print, Copy, Scan</a></li>
 			<li><a href="//www.lib.ncsu.edu/collections/suggestpurchase">Suggest a Purchase</a></li>
 			<li><a href="//www.lib.ncsu.edu/techlending">Technology Lending</a></li>
-			<li><a href="//www.lib.ncsu.edu/tripsaver">Tripsaver</a></li>
 		</ul>
 		<ul>
+			<li><a href="//www.lib.ncsu.edu/tripsaver">Tripsaver</a></li>
 			<li><a href="//www.lib.ncsu.edu/borrow">Borrow, Renew, Request</a></li>
 			<li><a href="//www.lib.ncsu.edu/computing">Computing</a></li>
 			<li><a href="//www.lib.ncsu.edu/cdm">Create Digital Media</a></li>
 			<li><a href="//www.lib.ncsu.edu/disabilityservices">Disability Services</a></li>
 			<li><a href="//www.lib.ncsu.edu/distance">Distance Learning</a></li>
-			<li><a href="//www.lib.ncsu.edu/faculty">Faculty/Instructor Support</a></li>
 		</ul>
 	</div>
 	<div id="menu-libraries" class="primary-menu-list">
