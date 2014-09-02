@@ -16,6 +16,14 @@ div#utility_bar {
         display: none;
     }
 
+    div#head_in {
+        border: none;
+        height: 31px;
+        overflow: hidden;
+        position: relative;
+        width: 625px;
+    }
+
     div.logo{
         background:url(/sites/all/themes/ncsulib_foundation/templates/includes/branding-bar/images/red_brick_old.gif) no-repeat 0px 2px;
         height: 31px;
@@ -66,10 +74,3 @@ div#utility_bar {
 
 
 
-div#head_in {
-    border: none;
-    height: 31px;
-    overflow: hidden;
-    position: relative;
-    width: 670px;
-}
