@@ -8,39 +8,6 @@ body.nav-open{
 
 
 
-// NCSU branding bar
-#ncsu_branding_bar{
-	background: $primary-color;
-	color: #FFF; //for accessibility
-	display: none;
-	padding-top: 5px;
-	height: 30px;
-	margin: auto;
-
-	#ncsu_branding_bar_container{
-		margin: auto;
-		width: 612px;
-
-		ul{
-			margin: 2px 0px 0px 0px;
-
-			li{
-
-				a{
-					color: #FFF;
-					font-size: 0.6rem;
-					text-transform: uppercase;
-				}
-			}
-		}
-	}
-
-	@media #{$medium-up}{
-		display: block;
-	}
-}
-// NCSU branding bar
-
 
 // skip link
 .skip-link a{
@@ -363,6 +330,9 @@ header#minimum-bar{
 	#utility{
 
 		#utility-bar{
+			@media #{$small-only}{
+				display: none;
+			}
 			@media #{$medium-up}{
 				height: 36px;
 			}
