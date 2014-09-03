@@ -7,7 +7,18 @@ html.js{
     }
 }
 
+div#toolbar{
+    z-index: 9999;
+}
+
 body {
+
+    &.logged-in{ //offset for drupal admin bar
+
+        .ncstate-utility-bar{
+            top: 24px;
+        }
+    }
 
     .ncstate-utility-bar{
         background: $primary-color;
