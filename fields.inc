@@ -86,13 +86,27 @@ function ncsulib_foundation_field__field_staff($variables) {
   foreach ($variables['element']['#items'] as $key => $value) {
     $collaborators[] = user_load($value['target_id']);
 
-    // Add link to user's page
+    // Account status
+    $status = $collaborators[$key]->status;
+    $variables['items'][$key]['status'] = $status;
+
+    // First name
+    $field = field_get_items('user', $collaborators[$key], 'field_firstname');
+    $first_name = field_view_value('user', $collaborators[$key], 'field_firstname', $field[0]);
+    $variables['items'][$key]['name'] = render($first_name);
+
+    // Last Name
+    $field = field_get_items('user', $collaborators[$key], 'field_lastname');
+    $last_name = field_view_value('user', $collaborators[$key], 'field_lastname', $field[0]);
+    $variables['items'][$key]['name'] .= " " . render($last_name);
+
+    // Link to user's page
     $variables['items'][$key]['link'] = 'staff/'. $collaborators[$key]->name;
 
-    // Add user's image
+    // Image
     $variables['items'][$key]['image'] = get_user_image($collaborators[$key]);
 
-    // Add user's title
+    // Title
     $field = field_get_items('user', $collaborators[$key], 'field_title');
     $variables['items'][$key]['title'] = field_view_value('user', $collaborators[$key], 'field_title', $field[0]);
 
@@ -103,11 +117,21 @@ function ncsulib_foundation_field__field_staff($variables) {
     $output .= '<div class="user-info">';
     $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
     $output .= '<div class="user-details">';
-    $output .= '<span class="user-name">'. l(render($item), $item['link']) .'</span>';
-    $output .= '<span class="user-title">'. render($item['title']) .'</span>';
-    $output .= '</div>';
-    $output .= '</div>';
 
+    // If user is blocked (i.e., =0), only print name, else print name, link
+    // and title
+    switch ($item['status']) {
+      case '0':
+        $output .= '<span class="user-name">'. render($item['name']) .'</span>';
+        break;
+
+      default:
+        $output .= '<span class="user-name">'. l(render($item['name']), $item['link']) .'</span>';
+        $output .= '<span class="user-title">'. render($item['title']) .'</span>';
+        break;
+    }
+    $output .= '</div>';  // .user-details
+    $output .= '</div>';  // .user-info
   }
 
   return $output;
