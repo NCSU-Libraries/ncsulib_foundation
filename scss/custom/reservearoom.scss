@@ -8,9 +8,6 @@ table {
     background: none;
     width: 100%;
 }
-tr {
-    // border-top: 1px solid #DDD;
-}
 table tr td:first-child{
     padding-left: 0px;
 }
@@ -73,7 +70,7 @@ img {
             padding: 0px;
 
             @media #{$small-only} {
-                @include grid-column(12);
+                @include grid-column(12, $collapse:true);
             }
 
             label:first-child {
@@ -105,7 +102,7 @@ img {
         }
     }
     .views-widget {
-        margin-left: rem-calc(0);
+        margin-left: 0;
 
         input[type="checkbox"] {
             float: left;
@@ -138,6 +135,11 @@ img {
 .form-item-edit-field-building-name-value-vetmed,
 .form-item-edit-field-building-name-value-cvm {
     display:none;
+}
+@media #{$medium-up} {
+    .mlib {
+        display:none;
+    }
 }
 .room-name {
     @extend %h3;
@@ -178,10 +180,10 @@ img {
     display: block;
 }
 .views-field-title {
-    // width: 25%;
 
     @media #{$small-only} {
         width: 75%;
+        padding-left: 0;
     }
 }
 .views-field-body, .views-field-body p {
@@ -191,25 +193,59 @@ img {
     text-align: center;
 }
 @media #{$small-only}{
-    .views-field-title span {
-        display: inline;
+    #content h1 {
+        font-size: rem-calc(31);
     }
-    .views-field-body,
-    .views-field-title .capacity,
-    .views-field-title .floor,
-    .views-field-field-image {
-        display: none;
+    table {
+        tr {
+            &:nth-child(odd) {
+                background: #eee;
+            }
+
+            td {
+                padding: rem-calc(10 0);
+            }
+
+            .views-field-title span {
+                display: inline;
+            }
+            .views-field-title .room-name {
+                display: block;
+                float: left;
+                width: 59%;
+                margin: rem-calc(0 20 2 0);
+            }
+            .building-name {
+                float: left;
+                clear: left;
+                font-weight: 400;
+                color: #808080;
+                font-size: rem-calc(12);
+                font-style: italic;
+
+                &:before {
+                    content: none;
+                }
+            }
+            .button {
+                padding: rem-calc(10 16);
+                font-size: rem-calc(13);
+                text-align: center;
+                width: 34%;
+            }
+        }
     }
-    .views-field-title .room-name {
-        display: block;
-    }
-    .button {
-        padding: rem-calc(10 16);
-        font-size: rem-calc(13);
-    }
-    #edit-field-special-access-value-wrapper,
-    #edit-field-types-of-spaces-value-wrapper {
-        display:none;
-    }
+
+        .views-field-body,
+        .views-field-title .capacity,
+        .views-field-title .floor,
+        .views-field-field-image,
+        .views-field-title .space-type,
+        #edit-field-special-access-value-wrapper,
+        #edit-field-types-of-spaces-value-wrapper,
+        .desk,
+        .block-block img {
+            display: none;
+        }
 }
 
