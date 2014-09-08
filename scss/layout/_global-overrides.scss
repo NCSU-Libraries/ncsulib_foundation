@@ -417,11 +417,15 @@ aside.right-off-canvas-menu{
 }
 
 
-//drupal form submit button
+// drupal form submit button
 .views-exposed-form .views-exposed-widget .form-submit{
     margin-top: 1.85rem;
 }
 
+// fix conflict with NCSU brand bar
 .reveal-modal-bg {
     z-index: 10000;
+}
+.reveal-modal {
+    z-index: 10001;
 }
