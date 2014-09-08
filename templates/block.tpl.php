@@ -1,5 +1,5 @@
 <?php if ($block->delta != 'main'):  ?>
-  <section class="<?php print $classes; ?>"<?php print $attributes; ?>>
+  <section class="<?php print $classes . ' block-' . $block->bid . ' ' . $block->delta; ?>"<?php print $attributes; ?>>
 <?php endif; ?>
 
   <?php print render($title_prefix); ?>
