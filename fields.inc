@@ -454,6 +454,92 @@ function ncsulib_foundation_field__event($variables) {
   return $output;
 }
 
+/** PROJECT STORIES **/
+
+/**
+ * Implements theme_field()
+ *
+ * Turns field labels into heading3
+ */
+function ncsulib_foundation_field__project($variables) {
+  // For lightweight label customization
+  $field_name = $variables['element']['#field_name'];
+  $field_label = $variables['label'];
+
+  switch ($field_name) {
+    case 'field_assessments':
+      $field_label = "Assessment";
+      break;
+
+    case 'field_problem_statement':
+      $field_label = "How it got started";
+      break;
+  }
+
+  $output = '';
+
+  // Render the label, if it's not hidden and display it as a heading 3
+  if (!$variables['label_hidden']) {
+    $output .= '<h3' . $variables['title_attributes'] . '>' . $field_label . '</h3>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Make collaborators show up with name, title and thumbnail image
+ */
+function ncsulib_foundation_field__field_staff__project($variables) {
+  $output = '';
+
+  // Load all collaborators' fields
+  $collaborators = array();
+  foreach ($variables['element']['#items'] as $key => $value) {
+    $collaborators[] = user_load($value['target_id']);
+
+    // Account status
+    $status = $collaborators[$key]->status;
+    $variables['items'][$key]['status'] = $status;
+
+    // First name
+    $field = field_get_items('user', $collaborators[$key], 'field_firstname');
+    $first_name = field_view_value('user', $collaborators[$key], 'field_firstname', $field[0]);
+    $variables['items'][$key]['name'] = render($first_name);
+
+    // Last Name
+    $field = field_get_items('user', $collaborators[$key], 'field_lastname');
+    $last_name = field_view_value('user', $collaborators[$key], 'field_lastname', $field[0]);
+    $variables['items'][$key]['name'] .= " " . render($last_name);
+
+    // Link to user's page
+    $variables['items'][$key]['link'] = 'staff/'. $collaborators[$key]->name;
+
+    // Image
+    $variables['items'][$key]['image'] = get_user_image($collaborators[$key]);
+
+    // Title
+    $field = field_get_items('user', $collaborators[$key], 'field_title');
+    $variables['items'][$key]['title'] = field_view_value('user', $collaborators[$key], 'field_title', $field[0]);
+
+  }
+  return print_multiple_users($variables['items']);
+}
+
+
+
 /** HELPER FUNCTIONS **/
 
 /**
