@@ -39,11 +39,8 @@ drupal_add_js($data, array('type' => 'inline', 'scope' => 'footer'));
 
           <div class="story-statement">
             <?php print $user_picture;?>
-            <h2>How it Got Started</h2>
             <?php print render($content['field_problem_statement']); ?>
-            <h2>What Happened</h2>
             <?php print render($content['body']); ?>
-            <h2>Assessment</h2>
             <?php print render($content['field_assessments']); ?>
             <p class="date-posted">Written on <?php print date('F j, Y', $created); ?></p>
           </div>
