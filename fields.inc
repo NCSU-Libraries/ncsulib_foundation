@@ -112,29 +112,7 @@ function ncsulib_foundation_field__field_staff($variables) {
 
   }
 
-  // The HTML template for user info
-  foreach ($variables['items'] as $delta => $item) {
-    $output .= '<div class="user-info">';
-    $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
-    $output .= '<div class="user-details">';
-
-    // If user is blocked (i.e., =0), only print name, else print name, link
-    // and title
-    switch ($item['status']) {
-      case '0':
-        $output .= '<span class="user-name">'. render($item['name']) .'</span>';
-        break;
-
-      default:
-        $output .= '<span class="user-name">'. l(render($item['name']), $item['link']) .'</span>';
-        $output .= '<span class="user-title">'. render($item['title']) .'</span>';
-        break;
-    }
-    $output .= '</div>';  // .user-details
-    $output .= '</div>';  // .user-info
-  }
-
-  return $output;
+  return print_multiple_users($variables['items']);
 }
 
 /** DEVICES **/
@@ -497,4 +475,34 @@ function get_user_image($user) {
       $image_array  = '<img src="/sites/default/files/gender_neutral-1.jpg">';
     }
   return $image_array;
+}
+
+/**
+ * The HTML template for user info
+ * @param $user_array Multiple renderable Drupal user arrays
+ * @return $output HTML for display
+ */
+function print_multiple_users($user_array) {
+  foreach ($user_array as $delta => $item) {
+    $output .= '<div class="user-info">';
+    $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
+    $output .= '<div class="user-details">';
+
+    // If user is blocked (i.e., =0), only print name, else print name, link
+    // and title
+    switch ($item['status']) {
+      case '0':
+        $output .= '<span class="user-name">'. render($item['name']) .'</span>';
+        break;
+
+      default:
+        $output .= '<span class="user-name">'. l(render($item['name']), $item['link']) .'</span>';
+        $output .= '<span class="user-title">'. render($item['title']) .'</span>';
+        break;
+    }
+    $output .= '</div>';  // .user-details
+    $output .= '</div>';  // .user-info
+  }
+
+  return $output;
 }
