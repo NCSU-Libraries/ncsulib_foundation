@@ -48,9 +48,6 @@ drupal_add_js($data, array('type' => 'inline', 'scope' => 'footer'));
             <h2>About the Author</h2>
 
             <?php print $name; ?>
-
-            <h2>Collaborators</h2>
-
             <?php print render($content['field_staff']); ?>
             <?php print render($content); ?>
 
