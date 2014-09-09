@@ -505,6 +505,11 @@ function ncsulib_foundation_field__project($variables) {
 function ncsulib_foundation_field__field_staff__project($variables) {
   $output = '';
 
+  // Render the label, if it's not hidden and display it as a heading 3
+  if (!$variables['label_hidden']) {
+    $output .= '<h3' . $variables['title_attributes'] . '>Collaborators</h3>';
+  }
+
   // Load all collaborators' fields
   $collaborators = array();
   foreach ($variables['element']['#items'] as $key => $value) {
