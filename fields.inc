@@ -472,7 +472,7 @@ function ncsulib_foundation_field__project($variables) {
       break;
 
     case 'field_problem_statement':
-      $field_label = "How it got started";
+      $field_label = "How it Got Started";
       break;
   }
 
