@@ -112,7 +112,7 @@ function ncsulib_foundation_field__field_staff($variables) {
 
   }
 
-  return print_multiple_users($variables['items']);
+  return print_multiple_users($variables['items'], $output);
 }
 
 /** DEVICES **/
@@ -535,7 +535,7 @@ function ncsulib_foundation_field__field_staff__project($variables) {
     $variables['items'][$key]['title'] = field_view_value('user', $collaborators[$key], 'field_title', $field[0]);
 
   }
-  return print_multiple_users($variables['items']);
+  return print_multiple_users($variables['items'], $output);
 }
 
 
@@ -566,9 +566,10 @@ function get_user_image($user) {
 /**
  * The HTML template for user info
  * @param $user_array Multiple renderable Drupal user arrays
+ * @param   $output The already existing output string
  * @return $output HTML for display
  */
-function print_multiple_users($user_array) {
+function print_multiple_users($user_array, $output) {
   foreach ($user_array as $delta => $item) {
     $output .= '<div class="user-info">';
     $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
