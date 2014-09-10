@@ -69,9 +69,9 @@
 // $base-line-height: 150%;
 
 // We use this to control whether or not CSS classes come through in the gem files.
-$include-html-classes: true;
+// $include-html-classes: true;
 // $include-print-styles: true;
-$include-html-global-classes: $include-html-classes;
+// $include-html-global-classes: $include-html-classes;
 
 // b. Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -112,16 +112,34 @@ $include-html-global-classes: $include-html-classes;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
-// $charcoal    : #555555;
+$charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
 
+// We use these as default colors throughout
+$primary-color: #cc0000;
+$primary-color-b: #000;
+$primary-color-c: #FFF;
+$secondary-color: #383838;
+$secondary-color-b: #666666;
+$secondary-color-c: #CCCCCC;
+$secondary-color-d: #E1E1E1;
+$secondary-color-e: #5C5541;
+$secondary-color-f: #666633;
+$secondary-color-g: #A20000;
+$alert-color: #A20000;
+$border-color: #ccc;
+
+$success-color: #778855;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+
 // We use these to control various global styles
 // $body-bg: $white;
-// $body-font-color: $jet;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color: $charcoal;
+$body-font-family: "UniversRoman", Arial,sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -135,8 +153,8 @@ $include-html-global-classes: $include-html-classes;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
-// $global-rounded: 1000px;
+$global-radius: 0px;
+$global-rounded: 0px;
 
 // We use these to control inset shadow shiny edges and depressions.
 // $shiny-edge-size: 0 1px 0;
@@ -146,19 +164,20 @@ $include-html-global-classes: $include-html-classes;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $small-range: (0em, 40em);
-// $medium-range: (40.063em, 64em);
+$small-range: (0em, 47.937em);
+$medium-range: (48em, 64em);
+$ipad-range: (48em, 51em);
 // $large-range: (64.063em, 90em);
 // $xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em, 99999999em);
 
-// $screen: "only screen";
+$screen: "only screen";
 
 // $landscape: "#{$screen} and (orientation: landscape)";
 // $portrait: "#{$screen} and (orientation: portrait)";
 
 // $small-up: $screen;
-// $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
 
 // $medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
 // $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
@@ -171,6 +190,10 @@ $include-html-global-classes: $include-html-classes;
 
 // $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 // $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+$ipad-down: "#{$screen} and (max-width:#{upper-bound($ipad-range)})";
+$ipad-only: "#{$screen} and (min-width:#{lower-bound($ipad-range)}) and (max-width:#{upper-bound($ipad-range)})";
+$ipad-up: "#{$screen} and (min-width:#{upper-bound($ipad-range)})";
 
 // Legacy
 // $small: $medium-up;
@@ -190,22 +213,22 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
-// $header-font-weight: $font-weight-normal;
+$header-font-family: $body-font-family; //"UniversLTW01-67BoldCn",Arial,sans-serif; //$body-font-family;
+$header-font-weight: 500;
 // $header-font-style: normal;
-// $header-font-color: $jet;
-// $header-line-height: 1.4;
-// $header-top-margin: .2rem;
-// $header-bottom-margin: .5rem;
+$header-font-color: $charcoal;
+$header-line-height: 1.3;
+$header-top-margin: rem-calc(22);
+$header-bottom-margin: rem-calc(11);
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(42);
+$h2-font-size: rem-calc(30);
+$h3-font-size: rem-calc(21);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(14);
+$h6-font-size: rem-calc(14);
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10) !default;
@@ -223,24 +246,24 @@ $include-html-global-classes: $include-html-classes;
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-// $small-font-size: 60%;
-// $small-font-color: scale-color($header-font-color, $lightness: 35%);
+$small-font-size: 81%;
+$small-font-color: scale-color($header-font-color, $lightness: 100%);
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: 0.9375rem;
 // $paragraph-line-height: 1.6;
-// $paragraph-margin-bottom: rem-calc(20);
+$paragraph-margin-bottom: rem-calc(11);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
 // $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
-// $code-color: $oil;
-// $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
-// $code-font-weight: $font-weight-normal;
+$code-color: #FFF;//scale-color($alert-color, $lightness: -27%);
+$code-font-family: Monaco, Consolas, 'Liberation Mono', Courier, monospace;
+$code-font-weight: 300;
 // $code-background-color: scale-color($secondary-color, $lightness: 70%);
 // $code-border-size: 1px;
 // $code-border-style: solid;
@@ -248,8 +271,8 @@ $include-html-global-classes: $include-html-classes;
 // $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style anchors
-// $anchor-text-decoration: none;
-// $anchor-text-decoration-hover: none;
+$anchor-font-color: #4a7aa9;
+$anchor-font-color-hover: #4a7aa9;
 // $anchor-font-color: $primary-color;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
@@ -264,9 +287,9 @@ $include-html-global-classes: $include-html-classes;
 // $list-font-size: $paragraph-font-size;
 // $list-line-height: $paragraph-line-height;
 // $list-margin-bottom: $paragraph-margin-bottom;
-// $list-style-position: outside;
-// $list-side-margin: 1.1rem;
-// $list-ordered-side-margin: 1.4rem;
+$list-style-position: outside;
+$list-side-margin: 1rem;
+$list-ordered-side-margin: rem-calc(32);
 // $list-side-margin-no-bullet: 0;
 // $list-nested-margin: rem-calc(20);
 // $definition-list-header-weight: $font-weight-bold;
@@ -359,7 +382,7 @@ $include-html-global-classes: $include-html-classes;
 // $alert-close-padding: 9px 6px 4px;
 
 // We use this to control border radius
-// $alert-radius: $global-radius;
+$alert-radius: 0;
 
 // We use this to control transition effects
 // $alert-transition-speed: 300ms;
@@ -373,7 +396,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
-// $block-grid-default-spacing: rem-calc(20);
+$block-grid-default-spacing: rem-calc(30);
 // $align-block-grid-to-grid: false;
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
@@ -385,15 +408,15 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-// $crumb-bg: scale-color($secondary-color, $lightness: 55%);
+$crumb-bg: #fff;
 
 // We use these to set the padding around the breadcrumbs.
-// $crumb-padding: rem-calc(9 14 9);
+$crumb-padding: rem-calc(9 0 9 0);
 // $crumb-side-padding: rem-calc(12);
 
 // We use these to control border styles.
 // $crumb-function-factor: -10%;
-// $crumb-border-size: 1px;
+$crumb-border-size: 0px;
 // $crumb-border-style: solid;
 // $crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor);
 // $crumb-radius: $global-radius;
@@ -416,7 +439,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
+$button-tny: rem-calc(11.5);
 // $button-sml: rem-calc(14);
 // $button-med: rem-calc(16);
 // $button-lrg: rem-calc(18);
@@ -774,7 +797,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-label-classes: $include-html-classes;
 
 // We use these to style the labels
-// $label-padding: rem-calc(4 8 6);
+$label-padding: rem-calc(6 8 6);
 // $label-radius: $global-radius;
 
 // We use these to style the label text
@@ -913,7 +936,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-pagination-classes: $include-html-classes;
 
 // We use these to control the pagination container
-// $pagination-height: rem-calc(24);
+$pagination-height: inherit;
 // $pagination-margin: rem-calc(-5);
 
 // We use these to set the list-item properties
@@ -925,12 +948,12 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these for the pagination anchor links
 // $pagination-link-pad: rem-calc(1 10 1);
-// $pagination-link-font-color: $aluminum;
+$pagination-link-font-color: $header-font-color;
 // $pagination-link-active-bg: scale-color($white, $lightness: -10%);
 
 // We use these for disabled anchor links
 // $pagination-link-unavailable-cursor: default;
-// $pagination-link-unavailable-font-color: $aluminum;
+$pagination-link-unavailable-font-color: lighten(#999, 30%);
 // $pagination-link-unavailable-bg-active: transparent;
 
 // We use these for currently selected anchor links
@@ -946,13 +969,13 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color($white, $lightness: -5%);
+$panel-bg: #FFF;
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
 // We use this % to control how much we darken things on hover
 // $panel-function-factor: -11%;
-// $panel-border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
+$panel-border-color: #CCC;
 
 // We use these to set default inner padding and bottom margin
 // $panel-margin-bottom: rem-calc(20);
@@ -960,7 +983,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to set default font colors
 // $panel-font-color: $oil;
-// $panel-font-color-alt: $white;
+$panel-font-color: $body-font-color;
 
 // $panel-header-adjust: true;
 // $callout-panel-link-color: $primary-color;
@@ -1028,13 +1051,13 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control the border styles
 // $progress-bar-border-color: scale-color($white, $lightness: 20%);
-// $progress-bar-border-size: 1px;
+$progress-bar-border-size: 0px;
 // $progress-bar-border-style: solid;
 // $progress-bar-border-radius: $global-radius;
 
 // We use these to control the margin & padding
-// $progress-bar-pad: rem-calc(2);
-// $progress-bar-margin-bottom: rem-calc(10);
+$progress-bar-pad: rem-calc(0);
+$progress-bar-margin-bottom: rem-calc(20);
 
 // We use these to set the meter colors
 // $progress-meter-color: $primary-color;
@@ -1120,17 +1143,17 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control list styles.
 // $side-nav-list-type: none;
-// $side-nav-list-position: inside;
+$side-nav-list-position: inherit;
 // $side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-// $side-nav-link-color: $primary-color;
-// $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
-// $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-link-color: $anchor-font-color;
+$side-nav-link-color-active: $secondary-color;
+$side-nav-link-color-hover: $side-nav-link-color;
 // $side-nav-link-bg-hover: hsla(0, 0, 0, 0.025);
 // $side-nav-link-margin: 0;
 // $side-nav-link-padding: rem-calc(7 14);
-// $side-nav-font-size: rem-calc(14);
+$side-nav-font-size: $paragraph-font-size;
 // $side-nav-font-weight: $font-weight-normal;
 // $side-nav-font-weight-active: $side-nav-font-weight;
 // $side-nav-font-family: $body-font-family;
@@ -1192,13 +1215,13 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use these to control margin and padding
-// $sub-nav-list-margin: rem-calc(-4 0 18);
-// $sub-nav-list-padding-top: rem-calc(4);
+$sub-nav-list-margin: rem-calc(0);
+$sub-nav-list-padding-top: rem-calc(10);
 
 // We use this to control the definition
 // $sub-nav-font-family: $body-font-family;
 // $sub-nav-font-size: rem-calc(14);
-// $sub-nav-font-color: $aluminum;
+$sub-nav-font-color: $primary-color;
 // $sub-nav-font-weight: $font-weight-normal;
 // $sub-nav-text-decoration: none;
 // $sub-nav-padding: rem-calc(3 16);
@@ -1292,7 +1315,7 @@ $include-html-global-classes: $include-html-classes;
 
 // $include-html-tabs-classes: $include-html-classes;
 
-// $tabs-navigation-padding: rem-calc(16);
+$tabs-navigation-padding: rem-calc(12);
 // $tabs-navigation-bg-color: $silver  ;
 // $tabs-navigation-active-bg-color: $white;
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
@@ -1355,11 +1378,11 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
+$topbar-bg-color: $primary-color;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+$topbar-height: 68px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1367,7 +1390,7 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
+$topbar-dropdown-bg: #383838;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-bg: $oil;
 // $topbar-dropdown-link-weight: $font-weight-normal;
@@ -1380,9 +1403,9 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-link-color-hover: $white;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
-// $topbar-link-weight: $font-weight-normal;
+$topbar-link-weight: 300;
 // $topbar-link-font-size: rem-calc(13);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-hover-lightness: -30%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-color-hover: $charcoal;
 // $topbar-link-bg-hover: #272727;
@@ -1397,11 +1420,11 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-button-font-size: 0.75rem;
 // $topbar-button-top: 7px;
 
-// $topbar-dropdown-label-color: $monsoon;
+$topbar-dropdown-label-color: #FFF;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: $oil;
+$topbar-dropdown-label-bg: darken($primary-color, 10%);
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
@@ -1410,10 +1433,10 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-menu-link-color: $white;
 // $topbar-menu-icon-color: $white;
 // $topbar-menu-link-color-toggled: $jumbo;
-// $topbar-menu-icon-color-toggled: $jumbo;
+$topbar-menu-icon-color-toggled: #FFF;
 
 // Transitions and breakpoint styles
-// $topbar-transition-speed: 300ms;
+$topbar-transition-speed: 0ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: $medium-up;
@@ -1433,3 +1456,4 @@ $include-html-global-classes: $include-html-classes;
 // $include-table-visibility-classes: true;
 // $include-legacy-visibility-classes: true;
 // $include-accessibility-classes: true;
+@import "../additional_variables";
