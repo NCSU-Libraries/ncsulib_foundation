@@ -16,6 +16,9 @@ output_style = (environment == :dev) ? :expanded : :compressed
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = true
 
+# Enable sourcemaps
+sourcemap = true
+
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:

@@ -1,1 +1,81 @@
-.brand-tile{color:#FFF;height:100px;padding:10px;text-align:center}.brand-tile.primary-a{background:#c00}.brand-tile.primary-b{background:#000}.brand-tile.primary-c{background:#fff;border:1px solid #ccc}.brand-tile.secondary-a{background:#383838}.brand-tile.secondary-b{background:#666}.brand-tile.secondary-c{background:#ccc}.brand-tile.secondary-d{background:#e1e1e1}.brand-tile.secondary-e{background:#5c5541}.brand-tile.secondary-f{background:#663}.brand-tile.secondary-g{background:#a20000}.toggle-code{display:block;font-size:0.9em;margin-top:-10px;margin-bottom:20px}.row.display{background:none repeat scroll 0 0 #EEEEEE;border:1px solid #C6C6C6;font-size:11px;line-height:2rem;margin-bottom:10px !important;margin-left:0 !important;margin-right:0 !important}.row.display .columns:nth-child(2),.row.display .columns.small-centered,.row.display .columns.large-centered{background:#E1E1E1}
+/*
+Error: Undefined variable: "$primary-color".
+        on line 11 of /Applications/MAMP/htdocs/ncsulib_z/zurb/sites/all/themes/ncsulib_foundation/scss/custom/styleguide.scss
+
+6: 	height: 100px;
+7: 	padding: 10px;
+8: 	text-align: center;
+9: 
+10: 	&.primary-a{
+11: 		background: $primary-color;
+12: 	}
+13: 	&.primary-b{
+14: 		background: $primary-color-b;
+15: 	}
+16: 	&.primary-c{
+
+Backtrace:
+/Applications/MAMP/htdocs/ncsulib_z/zurb/sites/all/themes/ncsulib_foundation/scss/custom/styleguide.scss:11
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:329:in `block in watch'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
+/Users/cdmorris/.rvm/gems/ruby-2.1.1/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$primary-color\".\A         on line 11 of /Applications/MAMP/htdocs/ncsulib_z/zurb/sites/all/themes/ncsulib_foundation/scss/custom/styleguide.scss\A \A 6: 	height: 100px;\A 7: 	padding: 10px;\A 8: 	text-align: center;\A 9: \A 10: 	&.primary-a{\A 11: 		background: $primary-color;\A 12: 	}\A 13: 	&.primary-b{\A 14: 		background: $primary-color-b;\A 15: 	}\A 16: 	&.primary-c{"; }
