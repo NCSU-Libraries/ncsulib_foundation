@@ -130,7 +130,7 @@ $include-html-classes: false;
 	@include grid-column(10);
 	font-size: 1rem;
 	height: 3.5rem;
-	margin-bottom: emCalc(10);
+	margin-bottom: rem-calc(10);
 
 	@media #{$small-only}{
 		@include grid-column(12);
@@ -175,7 +175,7 @@ $include-html-classes: false;
 }
 #searcharticleadvanced{
 	border: 1px solid #DDD;
-	margin-bottom: emCalc(15);
+	margin-bottom: rem-calc(15);
 }
 .search-more{
 	float: left;
@@ -187,7 +187,7 @@ $include-html-classes: false;
 	@include grid-column(10);
 	font-size: 1rem;
 	height: 3.5rem;
-	margin-bottom: emCalc(10);
+	margin-bottom: rem-calc(10);
 
 	@media #{$small-only}{
 		@include grid-column(12);
@@ -200,7 +200,7 @@ $include-html-classes: false;
 #searchbookssubmit{
 	@include grid-column(2);
 	height: 3.5rem;
-	margin-bottom: emCalc(5);
+	margin-bottom: rem-calc(5);
 	padding-left: 0px;
 	padding-right: 0px;
 
@@ -215,7 +215,7 @@ $include-html-classes: false;
 
 #Ntk{
 	border: 1px solid #DDD;
-	margin-bottom: emCalc(15);
+	margin-bottom: rem-calc(15);
 }
 
 
@@ -224,7 +224,7 @@ $include-html-classes: false;
 	@include grid-column(10);
 	font-size: 1rem;
 	height: 3.5rem;
-	margin-bottom: emCalc(15);
+	margin-bottom: rem-calc(15);
 
 	@media #{$small-only}{
 		@include grid-column(12);
@@ -510,7 +510,7 @@ $include-html-classes: false;
 /*begin tier two*/
 #tier-two{
 	@include grid-row;
-	margin-bottom: emCalc(30);
+	margin-bottom: rem-calc(30);
 
 	#available-links{
 		margin-bottom: rem-calc(20);
@@ -539,8 +539,8 @@ $include-html-classes: false;
 				list-style-position: inherit;
 				line-height: 0.75rem;
 				float: left;
-				margin: emCalc(0) emCalc(10) emCalc(0) emCalc(0) ;
-				padding: emCalc(13) 0px 0px 0px;
+				margin: rem-calc(0) rem-calc(10) rem-calc(0) rem-calc(0) ;
+				padding: rem-calc(13) 0px 0px 0px;
 
 				@media #{$small-only}{
 					padding-top: 0px;
@@ -553,14 +553,14 @@ $include-html-classes: false;
 				a{
 					border-left: 1px solid #CCC;
 					font-size: 0.9rem;
-					margin-top: emCalc(10);
-					margin-left: emCalc(0);
-					padding: emCalc(3) 0px emCalc(3) emCalc(10);
+					margin-top: rem-calc(10);
+					margin-left: rem-calc(0);
+					padding: rem-calc(3) 0px rem-calc(3) rem-calc(10);
 				}
 			}
 
 			li:first-child{
-				// margin-left: emCalc(20);
+				// margin-left: rem-calc(20);
 				// padding-top: 0px;
 
 				@media #{$small-only}{
@@ -671,12 +671,12 @@ $include-html-classes: false;
  /*begin tier-three*/
 #tier-three{
 	@include grid-row;
-	margin-bottom: emCalc(40);
+	margin-bottom: rem-calc(40);
 }
 
 #story-1, #story-2{
 	@include grid-column(4);
-	margin-bottom: emCalc(20);
+	margin-bottom: rem-calc(20);
 	padding-left: 0px;
 
 	@media #{$small-only}{
@@ -685,11 +685,11 @@ $include-html-classes: false;
 	}
 
 	.story-photo{
-		margin-bottom: emCalc(15);
+		margin-bottom: rem-calc(15);
 	}
 
 	h2 {
-		font-size: emCalc(28);
+		font-size: rem-calc(28);
 		line-height: 2.2rem;
 
 		// a{
@@ -713,7 +713,7 @@ $include-html-classes: false;
 
 	#home-news, #home-events, #home-exhibits{
 		float: left;
-		margin-bottom: emCalc(25);
+		margin-bottom: rem-calc(25);
 	}
 
 	.happenings-photo{
@@ -727,7 +727,7 @@ $include-html-classes: false;
 		padding-right: 0px;
 
 		h2{
-			font-size: emCalc(22);
+			font-size: rem-calc(22);
 			line-height: 1rem;
 			margin-bottom: 5px;
 			margin-top: 0px;
