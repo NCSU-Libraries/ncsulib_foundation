@@ -1,9 +1,5 @@
-@import "../foundation/settings";
-$include-html-classes: false;
-@import "foundation";
-@import "silent_type";
-@import "components/list-styling";
-@import "components/awesomify";
+@import "base/init_for_custom";
+
 
 .upcoming_events-block_5 {
   @include grid-column(6);

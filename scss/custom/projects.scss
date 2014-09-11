@@ -1,7 +1,4 @@
-@import "../foundation/settings";
-$include-html-classes: false;
-@import "foundation";
-@import "silent_type";
+@import "base/init_for_custom";
 
 .story {
   @media #{$medium-up} {@include grid-column($columns:10, $center: true)};
