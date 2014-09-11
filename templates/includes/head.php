@@ -8,18 +8,18 @@
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-72x72.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-114x114.png" />
-<link rel="image_src" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-114x114.png" />
+<link rel="image_src" href="//www.lib.ncsu.edu/website/ncsulib_foundation/images/homescreen-icon-114x114.png" />
 
 <link href="https://cdn.ncsu.edu/brand-assets/fonts/include.css" rel="stylesheet" type="text/css" />
 
 <?php if(!$_SERVER['REMOTE_ADDR']): ?>
 <!-- css -->
-<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css">
+<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/website/ncsulib_foundation/styles/core/ncsulib_foundation.css">
 
 <!-- js -->
-<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/vendor/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/vendor/custom.modernizr.js"></script>
-<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/templates/includes/scripts/ncsulib-website.min.js"></script>
+<script type="text/javascript" src="//www.lib.ncsu.edu/website/ncsulib_foundation/scripts/vendor/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//www.lib.ncsu.edu/website/ncsulib_foundation/scripts/vendor/custom.modernizr.js"></script>
+<script type="text/javascript" src="//www.lib.ncsu.edu/website/ncsulib_foundation/templates/includes/scripts/ncsulib-website.min.js"></script>
 
 <script type="text/javascript">
     // instantiate foundation
@@ -59,14 +59,14 @@
 <?php endif; ?>
 
 <!--[if IE 9]>
-<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie9.css">
+<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/website/ncsulib_foundation/styles/core/layout/ie9.css">
 <![endif]-->
 
 <!--[if lt IE 9]>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.9.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
-<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie8.css">
-<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/ie8.js"></script>
+<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/website/ncsulib_foundation/styles/core/layout/ie8.css">
+<script type="text/javascript" src="//www.lib.ncsu.edu/website/ncsulib_foundation/scripts/ie8.js"></script>
 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/rem.js"></script>
+<script type="text/javascript" src="//www.lib.ncsu.edu/website/ncsulib_foundation/scripts/rem.js"></script>
 <![endif]-->
