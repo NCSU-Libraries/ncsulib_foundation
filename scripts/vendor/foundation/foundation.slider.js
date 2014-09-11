@@ -4,7 +4,7 @@
   Foundation.libs.slider = {
     name : 'slider',
 
-    version : '{{VERSION}}',
+    version : '5.4.3',
 
     settings: {
       start: 0,

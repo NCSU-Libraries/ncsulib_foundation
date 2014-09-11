@@ -278,7 +278,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '{{VERSION}}',
+    version : '5.4.3',
 
     media_queries : {
       small : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
@@ -565,7 +565,7 @@
 
           if (query !== undefined) {
             Foundation.stylesheet.insertRule('@media ' +
-              Foundation.media_queries[media] + '{ ' + rule + ' }', Foundation.stylesheet.cssRules.length);
+              Foundation.media_queries[media] + '{ ' + rule + ' }');
           }
         }
       },
