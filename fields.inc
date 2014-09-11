@@ -522,12 +522,12 @@ function ncsulib_foundation_field__field_staff__project($variables) {
     // First name
     $field = field_get_items('user', $collaborators[$key], 'field_firstname');
     $first_name = field_view_value('user', $collaborators[$key], 'field_firstname', $field[0]);
-    $variables['items'][$key]['name'] = render($first_name);
+    $variables['items'][$key]['name'] = decode_entities(render($first_name));
 
     // Last Name
     $field = field_get_items('user', $collaborators[$key], 'field_lastname');
     $last_name = field_view_value('user', $collaborators[$key], 'field_lastname', $field[0]);
-    $variables['items'][$key]['name'] .= " " . render($last_name);
+    $variables['items'][$key]['name'] .= " " . decode_entities(render($last_name));
 
     // Link to user's page
     $variables['items'][$key]['link'] = 'staff/'. $collaborators[$key]->name;
