@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           except: 'nav'
         }
       },
-      build: {
+      outside_drupal: {
         src: ['scripts/vendor/foundation/foundation.js',
         'scripts/vendor/foundation/foundation.*.js',
         'scripts/modernizr-tests.js',
@@ -29,7 +29,12 @@ module.exports = function(grunt) {
         'scripts/handlebars-v1.3.0.js',
         'scripts/feedback-button.js'],
         dest: 'templates/includes/scripts/<%= pkg.name %>.min.js'
-      }
+      },
+      for_drupal: {
+        src: ['scripts/vendor/foundation/foundation.js',
+        'scripts/vendor/foundation/foundation.*.js'],
+        dest: 'scripts/vendor/foundation.min.js'
+      },
     },
     shell: {
       hooks: {
