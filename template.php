@@ -201,9 +201,14 @@ function ncsulib_foundation_preprocess_node(&$variables) {
   }
 
   // Make "node--NODETYPE--VIEWMODE.tpl.php" templates available for nodes
-  if($variables['view_mode'] == 'teaser') {
+  if ($variables['view_mode'] == 'teaser') {
     $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->type . '__teaser';
     $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->nid . '__teaser';
+  }
+
+  // New tpl suggestion for short form stories
+  if ($variables['type'] == 'project' && $variables['field_story_type']['und'][0]['value'] == 1) {
+    $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->type . '__short';
   }
 }
 
