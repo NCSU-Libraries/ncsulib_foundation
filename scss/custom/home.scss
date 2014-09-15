@@ -614,6 +614,7 @@ $include-html-classes: false;
 
 	.tabs-content{
 		.content{
+			height: rem-calc(78);
 			padding: 0.74rem 0px;
 
 			ul{
@@ -621,7 +622,6 @@ $include-html-classes: false;
 
 				li{
 					@include grid-column(4);
-					float: left;
 					list-style-type: none;
 					padding: rem-calc(14) 0px rem-calc(6);
 					text-align: center;

@@ -368,6 +368,7 @@ header#minimum-bar{
 		#home-hours{
 			padding: rem-calc(3) 0 rem-calc(2);
 			background: $topbar-dropdown-bg;
+			line-height: 1;
 
 			@media #{$medium-only} {
 				@include grid-column(6);
