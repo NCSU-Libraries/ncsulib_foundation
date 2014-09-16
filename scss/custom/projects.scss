@@ -1,7 +1,4 @@
-@import "../foundation/settings";
-$include-html-classes: false;
-@import "foundation";
-@import "silent_type";
+@import "base/init_for_custom";
 
 .story {
   @media #{$medium-up} {@include grid-column($columns:10, $center: true)};
@@ -35,7 +32,7 @@ $include-html-classes: false;
       @media #{$medium-up} {@include grid-column($columns:8)};
     }
 
-    aside {
+    .story-statement-aside {
       @media #{$medium-up} {@include grid-column($columns:4)};
 
       h2:first-child {
@@ -64,6 +61,15 @@ $include-html-classes: false;
           .user-title {
             font-size: rem-calc(13);
           }
+        }
+      }
+
+      .field-items {
+        @extend %ul;
+        @include styled-list;
+
+        .field-item {
+          @extend %li;
         }
       }
     }

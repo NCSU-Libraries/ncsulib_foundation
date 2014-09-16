@@ -27,6 +27,7 @@ module.exports = function(grunt) {
         'scripts/global-htdocs.js',
         'scripts/search-cancel-button.js',
         'scripts/handlebars-v1.3.0.js',
+        'scripts/date-picker.js',
         'scripts/feedback-button.js'],
         dest: 'templates/includes/scripts/<%= pkg.name %>.min.js'
       }

@@ -1,0 +1,16 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// For custom scss that is intended to be used on top of our existing styles
+
+// Global Zurb Foundation variables.
+@import "../foundation/settings";
+$include-html-classes: false;
+// Comment out this import below if you are customizing you imports below.
+@import "../foundation/functions";
+@import "../foundation";
+// Comment out this import if you don't want to use Compass.
+@import "compass";
+@import "custom/silent_type";
+@import "components/list-styling";
+@import "components/awesomify";

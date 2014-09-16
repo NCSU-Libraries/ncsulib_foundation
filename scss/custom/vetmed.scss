@@ -1,0 +1,18 @@
+@import "base/init_for_custom";
+
+.availability-vml {
+  .row {
+    margin-bottom: rem-calc(14);
+  }
+  .device-icon {
+    @include grid-column(2);
+    text-align: center;
+  }
+  .device-name {
+    @include grid-column(5);
+  }
+  .device-numbers {
+    @include grid-column(5, $collapse: true);
+    text-align: center;
+  }
+}

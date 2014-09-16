@@ -1,9 +1,4 @@
-@import "../foundation/settings";
-$include-html-classes: false;
-@import "foundation";
-@import "silent_type";
-@import "components/list-styling";
-@import "components/awesomify";
+@import "base/init_for_custom";
 
 .report {
 
@@ -129,11 +124,7 @@ $include-html-classes: false;
       .field-label {
         @extend %h4;
       }
-
-
-
     }
-
   }
 }
 
