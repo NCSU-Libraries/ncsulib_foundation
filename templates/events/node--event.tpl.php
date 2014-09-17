@@ -16,6 +16,7 @@
             <div class="event-meta">
                 <?php print drupal_render($content['field_time']); ?>
                 <?php print drupal_render($content['field_space']); ?>
+                <?php print drupal_render($content['field_non_libraries_space']); ?>
             </div>
 
             <?php print drupal_render($content['body']); ?>
