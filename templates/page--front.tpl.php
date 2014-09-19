@@ -1,7 +1,7 @@
 <?php
     drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css', array('weight' => 998, 'group' => 101));
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-artbox.js');
-    drupal_add_js('http://www.lib.ncsu.edu/catalog/scripts/app.js');
+    drupal_add_js('//www.lib.ncsu.edu/catalog/scripts/app.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/availability-data.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-tracking-events.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autosuggest.js');
@@ -142,7 +142,7 @@
                         <li><a href="/huntlibrary/inthenews" class="story-1-link">In the News</a></li>
                         <li><a href="/huntlibrary/bookBot" class="story-1-link">bookBot</a></li>
                         <li><a href="/huntlibrary/namingopportunities" class="story-1-link">Help support Hunt</a></li>
-                        <li><a href="http://www.ncsu.edu/huntlibrary/" class="story-1-link">Think and Do</a></li>
+                        <li><a href="//www.ncsu.edu/huntlibrary/" class="story-1-link">Think and Do</a></li>
                     </ul>
                 </div>
 
