@@ -393,10 +393,19 @@ dl.tabs dd a{
 #home-exhibits{
 	margin-bottom: 30px;
 }
-.happenings-content{
-	/*padding-left: 5px;*/
-}
+.happenings-content{}
 
 .ac_results{
 	background: #FFF;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+   color: red;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    font-style:italic;
+    color: red;
 }

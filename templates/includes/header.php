@@ -22,7 +22,6 @@
 <div class="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 </div>
-<script src="https://cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script>
 
 <header class="contain-to-grid" role="banner">
 	<div class="top-bar">

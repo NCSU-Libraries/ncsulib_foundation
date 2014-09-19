@@ -70,3 +70,7 @@
 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/rem.js"></script>
 <![endif]-->
+
+<!-- <script src="https://cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script> -->
+
+
