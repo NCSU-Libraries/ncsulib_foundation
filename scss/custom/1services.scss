@@ -30,6 +30,10 @@ $include-html-classes: false;
 					img{
 						max-height: 81px;
 						width: auto;
+
+						@media #{$small-only}{
+							width: 100%;
+						}
 					}
 				}
 			}
