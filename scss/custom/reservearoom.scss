@@ -26,6 +26,12 @@ img {
         min-width: 160px;
     }
 }
+.view-header {
+    .current-reservations {
+        @include awesomify("\f05a");
+        font-size: rem-calc(14);
+    }
+}
 .view-filters {
     @include grid-row();
     margin-top: 30px;
