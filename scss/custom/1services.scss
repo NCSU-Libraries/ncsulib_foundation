@@ -13,7 +13,7 @@ $include-html-classes: false;
 			text-align: center;
 
 			@media #{$small-only}{
-				width: 100%;
+				// width: 100%;
 			}
 
 			> a{
@@ -25,7 +25,7 @@ $include-html-classes: false;
 
 					i{
 						color: #4c83af;
-						font-size: 5rem;
+						font-size: 4rem;
 					}
 					img{
 						max-height: 81px;
