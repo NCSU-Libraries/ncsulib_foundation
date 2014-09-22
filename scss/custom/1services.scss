@@ -20,12 +20,6 @@ $include-html-classes: false;
                 display: block;
                 padding: 25px 10px;
 
-                img{
-                    @media #{$small-only}{
-                        width: 100%;
-                    }
-                }
-
                 h2{
                     margin-top: 0px;
 
@@ -87,6 +81,20 @@ $include-html-classes: false;
 
             p{
                 font-size: 12px;
+            }
+        }
+    }
+}
+
+#content .user-activity-rooms{
+    ul{
+
+        li{
+
+            img{
+                @media #{$small-only}{
+                    width: 100%;
+                }
             }
         }
     }
