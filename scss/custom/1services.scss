@@ -67,12 +67,8 @@ $include-html-classes: false;
 
 // staff sidebar
 #content .l-sidebar-first{
-    .item-list{
-        ul{
-            li{
-                padding-bottom: 0px;
-            }
-        }
+    .item-list ul[class*="block-grid-"] > li{
+        padding-bottom: 0px;
     }
 
     .staff-member{
