@@ -66,10 +66,10 @@ $include-html-classes: false;
 }
 
 // staff sidebar
+.item-list ul[class*="block-grid-"] > li{
+    padding-bottom: 0px;
+}
 #content .l-sidebar-first{
-    .item-list ul[class*="block-grid-"] > li{
-        padding-bottom: 0px;
-    }
 
     .staff-member{
         margin-bottom: 20px;
