@@ -66,7 +66,7 @@ $include-html-classes: false;
 }
 
 // staff sidebar
-.item-list ul[class*="block-grid-"] > li{
+#content .item-list ul[class*="block-grid-"] > li{
     padding-bottom: 0px;
 }
 #content .l-sidebar-first{
