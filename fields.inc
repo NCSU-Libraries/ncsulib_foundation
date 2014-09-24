@@ -156,7 +156,11 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
 function ncsulib_foundation_field__field_building_name__space($variables) {
   $output ='';
   foreach ($variables['items'] as $delta => $item) {
-    $output = '<span class="building-name">at the '. $variables['items'][0]['#markup'] .'</span>';
+    $raw_lib_val = $variables['items'][0]['#markup'];
+    $lib = ($raw_lib_val == 'James B. Hunt Jr. Library') ? 'Hunt Library' : $raw_lib_val;
+    $lib = ($raw_lib_val == 'D. H. Hill Library') ? 'Hill Library' : $raw_lib_val;
+
+    $output = '<span class="building-name">'. $lib .'</span>';
   }
   return $output;
 }
