@@ -74,6 +74,24 @@ $include-html-classes: false;
         }
     }
 
+    .sidebar h2.alt-title{
+        display: none;
+
+        @media #{$small-only}{
+            display: block;
+            font-size:2.625rem;
+            font-weight: normal;
+            text-transform: none;
+        }
+    }
+
+    @media #{$small-only}{
+
+            #page-title{
+                display: none;
+            }
+        }
+
     .l-sidebar-first{
 
         .staff-member{

@@ -24,6 +24,7 @@
     <main role="main" class="row l-main">
         <?php if (!empty($page['sidebar_second'])): ?>
             <aside role="complementary" class="medium-3 l-sidebar-second columns sidebar medium-push-9">
+                <h2 class="alt-title"><?php print $title; ?></h1>
                 <?php print render($page['sidebar_second']); ?>
             </aside>
         <?php endif; ?>
