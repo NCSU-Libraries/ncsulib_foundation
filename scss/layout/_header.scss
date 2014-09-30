@@ -114,6 +114,23 @@ header{
 				font-size: 1.5em;
 				font-weight: 100;
 			}
+
+
+			// A/B testing
+			#hamburger-nav{}
+
+			#menu-nav{
+				border: 1px solid #FF8E8E;
+				border-radius: 2px;
+				display: inline;
+				padding: 6px 8px 8px;
+				font-size: 0.8rem;
+				margin-right: 15px;
+			}
+
+			#hamburger-nav.hide,#menu-nav.hide{
+				display: none;
+			}
 		}
 
 		.top-bar-section{

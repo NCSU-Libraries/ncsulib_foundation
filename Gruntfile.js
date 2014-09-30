@@ -28,6 +28,7 @@ module.exports = function(grunt) {
         'scripts/search-cancel-button.js',
         'scripts/handlebars-v1.3.0.js',
         'scripts/date-picker.js',
+        'scripts/ab-test.js',
         'scripts/feedback-button.js'],
         dest: 'templates/includes/scripts/<%= pkg.name %>.min.js'
       }

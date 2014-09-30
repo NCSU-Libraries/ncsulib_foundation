@@ -32,7 +32,8 @@
 			  	</a>
 			</div>
 			<nav id="nav-toggle" class="right-off-canvas-toggle" role="navigation" aria-label="mobile navigation">
-				<a href="#"><i class="fa fa-bars"></i>menu</a>
+				<a href="#" id="hamburger-nav"><i class="fa fa-bars"></i>menu</a>
+				<a href="#" id="menu-nav" class="hide">menu</a>
 			</nav>
 			<span id="search-toggle">
 				<a href="#"><i class="fa fa-search"></i> src </a>
