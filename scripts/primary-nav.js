@@ -82,7 +82,7 @@ var nav = {
 
 	unsetNav : function(){
 		nav.navActive = false;
-	},
+	}
 
 
 	// mobilecheck : function() {
