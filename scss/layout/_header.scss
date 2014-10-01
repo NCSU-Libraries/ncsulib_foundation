@@ -7,7 +7,7 @@ body.nav-open{
 }
 
 @media #{$small-only}{
-    .off-canvas-wrap,.inner-wrap{
+    .inner-wrap{
         height:100%;
     }
 }
