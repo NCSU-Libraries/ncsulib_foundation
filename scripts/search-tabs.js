@@ -190,8 +190,8 @@ function buildSearchFilters(baseURL) {
                 $("#trlnButton").css("color", "#777777");
             }
             else {
-                $("#worldcat").attr("disabled","");
-                $("#trln").attr("disabled","");
+                $("#worldcat").prop("disabled",false);
+                $("#trln").prop("disabled",false);
                 $("#worldcatButton").css("color", "");
                 $("#trlnButton").css("color", "");
             }
@@ -199,7 +199,6 @@ function buildSearchFilters(baseURL) {
 
         // handle clicking on the NCSU vs TRLN vs Worldcat radio button with jquery
         $("#trln").click(function() {
-            console.log('trln');
             $("#search").attr("action", "http://search.trln.org/search");
             $("#dummy").append($("#Ntk .callnum"));
         });
