@@ -371,27 +371,7 @@ table{
     position: absolute !important;
 }
 
-/*form*/
-.webform-component {
-    margin: 50px 0 0 0;
 
-    label:first-child {
-        font-weight: 700;
-        font-size: 17px;
-        margin-bottom: 13px;
-    }
-    .description {
-        font-style: italic;
-        padding: 7px;
-    }
-}
-/* Adjust margin for form elements below */
-input[type="file"],
-input[type="checkbox"],
-input[type="radio"],
-select {
-  margin: 0;
-}
 
 /*alert*/
 .alert-box{
@@ -412,9 +392,7 @@ select {
     }
 }
 
-aside.right-off-canvas-menu{
-    z-index: 9999;
-}
+
 
 
 // drupal form submit button

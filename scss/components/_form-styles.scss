@@ -17,4 +17,30 @@ form.webform-client-form{
 	select{
 		width: auto;
 	}
+
+	/*form*/
+	.webform-component{
+	    margin: 0px 0px 20px 0px;
+
+	    label:first-child {
+	        font-weight: 700;
+	        font-size: 17px;
+	        margin-bottom: 13px;
+	    }
+	    .description {
+	        font-style: italic;
+	        padding: 7px;
+	    }
+	}
+    .webform-component.webform-component-markup{
+		// margin-bottom: -25px;
+    }
+
+	/* Adjust margin for form elements below */
+	input[type="file"],
+	input[type="checkbox"],
+	input[type="radio"],
+	select {
+	  margin: 0;
+	}
 }

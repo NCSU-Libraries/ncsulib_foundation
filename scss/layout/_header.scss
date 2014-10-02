@@ -213,6 +213,8 @@ header{
     }
 
     .right-off-canvas-menu{
+        z-index: 9999;
+
         @media #{$medium-up} {
             display: none;
         }
