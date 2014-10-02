@@ -1,0 +1,42 @@
+/*orbit slider*/
+@media #{$small-only}{
+
+    .orbit-container{
+        margin-bottom: rem-calc(30);
+    }
+
+}
+
+.orbit-container .orbit-timer{
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+.orbit-container .orbit-timer .orbit-progress{
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+ul.orbit-slider,
+ul.orbit-slider li{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+html ul.orbit-slider li:before{
+    color: $body-font-family;
+    content: none;
+    margin: 0px;
+    padding: 0px;
+}
+ul.orbit-slider li img{
+    width: 100%;
+}
+.orbit-slider .orbit-caption a{
+    color: #FFF;
+    text-decoration: underline;
+}
+.touch .orbit-container .orbit-prev,
+.touch .orbit-container .orbit-next{
+    display: unset;
+}
