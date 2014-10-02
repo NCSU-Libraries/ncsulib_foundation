@@ -1,10 +1,9 @@
 /*orbit slider*/
-@media #{$small-only}{
 
-    .orbit-container{
+.orbit-container{
+    @media #{$small-only}{
         margin-bottom: rem-calc(30);
     }
-
 }
 
 .orbit-container .orbit-timer{
@@ -38,5 +37,7 @@ ul.orbit-slider li img{
 }
 .touch .orbit-container .orbit-prev,
 .touch .orbit-container .orbit-next{
-    display: unset;
+    @media #{$medium-up}{
+        display: unset;
+    }
 }
