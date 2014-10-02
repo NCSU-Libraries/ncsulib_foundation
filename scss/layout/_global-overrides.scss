@@ -354,13 +354,7 @@ table{
 }
 
 
-/*arrange form module overrides*/
-.webform-container-inline{
 
-    select{
-        width: auto;
-    }
-}
 
 /*hide skip to content text*/
 .element-invisible {
@@ -393,12 +387,6 @@ table{
 }
 
 
-
-
-// drupal form submit button
-.views-exposed-form .views-exposed-widget .form-submit{
-    margin-top: 1.85rem;
-}
 
 // fix conflict with NCSU brand bar
 .reveal-modal-bg {
