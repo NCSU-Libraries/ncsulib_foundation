@@ -212,6 +212,12 @@ header{
         }
     }
 
+    .right-off-canvas-menu{
+        @media #{$medium-up} {
+            display: none;
+        }
+    }
+
 }
 
 
