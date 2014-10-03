@@ -415,3 +415,4 @@ function ncsulib_foundation_adjust_for_timezone($time){
 
 /* All fields theming funcitons */
 include __DIR__ . '/fields.inc';
+
