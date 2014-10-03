@@ -3,14 +3,20 @@
 
 .views-row {
     @include grid-row();
-    margin-bottom: rem-calc(10);
+    margin-bottom: rem-calc(20);
 }
 .views-field-title {
     @include grid-column(4);
+    line-height: 1.4rem;
+    // padding-left: 0px;
 }
 .views-field-field-time {
     @include grid-column(4);
 }
 .views-field-field-space {
     @include grid-column(4);
+}
+.view-upcoming-events .item-list .pager{
+    float: left;
+    margin-top: 35px;
 }
