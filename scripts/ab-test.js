@@ -1,7 +1,6 @@
 var ab = {
     randNum : '', testAry : ['hamburger-nav', 'menu-nav'], navItem : '',
     init : function(){
-
         // set or show random element
         ab.setElement();
 
@@ -61,5 +60,6 @@ var ab = {
 }
 
 $(function(){
+    console.log('hit me');
     ab.init();
 })

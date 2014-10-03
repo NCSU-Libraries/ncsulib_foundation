@@ -9,7 +9,7 @@
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autocomplete.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/books-media-tab-autosuggest.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-search-tabs-logging.js');
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/ab-test.js');
+    // drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/ab-test.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
 ?>
 
