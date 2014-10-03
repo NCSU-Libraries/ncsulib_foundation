@@ -34,7 +34,7 @@
 		$ongoing = field_get_items('node', $node, 'field_ongoing');
 		$event_url = field_get_items('node', $node, 'field_event_url');
 	?>
-		<dd class="exhibit-item row">
+		<dd class="exhibit-item">
 			<div class="row">
 				<?php if($img_url): ?>
 				<div class="exhibit-photo columns medium-4">
