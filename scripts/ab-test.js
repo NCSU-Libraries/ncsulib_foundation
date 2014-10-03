@@ -60,6 +60,5 @@ var ab = {
 }
 
 $(function(){
-    console.log('hit me');
     ab.init();
 })
