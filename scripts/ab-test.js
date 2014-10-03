@@ -5,7 +5,7 @@ var ab = {
         ab.setElement();
 
         // set GA tracking event
-        $('#'+ab.navItem).click(function(e){
+        jQuery('#'+ab.navItem).click(function(e){
             _gaq.push(['_trackEvent', 'Mobile Nav Button', ab.navItem]);
         })
 
@@ -21,11 +21,11 @@ var ab = {
         }
 
         // hide all elements
-        $('#nav-toggle a').each(function(e){
-            $(this).addClass('hide');
+        jQuery('#nav-toggle a').each(function(e){
+            jQuery(this).addClass('hide');
         })
 
-        $('#'+ab.navItem).removeClass('hide');
+        jQuery('#'+ab.navItem).removeClass('hide');
     },
 
     getRandomNumber : function(){
@@ -59,6 +59,6 @@ var ab = {
     }
 }
 
-$(function(){
+jQuery(function(){
     ab.init();
 })
