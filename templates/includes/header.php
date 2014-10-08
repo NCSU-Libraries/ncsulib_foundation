@@ -69,7 +69,6 @@
 		<ul>
 			<li><a href="//www.lib.ncsu.edu/course">Course Tools</a></li>
 			<li><a href="//www.lib.ncsu.edu/tools-citation">Citation</a></li>
-			<li><a href="//www.lib.ncsu.edu/reference-tools">Reference</a></li>
 			<li><a href="//www.lib.ncsu.edu/guides">Guides</a></li>
 			<li><a href="//www.lib.ncsu.edu/tutorials">Videos and Tutorials</a></li>
 		</ul>

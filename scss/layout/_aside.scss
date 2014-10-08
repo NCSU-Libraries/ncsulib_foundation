@@ -94,6 +94,14 @@
 			list-style-type: none;
 		}
 	}
+
+	ul[class*="-block-grid-"]{
+
+		> li{
+			padding-bottom: 5px;
+		}
+	}
+
 }
 
 
