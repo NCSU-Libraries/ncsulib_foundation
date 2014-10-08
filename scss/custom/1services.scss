@@ -63,11 +63,6 @@ $include-html-classes: false;
         }
     }
 
-    // staff sidebar
-    .sidebar .item-list ul[class*="block-grid-"] > li{
-        padding-bottom: 0px;
-    }
-
     .block-1944{ //hide hi tech spaces block
         @media #{$small-only}{
             display: none;
