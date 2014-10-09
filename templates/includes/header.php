@@ -132,8 +132,8 @@
 		<div id="home-hours">
 			<p id="hours-title"><a href="/hours">TODAY'S HOURS</a>:</p>
 			<ul>
-				<li><a href="//www.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours"><?= $ary['hill']; ?></span></a></li>
-				<li><a href="//www.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours"><?= $ary['hunt']; ?></span></a></li>
+				<li><a href="//www.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours">7am to 10pm<!--?= $ary['hill']; ?--></span></a></li>
+				<li><a href="//www.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">7am to 10pm<!--?= $ary['hunt']; ?--></span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>
