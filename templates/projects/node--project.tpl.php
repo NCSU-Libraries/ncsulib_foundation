@@ -28,6 +28,7 @@
           <div class="story-statement">
             <?php print $user_picture;?>
             <?php print render($content['field_problem_statement']); ?>
+            <?php print render($content['field_featured_image_landscape']); ?>
             <?php print render($content['body']); ?>
             <?php print render($content['field_assessments']); ?>
             <?php print render($content['field_flickr_set']); ?>
