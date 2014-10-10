@@ -1,6 +1,7 @@
 @import "base/init_for_custom";
 
-.story {
+// Individual Stories
+#content .story {
   @media #{$medium-up} {@include grid-column($columns:10, $center: true)};
 
   .intro{
@@ -10,14 +11,23 @@
     .story-title {
       @media #{$medium-up} {@include grid-column($columns:12)};
       margin-bottom: rem-calc(30);
+
+      @media #{$small-only} {
+        h1 {
+          font-size: rem-calc(26);
+        }
+      }
     }
 
     .field-name-field-teaser {
-      @media #{$medium-up} {@include grid-column($columns:7)};
+      @media #{$medium-up} {
+        @include grid-column($columns:7);
 
-      * {
-        font-size: rem-calc(20);
+        * {
+          font-size: rem-calc(20);
+        }
       }
+
     }
 
     .field-name-field-featured-image {
@@ -72,7 +82,15 @@
           @extend %li;
         }
       }
+
+      @media #{$small-only} {
+        padding: rem-calc(20);
+        background: #E8E8E8;
+        * {font-size: 12px;}
+      }
+
     }
+
 
   }
 }
