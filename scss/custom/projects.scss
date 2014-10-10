@@ -25,7 +25,8 @@ $body-font-size-small-screen: rem-calc(15);
         @include grid-column($columns:7);
 
         * {
-          font-size: rem-calc(12);
+          font-size: rem-calc(20);
+          @media #{$small-only} {font-size: rem-calc(12);}
         }
       }
 
@@ -104,8 +105,10 @@ $body-font-size-small-screen: rem-calc(15);
 
 // For the landing page
 #content {
-  h1 {
-    font-size: rem-calc(30);
+  @media #{$small-only} {
+    h1 {
+      font-size: rem-calc(30);
+    }
   }
   .view-display-id-page {
     .views-row {
