@@ -35,7 +35,7 @@
             <p class="date-posted">Written on <?php print date('F j, Y', $created); ?></p>
           </div>
           <aside class="story-statement-aside">
-            <h2>About the Author</h2>
+            <h3>About the Author</h3>
 
             <?php print $name; ?>
             <?php print render($content['field_staff']); ?>

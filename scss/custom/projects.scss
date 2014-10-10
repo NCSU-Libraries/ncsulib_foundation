@@ -1,6 +1,8 @@
 @import "base/init_for_custom";
-
-.story {
+$title-font-size-small-screen: rem-calc(20);
+$body-font-size-small-screen: rem-calc(15);
+// Individual Stories
+#content .story {
   @media #{$medium-up} {@include grid-column($columns:10, $center: true)};
 
   .intro{
@@ -10,14 +12,24 @@
     .story-title {
       @media #{$medium-up} {@include grid-column($columns:12)};
       margin-bottom: rem-calc(30);
+
+      @media #{$small-only} {
+        h1 {
+          font-size: rem-calc(26);
+        }
+      }
     }
 
     .field-name-field-teaser {
-      @media #{$medium-up} {@include grid-column($columns:7)};
+      @media #{$medium-up} {
+        @include grid-column($columns:7);
 
-      * {
-        font-size: rem-calc(20);
+        * {
+          font-size: rem-calc(20);
+          @media #{$small-only} {font-size: rem-calc(12);}
+        }
       }
+
     }
 
     .field-name-field-featured-image {
@@ -72,7 +84,15 @@
           @extend %li;
         }
       }
+
+      @media #{$small-only} {
+        padding: rem-calc(20);
+        background: #E8E8E8;
+        * {font-size: $body-font-size-small-screen;}
+      }
+
     }
+
 
   }
 }
@@ -84,132 +104,172 @@
 }
 
 // For the landing page
-#content .view-display-id-page {
-  .views-row {
-    padding-bottom: 50px;
-    margin-bottom: rem-calc(100);
-  }
-
-  .centering-container {
-    display: table;
-    width: 100%;
-
-    .title-container {
-      display: table-row;
-
-      a.project-title {
-        background: no-repeat;
-        height: 300px;
-        width: 100%;
-        color: #fff;
-        display: table-cell;
-        vertical-align: middle;
-
-        &:hover {
-          text-decoration: none;
-        }
-
-        h2 {
-          color: #FFF;
-          background: rgba(0, 0, 0, 0.8);
-          display: block;
-          padding: 28px;
-          margin: 0 auto;
-          width: 70%;
-          text-align: center;
-          font-size: rem-calc(45);
-          font-weight: 700;
-          font-family: UniversCondensed;
-        }
-      }
+#content {
+  @media #{$small-only} {
+    h1 {
+      font-size: rem-calc(30);
     }
   }
-
-  .field-name-field-teaser {
-    margin: 20px 0;
-
-    p {
-      font-size: rem-calc(23);
+  .view-display-id-page {
+    .views-row {
+      padding-bottom: 50px;
+      margin-bottom: rem-calc(100);
     }
-  }
 
-  .project-details {
-    @include grid-row($behavior: nest);
+    .centering-container {
+      display: table;
+      width: 100%;
 
-    .project-author {
-      @include grid-column($columns:6);
+      .title-container {
+        display: table-row;
 
-      .user-info {
-        @include grid-row($behavior: nest);
-
-        .user-photo {
-          @include grid-column($columns:4);
-        }
-        .user-details {
-          @include grid-column($columns:8);
-          font-size: 1.7em;
-
-          .user-name {
-            line-height: 1.6;
-            display: block;
+        a.project-title {
+          background: no-repeat;
+          height: 300px;
+          width: 100%;
+          color: #fff;
+          display: table-cell;
+          vertical-align: middle;
+          @media #{$small-only} {
+            height: 200px;
           }
-          .user-title {
-            font-size: rem-calc(17);
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          h2 {
+            color: #FFF;
+            background: rgba(0, 0, 0, 0.8);
             display: block;
-            line-height: 1.1;
+            padding: rem-calc(28);
+            margin: 0 auto;
+            width: 70%;
+            text-align: center;
+            font-size: rem-calc(45);
+            font-weight: 700;
+            font-family: UniversCondensed;
+            @media #{$small-only} {
+              width: 90%;
+              font-size: $title-font-size-small-screen;
+            }
           }
         }
       }
     }
 
+    .field-name-field-teaser {
+      margin: 20px 0;
 
-    .project-meta {
-      @include grid-column($columns:6);
+      p {
+        font-size: rem-calc(23);
+        @media #{$small-only} {font-size: $body-font-size-small-screen;}
+      }
+    }
 
-      .read-more {
-        float: right;
+    .project-details {
+      @include grid-row($behavior: nest);
+
+      .project-author {
+        @media #{$small-only} {display: none;}
+        @include grid-column($columns:6);
+
+        .user-info {
+          @include grid-row($behavior: nest);
+
+          .user-photo {
+            @include grid-column($columns:4);
+          }
+          .user-details {
+            @include grid-column($columns:8);
+            font-size: 1.7em;
+
+            .user-name {
+              line-height: 1.6;
+              display: block;
+            }
+            .user-title {
+              font-size: rem-calc(17);
+              display: block;
+              line-height: 1.1;
+            }
+          }
+        }
+      }
+
+
+      .project-meta {
+        @include grid-column($columns:6);
+        @media #{$small-only} {@include grid-column($columns:12);}
+
+        .read-more {
+          float: right;
+          @include button($bg: rgb(0, 112, 255));
+          @media #{$small-only} {
+            @include button($full-width: true, $bg: rgb(0, 112, 255));
+          }
+        }
+
+        .date {
+          font-size: rem-calc(22);
+          @media #{$small-only} {display: none;}
+        }
+        @media #{$small-only} {
+          h3, .field-name-field-project-user-activities {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .view-footer {
+      @include grid-column(7, $center: true);
+      margin-top: 175px;
+      text-align: center;
+
+      p {
+        font-size: rem-calc(30);
+      }
+
+      a {
         @include button($bg: rgb(0, 112, 255));
+        font-size: rem-calc(30);
       }
 
-      .date {
-        font-size: rem-calc(22);
+      @media #{$small-only} {
+        @include grid-column(10, $center: true);
+        margin-top: 20px;
+
+        p {
+          font-size: $body-font-size-small-screen;
+        }
+
+        a {
+          @include button($full-width: true, $bg: rgb(0, 112, 255));
+          font-size: $body-font-size-small-screen;
+        }
       }
     }
   }
 
-  .view-footer {
-    @include grid-column(7, $center: true);
-    margin-top: 175px;
-    text-align: center;
-
-    p {
-      font-size: rem-calc(30);
+  .view-display-id-page_1 {
+    .views-row {
+      margin-bottom: 20px;
     }
 
-    a {
-      @include button($bg: rgb(0, 112, 255));
-      font-size: rem-calc(30);
+    .views-field-field-lastname,
+    .views-field-field-lastname .field-content,
+    .views-field-created {
+      display: inline;
     }
-  }
-}
 
-.view-display-id-page_1 {
-  .views-row {
-    margin-bottom: 20px;
-  }
+    .views-field-field-lastname {
+      font-style: italic;
+      color: rgba(128, 128, 128, 1);
+    }
 
-  .views-field-field-lastname,
-  .views-field-field-lastname .field-content,
-  .views-field-created {
-    display: inline;
-  }
-
-  .views-field-field-lastname {
-    font-style: italic;
-    color: rgba(128, 128, 128, 1);
-  }
-
-  .views-field.views-field-created {
-    color: rgba(128, 128, 128, 1);
+    .views-field.views-field-created {
+      color: rgba(128, 128, 128, 1);
+    }
   }
 }
