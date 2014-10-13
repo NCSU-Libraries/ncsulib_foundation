@@ -120,8 +120,7 @@ html #content{
     overflow:scroll;
     z-index:-999;
 }
-.skip-link:focus, .skip-link:active,
-.skip-link:focus a, .skip-link:active a {
+.skip-link:focus, .skip-link:active{
     color: #fff;
     background-color:#000;
     left: auto;
