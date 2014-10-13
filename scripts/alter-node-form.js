@@ -1,13 +1,12 @@
 var form = {
     init : function(){
-        jQuery('ul.tips').hide().before('<p><a href="#" id="tips-toggle">View formatting tips</a></p>');
+        jQuery('.filter-guidelines-processed').hide().before('<div style="clear:left; padding-top:10px;"><a href="#" id="tips-toggle">&#8680; View formatting tips</a></div>');
         jQuery('#tips-toggle').click(function(e){
-            jQuery('ul.tips').toggle();
-
             e.preventDefault();
-        })
+            jQuery('.filter-guidelines-processed').toggle();
+        });
     }
-}
+};
 
 
 jQuery(document).ready(function($){
