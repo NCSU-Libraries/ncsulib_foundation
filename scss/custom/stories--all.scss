@@ -1,0 +1,41 @@
+@import "base/init_for_custom";
+$title-font-size-small-screen: rem-calc(20);
+$body-font-size-small-screen: rem-calc(15);
+
+// All Stories, URL: /stories/all
+.view-id-capture_and_promote {
+    .views-row {
+      width: 88%;
+      float: left;
+      padding: rem-calc(5);
+      margin-bottom: rem-calc(40);
+      @media #{$medium-up} {
+        width: 31%;
+        background: #F9F9F9;
+        margin: 10px 1.75%;
+        height: 220px;
+        text-align: center;
+
+        &:nth-child(3n+1) {
+          margin-left: 0;
+        }
+        &:nth-child(3n+3) {
+          margin-right: 0;
+        }
+        &:nth-child(3n+4) {
+          clear: left;
+        }
+      }
+
+      .views-field-title {
+        @extend %h3;
+        @media #{$small-only} { font-size:$title-font-size-small-screen;}
+      }
+      .views-field-field-lastname,
+      .views-field-created {
+        color: #9D9D9D;
+        @media #{$small-only} { font-size:$body-font-size-small-screen;}
+      }
+
+    }
+}
