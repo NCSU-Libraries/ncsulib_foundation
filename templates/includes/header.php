@@ -16,10 +16,6 @@
   	}
 ?>
 
-<div class="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-</div>
-
 <header class="contain-to-grid" role="banner">
 	<div class="top-bar">
 		<div class="title-area">
