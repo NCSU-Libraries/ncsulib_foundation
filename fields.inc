@@ -477,7 +477,7 @@ function ncsulib_foundation_field__project($variables) {
 
   switch ($field_name) {
     case 'field_assessments':
-      $field_label = "Assessment";
+      $field_label = "How it Went";
       break;
 
     case 'field_problem_statement':
