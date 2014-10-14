@@ -16,7 +16,7 @@ var ab = {
         })
 
         // set GA tracking event for utility nav items
-        jQuery('#utility-links a').hover(function(e){
+        jQuery('#utility-links a').click(function(e){
             var item = jQuery(this).text();
             _gaq.push(['_trackEvent', 'Mobile Nav Button', ab.navItem, 'utility nav', item]);
         })
