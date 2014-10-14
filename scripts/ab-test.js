@@ -4,9 +4,21 @@ var ab = {
         // set or show random element
         ab.setElement();
 
-        // set GA tracking event
+        // set GA tracking event for mobile nav button
         jQuery('#'+ab.navItem).click(function(e){
             _gaq.push(['_trackEvent', 'Mobile Nav Button', ab.navItem]);
+        })
+
+        // set GA tracking event for primary nav items
+        jQuery('a.primary-menu-item').click(function(e){
+            var item = $(this).data('menu');
+            _gaq.push(['_trackEvent', 'Mobile Nav Button', ab.navItem, 'primary nav', item]);
+        })
+
+        // set GA tracking event for utility nav items
+        jQuery('#utility-links a').hover(function(e){
+            var item = $(this).text();
+            _gaq.push(['_trackEvent', 'Mobile Nav Button', ab.navItem, 'utility nav', item]);
         })
 
     },
