@@ -113,6 +113,20 @@ header{
                 background: none;
             }
 
+            a#menu-nav{
+                border: 1px solid #FF8E8E;
+                border-radius: 2px;
+                height: auto;
+                font-size: 0.8rem;
+                margin: 20px 8px 0px 7px;
+                padding: 1px 9px 2px;
+                width: auto;
+            }
+
+            a.hide{
+                display: none;
+            }
+
             i{
                 color: #FFF;
                 font-size: 1.5em;
