@@ -1,7 +1,7 @@
 <link rel="shortcut icon" href="//lib.ncsu.edu/sites/all/themes/ncsulibraries/favicon.ico" rel="shortcut icon">
 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8" />
-<meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" />
 <meta http-equiv="ImageToolbar" content="false" />
 
 <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0" />
@@ -59,13 +59,13 @@
 <?php endif; ?>
 
 <!--[if IE 9]>
-<link rel="stylesheet" type="text/css" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie9.css">
+<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie9.css">
 <![endif]-->
 
 <!--[if lt IE 9]>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.9.min.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.1.0.js"></script>
-<link rel="stylesheet" type="text/css" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie8.css">
+<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie8.css">
 <script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/ie8.js"></script>
 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/rem.js"></script>

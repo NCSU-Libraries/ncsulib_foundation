@@ -1,3 +1,10 @@
+
+
+.ie9{
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
 .ie9 .ncstate-utility-bar{
   display: none;
 }
@@ -14,6 +21,12 @@
   	display: inline !important;
   	width: 83% !important;
 }
+
+.ie9 #search-form .twitter-typeahead{
+    display: inline !important;
+    width: 83% !important;
+}
+
 .ie9 #searcheverything .twitter-typeahead #searchall{
   	width: 83% !important;
 }
