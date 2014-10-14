@@ -11,13 +11,13 @@ var ab = {
 
         // set GA tracking event for primary nav items
         jQuery('a.primary-menu-item').click(function(e){
-            var item = $(this).data('menu');
+            var item = jQuery(this).data('menu');
             _gaq.push(['_trackEvent', 'Mobile Nav Button', ab.navItem, 'primary nav', item]);
         })
 
         // set GA tracking event for utility nav items
         jQuery('#utility-links a').hover(function(e){
-            var item = $(this).text();
+            var item = jQuery(this).text();
             _gaq.push(['_trackEvent', 'Mobile Nav Button', ab.navItem, 'utility nav', item]);
         })
 
