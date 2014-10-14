@@ -1,3 +1,7 @@
+.ie9 .ncstate-utility-bar{
+  display: none;
+}
+
 /*global*/
 .right-off-canvas-menu{
 	display: none;

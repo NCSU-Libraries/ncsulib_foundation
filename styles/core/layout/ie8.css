@@ -164,6 +164,10 @@ header .top-bar{
 }
 
 
+.ncstate-utility-bar{
+	display: none;
+}
+
 .right-off-canvas-toggle{
 	display: none;
 }
