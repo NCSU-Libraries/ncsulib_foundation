@@ -44,6 +44,7 @@ drupal_add_js('jQuery(document).ready(function($) {$(\'iframe\').wrap(\'<div cla
             <?php print $name; ?>
             <?php print render($content['field_staff']); ?>
             <?php print render($content); ?>
+            <p class="subscribe"><i class="fa fa-rss-square"></i> <a href="/stories.rss">Subscribe to NCSU Library Stories</a><p>
 
           </aside>
         </div>
