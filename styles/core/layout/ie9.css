@@ -44,6 +44,24 @@
   	background: #DDD;
 }
 
+.ie9 dl.tabs{
+  top: 2px;
+}
+.ie9 dl.tabs dd{
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+  border-top: 1px solid #DDD;
+}
 
+.ie9 dl.tabs dd.active{
+  border-left: 1px solid #DDD;
+  border-bottom: 1px solid #fff;
+}
+
+.ie9 .tabs-content{
+  border: 1px solid #DDD;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 
