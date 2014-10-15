@@ -153,11 +153,12 @@
                  </div>
                  <h3><a href="/stories/pop-ask-us-table" id="story-2-heading">Pop-Up "Ask Us" Table</a></h3>
 
-                    <p>NC State librarians want
-                    students to Ask Us... about anything! But what would happen if we flipped the script
-                    and told them what to ask us about? That was what a small team of librarians set out
-                    to find out by setting up shop in the lobby of the library to promote learning about
-                    useful, interesting topics.</p>
+                    <p>NC State librarians want students to Ask Us... about anything! But what would happen
+                    if we flipped the script and told them what to ask us about? That was what a small team
+                    of librarians set out to find out by setting up shop in the lobby of the library to promote
+                    learning about useful, interesting topics.</p>
+
+                    <p class="right">&rdsh; See more <a href="/stories"> Library Stories</a></p>
              </div>
 
              <div id="happenings">
