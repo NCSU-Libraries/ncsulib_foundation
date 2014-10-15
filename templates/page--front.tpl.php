@@ -136,7 +136,7 @@
                         </a>
                     </div>
                     <h3>
-                        <a href="/huntlibrary/" id="story-1-heading">Learning with MaKey MaKey: Transforming Objects / Transforming Learning</a>
+                        <a href="/stories/learning-makey-makey-transforming-objects-transforming-learning" id="story-1-heading">Learning with MaKey MaKey: Transforming Objects / Transforming Learning</a>
                     </h3>
 
                     <p>With its innovative programs, services and spaces, the NCSU Libraries has
