@@ -148,7 +148,7 @@
                 <div id="story-2">
                     <div class="story-photo">
                         <a href="/stories/pop-ask-us-table" id="story-2-photo">
-                         <img src="/sites/default/files/styles/738_max_width/public/15526614475_575d302581_o.jpg?itok=WuFoYC3D" alt="Librarians helping students at the pop up ask us table" width="100%" />
+                         <img src="/sites/default/files/styles/738_max_width/public/15526614475_575d302581_o.jpg" alt="Librarians helping students at the pop up ask us table" width="100%" />
                      </a>
                  </div>
                  <h3><a href="/stories/pop-ask-us-table" id="story-2-heading">Pop-Up "Ask Us" Table</a></h3>
