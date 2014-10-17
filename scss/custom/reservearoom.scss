@@ -123,11 +123,6 @@ img {
 .form-item-edit-field-building-name-value-cvm {
     display:none;
 }
-@media #{$medium-up} {
-    .mlib {
-        display:none;
-    }
-}
 .room-name {
     @extend %h3;
     margin-top: 0;
