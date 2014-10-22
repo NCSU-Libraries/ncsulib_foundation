@@ -235,6 +235,9 @@ function ncsulib_foundation_preprocess_block(&$variables) {
     $variables['classes_array'][] = 'medium-3';
     $variables['classes_array'][] = 'columns';
   }
+  if ($variables['elements']['#block']->delta == "capture_and_promote-block_4") {
+    drupal_add_css(path_to_theme() . '/styles/core/custom/capture_and_promote-block_4.css', array('group' => 101));
+  }
 }
 
 /**
