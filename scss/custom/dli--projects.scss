@@ -1,0 +1,31 @@
+@import "base/init_for_custom";
+$title-font-size-small-screen: rem-calc(20);
+$body-font-size-small-screen: rem-calc(15);
+
+// All Stories, URL: /stories/all
+.view-id-project_reports {
+  .item-list {
+    width: 88%;
+    float: left;
+    padding: rem-calc(5);
+    margin-bottom: rem-calc(40);
+    @media #{$medium-up} {
+      width: 31%;
+      margin: 10px 1.75%;
+
+      &:nth-child(3n+1) {
+        margin-left: 0;
+      }
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+      &:nth-child(3n+4) {
+        clear: left;
+      }
+    }
+
+    li::before {
+      padding-right: 0.2em;
+    }
+  }
+}

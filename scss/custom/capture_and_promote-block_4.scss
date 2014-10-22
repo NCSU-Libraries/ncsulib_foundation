@@ -1,0 +1,21 @@
+@import "base/init_for_custom";
+
+.view-id-capture_and_promote {
+  .views-row {
+    margin-bottom: 10px;
+
+    p.field-content {
+      margin-bottom: 0;
+    }
+  }
+
+  .view-footer {
+      text-align: right;
+  }
+
+  .views-field-field-lastname, .views-field-created {
+      color: #989898;
+      font-style: italic;
+  }
+
+}

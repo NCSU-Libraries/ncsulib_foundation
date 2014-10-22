@@ -33,11 +33,12 @@
           <aside class="report-statement-aside">
 
             <?php print render($content['field_featured_image']); ?>
-            <p class="date-posted">Last updated on <?php print date('F j, Y', $created); ?></p>
             <?php print render($content['field_contact']); ?>
+            <?php print render($content['field_primary_link']); ?>
             <?php print render($content['field_repo_or_license']); ?>
             <?php print render($content['field_links']); ?>
             <?php print render($content['field_awards']); ?>
+            <p class="date-posted">Last updated on <?php print date('F j, Y', $created); ?></p>
 
           </aside>
         </div>

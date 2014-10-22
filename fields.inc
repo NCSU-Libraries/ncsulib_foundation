@@ -68,7 +68,45 @@ function ncsulib_foundation_username($variables) {
  * Make collaborators show up with name, title and thumbnail image
  */
 function ncsulib_foundation_field__field_contact($variables) {
-  //stubbed
+  $output = "";
+
+  $uid = $variables['element']['#items'][0]['target_id'];
+  $contact = user_load($uid);
+  $photo = get_user_image($contact);
+
+  // First name
+  $field = field_get_items('user', $contact, 'field_firstname');
+  $first_name = field_view_value('user', $contact, 'field_firstname', $field[0]);
+  $name = render($first_name);
+
+  // Last Name
+  $field = field_get_items('user', $contact, 'field_lastname');
+  $last_name = field_view_value('user', $contact, 'field_lastname', $field[0]);
+  $name .= " " . render($last_name);
+
+  // Link to user's page
+  $unity_id = $variables['element']['#items'][0]['entity']->name;
+  $link = '<a href="/staff/' . $unity_id . '">' . $name . '</a>';
+
+  // Contact photo
+  $photo = get_user_image($contact);
+
+  // Contact title
+  $field = field_get_items('user', $contact, 'field_title');
+  $field_title = field_view_value('user', $contact, 'field_title', $field[0]);
+  $title = render($field_title);
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
+  }
+  $output .=  '<div class="user-info">';
+  $output .= '<div class="user-photo">' . $photo . '</div>';
+  $output .= '<div class="user-details">';
+  $output .= '<span class="user-name">' . $link . '</span>';
+  $output .= '<span class="user-title">' . $title . '</span>';
+  $output .= '</div>';
+  $output .= '</div>';
 
   return $output;
 }
