@@ -1,4 +1,6 @@
 @import "base/init_for_custom";
+@import "custom/capture_and_promote-block_4";
+
 $title-font-size-small-screen: rem-calc(20);
 $body-font-size-small-screen: rem-calc(15);
 // Individual Stories
@@ -298,6 +300,7 @@ iframe {
 
 
 .subscribe {
+  overflow: auto;
   margin-top: 30px;
 
   i {

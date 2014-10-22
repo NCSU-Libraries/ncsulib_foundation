@@ -44,6 +44,13 @@ drupal_add_js('jQuery(document).ready(function($) {$(\'iframe\').wrap(\'<div cla
             <?php print $name; ?>
             <?php print render($content['field_staff']); ?>
             <?php print render($content); ?>
+            <?php
+              // Printing the contents of a block to a page template
+              // See https://www.drupal.org/node/26502
+              $block = module_invoke('views', 'block_view', 'capture_and_promote-block_4');
+              print '<h3>' . $block['subject'] . '</h3>';
+              print render($block['content']);
+            ?>
             <p class="subscribe"><i class="fa fa-rss-square"></i> <a href="/stories.rss">Subscribe to NCSU Library Stories</a><p>
 
           </aside>
