@@ -19,12 +19,12 @@ var brandingTracking = {
 
         jQuery('li.ncstate-utility-bar-primary-util a').click(function(e){
             var val = $(this).text();
-            _gaq.push(['_trackEvent', 'Branding Bar', val]);
+            _gaq.push(['_trackEvent', 'Branding Bar', 'Resources', val]);
         })
 
         jQuery('div.ncstate-utility-bar-sec-util li a').click(function(e){
             var val = $(this).text();
-            _gaq.push(['_trackEvent', 'Branding Bar', val]);
+            _gaq.push(['_trackEvent', 'Branding Bar', 'Resources', val]);
         })
     },
 
