@@ -39,7 +39,9 @@
                     <p class="search-more"><a href="/articles/" id="articles-search-more">More search options</a> &raquo;</p>
                 </div>
                 <!-- ncsu.summon.serialssolutions.com hidden inputs -->
-                <input type="hidden" value="ContentType,Book Chapter,f" name="s.fvf[]" />
+                <!-- removed as per WSDPT 10/24/14 <input type="hidden" name="s.fvf[]" value="ContentType,Book Chapter,f"  /> -->
+                <input type="hidden" name="s.fvf[]" value="ContentType,Magazine Article" />
+                <input type="hidden" name="s.fvf[]" value="ContentType,Trade Publication Article" />
                 <input type="hidden" class="article-input" value="ContentType,Journal Article" name="s.fvf[]" />
                 <input type="hidden" class="article-input" value="addFacetValueFilters(ContentType,Journal / eJournal)" name="s.cmd" />
                 <input type="hidden" value="true" name="keep_r" />
