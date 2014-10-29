@@ -6,7 +6,7 @@ var brandingTracking = {
             _gaq.push(['_trackEvent', 'Branding Bar', 'NC State Home']);
         })
 
-        jQuery('#ncstate-utility-bar-toggle-link').hover(function(e){
+        jQuery('#ncstate-utility-bar-toggle-link').click(function(e){
             brandingTracking.pause();
             _gaq.push(['_trackEvent', 'Branding Bar', 'Resources', 'toggle button']);
         })
@@ -22,14 +22,14 @@ var brandingTracking = {
         })
 
         jQuery('li.ncstate-utility-bar-primary-util a').click(function(e){
-            var val = $(this).text();
             brandingTracking.pause();
+            var val = $(this).text();
             _gaq.push(['_trackEvent', 'Branding Bar', 'Resources', val]);
         })
 
         jQuery('div.ncstate-utility-bar-sec-util li a').click(function(e){
-            var val = $(this).text();
             brandingTracking.pause();
+            var val = $(this).text();
             _gaq.push(['_trackEvent', 'Branding Bar', 'Resources', val]);
         })
     },
@@ -52,5 +52,5 @@ var brandingTracking = {
 
 
 jQuery(function(){
-    brandingTracking.interval = setInterval(brandingTracking.isBarLoaded, 1000);
+    brandingTracking.interval = setInterval(brandingTracking.isBarLoaded, 500);
 });
