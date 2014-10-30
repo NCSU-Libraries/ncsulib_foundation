@@ -3,7 +3,9 @@
 
 $title-font-size-small-screen: rem-calc(20);
 $body-font-size-small-screen: rem-calc(15);
+
 // Individual Stories
+
 #content .story {
   @media #{$medium-up} {@include grid-column($columns:10, $center: true)};
 
@@ -105,7 +107,9 @@ $body-font-size-small-screen: rem-calc(15);
   font-style: italic;
 }
 
+
 // For the landing page
+
 #content {
   @media #{$small-only} {
     h1 {
@@ -113,6 +117,14 @@ $body-font-size-small-screen: rem-calc(15);
     }
   }
   .view-display-id-page {
+    .view-header p {
+      background: #D3D3D3;
+      padding: 9px;
+      font-family: Univers;
+      font-size: rem-calc(20);
+      color: #838383;
+      font-style: italic;
+    }
     .views-row {
       padding-bottom: 50px;
       margin-bottom: rem-calc(100);
