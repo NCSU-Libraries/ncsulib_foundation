@@ -143,7 +143,7 @@ $body-font-size-small-screen: rem-calc(15);
 
         a.project-title {
           background: no-repeat;
-          height: 300px;
+          height: 150px;
           width: 100%;
           color: #fff;
           display: table-cell;
@@ -160,11 +160,11 @@ $body-font-size-small-screen: rem-calc(15);
             color: #FFF;
             background: rgba(0, 0, 0, 0.8);
             display: block;
-            padding: rem-calc(28);
+            padding: rem-calc(6);
             margin: 0 auto;
-            width: 70%;
+            width: 90%;
             text-align: center;
-            font-size: rem-calc(45);
+            font-size: rem-calc(39);
             font-weight: 700;
             font-family: UniversCondensed;
             @media #{$small-only} {
@@ -180,7 +180,7 @@ $body-font-size-small-screen: rem-calc(15);
       margin: 20px 0;
 
       p {
-        font-size: rem-calc(23);
+        font-size: rem-calc(19);
         @media #{$small-only} {font-size: $body-font-size-small-screen;}
       }
     }
