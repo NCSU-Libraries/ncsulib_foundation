@@ -124,6 +124,10 @@ $body-font-size-small-screen: rem-calc(15);
       font-size: rem-calc(20);
       color: #838383;
       font-style: italic;
+      @media #{$small-only} {
+        font-size: $body-font-size-small-screen;
+        line-height: 1.2;
+      }
     }
     .views-row {
       padding-bottom: 50px;
