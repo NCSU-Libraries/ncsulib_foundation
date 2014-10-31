@@ -24,13 +24,13 @@ var brandingTracking = {
         jQuery('li.ncstate-utility-bar-primary-util a').click(function(e){
             brandingTracking.pause();
             var val = $(this).text();
-            _gaq.push(['_trackEvent', 'Branding Bar', 'Resources', val]);
+            _gaq.push(['_trackEvent', 'Branding Bar', 'Resources', 'primary link '+val]);
         })
 
         jQuery('div.ncstate-utility-bar-sec-util li a').click(function(e){
             brandingTracking.pause();
             var val = $(this).text();
-            _gaq.push(['_trackEvent', 'Branding Bar', 'Resources', val]);
+            _gaq.push(['_trackEvent', 'Branding Bar', 'Resources', 'secondary link '+val]);
         })
     },
 
