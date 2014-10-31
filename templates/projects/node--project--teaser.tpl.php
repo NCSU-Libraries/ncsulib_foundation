@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<?php print render($content['field_teaser']); ?>
+<?php print render($content['field_four_liner']); ?>
 
 
 
