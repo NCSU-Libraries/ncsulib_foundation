@@ -590,6 +590,33 @@ function ncsulib_foundation_field__field_staff__project($variables) {
   return print_multiple_users($variables['items'], $output);
 }
 
+/**
+ * Implements theme_field()
+ *
+ * Add paragraph tag wrapper to four-liner
+ */
+function ncsulib_foundation_field__field_four_liner__project($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . ':&nbsp;</div>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '><p>' . drupal_render($item) . '</p></div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
+
 
 
 /** HELPER FUNCTIONS **/
