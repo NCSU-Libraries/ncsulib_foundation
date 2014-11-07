@@ -221,9 +221,6 @@ $body-font-size-small-screen: rem-calc(15);
           color: #fff;
           display: table-cell;
           vertical-align: middle;
-          @media #{$small-only} {
-            height: 200px;
-          }
 
           &:hover {
             text-decoration: none;
