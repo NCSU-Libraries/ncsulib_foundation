@@ -202,8 +202,9 @@ $body-font-size-small-screen: rem-calc(15);
       }
     }
     .views-row {
-      padding-bottom: 50px;
-      margin-bottom: rem-calc(100);
+      padding-bottom: rem-calc(15);
+      margin-bottom: rem-calc(50);
+      background: rgb(239, 239, 239);
     }
 
     .centering-container {
@@ -230,13 +231,11 @@ $body-font-size-small-screen: rem-calc(15);
 
           h2 {
             color: #FFF;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0,0,0,0.8);
             display: block;
-            padding: rem-calc(6);
-            margin: 0 auto;
-            width: 90%;
-            text-align: center;
-            font-size: rem-calc(39);
+            padding: rem-calc(0 15);
+            margin: 0;
+            font-size: 2.4375rem;
             font-weight: 700;
             font-family: UniversCondensed;
             @media #{$small-only} {
@@ -250,6 +249,7 @@ $body-font-size-small-screen: rem-calc(15);
 
     .field-name-field-four-liner {
       margin: 20px 0;
+      padding: rem-calc(10 15);
 
       p {
         font-size: rem-calc(19);
@@ -258,7 +258,7 @@ $body-font-size-small-screen: rem-calc(15);
     }
 
     .project-details {
-      @include grid-row($behavior: nest);
+      @include grid-row();
 
       .project-author {
         @media #{$small-only} {display: none;}
