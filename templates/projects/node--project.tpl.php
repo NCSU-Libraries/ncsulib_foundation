@@ -2,7 +2,6 @@
   drupal_add_js('jQuery(document).ready(function($) {$(\'iframe\').wrap(\'<div class="video-wrapper"></div>\'); });', 'inline');
   hide($content['four_liner']);
 ?>
-
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
     <div class="story">
@@ -31,7 +30,6 @@
       <div class="story-body">
 
           <div class="story-statement">
-            <?php print $user_picture;?>
             <?php print render($content['field_problem_statement']); ?>
             <?php print render($content['field_featured_image_landscape']); ?>
             <?php print render($content['body']); ?>

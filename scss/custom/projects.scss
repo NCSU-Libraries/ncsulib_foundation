@@ -94,10 +94,7 @@ $body-font-size-small-screen: rem-calc(15);
         background: #E8E8E8;
         * {font-size: $body-font-size-small-screen;}
       }
-
     }
-
-
   }
 }
 
@@ -107,8 +104,72 @@ $body-font-size-small-screen: rem-calc(15);
   font-style: italic;
 }
 
+// Individual Capture Stories or Shorts
 
-// For the landing page
+#content .capture {
+
+  .short {
+    @include grid-row($behavior: nest);
+
+    .short-body {
+      @media #{$medium-up} { @include grid-column(8) };
+
+      .short-title {
+
+        @media #{$small-only} {
+          h1 {
+            font-size: $title-font-size-small-screen;
+          }
+        }
+
+        .field-name-field-teaser {
+          @media #{$medium-up} {
+            * {
+              font-size: rem-calc(20);
+              @media #{$small-only} {font-size: $body-font-size-small-screen;}
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .field-name-field-featured-image-landscape {
+    @media #{$medium-up} { @include grid-column(4); }
+  }
+
+  .published-date {
+    @include grid-row($behavior: nest);
+
+    .date {
+      @include grid-column(12);
+      p {
+        font-size: rem-calc(12);
+      }
+    }
+  }
+
+  .user-info {
+    @include grid-row($behavior: nest);
+
+    .user-photo {
+      @include grid-column(1);
+      padding-right: 0;
+    }
+    .user-details {
+      @include grid-column(11);
+      font-size: rem-calc(12);
+
+      .user-name {
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+// For the landing page at /stories
 
 #content {
   @media #{$small-only} {
