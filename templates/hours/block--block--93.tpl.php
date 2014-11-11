@@ -45,13 +45,3 @@
 	<?php endforeach; ?>
 </ul>
 
-
-
-
-
-<!-- pdf link -->
-<h2>Download Hours Schedule</h2>
-<ul id="hours-download">
-	<li><img src="/images/pdf.gif" alt="PDF icon"><a href="/documents/hours/2014-fall-hours.pdf">Fall 2014 hours</a></li>
-</ul>
-
