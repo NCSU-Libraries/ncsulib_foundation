@@ -131,35 +131,35 @@
 
                 <div id="story-1">
                     <div class="story-photo">
-                        <a href="/stories/learning-makey-makey-transforming-objects-transforming-learning" id="story-1-photo">
-                            <img src="/sites/default/files/styles/738_max_width/public/THATCamp-circuit-with-wires.jpg" title="" alt="Makey Makey Circuit Board" width="100%">
+                        <a href="/huntlibrary/" id="story-1-photo">
+                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt.jpg" title="&copy; Jeff Goldberg/ESTO" alt="The James B. Hunt Jr. Library" width="100%">
                         </a>
                     </div>
                     <h3>
-                        <a href="/stories/learning-makey-makey-transforming-objects-transforming-learning" id="story-1-heading">Learning with MaKey MaKey: Transforming Objects / Transforming Learning</a>
+                        <a href="/huntlibrary/" id="story-1-heading">James B. Hunt Jr. Library</a>
                     </h3>
 
-                    <p>With its innovative programs, services and spaces, the NCSU Libraries has
-                    long demonstrated its commitment to developing emerging literacies by giving
-                    students and faculty access to the latest technologies.</p>
-
+                    <ul class="hunt-list">
+                        <li><a href="/huntlibrary/#storify" class="story-1-link">Hunt Library on Storify</a></li>
+                        <li><a href="/huntlibrary/inthenews" class="story-1-link">In the News</a></li>
+                        <li><a href="/huntlibrary/bookBot" class="story-1-link">bookBot</a></li>
+                        <li><a href="/huntlibrary/namingopportunities" class="story-1-link">Help support Hunt</a></li>
+                        <li><a href="//www.ncsu.edu/huntlibrary/" class="story-1-link">Think and Do</a></li>
+                    </ul>
                 </div>
 
                 <div id="story-2">
                     <div class="story-photo">
-                        <a href="/stories/pop-ask-us-table" id="story-2-photo">
-                         <img src="/sites/default/files/styles/738_max_width/public/15526614475_575d302581_o.jpg" alt="Librarians helping students at the pop up ask us table" width="100%" />
-                     </a>
-                 </div>
-                 <h3><a href="/stories/pop-ask-us-table" id="story-2-heading">Pop-Up "Ask Us" Table</a></h3>
-
-                    <p>NC State librarians want students to Ask Us... about anything! But what would happen
-                    if we flipped the script and told them what to ask us about? That was what a small team
-                    of librarians set out to find out by setting up shop in the lobby of the library to promote
-                    learning about useful, interesting topics.</p>
-
-                    <p class="right">&rdsh; See more <a href="/stories"> Library Stories</a></p>
-             </div>
+                        <a href="/hours-2014" id="story-2-photo">
+                         <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hours_notice_image.jpg" alt="New this fall: Changes to D. H. Hill and the Hunt Library Hours" width="100%" />
+                        </a>
+                    </div>
+                     <h3><a href="/hours-2014" id="story-2-heading">Only One Main Library Open Overnight</a></h3>
+                        <p>Budget reductions have required some changes to the
+                        overnight hours at the D. H. Hill and Hunt Libraries.  D. H. Hill will now close at midnight on Sundays and Mondays,
+                        while Hunt will close at midnight on Tuesdays, Wednesdays,
+                        and Thursdays.</p>
+                </div>
 
              <div id="happenings">
                 <div id="home-news">
