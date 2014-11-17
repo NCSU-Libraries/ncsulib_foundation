@@ -3,12 +3,14 @@
  */
 jQuery(document).ready(function () {
 
+var typeahead_url = window.location.protocol == "https:" ? "https://search.lib.ncsu.edu:8444/quicksearch-typeahead/all/" : "http://search.lib.ncsu.edu:8081/quicksearch-typeahead/all/";
+
 // define the datasets for the typeahead
 var bestbets = new Dataset({
   valuekey: 'value',
   remote: {
     ajax: { dataType: 'jsonp', },
-    url: 'http://sandbox.lib.ncsu.edu/quicksearch-typeahead/all/%QUERY',
+    url: typeahead_url + '%QUERY',
     filter: function(response){
       return response.bestbets;
     },
@@ -20,7 +22,7 @@ var titles = new Dataset({
   valuekey: 'value',
   remote: {
     ajax: { dataType: 'jsonp', },
-    url: 'http://sandbox.lib.ncsu.edu/quicksearch-typeahead/all/%QUERY',
+    url: typeahead_url + '%QUERY',
     filter: function(response){
         return response.trln;
     },
@@ -33,7 +35,7 @@ var spaces = new Dataset({
   valuekey: 'value',
   remote: {
     ajax: { dataType: 'jsonp', },
-    url: 'http://sandbox.lib.ncsu.edu/quicksearch-typeahead/all/%QUERY',
+    url: typeahead_url + '%QUERY',
     filter: function(response){
         return response.spaces;
     },
@@ -45,7 +47,7 @@ var faqs = new Dataset({
   valuekey: 'value',
   remote: {
     ajax: { dataType: 'jsonp', },
-    url: 'http://sandbox.lib.ncsu.edu/quicksearch-typeahead/all/%QUERY',
+    url: typeahead_url + '%QUERY',
     filter: function(response){
         return response.faqs;
     },
