@@ -21,7 +21,7 @@ $include-html-classes: false;
 
 
 // change size of staff photo section
-.one-sidebar.sidebar-first{
+.sidebar-first{
 
     @media #{$medium-up}{
         aside#subnav{
@@ -53,5 +53,30 @@ $include-html-classes: false;
 
     #edit-department-wrapper{
         display: none;
+    }
+}
+
+// Right Sidebar
+#content .l-sidebar-second {
+    .view-capture-and-promote {
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        h3 {
+            margin-top: -90px;
+            padding: 10px 10px 0 10px;
+            color: #fff;
+            // below text-shadow is repeated to increase intensity of the shadow
+            // which improves readability for light-colored background images
+            text-shadow: 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000;;
+        }
+        p {
+            margin: 10px;
+            color: #E8E4E4;
+            font-style: italic;
+            text-shadow: 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px #000;
+        }
     }
 }
