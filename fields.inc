@@ -521,6 +521,17 @@ function ncsulib_foundation_field__project($variables) {
     case 'field_problem_statement':
       $field_label = "How it Got Started";
       break;
+
+    case 'field_event_start':
+      $field_label = "Event Date";
+      break;
+
+    case 'field_space':
+      $field_label = "Library Spaces";
+      break;
+
+    case 'field_non_libraries_space':
+      $field_label = "Other Spaces";
   }
 
   $output = '';
