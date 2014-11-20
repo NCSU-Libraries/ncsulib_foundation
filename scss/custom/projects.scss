@@ -152,7 +152,7 @@ $body-font-size-small-screen: rem-calc(15);
   .user-info {
     @include grid-row($behavior: nest);
 
-    .user-photo img{
+    .user-photo {
       @include grid-column(1);
       padding-right: 0;
     }
@@ -264,7 +264,7 @@ $body-font-size-small-screen: rem-calc(15);
         .user-info {
           @include grid-row($behavior: nest);
 
-          .user-photo {
+          .user-photo img{
             @include grid-column($columns:4);
           }
           .user-details {
