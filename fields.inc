@@ -648,7 +648,7 @@ function get_user_image($user) {
         ),
       ));
     } else {
-      $image_array  = '<img src="/sites/default/files/gender_neutral-1.jpg">';
+     // $image_array  = '<img src="/sites/default/files/gender_neutral-1.jpg">';
     }
   return $image_array;
 }
