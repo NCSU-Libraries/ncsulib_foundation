@@ -44,7 +44,7 @@
 
                 <h3>Other tools and resources</h3>
                 <ul>
-                  <li><a href="/studyrooms/getaroom.php">Reserve a Room</a></li>
+                  <li><a href="/roomreservations/schedule.php">Reserve a Room</a></li>
                   <li><a href="/groupfinder/">GroupFinder</a></li>
                   <li><a href="/course">Course Tools</a></li>
                   <li><a href="http://reserves.lib.ncsu.edu/">Course Reserves</a></li>
