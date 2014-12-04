@@ -107,6 +107,23 @@ $include-html-classes: false;
         }
     }
 
+    .l-sidebar-second{
+        @media #{$small-only}{
+            // subject specialists
+            .view-id-staff ul{
+                display: none;
+            }
+            // workshops
+            .block-1920 ul{
+                display: none;
+            }
+            // tutorials
+            .block-1948 img{
+                display: none;
+            }
+        }
+    }
+
     .user-activity-rooms{
         ul{
 
