@@ -93,6 +93,20 @@ $include-html-classes: false;
 			}
 		}
 	}
+
+    .l-sidebar-first{
+
+        .user-activity-experts{
+            ul{
+                li:nth-child(odd){
+                    padding-right: 8px;
+                }
+                li:nth-child(even){
+                    padding-left: 7px;
+                }
+            }
+        }
+    }
 }
 
 
