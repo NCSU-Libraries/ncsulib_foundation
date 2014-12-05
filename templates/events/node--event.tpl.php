@@ -10,6 +10,14 @@
   <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
 <?php endif; ?>
 <?php print render($title_suffix); ?>
+    <?php
+        $event_date = strtotime($content['field_time']['#object']->field_time['und'][0]['value2']);
+        if($event_date < date('U')):
+    ?>
+    <div data-alert class="alert-box">
+        This event has already happened.
+    </div>
+    <?php endif; ?>
 
     <div id="event-node" class="row">
         <div class="columns medium-7">
