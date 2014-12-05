@@ -172,7 +172,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
     // unset all content from user activity taxonomy page
     if($term->vocabulary_machine_name == 'user_activities' || $term->vocabulary_machine_name == 'services'){
       unset($variables['page']['content']['system_main']['nodes']);
-      unset($variables['page']['content']['system_main']['term_heading']['term']);
+      // unset($variables['page']['content']['system_main']['term_heading']['term']);
       unset($variables['page']['content']['system_main']['pager']);
     };
   }
