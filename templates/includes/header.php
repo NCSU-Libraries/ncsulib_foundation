@@ -130,8 +130,8 @@
 					// for current library hours
 					include 'partials/util-hours.php';
 				?>
-				<li><a href="//www.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours">24 Hours<?= '';//$ary['hill']; ?></span></a></li>
-				<li><a href="//www.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours">24 Hours<?= '';//$ary['hunt']; ?></span></a></li>
+				<li><a href="//www.lib.ncsu.edu/hours/hill/general"><span class="library">D. H. Hill:</span> &nbsp; <span class="hours"><?= $ary['hill']; ?></span></a></li>
+				<li><a href="//www.lib.ncsu.edu/hours/hunt/general"><span class="library">James B. Hunt Jr.:</span> &nbsp; <span class="hours"><?= $ary['hunt']; ?></span></a></li>
 			</ul>
 		</div>
 		<?php else: ?>
