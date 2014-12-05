@@ -15,7 +15,7 @@
         if($event_date < date('U')):
     ?>
     <div data-alert class="alert-box">
-        This event has already happened.
+        <i class="fa fa-warning"></i> This event has already happened.
     </div>
     <?php endif; ?>
 
