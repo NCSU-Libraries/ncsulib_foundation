@@ -11,13 +11,30 @@ $include-html-classes: false;
 	display: none;
 }
 
-#content #back-to-link{
-	float: left;
-	font-size: 0.8rem;
+#content {
 
-	a{
-		font-size: 0.76rem;
-		font-size: 0.75rem;
+    .l-sidebar-first{
+
+        .user-activity-experts{
+            ul{
+                li:nth-child(odd){
+                    padding-right: 8px;
+                }
+                li:nth-child(even){
+                    padding-left: 7px;
+                }
+            }
+        }
+    }
+
+	#back-to-link{
+		float: left;
+		font-size: 0.8rem;
+
+		a{
+			font-size: 0.76rem;
+			font-size: 0.75rem;
+		}
 	}
 }
 
@@ -93,20 +110,6 @@ $include-html-classes: false;
 			}
 		}
 	}
-
-    .l-sidebar-first{
-
-        .user-activity-experts{
-            ul{
-                li:nth-child(odd){
-                    padding-right: 8px;
-                }
-                li:nth-child(even){
-                    padding-left: 7px;
-                }
-            }
-        }
-    }
 }
 
 
