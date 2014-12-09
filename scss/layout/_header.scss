@@ -113,9 +113,14 @@ header{
                 background: none;
             }
 
+            a#hamburger-nav{
+                display: none;
+            }
+
             a#menu-nav{
                 border: 1px solid #FF8E8E;
                 border-radius: 2px;
+                display: block;
                 height: auto;
                 font-size: 0.8rem;
                 margin: 20px 8px 0px 7px;
@@ -123,9 +128,9 @@ header{
                 width: auto;
             }
 
-            a.hide{
-                display: none;
-            }
+            // a.hide{
+            //     display: none;
+            // }
 
             i{
                 color: #FFF;

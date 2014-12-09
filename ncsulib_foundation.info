@@ -47,7 +47,7 @@ scripts[] = scripts/search-cancel-button.js
 scripts[] = scripts/typeahead.bundle.min.js
 scripts[] = scripts/handlebars-v1.3.0.js
 scripts[] = scripts/quicksearch-typeahead.js
-scripts[] = scripts/ab-test.js
+;scripts[] = scripts/ab-test.js
 scripts[] = scripts/branding-bar-tracking.js
 
 ; This section lists the regions defined in the page.tpl.php. The name in
