@@ -150,11 +150,11 @@
 
                 <div id="story-2">
                     <div class="story-photo">
-                        <a href="/hours-2014" id="story-2-photo">
+                        <a href="/hours-2015" id="story-2-photo">
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hours_notice_image-2015.jpg" alt="New this fall: Changes to D. H. Hill and the Hunt Library Hours" width="100%" />
                         </a>
                     </div>
-                     <h3><a href="/hours-2014" id="story-2-heading">One Main Library Open Overnight</a></h3>
+                     <h3><a href="/hours-2015" id="story-2-heading">One Main Library Open Overnight</a></h3>
                         <p>Budget reductions have required some changes this year to the overnight hours at the D. H. Hill and
                         Hunt Libraries.  For spring 2015, D. H. Hill will continue to close at midnight on Sundays and Mondays,
                         while Hunt will close at midnight on Tuesdays, Wednesdays, and Thursdays.</p>
