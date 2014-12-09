@@ -99,5 +99,15 @@
 				</tbody>
 			</table>
 		</div>
+		<?php if(arg(1) == 'hunt' && arg(2) == 'general'): ?>
+		<div class="row hide-for-small-only">
+			<div class="columns medium-12">
+				<div class="exam-hours-alert">
+					<p><div class="left-triangle"></div>Wolfpack One Card required for entry Dec 4-16.</p>
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
 	</div>
 </div>
+
