@@ -90,6 +90,11 @@ function ncsulib_foundation_field__field_contact($variables) {
 
   // Contact photo
   $photo = get_user_image($contact);
+  if($contact->field_staff_photo){
+    $photo_html = '<img src="https://www.lib.ncsu.edu/sites/default/files/styles/half-page-width/public/'.$photo['#item']['filename'].'" />';
+  } else{
+    $photo_html = '<img src="https://www.lib.ncsu.edu/sites/default/files/gender_neutral-1.jpg">';
+  }
 
   // Contact title
   $field = field_get_items('user', $contact, 'field_title');
@@ -100,8 +105,9 @@ function ncsulib_foundation_field__field_contact($variables) {
   if (!$variables['label_hidden']) {
     $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
   }
+
   $output .=  '<div class="user-info">';
-  $output .= '<div class="user-photo">' . $photo . '</div>';
+  $output .= '<div class="user-photo">' . $photo_html . '</div>';
   $output .= '<div class="user-details">';
   $output .= '<span class="user-name">' . $link . '</span>';
   $output .= '<span class="user-title">' . $title . '</span>';
