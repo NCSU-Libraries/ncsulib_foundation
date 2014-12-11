@@ -40,6 +40,11 @@
 	</div>
 	<?php endforeach; ?>
 
+
+
+
+
+
 	<!-- Exam Hours -->
 	<?php
 		$exam_hours_ary = hours_get_exception('exam_hours');
@@ -71,7 +76,7 @@
 
 	<!-- EXCEPTIONS -->
 	<?php
-		$exceptions_hours_ary = hours_get_exception('exceptions');
+		$exceptions_hours_ary = hours_get_exception('exception');
 		if($exceptions_hours_ary):
 	?>
 	<div class="exceptions-schedule large-12">
