@@ -75,7 +75,7 @@
 		if($exceptions_hours_ary):
 	?>
 	<div class="exceptions-schedule large-12">
-		<h4 class="subheader">Exam Hours <div class="exam-hours">&nbsp;</div></h4>
+		<h4 class="subheader">Exceptions <div class="exception-hours">&nbsp;</div></h4>
 		<table>
 			<?php foreach($exceptions_hours_ary as $exception): ?>
 			<tr>
