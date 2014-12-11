@@ -1,18 +1,10 @@
 <?php
-	$hill_id = '22493';
-	$hunt_id = '22494';
-	$raw_json = file_get_contents('https://www.lib.ncsu.edu/rest_hours/utility-hours.json?service=22485');
-	$decoded_json = json_decode($raw_json, true);
-	$array_values = array_values($decoded_json);
-	$item = array_shift($array_values);
 	$ary = array();
-	foreach($decoded_json as $lib){
-		if( $lib['library'] == $hill_id || $lib['library'] == $hunt_id){
-			if($lib['date'] == date('Y-m-d')){
-				$ary[$lib['library_name']] = $lib['time'];
-			}
-		}
+	$util_ary = array('hill'=>22493, 'hunt'=>22494);
+	foreach($util_ary as $key=>$lib){
+		$raw_json = file_get_contents($GLOBALS['base_url'].'/rest_hours/master-hours-feed.json?library='.$lib.'&service_short_name=general&date='.date('Y').'-'.date('n').'-'.date('j'));
+		$json = json_decode($raw_json);
+		$ary[$key] = $json[0]->real_time_display;
 	}
-
 	return $ary;
 ?>

@@ -42,46 +42,20 @@
 
 	<!-- Exam Hours -->
 	<?php
-		$exam_hours = FALSE;
-		foreach ($json_data as $key => $sem){
-			foreach ($sem as $item){
-				if($item->exam_hours == 1){
-					$cur_start_month = date('m',$item->open);
-					$cur_end_month = date('m',$item->close);
-					$start_month = (isset($_GET['date'])) ? date('m',strtotime($_GET['date'])) : date('m',mktime(0,0,0,date('n'),1,date('Y')));
-
-					if($cur_start_month == $start_month || $cur_end_month == $start_month){
-						$exam_hours = TRUE;
-					}
-				}
-			}
-		}
+		$exam_hours_ary = hours_get_exception('exam_hours');
+		if($exam_hours_ary):
 	?>
-	<?php if($exam_hours): ?>
 	<div class="exceptions-schedule large-12">
 		<h4 class="subheader">Exam Hours <div class="exam-hours">&nbsp;</div></h4>
 		<table>
-			<?php
-				foreach ($json_data as $key => $sem):
-					foreach ($sem as $item):
-						if($item->exam_hours == 1):
-							$cur_start_month = date('m',$item->open);
-							$cur_end_month = date('m',$item->close);
-							$start_month = (isset($_GET['date'])) ? date('m',strtotime($_GET['date'])) : date('m',mktime(0,0,0,date('n'),1,date('Y')));
-							if($cur_start_month == $start_month || $cur_end_month == $start_month):
-
-			?>
+			<?php foreach($exam_hours_ary as $exam): ?>
 			<tr>
-				<td width="40%"><?php echo $item->display_rule; ?></td>
-				<td><?php echo $item->display_time; ?></td>
+				<td width="40%"><?= $exam['date_range']; ?></td>
+				<td><?= $exam['display']; ?></td>
 			</tr>
-			<?php
-							endif;
-						endif;
-					endforeach;
-			?>
-			<?php endforeach;?>
+			<?php endforeach; ?>
 		</table>
+
 		<?php if(arg(1) == 'hunt' && arg(2) == 'general'): ?>
 		<div class="row show-for-small-only">
 			<div class="columns medium-12">
@@ -97,46 +71,22 @@
 
 	<!-- EXCEPTIONS -->
 	<?php
-		$exceptions = FALSE;
-		foreach ($json_data as $key => $sem){
-			foreach ($sem as $item){
-				if($item->exception == 'Yes'){
-					$cur_start_month = date('m',$item->open);
-					$start_month = (isset($_GET['date'])) ? date('m',strtotime($_GET['date'])) : date('m',mktime(0,0,0,date('n'),1,date('Y')));
-					if($cur_start_month == $start_month){
-						$exceptions = TRUE;
-					}
-				}
-			}
-		}
+		$exceptions_hours_ary = hours_get_exception('exceptions');
+		if($exceptions_hours_ary):
 	?>
-
-	<?php if($exceptions): ?>
 	<div class="exceptions-schedule large-12">
-		<h4 class="subheader">Exceptions <div class="exception-hours">&nbsp;</div></h4>
+		<h4 class="subheader">Exam Hours <div class="exam-hours">&nbsp;</div></h4>
 		<table>
-			<?php
-				foreach ($json_data as $key => $sem):
-					foreach ($sem as $item):
-						if($item->exception == 'Yes'):
-							$cur_start_month = date('m',$item->open);
-							$start_month = (isset($_GET['date'])) ? date('m',strtotime($_GET['date'])) : date('m',mktime(0,0,0,date('n'),1,date('Y')));
-							if($cur_start_month == $start_month):
-
-			?>
+			<?php foreach($exceptions_hours_ary as $exception): ?>
 			<tr>
-				<td width="40%"><?php echo $item->display_rule; ?></td>
-				<td><?php echo $item->display_time; ?></td>
+				<td width="40%"><?= $exception['date_range']; ?></td>
+				<td><?= $exception['display']; ?></td>
 			</tr>
-			<?php
-							endif;
-						endif;
-					endforeach;
-			?>
-			<?php endforeach;?>
+			<?php endforeach; ?>
 		</table>
 	</div>
 	<?php endif; ?>
+
 	<?php echo $srv_exceptions[0]['value']; ?>
 	<?php if(arg(2) == 'hill-of-beans' || arg(2) == 'creamery'): ?>
 	<p>View <a href="http://www.ncsudining.com/locations/restaurants-cafes/dh-hill-library/">exceptions</a> here.</p>

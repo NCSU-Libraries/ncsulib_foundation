@@ -8,39 +8,51 @@
 <ul id="libraries">
 	<?php
 		// load real time hours json
-    	$real_time = hours_get_real_time_json();
+    	$real_time = hours_get_realtime_ary();
 		foreach ($real_time as $key => $library):
 	?>
 	<li>
-	<?php if($library->service == '22485'){ ?>
-		<a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$library->library_short_name.'/'.'general'; ?>" <?php if(segment(2)=='general' && segment(1)==$library->library_short_name) echo 'class="nav-active"'; ?>>
-			<ul class="schedule">
-				<li class="location">
-					<p class="location-title"><?php echo $library->library_name; if($library->library_name == 'D. H. Hill Library' || $library->library_name == 'James B. Hunt Jr. Library'){echo '*';}?></p>
-				</li>
-				<li class="availability">
-					<div class="hstatus <?= $library->display->class; ?>"><?= $library->display->status; ?></div>
-					<div class="time"><?= $library->display->msg; ?></div>
-				</li>
-			</ul>
-		</a>
-		<?php } else { ?>
+		<?php
+            $today = date('Y').'-'.date('n').'-'.date('j');
+			$raw_json = file_get_contents($GLOBALS['base_url'].'/rest_hours/master-hours-feed.json?library='.$library['library'].'&service=22485&date='.$today);
+			$json = json_decode($raw_json);
+		?>
+        <a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$json[0]->library_short_name.'/'.'general'; ?>" <?php if(segment(2)=='general' && segment(1)==$json[0]->library_short_name) echo 'class="nav-active"'; ?>>
+            <ul class="schedule">
+                <li class="location">
+                    <p class="location-title"><?= $json[0]->library_name; if($json[0]->library_name == 'D. H. Hill Library' || $json[0]->library_name == 'James B. Hunt Jr. Library'){echo '*';}?></p>
+                </li>
+                <li class="availability">
+                    <div class="hstatus <?= $json[0]->open_display; ?>"><?= $json[0]->open_display; ?></div>
+                    <div class="time"><?= $json[0]->real_time_display; ?></div>
+                </li>
+            </ul>
+        </a>
+        <?php if($library['services']): ?>
 		<ul>
-			<li>
-				<a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$library->library_short_name.'/'.$library->service_short_name; ?>" <?php if(segment(2)==$library->service_short_name) echo 'class="nav-active"'; ?>>
-					<ul class="schedule service">
-						<li class="location">
-							<p class="location-title"><?php echo $library->service_name; ?></p>
-						</li>
-						<li class="availability">
-							<div class="hstatus <?= $library->display->class; ?>"><?= $library->display->status; ?></div>
-							<div class="time"><?= $library->display->msg; ?></div>
-						</li>
-					</ul>
-				</a>
-			</li>
-		</ul>
-		<?php } ?>
+			<?php foreach($library['services'] as $srv_key => $service): ?>
+			<?php
+				if($srv_key != 'general'){
+					$raw_srv_json = file_get_contents($GLOBALS['base_url'].'/rest_hours/master-hours-feed.json?library='.$library['library'].'&service='.$service.'&date='.$today);
+					$srv_json = json_decode($raw_srv_json);
+				}
+			?>
+            <li>
+                <a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$json[0]->library_short_name.'/'.$srv_json[0]->service_short_name; ?>" <?php if(segment(2)==$srv_json[0]->service_short_name) echo 'class="nav-active"'; ?>>
+                    <ul class="schedule service">
+                        <li class="location">
+                            <p class="location-title"><?php echo $srv_json[0]->service_name; ?></p>
+                        </li>
+                        <li class="availability">
+		                    <div class="hstatus <?= $srv_json[0]->open_display; ?>"><?= $srv_json[0]->open_display; ?></div>
+		                    <div class="time"><?= $srv_json[0]->real_time_display; ?></div>
+		                </li>
+                    </ul>
+                </a>
+            </li>
+			<?php endforeach; ?>
+        </ul>
+    	<?php endif; ?>
 	</li>
 	<?php endforeach; ?>
 </ul>

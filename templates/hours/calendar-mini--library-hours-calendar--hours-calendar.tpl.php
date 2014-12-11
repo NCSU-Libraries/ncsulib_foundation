@@ -81,17 +81,41 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php $exception_json = hours_get_all_exceptions(); ?>
 					<?php foreach ((array) $rows as $row): ?>
 					<tr>
 						<?php foreach ($row as $cell): ?>
-						<?php $d = preg_split('/r-/',$cell['id']); ?>
-						<?php $exception_data = hours_is_exception($d[1],$exception_json); ?>
-						<td id="<?php print $cell['id']; ?>" class="<?php echo $cell['class'].' '.$exception_data['classes']; ?>" data-open="<?php echo $exception_data['open']; ?>" data-close="<?php echo $exception_data['close']; ?>" data-date="<?php echo $exception_data['date']; ?>">
 							<?php
-								$day = strip_tags($cell['data'])+0;
-								if($day > 0){echo $day;}
+								$date_str = preg_split('/-/si',$cell['id']);
+								$year = $date_str[1];
+								$month = $date_str[2];
+								$day = $date_str[3];
+								$json_data = file_get_contents($GLOBALS['base_url'].'/rest_hours/master-hours-feed.json?date='.$year.'-'.$month.'-'.$day.'&library_short_name='.arg(1).'&service_short_name='.arg(2));
+								$cal_json = json_decode($json_data);
+								$cal_json = $cal_json[0];
+
+								if($cal_json->exam_hours == 1){
+									$color = 'exam-hours';
+								} else if($cal_json->exception == 1){
+									$color = 'exception';
+								} else{
+									$color = $cal_json->semester;
+								}
+
+								$dateObj   = DateTime::createFromFormat('!m', $month);
+								$monthName = $dateObj->format('M'); // March
 							?>
+						<td
+							 id="<?= $cell['id'];?>"
+							 class="<?= $cell['class'].' '.$cal_json->open_display.' '.$color; ?>"
+							 data-display="<?= $cal_json->display; ?>"
+							 data-date="<?= $monthName.' '.$day.', '.$year;?>"
+						>
+
+						<?php
+							// get day
+							$day = strip_tags($cell['data'])+0;
+							if($day > 0){echo $day;}
+						?>
 						</td>
 						<?php endforeach; ?>
 					</tr>
@@ -99,6 +123,19 @@
 				</tbody>
 			</table>
 		</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
 		<?php if(arg(1) == 'hunt' && arg(2) == 'general'): ?>
 		<div class="row hide-for-small-only">
 			<div class="columns medium-12">
