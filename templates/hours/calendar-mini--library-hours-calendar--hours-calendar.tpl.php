@@ -67,6 +67,7 @@
 	<?php
 		/* Regular Schedule*/
 		include_once 'block--block--94.tpl.php';
+		return;
 	?>
 	<div id="cal">
 		<div class="hours-calendar">

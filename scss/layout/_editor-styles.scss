@@ -17,10 +17,14 @@ p.caption {
 .float-right, .flow-right {
     float: right;
     margin-left: rem-calc(20);
+    width: 50%;
+    margin-bottom: 20px;
 }
 .float-left, .flow-left {
     float: left;
     margin-right: rem-calc(20);
+    width: 50%;
+    margin-bottom: 20px;
 }
 
 .featured-image {

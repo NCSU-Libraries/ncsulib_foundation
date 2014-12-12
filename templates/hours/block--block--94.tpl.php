@@ -8,7 +8,9 @@
 ?>
 <div id="schedules">
 <?php
-
+	// echo date("m/d/y", strtotime("December 2014 Tuesday"));
+	hours_get_reg_schedule();
+	return;
 	// get relevant semester(s)
 	$all_semester_ary = hours_get_current_semesters();
 	$json_data = hours_get_semester_json($all_semester_ary);
