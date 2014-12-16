@@ -442,10 +442,11 @@ $include-html-classes: false;
 
 			> a{
 				display: block;
-				position: fixed;
+				position: absolute;
 				height: 100%;
 				text-indent: -9999px;
 				width: 100%;
+				z-index: 9999;
 
 				img{
 
