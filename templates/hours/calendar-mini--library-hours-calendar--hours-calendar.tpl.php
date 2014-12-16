@@ -67,7 +67,6 @@
 	<?php
 		/* Regular Schedule*/
 		include_once 'block--block--94.tpl.php';
-		return;
 	?>
 	<div id="cal">
 		<div class="hours-calendar">
@@ -84,32 +83,22 @@
 				<tbody>
 					<?php foreach ((array) $rows as $row): ?>
 					<tr>
-						<?php foreach ($row as $cell): ?>
-							<?php
-								$date_str = preg_split('/-/si',$cell['id']);
-								$year = $date_str[1];
-								$month = $date_str[2];
-								$day = $date_str[3];
-								$json_data = file_get_contents($GLOBALS['base_url'].'/rest_hours/master-hours-feed.json?date='.$year.'-'.$month.'-'.$day.'&library_short_name='.arg(1).'&service_short_name='.arg(2));
-								$cal_json = json_decode($json_data);
-								$cal_json = $cal_json[0];
-
-								if($cal_json->exam_hours == 1){
-									$color = 'exam-hours';
-								} else if($cal_json->exception == 1){
-									$color = 'exception';
-								} else{
-									$color = $cal_json->semester;
-								}
-
-								$dateObj   = DateTime::createFromFormat('!m', $month);
-								$monthName = $dateObj->format('M'); // March
-							?>
+						<?php foreach ($row as $cell):
+						    $date_str = preg_split('/-/si',$cell['id']);
+						    $year = $date_str[1];
+						    $month = $date_str[2];
+						    $day = $date_str[3]+0;
+						    if(!strpos($cell['class'], 'empty')){
+								$cal_ary = hours_get_cal_data($year, $month, $day);
+						    } else{
+								$cal_ary = array();
+						    }
+						?>
 						<td
 							 id="<?= $cell['id'];?>"
-							 class="<?= $cell['class'].' '.$cal_json->open_display.' '.$color; ?>"
-							 data-display="<?= $cal_json->display; ?>"
-							 data-date="<?= $monthName.' '.$day.', '.$year;?>"
+							 class="<?= $cell['class'].' '.$cal_ary['json']->open_display.' '.$cal_ary['color']; ?>"
+							 data-display="<?= $cal_ary['json']->display; ?>"
+							 data-date="<?= $cal_ary['monthName'].' '.$day.', '.$year;?>"
 						>
 
 						<?php

@@ -7,41 +7,22 @@
 */
 ?>
 <div id="schedules">
-<?php
-	// echo date("m/d/y", strtotime("December 2014 Tuesday"));
-	hours_get_reg_schedule();
-	return;
-	// get relevant semester(s)
-	$all_semester_ary = hours_get_current_semesters();
-	$json_data = hours_get_semester_json($all_semester_ary);
-
-	// REGULAR HOURS
-	foreach ($json_data as $key => $sem):
-		$semester_node = field_get_items('node', node_load($all_semester_ary[$key]['nid']), 'field_dates');
-		$sem_start = date('M j',strtotime($semester_node[0]['value']));
-		$sem_end = date('M j',strtotime($semester_node[0]['value2']));
-?>
-
+<?php $reg_ary = hours_get_reg_schedule(); ?>
 	<div class="regular-schedule large-12">
-		<div class="reg-hours <?php echo strtolower($all_semester_ary[$key]['semester']); ?>">&nbsp;</div>
-		<h4 class="subheader"><?php echo $all_semester_ary[$key]['semester']; ?> Hours <span class="sem-dates">(<?php echo $sem_start.'-'.$sem_end; ?>)</span></h4>
-		<table>
-			<?php
-				foreach ($sem as $item):
-					if($item->exception == 'No' && $item->exam_hours != 1):
-			?>
-			<tr>
-				<td width="40%"><?php echo $item->display_rule; ?></td>
-				<td><?php echo $item->display_time; ?></td>
-			</tr>
-			<?php
-					 endif;
-				endforeach;
-			?>
-		</table>
-	</div>
-	<?php endforeach; ?>
+		<?php foreach ($reg_ary as $key=>$sem): ?>
+		<div class="reg-hours <?= $key; ?>">&nbsp;</div>
 
+		<h4 class="subheader"><?= $key; ?> Hours <span class="sem-dates">(<?= date('M j',strtotime($sem[0]['sem_start'])).'-'.date('M j',strtotime($sem[0]['sem_end'])); ?>)</span></h4>
+			<table>
+				<?php foreach($sem as $item): ?>
+				<tr>
+					<td width="40%"><?= $item['day_range']; ?></td>
+					<td><?= $item['hours']; ?></td>
+				</tr>
+				<?php endforeach; ?>
+			</table>
+		<?php endforeach; ?>
+	</div>
 
 
 
@@ -75,12 +56,12 @@
 	</div>
 	<?php endif; ?>
 
-
 	<!-- EXCEPTIONS -->
 	<?php
 		$exceptions_hours_ary = hours_get_exception('exception');
 		if($exceptions_hours_ary):
 	?>
+
 	<div class="exceptions-schedule large-12">
 		<h4 class="subheader">Exceptions <div class="exception-hours">&nbsp;</div></h4>
 		<table>
