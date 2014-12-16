@@ -452,6 +452,12 @@ $include-html-classes: false;
 					float: left;
 				}
 			}
+
+			@media #{$small-only}{
+				> a{
+					position: static;
+				}
+			}
 		}
 
 		li:before{
