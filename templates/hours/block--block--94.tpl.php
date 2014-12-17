@@ -30,7 +30,7 @@
 
 	<!-- Exam Hours -->
 	<?php
-		$exam_hours_ary = hours_get_exception('exam_hours');
+		$exam_hours_ary = hours_get_exception('exam_hours',$month_ary);
 		if($exam_hours_ary):
 	?>
 	<div class="exceptions-schedule large-12">
@@ -43,22 +43,12 @@
 			</tr>
 			<?php endforeach; ?>
 		</table>
-
-		<?php if(arg(1) == 'hunt' && arg(2) == 'general'): ?>
-		<div class="row show-for-small-only">
-			<div class="columns medium-12">
-				<div class="exam-hours-alert">
-					<p><div class="up-triangle"></div>Wolfpack One Card required for entry Dec 4-16.</p>
-				</div>
-			</div>
-		</div>
-		<?php endif; ?>
 	</div>
 	<?php endif; ?>
 
 	<!-- EXCEPTIONS -->
 	<?php
-		$exceptions_hours_ary = hours_get_exception('exception');
+		$exceptions_hours_ary = hours_get_exception('exception',$month_ary);
 		if($exceptions_hours_ary):
 	?>
 

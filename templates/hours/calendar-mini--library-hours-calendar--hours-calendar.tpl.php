@@ -66,6 +66,7 @@
 
 	<?php
 		/* Regular Schedule*/
+		$month_ary = hours_get_current_month_hours();
 		include_once 'block--block--94.tpl.php';
 	?>
 	<div id="cal">
@@ -88,17 +89,17 @@
 						    $year = $date_str[1];
 						    $month = $date_str[2];
 						    $day = $date_str[3]+0;
-						    if(!strpos($cell['class'], 'empty')){
-								$cal_ary = hours_get_cal_data($year, $month, $day);
-						    } else{
-								$cal_ary = array();
-						    }
+
+						    $data = hours_get_cal_data($month_ary[$day]);
+
+						    $dateObj   = DateTime::createFromFormat('!m', $month);
+    						$monthName = $dateObj->format('M'); // March
 						?>
 						<td
 							 id="<?= $cell['id'];?>"
-							 class="<?= $cell['class'].' '.$cal_ary['json']->open_display.' '.$cal_ary['color']; ?>"
-							 data-display="<?= $cal_ary['json']->display; ?>"
-							 data-date="<?= $cal_ary['monthName'].' '.$day.', '.$year;?>"
+							 class="<?= $cell['class'].' '.$data['open_display'].' '.$data['color']; ?>"
+							 data-display="<?= $data['display']; ?>"
+							 data-date="<?= $monthName.' '.$day.', '.$year;?>"
 						>
 
 						<?php
@@ -113,28 +114,6 @@
 				</tbody>
 			</table>
 		</div>
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-		<?php if(arg(1) == 'hunt' && arg(2) == 'general'): ?>
-		<div class="row hide-for-small-only">
-			<div class="columns medium-12">
-				<div class="exam-hours-alert">
-					<p><div class="left-triangle"></div>Wolfpack One Card required for entry Dec 4-16.</p>
-				</div>
-			</div>
-		</div>
-		<?php endif; ?>
 	</div>
 </div>
 
