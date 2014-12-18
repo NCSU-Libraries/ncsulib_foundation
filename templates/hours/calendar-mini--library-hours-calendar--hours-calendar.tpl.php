@@ -88,18 +88,17 @@
 						    $date_str = preg_split('/-/si',$cell['id']);
 						    $year = $date_str[1];
 						    $month = $date_str[2];
-						    $day = $date_str[3]+0;
-
+						    $day = $date_str[3]-1;
 						    $data = hours_get_cal_data($month_ary[$day]);
 
 						    $dateObj   = DateTime::createFromFormat('!m', $month);
-    						$monthName = $dateObj->format('M'); // March
+    						$monthName = $dateObj->format('M');
 						?>
 						<td
 							 id="<?= $cell['id'];?>"
 							 class="<?= $cell['class'].' '.$data['open_display'].' '.$data['color']; ?>"
 							 data-display="<?= $data['display']; ?>"
-							 data-date="<?= $monthName.' '.$day.', '.$year;?>"
+							 data-date="<?= $monthName.' '.($day+1).', '.$year;?>"
 						>
 
 						<?php
