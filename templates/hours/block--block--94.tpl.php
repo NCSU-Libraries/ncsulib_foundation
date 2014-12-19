@@ -7,9 +7,9 @@
 */
 ?>
 <div id="schedules">
-<?php $reg_ary = hours_get_reg_schedule(); ?>
+<?php $reg_ary = hours_get_reg_schedule($month_ary); ?>
 	<div class="regular-schedule large-12">
-		<?php foreach ($reg_ary as $key=>$sem): ?>
+		<?php foreach ($month_ary as $key=>$sem): ?>
 		<div class="reg-hours <?= $key; ?>">&nbsp;</div>
 
 		<h4 class="subheader"><?= $key; ?> Hours <span class="sem-dates">(<?= date('M j',strtotime($sem[0]['sem_start'])).'-'.date('M j',strtotime($sem[0]['sem_end'])); ?>)</span></h4>

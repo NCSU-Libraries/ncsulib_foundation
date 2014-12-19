@@ -8,7 +8,7 @@
 <ul id="libraries">
 	<?php
 		// load real time hours json
-    return;
+        return;
     	$real_time = hours_get_realtime_ary();
 		foreach ($real_time as $key => $library):
 	?>
