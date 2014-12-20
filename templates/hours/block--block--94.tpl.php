@@ -7,17 +7,17 @@
 */
 ?>
 <div id="schedules">
-<?php $reg_ary = hours_get_reg_schedule($month_ary); ?>
+<?php $reg_ary = hours_get_reg_schedule();?>
 	<div class="regular-schedule large-12">
-		<?php foreach ($month_ary as $key=>$sem): ?>
+		<?php foreach ($reg_ary as $key=>$sem): ?>
 		<div class="reg-hours <?= $key; ?>">&nbsp;</div>
 
-		<h4 class="subheader"><?= $key; ?> Hours <span class="sem-dates">(<?= date('M j',strtotime($sem[0]['sem_start'])).'-'.date('M j',strtotime($sem[0]['sem_end'])); ?>)</span></h4>
+		<h4 class="subheader"><?= $key; ?> Hours <span class="sem-dates">(<?= $sem[0]['semester_dates']; ?>)</span></h4>
 			<table>
 				<?php foreach($sem as $item): ?>
 				<tr>
 					<td width="40%"><?= $item['day_range']; ?></td>
-					<td><?= $item['hours']; ?></td>
+					<td><?= $item['open_hours']; ?></td>
 				</tr>
 				<?php endforeach; ?>
 			</table>

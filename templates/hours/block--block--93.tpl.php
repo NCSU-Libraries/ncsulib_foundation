@@ -8,17 +8,18 @@
 <ul id="libraries">
 	<?php
 		// load real time hours json
-        return;
     	$real_time = hours_get_realtime_ary();
 		foreach ($real_time as $key => $library):
 	?>
 	<li>
 		<?php
-            $today = date('Y').'-'.date('n').'-'.date('j');
-			$raw_json = file_get_contents($GLOBALS['base_url'].'/rest_hours/master-hours-feed.json?library='.$library['library'].'&service=22485&date='.$today);
+            $today = date('Y-n-j');
+            $tomorrow = date('Y-n-j',strtotime($today.' + 1 day'));
+			$raw_json = file_get_contents($GLOBALS['base_url'].'/rest_hours/master-hours-feed.json?library='.$library['library'].'&service=22485&date='.$today.'&end_date='.$tomorrow);
 			$json = json_decode($raw_json);
+            $url_date = (isset($_GET['date'])) ? '?date='.$_GET['date'] : '';
 		?>
-        <a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$json[0]->library_short_name.'/'.'general'; ?>" <?php if(segment(2)=='general' && segment(1)==$json[0]->library_short_name) echo 'class="nav-active"'; ?>>
+        <a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$json[0]->library_short_name.'/'.'general'.$url_date; ?>" <?php if(segment(2)=='general' && segment(1)==$json[0]->library_short_name) echo 'class="nav-active"'; ?>>
             <ul class="schedule">
                 <li class="location">
                     <p class="location-title"><?= $json[0]->library_name; if($json[0]->library_name == 'D. H. Hill Library' || $json[0]->library_name == 'James B. Hunt Jr. Library'){echo '*';}?></p>
@@ -39,7 +40,7 @@
 				}
 			?>
             <li>
-                <a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$json[0]->library_short_name.'/'.$srv_json[0]->service_short_name; ?>" <?php if(segment(2)==$srv_json[0]->service_short_name) echo 'class="nav-active"'; ?>>
+                <a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$json[0]->library_short_name.'/'.$srv_json[0]->service_short_name.$url_date; ?>" <?php if(segment(2)==$srv_json[0]->service_short_name) echo 'class="nav-active"'; ?>>
                     <ul class="schedule service">
                         <li class="location">
                             <p class="location-title"><?php echo $srv_json[0]->service_name; ?></p>

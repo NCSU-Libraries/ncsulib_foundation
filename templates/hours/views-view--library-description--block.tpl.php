@@ -10,9 +10,7 @@
 	</div>
 	<div id="lib-meta">
 		<h3 class="subheader"><a href="<?php echo drupal_lookup_path('alias','node/'.$content->nid); ?>"><?php echo $content->node_title; ?></a></h3>
-		<h4>Address</h4>
 		<p><?php echo $address_node[0]['value']; ?></p>
-		<h4>Information</h4>
 		<p><?php echo $phone_node[0]['value']; ?></p>
 	</div>
 	<div class="notification">

@@ -53,10 +53,10 @@
 			</div>
 			<ul class="page">
 				<li class="date-prev">
-					<a href="<?php echo $prev_url; ?>#hours-month">«</a>
+					<a href="<?php echo $prev_url; ?>">«</a>
 				</li>
 				<li class="date-next">
-					<a href="<?php echo $next_url; ?>#hours-month">»</a>
+					<a href="<?php echo $next_url; ?>">»</a>
 				</li>
 			</ul>
 		</div>
@@ -93,10 +93,12 @@
 
 						    $dateObj   = DateTime::createFromFormat('!m', $month);
     						$monthName = $dateObj->format('M');
+
+    						$closed = ($month_ary[$day]['closed'] == '0') ? '' : 'closed';
 						?>
 						<td
 							 id="<?= $cell['id'];?>"
-							 class="<?= $cell['class'].' '.$data['open_display'].' '.$data['color']; ?>"
+							 class="<?= $cell['class'].' '.$closed.' '.$data['color']; ?>"
 							 data-display="<?= $data['display']; ?>"
 							 data-date="<?= $monthName.' '.($day+1).', '.$year;?>"
 						>

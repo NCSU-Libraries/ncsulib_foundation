@@ -427,6 +427,7 @@ $include-html-classes: false;
 
 		h3{
 			font-size: 1em;
+			padding-top: 4px;
 		}
 	}
 
@@ -700,6 +701,10 @@ $include-html-classes: false;
 		@media #{$medium-up}{
 			@include grid-column(5);
 			padding-right: 0px;
+
+			h4{
+				margin-bottom: 0px;
+			}
 		}
 	}
 
