@@ -19,8 +19,8 @@
 					<p class="location-title"><?php echo $library->library_name; if($library->library_name == 'D. H. Hill Library' || $library->library_name == 'James B. Hunt Jr. Library'){echo '*';}?></p>
 				</li>
 				<li class="availability">
-					<div class="hstatus <?= $library->display->class; ?>"><?= $library->display->status; ?></div>
-					<div class="time"><?= $library->display->msg; ?></div>
+					<div class="hstatus <?= $library->status; ?>"><?= $library->status; ?></div>
+					<div class="time"><?= $library->real_time_display; ?></div>
 				</li>
 			</ul>
 		</a>
@@ -33,8 +33,8 @@
 							<p class="location-title"><?php echo $library->service_name; ?></p>
 						</li>
 						<li class="availability">
-							<div class="hstatus <?= $library->display->class; ?>"><?= $library->display->status; ?></div>
-							<div class="time"><?= $library->display->msg; ?></div>
+							<div class="hstatus <?= $library->status; ?>"><?= $library->status; ?></div>
+							<div class="time"><?= $library->real_time_display; ?></div>
 						</li>
 					</ul>
 				</a>
