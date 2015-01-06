@@ -3,14 +3,14 @@
  */
 jQuery(document).ready(function () {
 
-var typeahead_url = window.location.protocol == "https:" ? "https://search.lib.ncsu.edu:8444/quicksearch-typeahead" : "http://search.lib.ncsu.edu:8081/quicksearch-typeahead";
+var typeahead_url = window.location.protocol == "https:" ? "https://search.lib.ncsu.edu:8444/quicksearch-typeahead/all/" : "http://search.lib.ncsu.edu:8081/quicksearch-typeahead/all/";
 
 // define the datasets for the typeahead
 var bestbets = new Dataset({
   valuekey: 'value',
   remote: {
     ajax: { dataType: 'jsonp', },
-    url: typeahead_url + '/all/%QUERY',
+    url: typeahead_url + '%QUERY',
     filter: function(response){
       return response.bestbets;
     },
@@ -22,7 +22,7 @@ var titles = new Dataset({
   valuekey: 'value',
   remote: {
     ajax: { dataType: 'jsonp', },
-    url: typeahead_url + '/all/%QUERY',
+    url: typeahead_url + '%QUERY',
     filter: function(response){
         return response.trln;
     },
@@ -35,7 +35,7 @@ var spaces = new Dataset({
   valuekey: 'value',
   remote: {
     ajax: { dataType: 'jsonp', },
-    url: typeahead_url + '/all/%QUERY',
+    url: typeahead_url + '%QUERY',
     filter: function(response){
         return response.spaces;
     },
@@ -47,7 +47,7 @@ var faqs = new Dataset({
   valuekey: 'value',
   remote: {
     ajax: { dataType: 'jsonp', },
-    url: typeahead_url + '/all/%QUERY',
+    url: typeahead_url + '%QUERY',
     filter: function(response){
         return response.faqs;
     },
@@ -138,7 +138,7 @@ jQuery('.quicksearch-typeahead').typeahead({
 });
 
 
-typeaheadUtility.listenForTypeaheadClicks(typeahead_url);
+typeaheadUtility.listenForTypeaheadClicks();
 });
 
 /*
@@ -148,14 +148,11 @@ typeaheadUtility.listenForTypeaheadClicks(typeahead_url);
 var typeaheadUtility = (function () {
 
   var environment = 'production'; //development or production
-  var typeahead_logging_url;
 
-  function listenForTypeaheadClicks(typeahead_url) {
+  function listenForTypeaheadClicks() {
       jQuery('.quicksearch-typeahead').on('typeahead:selected', function (e, datum, dataset) {
 
           var link = { href: handleTypeaheadClick(datum, dataset) };
-
-          typeahead_logging_url = typeahead_url + '/log';
 
           var eventValuesDefined = {
               category: 'typeahead-' + dataset,
@@ -199,16 +196,26 @@ var typeaheadUtility = (function () {
 
 
   function logEventToDatabase(eventValues) {
-      return jQuery.ajax({
-          url: typeahead_logging_url,
-          data: {
-              category: eventValues.category,
-              event_action: eventValues.action,
-              label: eventValues.label
-          },
-          jsonp: 'callback',
-          dataType: 'jsonp'
-      });
+        var pathname = window.location.pathname;
+        if (environment == 'production') {
+          pathname = 'http://search.lib.ncsu.edu/';
+        }
+        var url = pathname;
+        if (url.substr(-1) != '/'){
+            url += '/';
+        }
+        url += 'log_event';
+
+        return jQuery.ajax({
+            url: url,
+            data: {
+                category: eventValues.category,
+                event_action: eventValues.action,
+                label: eventValues.label
+            },
+            jsonp: 'callback',
+            dataType: 'jsonp'
+        });
   }
 
   function handleTypeaheadClick(datum, dataset) {
