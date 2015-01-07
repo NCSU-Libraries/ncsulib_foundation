@@ -62,6 +62,15 @@
 			</tr>
 			<?php endforeach; ?>
 		</table>
+		<?php if(arg(1) == 'hill' && arg(2) == 'creamery' && !isset($_GET['date'])): ?>
+			<div class="row show-for-small-only">
+				<div class="columns medium-12">
+					<div class="exam-hours-alert">
+						<p><div class="up-triangle"></div>Temporarily closed during West Wing renovations.</p>
+					</div>
+				</div>
+			</div>
+		<?php endif; ?>
 	</div>
 	<?php endif; ?>
 
