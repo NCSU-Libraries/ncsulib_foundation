@@ -1,16 +1,17 @@
 <?php
   drupal_add_js('jQuery(document).ready(function($) {$(\'iframe\').wrap(\'<div class="video-wrapper"></div>\'); });', 'inline');
   hide($content['four_liner']);
+  hide($content['field_event_start']);
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
     <div class="story">
 
       <div class="intro">
-
         <div class="story-title">
           <?php if ($title): ?>
           <?php print render($title_prefix); ?>
+          <p><a href="/stories">&larr; Back to Library Stories</a></p>
           <h1 id="page-title" class="title"><?php print $title; ?></h1>
             <?php print render($title_suffix); ?>
           <?php endif; ?>
@@ -20,7 +21,6 @@
             <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
-          <a href="/stories">&crarr; Back to Library Stories</a>
         </div>
         <?php print render($content['field_teaser']); ?>
         <?php print render($content['field_featured_image']); ?>
