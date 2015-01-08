@@ -12,6 +12,7 @@
 <?php print render($title_suffix); ?>
     <?php
         $event_date = strtotime($content['field_time']['#object']->field_time['und'][0]['value2']);
+        $is_ongoing = ($content['field_ongoing']['#object']->field_ongoing['und'][0]['value'] == 1) ? true : false;
         if($event_date < date('U')):
     ?>
     <div data-alert class="alert-box">
@@ -22,7 +23,11 @@
     <div id="event-node" class="row">
         <div class="columns medium-7">
             <div class="event-meta">
-                <?php print drupal_render($content['field_time']); ?>
+                <?php
+                    if(!$is_ongoing){
+                        print drupal_render($content['field_time']);
+                    }
+                    ?>
                 <?php print drupal_render($content['field_space']); ?>
                 <?php print drupal_render($content['field_non_libraries_space']); ?>
             </div>
