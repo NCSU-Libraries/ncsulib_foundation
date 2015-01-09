@@ -1,10 +1,10 @@
 .feedback-form {
   position: fixed;
-  right: rem-calc(-92);
+  right: rem-calc(-73);
   @include rotate(270deg);
   margin: 0;
   overflow: hidden;
-  padding: 10px;
+  padding: 5px;
   top: 57%;
   z-index: 9999;
 
@@ -17,10 +17,11 @@
       }
     }
     a {
-      padding: rem-calc(10 10 30 10);
-      border-radius: 0.3em 0.3em 0 0;
+      border-radius: 0px;
       background-color: #ac0000;
       color: #fff;
+      font-size: 0.9rem;
+      padding: rem-calc(5 5 30 5);
       @include single-transition(background-color);
 
       &:hover {
