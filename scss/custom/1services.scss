@@ -2,6 +2,12 @@
 @import "../foundation/settings";
 $include-html-classes: false;
 
+body.page-taxonomy-term-151{
+    h1{
+        display: none;
+    }
+}
+
 #content{
     #taxonomy-term-151{
 
