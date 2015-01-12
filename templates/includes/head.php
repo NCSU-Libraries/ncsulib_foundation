@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-114x114.png" />
 <link rel="image_src" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-114x114.png" />
 
-<!-- <link href="https://cdn.ncsu.edu/brand-assets/fonts/include.css" rel="stylesheet" type="text/css" /> -->
+<link href="https://cdn.ncsu.edu/brand-assets/fonts/include.css" rel="stylesheet" type="text/css" />
 
 <?php if(!$_SERVER['REMOTE_ADDR']): ?>
 <!-- css -->
@@ -71,6 +71,6 @@
 <script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/rem.js"></script>
 <![endif]-->
 
-<!-- <script src="//cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script> -->
+<script src="//cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script>
 
 
