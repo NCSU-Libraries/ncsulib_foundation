@@ -15,6 +15,8 @@
   		drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
   	}
 ?>
+<script src="//cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script>
+<div id="ncstate-utility-bar"></div>
 
 <header class="contain-to-grid" role="banner">
 	<div class="top-bar">
