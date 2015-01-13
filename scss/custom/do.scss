@@ -11,22 +11,24 @@ $include-html-classes: false;
 	display: none;
 }
 
-#content {
-	// recojigure columsn widths
-	.two-sidebars{
+// recojigure columsn widths
+.two-sidebars{
 
-		#main-content{
-			@include grid-column($columns:7,$push:3)
-		}
-
-		#subnav{
-			@include grid-column($pull:7)
-		}
-
-		.l-sidebar-second{
-			@include grid-column($columns:2)
-		}
+	#main-content{
+		@include grid-column($columns:7,$push:3)
 	}
+
+	#subnav{
+		@include grid-column($pull:7)
+	}
+
+	.l-sidebar-second{
+		@include grid-column($columns:2)
+	}
+}
+
+
+#content {
 
     .l-sidebar-first{
 
