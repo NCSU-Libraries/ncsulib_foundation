@@ -25,6 +25,11 @@ $include-html-classes: false;
                 }
             }
         }
+
+        // remove padding from bottom of input and buttons
+        .button, input{
+        	margin-bottom: 0px;
+        }
     }
 
 	#back-to-link{
