@@ -3,7 +3,7 @@
 
  $mkr_ary = hours_get_reg_schedule('hunt','makerspace');
 foreach($mkr_ary as $key => $hours){
-    echo '<h3>'.ucfirst(key($mkr_ary)) . ' Hours</h3>';
+    echo '<h2>'.ucfirst(key($mkr_ary)) . ' Hours</h2>';
     echo '<table>';
     foreach($hours as $hour){
         echo '<tr>';
