@@ -12,6 +12,18 @@ $include-html-classes: false;
 }
 
 #content {
+	// recojigure columsn widths
+	#main-content{
+		@include grid-column($columns:7,$push:3)
+	}
+
+	#subnav{
+		@include grid-column($pull:7)
+	}
+
+	.l-sidebar-second{
+		@include grid-column($columns:2)
+	}
 
     .l-sidebar-first{
 
