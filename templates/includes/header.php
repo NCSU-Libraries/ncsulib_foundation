@@ -15,7 +15,6 @@
   		drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
   	}
 ?>
-<div id="ncstate-utility-bar"></div>
 <header class="contain-to-grid" role="banner">
 	<div class="top-bar">
 		<div class="title-area">
