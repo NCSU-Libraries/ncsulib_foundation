@@ -86,6 +86,3 @@
 <![endif]-->
 
 <script src="//cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script>
-<div id="ncstate-utility-bar"></div>
-
-
