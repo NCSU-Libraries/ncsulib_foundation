@@ -37,7 +37,7 @@ var ga_footer = {
 		jQuery('ul#f-lib-links li a').click(function(e){
 			var lib = jQuery(this).text();
 			// _gaq.push(['_trackEvent', 'Footer', 'Libraries', lib]);
-			ga('send', 'event', 'Footer', 'Libraries' lib);
+			ga('send', 'event', 'Footer', 'Libraries', lib);
 			ga_footer.pause();
 		})
 
@@ -45,7 +45,7 @@ var ga_footer = {
 		jQuery('ul#f-util-links li a').click(function(e){
 			var link = jQuery(this).text();
 			// _gaq.push(['_trackEvent', 'Footer', 'Utility', link]);
-			ga('send', 'event', 'Footer', 'Utility' lib);
+			ga('send', 'event', 'Footer', 'Utility', lib);
 			ga_footer.pause();
 		})
 
@@ -53,7 +53,7 @@ var ga_footer = {
 		jQuery('#f-social ul li a').click(function(e){
 			link = jQuery(this).text();
 			// _gaq.push(['_trackEvent', 'Footer', 'Social', link]);
-			ga('send', 'event', 'Footer', 'Social' link);
+			ga('send', 'event', 'Footer', 'Social', link);
 			ga_footer.pause();
 		})
 
