@@ -65,6 +65,10 @@ var ga_footer = {
 		})
 
 		// feedback
+		jQuery('.close-feedback').click(function(e){
+			ga('send', 'event', 'Footer', 'Feedback', 'close feedback');
+			ga_footer.pause();
+		})
 		jQuery('.feedback-form').click(function(e){
 			link = jQuery(this).text();
 			// _gaq.push(['_trackEvent', 'Footer', 'Feedback']);
