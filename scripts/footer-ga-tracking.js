@@ -72,7 +72,7 @@ var ga_footer = {
 		jQuery('.feedback-form').click(function(e){
 			link = jQuery(this).text();
 			// _gaq.push(['_trackEvent', 'Footer', 'Feedback']);
-			ga('send', 'event', 'Footer', 'Feedback');
+			ga('send', 'event', 'Footer', 'Feedback', 'submit feedback');
 			ga_footer.pause();
 		})
 	},
