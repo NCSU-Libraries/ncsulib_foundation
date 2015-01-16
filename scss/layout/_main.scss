@@ -143,5 +143,11 @@ html #content{
     color: $primary-color;
 }
 
+// only when logged in to Drupal
+.contextual-links-region{
+    float: left;
+    width: 100%;
+}
+
 
 
