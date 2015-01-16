@@ -23,7 +23,14 @@ $include-html-classes: false;
 	}
 
 	.l-sidebar-second{
-		@include grid-column($columns:2)
+		@include grid-column($columns:2);
+
+		.workshop-date{
+			@include grid-column(4);
+		}
+		.workshop-title{
+			@include grid-column(8);
+		}
 	}
 }
 
