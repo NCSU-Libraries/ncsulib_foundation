@@ -15,8 +15,5 @@
           $output = '<a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
           print $output;
           break;
-        case 'Temporarily Unreservable':
-          echo '<em class="highlight">The Mini-Theater will be closed from February 9 through the end of the Spring Semester while renovations take place in the West Wing.</em>';
-          break;
       }
     }
