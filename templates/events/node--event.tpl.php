@@ -5,20 +5,22 @@
   <?php print render($title_suffix); ?>
 <?php endif; ?>
 
+<?php
+    $event_date = strtotime($content['field_time']['#object']->field_time['und'][0]['value2']);
+    $is_ongoing = ($content['field_ongoing']['#object']->field_ongoing['und'][0]['value'] == 1) ? true : false;
+
+    if($event_date && $event_date < date('U')){
+        print '<div data-alert class="alert-box">';
+        print '<i class="fa fa-warning"></i> This event has already happened.';
+        print '</div>';
+    }
+?>
+
 <?php print render($title_prefix); ?>
 <?php if (!$page): ?>
   <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
 <?php endif; ?>
 <?php print render($title_suffix); ?>
-    <?php
-        $event_date = strtotime($content['field_time']['#object']->field_time['und'][0]['value2']);
-        $is_ongoing = ($content['field_ongoing']['#object']->field_ongoing['und'][0]['value'] == 1) ? true : false;
-        if($event_date < date('U')):
-    ?>
-    <div data-alert class="alert-box">
-        <i class="fa fa-warning"></i> This event has already happened.
-    </div>
-    <?php endif; ?>
 
     <div id="event-node" class="row">
         <div class="columns medium-7">
@@ -27,7 +29,7 @@
                     if(!$is_ongoing){
                         print drupal_render($content['field_time']);
                     }
-                    ?>
+                ?>
                 <?php print drupal_render($content['field_space']); ?>
                 <?php print drupal_render($content['field_non_libraries_space']); ?>
             </div>
