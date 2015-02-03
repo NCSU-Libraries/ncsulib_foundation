@@ -473,14 +473,19 @@ $include-html-classes: false;
 			margin-bottom: 0px;
 		}
 
+		.orbit-slides-container{
+
+			li.active{
+				position: absolute;
+			}
+
+		}
+
 		.orbit-slides-container > *{
 			@media #{$small-only}{
 				margin-bottom: rem-calc(10);;
 			}
 
-			li.active{
-				position: absolute;
-			}
 		}
 	}
 
