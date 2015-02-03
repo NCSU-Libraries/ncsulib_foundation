@@ -486,6 +486,10 @@ $include-html-classes: false;
 		}
 
 		margin-bottom: 0px;
+
+		li.active{
+			position: absolute;
+		}
 	}
 
 
