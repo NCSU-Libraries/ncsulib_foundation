@@ -477,6 +477,10 @@ $include-html-classes: false;
 			@media #{$small-only}{
 				margin-bottom: rem-calc(10);;
 			}
+
+			li.active{
+				position: absolute;
+			}
 		}
 	}
 
@@ -487,9 +491,6 @@ $include-html-classes: false;
 
 		margin-bottom: 0px;
 
-		li.active{
-			position: absolute;
-		}
 	}
 
 
