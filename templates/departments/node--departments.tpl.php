@@ -25,6 +25,11 @@
 			}
 		?>
 
+		<?php if ($content['field_dept_more_info']): ?>
+			<h3>More Information</h3>
+			<?php print render($content['field_dept_more_info']); ?>
+		<?php endif ?>
+
 		<?php if ($content['field_dept_location']): ?>
 			<h3>Location</h3>
 			<?php print render($content['field_dept_location']); ?>
