@@ -12,6 +12,7 @@ body.page-taxonomy-term-151{
     #taxonomy-term-151{
 
         .taxonomy-term-description {
+            margin-bottom: 40px;
             margin: auto;
             width: 75%;
 
@@ -59,7 +60,7 @@ body.page-taxonomy-term-151{
     }
 
     .user-activity-list.promoted{
-        margin-bottom: 20px;
+        margin-bottom: 0px;
 
         ol{
 
@@ -67,7 +68,7 @@ body.page-taxonomy-term-151{
                 height: auto;
 
                 > a{
-                    padding: 25px 0px;
+                    padding: 25px 0px 0px;
                 }
 
                 > a:hover{
