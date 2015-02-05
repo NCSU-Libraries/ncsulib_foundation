@@ -11,11 +11,16 @@ $body-font-size-small-screen: rem-calc(15);
 
   .intro{
     @include grid-row;
-    margin-bottom: rem-calc(120);
+    margin-bottom: rem-calc(35);
 
     .story-title {
       @media #{$medium-up} {@include grid-column($columns:12)};
       margin-bottom: rem-calc(30);
+
+      h1{
+        font-size: rem-calc(53);
+        text-align: center;
+      }
 
       @media #{$small-only} {
         h1 {
@@ -24,9 +29,13 @@ $body-font-size-small-screen: rem-calc(15);
       }
     }
 
+    #featured-image{
+      margin-bottom: 40px;
+    }
+
     .field-name-field-teaser {
       @media #{$medium-up} {
-        @include grid-column($columns:7);
+        @include grid-column(12);
 
         * {
           font-size: rem-calc(20);
@@ -132,9 +141,26 @@ $body-font-size-small-screen: rem-calc(15);
       }
     }
 
-    .field-name-field-featured-image-landscape {
+    .story-statement-aside{
       @media #{$small-only} {@include grid-column(12);}
       @media #{$medium-up} {@include grid-column(4);}
+
+      .user-photo{
+        width: 25%;
+      }
+
+      .user-details{
+        width: 70%;
+      }
+    }
+
+    .field-name-field-featured-image-landscape {
+      @media #{$small-only} {@include grid-column(12);}
+      @media #{$medium-up} {@include grid-column(12);}
+
+      img{
+        width: 100%;
+      }
     }
   }
 
