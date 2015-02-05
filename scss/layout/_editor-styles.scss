@@ -24,6 +24,9 @@ p.caption {
     margin-right: rem-calc(20);
     margin-bottom: 20px;
 }
+.right-image, .left-image{
+    max-width: 50%
+}
 
 .featured-image {
     clear: right;
