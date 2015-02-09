@@ -1,22 +1,28 @@
 ul.medium-block-grid-3{
-    h3{
-
-        &:hover{
+    li{
+        a:hover{
             text-decoration: none;
         }
 
-        p{
-            color: #555;
+        h3{
 
             &:hover{
                 text-decoration: none;
             }
 
-            a{
-                color: #cc0000;
+            p{
+                color: #555;
 
                 &:hover{
                     text-decoration: none;
+                }
+
+                a{
+                    color: #cc0000;
+
+                    &:hover{
+                        text-decoration: none;
+                    }
                 }
             }
         }
