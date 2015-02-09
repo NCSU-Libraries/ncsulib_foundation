@@ -1,7 +1,6 @@
 <?php
   // Getting the URL of the image used for the backgrounds
   $uri  = $content['field_featured_image_landscape']['#items'][0]['uri'];
-  kpr($content);
 
   $path = image_style_url('background_blur', $uri);
 ?>
