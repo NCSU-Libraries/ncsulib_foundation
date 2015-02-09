@@ -32,7 +32,7 @@
     </div>
 
     <aside class="story-statement-aside">
-      <h3>About the Author</h3>
+      <h3>Story Lead</h3>
 
       <?php print $name; ?>
       <?php print render($content['field_staff']); ?>
