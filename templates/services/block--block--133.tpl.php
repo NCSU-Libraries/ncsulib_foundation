@@ -14,4 +14,5 @@ foreach($mkr_ary as $key => $hours){
     echo '</table>';
 }
 ?>
+    <p><a href="/hours/hunt/makerspace">Full hours and exceptions</a></p>
 </section>
