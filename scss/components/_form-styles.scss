@@ -20,12 +20,12 @@ form.webform-client-form{
 
 	/*form*/
 	.webform-component{
-	    margin: 0px 0px 55px 0px;
+	    margin: 0px 0px 40px 0px;
 
 	    label:first-child {
 	        font-weight: 700;
 	        font-size: 17px;
-	        margin-bottom: 13px;
+	        margin-bottom: 5px;
 	    }
 	    input{
 	    	display: inline;
@@ -38,6 +38,7 @@ form.webform-client-form{
 	    .description {
 	        font-style: italic;
 	        font-size: 0.9rem;
+	        padding-top: 7px;
 	    }
 	}
     .webform-component.webform-component-markup{
