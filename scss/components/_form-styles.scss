@@ -32,11 +32,12 @@ form.webform-client-form{
 	    }
 	    .field-suffix{
 	    	display: inline;
+	    	font-style: italic;
+	        font-size: 0.9rem;
 	    }
 	    .description {
 	        font-style: italic;
 	        font-size: 0.9rem;
-	        padding: 7px 0px;
 	    }
 	}
     .webform-component.webform-component-markup{
