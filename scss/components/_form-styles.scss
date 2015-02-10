@@ -20,20 +20,27 @@ form.webform-client-form{
 
 	/*form*/
 	.webform-component{
-	    margin: 0px 0px 20px 0px;
+	    margin: 0px 0px 55px 0px;
 
 	    label:first-child {
 	        font-weight: 700;
 	        font-size: 17px;
 	        margin-bottom: 13px;
 	    }
+	    input{
+	    	display: inline;
+	    }
+	    .field-suffix{
+	    	display: inline;
+	    }
 	    .description {
 	        font-style: italic;
-	        padding: 7px;
+	        font-size: 0.9rem;
+	        padding: 7px 0px;
 	    }
 	}
     .webform-component.webform-component-markup{
-		// margin-bottom: -25px;
+		margin-bottom: 20px;
     }
 
 	/* Adjust margin for form elements below */
