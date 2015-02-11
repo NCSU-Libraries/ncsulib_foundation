@@ -118,6 +118,8 @@ $crumb-slash: "/" !default;
     main .breadcrumbs {
       @include crumb-container;
       @include radius($crumb-radius);
+      float: left;
+      width: 100%;
 
       &>* {
         @include crumbs;
