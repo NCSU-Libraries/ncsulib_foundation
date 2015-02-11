@@ -191,7 +191,8 @@ var typeaheadUtility = (function () {
               document.location = link;
           }
       }]);
-      _gaq.push(['_trackEvent', eventValues.category, eventValues.action, eventValues.label]);
+      // _gaq.push(['_trackEvent', eventValues.category, eventValues.action, eventValues.label]);
+      ga('send', eventValues.category, eventValues.action, eventValues.label);
   }
 
 
