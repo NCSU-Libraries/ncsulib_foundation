@@ -1,4 +1,13 @@
 <div id="content" role="document" class="page">
+    <?php if (!empty($page['featured'])): ?>
+        <!--/.featured -->
+        <section class="l-featured row">
+            <div class="large-12 columns">
+                <?php print render($page['featured']); ?>
+            </div>
+        </section>
+        <!--/.l-featured -->
+    <?php endif; ?>
 	<div id="page" class="row" role="main">
 		<div class="content-border">
 			<div class="columns large-12">
