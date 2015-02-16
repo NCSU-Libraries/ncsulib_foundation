@@ -20,7 +20,7 @@
 
       <ul class="breadcrumbs">
         <li><a href="/">Home</a></li>
-        <li><a href="/techlending">Technology Lending</a></li>
+        <li><a href="/techlending">Devices</a></li>
         <li><a href="/<?php print $category_alias; ?>"><?php print render($category_name); ?></a></li>
         <li class="current"><?php print render($manufacturer_name) . " " . $title ?></li>
       </ul>
