@@ -1,6 +1,6 @@
 .feedback-form {
   position: fixed;
-  right: rem-calc(-73);
+  right: rem-calc(-75);
   @include rotate(270deg);
   margin: 0;
   overflow: hidden;
@@ -21,7 +21,7 @@
       background-color: #ac0000;
       color: #fff;
       font-size: 0.9rem;
-      padding: rem-calc(5 5 30 5);
+      padding: rem-calc(2 5);
       @include single-transition(background-color);
 
       &:hover {
