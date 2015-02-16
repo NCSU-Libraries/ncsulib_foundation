@@ -332,6 +332,7 @@ table{
 
 /*alert*/
 .alert-box{
+    display: table;
     line-height: $alert-line-height;
     color: #FFF;
 
