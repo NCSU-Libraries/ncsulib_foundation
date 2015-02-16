@@ -333,8 +333,14 @@ table{
 /*alert*/
 .alert-box{
     line-height: $alert-line-height;
+    color: #FFF;
+
+    h1,h2,h3,h4{
+        color: #FFF;
+    }
 
     p{
+        color: #FFF;
         font-size: 0.8125rem;
     }
 
