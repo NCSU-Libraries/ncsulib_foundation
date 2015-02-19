@@ -153,14 +153,13 @@
 <?php
   	if(!$_SERVER['REMOTE_ADDR']):
 ?>
-	<div data-alert="" class="notice row alert-box">
+<!-- 	<div data-alert="" class="notice row alert-box">
 		<div class="wrap">
-		    <!-- <div class="columns medium-1"><i class="fa fa-exclamation-triangle fa-5x"></i></div> -->
 		    <div class="columns medium-12">
 		        <h2>IMPORTANT NOTICE:</h2>
 		        <p><strong>Due to changing adverse weather conditions, please see <a href="/">our home page</a> for the most current operating hours for all campus libraries.</strong></p>
 		    </div>
 		</div>
-	</div>
+	</div> -->
 
 <?php endif; ?>
