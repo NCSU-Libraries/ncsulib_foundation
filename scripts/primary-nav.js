@@ -39,13 +39,6 @@ var nav = {
 			jQuery('.primary-menu-list:eq('+nav.index+')').removeClass('open');
 		});
 
-		// chat window
-		jQuery(".globalchat").click(function(e){
-			var chaturl = jQuery(this).attr('href');
-			window.open(chaturl,"chat","resizable=1,width=400,height=350,directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no");
-			e.preventDefault();
-		});
-
 	},
 
 	handleOut : function(){
