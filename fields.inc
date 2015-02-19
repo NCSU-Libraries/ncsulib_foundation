@@ -457,7 +457,7 @@ function ncsulib_foundation_field__field_event_leads__event($variables) {
 
     // Add user's image
     $variables['items'][$key]['image'] = get_user_image($collaborators[$key]);
-    // $variables['items'][$key]['image']['#path']['path'] = $staff_link;
+    $variables['items'][$key]['image']['#path']['path'] = $staff_link;
 
     // Add user's title
     $field = field_get_items('user', $collaborators[$key], 'field_title');
