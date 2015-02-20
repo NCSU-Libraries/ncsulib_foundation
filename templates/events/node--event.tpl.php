@@ -27,7 +27,8 @@
             <div class="event-meta">
                 <?php
                     if(!$is_ongoing){
-                        print drupal_render($content['field_time']);
+                        echo '<h3>When</h3>';
+                        echo '<div class="date-display-single">'.strip_tags($content['field_time'][0]['#markup']).'</div>';
                     }
                 ?>
                 <?php print drupal_render($content['field_space']); ?>
