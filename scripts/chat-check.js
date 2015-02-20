@@ -27,12 +27,12 @@ var cc = {
                     cc.item = cc.queue[cc.num];
                     cc.show_presence();
                 } else if(cc.num < cc.queue.length){
+                    cc.num++;
                     cc.chatCheck();
                 } else{
                     cc.show_default('none');
                 }
             }
-            cc.num++;
         });
 
     }
