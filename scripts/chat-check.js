@@ -20,6 +20,7 @@ var cc = {
     },
 
     chatCheck : function(){
+        console.log('hit');
         $.getScript("http://libraryh3lp.com/presence/jid/"+cc.queue[cc.num]+"/chat.libraryh3lp.com/js", function(){
             for (var i = 0; i < jabber_resources.length; ++i) {
                 var resource = jabber_resources[i];
@@ -39,5 +40,6 @@ var cc = {
 }
 
 $(function($) {
-    cc.chatCheck();
+    setInterval('cc.chatCheck()', 30000);
+    // cc.chatCheck();
 });
