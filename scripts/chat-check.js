@@ -40,5 +40,5 @@ var cc = {
 
 $(function($) {
     setInterval('cc.chatCheck()', 30000);
-    // cc.chatCheck();
+    cc.chatCheck();
 });
