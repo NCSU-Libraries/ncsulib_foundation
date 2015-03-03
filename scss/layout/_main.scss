@@ -144,7 +144,7 @@ html #content{
 }
 
 // only when logged in to Drupal
-.contextual-links-region{
+body.page-admin .contextual-links-region{
     float: left;
     width: 100%;
 }
