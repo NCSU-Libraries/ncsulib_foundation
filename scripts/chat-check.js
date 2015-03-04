@@ -20,7 +20,7 @@ var cc = {
     },
 
     chatCheck : function(){
-        $.getScript("http://libraryh3lp.com/presence/jid/"+cc.queue[cc.num]+"/chat.libraryh3lp.com/js", function(){
+        $.getScript("https://libraryh3lp.com/presence/jid/"+cc.queue[cc.num]+"/chat.libraryh3lp.com/js", function(){
             for (var i = 0; i < jabber_resources.length; ++i) {
                 var resource = jabber_resources[i];
                 if(resource.show == 'available'){
