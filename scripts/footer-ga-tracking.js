@@ -1,5 +1,7 @@
 jQuery(function($){
-	ga_footer.init();
+	if(!$('body').hasClass('logged-in')){
+		ga_footer.init();
+	}
 });
 
 var ga_footer = {

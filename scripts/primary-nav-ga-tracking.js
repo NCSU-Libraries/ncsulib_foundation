@@ -1,5 +1,7 @@
 jQuery(function($){
-	ga_nav.init();
+	if(!$('body').hasClass('logged-in')){
+		ga_nav.init();
+	}
 });
 
 var ga_nav = {

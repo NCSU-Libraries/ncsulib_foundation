@@ -58,5 +58,7 @@ var brandingTracking = {
 
 
 jQuery(function(){
-    brandingTracking.interval = setInterval(brandingTracking.isBarLoaded, 500);
+    if(!$('body').hasClass('logged-in')){
+        brandingTracking.interval = setInterval(brandingTracking.isBarLoaded, 500);
+    }
 });

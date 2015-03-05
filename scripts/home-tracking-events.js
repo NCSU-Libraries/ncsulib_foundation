@@ -248,6 +248,8 @@ var homeGA = {
 }
 
 jQuery(function($){
-    homeGA.init($);
+    if(!$('body').hasClass('logged-in')){
+        homeGA.init($);
+    }
 });
 
