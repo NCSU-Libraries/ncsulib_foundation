@@ -1,7 +1,7 @@
 <link rel="shortcut icon" href="//lib.ncsu.edu/sites/all/themes/ncsulibraries/favicon.ico" rel="shortcut icon">
 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8" />
-<meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" />
 <meta http-equiv="ImageToolbar" content="false" />
 
 <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0" />
@@ -11,6 +11,8 @@
 <link rel="image_src" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-114x114.png" />
 
 <link href="https://cdn.ncsu.edu/brand-assets/fonts/include.css" rel="stylesheet" type="text/css" />
+<!-- load brand bar in this order to prevent conflict with other js (particularly chat) -->
+<script src="//cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script>
 
 <!-- css -->
 <link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/ncsulib_foundation.css">
@@ -27,6 +29,7 @@
     });
 </script>
 
+<!-- OLD Google Analytics -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -42,6 +45,20 @@
 
 </script>
 
+<!-- NEW Google Analytics -->
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17138302-1', 'auto');
+  ga('send', 'pageview');
+
+</script> -->
+<!-- End Google Analytics -->
+
+
 
 <!--[if IE 9]>
 <link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie9.css">
@@ -55,7 +72,3 @@
 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/rem.js"></script>
 <![endif]-->
-
-<script src="//cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script>
-
-
