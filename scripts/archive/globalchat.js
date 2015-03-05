@@ -7,8 +7,8 @@ The Chat Now button in the header of all pages
 */
 
  function globalchat(){
-	var libHelpURL = "http://libraryh3lp.com/chat/"; 
-	
+	var libHelpURL = "https://libraryh3lp.com/chat/";
+
 	// default parameters.  Covers most pages and nrl.
 	var chatParams = {
 		"chatEmail": "ref-desk",
@@ -18,12 +18,12 @@ The Chat Now button in the header of all pages
 		"chatTheme": "",
 		"chatTitle": ""
 	};
-	
+
 	var winLoc = window.location.host;
 	var winFullPath = window.location.pathname.split('/');
 	var winPath = winFullPath[1];
-	
-	
+
+
 	// Historical State - historicalstate.lib.ncsu.edu
 	if (winLoc == "historicalstate.lib.ncsu.edu") {
 		chatParams["chatEmail"]="ncsu-special-collections";
@@ -47,25 +47,25 @@ The Chat Now button in the header of all pages
 	else if (winPath == "vetmed") {
 		chatParams["chatEmail"]="ncsu-vml";
 	}
-	
-	
+
+
 	var chatURL=""
 	chatURL+=libHelpURL;
 	chatURL=chatURL + chatParams["chatEmail"] + "@chat.libraryh3lp.com";
 	chatURL+="?";
-	
+
 	function attachParam(param, plabel) {
 		if (chatParams[param]!="") {
 			chatURL=chatURL + plabel + "=" + chatParams[param];
 			chatURL+="&";
 		}
 	}
-	
+
 	attachParam("chatID", "identity");
 	attachParam("chatCSS", "css");
 	attachParam("chatSkin", "skin");
 	attachParam("chatTheme", "theme");
 	attachParam("chatTitle", "title");
-	
+
 	return chatURL;
 }
