@@ -11,6 +11,8 @@
 <link rel="image_src" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-114x114.png" />
 
 <link href="https://cdn.ncsu.edu/brand-assets/fonts/include.css" rel="stylesheet" type="text/css" />
+<!-- load brand bar in this order to prevent conflict with other js (particularly chat) -->
+<script src="//cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script>
 
 <?php if(!$_SERVER['REMOTE_ADDR']): ?>
 <!-- css -->
@@ -74,16 +76,14 @@
 
 
 <!--[if IE 9]>
-<link rel="stylesheet" type="text/css" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie9.css">
+<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie9.css">
 <![endif]-->
 
 <!--[if lt IE 9]>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.9.min.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.1.0.js"></script>
-<link rel="stylesheet" type="text/css" href="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie8.css">
-<script type="text/javascript" src="//webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/ie8.js"></script>
+<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/layout/ie8.css">
+<script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/ie8.js"></script>
 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/rem.js"></script>
 <![endif]-->
-
-<script src="//cdn.ncsu.edu/brand-assets/utility-bar/ub.php?maxWidth=1000&color=red"></script>
