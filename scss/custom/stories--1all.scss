@@ -1,0 +1,50 @@
+@import "base/init_for_custom";
+
+.view-header{
+    margin-bottom: 30px;
+}
+
+.all-stories-list{
+    ul{
+        li{
+            clear: both;
+            float: left;
+            margin-bottom: 50px;
+            width: 100%;
+
+        }
+    }
+}
+.views-field-field-featured-image-landscape{
+    float: left;
+    margin-right: 3%;
+    width: 25%;
+
+    @media #{$small-only} {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+}
+.views-field-title{
+    float: left;
+    width: 72%;
+
+    @media #{$small-only} {
+        width: 100%;
+    }
+
+    span{
+        a{
+            font-size: 1.5rem;
+        }
+    }
+}
+.views-field-field-lastname{
+    float: left;
+    width: 72%;
+
+    @media #{$small-only} {
+        width: 100%;
+    }
+}
