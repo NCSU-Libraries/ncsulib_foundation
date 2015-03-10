@@ -149,9 +149,9 @@ function ncsulib_foundation_preprocess_page(&$variables) {
     case 'techlending':
       drupal_add_js(path_to_theme() . '/scripts/vendor/foundation/foundation.equalizer.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
       break;
-    case 'reservearoom':
-      drupal_add_js(path_to_theme() . '/scripts/reservearoom.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
-      break;
+    // case 'reservearoom':
+      // drupal_add_js(path_to_theme() . '/scripts/reservearoom.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+      // break;
     case 'huntlibrary--namingopportunities':
       drupal_add_css(path_to_theme() . '/styles/blitzer/jquery-ui-1.10.4.custom.min.css', 'file');
       drupal_add_js(path_to_theme() . '/scripts/vendor/jquery-ui-1.10.4.custom.min.js', 'file');
