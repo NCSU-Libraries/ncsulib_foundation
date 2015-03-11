@@ -41,7 +41,7 @@ $include-html-classes: false;
     }
 
     .user-activity-list.promoted{
-        margin-bottom: 20px;
+        margin-bottom: 0px;
 
         ol{
 
@@ -49,16 +49,33 @@ $include-html-classes: false;
                 height: auto;
 
                 > a{
-                    padding: 25px 0px;
+                    padding: 0px 0px 20px;
+                }
+
+                > a:hover{
+                    background: none;
                 }
 
                 h2{
 
                     img{
-                        max-height: 400px;
-                        width: auto;
+                        max-height: 100%;
+                        width: 100%;
                     }
                 }
+
+                h3{
+                    font-size: rem-calc(23);
+                    margin: 0px;
+                }
+            }
+
+            li:nth-child(1){
+                padding-right: 15px;
+            }
+
+            li:nth-child(2){
+                padding-left: 15px;
             }
         }
     }
