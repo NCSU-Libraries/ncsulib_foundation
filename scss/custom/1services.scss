@@ -56,45 +56,6 @@ $include-html-classes: false;
         }
     }
 
-    .user-activity-list.promoted{
-        margin-bottom: 0px;
-
-        ol{
-
-            li{
-                height: auto;
-
-                > a{
-                    padding: 0px 0px 0px;
-                }
-
-                > a:hover{
-                    background: none;
-                }
-
-                h2{
-
-                    img{
-                        max-height: 100%;
-                        width: 100%;
-                    }
-                }
-
-                h3{
-                    font-size: rem-calc(23);
-                }
-            }
-
-            li:nth-child(1){
-                padding-right: 15px;
-            }
-
-            li:nth-child(2){
-                padding-left: 15px;
-            }
-        }
-    }
-
     .block-1944{ //hide hi tech spaces block
         @media #{$small-only}{
             display: none;
