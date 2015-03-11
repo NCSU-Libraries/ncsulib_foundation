@@ -43,7 +43,7 @@
                                 <ul>
                                     <li><h2>Technology</h2></li>
                                     <li><a href="/cdm/" id="ql_cdm" class="styled">Create Digital Media</a></li>
-                                    <li><a href="/spaces/makerspace/" class="styled" id="ql_makersace">Makerspace</a></li>
+                                    <li><a href="/services/makerspace/" class="styled" id="ql_makersace">Makerspace</a></li>
                                 </ul>
                             </li>
                             <li>
