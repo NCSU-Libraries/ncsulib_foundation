@@ -152,7 +152,7 @@ body.page-admin .contextual-links-region{
 
 // weird issue where a block floats over other content when logged into Drupal
 body.logged-in .contextual-links-region{
-    position: unset !important;
+    float: left;
 }
 
 
