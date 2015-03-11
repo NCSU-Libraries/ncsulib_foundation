@@ -225,7 +225,7 @@ $body-font-size-small-screen: rem-calc(15);
             font-family: Univers;
             font-size: rem-calc(20);
             font-style: italic;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
 
             @media #{$small-only} {
                 font-size: $body-font-size-small-screen;
@@ -482,7 +482,14 @@ $body-font-size-small-screen: rem-calc(15);
   padding-top: 35px;
   height: 0;
   margin-bottom: 30px;
+  margin-left: -20%;
   overflow: hidden;
+  width: 140%;
+
+  @media #{$small-only} {
+    margin-left: 0px;
+    width: 100%;
+  }
 }
 
 iframe {
@@ -567,10 +574,10 @@ iframe {
     }
 
     .photo-cont{
-        margin-left: -30px;
+        margin-left: -20%;
         margin-right: 30px;
         float: left;
-        max-width: 60%;
+        max-width: 70%;
 
         @media #{$small-only} {
             margin: 0px;
