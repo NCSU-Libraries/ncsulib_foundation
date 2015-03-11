@@ -7,7 +7,7 @@
 
 <div class="centering-container">
   <div class="title-container">
-    <a href="<?php print $node_url; ?>"" class="project-title" style="background-image:url('<?php print $path; ?>'); ?>" >
+    <a href="<?php print $node_url; ?>" class="project-title" >
         <h2><?php print $title; ?></h2>
     </a>
   </div>

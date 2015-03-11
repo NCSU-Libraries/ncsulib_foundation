@@ -75,6 +75,10 @@ $body-font-size-small-screen: rem-calc(15);
 
         .user-photo {
           @include grid-column($columns:4);
+
+          a{
+              padding-left: 0px;
+          }
         }
         .user-details {
           @include grid-column($columns:8, $collapse: true);
@@ -230,9 +234,8 @@ $body-font-size-small-screen: rem-calc(15);
     }
 
     .views-row {
-      padding-bottom: rem-calc(15);
+      padding-bottom: rem-calc(40);
       margin-bottom: rem-calc(50);
-      background: rgb(239, 239, 239);
     }
 
     .centering-container {
@@ -244,9 +247,9 @@ $body-font-size-small-screen: rem-calc(15);
 
         a.project-title {
           background: no-repeat;
-          height: 150px;
+          // height: 150px;
           width: 100%;
-          color: #fff;
+          color: #555;
           display: table-cell;
           vertical-align: middle;
 
@@ -255,10 +258,8 @@ $body-font-size-small-screen: rem-calc(15);
           }
 
           h2 {
-            color: #FFF;
-            background: rgba(0,0,0,0.8);
+            color: #555;
             display: block;
-            padding: rem-calc(0 15);
             margin: 0;
             font-size: 2.4375rem;
             font-weight: 700;
@@ -273,8 +274,7 @@ $body-font-size-small-screen: rem-calc(15);
     }
 
     .field-name-field-four-liner {
-      margin: 20px 0;
-      padding: rem-calc(10 15);
+      margin: 0px;
 
       p {
         font-size: rem-calc(19);
@@ -294,10 +294,12 @@ $body-font-size-small-screen: rem-calc(15);
 
           .user-photo a{
             @include grid-column($columns:4);
+            padding-left: 0px;
           }
           .user-details {
             @include grid-column($columns:8);
             font-size: 1.7em;
+            padding-left: 0px;
 
             .user-name {
               line-height: 1.6;
