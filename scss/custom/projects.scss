@@ -271,17 +271,21 @@ $body-font-size-small-screen: rem-calc(15);
             }
 
             .date{
+                font-size: 0.8rem;
                  @media #{$small-only} {
                     display: none;
                 }
             }
             h3{
-                @media #{$small-only} {
-                    display: none;
-                }
+              font-size: 1rem;
+              margin-bottom: 0px;
+              @media #{$small-only} {
+                  display: none;
+              }
             }
             .field-name-field-project-user-activities{
                 .field-item{
+                    font-size: 0.9rem;
                     padding: 2px 0px;
 
                     @media #{$small-only} {
