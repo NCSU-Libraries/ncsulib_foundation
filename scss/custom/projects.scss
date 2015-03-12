@@ -321,12 +321,12 @@ $body-font-size-small-screen: rem-calc(15);
               }
 
               h2 {
-                color: #555;
+                color: #cc0000;
                 display: block;
-                margin: 0;
-                font-size: 2.4375rem;
-                font-weight: 700;
-                font-family: UniversCondensed;
+                margin: 0px 0px 15px 0px;
+                font-size: 1.75rem;
+                // font-weight: 700;
+                // font-family: UniversCondensed;
                 @media #{$small-only} {
                   width: 90%;
                   font-size: 2rem;
@@ -345,7 +345,7 @@ $body-font-size-small-screen: rem-calc(15);
         }
 
       p {
-        font-size: rem-calc(19);
+        // font-size: rem-calc(19);
         @media #{$small-only} {font-size: $body-font-size-small-screen;}
       }
     }
@@ -374,6 +374,7 @@ $body-font-size-small-screen: rem-calc(15);
                     display: block;
 
                     a{
+                        display: block;
                         font-size: 1.2rem;
                         margin-bottom: 10px;
                         margin-top: 0px;
