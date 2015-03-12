@@ -251,7 +251,7 @@ $body-font-size-small-screen: rem-calc(15);
 
         .project-photo{
             @include grid-column($columns:5);
-            padding-left: 0px;
+            float: right;
 
             @media #{$small-only} {
                 @include grid-column($columns:12);
@@ -293,6 +293,8 @@ $body-font-size-small-screen: rem-calc(15);
 
         .project-content{
             @include grid-column($columns:7);
+            padding-left: 0px;
+
              @media #{$small-only} {
                 @include grid-column($columns:12);
                 padding: 0px;
