@@ -19,7 +19,7 @@ $body-font-size-small-screen: rem-calc(15);
 
         h1{
             font-size: rem-calc(53);
-            text-align: center;
+            // text-align: center;
         }
 
         @media #{$small-only} {
