@@ -96,7 +96,7 @@ div.workbench-info-block{
         overflow: hidden;
 
         @media #{$small-only}{
-
+            margin-bottom: 20px;
         }
 
         iframe {
