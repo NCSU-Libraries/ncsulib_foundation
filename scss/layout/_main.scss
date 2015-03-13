@@ -87,6 +87,32 @@ div.workbench-info-block{
     a:hover{
         text-decoration: $anchor-text-hover-decoration;
     }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 35px;
+        height: 0;
+        overflow: hidden;
+
+        @media #{$small-only}{
+
+        }
+
+        iframe {
+            position: absolute;
+            top:0;
+            left: 0;
+            // width: 100%;
+            // height: 100%;
+            @media #{$small-only}{
+                height: 100% !important;
+                width: 100% !important;
+            }
+        }
+    }
+
+
 }
 
 // scope to content area
