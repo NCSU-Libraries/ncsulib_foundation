@@ -27,7 +27,8 @@ function slider_check(){
 
 function iframeCheck(){
     var elem = $('#main-content iframe');
-    if ($(elem).length > 0) {
+    // if element exists andthere is no height set
+    if ($(elem).length > 0 && !$(elem).attr('height')) {
         // widt of iframe
         var width = $(elem).attr('width');
         var widVal = width.split('%');
@@ -35,17 +36,15 @@ function iframeCheck(){
         var marBot = -44 / 75 * (widVal[0] - 100);
         // if element exists do not recreate
         if($('.video-container').length == 0){
+            // if element already has a height set it. if not make it same as width
             $(elem).wrap( "<div class='video-container'></div>").css({'width':width,'height':width});
         }
+        // below 768 is mobile
         if($(window).width() > 768){
             $(elem).parent().css('margin-bottom' , -marBot+'%');
         } else{
             $(elem).parent().css('margin-bottom' , '0%');
         }
-
-        // refresh iframe
-        var iframe = $(elem);
-        iframe.src = iframe.src;
     }
 }
 
