@@ -422,3 +422,14 @@ function ncsulib_foundation_adjust_for_timezone($time){
 /* All fields theming funcitons */
 include __DIR__ . '/fields.inc';
 
+
+
+/* the nomarkup theme function */
+function ncsulib_foundation_nomarkup($variables) {
+  $output = '';
+  // Render the items.
+  foreach ($variables['items'] as $delta => $item) {
+    $output .=  drupal_render($item);
+  }
+  return $output;
+}
