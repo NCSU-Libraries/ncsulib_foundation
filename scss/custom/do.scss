@@ -15,21 +15,27 @@ $include-html-classes: false;
 .two-sidebars{
 
 	#main-content{
-		@include grid-column($columns:7,$push:3)
+		@media #{$medium-up}{
+			@include grid-column($columns:7,$push:3)
+		}
 	}
 
 	#subnav{
-		@include grid-column($pull:7)
+		@media #{$medium-up}{
+			@include grid-column($pull:7)
+		}
 	}
 
 	.l-sidebar-second{
-		@include grid-column($columns:2);
+		@media #{$medium-up}{
+			@include grid-column($columns:2);
 
-		.workshop-date{
-			@include grid-column(4);
-		}
-		.workshop-title{
-			@include grid-column(8);
+			.workshop-date{
+				@include grid-column(4);
+			}
+			.workshop-title{
+				@include grid-column(8);
+			}
 		}
 	}
 }
