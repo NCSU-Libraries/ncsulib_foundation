@@ -26,8 +26,9 @@
             <div class="event-meta">
                 <?php
                     $t = field_get_items('node', $node, 'field_time');
-                    $start_raw = strtotime($t[0]['value']);
-                    $end_raw = strtotime($t[0]['value2']);
+                    $adjust = ncsulib_foundation_adjust_for_timezone($t[0]['value']);
+                    $start_raw = strtotime($t[0]['value'])+$adjust;
+                    $end_raw = strtotime($t[0]['value2'])+$adjust;
                     $cat = field_get_items('node', $node, 'field_event_category');
                     foreach($cat as $c){
                         $time = ($c['value'] == 'Exhibits') ? '' : date('g:ia',$start_raw).' - '.date('g:ia',$end_raw);
