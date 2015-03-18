@@ -4,12 +4,11 @@
   <h1 id="page-title" class="title"><?php print $title; ?></h1>
   <?php print render($title_suffix); ?>
 <?php endif; ?>
-
 <?php
     $event_date = strtotime($content['field_time']['#object']->field_time['und'][0]['value2']);
     $is_ongoing = ($content['field_ongoing']['#object']->field_ongoing['und'][0]['value'] == 1) ? true : false;
 
-    if($event_date && $event_date < date('U')){
+    if($event_date && $event_date < date('U') && $is_ongoing != '1'){
         print '<div data-alert class="alert-box">';
         print '<i class="fa fa-warning"></i> This event has already happened.';
         print '</div>';
@@ -26,9 +25,17 @@
         <div class="columns medium-7">
             <div class="event-meta">
                 <?php
+                    $t = field_get_items('node', $node, 'field_time');
+                    $start_raw = strtotime($t[0]['value']);
+                    $end_raw = strtotime($t[0]['value2']);
+                    $cat = field_get_items('node', $node, 'field_event_category');
+                    foreach($cat as $c){
+                        $time = ($c['value'] == 'Exhibits') ? '' : date('g:ia',$start_raw).' - '.date('g:ia',$end_raw);
+                    }
+                    $str = (date('z',$start_raw) == date('z',$end_raw)) ? date('F j, Y',$start_raw) : date('F j',$start_raw).' - '.date('F j, Y',$end_raw);
                     if(!$is_ongoing){
                         echo '<h3>When</h3>';
-                        echo '<div class="date-display-single">'.strip_tags($content['field_time'][0]['#markup']).'</div>';
+                        echo '<p>'.$str.'<br/>'.$time.'</p>';
                     }
                 ?>
                 <?php print drupal_render($content['field_space']); ?>

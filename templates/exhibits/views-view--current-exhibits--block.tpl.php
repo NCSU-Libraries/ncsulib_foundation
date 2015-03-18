@@ -60,9 +60,6 @@
 					<?php else: ?>
 					<h5 class="subheader">When: Ongoing</h5>
 					<?php endif; ?>
-					<?php if($body): ?>
-					<?php echo $body; ?>
-					<?php endif; ?>
 				</div>
 			</div>
 		</dd>
