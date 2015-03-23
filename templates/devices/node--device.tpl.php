@@ -45,6 +45,14 @@
       <?php print render($content['field_request_form_url']); ?>
       <div class="hb"></div>
       <?php print render($content['body']); ?>
+      <div class="row">
+          <div class="columns medium-2">
+              <p><a href="/askus"><img alt="" src="/sites/default/files/files/images/ask_us_red.png" /></a></p>
+          </div>
+          <div class="columns medium-10">
+              <p>You can find all devices at the <a href="/askus">Ask Us</a> desk.</p>
+          </div>
+      </div>
     </div> <!-- /.left-part -->
   </div>
 </article>
