@@ -71,7 +71,9 @@ var homeGA = {
             var title = jQuery(this).data('title');
             var destination = jQuery(this).data('destination');
             // _gaq.push(['_trackEvent', 'Artbox', title, destination]);
-            ga('send', 'event', 'Artbox', title, destination);
+            var index = jQuery(this).parent().index();
+
+            ga('send', 'event', 'Artbox', 'Slide '+index, title, destination);
             homeGA.pause();
         })
         jQuery('.orbit-prev').click(function(){
