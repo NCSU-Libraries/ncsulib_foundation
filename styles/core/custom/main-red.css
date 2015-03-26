@@ -2,6 +2,9 @@ html{margin-top:30px !important}* html body{margin-top:30px !important}.ncstate-
 
 
 /*custom*/
+.ncstate-utility-bar{
+    position: unset;
+}
 .ncstate-utility-bar .ncstate-utility-bar-wrapper{
     width: 1000px;
 }
