@@ -12,7 +12,6 @@
         <?php include 'includes/head.php'; ?>
     </head>
     <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-        <?php include 'includes/ncsu-brand-bar.php'; ?>
         <div class="skip-link">
             <a href="#main-content" class="element-focusable"><?php print t('Skip to main content'); ?></a>
         </div>

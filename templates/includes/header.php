@@ -1,3 +1,4 @@
+<?php include 'ncsu-brand-bar.php'; ?>
 <?php
 
 	// $_SERVER['REMOTE_ADDR'] is only set when a PHP page is rendered by Apache,

@@ -1,5 +1,5 @@
 html.js{
-    margin-top: 40px !important;
+    margin-top: 0px !important;
 
     @media #{$small-only}{
         margin-top: 0px !important;
@@ -15,16 +15,17 @@ body {
     &.logged-in{ //offset for drupal admin bar
 
         .ncstate-utility-bar{
+            position: unset;
             top: 24px;
         }
     }
 
     .ncstate-utility-bar{
         background: $primary-color;
-        height: 40px;
-        margin-bottom: 10px;
-        position: absolute;
-        top: -40px;
+        height: 35px;
+        margin-bottom: 00px;
+        // position: absolute;
+        // top: -40px;
 
         @media #{$small-only}{
             display: none;
