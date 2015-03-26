@@ -22,9 +22,9 @@ body {
 
     .ncstate-utility-bar{
         background: $primary-color;
-        height: 35px;
+        height: 30px;
         margin-bottom: 00px;
-        // position: absolute;
+        position: unset;
         // top: -40px;
 
         @media #{$small-only}{
