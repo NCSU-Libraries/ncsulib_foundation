@@ -53,7 +53,7 @@
               <p><a href="/askus"><img alt="" src="/sites/default/files/files/images/ask_us_red.png" /></a></p>
           </div>
           <div class="columns medium-10">
-              <p>You can find all devices at the <a href="/askus">Ask Us</a> desk.</p>
+              <p>You can find all lendable devices at the <a href="/askus">Ask Us</a> desk.</p>
           </div>
       </div>
       <?php endif; ?>
