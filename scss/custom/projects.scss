@@ -499,6 +499,20 @@ $body-font-size-small-screen: rem-calc(15);
   }
 }
 
+.feature-video-wrapper{
+  position: relative;
+  padding-bottom: 36.25%;
+  padding-top: 35px;
+  height: 0;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 100%;
+
+  @media #{$small-only} {
+    padding-bottom: 56.25%;
+  }
+}
+
 iframe {
   position: absolute;
   top: 0;
@@ -536,12 +550,21 @@ iframe {
 
     #feature-area{
         @media #{$medium-up} {
-            margin-bottom: 50px;
+            // margin-bottom: 50px;
+            overflow: hidden;
+            max-height: 550px;
         }
         @media #{$small-only} {
-            margin-bottom: 10px;
+            // margin-bottom: 10px;
         }
         width: 100%;
+
+        video{
+          position: relative;
+          right: 0px;
+          top: -27%;
+          width: 100%;
+        }
     }
 
     h1{
