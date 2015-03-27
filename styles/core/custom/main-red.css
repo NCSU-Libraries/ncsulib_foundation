@@ -3,7 +3,7 @@ html{margin-top:30px !important}* html body{margin-top:30px !important}.ncstate-
 
 /*custom*/
 body .ncstate-utility-bar{
-    position: unset !important;
+    position: unset;
 }
 .ncstate-utility-bar .ncstate-utility-bar-wrapper{
     width: 1000px;
