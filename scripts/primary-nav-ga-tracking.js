@@ -13,15 +13,19 @@ var ga_nav = {
 
 		jQuery('.primary-nav li a').click(function(e){
 			var page = jQuery(this).text();
-			// _gaq.push(['_trackEvent', 'Global Nav', page, page]);
 			ga('send', 'event', 'Global Nav', page, page);
+			ga_nav.pause();
+		})
+
+		jQuery('.primary-nav li a').hover(function(e){
+			var page = jQuery(this).text();
+			ga('send', 'event', 'Global Nav Hover', page);
 			ga_nav.pause();
 		})
 
 		// secondary level nav
 		jQuery('.primary-nav-menus ul li a').click(function(e){
 			var page = jQuery(this).text();
-			// _gaq.push(['_trackEvent', 'Global Nav', ga_nav.primary_page, page]);
 			ga('send', 'event', 'Global Nav', ga_nav.primary_page, page);
 			ga_nav.pause();
 		})
@@ -29,21 +33,18 @@ var ga_nav = {
 		// utility nav items
 		// hours
 		jQuery('#hours-title a').click(function(e){
-			// _gaq.push(['_trackEvent', 'Global Nav', "Today's Hours"]);
 			ga('send', 'event', 'Global Nav', "Today's Hours");
 			ga_nav.pause();
 		})
 
 		jQuery('#home-hours ul li a').click(function(e){
 			var link = jQuery(this).children('span.library').text();
-			// _gaq.push(['_trackEvent', 'Global Nav', "Today's Hours", link]);
 			ga('send', 'event', 'Global Nav', "Today's Hours", link);
 			ga_nav.pause();
 		})
 
 		jQuery('#utility-links li a').click(function(e){
 			var link = jQuery(this).text();
-			// _gaq.push(['_trackEvent', 'Global Nav', "Utility Links", link]);
 			ga('send', 'event', 'Global Nav', "Utility Links", link);
 			ga_nav.pause();
 		})
