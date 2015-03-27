@@ -24,7 +24,7 @@ body {
         background: $primary-color;
         height: 30px;
         margin-bottom: 0px;
-        position: unset;
+        position: unset !important;
         // top: -40px;
 
         @media #{$small-only}{
