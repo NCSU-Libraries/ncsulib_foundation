@@ -1,5 +1,9 @@
 <div id="content" role="document" class="page elevated-story">
-    <div id="feature-area"><img src="/sites/default/files/shooting_wars/shooting-wars-feature.jpg" width="100%" alt=""></div>
+    <div id="feature-area" class="">
+        <video src="/sites/default/files/shooting_wars/shooting-wars-banner.mp4"  loop muted autoplay width="100%" height="auto"></video>
+        <!-- <img src="/sites/default/files/shooting_wars/shooting-wars-feature.jpg" width="100%" alt=""> -->
+        <!-- <iframe src="https://player.vimeo.com/video/121598192" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/121598192">Shooting Wars Summary</a> from <a href="https://vimeo.com/ncsulibraries">NCSU Libraries</a> on <a href="https://vimeo.com">Vimeo</a>.</p> -->
+    </div>
     <main role="main" class="row l-main">
         <div class="medium-8 medium-offset-2 columns">
             <h1>Shooting Wars</h1>
