@@ -33,15 +33,16 @@ function iframeCheck(){
         var width = $(elem).attr('width');
         var widVal = width.split('%');
         // calculate rediculous margin bottom for iframe
-        var marBot = -44 / 75 * (widVal[0] - 100);
+        var marBot = widVal[0]*0.5; //(widVal[0]*0.5) / 100 * (widVal[0] - 50);
+
         // if element exists do not recreate
         if($('.video-container').length == 0){
             // if element already has a height set it. if not make it same as width
-            $(elem).wrap( "<div class='video-container'></div>").css({'width':width,'height':width});
+            $(elem).wrap( "<div class='video-container'></div>").css({'width':width,'height':width*2});
         }
         // below 768 is mobile
         if($(window).width() > 768){
-            $(elem).parent().css('margin-bottom' , -marBot+'%');
+            $(elem).parent().css('padding-bottom' , marBot+'%');
         } else{
             $(elem).parent().css('margin-bottom' , '0%');
         }

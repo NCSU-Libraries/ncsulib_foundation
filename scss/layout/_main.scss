@@ -103,16 +103,14 @@ div.workbench-info-block{
             position: absolute;
             top:0;
             left: 0;
-            // width: 100%;
-            // height: 100%;
+            width: 100%;
+            height: 100%;
             @media #{$small-only}{
                 height: 100% !important;
                 width: 100% !important;
             }
         }
     }
-
-
 }
 
 // scope to content area
@@ -178,10 +176,33 @@ body.page-admin .contextual-links-region{
     width: 100%;
 }
 
-// weird issue where a block floats over other content when logged into Drupal
-// body.lo \gged-in .contextual-links-region{
-    // float: left;
-// }
 
+// temp place for news blog styles
+.alignleft{
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.alignright{
+    float: right;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
 
+.caption{
+    clear: both;
+    float: right;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+img[align="left"]{
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+img[align="right"]{
+    float: right;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
 
