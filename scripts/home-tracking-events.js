@@ -166,15 +166,15 @@ var homeGA = {
 
         // story 2
         jQuery('#story-2-photo').click(function(){
-            ga('send', 'event', 'Feature Area 2', 'Proposed Hours', 'photo');
+            ga('send', 'event', 'Feature Area 2', 'Library Stories', 'photo');
             homeGA.pause();
         })
         jQuery('#story-2-heading').click(function(){
-            ga('send', 'event', 'Feature Area 2', 'Proposed Hours', 'h2');
+            ga('send', 'event', 'Feature Area 2', 'Library Stories', 'h2');
             homeGA.pause();
         })
         jQuery('.story-2-link').click(function(){
-            ga('send', 'event', 'Feature Area 1', 'Proposed Hours', 'link');
+            ga('send', 'event', 'Feature Area 2', 'Library Stories', 'Learn More');
             homeGA.pause();
         })
 
@@ -190,6 +190,12 @@ var homeGA = {
         jQuery('.exhibits-link').click(function(){
             ga('send', 'event', 'Happenings', 'click', 'exhibits');
             homeGA.pause();
+        })
+
+        // library stories
+        jQuery('.view-capture-and-promote .view-content .views-row a').click(function(e){
+            var href = $(this).attr('href');
+            ga('send', 'event', 'Library Story', 'click', href);
         })
 
 

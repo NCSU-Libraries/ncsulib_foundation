@@ -156,7 +156,7 @@
                         </a>
                     </div>
                     <h2><a href="/stories/re-imagining-lake-raleigh-woods">Re-Imagining the Lake Raleigh Woods</a></h2>
-                    <p>"The library has the best creative collaboration and presentation spaces on campus,"</p>
+                    <p>"The library has the best creative collaboration and presentation spaces on campus."</p>
                     <p><a href="/stories/re-imagining-lake-raleigh-woods">Learn More <i class="fa fa-chevron-right"></i></a></p>
                 </div>
 

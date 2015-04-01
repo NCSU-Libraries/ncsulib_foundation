@@ -716,6 +716,9 @@ $include-html-classes: false;
 	background: #407d94;
 	color: #FFF;
 	padding: 10px;
+	@media #{$small-only}{
+		margin-bottom: 30px;
+	}
 
 	h2{
 		a{
@@ -805,6 +808,10 @@ $include-html-classes: false;
 
 	 	img{
 	 		padding: 0px 0px 10px;
+
+	 		@media #{$small-only}{
+	 			width: 100%;
+	 		}
 	 	}
 
 	 	.views-row{
@@ -816,10 +823,14 @@ $include-html-classes: false;
 	 			float: none;
 	 			width: 100%;
 	 			padding: 0px;
+	 			margin-bottom: 30px;
 	 		}
 
 	 		a{
 	 			font-size: 0.9rem;
+	 			@media #{$small-only} {
+ 					font-size: 1.5rem;
+	 			}
 	 		}
 	 	}
 
