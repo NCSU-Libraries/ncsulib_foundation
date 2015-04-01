@@ -148,50 +148,61 @@
                     </ul>
                 </div>
 
-                <div id="story-2">
+                <div id="story-2" class="library-stories">
+                    <h3><a href="/stories" id="story-2-heading">Featured Library Story</a></h3>
                     <div class="story-photo">
-                        <a href="/hours-2015" id="story-2-photo">
-                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hours_notice_image-2015.jpg" alt="New this fall: Changes to D. H. Hill and the Hunt Library Hours" width="100%" />
+                        <a href="/stories/re-imagining-lake-raleigh-woods" id="story-2-photo">
+                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/reimagine-lake-raleigh.jpg" alt="NC State University Library Stories" width="100%" />
                         </a>
                     </div>
-                     <h3><a href="/hours-2015" id="story-2-heading">One Main Library Open Overnight</a></h3>
-                        <p>Budget reductions have required some changes this year to the overnight hours at the D. H. Hill and
-                        Hunt Libraries.  For spring 2015, D. H. Hill will continue to close at midnight on Sundays and Mondays,
-                        while Hunt will close at midnight on Tuesdays, Wednesdays, and Thursdays.</p>
+                    <h2><a href="/stories/re-imagining-lake-raleigh-woods">Re-Imagining the Lake Raleigh Woods</a></h2>
+                    <p>"The library has the best creative collaboration and presentation spaces on campus,"</p>
+                    <p><a href="/stories/re-imagining-lake-raleigh-woods">Learn More <i class="fa fa-chevron-right"></i></a></p>
                 </div>
 
-             <div id="happenings">
-                <div id="home-news">
-                    <div class="happenings-photo">
-                        <a href="/news/" class="news-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/news.jpg" alt="" width="100%" /></a>
+                <div id="happenings">
+                    <div id="home-news">
+                        <div class="happenings-photo">
+                            <a href="/news/" class="news-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/news.jpg" alt="" width="100%" /></a>
+                        </div>
+                        <div class="happenings-content">
+                            <h2><a href="/news/" class="news-link">News</a></h2>
+                            <p>Technology, innovative spaces, new library resources, and more…</p>
+                        </div>
                     </div>
-                    <div class="happenings-content">
-                        <h2><a href="/news/" class="news-link">News</a></h2>
-                        <p>Technology, innovative spaces, new library resources, and more…</p>
+                    <div id="home-events">
+                        <div class="happenings-photo">
+                            <a href="/events/" class="events-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/events.jpg" alt="" width="100%" /></a>
+                        </div>
+                        <div class="happenings-content">
+                            <h2><a href="/events/" class="events-link">Events</a></h2>
+                            <p>Speaker series, book discussions, campus and community events...</p>
+                        </div>
+                    </div>
+                    <div id="home-exhibits">
+                        <div class="happenings-photo">
+                            <a href="/exhibits/" class="exhibits-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/exhibits.jpg" alt="" width="100%" /></a>
+                        </div>
+                        <div class="happenings-content">
+                            <h2><a href="/exhibits/" class="exhibits-link">Exhibits</a></h2>
+                            <p>Featured collections, visiting exhibits, digital immersion experiences…</p>
+                        </div>
                     </div>
                 </div>
-                <div id="home-events">
-                    <div class="happenings-photo">
-                        <a href="/events/" class="events-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/events.jpg" alt="" width="100%" /></a>
-                    </div>
-                    <div class="happenings-content">
-                        <h2><a href="/events/" class="events-link">Events</a></h2>
-                        <p>Speaker series, book discussions, campus and community events...</p>
-                    </div>
-                </div>
-                <div id="home-exhibits">
-                    <div class="happenings-photo">
-                        <a href="/exhibits/" class="exhibits-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/exhibits.jpg" alt="" width="100%" /></a>
-                    </div>
-                    <div class="happenings-content">
-                        <h2><a href="/exhibits/" class="exhibits-link">Exhibits</a></h2>
-                        <p>Featured collections, visiting exhibits, digital immersion experiences…</p>
-                    </div>
-                </div>
-            </div>
 
-        </section> <!-- /bottom row -->
+            </section> <!-- /bottom row -->
 
-    </div> <!--/.main region -->
-</main> <!--/.main-->
+        </div> <!--/.main region -->
+    </main> <!--/.main-->
 </div> <!--/.page -->
+
+<section id="library-stories">
+    <div id="library-stories-wrapper">
+        <div class="row above-footer">
+            <div class="medium-12 columns">
+                <?php print render($page['above_footer']); ?>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.above-footer -->
