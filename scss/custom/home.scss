@@ -693,6 +693,7 @@ $include-html-classes: false;
 	@media #{$small-only}{
 		@include grid-column(12);
 		padding: 0px;
+		margin-bottom: 30px;
 	}
 
 	.story-photo{
