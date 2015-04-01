@@ -11,36 +11,6 @@ $include-html-classes: false;
 	display: none;
 }
 
-// recojigure columsn widths
-.two-sidebars{
-
-	#main-content{
-		@media #{$medium-up}{
-			@include grid-column($columns:7,$push:3)
-		}
-	}
-
-	#subnav{
-		@media #{$medium-up}{
-			@include grid-column($pull:7)
-		}
-	}
-
-	.l-sidebar-second{
-		@media #{$medium-up}{
-			@include grid-column($columns:2);
-
-			.workshop-date{
-				@include grid-column(4);
-			}
-			.workshop-title{
-				@include grid-column(8);
-			}
-		}
-	}
-}
-
-
 #content {
 
     .l-sidebar-first{
