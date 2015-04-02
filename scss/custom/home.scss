@@ -855,6 +855,18 @@ $include-html-classes: false;
 		top: 23px;
 	}
 
+	.orbit-prev:hover{
+		span{
+			border-right-color: #cc0000;
+		}
+	}
+	.orbit-next:hover{
+		span{
+			border-left-color: #cc0000;
+		}
+	}
+
+
 	.orbit-prev:hover, .orbit-next:hover {
 		background-color: none;
 	}
