@@ -35,6 +35,13 @@ $include-html-classes: false;
 }
 
 .staff-member{
+    @media #{$small-only}{
+        width: 100%;
+
+        img{
+            width: 100%;
+        }
+    }
 
     h3{
         margin-bottom: 0px;
