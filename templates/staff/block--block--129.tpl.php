@@ -1,3 +1,4 @@
+<!-- get contents of course guides field -->
 <?php
 
     $userID = arg(1);
