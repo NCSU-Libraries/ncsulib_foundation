@@ -14,9 +14,10 @@ $include-html-classes: false;
 		}
 	}
 
-	i.fa-comments{
-		color: #cc0000;
-	}
+
+    i.fa-comments{
+        color: #cc0000;
+    }
 }
 
 
@@ -26,6 +27,21 @@ $include-html-classes: false;
     @media #{$medium-up}{
         aside#subnav{
             @include grid-column(4, $pull:8);
+
+            .staff-meta-info{
+                p{
+                    margin-bottom: 5px;
+                }
+
+                p.meta-section{
+                    margin-bottom: 30px;
+
+                    h2{
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+
         }
         #main-content{
             @include grid-column(8, $push:4);
