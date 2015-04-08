@@ -41,8 +41,8 @@ $include-html-classes: false;
                     }
                 }
             }
-
         }
+
         #main-content{
             @include grid-column(8, $push:4);
         }
@@ -90,7 +90,13 @@ $include-html-classes: false;
         h3 {
             padding: 10px 10px 0 0px;
         }
-        p {
-        }
+        p {}
+    }
+}
+
+// main content area for staff page
+#main-content{
+    h2{
+        font-size: 1.3125rem;
     }
 }
