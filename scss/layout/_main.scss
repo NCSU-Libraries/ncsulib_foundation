@@ -33,8 +33,6 @@ div.workbench-info-block{
     h1{ font-size: $h1-font-size; margin-top: 0px; }
     h2{
         font-size: $h2-font-size;
-        padding-top: 1.3rem;
-        margin-top: 0px;
 
         a{
             color: #4C83AF;
@@ -43,16 +41,10 @@ div.workbench-info-block{
     h3{
         font-size: $h3-font-size;
         font-weight: bold;
-        padding-top: 1rem;
-        margin-top: 0px;
 
         a{
             color: #4C83AF;
         }
-    }
-    h4{
-        padding-top: 1rem;
-        margin-top: 0px;
     }
     h4, h4.subheader{
         font-size: $h4-font-size*0.75;
@@ -64,8 +56,6 @@ div.workbench-info-block{
     }
     h5{
         font-size: $h5-font-size;
-        padding-top: 1rem;
-        margin-top: 0px;
 
         a{
             color: #4C83AF;
@@ -73,21 +63,14 @@ div.workbench-info-block{
     }
     h6{
         font-size: $h6-font-size;
-        padding-top: 1rem;
-        margin-top: 0px;
 
         a{
             color: #4C83AF;
         }
     }
-    p,ul{
-        margin-bottom: 1.4rem;
-    }
     a{
         font-family: inherit;
-    //     font-size: inherit;
         font-weight: normal;
-    //     line-height: 1.6;
         text-rendering: optimizelegibility;
     }
     a:focus, select:focus, textarea:focus{
@@ -99,28 +82,43 @@ div.workbench-info-block{
         text-decoration: $anchor-text-hover-decoration;
     }
 
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 35px;
-        height: 0;
-        overflow: hidden;
 
-        @media #{$small-only}{
-            margin-bottom: 20px;
+    #main-content{
+        h2{
+            padding-top: 1.3rem;
+            margin-top: 0px;
         }
+        h3,h4,h5,h6{
+            padding-top: 1rem;
+            margin-top: 0px;
+        }
+        p,ul{
+            margin-bottom: 1.4rem;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 35px;
+            height: 0;
+            overflow: hidden;
 
-        iframe {
-            position: absolute;
-            top:0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             @media #{$small-only}{
-                height: 100% !important;
-                width: 100% !important;
+                margin-bottom: 20px;
+            }
+
+            iframe {
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                @media #{$small-only}{
+                    height: 100% !important;
+                    width: 100% !important;
+                }
             }
         }
+
     }
 }
 
