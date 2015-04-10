@@ -32,27 +32,27 @@ div.workbench-info-block{
 
     h1{ font-size: $h1-font-size; margin-top: 0px; }
     h2{
-        display: inline-block;
         font-size: $h2-font-size;
-        margin-top: 1.3rem;
+        padding-top: 1.3rem;
+        margin-top: 0px;
 
         a{
             color: #4C83AF;
         }
     }
     h3{
-        display: inline-block;
         font-size: $h3-font-size;
         font-weight: bold;
-        margin-top: 1rem;
+        padding-top: 1rem;
+        margin-top: 0px;
 
         a{
             color: #4C83AF;
         }
     }
     h4{
-        display: inline-block;
-        margin-top: 1rem;
+        padding-top: 1rem;
+        margin-top: 0px;
     }
     h4, h4.subheader{
         font-size: $h4-font-size*0.75;
@@ -63,18 +63,18 @@ div.workbench-info-block{
         }
     }
     h5{
-        display: inline-block;
         font-size: $h5-font-size;
-        margin-top: 1rem;
+        padding-top: 1rem;
+        margin-top: 0px;
 
         a{
             color: #4C83AF;
         }
     }
     h6{
-        display: inline-block;
         font-size: $h6-font-size;
-        margin-top: 1rem;
+        padding-top: 1rem;
+        margin-top: 0px;
 
         a{
             color: #4C83AF;
