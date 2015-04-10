@@ -8,6 +8,6 @@
     if($title):
 ?>
 
-    <p><i class="fa fa-envelope"></i> <a href="<?= $url ?>"><?= $title ?></a></p>
+    <i class="fa fa-chevron-right"></i> <a href="<?= $url ?>"><?= $title ?></a></p>
 
     <?php endif; ?>
