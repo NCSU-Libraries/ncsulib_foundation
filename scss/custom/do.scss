@@ -15,7 +15,19 @@ $include-html-classes: false;
 #subnav{
 
 	.user_activity_portals-block_6{
-		@include panel();
+		@include panel($bg:white,$padding:17px);
+		margin-bottom: rem-calc(40);
+
+		ul{
+			margin-bottom: 0px;
+		}
+
+		h2{
+			margin-bottom:1rem;
+		}
+		i{
+			color: #cc0000;
+		}
 	}
 }
 
