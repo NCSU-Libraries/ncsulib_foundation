@@ -5,5 +5,9 @@
     if($test){
         $url = 'mailto:'.$url;
     }
+    if($title):
 ?>
+
     <p><i class="fa fa-envelope"></i> <a href="<?= $url ?>"><?= $title ?></a></p>
+
+    <?php endif; ?>
