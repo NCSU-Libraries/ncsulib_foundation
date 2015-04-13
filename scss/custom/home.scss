@@ -729,12 +729,14 @@ $include-html-classes: false;
 
 	h2{
 		padding-top: 0px;
+
 		a{
 			color: #FFF;
 		}
 	}
 	h3{
 		margin-top: 0px;
+		padding-top: 0px;
 
 		a{
 			color: #FFF;
@@ -753,7 +755,7 @@ $include-html-classes: false;
 	}
 }
 
-#happenings{
+#content #happenings{
 	@include grid-column(4);
 
 	@media #{$small-only}{
