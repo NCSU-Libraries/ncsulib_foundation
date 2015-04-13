@@ -43,6 +43,7 @@ $include-html-classes: false;
 	h2{
 		font-size: 1.8rem;
 		margin-top: 0px;
+		padding-top: 0px;
 	}
 }
 
@@ -261,6 +262,7 @@ $include-html-classes: false;
 		font-weight: bold;
 		float: left;
 		line-height: 1.15rem;
+		padding-top: 0px;
 
 		@media #{$small-only}{
 			float: none;
@@ -352,6 +354,7 @@ $include-html-classes: false;
 				color: $secondary-color;
 				font-size: 1.1rem;
 				margin-bottom: 10px;
+				padding-top: 0px;
 
 				@media #{$small-only}{
 					font-size: 1.5rem;
@@ -534,6 +537,7 @@ $include-html-classes: false;
 		h2{
 			font-size: 1.4rem;
 			display: inline;
+			padding-top: 0px;
 
 			@media #{$small-only}{
 				display: block;
@@ -559,6 +563,7 @@ $include-html-classes: false;
 
 				h2{
 					margin-top: rem-calc(5);
+					padding-top: 0px;
 				}
 
 				a{
@@ -703,6 +708,7 @@ $include-html-classes: false;
 	h2 {
 		font-size: emCalc(28);
 		line-height: 2.2rem;
+		padding-top: 0px;
 
 		// a{
 		// 	color: inherit;
@@ -722,6 +728,7 @@ $include-html-classes: false;
 	}
 
 	h2{
+		padding-top: 0px;
 		a{
 			color: #FFF;
 		}
@@ -774,6 +781,7 @@ $include-html-classes: false;
 			line-height: 1rem;
 			margin-bottom: 5px;
 			margin-top: 0px;
+			padding-top: 0px;
 
 			a{
 				color: inherit;
@@ -805,6 +813,7 @@ $include-html-classes: false;
 
 	 	h2, p, a{
 	 		color: #FFF;
+	 		padding-top: 0px;
 	 	}
 
 	 	img{
