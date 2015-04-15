@@ -17,8 +17,13 @@
     }
 
     .view-content{
-        h5 a{
-            font-size: 1rem;
+        h5 {
+            margin-bottom: 0px;
+            padding-top: 5px;
+
+            a{
+                font-size: 1rem;
+            }
         }
         p.staff-position{
             font-size: 0.7rem;
