@@ -1,15 +1,19 @@
-#content #main-content .view-department{
+#content #main-content {
 
-    .views-row{
-        margin-bottom: 30px;
+    .view-department{
 
-        h3{
-            margin-bottom: 5px;
+        .views-row{
+            margin-bottom: 30px;
+
+            h3{
+                margin-bottom: 5px;
+            }
+
+            p{
+                margin-bottom: 5px;
+            }
         }
 
-        p{
-            margin-bottom: 5px;
-        }
     }
 
     .view-content{
@@ -20,5 +24,4 @@
             font-size: 0.7rem;
         }
     }
-
 }
