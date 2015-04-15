@@ -36,6 +36,7 @@
             <?php endif; ?>
 
             <?php print render($page['content']); ?>
+            <?php render($user_profile); ?>
         </div>
         <!--/.l-main region -->
 
