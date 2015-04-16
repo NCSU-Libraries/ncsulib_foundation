@@ -44,7 +44,7 @@ function ncsulib_foundation_username($variables) {
     // We have a link path, so we should generate a link using l().
     $output  = '<div class="user-photo">'. render($photo) .'</div>';
     $output .= '<div class="user-details">';
-    $output .= '<span class="user-name">'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
+    $output .= '<span class="user-name"><a class="username" href="/staff/'.$author->name.'">'.$variables['name'].'</a></span>'; //'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
     $output .= '<span class="user-title">'. render($title) .'</span>';
     $output .= '</div>';
     $output  = '<div class="user-info">'. $output .'</div>';
@@ -655,7 +655,7 @@ function get_user_image($user) {
       ));
       $image_array['#path']['path'] = 'staff/'.$user->name;
     } else {
-     $image_array  = '<img src="/sites/default/files/gender_neutral-1.jpg">';
+     $image_array  = '&nbsp';//<img src="/sites/default/files/gender_neutral-1.jpg">';
     }
   return $image_array;
 }
