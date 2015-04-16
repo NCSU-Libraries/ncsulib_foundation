@@ -50,7 +50,7 @@ $include-html-classes: false;
 
 }
 
-#content .staff-member{
+#content #main-content .staff-member{
     @media #{$small-only}{
         width: 100%;
 
