@@ -91,7 +91,7 @@ function ncsulib_foundation_field__field_contact($variables) {
   // Contact photo
   $photo = get_user_image($contact);
   if($contact->field_staff_photo){
-    $photo_html = '<a href="/staff/' . $unity_id . '">' . '<img src="https://www.lib.ncsu.edu/sites/default/files/styles/half-page-width/public/'.$photo['#item']['filename'].'</a>" />';
+    $photo_html = '<a href="/staff/' . $unity_id . '">' . '<img src="https://www.lib.ncsu.edu/sites/default/files/styles/half-page-width/public/'.$photo['#item']['filename'].'" /></a>';
   } else{
     $photo_html = '<a href="/staff/' . $unity_id . '">' . '<img src="https://www.lib.ncsu.edu/sites/default/files/gender_neutral-1.jpg"></a>';
   }
