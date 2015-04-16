@@ -653,8 +653,9 @@ function get_user_image($user) {
           'image_link' => 'content',
         ),
       ));
+      $image_array['#path']['path'] = 'staff/'.$user->name;
     } else {
-     $image_array  = '&nbsp &nbsp';//'<img src="/sites/default/files/gender_neutral-1.jpg">';
+     $image_array  = '<img src="/sites/default/files/gender_neutral-1.jpg">';
     }
   return $image_array;
 }
