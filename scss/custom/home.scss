@@ -472,6 +472,10 @@ $include-html-classes: false;
 
 	.orbit-container{
 
+		#artbox{
+			margin-bottom: 0px;
+		}
+
 		@media #{$small-only}{
 			margin-bottom: 0px;
 		}
