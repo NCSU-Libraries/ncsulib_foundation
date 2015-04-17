@@ -498,7 +498,7 @@ $include-html-classes: false;
 
 	.orbit-bullets-container{
 		@media #{$medium-up}{
-			height: 30px;
+			height: 33px;
 		}
 
 		margin-bottom: 0px;
@@ -866,7 +866,7 @@ $include-html-classes: false;
 	.orbit-prev, .orbit-next  {
 		position: relative;
 		left: 95%;
-		top: 27px;
+		top: 23px;
 	}
 
 	.orbit-prev:hover{
