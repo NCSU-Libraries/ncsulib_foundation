@@ -19,8 +19,8 @@
     <?php include variable_get('htdocs_root')."/notice/notice.php"; ?>
     <?php if (!empty($page['featured'])): ?>
         <!--/.featured -->
-        <section class="l-featured row">
-            <div class="large-12 columns">
+        <section class="l-featured">
+            <div class="medium-12 columns">
                 <?php print render($page['featured']); ?>
             </div>
         </section>

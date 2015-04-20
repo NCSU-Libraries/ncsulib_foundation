@@ -155,13 +155,21 @@
 <?php
   	if(!$_SERVER['REMOTE_ADDR']):
 ?>
+<!-- 	<div data-alert="" class="notice row alert-box">
+		<div class="wrap">
+		    <div class="columns medium-12">
+		        <h2>IMPORTANT NOTICE:</h2>
+		        <p><strong>Due to changing adverse weather conditions, please see <a href="/">our home page</a> for the most current operating hours for all campus libraries.</strong></p>
+		    </div>
+		</div>
+	</div> -->
 
-<div data-alert="" class="notice row alert-box success">
-    <div class="columns medium-1"><i class="fa fa-hand-o-right fa-5x"></i></div>
-    <div class="columns medium-11">
-        <h3>RESTRICTED ACCESS DURING READING DAYS & FINAL EXAM PERIOD:</h3>
-        <p>An NC State ID will be required to enter the HUNT LIBRARY gates 8am-6pm, April 27-May 7. D. H. Hill access will remain unaltered.</p>
+    <div data-alert="" class="notice row alert-box success">
+    <div class="columns medium-1"><i class="fa fa-hand-o-right fa-5x hide-for-small-only"></i></div>
+        <div class="columns medium-11">
+            <h3>RESTRICTED ACCESS DURING READING DAYS & FINAL EXAM PERIOD:</h3>
+            <p>An NC State ID will be required to enter the HUNT LIBRARY gates 8am-6pm, April 27-May 7. D. H. Hill access will remain unaltered.</p>
+        </div>
     </div>
-</div>
 
 <?php endif; ?>
