@@ -331,6 +331,9 @@ table{
 
 
 /*alert*/
+.no-drupal .alert-box{
+    margin-top: 20px;
+}
 .alert-box{
     display: table;
     line-height: $alert-line-height;

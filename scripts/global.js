@@ -8,6 +8,7 @@ jQuery(function(){
 	// check for orbit slider
 	slider_check();
     iframeCheck();
+    htdocsOrDrupal();
 
     $(window).resize(function() {
         setTimeout(iframeCheck(), 1000);
@@ -45,6 +46,15 @@ function iframeCheck(){
         } else{
             $(elem).parent().css('margin-bottom' , '0%');
         }
+    }
+}
+
+function htdocsOrDrupal(){
+    var body = $('body');
+    if($(body).hasClass('not-logged-in') || $(body).hasClass('logged-in')){
+        $(body).addClass('drupal');
+    } else{
+        $(body).addClass('not-drupal');
     }
 }
 
