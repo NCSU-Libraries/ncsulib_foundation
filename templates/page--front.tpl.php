@@ -16,7 +16,16 @@
 
 <!--.page -->
 <div role="document" class="page" id="content">
-<?php include variable_get('htdocs_root')."/notice/notice.php"; ?>
+    <?php include variable_get('htdocs_root')."/notice/notice.php"; ?>
+    <?php if (!empty($page['featured'])): ?>
+        <!--/.featured -->
+        <section class="l-featured row">
+            <div class="large-12 columns">
+                <?php print render($page['featured']); ?>
+            </div>
+        </section>
+        <!--/.l-featured -->
+    <?php endif; ?>
     <main role="main" class="row l-main">
         <div class="<?php print $main_grid; ?> main columns" id="main-content">
             <!-- top row -->
