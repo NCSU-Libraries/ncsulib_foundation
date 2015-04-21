@@ -164,12 +164,14 @@
 		</div>
 	</div> -->
 
-    <div class="notice row alert-box success" data-alert="">
-	    <div class="columns medium-1"><i class="fa fa-hand-o-right fa-5x hide-for-small-only"></i></div>
-	    <div class="columns medium-11">
-	        <h3>RESTRICTED ACCESS DURING READING DAYS &amp; FINAL EXAM PERIOD:</h3>
-	        <p>An NC State ID will be required to enter the HUNT LIBRARY starting 8am on April 25 through May 7. D. H. Hill access will remain unaltered.</p>
-	    </div>
+	<div style="width:100%;background-color:#fff;padding-top:20px;">
+	    <div class="notice row alert-box success" data-alert="">
+		    <div class="columns medium-1"><i class="fa fa-hand-o-right fa-5x hide-for-small-only"></i></div>
+		    <div class="columns medium-11">
+		        <h3>RESTRICTED ACCESS DURING READING DAYS &amp; FINAL EXAM PERIOD:</h3>
+		        <p>An NC State ID will be required to enter the HUNT LIBRARY starting 8am on April 25 through May 7. D. H. Hill access will remain unaltered.</p>
+		    </div>
+		</div>
 	</div>
 
 <?php endif; ?>
