@@ -29,9 +29,11 @@
         <?php
           $photo_url = $content['field_featured_image_landscape']['#object']->field_featured_image_landscape['und'][0]['filename'];
           $alt = $content['field_featured_image_landscape']['#object']->field_featured_image_landscape['und'][0]['alt'];
+          $title = $content['field_featured_image_landscape']['#object']->field_featured_image_landscape['und'][0]['title'];
         ?>
         <div id="featured-image">
           <img src="/sites/default/files/<?= $photo_url; ?>" width="100%" alt="<?= $alt; ?>">
+          <?php if($title){ echo '<small>'.$title.'</small>';} ?>
         </div>
         <?php print render($content['field_teaser']); ?>
 
