@@ -37,7 +37,7 @@
 
         .user-info {
           @include grid-column($columns:6);
-          margin-bottom: rem-calc(10);
+          margin-bottom: rem-calc(20);
 
           .user-photo {
             @include grid-column($columns:4, $collapse: true);
@@ -54,6 +54,9 @@
               font-size: rem-calc(13);
               font-style: italic;
             }
+          }
+          .user-details.former{
+            padding-left: 0px;
           }
         }
       }

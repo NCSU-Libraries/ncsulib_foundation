@@ -668,18 +668,21 @@ function get_user_image($user) {
  */
 function print_multiple_users($user_array, $output) {
   foreach ($user_array as $delta => $item) {
-    $output .= '<div class="user-info">';
-    $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
-    $output .= '<div class="user-details">';
+    $position = $item['image']['#path']['options']['entity']->field_staff_position['und'][0]['tid'];
 
-    // If user is blocked (i.e., =0), only print name, else print name, link
+    $output .= '<div class="user-info">';
+
+    // If user is a former employee, only print name, else print name, link
     // and title
-    switch ($item['status']) {
-      case '0':
-        $output .= '<span class="user-name">'. render($item['name']) .'</span>';
+    switch ($position) {
+      case '2050':
+        $output .= '<div class="user-details former">';
+        $output .= '<span class="user-name">'. render($item['name']) .'</span><small>Former staff member</small>';
         break;
 
       default:
+        $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
+        $output .= '<div class="user-details">';
         $output .= '<span class="user-name">'. l(render($item['name']), $item['link']) .'</span>';
         $output .= '<span class="user-title">'. render($item['title']) .'</span>';
         break;
