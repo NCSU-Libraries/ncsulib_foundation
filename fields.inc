@@ -675,7 +675,7 @@ function print_multiple_users($user_array, $output) {
     // If user is a former employee, only print name, else print name, link
     // and title
     switch ($position) {
-      case '2050':
+      case '2023':
         $output .= '<div class="user-details former">';
         $output .= '<span class="user-name">'. render($item['name']) .'</span><small>Former staff member</small>';
         break;
