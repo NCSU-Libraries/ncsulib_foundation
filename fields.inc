@@ -154,6 +154,10 @@ function ncsulib_foundation_field__field_staff($variables) {
     $field = field_get_items('user', $collaborators[$key], 'field_title');
     $variables['items'][$key]['title'] = field_view_value('user', $collaborators[$key], 'field_title', $field[0]);
 
+    // Position
+    $field = field_get_items('user', $collaborators[$key], 'field_staff_position');
+    $variables['items'][$key]['position'] = field_view_value('user', $collaborators[$key], 'field_staff_position', $field[0]);
+
   }
 
   return print_multiple_users($variables['items'], $output);
@@ -667,15 +671,15 @@ function get_user_image($user) {
  * @return $output HTML for display
  */
 function print_multiple_users($user_array, $output) {
-  foreach ($user_array as $delta => $item) {
-    $position = $item['image']['#path']['options']['entity']->field_staff_position['und'][0]['tid'];
 
+  foreach ($user_array as $delta => $item) {
+    $position = $item['position']['#title'];
     $output .= '<div class="user-info">';
 
     // If user is a former employee, only print name, else print name, link
     // and title
     switch ($position) {
-      case '2023':
+      case 'Former Staff':
         $output .= '<div class="user-details former">';
         $output .= '<span class="user-name">'. render($item['name']) .'</span><small>Former staff member</small>';
         break;
