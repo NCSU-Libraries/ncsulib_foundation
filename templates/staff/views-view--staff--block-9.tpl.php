@@ -5,7 +5,8 @@
 			$url = str_replace(' ', '-',$result->node_title);
 	?>
 
-	<option value="/staff/results?title=<?= $result->node_title; ?>"><?= $result->node_title; ?></option>
+    <!-- <option value="/staff/results?title=<?= $result->node_title; ?>"><?= $result->node_title; ?></option> -->
+	<option value="/department/<?= $result->node_title; ?>"><?= $result->node_title; ?></option>
 
 	<?php endforeach; ?>
 </select>
