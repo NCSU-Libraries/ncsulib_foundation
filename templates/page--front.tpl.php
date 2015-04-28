@@ -160,13 +160,13 @@
                 <div id="story-2" class="library-stories">
                     <h3><a href="/stories" id="story-2-heading">Featured Library Story</a></h3>
                     <div class="story-photo">
-                        <a href="/stories/re-imagining-lake-raleigh-woods" id="story-2-photo">
-                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/reimagine-lake-raleigh.jpg" alt="NC State University Library Stories" width="100%" />
+                        <a href="/stories/shooting-wars" id="story-2-photo">
+                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/shooting-wars.jpg" alt="NC State University Library Stories" width="100%" />
                         </a>
                     </div>
-                    <h2><a href="/stories/re-imagining-lake-raleigh-woods">Re-Imagining the Lake Raleigh Woods</a></h2>
-                    <p>"The library has the best creative collaboration and presentation spaces on campus."</p>
-                    <p><a href="/stories/re-imagining-lake-raleigh-woods">Learn More <i class="fa fa-chevron-right"></i></a></p>
+                    <h2><a href="/stories/shooting-wars">SHOOTING WARS: Using Old Media to Make New Meaning</a></h2>
+                    <!-- <p>"The library has the best creative collaboration and presentation spaces on campus."</p> -->
+                    <p><a href="/stories/shooting-wars">Learn More <i class="fa fa-chevron-right"></i></a></p>
                 </div>
 
                 <div id="happenings">
