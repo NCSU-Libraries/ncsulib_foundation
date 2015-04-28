@@ -164,7 +164,7 @@
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/shooting-wars.jpg" alt="NC State University Library Stories" width="100%" />
                         </a>
                     </div>
-                    <h2><a href="/stories/shooting-wars">SHOOTING WARS: Using Old Media to Make New Meaning</a></h2>
+                    <h2><a href="/stories/shooting-wars">Shooting Wars: Using Old Movies and New Spaces to Make Meaning</a></h2>
                     <!-- <p>"The library has the best creative collaboration and presentation spaces on campus."</p> -->
                     <p><a href="/stories/shooting-wars">Learn More <i class="fa fa-chevron-right"></i></a></p>
                 </div>
