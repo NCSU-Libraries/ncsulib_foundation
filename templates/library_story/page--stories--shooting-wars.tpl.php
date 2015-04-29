@@ -1,6 +1,6 @@
 <div id="content" role="document" class="page elevated-story">
     <div id="feature-area" class="">
-        <h1>SHOOTING WARS<span class="biline">Using Old Movies and New Spaces to Make Meaning</span></h1>
+        <h1>SHOOTING WARS<span class="biline">New Spaces Give Old Media New Meaning</span></h1>
         <video src="/sites/default/files/shooting_wars/shooting-wars-banner.mp4" poster="/sites/default/files/shooting_wars/poster.jpg" loop muted autoplay width="100%" height="auto"></video>
     </div>
     <main role="main" class="row l-main">
