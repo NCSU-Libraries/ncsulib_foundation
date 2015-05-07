@@ -1,4 +1,4 @@
-<link rel="shortcut icon" href="//lib.ncsu.edu/sites/all/themes/ncsulibraries/favicon.ico" rel="shortcut icon">
+<link rel="shortcut icon" href="//lib.ncsu.edu/sites/all/themes/ncsulibraries/favicon.ico">
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8" />
