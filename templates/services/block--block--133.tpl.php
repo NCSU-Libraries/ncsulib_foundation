@@ -1,20 +1,16 @@
 <section class="block block-block contextual-links-region">
-<?php
+    <?php
+        $mkr_ary = hours_get_day_range('hunt','makerspace',5);
 
- $mkr_ary = hours_get_reg_schedule('hunt','makerspace');
-    foreach($mkr_ary as $key => $hours){
-        echo '<h2>'.key($mkr_ary) . ' Hours</h2>';
-        // kpr($key);
-        // echo '<h2>Hours</h2>';
+        echo '<h2>Hours</h2>';
         echo '<table>';
-        foreach($hours as $hour){
+        foreach($mkr_ary as $key => $hours){
             echo '<tr>';
-            echo '<td>'.$hour['day_range'].'</td>';
-            echo '<td>'.$hour['open_hours'].'</td>';
+            echo '<td>'.$hours->date_display.'</td>';
+            echo '<td>'.$hours->display.'</td>';
             echo '</tr>';
         }
         echo '</table>';
-    }
-?>
+    ?>
     <p><a href="/hours/hunt/makerspace">Full hours and exceptions</a></p>
 </section>
