@@ -12,5 +12,5 @@
         }
         echo '</table>';
     ?>
-    <p><a href="/hours/hunt/makerspace">Full hours and exceptions</a></p>
+    <p><a href="/hours/hunt/makerspace">Full hours and exceptions »</a></p>
 </section>
