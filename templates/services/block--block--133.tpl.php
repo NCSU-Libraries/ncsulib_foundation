@@ -1,7 +1,7 @@
 <section class="block block-block contextual-links-region">
     <?php
         $mkr_ary = hours_get_day_range('hunt','makerspace',5);
-
+        // kpr($mkr_ary);
         echo '<h2>Hours</h2>';
         echo '<table>';
         foreach($mkr_ary as $key => $hours){
