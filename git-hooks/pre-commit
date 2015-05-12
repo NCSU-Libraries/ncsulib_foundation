@@ -6,7 +6,6 @@
 echo "Grunt running to create concatenated and minified javascript."
 grunt mini
 echo "File generated, adding to commit"
-echo "LALALALALALALALALALALALA"
 git add templates/includes/scripts/ncsulib-website.min.js
 echo "File included in commit"
 
@@ -14,7 +13,8 @@ echo "File included in commit"
 echo "Generating new head.html and header.html files"
 php templates/includes/head.php > templates/includes/head.html
 php templates/includes/header.php > templates/includes/header.html
-cat templates/includes/header.php
+# cat templates/includes/header.php
+echo "LALALALALALALALALALALALA"
 echo "Files generated, adding to commit"
 git add templates/includes/head.html
 git add templates/includes/header.html

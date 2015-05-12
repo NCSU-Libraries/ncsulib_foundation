@@ -152,6 +152,7 @@
 
 <a name="#main-content" class="element-invisible element-focusable" tabindex="-1">Skip Content</a>
 
+
 <?php
   	if(!$_SERVER['REMOTE_ADDR']):
 ?>
@@ -175,3 +176,5 @@
 	</div> -->
 
 <?php endif; ?>
+
+<?php include(variable_get('htdocs_root')."/notice/includes/notice.html"); ?>
