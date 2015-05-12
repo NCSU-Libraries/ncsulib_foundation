@@ -177,7 +177,7 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
   // default is Hill only
   $building = " (Hill only)";
   // NIDs that represent devices that can be lent anywhere
-  $building_agnostic = array(23583, 23564, 22470, 23559);
+  $building_agnostic = array(23583, 23564, 22470, 23559, 28007);
 
   foreach ($variables['items'] as $delta => $item) {
     // Change value to "Hunt only" if it's a Hunt only lend device
