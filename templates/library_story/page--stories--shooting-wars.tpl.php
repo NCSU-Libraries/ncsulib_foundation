@@ -136,7 +136,37 @@
                 <iframe src="https://player.vimeo.com/video/121598188" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/121598188">The Outcome</a> from <a href="https://vimeo.com/ncsulibraries">NCSU Libraries</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
             </div>
 
-            <p>SEE THE VIRTUAL EXHIBIT HERE: <a href="http://www.lib.ncsu.edu/display/transfer/shooting_wars/">http://www.lib.ncsu.edu/display/transfer/shooting_wars/</a></p>
+            <div id="collaborators">
+                <h2>Collaborators</h2>
+                <ul class="unstyle-list">
+                    <li>
+                        <p><a href="http://english.chass.ncsu.edu/faculty_staff/mgorgero">Marsha Gordon</a> <br><small>Associate Professor</small></p>
+                    </li>
+                    <li>
+                        <p><a href="/staff/bebraffo">Brent Brafford</a> <br><small>Technology Support Analyst</small></p>
+                    </li>
+                    <li>
+                        <p><a href="/staff/wdwoody">Wes Woody</a> <br><small>Technology Support Analyst</small></p>
+                    </li>
+                    <li>
+                        <p>Jason Buel<br/><small> Student</small></p>
+                    </li>
+                    <li>
+                        <p>Adam Hebert<br/><small> Student</small></p>
+                    </li>
+                    <li>
+                        <p>Kenneth Pinion<br/><small> Student</small></p>
+                    </li>
+                    <li>
+                        <p>Brian Robertson<br/><small> Student</small></p>
+                    </li>
+                    <li>
+                        <p>Gretchen Walters<br/><small> Student</small></p>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>View the virtual exhibit here: <br/><a href="http://www.lib.ncsu.edu/display/transfer/shooting_wars/">http://www.lib.ncsu.edu/display/transfer/shooting_wars/</a></h2>
         </div>
     </main>
 </div>
