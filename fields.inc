@@ -548,7 +548,7 @@ function ncsulib_foundation_field__project($variables) {
 
   // Render the label, if it's not hidden and display it as a heading 3
   if (!$variables['label_hidden']) {
-    $output .= '<h3' . $variables['title_attributes'] . '>' . $field_label . '</h3>';
+    $output .= '<h2' . $variables['title_attributes'] . '>' . $field_label . '</h2>';
   }
 
   // Render the items.
