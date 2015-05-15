@@ -31,7 +31,7 @@
 
     </div>
 
-    <aside class="story-statement-aside">
+    <aside class="story-statement-aside sidebar">
       <h3>Story Lead</h3>
 
       <?php print $name; ?>

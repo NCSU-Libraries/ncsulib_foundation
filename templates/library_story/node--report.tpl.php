@@ -30,7 +30,7 @@
             <?php print render($content['field_pubs_and_presos']); ?>
 
           </div>
-          <aside class="report-statement-aside">
+          <aside class="report-statement-aside sidebar">
 
             <?php print render($content['field_featured_image']); ?>
             <?php print render($content['field_contact']); ?>
