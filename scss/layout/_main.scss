@@ -99,6 +99,12 @@ div.workbench-info-block{
         p,ul{
             margin-bottom: 1.4rem;
         }
+
+        p small{
+            display: inline-block;
+            line-height: 1.2;
+            padding-top: 5px;
+        }
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
