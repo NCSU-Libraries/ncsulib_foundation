@@ -32,7 +32,7 @@
     </div>
 
     <aside class="story-statement-aside sidebar">
-      <h3>Story Lead</h3>
+      <h2>Story Lead</h2>
 
       <?php print $name; ?>
       <?php print render($content['field_staff']); ?>
