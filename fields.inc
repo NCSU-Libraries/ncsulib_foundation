@@ -679,11 +679,11 @@ function print_multiple_users($user_array, $output) {
 
     // kpr($item['image']);
     if(is_array($item['image'])){
-        if($status == 0){
-            $img = $photo_url;
-        } else{
+        // if($status == 0){
+            // $img = $photo_url;
+        // } else{
             $img = render($item['image']);
-        }
+        // }
     } else{
         $img = '<img src="https://www.lib.ncsu.edu/sites/default/files/gender_neutral-1.jpg">';
     }
