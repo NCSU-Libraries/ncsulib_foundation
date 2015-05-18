@@ -674,9 +674,15 @@ function print_multiple_users($user_array, $output) {
 
   foreach ($user_array as $delta => $item) {
     $position = $item['position']['#title'];
-    // kpr($item);
+    $status = $item['status'];
+    $photo_url = '<img src="'.image_style_url($item['image']['#image_style'],$item['image']['#item']['uri']).'" width="100%"/>';
+    // kpr($item['image']);
     if(is_array($item['image'])){
-        $img = render($item['image']);
+        if($status == 0){
+            $img = $photo_url;
+        } else{
+            $img = render($item['image']);
+        }
     } else{
         $img = '<img src="https://www.lib.ncsu.edu/sites/default/files/gender_neutral-1.jpg">';
     }
@@ -684,10 +690,12 @@ function print_multiple_users($user_array, $output) {
     $output .= '<div class="user-info">';
     // If user is a former employee, only print name, else print name, link
     // and title
-    switch ($position) {
-      case 'Former Staff':
-        $output .= '<div class="user-details former">';
-        $output .= '<span class="user-name">'. render($item['name']) .'</span><small>Former staff member</small>';
+    switch ($status) {
+      case 0:
+        $output .= '<div class="user-photo">'. $img .'</div>';
+        $output .= '<div class="user-details">';
+        $output .= '<span class="user-name">'.render($item['name']).'</span>';
+        $output .= '<span class="user-title">'. render($item['title']) .'</span>';
         break;
 
       default:

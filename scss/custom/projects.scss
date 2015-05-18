@@ -71,7 +71,7 @@ $body-font-size-small-screen: rem-calc(15);
 
       .user-info {
         @include grid-row($behavior: nest);
-        margin-bottom: rem-calc(10);
+        margin-bottom: rem-calc(20);
 
         .user-photo {
             @include grid-column($columns:3);
@@ -84,8 +84,12 @@ $body-font-size-small-screen: rem-calc(15);
           @include grid-column($columns:8, $collapse: true);
 
           .user-name {
-            line-height: 1.6;
+            font-size: 0.875rem;
+            line-height: 1.3;
             display: block;
+            a{
+              line-height: 1.3;
+            }
           }
           .user-title {
             font-size: rem-calc(13);
