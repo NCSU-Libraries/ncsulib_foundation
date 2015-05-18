@@ -675,7 +675,7 @@ function print_multiple_users($user_array, $output) {
   foreach ($user_array as $delta => $item) {
     $position = $item['position']['#title'];
     $status = $item['status'];
-    $photo_url = '<img src="'.image_style_url($item['image']['#image_style'],$item['image']['#item']['uri']).'" width="100%"/>';
+    // $photo_url = '<img src="'.image_style_url($item['image']['#image_style'],$item['image']['#item']['uri']).'" width="100%"/>';
 
     // kpr($item['image']);
     if(is_array($item['image'])){
