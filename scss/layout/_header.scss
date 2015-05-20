@@ -304,7 +304,7 @@ header#minimum-bar{
 /*begin dropdown menus*/
 #primary-nav-menus{
     background: $topbar-dropdown-bg;
-    opacity: 0.96;
+    opacity: 0.97;
     position: absolute;
     width: 100%;
     z-index: 13;
@@ -601,7 +601,7 @@ header#minimum-bar{
 
                 a {
                     border-left: 1px solid #555555;
-                    color: #CCC;
+                    color: #DFDFDF;
                     display: block;
                     font-size: rem-calc(11);
                     line-height: 0.8rem;

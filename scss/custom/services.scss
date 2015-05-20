@@ -22,7 +22,7 @@ $include-html-classes: false;
                         margin-top: 0px;
 
                         i{
-                            color: #4c83af;
+                            color: $anchor-font-color;
                             font-size: 4rem;
                         }
                         img{
