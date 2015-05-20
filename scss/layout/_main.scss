@@ -35,7 +35,7 @@ div.workbench-info-block{
         font-size: $h2-font-size;
 
         a{
-            color: #4C83AF;
+            color: $anchor-font-color;
         }
     }
     h3{
@@ -43,7 +43,7 @@ div.workbench-info-block{
         font-weight: bold;
 
         a{
-            color: #4C83AF;
+            color: $anchor-font-color;
         }
     }
     h4, h4.subheader{
@@ -51,21 +51,21 @@ div.workbench-info-block{
         text-transform: uppercase;
 
         a{
-            color: #4C83AF;
+            color: $anchor-font-color;
         }
     }
     h5{
         font-size: $h5-font-size;
 
         a{
-            color: #4C83AF;
+            color: $anchor-font-color;
         }
     }
     h6{
         font-size: $h6-font-size;
 
         a{
-            color: #4C83AF;
+            color: $anchor-font-color;
         }
     }
     a{
