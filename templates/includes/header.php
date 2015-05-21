@@ -177,4 +177,4 @@
 
 <?php endif; ?>
 
-<?php include(variable_get('htdocs_root')."/notice/includes/notice.html"); ?>
+<?php include("/var/www/site/htdocs/notice/notice.php"); ?>
