@@ -651,7 +651,8 @@ $include-html-classes: false;
 			white-space: nowrap;
 		}
 	}
-	.date-popup:after{
+	// .date-popup:after{
+	#popup-ind{
 		background: #FFF;
 		box-shadow: 3px 5px 6px -2px rgba(0,0,0,0.3);
 		content: "";
