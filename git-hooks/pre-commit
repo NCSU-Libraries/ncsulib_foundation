@@ -13,6 +13,8 @@ echo "File included in commit"
 echo "Generating new head.html and header.html files"
 php templates/includes/head.php > templates/includes/head.html
 php templates/includes/header.php > templates/includes/header.html
+echo "Setting permissions"
+chmod o+w templates/includes/header.html
 # cat templates/includes/header.php
 echo "Files generated, adding to commit"
 git add templates/includes/head.html
