@@ -1,4 +1,5 @@
 <?php include 'ncsu-brand-bar.php'; ?>
+
 <?php
 
 	// $_SERVER['REMOTE_ADDR'] is only set when a PHP page is rendered by Apache,
@@ -8,8 +9,12 @@
 		$_SERVER['REMOTE_ADDR'] = '';
 
 		// If we move header.php somewhere else in the file tree this will break!
-		$magic_number = strlen("/sites/all/themes/ncsulib_foundation/templates/includes/header.php");
-  		define('DRUPAL_ROOT', substr(__FILE__, 0, -$magic_number));
+		if($_GET['loc'] == 'prod'){ //use url var is compiling from /notice app
+	  		define('DRUPAL_ROOT', "/var/www/site/drupal");
+		} else{ //else if compiling from non web server
+			$magic_number = strlen("/sites/all/themes/ncsulib_foundation/templates/includes/header.php");
+	  		define('DRUPAL_ROOT', substr(__FILE__, 0, -$magic_number));
+		}
 
   		// Boot drupal so t() functions and other drupal functions run
   		require_once (DRUPAL_ROOT.'/includes/bootstrap.inc');
