@@ -6,4 +6,44 @@
     .alert-box{
         margin-bottom: 0px;
     }
+
+    .notice-icon{
+        @include grid-column(1);
+    }
+    .success{
+        .notice-icon:before {
+            content: "\f0a4";
+            font-family: "FontAwesome";
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+    }
+    .alert{
+        .notice-icon:before {
+            content: "\f071";
+            font-family: "FontAwesome";
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+    }
+    .notice-body{
+        @include grid-column(11);
+
+        h1,h2,h3,h4,h5,h6{
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+    }
+    .notice-date{
+        bottom: 5px;
+        font-style: italic;
+        position: absolute;
+        right: 10px;
+        text-align: right;
+
+        p{
+            font-size: 0.65rem;
+            margin:0px;
+        }
+    }
 }
