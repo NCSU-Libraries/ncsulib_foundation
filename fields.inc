@@ -202,7 +202,7 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
 
   foreach ($variables['items'] as $delta => $item) {
     // Change value to "Hunt only" if it's a Hunt only lend device
-    if ($device_nid == 24518) {
+    if ($device_nid == 24518 || $device_nid == 28035) {
       // 24518 = Google Glass
       $building = " (Hunt only)";
     } else if (in_array($device_nid, $building_agnostic)) {
