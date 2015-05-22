@@ -4,8 +4,7 @@
 
 	// $_SERVER['REMOTE_ADDR'] is only set when a PHP page is rendered by Apache,
 	// When PHP runs from the command line it is unset
-
-  	if(!$_SERVER['REMOTE_ADDR']){
+  	if(php_sapi_name() == 'cli'){
 		$_SERVER['REMOTE_ADDR'] = '';
 
 		// If we move header.php somewhere else in the file tree this will break!
