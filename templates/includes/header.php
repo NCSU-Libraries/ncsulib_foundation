@@ -6,10 +6,15 @@
 	// When PHP runs from the command line it is unset
   	if(php_sapi_name() == 'cli'){
 		$_SERVER['REMOTE_ADDR'] = '';
+		$path = getcwd();
+		$split = explode('/', $path);
+		$domain = $split[3]; //webdev or site
+		$domain_path = '/var/www/'.$domain.'/drupal/';
 
 		// If we move header.php somewhere else in the file tree this will break!
-		$magic_number = strlen("/sites/all/themes/ncsulib_foundation/templates/includes/header.php");
-  		define('DRUPAL_ROOT', substr(__FILE__, 0, -$magic_number));
+		// $magic_number = strlen("/sites/all/themes/ncsulib_foundation/templates/includes/header.php");
+  		// define('DRUPAL_ROOT', substr(__FILE__, 0, -$magic_number));
+  		define('DRUPAL_ROOT', $domain_path);
 
   		// Boot drupal so t() functions and other drupal functions run
   		require_once (DRUPAL_ROOT.'/includes/bootstrap.inc');
