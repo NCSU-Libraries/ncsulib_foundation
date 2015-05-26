@@ -710,8 +710,8 @@ $include-html-classes: false;
 	}
 
 	h2 {
-		font-size: emCalc(28);
-		line-height: 2.2rem;
+		font-size: 1.4rem;
+		line-height: 1.8rem;
 		padding-top: 0px;
 
 		// a{
@@ -727,6 +727,7 @@ $include-html-classes: false;
 	background: #407d94;
 	color: #FFF;
 	padding: 10px;
+
 	@media #{$small-only}{
 		margin-bottom: 30px;
 	}
@@ -739,10 +740,12 @@ $include-html-classes: false;
 		}
 	}
 	h3{
+		margin-bottom: 5px;
 		margin-top: 0px;
 		padding-top: 0px;
 
 		a{
+			font-size: 1rem;
 			color: #FFF;
 		}
 	}
