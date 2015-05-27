@@ -15,7 +15,7 @@
         <div class="story-title">
           <?php if ($title): ?>
           <?php print render($title_prefix); ?>
-          <p><a href="/stories">&larr; Back to Library Stories</a></p>
+          <p><a href="/stories"><i class="fa fa-chevron-left"></i> Back to Library Stories</a></p>
           <h1 id="page-title" class="title"><?php print $title; ?></h1>
             <?php print render($title_suffix); ?>
           <?php endif; ?>
