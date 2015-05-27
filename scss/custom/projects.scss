@@ -11,7 +11,7 @@ $body-font-size-small-screen: rem-calc(15);
 
   .intro{
     @include grid-row;
-    margin-bottom: rem-calc(35);
+    // margin-bottom: rem-calc(35);
 
     .story-title {
         @media #{$medium-up} {@include grid-column($columns:12)};
