@@ -2,7 +2,7 @@
 @import "../foundation/settings";
 $include-html-classes: false;
 
-#content{
+#content #main-content{
 
     .user-activity-list{
 
@@ -16,10 +16,11 @@ $include-html-classes: false;
 
                 > a{
                     display: block;
-                    padding: 25px 10px;
+                    padding: 15px;
 
                     h2{
                         margin-top: 0px;
+                        padding-top: 0px;
 
                         i{
                             color: $anchor-font-color;
