@@ -19,11 +19,18 @@
 /*calendar styles*/
 .page .calendar-calendar th.mini,
 .page .calendar-calendar td.mini {
-    background: #FFF;
+    // background: #FFF;
     border: 0px;
+    color: #CCC;
     padding: 10px 0px;
     text-align: center;
     width: 14.2857142%;
+}
+.calendar-calendar td.has-events{
+
+}
+.page .calendar-calendar td.has-no-events{
+    color: #CCC;
 }
 .page .calendar-calendar td.mini.today{
     border: 1px solid #DDD;
