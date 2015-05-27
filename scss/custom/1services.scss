@@ -2,23 +2,7 @@
 @import "../foundation/settings";
 $include-html-classes: false;
 
-#content{
-    .block.block-block.contextual-links-region.block-1990{
-        margin-bottom: 20px;
-    }
-    #taxonomy-term-151{
-
-        .taxonomy-term-description {
-            margin: auto;
-            margin-bottom: 20px;
-            // width: 75%;
-
-            p{
-                font-size: rem-calc(18);
-                // text-align: center;
-            }
-        }
-    }
+#content #main-content{
 
     .user-activity-list{
 
@@ -28,17 +12,18 @@ $include-html-classes: false;
 
             li{
                 padding: 0px;
-                text-align: center;
+                text-align: left;
 
                 > a{
                     display: block;
-                    padding: 25px 10px 0px;
+                    padding: 15px;
 
                     h2{
                         margin-top: 0px;
+                        padding-top: 0px;
 
                         i{
-                            color: #4c83af;
+                            color: $anchor-font-color;
                             font-size: 4rem;
                         }
                         img{
@@ -52,6 +37,46 @@ $include-html-classes: false;
                     background: #f5f5f5;
                     text-decoration: none;
                 }
+            }
+        }
+    }
+
+    .user-activity-list.promoted{
+        margin-bottom: 0px;
+
+        ol{
+
+            li{
+                height: auto;
+
+                > a{
+                    padding: 0px 0px 20px;
+                }
+
+                > a:hover{
+                    background: none;
+                }
+
+                h2{
+
+                    img{
+                        max-height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                h3{
+                    font-size: rem-calc(23);
+                    margin: 0px;
+                }
+            }
+
+            li:nth-child(1){
+                padding-right: 15px;
+            }
+
+            li:nth-child(2){
+                padding-left: 15px;
             }
         }
     }
@@ -82,6 +107,17 @@ $include-html-classes: false;
 
     .l-sidebar-first{
 
+        .user-activity-experts{
+            ul{
+                li:nth-child(odd){
+                    padding-right: 8px;
+                }
+                li:nth-child(even){
+                    padding-left: 7px;
+                }
+            }
+        }
+
         .staff-member{
             margin-bottom: 20px;
 
@@ -96,6 +132,23 @@ $include-html-classes: false;
                 p{
                     font-size: 12px;
                 }
+            }
+        }
+    }
+
+    .l-sidebar-second{
+        @media #{$small-only}{
+            // subject specialists
+            .view-id-staff ul{
+                // display: none;
+            }
+            // workshops
+            .block-1920 ul{
+                display: none;
+            }
+            // tutorials
+            .block-1948 img{
+                display: none;
             }
         }
     }
