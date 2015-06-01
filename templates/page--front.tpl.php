@@ -51,7 +51,7 @@
                             <li>
                                 <ul>
                                     <li><h2>Technology</h2></li>
-                                    <li><a href="/services/digital-media-production/" id="ql_cdm" class="styled">Create Digital Media</a></li>
+                                    <li><a href="/services/digital-media-production/" id="ql_cdm" class="styled">Digital Media Production</a></li>
                                     <li><a href="/services/makerspace/" class="styled" id="ql_makersace">Makerspace</a></li>
                                 </ul>
                             </li>
