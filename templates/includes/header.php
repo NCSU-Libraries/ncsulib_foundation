@@ -96,7 +96,7 @@
 			<li><a href="//www.lib.ncsu.edu/tripsaver">Tripsaver</a></li>
 			<li><a href="//www.lib.ncsu.edu/borrow">Borrow, Renew, Request</a></li>
 			<li><a href="//www.lib.ncsu.edu/computing">Computing</a></li>
-			<li><a href="//www.lib.ncsu.edu/cdm">Create Digital Media</a></li>
+			<li><a href="//www.lib.ncsu.edu/services/digital-media-production">Create Digital Media</a></li>
 			<li><a href="//www.lib.ncsu.edu/disabilityservices">Disability Services</a></li>
 			<li><a href="//www.lib.ncsu.edu/distance">Distance Learning</a></li>
 		</ul>
