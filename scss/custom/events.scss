@@ -74,18 +74,19 @@
 }
 
 // event pages styling
-.event-date{
-    width: 100%;
+#content #main-content .event-date{
 
-    h2{
+    h2 span{
         background: #cc0000;
         color: #FFF;
         line-height: 1.3rem;
+        font-size: 1.4rem;
         margin-bottom: 0px;
+        padding: 8px 0px;
         text-align: center;
         text-transform: uppercase;
     }
-    h3{
+    h3 span{
         background: #FFF;
         border-bottom: 1px solid #ccc;
         border-right: 1px solid #ccc;
