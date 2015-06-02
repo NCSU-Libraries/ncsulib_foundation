@@ -75,6 +75,7 @@
 
 // event pages styling
 #content #main-content .event-date{
+    padding-right: 4%;
 
     h2{
             background: #cc0000;
@@ -85,7 +86,7 @@
         span{
             color: #FFF;
             line-height: 1.3rem;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
         }
     }
@@ -100,8 +101,8 @@
 
         span{
             color: #555;
-            font-size: 3.25rem;
-            line-height: 3.25rem;
+            font-size: 3rem;
+            line-height: 3rem;
         }
     }
 }
