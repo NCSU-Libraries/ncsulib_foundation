@@ -74,45 +74,53 @@
 }
 
 // event pages styling
-#content #main-content .event-date{
-    padding-right: 5.5%;
+#content #main-content{
 
-    h2{
-            background: #cc0000;
-            font-size: 0px;
-            margin-bottom: 0px;
-            padding: 0px;
-            text-align: center;
+    .item{
 
-        span{
-            color: #FFF;
-            line-height: 2rem;
-            font-size: 1.2rem;
-            text-transform: uppercase;
+        margin-bottom: 20px;
+
+        .event-date{
+            padding-right: 5.5%;
+
+            h2{
+                    background: #cc0000;
+                    font-size: 0px;
+                    margin-bottom: 0px;
+                    padding: 0px;
+                    text-align: center;
+
+                span{
+                    color: #FFF;
+                    line-height: 2rem;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                }
+            }
+            h3 {
+                    background: #FFF;
+                    border-bottom: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    border-left: 1px solid #ccc;
+                    margin-bottom: 0px;
+                    padding: 9px 0px 0px 0px;
+                    text-align: center;
+
+                span{
+                    color: #555;
+                    font-size: 2.5rem;
+                    line-height: 2.5rem;
+                }
+            }
         }
-    }
-    h3 {
-            background: #FFF;
-            border-bottom: 1px solid #ccc;
-            border-right: 1px solid #ccc;
-            border-left: 1px solid #ccc;
-            margin-bottom: 0px;
-            padding: 9px 0px 0px 0px;
-            text-align: center;
 
-        span{
-            color: #555;
-            font-size: 2.5rem;
-            line-height: 2.5rem;
+        .event-content{
+            padding-left: 0px;
+
+            h3{
+                padding-top: 0px;
+                margin-bottom: 0px;
+            }
         }
-    }
-}
-
-#content #main-content .event-content{
-    padding-left: 0px;
-
-    h3{
-        padding-top: 0px;
-        margin-bottom: 0px;
     }
 }
