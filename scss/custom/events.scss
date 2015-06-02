@@ -75,7 +75,7 @@
 
 // event pages styling
 #content #main-content .event-date{
-    padding-right: 4%;
+    padding-right: 5.5%;
 
     h2{
             background: #cc0000;
@@ -105,5 +105,14 @@
             font-size: 2.5rem;
             line-height: 2.5rem;
         }
+    }
+}
+
+#content #main-content .event-content{
+    padding-left: 0px;
+
+    h3{
+        padding-top: 0px;
+        margin-bottom: 0px;
     }
 }
