@@ -76,26 +76,32 @@
 // event pages styling
 #content #main-content .event-date{
 
-    h2 span{
-        background: #cc0000;
-        color: #FFF;
-        line-height: 1.3rem;
-        font-size: 1.4rem;
-        margin-bottom: 0px;
-        padding: 8px 0px;
-        text-align: center;
-        text-transform: uppercase;
+    h2{
+            background: #cc0000;
+            margin-bottom: 0px;
+            padding: 8px 0px;
+            text-align: center;
+
+        span{
+            color: #FFF;
+            line-height: 1.3rem;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
     }
-    h3 span{
-        background: #FFF;
-        border-bottom: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-        border-left: 1px solid #ccc;
-        color: #555;
-        font-size: 2rem;
-        line-height: 2rem;
-        margin-bottom: 0px;
-        padding: 6px 0px 0px;
-        text-align: center;
+    h3 {
+            background: #FFF;
+            border-bottom: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            margin-bottom: 0px;
+            padding: 6px 0px 0px;
+            text-align: center;
+
+        span{
+            color: #555;
+            font-size: 2rem;
+            line-height: 2rem;
+        }
     }
 }
