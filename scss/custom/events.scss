@@ -79,7 +79,7 @@
     h2{
             background: #cc0000;
             margin-bottom: 0px;
-            padding: 8px 0px;
+            padding: 0px;
             text-align: center;
 
         span{
@@ -95,12 +95,13 @@
             border-right: 1px solid #ccc;
             border-left: 1px solid #ccc;
             margin-bottom: 0px;
-            padding: 6px 0px 0px;
+            padding: 13px 0px 0px 0px;
             text-align: center;
 
         span{
             color: #555;
-            font-size: 3rem;
+            font-size: 3.25rem;
+            line-height: 3.25rem;
         }
     }
 }
