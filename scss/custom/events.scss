@@ -19,9 +19,15 @@
 
 
 
-// event pages styling
 #content #main-content{
+    // event page styling
+    .event-item{
+        .event-photo{
+            padding-left: 0px;
+        }
+    }
 
+    // workshop pages styling
     .item{
 
         margin-top: 40px;
