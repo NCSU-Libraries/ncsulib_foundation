@@ -7,14 +7,14 @@
 ?>
 
 <div class="row event-item">
-	<div class="columns medium-4">
+	<div class="columns medium-4 event-photo">
 	<?php foreach ($fields as $id => $field): ?>
 		<?php if($field->class == 'field-image-for-event'): ?>
 		<?php echo $field->content; ?>
 		<?php endif; ?>
 	<?php endforeach; ?>
 	</div>
-	<div class="columns medium-8">
+	<div class="columns medium-8 event-info">
 		<?php foreach ($fields as $id => $field): ?>
 			<?php if($field->class == 'title'): ?>
 			<h3 class="subheader"><?php echo $field->content; ?></h2>
