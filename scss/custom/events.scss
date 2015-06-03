@@ -17,61 +17,7 @@
     margin-bottom: 0;
 }
 
-/*calendar styles*/
-.page .calendar-calendar th.mini,
-.page .calendar-calendar td.mini {
-    background: #FFF;
-    border: 0px;
-    color: #DDD;
-    padding: 10px 0px;
-    text-align: center;
-    width: 14.2857142%;
-}
-.calendar-calendar td.has-events{
 
-}
-.page .calendar-calendar td.has-no-events{
-    color: #CCC;
-}
-.page .calendar-calendar td.mini.today{
-    border: 1px solid #DDD;
-}
-.view .date-nav-wrapper .date-heading h3{
-    font-size: 1em;
-}
-.page .calendar-calendar td.mini a{
-    text-decoration: none;
-}
-
-.page #subnav .date-nav {
-    padding: 0px;
-}
-.page #subnav .date-nav ul li {
-    border-bottom: none;
-}
-.page #subnav .date-nav .date-prev {
-    background: none;
-    float: left;
-    margin: 0px;
-}
-.page #subnav .date-nav .date-prev a{
-    margin-left: 8px;
-}
-.page #subnav .date-nav .date-next {
-    background: none;
-    margin: 0px;
-    top: 0px;
-    width: 35px;
-}
-.page #subnav .date-nav .date-next a{
-    /*float: left;*/
-    margin: 0px;
-    float: left;
-}
-.calendar-calendar th.days{
-    background: #fff;
-    border: 0px;
-}
 
 // event pages styling
 #content #main-content{
