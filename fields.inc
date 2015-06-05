@@ -447,28 +447,27 @@ function ncsulib_foundation_field__field_space__event($variables) {
       $b_nid = $space_node->field_building_new_['und'][0]['target_id'];
       $b_node = node_load($b_nid);
       if($b_node){
+        $b_address = field_get_items('node', $b_node, 'field_address');
+        $b_address = $b_address[0]['value'];
 
-      $b_address = field_get_items('node', $b_node, 'field_address');
+        $output .= '<div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">';
+        $output .= '<div itemprop="name">'.$b_node->title.'</div>';
+        $output .= '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
+
+
+        $output .= '<div itemprop="name">'.$space_node->title.'</div>';
+        $output .= '<div itemprop="streetAddress">'.$b_address.'</div>';
+        $output .= '</div>';
+        $output .= '</div>';
       }
-      // $b_address = $b_address[0]['value'];
 
-      // $output .= '<div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">';
-      // $output .= '<div itemprop="name">'.$b_node->title.'</div>';
-      // $output .= '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
-
-
-      // $output .= '<div itemprop="name">'.$space_node->title.'</div>';
-      // $output .= '<div itemprop="streetAddress">'.$b_address.'</div>';
-      // $output .= '</div>';
-      // $output .= '</div>';
-
-      // // Load building info, if present, print it
-      // $building_field = field_get_items('node', $space_node, 'field_building_name');
-      // $building_yes = !empty($building_field);
-      // if (!empty($building_field)) {
-      //   $building_out = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
-      //   $output .= ' at the '. drupal_render($building_out) .'</li>';
-      // }
+        // Load building info, if present, print it
+        $building_field = field_get_items('node', $space_node, 'field_building_name');
+        $building_yes = !empty($building_field);
+        if (!empty($building_field)) {
+          $building_out = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
+          $output .= ' at the '. drupal_render($building_out) .'</li>';
+        }
 
     $output .= '</li>';
 
