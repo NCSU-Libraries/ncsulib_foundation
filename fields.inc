@@ -444,14 +444,14 @@ function ncsulib_foundation_field__field_space__event($variables) {
     $output .= '<li>' . drupal_render($item);
 
     // schema.org
-      // $b_nid = $space_node->field_building_new_['und'][0]['target_id'];
-      // $b_node = node_load($b_nid);
-      // $b_address = field_get_items('node', $b_node, 'field_address');
-      // $b_address = $b_address[0]['value'];
+      $b_nid = $space_node->field_building_new_['und'][0]['target_id'];
+      $b_node = node_load($b_nid);
+      $b_address = field_get_items('node', $b_node, 'field_address');
+      $b_address = $b_address[0]['value'];
 
-      // $output .= '<div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">';
-      // $output .= '<div itemprop="name">'.$b_node->title.'</div>';
-      // $output .= '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
+      $output .= '<div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">';
+      $output .= '<div itemprop="name">'.$b_node->title.'</div>';
+      $output .= '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
 
 
       // $output .= '<div itemprop="name">'.$space_node->title.'</div>';
