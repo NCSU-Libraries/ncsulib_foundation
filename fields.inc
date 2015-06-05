@@ -446,7 +446,10 @@ function ncsulib_foundation_field__field_space__event($variables) {
     // schema.org
       $b_nid = $space_node->field_building_new_['und'][0]['target_id'];
       $b_node = node_load($b_nid);
+      if($b_node){
+
       $b_address = field_get_items('node', $b_node, 'field_address');
+      }
       // $b_address = $b_address[0]['value'];
 
       // $output .= '<div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">';
