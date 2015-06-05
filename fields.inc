@@ -406,7 +406,7 @@ function ncsulib_foundation_field__space($variables) {
   }
 
   // Render the items.
-  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>asdf';
   foreach ($variables['items'] as $delta => $item) {
     $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
     $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
@@ -434,14 +434,30 @@ function ncsulib_foundation_field__field_space__event($variables) {
     $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
   }
 
-  // Render the items as a comma separated inline list
   $output .= '<ul class="field-items"' . $variables['content_attributes'] . '>';
-
+  // Render the items as a comma separated inline list
   foreach ($variables['items'] as $delta => $item) {
-    // Print space name
-    $output .= '<li>' . drupal_render($item);
     $space_nid = $variables['element']['#items'][$delta]['entity']->nid;
     $space_node = node_load($space_nid);
+
+    // Print space name
+    $output .= '<li>' . drupal_render($item);
+
+    // schema.org
+    $b_nid = $space_node->field_building_new_['und'][0]['target_id'];
+    $b_node = node_load($b_nid);
+    $b_address = field_get_items('node', $b_node, 'field_address');
+    $b_address = $b_address[0]['value'];
+
+    $output .= '<div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">';
+    $output .= '<div itemprop="name">'.$b_node->title.'</div>';
+    $output .= '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
+
+
+    $output .= '<div itemprop="name">'.$space_node->title.'</div>';
+    $output .= '<div itemprop="streetAddress">'.$b_address.'</div>';
+    $output .= '</div>';
+    $output .= '</div>';
 
     // Load building info, if present, print it
     $building_field = field_get_items('node', $space_node, 'field_building_name');

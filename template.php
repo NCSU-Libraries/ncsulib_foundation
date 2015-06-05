@@ -130,6 +130,8 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       case 'styleguide':
         drupal_add_js(path_to_theme() . '/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
+      case 'videowalls':
+        drupal_add_js(path_to_theme() . '/scripts/convert-to-zip.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
     }
 
     if (isset($url_comp[1]) && isset($url_comp[2])) {

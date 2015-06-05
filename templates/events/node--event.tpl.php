@@ -43,28 +43,9 @@
                         echo '<p itemprop="startDate" content="'.date('c',$start_raw).'">'.$str.'<br/>'.$time.'</p>';
                     }
                 ?>
-                <?php
-                    // space
-                    $node = node_load($nid);
-                    $field = field_get_items('node', $node, 'field_space');
-                    $space_title = $field[0]['entity']->title;
-
-                    // building address
-                    $space_node = field_get_items('node', $node, 'field_space');
-                    $b_nid = $space_node[0]['entity']->field_building_new_['und'][0]['target_id'];
-                    $b_node = node_load($b_nid);
-                    $b_title = $b_node->title;
-                    $b_address = field_get_items('node', $b_node, 'field_address');
-                    $b_address = $b_address[0]['value'];
-                ?>
-                <div itemprop="location" itemscope itemtype="http://schema.org/Place">
-                    <div itemprop="name" content="<?= $space_title ?>"><?php print drupal_render($content['field_space']); ?></div>
-                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="hide">
-                        <div itemprop="name"><?= $b_title ?></div>
-                        <div itemprop="streetAddress"><?= $b_address; ?></div>
-                    </div>
-                </div>
+                <?php print drupal_render($content['field_space']); ?>
                 <?php print drupal_render($content['field_non_libraries_space']); ?>
+
             </div>
 
             <div itemprop="description"><?php print drupal_render($content['body']); ?></div>
