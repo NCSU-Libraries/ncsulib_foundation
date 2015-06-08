@@ -1,19 +1,21 @@
 var zip = {
     init : function(){
         $('.dir-to-zip').click(function(e){
-            var dir = $(this).attr('href');
+            zip.dir = $(this).attr('href');
             e.preventDefault();
 
-            $.get('/sites/default/files/files/videowalls/convert.php?dir='+dir, function(data) {
-                // save file to zip
-                eval(data);
-
-                // download file
-                window.location.href = '/sites/default/files/files/videowalls/'+dir+'.zip';
-            });
-
-
+            zip.convertToZip();
         })
+    },
+
+    convertToZip : function(){
+        $.get('/sites/default/files/files/videowalls/convert.php?dir='+zip.dir, function(data) {
+            // save file to zip
+            eval(data);
+
+            // download file
+            window.location.href = '/sites/default/files/files/videowalls/'+zip.dir+'.zip';
+        });
     }
 }
 
