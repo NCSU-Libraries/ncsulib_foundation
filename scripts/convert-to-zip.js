@@ -2,6 +2,7 @@ var zip = {
     init : function(){
         $('.dir-to-zip').click(function(e){
             var dir = $(this).attr('href');
+            e.preventDefault();
 
             $.get('/sites/default/files/files/videowalls/convert.php?dir='+dir, function(data) {
                 // save file to zip
@@ -11,7 +12,6 @@ var zip = {
                 window.location.href = '/sites/default/files/files/videowalls/'+dir+'.zip';
             });
 
-            e.preventDefault();
 
         })
     }
