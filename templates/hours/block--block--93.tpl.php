@@ -40,7 +40,7 @@
 				}
 			?>
             <li>
-                <a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$json[0]->library_short_name.'/'.$srv_json[0]->service_short_name.$url_date; ?>" <?php if(segment(2)==$srv_json[0]->service_short_name) echo 'class="nav-active"'; ?>>
+                <a data-menu="menu" href="<?php echo $GLOBALS['base_url'].'/hours/'.$json[0]->library_short_name.'/'.$srv_json[0]->service_short_name.$url_date; ?>" <?php if(segment(2)==$srv_json[0]->service_short_name && segment(1)==$json[0]->library_short_name) echo 'class="nav-active"'; ?>>
                     <ul class="schedule service">
                         <li class="location">
                             <p class="location-title"><?php echo $srv_json[0]->service_name; ?></p>
