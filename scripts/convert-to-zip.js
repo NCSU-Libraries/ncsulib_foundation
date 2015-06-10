@@ -9,12 +9,12 @@ var zip = {
     },
 
     convertToZip : function(){
-        $.get('/sites/default/files/files/videowalls/convert.php?dir='+zip.dir, function(data) {
+        $.get('/sites/default/files/files/other/convert.php?dir='+zip.dir, function(data) {
             // save file to zip
             eval(data);
 
             // download file
-            window.location.href = '/sites/default/files/files/videowalls/'+zip.dir+'.zip';
+            window.location.href = '/sites/default/files/files/other/'+zip.dir+'.zip';
         });
     }
 }
