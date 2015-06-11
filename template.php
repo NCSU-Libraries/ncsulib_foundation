@@ -12,6 +12,7 @@ variable_set('htdocs_root', str_replace(strrchr(DRUPAL_ROOT, "/"), "/htdocs", DR
  *  and other various and sundry activities
  */
 function ncsulib_foundation_preprocess_page(&$variables) {
+
   // Add page--node_type.tpl.php suggestions
   if (!empty($variables['node'])) {
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
@@ -376,6 +377,14 @@ function ncsulib_foundation_more_link ($array) {
  *
  */
 function ncsulib_foundation_views_pre_render(&$view) {
+
+    // add staff member name to page title
+    if ($view->name == 'staff' && $view->current_display == 'page') {
+       $first = $view->result[0]->_field_data['uid']['entity']->field_firstname['und'][0]['value'];
+       $last = $view->result[0]->_field_data['uid']['entity']->field_lastname['und'][0]['value'];
+       $view->build_info['title'] = $first.' '.$last;
+    }
+
   // The following two loops add month and day formatted dates to events
   if ($view->name == 'upcoming_events' && $view->current_display == 'block_3') {
     if (!empty($view->result)) {
