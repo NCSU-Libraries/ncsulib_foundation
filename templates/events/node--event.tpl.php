@@ -30,6 +30,9 @@
                     $adjust = ncsulib_foundation_adjust_for_timezone($t[0]['value']);
                     $start_raw = strtotime($t[0]['value'])+$adjust;
                     $end_raw = strtotime($t[0]['value2'])+$adjust;
+                    $duration = $end_raw - $start_raw;
+                    $d_hour = floor($duration/60/60);
+                    $d_min = ($duration/60/60 - $d_hour)*60;
 
                     // get categories to separate out exhibits
                     $cat = field_get_items('node', $node, 'field_event_category');
@@ -40,11 +43,14 @@
                     $str = (date('z',$start_raw) == date('z',$end_raw)) ? date('F j, Y',$start_raw) : date('F j',$start_raw).' - '.date('F j, Y',$end_raw);
                     if(!$is_ongoing){
                         echo '<h3>When</h3>';
-                        echo '<p itemprop="startDate" content="'.date('c',$start_raw).'">'.$str.'<br/>'.$time.'</p>';
+                        echo '<p>';
+                        echo '<time itemprop="startDate" datetime="'.date('Y-m-d',$start_raw).'T'.date('G:i',$start_raw).'">'.$str.'<br/>'.$time.'</time>';
+                        echo '<time itemprop="duration" datetime="T'.$d_hour.'H'.$d_min.'M"></time>';
+                        echo '</p>';
                     }
                 ?>
-                <?php print drupal_render($content['field_space']); ?>
-                <?php print drupal_render($content['field_non_libraries_space']); ?>
+                <?= drupal_render($content['field_space']); ?>
+                <?= drupal_render($content['field_non_libraries_space']); ?>
 
             </div>
 
@@ -55,20 +61,20 @@
             <div class="contact-info">
                 <h3>Contact Information</h3>
                 <div class="contact-details">
-                    <?php print drupal_render($content['field_contact_name']); ?>
-                    <?php print drupal_render($content['field_contact_phone']); ?>
-                    <?php print drupal_render($content['field_contact_email']); ?>
+                    <?= drupal_render($content['field_contact_name']); ?>
+                    <?= drupal_render($content['field_contact_phone']); ?>
+                    <?= drupal_render($content['field_contact_email']); ?>
                 </div>
             </div>
             <?php endif; ?>
-            <?php print drupal_render($content['field_admission_information']); ?>
-            <?php print drupal_render($content['field_other_information']); ?>
+            <?= drupal_render($content['field_admission_information']); ?>
+            <?= drupal_render($content['field_other_information']); ?>
 
 
         </div>
         <div class="columns medium-5">
-            <div itemprop="image"><?php print drupal_render($content['field_image_for_event']); ?></div>
-            <?php print drupal_render($content['field_event_leads']); ?>
+            <?= '<img src="'.image_style_url('large', $node->field_image_for_event['und'][0]['uri']).'" width="100%" itemprop="image" />' ?>
+            <?= drupal_render($content['field_event_leads']); ?>
         </div>
     </div>
 </article>

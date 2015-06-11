@@ -83,6 +83,7 @@ function ncsulib_foundation_username($variables) {
     return $output;
 }
 
+
 /**
  * Implements theme_field()
  *
@@ -439,7 +440,7 @@ function ncsulib_foundation_field__field_space__event($variables) {
   foreach ($variables['items'] as $delta => $item) {
     $space_nid = $variables['element']['#items'][$delta]['entity']->nid;
     $space_node = node_load($space_nid);
-
+    $space_title = str_replace(array('(Hill)','(Hunt)'),'',$space_node->title);
     // Print space name
     $output .= '<li>' . drupal_render($item);
 
@@ -453,9 +454,7 @@ function ncsulib_foundation_field__field_space__event($variables) {
         $output .= '<div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">';
         $output .= '<div itemprop="name">'.$b_node->title.'</div>';
         $output .= '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
-
-
-        $output .= '<div itemprop="name">'.$space_node->title.'</div>';
+        $output .= '<div itemprop="name">'.$space_title.' at the '.$b_node->title.'</div>';
         $output .= '<div itemprop="streetAddress">'.$b_address.'</div>';
         $output .= '</div>';
         $output .= '</div>';
