@@ -1,8 +1,8 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/Event">
   <?php if ($title): ?>
-  <?php print render($title_prefix); ?>
+  <?= render($title_prefix); ?>
   <h1 id="page-title" class="title" itemprop="name"><?php print $title; ?></h1>
-  <?php print render($title_suffix); ?>
+  <?= render($title_suffix); ?>
 <?php endif; ?>
 <?php
     $event_date = strtotime($content['field_time']['#object']->field_time['und'][0]['value2']);
@@ -15,11 +15,11 @@
     }
 ?>
 
-<?php print render($title_prefix); ?>
+<?= render($title_prefix); ?>
 <?php if (!$page): ?>
-  <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+  <h2<?= $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
 <?php endif; ?>
-<?php print render($title_suffix); ?>
+<?= render($title_suffix); ?>
 
     <div id="event-node" class="row">
         <div class="columns medium-7">
