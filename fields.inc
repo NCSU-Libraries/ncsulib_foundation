@@ -223,7 +223,7 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
  * Using this to change the markup delivered to the Building field on Space
  * nodes
  */
-function ncsulib_foundation_field__field_building_name__space($variables) {
+function ncsulib_foundation_field__field_building_new___space($variables) {
   $output ='';
   foreach ($variables['items'] as $delta => $item) {
     $raw_lib_val = $variables['items'][0]['#markup'];
@@ -421,6 +421,23 @@ function ncsulib_foundation_field__space($variables) {
 }
 
 /** EVENTS **/
+
+/**
+ * Implements theme_field()
+ *
+ * Print the non lib building as ul
+ */
+function ncsulib_foundation_field__field_non_libraries_space__event($variables) {
+
+  $output .= '<ul>';
+  foreach($variables['items'] as $item){
+    $output .= '<li>'.$item['#markup'].'</li>';
+  }
+  $output .= '</ul>';
+
+  return $output;
+}
+
 
 /**
  * Implements theme_field()
