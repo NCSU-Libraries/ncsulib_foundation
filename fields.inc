@@ -742,7 +742,7 @@ function print_multiple_users($user_array, $output) {
     $photo_url = '<img src="'.image_style_url($item['image']['#image_style'],$uri).'" width="100%"/>';
 
     $position_id = $item['position']['#options']['entity']->tid;
-    if($position_id == '2050' || $position_id == '2023' || $position_id == '2024' || $position_id == '2353'){
+    if($position_id == '2050' || $position_id == '2023' || $position_id == '2024' || $position_id == '2353' || $position_id == '199'){
         $staff_url = render($item['name']);
     } else{
         $staff_url = l(render($item['name']), $item['link']);
