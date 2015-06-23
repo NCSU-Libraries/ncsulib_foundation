@@ -1,6 +1,5 @@
 <!--.page -->
 <div id="content" role="document" class="page">
-
     <?php if (!empty($page['featured'])): ?>
         <!--/.featured -->
         <section class="l-featured row">
@@ -22,6 +21,11 @@
     <?php endif; ?>
 
     <main role="main" class="row l-main">
+
+        <div class="columns medium-12">
+            <?php echo ncsulib_foundation_breadcrumb(); ?>
+        </div>
+
         <div class="<?= $main_grid; ?> main columns" id="main-content">
 
             <?php if ($title && !isset($node)): ?>
