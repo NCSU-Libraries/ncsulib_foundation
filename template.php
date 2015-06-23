@@ -137,6 +137,9 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       case 'zip-test':
         drupal_add_js(path_to_theme() . '/scripts/convert-to-zip.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
+      case 'news2':
+        drupal_add_js(path_to_theme() . '/scripts/news.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        break;
     }
 
     if (isset($url_comp[1]) && isset($url_comp[2])) {
@@ -343,7 +346,13 @@ function ncsulib_foundation_breadcrumb($variables) {
     $title = strip_tags(drupal_get_title());
     $breadcrumbs .= '</ul>';
 
-    return $breadcrumbs;
+    // only want breadcrumbs for /jobs right now
+    $url_components = explode('/', request_uri());
+    if($url_components[1] == 'jobs'){
+      return $breadcrumbs;
+    } else{
+      return '';
+    }
   }
 }
 
