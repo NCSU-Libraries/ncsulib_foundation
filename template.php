@@ -348,7 +348,7 @@ function ncsulib_foundation_breadcrumb($variables) {
 
     // only want breadcrumbs for /jobs right now
     $url_components = explode('/', request_uri());
-    if($url_components[1] == 'jobs'){
+    if($url_components[1] == 'jobs' || $url_components[1] == 'spaces'){
       return $breadcrumbs;
     } else{
       return '';
