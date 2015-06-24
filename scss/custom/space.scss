@@ -60,6 +60,8 @@ body.html main {
     }
     .room-list {
         font-size: rem-calc(16);
+        display: block;
+        margin-bottom: 10px;
     }
     .room-capacity {
         display: block;
