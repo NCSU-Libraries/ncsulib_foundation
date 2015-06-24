@@ -224,19 +224,13 @@ function ncsulib_foundation_field__field_request_form_url__device($variables) {
  * nodes
  */
 function ncsulib_foundation_field__field_building_new___space($variables) {
-  $output ='';
-  foreach ($variables['items'] as $delta => $item) {
-    $raw_lib_val = $variables['items'][0]['#markup'];
-    if($raw_lib_val == 'James B. Hunt Jr. Library'){
-      $lib = 'Hunt Library';
-    } elseif ($raw_lib_val == 'D. H. Hill Library') {
-      $lib = 'Hill Library';
-    } else{
-      $lib = $raw_lib_val;
-    }
-
-    $output = '<span class="building-name">'. $lib .'</span>';
-  }
+  $output = '';
+  $output = '<h3 class="subheader">'.$variables['items'][0]['#markup'].'</h3>';
+  return $output;
+}
+function ncsulib_foundation_field__field_capacity__space($variables) {
+  $output = '';
+  $output .= '<span class="room-capacity">Capacity:&nbsp;' . drupal_render($variables['items'][0]) . '</span>';
   return $output;
 }
 
@@ -272,9 +266,9 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
         'DML Workstations' => 24235
         );
 
-      $mlib_option = '<a class="button show-for-small-only small" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">&rdsh; Reserve</a>';
-      $mlib_option .= '<a class="button show-for-medium-up small" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">&rdsh; Reserve</a>';
-      $desktop_only = '<a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">&rdsh; Reserve</a>';
+      $mlib_option = '<a class="button show-for-small-only small" href="//m.lib.ncsu.edu/studyrooms/reserve.php?schedule='. $schedule_id .'">Reserve</a>';
+      $mlib_option .= '<a class="button show-for-medium-up small" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
+      $desktop_only = '<a class="button" href="//www.lib.ncsu.edu/roomreservations/schedule.php?date='. $today .'&scheduleid='. $schedule_id .'">Reserve</a>';
 
       $output = in_array($space_nid, $nodes_that_use_desktop_version) ? $desktop_only : $mlib_option;
       break;

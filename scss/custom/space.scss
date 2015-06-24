@@ -6,7 +6,7 @@
 body.html main {
     @media #{$medium-up} {
         .field-name-field-image {
-            @include grid-column(6, $float: right);
+            // @include grid-column(6, $float: right);
             margin-bottom: rem-calc(30);
         }
     }
@@ -60,6 +60,10 @@ body.html main {
     }
     .room-list {
         font-size: rem-calc(16);
+    }
+    .room-capacity {
+        display: block;
+        margin-bottom: 5px;
     }
 
     @media #{$small-only} {
