@@ -24,10 +24,12 @@
 
     .user-photo {
         @include grid-column(5);
+        padding-right: 0px;
     }
 
     .user-details {
         @include grid-column(7, $collapse: true);
+        padding-left: 15px;
 
         .user-name {
           display: block;
