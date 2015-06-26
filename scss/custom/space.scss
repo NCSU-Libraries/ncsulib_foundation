@@ -63,9 +63,13 @@ body.html main {
         display: block;
         margin-bottom: 10px;
     }
-    .room-capacity {
+    .room-capacity,
+    .room-floor{
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
+    }
+    .room-list{
+        margin-bottom: 0px;
     }
 
     @media #{$small-only} {

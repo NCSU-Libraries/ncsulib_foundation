@@ -233,6 +233,11 @@ function ncsulib_foundation_field__field_capacity__space($variables) {
   $output .= '<span class="room-capacity">Capacity:&nbsp;' . drupal_render($variables['items'][0]) . '</span>';
   return $output;
 }
+function ncsulib_foundation_field__field_floor__space($variables) {
+  $output = '';
+  $output .= '<span class="room-floor">' . drupal_render($variables['items'][0]) . '</span>';
+  return $output;
+}
 
 /**
  * Implements theme_field()
