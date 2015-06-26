@@ -22,6 +22,8 @@
         hide($content['field_building_new_']);
         hide($content['field_room_number']);
         hide($content['field_capacity']);
+        hide($content['field_contact_entity_phone']);
+        hide($content['field_floor']);
     ?>
 
     <div class="columns medium-8">
@@ -35,7 +37,9 @@
     <div class="columns medium-4">
         <?= render($content['field_building_new_']); ?>
         <?= render($content['field_capacity']); ?>
+        <?= render($content['field_floor']); ?>
         <?= render($content['field_room_number']); ?>
+        <?= render($content['field_contact_entity_phone']); ?>
         <?= render($content['field_reservation_method']); ?>
     </div>
 
