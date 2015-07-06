@@ -27,6 +27,7 @@
 	$date = (isset($_GET['date'])) ? strtotime($_GET['date']) : date('U');
 	$month = date('F',$date);
 	$year = date('Y', $date);
+	$n = 0;
 	if(date("m", $date) > 1){
 		$prev_month = date("m", $date)-1;
 	 	$prev_year = $year;
@@ -85,29 +86,38 @@
 					<?php foreach ((array) $rows as $row): ?>
 					<tr>
 						<?php foreach ($row as $cell):
+
 						    $date_str = preg_split('/-/si',$cell['id']);
 						    $year = $date_str[1];
 						    $month = $date_str[2];
 						    $day = $date_str[3]-1;
-						    $data = hours_get_cal_data($month_ary[$day]);
+
+    						// get day
+							$day = strip_tags($cell['data'])+0;
+							$day = ($day > 0) ?  $day : '';
+
+						    $cal_day = date('j', strtotime($month_ary[$n]['hours']['value']));
+					    	if($cal_day == $day){
+					    		$data = hours_get_cal_data($month_ary[$n]);
+					    		$n++;
+					    	} else{
+					    		$data = '';
+					    	}
 
 						    $dateObj   = DateTime::createFromFormat('!m', $month);
     						$monthName = $dateObj->format('M');
+    						$closed    = ($month_ary[$n-1]['closed'] == '0') ? '' : 'closed';
 
-    						$closed = ($month_ary[$day]['closed'] == '0') ? '' : 'closed';
 						?>
 						<td
 							 id="<?= $cell['id'];?>"
 							 class="<?= $cell['class'].' '.$closed.' '.$data['color']; ?>"
 							 data-display="<?= $data['display']; ?>"
-							 data-date="<?= $monthName.' '.($day+1).', '.$year;?>"
+							 data-date="<?= $monthName.' '.($day).', '.$year;?>"
 						>
 
-						<?php
-							// get day
-							$day = strip_tags($cell['data'])+0;
-							if($day > 0){echo $day;}
-						?>
+						<?= ''//$cal_day ?>
+						<?= $day ?>
 						</td>
 						<?php endforeach; ?>
 					</tr>
