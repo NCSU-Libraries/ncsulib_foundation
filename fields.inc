@@ -12,7 +12,7 @@ function ncsulib_foundation_field($variables) {
 
   // Render the label, if it's not hidden.
   if (!$variables['label_hidden']) {
-    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . '&nbsp;</div>';
+    $output .= '<h2 class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . '</h2>';
   }
 
   // Render the items.
@@ -22,6 +22,33 @@ function ncsulib_foundation_field($variables) {
     $output .= '<div class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
   }
   $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Turns all entity reference fields into a clean ul
+ */
+function ncsulib_foundation_field__entityreference($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<h2 class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . '</h2>';
+  }
+
+  // Render the items.
+  $output .= '<ul class="field-items"' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $classes = 'field-item ';
+    $output .= '<li class="' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</li>';
+  }
+  $output .= '</ul>';
 
   // Render the top-level DIV.
   $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
@@ -80,6 +107,12 @@ function ncsulib_foundation_username($variables) {
         $output .= '</div>';
         $output  = '<div class="user-info">'. $output .'</div>';
     }
+    return $output;
+}
+
+function ncsulib_foundation_field__body__event($variables){
+    $output = '';
+    $output = 'test';
     return $output;
 }
 
@@ -239,6 +272,8 @@ function ncsulib_foundation_field__field_floor__space($variables) {
   return $output;
 }
 
+
+
 /**
  * Implements theme_field()
  *
@@ -281,7 +316,7 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
     case 'By Mediated Email Form':
       $request_form_url = field_get_items('node', $node, 'field_request_form_url');
       $form_url  = field_view_value('node', $node, 'field_request_form_url', $request_form_url[0]);
-      $output = '<a class="button tiny" href="'. $form_url['#element']['url'] .'">&rdsh; Request this room</a>';
+      $output = '<a class="button tiny" href="'. $form_url['#element']['url'] .'">Request this room</a>';
       break;
 
     case 'Not Reservable':
@@ -316,7 +351,7 @@ function ncsulib_foundation_field__field_room_number__space($variables) {
     }
     $output .= '</ul>';
   } else {
-    $output .= '<span class="room-list">Room Number:&nbsp;' . drupal_render($variables['items'][0]) . '</span>';
+    $output .= '<div class="room-numbers"><span class="room-list">Room Number:&nbsp;' . drupal_render($variables['items'][0]) . '</span></div>';
   }
 
   // Building map
