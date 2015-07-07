@@ -111,9 +111,9 @@ function ncsulib_foundation_username($variables) {
 }
 
 function ncsulib_foundation_field__body__event($variables){
-    $output = '';
-    $output = 'test';
-    return $output;
+    // $output = '';
+    // $output = 'test';
+    // return $output;
 }
 
 
