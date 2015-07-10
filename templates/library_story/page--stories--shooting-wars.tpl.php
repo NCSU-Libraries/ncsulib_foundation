@@ -140,6 +140,9 @@
                 <h2>Collaborators</h2>
                 <ul class="unstyle-list">
                     <li>
+                        <p><a href="/staff/jevansg">Jason Evans Groth</a> <br><small>User Experience Librarian for Digital Media</small></p>
+                    </li>
+                    <li>
                         <p><a href="http://english.chass.ncsu.edu/faculty_staff/mgorgero">Marsha Gordon</a> <br><small>Associate Professor</small></p>
                     </li>
                     <li>
@@ -162,9 +165,6 @@
                     </li>
                     <li>
                         <p>Gretchen Walters<br/><small> Student</small></p>
-                    </li>
-                    <li>
-                        <p><a href="/staff/jevansg">Jason Evans Groth</a> <br><small>User Experience Librarian for Digital Media</small></p>
                     </li>
                 </ul>
             </div>
