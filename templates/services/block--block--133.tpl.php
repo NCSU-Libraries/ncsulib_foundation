@@ -40,6 +40,6 @@
         echo '</table>';
     ?>
     <p><small>*Closed due to workshops</small></p>
-    <p><a href="/makerspace-calendar">Makerspace calendar »</a></p>
-    <p><a href="/hours/<?= $lib ?>/makerspace">Full Makerspace hours »</a></p>
+    <p><a href="/makerspace-calendar">Makerspace calendar <i class="fa fa-chevron-right"></i></a></p>
+    <p><a href="/hours/<?= $lib ?>/makerspace">Full Makerspace hours <i class="fa fa-chevron-right"></i></a></p>
 </section>
