@@ -1,9 +1,13 @@
 <?php
 
-    // get cal data from google APIs
-    $cal_data_raw = file_get_contents("https://www.googleapis.com/calendar/v3/calendars/ncsu.edu_q3527do3hvduqkfvgg0o62b4bs@group.calendar.google.com/events?key=AIzaSyB91IUoo5_R9y4ASIiyfBHlR8mbuPRhbuU&timeMin=".date('c'));
-    $cal_json = json_decode($cal_data_raw);
-    $cal_items = $cal_json->items;
+    $lib = (request_uri() == '/do/make-at-hunt') ? 'hunt' : 'hill';
+
+    if($lib == 'hill'){
+        // get cal data from google APIs
+        $cal_data_raw = file_get_contents("https://www.googleapis.com/calendar/v3/calendars/ncsu.edu_q3527do3hvduqkfvgg0o62b4bs@group.calendar.google.com/events?key=AIzaSyB91IUoo5_R9y4ASIiyfBHlR8mbuPRhbuU&timeMin=".date('c'));
+        $cal_json = json_decode($cal_data_raw);
+        $cal_items = $cal_json->items;
+    }
 
     function findTime($cal_items, $maker_day){
         foreach($cal_items as $item){
@@ -26,7 +30,6 @@
 ?>
 <section class="block block-block contextual-links-region">
     <?php
-        $lib = (request_uri() == '/do/make-at-hunt') ? 'hunt' : 'hill';
         $mkr_ary = hours_get_day_range($lib,'makerspace',5);
         echo '<h2>Hours</h2>';
         echo '<table>';
@@ -39,7 +42,9 @@
         }
         echo '</table>';
     ?>
+    <?php if($lib == 'hill'){ ?>
     <p><small>*Closed due to workshops</small></p>
     <p><a href="/makerspace-calendar">Makerspace calendar <i class="fa fa-chevron-right"></i></a></p>
+    <?php } ?>
     <p><a href="/hours/<?= $lib ?>/makerspace">Full Makerspace hours <i class="fa fa-chevron-right"></i></a></p>
 </section>
