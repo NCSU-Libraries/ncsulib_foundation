@@ -43,7 +43,9 @@
         echo '</table>';
     ?>
     <?php if($lib == 'hill'){ ?>
-    <p><small>*Closed due to workshops</small></p>
+    <?php if(!empty($cal_items)){ ?>
+    <p><small>*Closed or limited access due to workshops</small></p>
+    <?php } ?>
     <p><a href="/makerspace-calendar">Makerspace calendar <i class="fa fa-chevron-right"></i></a></p>
     <?php } ?>
     <p><a href="/hours/<?= $lib ?>/makerspace">Full Makerspace hours <i class="fa fa-chevron-right"></i></a></p>
