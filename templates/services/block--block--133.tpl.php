@@ -15,7 +15,13 @@
             $cal_day = date('z',strtotime($item->start->dateTime));
             if($cal_day == $maker_day){
                 $start_time = date('g',strtotime($item->start->dateTime));
-                $end_time = date('g',strtotime($item->end->dateTime));
+                $end_min = date('i',strtotime($item->end->dateTime));
+                if($end_min > 0){
+                    $end_time = date('g',strtotime($item->end->dateTime))+1;
+                } else{
+                    $end_time = date('g',strtotime($item->end->dateTime));
+                }
+
                 preg_match('/(.*?closed.*?)/i',$summary,$closed);
                 preg_match('/(.*?limited\savailability.*?)/i',$summary,$limited);
                 if(!empty($limited)){
