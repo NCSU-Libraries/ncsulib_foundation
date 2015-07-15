@@ -17,7 +17,7 @@
                 $start_time = date('g',strtotime($item->start->dateTime));
                 $end_min = date('i',strtotime($item->end->dateTime));
                 if($end_min > 0){
-                    $end_time = date('g',strtotime($item->end->dateTime))+1;
+                    $end_time = date('g',strtotime($item->end->dateTime)+(60*60));
                 } else{
                     $end_time = date('g',strtotime($item->end->dateTime));
                 }
