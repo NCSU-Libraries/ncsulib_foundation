@@ -40,7 +40,7 @@ var ga_footer = {
 		// util links
 		jQuery('ul#f-util-links li a').click(function(e){
 			var link = jQuery(this).text();
-			ga('send', 'event', 'Footer', 'Utility', lib);
+			ga('send', 'event', 'Footer', 'Utility', link);
 			ga_footer.pause();
 		})
 
