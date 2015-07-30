@@ -1,3 +1,13 @@
+<div class="row">
+  <div class="medium-2 columns">
+    <div class="fb-share-button" data-href="https://www.lib.ncsu.edu/event/film-screening-discussion-graduate-1967" data-layout="button">&nbsp;</div>
+  </div>
+
+  <div class="medium-2 columns left">
+    <div><a class="twitter-share-button" data-count="none" href="https://twitter.com/intent/tweet">Tweet</a></div>
+  </div>
+</div>
+
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/Event">
   <?php if ($title): ?>
   <?= render($title_prefix); ?>
@@ -57,17 +67,6 @@
 
             <div itemprop="description"><?php print drupal_render($content['body']); ?></div>
 
-            <!-- share -->
-            <h3>Share</h3>
-            <div class="row">
-              <div class="medium-2 columns">
-                <div class="fb-share-button" data-href="https://www.lib.ncsu.edu/event/film-screening-discussion-graduate-1967" data-layout="button">&nbsp;</div>
-              </div>
-
-              <div class="medium-2 columns left">
-                <div><a class="twitter-share-button" data-count="none" href="https://twitter.com/intent/tweet">Tweet</a><br/></div>
-              </div>
-            </div>
             <!-- contact -->
             <?php if( isset($content['field_contact_name']) || isset($content['field_contact_phone']) || isset($content['field_contact_email'])): ?>
             <div class="contact-info">
@@ -94,28 +93,3 @@
 </article>
 
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=208495345881552";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));</script>
