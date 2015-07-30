@@ -65,7 +65,7 @@
               </div>
 
               <div class="medium-2 columns left">
-                <div><a class="twitter-share-button" data-count="none" href="https://twitter.com/intent/tweet">Tweet</a></div>
+                <div><a class="twitter-share-button" data-count="none" href="https://twitter.com/intent/tweet">Tweet</a><br/></div>
               </div>
             </div>
             <!-- contact -->
