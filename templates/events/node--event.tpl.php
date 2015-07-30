@@ -1,12 +1,4 @@
-<div class="row">
-  <div class="medium-2 columns">
-    <div class="fb-share-button" data-href="https://www.lib.ncsu.edu/event/film-screening-discussion-graduate-1967" data-layout="button">&nbsp;</div>
-  </div>
-
-  <div class="medium-2 columns left">
-    <div><a class="twitter-share-button" data-count="none" href="https://twitter.com/intent/tweet">Tweet</a></div>
-  </div>
-</div>
+<?php drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/events.js'); ?>
 
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/Event">
   <?php if ($title): ?>
@@ -14,6 +6,10 @@
   <h1 id="page-title" class="title" itemprop="name"><?php print $title; ?></h1>
   <?= render($title_suffix); ?>
 <?php endif; ?>
+<div>
+    <a id="fb-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+    <a id="tw-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+</div>
 <?php
     $event_date = strtotime($content['field_time']['#object']->field_time['und'][0]['value2']);
     $is_ongoing = ($content['field_ongoing']['#object']->field_ongoing['und'][0]['value'] == 1) ? true : false;
@@ -91,5 +87,4 @@
         </div>
     </div>
 </article>
-
 
