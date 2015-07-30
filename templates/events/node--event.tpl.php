@@ -57,19 +57,20 @@
 
             <div itemprop="description"><?php print drupal_render($content['body']); ?></div>
 
+            <!-- share -->
+            <h3>Share</h3>
+            <div class="row">
+              <div class="medium-2 columns">
+                <div class="fb-share-button" data-href="https://www.lib.ncsu.edu/event/film-screening-discussion-graduate-1967" data-layout="button">&nbsp;</div>
+              </div>
+
+              <div class="medium-2 columns left">
+                <div><a class="twitter-share-button" data-count="none" href="https://twitter.com/intent/tweet">Tweet</a></div>
+              </div>
+            </div>
             <!-- contact -->
             <?php if( isset($content['field_contact_name']) || isset($content['field_contact_phone']) || isset($content['field_contact_email'])): ?>
             <div class="contact-info">
-                <h3>Share</h3>
-                  <div class="row">
-                    <div class="medium-2 columns">
-                      <div class="fb-share-button" data-href="https://www.lib.ncsu.edu/event/film-screening-discussion-graduate-1967" data-layout="button">&nbsp;</div>
-                    </div>
-
-                    <div class="medium-2 columns left">
-                      <div><a class="twitter-share-button" data-count="none" href="https://twitter.com/intent/tweet">Tweet</a></div>
-                      &nbsp;</div>
-                  </div>
                 <h3>Contact Information</h3>
                 <div class="contact-details">
                     <?= drupal_render($content['field_contact_name']); ?>
