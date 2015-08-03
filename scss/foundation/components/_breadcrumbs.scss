@@ -124,6 +124,10 @@ $crumb-slash: "/" !default;
       &>* {
         @include crumbs;
       }
+
+      li a{
+        display: inline-block;
+      }
     }
   }
 }
