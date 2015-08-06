@@ -137,7 +137,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       case 'zip-test':
         drupal_add_js(path_to_theme() . '/scripts/convert-to-zip.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
-      case 'news2':
+      case 'news':
         drupal_add_js(path_to_theme() . '/scripts/news.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
     }
@@ -348,7 +348,7 @@ function ncsulib_foundation_breadcrumb($variables) {
 
     // only want breadcrumbs for /jobs right now
     $url_components = explode('/', request_uri());
-    if($url_components[1] == 'jobs' || $url_components[1] == 'spaces'){
+    if($url_components[1] == 'jobs' || $url_components[1] == 'spaces' || 'social-media-archives-toolkit'){
       return $breadcrumbs;
     } else{
       return '';
@@ -456,4 +456,13 @@ function ncsulib_foundation_nomarkup($variables) {
     $output .=  drupal_render($item);
   }
   return $output;
+}
+
+
+// get url segment of url alias
+function urlsegment($seg){
+
+  $url_comp = explode('/', request_path());
+
+  return $url_comp[$seg];
 }
