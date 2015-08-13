@@ -147,7 +147,7 @@ $h5-font-size: rem-calc(14);
 $h6-font-size: rem-calc(14);
 
 // These control how subheaders are styled.
-// $subheader-line-height: 1.4;
+$subheader-line-height: $header-line-height;
 $subheader-font-color: $header-font-color; //scale-color($header-font-color, $lightness: 35%);
 // $subheader-font-weight: 300;
 // $subheader-top-margin: .4rem;
