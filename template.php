@@ -134,10 +134,8 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       case 'videowalls':
         drupal_add_js(path_to_theme() . '/scripts/convert-to-zip.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
-      case 'zip-test':
-        drupal_add_js(path_to_theme() . '/scripts/convert-to-zip.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
-        break;
       case 'news':
+        drupal_add_js(path_to_theme() . '/scripts/vendor/foundation/foundation.topbar.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         drupal_add_js(path_to_theme() . '/scripts/news.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
     }
@@ -235,10 +233,10 @@ function ncsulib_foundation_preprocess_node(&$variables) {
  *  page. Adds classes to blocks on the scrc page.
  */
 function ncsulib_foundation_preprocess_block(&$variables) {
-  if ($variables['block_html_id'] == 'block-views-upcoming-events-block-3') {
-    $variables['classes_array'][] = 'medium-8';
-    $variables['classes_array'][] = 'columns';
-  }
+  // if ($variables['block_html_id'] == 'block-views-upcoming-events-block-3') {
+  //   $variables['classes_array'][] = 'medium-8';
+  //   $variables['classes_array'][] = 'columns';
+  // }
   // adding classes to blocks on /scrc
   if ($variables['block_html_id']  == "block-aggregator-feed-8") {
     $variables['classes_array'][] = 'medium-8';
