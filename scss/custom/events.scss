@@ -88,10 +88,12 @@
     }
 
     .block-views{
+        border-top: 1px solid #ccc;
         margin-top: 50px;
 
         small{
             color: #555;
+            font-size: 100%;
         }
 
         h4{
