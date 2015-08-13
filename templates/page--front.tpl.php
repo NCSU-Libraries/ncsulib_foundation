@@ -160,13 +160,13 @@
                 <div id="story-2" class="library-stories">
                     <h3><a href="/stories" id="story-2-heading">Featured Library Story</a></h3>
                     <div class="story-photo">
-                        <a href="/stories/shooting-wars" id="story-2-photo">
-                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/shooting-wars.jpg" alt="NC State University Library Stories" width="100%" />
+                        <a href="/stories/women-stem-build-community-and-circuits-e-textiles-workshop" id="story-2-photo">
+                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/women-stem.png" alt="NC State University Library Stories" width="100%" />
                         </a>
                     </div>
-                    <h2><a href="/stories/shooting-wars">Shooting Wars: New Spaces Give Old Media New Meaning</a></h2>
+                    <h2><a href="/stories/women-stem-build-community-and-circuits-e-textiles-workshop">Women in STEM Build Community (and Circuits) in E-Textiles Workshop</a></h2>
                     <!-- <p>"The library has the best creative collaboration and presentation spaces on campus."</p> -->
-                    <p><a href="/stories/shooting-wars">Learn More <i class="fa fa-chevron-right"></i></a></p>
+                    <p><a href="/stories/women-stem-build-community-and-circuits-e-textiles-workshop">Learn More <i class="fa fa-chevron-right"></i></a></p>
                 </div>
 
                 <div id="happenings">
