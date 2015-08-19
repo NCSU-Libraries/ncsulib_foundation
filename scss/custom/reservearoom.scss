@@ -238,4 +238,10 @@ img {
     & > h3{
         font-size: 1.875rem;
     }
+
+    ul[class*="block-grid-"]{
+        @media #{$small-only}{
+            width: 100%;
+        }
+    }
 }
