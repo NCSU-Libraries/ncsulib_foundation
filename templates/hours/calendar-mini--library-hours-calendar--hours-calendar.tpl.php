@@ -126,13 +126,13 @@
 			</table>
 		</div>
 		<?php if(arg(1) == 'hill' && arg(2) == 'creamery'): ?>
-			<div class="row hide-for-small-only">
+	<!-- 		<div class="row hide-for-small-only">
 				<div class="columns medium-12">
 					<div class="exam-hours-alert">
 						<p><div class="left-triangle"></div>Temporarily closed during West Wing renovations.</p>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		<?php endif; ?>
 	</div>
 </div>
