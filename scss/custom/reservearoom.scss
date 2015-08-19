@@ -31,6 +31,8 @@ img {
     .current-reservations {
         @include awesomify("\f054");
         font-size: rem-calc(14);
+    }
+    .current-reservations:after {
         color: #cc0000;
     }
 }
