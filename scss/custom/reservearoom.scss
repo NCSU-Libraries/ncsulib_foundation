@@ -124,7 +124,7 @@ img {
     display:none;
 }
 .room-name {
-    @extend %h2;
+    @extend %h4;
     margin-top: 0;
     display: block;
 }
@@ -234,5 +234,7 @@ img {
 
 // new room implementation 8.19.15
 .item-list{
+    &>h3{
 
+    }
 }
