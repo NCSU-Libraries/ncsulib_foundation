@@ -243,6 +243,13 @@ img {
     // }
 
     ul[class*="block-grid-"]{
+
+        li{
+            @media #{$small-only}{
+                padding: 0px;
+            }
+
+        }
         @media #{$small-only}{
             width: 100%;
 
