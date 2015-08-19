@@ -29,8 +29,9 @@ img {
 }
 .view-header {
     .current-reservations {
-        @include awesomify("\f05a");
+        @include awesomify("\f054");
         font-size: rem-calc(14);
+        color: #cc0000;
     }
 }
 .view-filters {
