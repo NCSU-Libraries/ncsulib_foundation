@@ -242,6 +242,11 @@ img {
     ul[class*="block-grid-"]{
         @media #{$small-only}{
             width: 100%;
+
+            a{
+                display: block;
+                width: 100%;
+            }
         }
     }
 }
