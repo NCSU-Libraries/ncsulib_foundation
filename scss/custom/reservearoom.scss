@@ -124,8 +124,8 @@ img {
     display:none;
 }
 .room-name {
-    @extend %h4;
-    margin-top: 0;
+    font-size: 1rem;
+    margin: 5px 0px 20px 0px;
     display: block;
 }
 .building-name {
@@ -235,6 +235,6 @@ img {
 // new room implementation 8.19.15
 .item-list{
     &>h3{
-
+        @extend %h2;
     }
 }
