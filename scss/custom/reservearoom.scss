@@ -23,7 +23,8 @@
 
 img {
     @media #{$medium-up}{
-        min-width: 160px;
+        height: auto;
+        width: 100%;
     }
 }
 .view-header {
