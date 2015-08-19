@@ -1,25 +1,25 @@
 @import "base/init_for_custom";
 
-table {
-    border: 0px;
-    background: none;
-    width: 100%;
-}
-table tr td:first-child{
-    padding-left: 0px;
-}
-table tr td:last-child{
-    padding-right: 0px;
-}
-table tr td {
-    background: none;
-    padding-bottom: 25px;
-    padding-top: 25px;
-    vertical-align: top;
-}
-table tr.even, table tr.alt, table tr:nth-of-type(2n){
-    background: none;
-}
+// table {
+//     border: 0px;
+//     background: none;
+//     width: 100%;
+// }
+// table tr td:first-child{
+//     padding-left: 0px;
+// }
+// table tr td:last-child{
+//     padding-right: 0px;
+// }
+// table tr td {
+//     background: none;
+//     padding-bottom: 25px;
+//     padding-top: 25px;
+//     vertical-align: top;
+// }
+// table tr.even, table tr.alt, table tr:nth-of-type(2n){
+//     background: none;
+// }
 
 img {
     @media #{$medium-up}{
@@ -124,7 +124,7 @@ img {
     display:none;
 }
 .room-name {
-    @extend %h3;
+    @extend %h2;
     margin-top: 0;
     display: block;
 }
@@ -231,3 +231,8 @@ img {
         }
 }
 
+
+// new room implementation 8.19.15
+.item-list{
+
+}
