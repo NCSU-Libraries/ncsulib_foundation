@@ -218,21 +218,23 @@ img {
         }
     }
 
-        .views-field-body,
-        .views-field-title .capacity,
-        .views-field-title .floor,
-        .views-field-field-image,
-        .views-field-title .space-type,
-        #edit-field-special-access-value-wrapper,
-        #edit-field-types-of-spaces-value-wrapper,
-        .desk,
-        .block-block img {
-            display: none;
-        }
+    .views-field-body,
+    .views-field-title .capacity,
+    .views-field-title .floor,
+    .views-field-field-image,
+    .views-field-title .space-type,
+    #edit-field-special-access-value-wrapper,
+    #edit-field-types-of-spaces-value-wrapper,
+    .desk,
+    .block-block img {
+        display: none;
+    }
 }
 
 
 // new room implementation 8.19.15
-.item-list > h3{
-    font-size: 1.875rem;
+#content #main-content .item-list {
+    & > h3{
+        font-size: 1.875rem;
+    }
 }
