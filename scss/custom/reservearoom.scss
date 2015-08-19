@@ -22,7 +22,7 @@
 // }
 
 img {
-    @media #{$medium-up}{
+    @media #{$small-only}{
         height: auto;
         width: 100%;
     }
