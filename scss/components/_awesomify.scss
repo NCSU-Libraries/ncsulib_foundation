@@ -5,9 +5,9 @@
 @mixin awesomify($unicode_icon) {
   position: relative;
 
-  &:before{
+  &:after{
     content: $unicode_icon;
     font-family: "FontAwesome";
-    padding-right: 0.5em;
+    padding-left: 0.5em;
   }
 }

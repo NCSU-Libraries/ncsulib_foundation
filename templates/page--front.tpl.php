@@ -148,12 +148,12 @@
                         <a href="/huntlibrary/" id="story-1-heading">James B. Hunt Jr. Library</a>
                     </h3>
 
-                    <ul class="hunt-list">
-                        <li><a href="/huntlibrary/#storify" class="story-1-link">Hunt Library on Storify</a></li>
-                        <li><a href="/huntlibrary/inthenews" class="story-1-link">In the News</a></li>
-                        <li><a href="/huntlibrary/bookBot" class="story-1-link">bookBot</a></li>
-                        <li><a href="/huntlibrary/namingopportunities" class="story-1-link">Help support Hunt</a></li>
-                        <li><a href="//www.ncsu.edu/huntlibrary/" class="story-1-link">Think and Do</a></li>
+                    <ul class="unstyle-list hunt-list">
+                        <li><a href="/huntlibrary/#storify" class="styled story-1-link">Hunt Library on Storify</a></li>
+                        <li><a href="/huntlibrary/inthenews" class="styled story-1-link">In the News</a></li>
+                        <li><a href="/huntlibrary/bookBot" class="styled story-1-link">bookBot</a></li>
+                        <li><a href="/huntlibrary/namingopportunities" class="styled story-1-link">Help support Hunt</a></li>
+                        <li><a href="//www.ncsu.edu/huntlibrary/" class="styled story-1-link">Think and Do</a></li>
                     </ul>
                 </div>
 
