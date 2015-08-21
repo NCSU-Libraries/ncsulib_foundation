@@ -132,6 +132,10 @@
 				}
 			}
 		}
+
+		.block-2066{
+			@include panel($bg:white,$padding:17px);
+		}
 	}
 
 	ul.menu{
