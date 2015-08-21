@@ -5,18 +5,18 @@
 }
 
 .views-row {
+
   @media #{$small-only}{
     @include grid-column($columns: 9, $center: true);
     padding: rem-calc(20);
-
   }
 
   @media #{$medium-up} {
-    @include grid-column(3);
+    // @include grid-column(3);te
     // make each view row behave like a list-item inside a Foundation block grid
-    padding-bottom: 10px;
-
+    padding-bottom: 30px;
   }
+
 
   .views-field-title {
     @extend %h4;
@@ -58,4 +58,9 @@
 
 .view-footer {
   margin-top:rem-calc(20);
+}
+
+
+.views-field-field-device-image{
+  height: 200px;
 }
