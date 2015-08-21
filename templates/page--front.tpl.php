@@ -166,7 +166,7 @@
                     </div>
                     <h2><a href="/stories/women-stem-build-community-and-circuits-e-textiles-workshop">Women in STEM Build Community (and Circuits) in E-Textiles Workshop</a></h2>
                     <!-- <p>"The library has the best creative collaboration and presentation spaces on campus."</p> -->
-                    <p><a href="/stories/women-stem-build-community-and-circuits-e-textiles-workshop">Learn More <i class="fa fa-chevron-right"></i></a></p>
+                    <p><a class="styled" href="/stories/women-stem-build-community-and-circuits-e-textiles-workshop">Learn More</a></p>
                 </div>
 
                 <div id="happenings">
