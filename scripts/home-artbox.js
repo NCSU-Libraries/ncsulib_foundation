@@ -15,6 +15,7 @@ var orb = {
 	 	jQuery(document).foundation({
 	    	orbit: {
 	      		// timer_show_progress_bar: false,
+	      		resume_on_mouseout: true,
 				animation: 'fade',
 	      		slide_number: false,
 	      		animation_speed: 300,
