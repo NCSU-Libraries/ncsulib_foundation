@@ -10,16 +10,23 @@ var orb = {
 	 },
 
 	 desktopSlider : function(){
+	 	orb.interval = setInterval('orb.sliderTest()', 3000);
+
 	 	jQuery(document).foundation({
 	    	orbit: {
-	      		timer_show_progress_bar: false,
+	      		// timer_show_progress_bar: false,
 				animation: 'fade',
 	      		slide_number: false,
 	      		animation_speed: 300,
-	      		timer_speed: 7000
+	      		timer_speed: 7000,
+	      		timer: true
 	    	}
 	  	})
 
+	},
+
+	sliderTest : function(){
+		jQuery(".orbit-next").click();
 	},
 
 	mobileSlider : function(){
