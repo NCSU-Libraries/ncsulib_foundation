@@ -10,7 +10,7 @@ var orb = {
 	 },
 
 	 desktopSlider : function(){
-	 	orb.interval = setInterval('orb.sliderTest()', 3000);
+	 	// orb.interval = setInterval('orb.sliderTest()', 3000);
 
 	 	jQuery(document).foundation({
 	    	orbit: {
@@ -22,6 +22,8 @@ var orb = {
 	      		timer: true
 	    	}
 	  	})
+
+	  	jQuery(".orbit-timer").click();
 
 	},
 
