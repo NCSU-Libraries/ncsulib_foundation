@@ -19,7 +19,7 @@ var orb = {
 				animation: 'fade',
 	      		slide_number: false,
 	      		animation_speed: 300,
-	      		timer_speed: 7000,
+	      		timer_speed: 3000,
 	      		timer: true
 	    	}
 	  	})
