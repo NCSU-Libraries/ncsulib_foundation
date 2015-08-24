@@ -39,12 +39,13 @@ var orb = {
 				animation: 'fade',
 	      		slide_number: false,
 	      		animation_speed: 200,
-	      		timer_speed: 7000
+	      		timer_speed: 3000
 	    	}
 	  	})
 
 	  	// fire resize event so mobile registers mobile height
 		jQuery(window).resize();
+		jQuery(".orbit-timer").click();
 	}
 }
 
