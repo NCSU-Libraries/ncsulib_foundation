@@ -12,7 +12,7 @@
       custom_back_text: true,
       back_text: 'Back',
       is_hover: true,
-      mobile_show_parent_link: false,
+      mobile_show_parent_link: true,
       scrolltop : true // jump to top when sticky nav menu toggle is clicked
     },
 
@@ -196,7 +196,7 @@
             topbar.css('height', $this.siblings('ul').outerHeight(true) + topbar.data('height'));
           }
         });
-      
+
       S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function () {
         self.resize.call(self);
       }, 50)).trigger('resize');
@@ -311,7 +311,7 @@
           } else {
             var $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5></li>');
           }
-  
+
           // Copy link to subnav
           if (settings.custom_back_text == true) {
             $('h5>a', $titleLi).html(settings.back_text);
