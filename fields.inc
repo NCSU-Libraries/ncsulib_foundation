@@ -83,23 +83,29 @@ function ncsulib_foundation_username($variables) {
     $staff_bio_url = $staff_bio[0]['value'];
 
     //2023 and 2050 are former staff.
-    if (isset($variables['link_path']) && $position_id != '2023' && $position_id != '2050') {
-        if($staff_bio){
-            $staff_url = $staff_bio_url;
-        } else{
-            $staff_url = '/staff/'.$author->name;
-        }
-            // We have a link path, so we should generate a link using l().
-            $output  = '<div class="user-photo"><a href="'.$staff_url.'">'. $img .'</a></div>';
-            $output .= '<div class="user-details">';
-            $output .= '<span class="user-name"><a class="username" href="'.$staff_url.'">'.$variables['name'].'</a></span>'; //'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
-            $output .= '<span class="user-title">'. render($title) .'</span>';
-            $output .= '</div>';
-            $output  = '<div class="user-info">'. $output .'</div>';
+    // kpr($variables);
+    if($staff_bio){
+        $staff_url = $staff_bio_url;
+    } else{
+        $staff_url = '/staff/'.$author->name;
+    }
+
+    if(urlsegment(0) == 'news'){ //just for author on /news pages
+        $output = '<div class="user-details">';
+        $output .= '<span class="user-name username"><a href="'.$staff_url.'">'.$variables['name'].'</a></span>';
+        $output .= '</div>';
+        $output  = '<div class="user-info">'. $output .'</div>';
+    } else if (isset($variables['link_path']) && $position_id != '2023' && $position_id != '2050') {
+        // We have a link path, so we should generate a link using l().
+        $output = '<div class="user-photo"><a href="'.$staff_url.'">'. $img .'</a></div>';
+        $output .= '<div class="user-details">';
+        $output .= '<span class="user-name"><a class="username" href="'.$staff_url.'">'.$variables['name'].'</a></span>'; //'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
+        $output .= '<span class="user-title">'. render($title) .'</span>';
+        $output .= '</div>';
+        $output  = '<div class="user-info">'. $output .'</div>';
     } else {
         // Modules may have added important attributes so they must be included
         // in the output. Additional classes may be added as array elements like
-
         $output  = '<div class="user-photo">'. $img .'</div>';
         $output .= '<div class="user-details">';
         $output .= '<span class="user-name username">'.$variables['name'].'</span>'; //'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
@@ -110,11 +116,24 @@ function ncsulib_foundation_username($variables) {
     return $output;
 }
 
-function ncsulib_foundation_field__body__event($variables){
-    // $output = '';
-    // $output = 'test';
-    // return $output;
+
+
+
+/**
+ * Implements theme_field()
+ *
+ * NEWS feature photo
+ */
+function ncsulib_foundation_field__field_news_feature_photo__news($variables){
+    $output = '';
+
+    $title = $variables['items'][0]['#item']['title'];
+    $img_url = $variables['items'][0]['#item']['uri'];
+    $output = '<img src="'.image_style_url("738_max_width", $img_url).'" width="100%">';
+    $output .= '<small>'.$title.'</small>';
+    return $output;
 }
+
 
 
 /**
