@@ -31,8 +31,8 @@
             preg_match('/(.*?closed.*?)/i',$summary,$closed);
             preg_match('/(.*?limited\savailability.*?)/i',$summary,$limited);
             if(!empty($limited)){
-                $begin = getTimeString($item->start->dateTime);
-                $end = getTimeString($item->end->dateTime);
+                $begin = getBeginTimeString($item->start->dateTime);
+                $end = getEndTimeString($item->end->dateTime);
                 // // get prev item
                 // $prev_begin = getTimeString($cal_items[$c-2]->start->dateTime);
                 // $prev_end = getTimeString($cal_items[$c-2]->end->dateTime);
@@ -49,8 +49,8 @@
                 array_push($day_ary, 'lmtd availability '.$begin . '-' . $end.'*');
             }
             if(!empty($closed)){
-                $begin = getTimeString($item->start->dateTime);
-                $end = getTimeString($item->end->dateTime);
+                $begin = getBeginTimeString($item->start->dateTime);
+                $end = getEndTimeString($item->end->dateTime);
                 // // get prev item
                 // $prev_begin = getTimeString($cal_items[$c-2]->start->dateTime);
                 // $prev_end = getTimeString($cal_items[$c-2]->end->dateTime);
@@ -72,9 +72,16 @@
         return $day_ary;
     }
 
-    function getTimeString($time){
+    function getBeginTimeString($time){
 
-        // $t = date('g',strtotime($time));
+        $t = date('g',strtotime($time));
+
+        return $t;
+    }
+
+    function getEndTimeString($time){
+
+        $t = date('g',strtotime($time));
         $min = date('i',strtotime($time));
         if($min > 0){
             $t = date('g',strtotime($time)+(60*60));
