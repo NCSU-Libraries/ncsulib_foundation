@@ -88,4 +88,3 @@
         </div>
     </div>
 </div>
-<script src="/sites/all/themes/ncsulib_foundation/scripts/brand-bar.js?maxWidth=1000" type="text/javascript" charset="utf-8"></script>
