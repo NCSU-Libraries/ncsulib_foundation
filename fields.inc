@@ -504,15 +504,18 @@ function ncsulib_foundation_field__field_space__event($variables) {
   if (!$variables['label_hidden']) {
     $output .= '<h3' . $variables['title_attributes'] . '>' . $variables['label'] . '</h3>';
   }
-
+  // kpr($variables);
   $output .= '<ul class="field-items"' . $variables['content_attributes'] . '>';
   // Render the items as a comma separated inline list
   foreach ($variables['items'] as $delta => $item) {
     $space_nid = $variables['element']['#items'][$delta]['entity']->nid;
     $space_node = node_load($space_nid);
+    $building = node_load($space_node->field_building_new_['und'][0]['target_id']);
+    $building_title = $building->title;
+
     $space_title = str_replace(array('(Hill)','(Hunt)'),'',$space_node->title);
     // Print space name
-    $output .= '<li>' . drupal_render($item);
+    $output .= '<li>' . drupal_render($item). ' at the '.$building_title;
 
     // schema.org
       $b_nid = $space_node->field_building_new_['und'][0]['target_id'];
