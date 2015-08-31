@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/styles/core/custom/main-red.css">
+<link rel="stylesheet" type="text/css" href="/sites/all/themes/ncsulib_foundation/styles/core/custom/main-red.css">
 <div class="ncstate-utility-bar" role="navigation" aria-label="NC State Brand Utility Bar">
     <div class="ncstate-utility-bar-tools">
         <div id="ncstate-utility-bar-wrapper-primary" class="ncstate-utility-bar-wrapper ncstate-utility-bar-wrapper-primary">
@@ -88,3 +88,4 @@
         </div>
     </div>
 </div>
+<script src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/scripts/brand-bar.js?maxWidth=1000" type="text/javascript" charset="utf-8"></script>
