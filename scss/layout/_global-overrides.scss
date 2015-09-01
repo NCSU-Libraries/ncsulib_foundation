@@ -16,6 +16,12 @@ a.styled{
     position: relative;
     text-decoration: none;
 }
+a.styled.left{
+    text-align: left;
+}
+a.styled.right{
+    text-align: right;
+}
 a.styled:after{
     color: $primary-color;
     content: "\f105";
