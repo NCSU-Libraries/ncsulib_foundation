@@ -21,6 +21,7 @@
 
 .user-info {
     @include grid-row($behavior: nest);
+    margin-bottom: 10px;
 
     .user-photo {
         @include grid-column(5);
