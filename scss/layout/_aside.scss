@@ -17,6 +17,7 @@
 	.sidebar{
 		padding-top: rem-calc(20);
 
+		// title
 		h2{
 	        font-size: 1.1em;
 	        font-weight: bold;
@@ -27,6 +28,7 @@
 	        	font-size: inherit;
 	        }
 	    }
+	    // title
 	    h3{
 	    	font-size: 1.1em;
 	        font-weight: bold;
@@ -37,6 +39,7 @@
 	        	font-size: inherit;
 	        }
 	    }
+	    // title
 	    h4,h5,h6{
 	        font-size: 1em;
 	        margin-top: 0px;
@@ -47,8 +50,9 @@
 	        }
 	    }
 
+		// body
 	    p,a{
-	    	font-size: 0.875rem !important; //rem-calc(14);
+	    	font-size: 0.875rem; //rem-calc(14);
 	    	line-height: 1.2rem;
 	    }
 	    p{
@@ -63,13 +67,20 @@
 	    	}
 	    }
 
+		// list
 		ul, .side-nav, .menu {
 			padding: rem-calc(0);
 			margin-left: 0px;
 
 			li{
-				line-height: 1.1rem;
-				margin-bottom: 15px;
+				line-height: 1.2rem;
+				margin-bottom: 20px;
+
+				h2,h3{
+					font-size: 1.2rem;
+					margin-bottom: 0px;
+					text-transform: none;
+				}
 
 				a{
 					// font-size: 0.875rem;
@@ -111,7 +122,7 @@
 			margin-top: -5px;
 
 			p{
-				text-align: right;
+				// text-align: right;
 			}
 
 			i.fa-chevron-right{
@@ -120,6 +131,13 @@
 				position: relative;
 				top: 1px;
 			}
+		}
+		.view-footer:after {
+			content: ".";
+			visibility: hidden;
+			display: block;
+			height: 0;
+			clear: both;
 		}
 
 		.block{

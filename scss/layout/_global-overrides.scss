@@ -20,7 +20,9 @@ a.styled.left{
     text-align: left;
 }
 a.styled.right{
+    display: block;
     text-align: right;
+    float: none !important;
 }
 a.styled:after{
     color: $primary-color;
