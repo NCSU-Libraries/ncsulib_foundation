@@ -380,3 +380,43 @@ table{
 .reveal-modal {
     z-index: 10001;
 }
+
+
+// date styling
+#content {
+    #main-content {
+        .event-date{
+            padding-right: 5.5%;
+
+            h2{
+                    background: #cc0000;
+                    font-size: 0px;
+                    margin-bottom: 0px;
+                    padding: 0px;
+                    text-align: center;
+
+                span{
+                    color: #FFF;
+                    line-height: 2rem;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                }
+            }
+            h3 {
+                    background: #FFF;
+                    border-bottom: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    border-left: 1px solid #ccc;
+                    margin-bottom: 0px;
+                    padding: 9px 0px 0px 0px;
+                    text-align: center;
+
+                span{
+                    color: #555;
+                    font-size: 2.5rem;
+                    line-height: 2.5rem;
+                }
+            }
+        }
+    }
+}
