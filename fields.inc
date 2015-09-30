@@ -127,7 +127,7 @@ function ncsulib_foundation_username($variables) {
 function ncsulib_foundation_field__field_news_feature_photo__news($variables){
     $output = '';
 
-    $title = $variables['items'][0]['#item']['title'];
+    $title = $variables['items'][0]['#item']['alt'];
     $img_url = $variables['items'][0]['#item']['uri'];
     $output = '<img src="'.image_style_url("738_max_width", $img_url).'" width="100%">';
     $output .= '<small>'.$title.'</small>';
@@ -515,7 +515,11 @@ function ncsulib_foundation_field__field_space__event($variables) {
 
     $space_title = str_replace(array('(Hill)','(Hunt)'),'',$space_node->title);
     // Print space name
-    $output .= '<li>' . drupal_render($item). ' at the '.$building_title;
+    if($building_title){
+      $output .= '<li>' . drupal_render($item). ' at the '.$building_title;
+    } else{
+      $output .= '<li>' . drupal_render($item);
+    }
 
     // schema.org
       $b_nid = $space_node->field_building_new_['und'][0]['target_id'];
