@@ -35,38 +35,15 @@
             if(!empty($limited)){
                 $begin = getBeginTimeString($item->start->dateTime);
                 $end = getEndTimeString($item->end->dateTime);
-                // // get prev item
-                // $prev_begin = getTimeString($cal_items[$c-2]->start->dateTime);
-                // $prev_end = getTimeString($cal_items[$c-2]->end->dateTime);
-                // // get next item
-                // $next_begin = getTimeString($cal_items[$c+1]->start->dateTime);
-                // $next_end = getTimeString($cal_items[$c+1]->end->dateTime);
-
-                // if($begin != $prev_end){
-                //     $str = 'lmt availability '.$begin.'-';
-                // } else if($begin == $prev_end){
-                //     $str .= $end;
-                // }
 
                 array_push($day_ary, 'lmtd availability '.$begin . '-' . $end.'*');
             }
             if(!empty($closed)){
                 $begin = getBeginTimeString($item->start->dateTime);
                 $end = getEndTimeString($item->end->dateTime);
-                // // get prev item
-                // $prev_begin = getTimeString($cal_items[$c-2]->start->dateTime);
-                // $prev_end = getTimeString($cal_items[$c-2]->end->dateTime);
-                // // get next item
-                // $next_begin = getTimeString($cal_items[$c+1]->start->dateTime);
-                // $next_end = getTimeString($cal_items[$c+1]->end->dateTime);
-
-                // if($begin != $prev_end){
-                //     $str = 'closed '.$begin.'-';
-                // } else if($begin == $prev_end){
-                //     $str .= $end;
-                // }
-
-                array_push($day_ary, 'closed '.$begin . '-' . $end.'*');
+                if($begin != $end){
+                    array_push($day_ary, 'closed '.$begin . '-' . $end.'*');
+                }
             }
         }
 
