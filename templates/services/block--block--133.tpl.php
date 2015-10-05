@@ -41,9 +41,9 @@
             if(!empty($closed)){
                 $begin = getBeginTimeString($item->start->dateTime);
                 $end = getEndTimeString($item->end->dateTime);
-                if($begin != $end){
+                // if($begin != $end){
                     array_push($day_ary, 'closed '.$begin . '-' . $end.'*');
-                }
+                // }
             }
         }
 
@@ -83,8 +83,10 @@
             echo '<tr>';
             echo '<td width="32%">'.$hours->date_display.'</td>';
             echo '<td>'.$display.'<br/>';
-            foreach($note as $item){
-                echo '<small>'.$item.'</small><br>';
+            if($display != 'closed'){
+                foreach($note as $item){
+                    echo '<small>'.$item.'</small><br>';
+                }
             }
             // echo '<small>'.$note.'</small><br>';
             echo '</td>';
