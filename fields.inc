@@ -684,6 +684,57 @@ function ncsulib_foundation_field__project($variables) {
 /**
  * Implements theme_field()
  *
+ * Make story lead(s) show up with name, title and thumbnail image
+ */
+function ncsulib_foundation_field__field_story_lead__project($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden and display it as a heading 3
+  if (!$variables['label_hidden']) {
+    $output .= '<h2' . $variables['title_attributes'] . '>Story Lead</h2>';
+  }
+
+  // Load all collaborators' fields
+  $story_leads = array();
+  foreach ($variables['element']['#items'] as $key => $value) {
+    $story_leads[] = user_load($value['target_id']);
+
+    // Account status
+    $status = $story_leads[$key]->status;
+    $variables['items'][$key]['status'] = $status;
+
+    // First name
+    $field = field_get_items('user', $story_leads[$key], 'field_firstname');
+    $first_name = field_view_value('user', $story_leads[$key], 'field_firstname', $field[0]);
+    $variables['items'][$key]['name'] = decode_entities(render($first_name));
+
+    // Last Name
+    $field = field_get_items('user', $story_leads[$key], 'field_lastname');
+    $last_name = field_view_value('user', $story_leads[$key], 'field_lastname', $field[0]);
+    $variables['items'][$key]['name'] .= " " . decode_entities(render($last_name));
+
+    // Link to user's page
+    $variables['items'][$key]['link'] = 'staff/'. $story_leads[$key]->name;
+
+    // Image
+    $variables['items'][$key]['image'] = get_user_image($story_leads[$key]);
+
+    // Title
+    $field = field_get_items('user', $story_leads[$key], 'field_title');
+    $variables['items'][$key]['title'] = field_view_value('user', $story_leads[$key], 'field_title', $field[0]);
+
+    // Position
+    $field = field_get_items('user', $story_leads[$key], 'field_staff_position');
+    $variables['items'][$key]['position'] = field_view_value('user', $story_leads[$key], 'field_staff_position', $field[0]);
+
+  }
+  return print_multiple_users($variables['items'], $output);
+}
+
+
+/**
+ * Implements theme_field()
+ *
  * Make collaborators show up with name, title and thumbnail image
  */
 function ncsulib_foundation_field__field_staff__project($variables) {

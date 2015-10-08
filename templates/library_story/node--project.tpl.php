@@ -46,9 +46,7 @@
             <p class="date-posted">Written on <?php print date('F j, Y', $created); ?></p>
           </div>
           <aside class="story-statement-aside sidebar">
-            <h2>Story Lead</h2>
-
-            <?php print $name; ?>
+            <?php print render($content['field_story_lead']); ?>
             <?php print render($content['field_staff']); ?>
             <?php print render($content); ?>
             <?php
