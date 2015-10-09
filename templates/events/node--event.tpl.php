@@ -52,6 +52,7 @@
                         echo '<p>';
                         echo '<time itemprop="startDate" datetime="'.date('Y-m-d',$start_raw).'T'.date('G:i',$start_raw).'">'.$str.'<br/>'.$time.'</time>';
                         echo '<time itemprop="duration" datetime="T'.$d_hour.'H'.$d_min.'M"></time>';
+                        echo '<time itemprop="duration" datetime="T'.$d_hour.'H'.$d_min.'M"></time>';
                         echo '</p>';
                     }
                 ?>
