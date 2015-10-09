@@ -11,16 +11,21 @@
       hide($content['comments']);
       hide($content['links']);
       hide($content['field_featured_image']);
+
+      $icon = render($content['field_application_icon']);
+      $platform = render($content['field_platform']);
+      $doc = render($content['field_documentation_url']);
+
       hide($content['field_application_icon']);
       hide($content['field_platform']);
       hide($content['field_documentation_url']);
 
       // if sidebar has content
-      if($content['field_application_icon'] || $content['field_platform'] || $content['field_documentation_url']){
-        $sidebar = true;
+      if($icon != '' || $platform != '' || $doc != ''){
+        $sidebar = 'true';
         $main_classes = 'medium-9 push-3';
       } else{
-        $sidebar = false;
+        $sidebar = 'false';
         $main_classes = 'medium-12';
       }
 
