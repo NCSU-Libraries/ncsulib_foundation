@@ -512,6 +512,8 @@ function ncsulib_foundation_field__field_space__event($variables) {
     $space_node = node_load($space_nid);
     $building = node_load($space_node->field_building_new_['und'][0]['target_id']);
     $building_title = $building->title;
+    $entry_fee = node_load($space_node->field_entry_fee['und'][0]['target_id']);
+    $entry_fee_val = ($entry_fee) ? $entry_fee : '0.00';
 
     $space_title = str_replace(array('(Hill)','(Hunt)'),'',$space_node->title);
     // Print space name
@@ -536,7 +538,7 @@ function ncsulib_foundation_field__field_space__event($variables) {
         $output .= '</div>';
         $output .= '</div>';
         $output .= '<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-        <span itemprop="price" content="0.00"></span>
+        <span itemprop="price" content="'.$entry_fee_val.'"></span>
         <meta itemprop="priceCurrency" content="USD" />
         <meta itemprop="url" content="http://'.$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI].'" />
         <link itemprop="availability" href="http://schema.org/InStock">
