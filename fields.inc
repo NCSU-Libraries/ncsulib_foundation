@@ -535,6 +535,12 @@ function ncsulib_foundation_field__field_space__event($variables) {
         $output .= '<div itemprop="streetAddress">'.$b_address.'</div>';
         $output .= '</div>';
         $output .= '</div>';
+        $output .= '<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <span itemprop="price" content="0.00"></span>
+        <meta itemprop="priceCurrency" content="USD" />
+        <meta itemprop="url" content="http://'.$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI].'" />
+        <link itemprop="availability" href="http://schema.org/InStock">
+        </div>';
       }
 
         // Load building info, if present, print it
