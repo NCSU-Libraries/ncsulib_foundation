@@ -144,10 +144,12 @@ $include-html-classes: false;
 		}
 	}
 
-	#main-content section.block.block-block .view-display-id-block_13 .view-content{
-		ul{
-			list-style: none;
-		}
+}
+
+// remove bullet from software
+#content #main-content{
+	ul{
+		list-style: none;
 	}
 }
 
