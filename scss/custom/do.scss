@@ -91,12 +91,6 @@ $include-html-classes: false;
 			columns: 1;
 		}
 
-		.view-display-id-block_13{
-			ul{
-				list-style: none;
-			}
-		}
-
 		.view-content{
 
 			.item-list{
@@ -147,6 +141,12 @@ $include-html-classes: false;
 					}
 				}
 			}
+		}
+	}
+
+	.view-display-id-block_13{
+		ul{
+			list-style: none;
 		}
 	}
 }
