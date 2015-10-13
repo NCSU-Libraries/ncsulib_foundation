@@ -1070,7 +1070,8 @@ $sub-nav-font-color: $primary-color;
 
 // These are for controlling the display and margin of tables
 // $table-display: table-cell;
-// $table-margin-bottom: rem-calc(20);
+$table-margin-bottom: rem-calc(40);
+$table-margin-top: rem-calc(40);
 
 //
 // TABS

@@ -39,7 +39,8 @@ $table-line-height: rem-calc(18) !default;
 
 // These are for controlling the display and margin of tables
 $table-display: table-cell !default;
-$table-margin-bottom: rem-calc(20) !default;
+$table-margin-bottom: rem-calc(40) !default;
+$table-margin-top: rem-calc(40) !default;
 
 
 //
@@ -49,11 +50,12 @@ $table-margin-bottom: rem-calc(20) !default;
 @mixin table {
   background: $table-bg;
   margin-bottom: $table-margin-bottom;
+  margin-top: $table-margin-top;
   border: $table-border-style $table-border-size $table-border-color;
 
   thead,
   tfoot {
-    background: $table-head-bg;    
+    background: $table-head-bg;
 
     tr {
       th,
