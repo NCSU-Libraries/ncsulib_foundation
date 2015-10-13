@@ -147,14 +147,8 @@ $include-html-classes: false;
 }
 
 // remove bullet from software
-#content #main-content .view-display-id-block_13{
-	ul{
-		list-style: none;
-
-		li{
-			margin-bottom: 10px;
-		}
-	}
+#content #main-content .software-item{
+	margin-bottom: 10px;
 }
 
 
