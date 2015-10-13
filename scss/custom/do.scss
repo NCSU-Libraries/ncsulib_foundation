@@ -113,13 +113,13 @@ $include-html-classes: false;
 				// float: left;
 
 				ul{
-					list-style: disc;
-					margin-left: 18px;
+					list-style: none;
+					// margin-left: 18px;
 					width: 100%;
 
 					li{
-						float: left;
-						width: 101%;
+						// float: left;
+						// width: 101%;
 					}
 
 					li:before{
@@ -148,7 +148,7 @@ $include-html-classes: false;
 
 // remove bullet from software
 #content #main-content .software-item{
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding: 0px;
 }
 
