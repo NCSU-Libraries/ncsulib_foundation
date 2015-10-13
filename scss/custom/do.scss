@@ -149,8 +149,12 @@ $include-html-classes: false;
 
 // remove bullet from software
 #content #main-content .software-item{
-	margin-bottom: 10px;
+	margin-top: 15px;
 	padding: 0px;
+
+	p{
+		margin-bottom: 0px;
+	}
 }
 
 
