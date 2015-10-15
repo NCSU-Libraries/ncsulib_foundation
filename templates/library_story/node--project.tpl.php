@@ -39,7 +39,7 @@
         ?>
         <meta property="og:image" content="http://<?= $_SERVER[HTTP_HOST].'/sites/default/files/'.$photo_url ?>" />
         <div id="featured-image">
-          <img src="/sites/default/files/<?= $photo_url; ?>" width="100%" alt="<?= $alt; ?>">
+          <img src="/sites/default/files/<?= $photo_url; ?>" width="100%" alt="<?= $alt; ?>" rel="image_src">
           <?php if($title){ echo '<small>'.$title.'</small>';} ?>
         </div>
         <?php print render($content['field_teaser']); ?>
