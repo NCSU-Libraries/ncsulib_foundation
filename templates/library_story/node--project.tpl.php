@@ -1,5 +1,6 @@
 <?php
   drupal_add_js('jQuery(document).ready(function($) {$(\'iframe\').wrap(\'<div class="video-wrapper"></div>\'); });', 'inline');
+  drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/events.js');
   hide($content['four_liner']);
   hide($content['field_featured_image']);
   hide($content['field_featured_image_landscape']);
@@ -17,6 +18,10 @@
           <?php print render($title_prefix); ?>
           <p><a href="/stories"><i class="fa fa-chevron-left"></i> Back to Library Stories</a></p>
           <h1 id="page-title" class="title"><?php print $title; ?></h1>
+          <div class="right">
+                <a id="fb-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                <a id="tw-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+          </div>
             <?php print render($title_suffix); ?>
           <?php endif; ?>
 
@@ -25,6 +30,7 @@
             <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
+
         </div>
         <?php
           $photo_url = $content['field_featured_image_landscape']['#object']->field_featured_image_landscape['und'][0]['filename'];
