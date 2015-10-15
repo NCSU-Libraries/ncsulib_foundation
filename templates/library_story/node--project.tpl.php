@@ -37,6 +37,7 @@
           $alt = $content['field_featured_image_landscape']['#object']->field_featured_image_landscape['und'][0]['alt'];
           $title = $content['field_featured_image_landscape']['#object']->field_featured_image_landscape['und'][0]['title'];
         ?>
+        <meta property="og:image" content="/sites/default/files/'<?= $photo_url ?>" />
         <div id="featured-image">
           <img src="/sites/default/files/<?= $photo_url; ?>" width="100%" alt="<?= $alt; ?>">
           <?php if($title){ echo '<small>'.$title.'</small>';} ?>
