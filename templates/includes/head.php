@@ -3,6 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8" />
 <meta http-equiv="ImageToolbar" content="false" />
+<meta property="og:image" content="" />
 
 <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/homescreen-icon-57x57.png" />

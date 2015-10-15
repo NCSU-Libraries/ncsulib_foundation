@@ -1,6 +1,6 @@
 <?php
   drupal_add_js('jQuery(document).ready(function($) {$(\'iframe\').wrap(\'<div class="video-wrapper"></div>\'); });', 'inline');
-  drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/events.js');
+  drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/library-stories.js');
   hide($content['four_liner']);
   hide($content['field_featured_image']);
   hide($content['field_featured_image_landscape']);
