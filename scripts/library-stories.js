@@ -1,9 +1,8 @@
 var lib = {
     init : function(){
 
-        img = $('#featured-image img').attr('src');
-        $('meta[property="og\\:image"]').attr('content','http://lib.ncsu.edu'+img);
-        $('meta[property="og\\:image:url"]').attr('content','http://lib.ncsu.edu'+img);
+        // img = $('#featured-image img').attr('src');
+        // $('meta[property="og\\:image"]').attr('content','http://lib.ncsu.edu'+img);
 
         $('#fb-share-button').click(function(e){
             var url = $(this).data('url');
