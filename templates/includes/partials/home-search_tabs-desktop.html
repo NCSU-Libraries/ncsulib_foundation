@@ -6,23 +6,24 @@
 <div id="search-tabs">
     <!-- Search tabs begin -->
     <dl class="tabs" data-tab>
-      <dd class="active"><a href="#search-1">All</a></dd>
-      <dd><a href="#search-2">Articles</a></dd>
-      <dd><a href="#search-3">Books &amp; Media</a></dd>
-      <dd><a href="#search-4">Our Website</a></dd>
+      <dd class="active"><a href="#all">All</a></dd>
+      <dd><a href="#articles">Articles</a></dd>
+      <dd><a href="#books-media">Books &amp; Media</a></dd>
+      <dd><a href="#our-website">Our Website</a></dd>
     </dl>
 
     <div class="tabs-content">
         <!-- All -->
-        <div class="content active" id="search-1">
+        <div class="content active" id="all">
             <form accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu" id="searcheverything">
                 <input type="search" id="searchall" value="" name="q" class="main-search-field quicksearch-typeahead" placeholder="Search books, articles, library website..." title="Search books, articles, library website..." />
                 <input type="submit" class="front-page-submit button small" id="all-submit" value="SEARCH" />
+                <input type="hidden" class="tab" name="tab" value="all" />
             </form>
         </div>
 
         <!-- Articles -->
-        <div class="content" id="search-2">
+        <div class="content" id="articles">
             <form accept-charset="utf-8" method="get" action="http://ncsu.summon.serialssolutions.com/search" id="search-articles-summon">
                 <div class="search-body">
                     <input type="search" id="searcharticle" value="" name="s.q" class="articles-search-field" placeholder="Search for articles in Summon" title="Search for articles in Summon" />
@@ -46,11 +47,12 @@
                 <input type="hidden" class="article-input" value="ContentType,Journal Article" name="s.fvf[]" />
                 <input type="hidden" class="article-input" value="addFacetValueFilters(ContentType,Journal / eJournal)" name="s.cmd" />
                 <input type="hidden" value="true" name="keep_r" />
+                <input type="hidden" class="tab" name="tab" value="articles" />
             </form>
         </div>
 
         <!-- Books and Media -->
-        <div class="content" id="search-3">
+        <div class="content" id="books-media">
             <form accept-charset="utf-8" method="get" action="//catalog.lib.ncsu.edu/" id="search">
                 <div class="search-body clearfix">
                     <input type="hidden" value="1" name="Nty">
@@ -75,15 +77,17 @@
                     <label class="access" for="trln"><input type="radio" value="trln" name="scope" id="trln" /> Triangle Research Libraries</label></li>
                     <label class="access" for="worldcat"><input type="radio" value="worldcat" name="scope" id="worldcat" /> UNC System Libraries &amp; Beyond</label></li>
                     <p class="search-more"><a href="/catalog/" id="books-media-search-more">More search options</a> &raquo;</p>
+                    <input type="hidden" class="tab" name="tab" value="books and media" />
                 </div>
             </form>
         </div>
 
         <!-- Website -->
-        <div class="content" id="search-4">
+        <div class="content" id="our-website">
             <form accept-charset="utf-8" method="get" action="//search.lib.ncsu.edu/website" id="websitesearch">
                 <input type="search" id="searchweb" value="" name="q" class="main-search-field" placeholder="Search the library website" title="Search the library website">
                 <input type="submit" class="front-page-submit button small prefix" id="web-submit" value="SEARCH" />
+                <input type="hidden" class="tab" name="tab" value="website" />
                 <p class="search-example">Example: Borrow a Laptop</p>
             </form>
         </div>
