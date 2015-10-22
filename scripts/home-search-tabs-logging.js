@@ -1,7 +1,7 @@
 jQuery(function($){
     // Everything below is logging that was initially built out by Jason Walsh
     $("#searcheverything").submit(function() {
-        var selectedtab = $(".tabs dd").hasClass('active').data('tab');
+        var selectedtab = $("dl.tabs dd").hasClass('active').data('tab');
         var searchterm = $("#searchall").val();
         $.ajax({
             url: "/website/log/homepage_search_tabs_logger.php",
@@ -14,7 +14,7 @@ jQuery(function($){
         });
     });
     $("#search-articles-summon").submit(function() {
-        var selectedtab = $(".tabs dd").hasClass('active').data('tab');
+        var selectedtab = $("dl.tabs dd").hasClass('active').data('tab');
         var searchterm = $("#searcharticle").val();
         $.ajax({
             url: "/website/log/homepage_search_tabs_logger.php",
@@ -27,7 +27,7 @@ jQuery(function($){
         });
     });
     $("#searchbooksform").submit(function() {
-        var selectedtab = $(".tabs dd").hasClass('active').data('tab');
+        var selectedtab = $("dl.tabs dd").hasClass('active').data('tab');
         var searchterm = $("#Ntt").val();
         $.ajax({
             url: "/website/log/homepage_search_tabs_logger.php",
@@ -40,7 +40,7 @@ jQuery(function($){
         });
     });
     $("#websitesearch").submit(function() {
-        var selectedtab = $(".tabs dd").hasClass('active').data('tab');
+        var selectedtab = $("dl.tabs dd").hasClass('active').data('tab');
         var searchterm = $("#searchweb").val();
         $.ajax({
             url: "/website/log/homepage_search_tabs_logger.php",
