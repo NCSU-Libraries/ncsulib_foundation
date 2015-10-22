@@ -1,7 +1,7 @@
 jQuery(function($){
     // Everything below is logging that was initially built out by Jason Walsh
     $("#searcheverything").submit(function() {
-        var selectedtab = $(".ui-tabs-selected").text();
+        var selectedtab = $(".tabs dd").hasClass('active').data('tab');
         var searchterm = $("#searchall").val();
         $.ajax({
             url: "/website/log/homepage_search_tabs_logger.php",
