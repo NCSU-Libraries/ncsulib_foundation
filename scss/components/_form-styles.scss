@@ -59,6 +59,12 @@ form.webform-client-form{
 	.views-exposed-form .views-exposed-widget .form-submit{
 	    margin-top: 1.85rem;
 	}
+
+	.form-actions{
+		input{
+			margin-right: 20px;
+		}
+	}
 }
 
 /*arrange form module overrides*/
@@ -68,3 +74,4 @@ form.webform-client-form{
         width: auto;
     }
 }
+
