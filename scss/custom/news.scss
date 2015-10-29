@@ -1,0 +1,331 @@
+$include-html-classes: false;
+@import "foundation/components/global";
+@import "foundation/components/grid";
+@import "base/init_for_custom";
+
+
+// drupal tabs should be below nav hover
+ul.tabs.primary{
+    // display: none;
+    z-index: 0;
+}
+
+#news-title{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#post-content{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+#content {
+
+    #main-content{
+
+        .news-block_3{
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px 10px 0px;
+
+            h2{
+                padding-top: 10px;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+
+            .related-news-item{
+                h2{
+                    font-size: 1.2rem;
+                    font-weight: normal;
+                }
+            }
+        }
+
+        #post-sidebar{
+            // margin-top: -20px;
+
+            h2{
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+
+            #tags{
+                margin-bottom: 20px;
+
+                h2{
+                    padding-top: 0px;
+                }
+            }
+
+            .field-items{
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+            .field-item{
+                float: left;
+                margin-right: 3px;
+            }
+            .field-item:after{
+                content: ',';
+            }
+            .field-item:last-child:after{
+                content: '';
+            }
+
+            .news-block_4{
+                h2{
+                    // padding-top: 0px;
+                }
+            }
+
+            .upcoming_events-block_8{
+                // @include grid-column(4, $float: left);
+                padding-left: 0px;
+
+                @media #{$small-only} {
+                    width: 100%;
+                }
+
+                h4,h3,h5{
+                    padding-top: 0px;
+                }
+
+                h5{
+                    font-size: 1rem;
+                    margin-bottom: 3px;
+                }
+
+                .workshop-date{
+                    float: left;
+                    padding-left: 0px;
+                    width: 17%;
+                }
+                .workshop-month{
+                    padding: 4px 0px;
+                }
+                .workshop-day{
+                    padding: 8px 0px 4px;
+
+                    h2{
+                        font-size: 2rem;
+                        padding-top: 0px;
+                    }
+                }
+                .event-info{
+                    float: left;
+                }
+            }
+        }
+
+        #meta{
+            margin-bottom: 10px;
+
+
+            #social{
+                margin-bottom: 20px;
+                text-align: right;
+
+                a#fb-share-button{
+                    color: #48649F;
+                }
+                a#tw-share-button{
+                    color: #659FCB;
+                }
+                a#email-button{
+                    color: #cc0000;
+                }
+                a#fb-share-button:hover,
+                a#tw-share-button:hover,
+                a#email-button:hover{
+                    color: #555;
+                }
+
+                h2{
+                    padding-top: 0px;
+                }
+            }
+
+            #post-date{
+                float: left;
+            }
+
+            // Individual blog posts
+            .user-details{
+                margin-bottom: 5px;
+            }
+        }
+
+
+        #feature-photo{
+            margin-bottom: 35px;
+
+            img{
+                width: 100%;
+            }
+
+            small{
+                display: block;
+                margin-top: 7px;
+            }
+        }
+
+        .caption{
+            small{
+                float: left;
+                margin-top: 5px;
+                width: 100%;
+            }
+        }
+
+        .left-image{
+            float: left;
+
+            img{
+                width: 100%;
+            }
+        }
+        .right-image{
+            float: right;
+
+            img{
+                width: 100%;
+            }
+        }
+        .center-image{
+            margin-bottom: 20px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+
+        .caption-text{
+            // float:left;
+            margin-bottom: 0px;
+            // padding: 0px 2%;
+            // width: 96%;
+        }
+
+        // // .add-caption{
+        //     display: block;
+        //     padding-bottom: 10px;
+
+        //     &.alignLeft{
+        //         float: left;
+        //         padding-right: 20px;
+        //     }
+        //     &.alignRight{
+        //         float: right;
+        //         padding-left: 20px;
+        //     }
+
+        //     p{
+        //         margin-bottom: 10px;
+        //     }
+
+        // }
+    }
+
+    #news-title{
+        text-align: center;
+        text-transform: uppercase;
+
+        a{
+            color: #555;
+            font-weight: bold;
+        }
+
+        a:hover{
+            text-decoration: none;
+            color: #cc0000;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+// NAV
+#news-nav{
+
+    &.top-bar, &.top-bar.expanded{
+
+        background: none;
+
+        @media #{$small-only} {
+            background: #383838;
+
+            ul{
+                background: #383838;
+                a{
+                    background: #383838;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .top-bar-section{
+        @media #{$medium-up} {
+            background: none;
+
+            ul{
+                background: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                z-index: 1;
+
+                li{
+                    background: none;
+
+                    a{
+                        background: none;
+                        color: #555;
+                        font-size: 1rem;
+                    }
+
+                    a:after{
+                        border-color: rgba(204, 0, 0, 1) transparent transparent;
+                    }
+
+                    ul.dropdown{
+                        border: 1px solid #555;
+                        background: #f5f5f5;
+                        padding: 1px;
+
+                        li{
+                            a{
+                                // color: #fff;
+                            }
+                        }
+                    }
+
+                    ul.dropdown:before{
+                        width: 0px;
+                        height: 0px;
+                        border-style: solid;
+                        border-width: 10px 15px 10px 0;
+                        border-color: transparent #dd4397 transparent transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
