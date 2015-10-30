@@ -183,7 +183,7 @@ $include-html-classes: false;
             color: #fff;
             margin-left: -50%;
             margin-bottom: 65px;
-            padding: 0px 50% 1px;
+            padding: 10px 50% 11px;
             width: 200%;
 
             h2{
@@ -202,13 +202,17 @@ $include-html-classes: false;
                 padding: 0px 0px 20px 0px;
             }
         }
+    }
+
+    .above-footer{
+        margin-bottom: -29px;
 
         #news-form-buttons{
             background: #cc0000;
             color: #fff;
             margin-left: -50%;
-            margin-bottom: 0px;
-            padding: 0px 50% 1px;
+            margin-bottom: -51px;
+            padding: 10px 50% 11px;
             width: 200%;
 
             h2{
