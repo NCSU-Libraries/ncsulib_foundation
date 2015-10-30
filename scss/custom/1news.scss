@@ -153,8 +153,8 @@ $include-html-classes: false;
                 width: 100%;
             }
 
-            h4,h2,h5{
-                padding-top: 0px;
+            h2{
+                margin-bottom: 20px;
             }
 
             h5{
@@ -170,14 +170,22 @@ $include-html-classes: false;
             .workshop-date{
                 float: left;
                 padding-left: 0px;
-                width: 22%;
+                width: 20%;
                 margin-top: 0px;
+
+                h4,h2,h5{
+                    padding-top: 0px;
+                }
             }
             .workshop-month{
                 padding: 4px 0px;
             }
             .workshop-day{
                 padding: 4px 0px;
+
+                h2{
+                    margin-bottom: 0px;
+                }
             }
             .event-info{
                 float: left;
