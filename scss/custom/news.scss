@@ -128,34 +128,45 @@ ul.tabs.primary{
 
         #meta{
             margin-bottom: 10px;
+            margin-top: 30px;
 
 
             #social{
                 margin-bottom: 20px;
                 text-align: right;
 
-                a#fb-share-button{
-                    color: #48649F;
-                }
-                a#tw-share-button{
-                    color: #659FCB;
-                }
-                a#email-button{
-                    color: #cc0000;
-                }
-                a#fb-share-button:hover,
-                a#tw-share-button:hover,
-                a#email-button:hover{
-                    color: #555;
+                h4{
+                    font-size: 0.9rem;
+                    // font-weight: bold;
+                    float: right;
+                    padding-top: 8px;
+                    margin-right: 9px;
+                    margin-bottom: 0px;
                 }
 
-                h2{
-                    padding-top: 0px;
+                #social-btns{
+                    float: right;
+
+                    a#fb-share-button{
+                        color: #48649F;
+                    }
+                    a#tw-share-button{
+                        color: #659FCB;
+                    }
+                    a#email-button{
+                        color: #cc0000;
+                    }
+                    a#fb-share-button:hover,
+                    a#tw-share-button:hover,
+                    a#email-button:hover{
+                        color: #555;
+                    }
                 }
             }
 
             #post-date{
                 float: left;
+                padding-top: 16px;
             }
 
             // Individual blog posts

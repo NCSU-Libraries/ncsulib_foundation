@@ -22,16 +22,18 @@
         <?php endif; ?>
         <div id="meta" class="row">
             <div class="columns medium-6">
-                <?php print $name; ?>
+                <?=  '';//$name; ?>
                 <div id="post-date"><small><?php print date('F j, Y',strtotime(format_date($node->created, 'page'))); ?></small></div>
             </div>
             <div class="columns medium-6 left">
                 <div id="social">
-                    <!-- <h2 class="subheader">Share</h2> -->
-                    <a id="fb-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-                    <a id="tw-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-                    <!-- <a id="gplus-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-google-plus-square fa-2x"></i></a> -->
-                    <a id="email-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-envelope-square fa-2x"></i></a>
+                    <div id="social-btns">
+                        <a id="fb-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        <a id="tw-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                        <!-- <a id="gplus-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-google-plus-square fa-2x"></i></a> -->
+                        <a id="email-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-envelope-square fa-2x"></i></a>
+                    </div>
+                    <h4 class="subheader">Share</h4>
                 </div>
             </div>
         </div>
