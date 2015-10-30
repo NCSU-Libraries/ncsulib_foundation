@@ -144,9 +144,9 @@
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt.jpg" title="&copy; Jeff Goldberg/ESTO" alt="The James B. Hunt Jr. Library" width="100%">
                         </a>
                     </div>
-                    <h3>
+                    <h2>
                         <a href="/huntlibrary/" id="story-1-heading">James B. Hunt Jr. Library</a>
-                    </h3>
+                    </h2>
 
                     <ul class="unstyle-list hunt-list">
                         <li><a href="/huntlibrary/#storify" class="styled story-1-link">Hunt Library on Storify</a></li>
@@ -158,15 +158,16 @@
                 </div>
 
                 <div id="story-2" class="library-stories">
-                    <h3><a href="/stories" id="story-2-heading">Featured Library Story</a></h3>
+                    <!-- <h3><a href="/stories" id="story-2-heading">Featured Library Story</a></h3> -->
                     <div class="story-photo">
-                        <a href="/stories/women-stem-build-community-and-circuits-e-textiles-workshop" id="story-2-photo">
-                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/women-stem.png" alt="NC State University Library Stories" width="100%" />
+                        <a href="/stories/using-visualization-teaching-modern-look-medieval-bayeux-tapestry" id="story-2-photo">
+                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/Bayeux-Tapestry-2.jpg" alt="closeup of the original bayeux tapestry" width="100%" />
                         </a>
                     </div>
-                    <h2><a href="/stories/women-stem-build-community-and-circuits-e-textiles-workshop">Women in STEM Build Community (and Circuits) in E-Textiles Workshop</a></h2>
-                    <!-- <p>"The library has the best creative collaboration and presentation spaces on campus."</p> -->
-                    <p><a class="styled" href="/stories/women-stem-build-community-and-circuits-e-textiles-workshop">Learn More</a></p>
+                    <div id="story-2-content">
+                        <h2><a href="/stories/using-visualization-teaching-modern-look-medieval-bayeux-tapestry">Using Visualization in Teaching: A Modern Look at the Medieval Bayeux Tapestry</a></h2>
+                        <p><a class="styled" href="/stories/using-visualization-teaching-modern-look-medieval-bayeux-tapestry">Learn More</a></p>
+                    </div>
                 </div>
 
                 <div id="happenings">

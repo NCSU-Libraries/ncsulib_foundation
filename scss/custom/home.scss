@@ -695,7 +695,7 @@ $include-html-classes: false;
 	margin-bottom: emCalc(0);
 }
 
-#content #story-1, #content #story-2{
+#content #main-content #story-1, #content #main-content #story-2{
 	@include grid-column(4);
 	margin-bottom: emCalc(0);
 	padding-left: 0px;
@@ -713,7 +713,7 @@ $include-html-classes: false;
 	h2 {
 		font-size: 1.4rem;
 		line-height: 1.8rem;
-		padding-top: 0px;
+		padding-top: 5px;
 
 		// a{
 		// 	color: inherit;
@@ -724,20 +724,47 @@ $include-html-classes: false;
 		// }
 	}
 }
-#content #story-2.library-stories{
-	background: #407d94;
-	color: #FFF;
-	padding: 10px;
+#content #main-content #story-2.library-stories{
+	// background: #407d94;
+	// color: #FFF;
+	// padding: 10px;
 
 	@media #{$small-only}{
 		margin-bottom: 30px;
 	}
 
+	.story-photo{
+		margin: 0px;
+	}
+
+	#story-2-content{
+		background: #407D94;
+		padding: 20px;
+
+		h2{
+			padding: 0px;
+		}
+
+		p{
+			margin: 0px;
+
+			a{
+				display: block;
+				float: none;
+				text-align: right;
+			}
+		}
+
+		h2,h3,p,a{
+			color: #fff;
+		}
+	}
+
 	h2{
-		padding-top: 0px;
+		padding-top: 10px;
 
 		a{
-			color: #FFF;
+			// color: #FFF;
 		}
 	}
 	h3{
@@ -747,13 +774,13 @@ $include-html-classes: false;
 
 		a{
 			font-size: 1rem;
-			color: #FFF;
+			// color: #FFF;
 		}
 	}
 
 	p{
 		a{
-			color: #fff;
+			// color: #fff;
 			float: right;
 
 			i{
