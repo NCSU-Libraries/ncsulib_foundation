@@ -32,7 +32,7 @@ var homeGA = {
         jQuery('input#article-submit').click(function() {
             jQuery('input#peer-reviewed').is(':checked') ? pro = " PRO" : pro = "";
             dropdown =  jQuery('#search-articles .display .text').text();
-            ga('send', 'event', 'Search', 'All', 'Articles ' + dropdown + pro, jQuery('input#searcharticle').attr('value'));
+            ga('send', 'event', 'Search', 'Articles ' + dropdown + pro, jQuery('input#searcharticle').attr('value'));
             homeGA.pause();
         });
 
