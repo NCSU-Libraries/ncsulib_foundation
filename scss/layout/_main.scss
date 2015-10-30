@@ -148,7 +148,7 @@ main {
 html #content{
     background: #FFF;
     margin: 0px;
-    padding: rem-calc(50 0 30 0);
+    padding: rem-calc(50 0 50 0);
 
     @media #{$small-only}{
         padding-top: rem-calc(20);
