@@ -25,13 +25,8 @@
                     <p class="location-title"><?= $json[0]->library_name; if($json[0]->library_name == 'D. H. Hill Library' || $json[0]->library_name == 'James B. Hunt Jr. Library'){echo '*';}?></p>
                 </li>
                 <li class="availability">
-                <?php if($json[0]->library_name == 'D. H. Hill Library' || $json[0]->library_name == 'James B. Hunt Jr. Library'): ?>
-                    <div class="hstatus closed">Closed</div>
-                    <div class="time">Opens at 9am</div>
-                <?php else: ?>
                     <div class="hstatus <?= $json[0]->open_display; ?>"><?= $json[0]->open_display; ?></div>
                     <div class="time"><?= $json[0]->real_time_display; ?></div>
-                <?php endif; ?>
                 </li>
             </ul>
         </a>
