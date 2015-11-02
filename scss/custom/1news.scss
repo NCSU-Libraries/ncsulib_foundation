@@ -302,6 +302,24 @@ $include-html-classes: false;
                 padding: 5px 0px;
             }
         }
+
+        a.news-button{
+            display: block;
+            border: 1px solid #ccc;
+            background: #f5f5f5;
+            color: #990000;
+            padding: 14px;
+
+        }
+        a.news-button:after {
+            content: "\f105";
+            color: #990000;
+            font-family: FontAwesome;
+            font-size: 1.2rem;
+            right: 11px;
+            position:absolute;
+            top:11px;
+         }
     }
 }
 
