@@ -1,6 +1,9 @@
 var news = {
     num : 0,
     init : function(){
+
+        console.log(getURLsegment(2));
+
         // imported news captions
         news.cap = $('.caption').data('caption');
         $('.caption').append('<small>'+news.cap+'</small>');
@@ -68,6 +71,12 @@ var news = {
 
             e.preventDefault();
         })
+    },
+
+    getURLsegment : function(num){
+        var pathArray = window.location.pathname.split( '/' );
+
+        return pathArray[num];
     }
 }
 
