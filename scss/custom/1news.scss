@@ -332,9 +332,11 @@ $include-html-classes: false;
             }
 
             .views-exposed-widget.views-submit-button{
+                padding: 0px;
+                width: 10%;
+
                 input{
                     margin-top: 0px;
-                    width: 10%;
                 }
                 input:after{
                     content: "\f105";
