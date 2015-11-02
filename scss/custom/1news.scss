@@ -220,6 +220,10 @@ $include-html-classes: false;
                 padding: 0px 0px 0px 0px;
             }
         }
+
+        .pager{
+            padding-top: 60px;
+        }
     }
 
     .above-footer{
@@ -264,20 +268,18 @@ $include-html-classes: false;
                 }
             }
 
-            #archive{
-                a{
-                    background: #fff;
-                    color: #cc0000;
-                    opacity: 1;
-                }
+            // #archive{
+            //     a{
+            //         background: #fff;
+            //         color: #cc0000;
+            //         opacity: 1;
+            //     }
 
                 select#archive-select{
-                    // background: #FFF;
                     border: 0px;
                     height: 50px;
-                    // position: relative;
                 }
-            }
+            // }
         }
     }
 
