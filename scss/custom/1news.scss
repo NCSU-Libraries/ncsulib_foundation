@@ -327,17 +327,23 @@ $include-html-classes: false;
 
                 input{
                     margin-bottom: 0px;
-                    width: 100%;
+                    width: 90%;
                 }
             }
 
             .views-exposed-widget.views-submit-button{
                 input{
                     margin-top: 0px;
+                    width: 10%;
                 }
                 input:after{
-                    font-family: FontAwesome;
                     content: "\f105";
+                    color: #990000;
+                    font-family: FontAwesome;
+                    font-size: 1.2rem;
+                    right: 11px;
+                    position:absolute;
+                    top:11px;
                 }
             }
         }
