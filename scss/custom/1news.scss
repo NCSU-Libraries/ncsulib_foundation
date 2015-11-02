@@ -339,9 +339,11 @@ $include-html-classes: false;
                 width: 10%;
 
                 input{
+                    font-family: FontAwesome;
                     margin-top: 0px;
                     padding: 0px;
                     height: 50px;
+                    width: 41px;
                 }
                 input:after{
                     content: "\f105";
