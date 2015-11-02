@@ -2,8 +2,6 @@ var news = {
     num : 0,
     init : function(){
 
-        console.log(getURLsegment(2));
-
         // imported news captions
         news.cap = $('.caption').data('caption');
         $('.caption').append('<small>'+news.cap+'</small>');
@@ -24,6 +22,11 @@ var news = {
 
         news.activateSocial();
         news.activateArchive();
+        news.setArchiveSelect();
+    },
+
+    setArchiveSelect : function(){
+        $('#archive-select').val(news.getURLsegment(3));
     },
 
     activateArchive : function(){
