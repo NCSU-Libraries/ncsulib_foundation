@@ -323,11 +323,13 @@ $include-html-classes: false;
 
         #views-exposed-form-News-page-2{
             #edit-title-wrapper{
+                float: left;
                 padding-right: 0px;
+                width: 90%;
 
                 input{
                     margin-bottom: 0px;
-                    width: 90%;
+                    width: 100%;
                 }
             }
 
