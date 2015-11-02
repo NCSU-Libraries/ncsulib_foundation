@@ -333,8 +333,11 @@ $include-html-classes: false;
 
             .views-exposed-widget.views-submit-button{
                 input{
-                    font-family: FontAwesome;
                     margin-top: 0px;
+                }
+                input:after{
+                    font-family: FontAwesome;
+                    content: "\f105";
                 }
             }
         }
