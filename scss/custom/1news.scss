@@ -306,7 +306,7 @@ $include-html-classes: false;
         a.news-button{
             display: block;
             border: 1px solid #ccc;
-            background: #f5f5f5;
+            background: #f3f3f3;
             color: #990000;
             padding: 14px;
 
@@ -319,7 +319,24 @@ $include-html-classes: false;
             right: 11px;
             position:absolute;
             top:11px;
-         }
+        }
+
+        #views-exposed-form-News-page-2{
+            #edit-title-wrapper{
+                padding-right: 0px;
+
+                input{
+                    margin-bottom: 0px;
+                    width: 100%;
+                }
+            }
+
+            .views-exposed-widget.views-submit-button{
+                input{
+                    margin-top: 0px;
+                }
+            }
+        }
     }
 }
 
