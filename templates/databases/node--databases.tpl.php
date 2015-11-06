@@ -22,15 +22,15 @@
 
 
     <div class="columns medium-6 push-3">
-      <?= render($content); ?>
-    </div>
-    <aside class="columns medium-3 pull-6">
         <?php if ($title): ?>
             <?php print render($title_prefix); ?>
                 <h1 id="page-title" class="title"><?php print $title; ?></h1>
             <?php print render($title_suffix); ?>
         <?php endif; ?>
 
+      <?= render($content); ?>
+    </div>
+    <aside class="columns medium-3 pull-6">
         <?= render($content['field_librarian']); ?>
     </aside>
     <div class="columns medium-3">
