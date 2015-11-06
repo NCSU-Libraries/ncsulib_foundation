@@ -29,7 +29,7 @@
     <div class="columns medium-6 push-3">
       <?= render($content); ?>
     </div>
-    <aside class="columns medium-3 pull-3">
+    <aside class="columns medium-3 pull-6">
         <?php
             print render($content['field_librarian']);
         ?>
