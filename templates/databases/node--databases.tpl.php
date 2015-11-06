@@ -31,12 +31,12 @@
     </div>
     <aside class="columns medium-3 pull-3">
         <?php
-            render($content['field_librarian']);
+            print render($content['field_librarian']);
         ?>
     </aside>
     <div class="columns medium-3">
         <?php
-            render($content['field_open_tagging']);
+            print render($content['field_open_tagging']);
         ?>
     </div>
 
