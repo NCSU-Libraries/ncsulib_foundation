@@ -1,9 +1,4 @@
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <?php if ($title): ?>
-      <?php print render($title_prefix); ?>
-          <h1 id="page-title" class="title"><?php print $title; ?></h1>
-      <?php print render($title_suffix); ?>
-  <?php endif; ?>
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
@@ -30,9 +25,13 @@
       <?= render($content); ?>
     </div>
     <aside class="columns medium-3 pull-6">
-        <?php
-            print render($content['field_librarian']);
-        ?>
+        <?php if ($title): ?>
+            <?php print render($title_prefix); ?>
+                <h1 id="page-title" class="title"><?php print $title; ?></h1>
+            <?php print render($title_suffix); ?>
+        <?php endif; ?>
+
+        <?= render($content['field_librarian']); ?>
     </aside>
     <div class="columns medium-3">
         <?php
