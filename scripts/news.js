@@ -6,7 +6,7 @@ var news = {
         news.cap = $('.caption').data('caption');
         $('.caption').append('<small>'+news.cap+'</small>');
 
-        $('#main-content #post-content div.left-image,#main-content #post-content div.center-image,#main-content #post-content div.right-image').each(function(){
+        $('#main-content #post-content .left-image,#main-content #post-content .center-image,#main-content #post-content .right-image').each(function(){
             news.num++;
 
             // add classes
