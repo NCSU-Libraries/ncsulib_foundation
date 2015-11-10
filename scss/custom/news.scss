@@ -214,27 +214,30 @@ ul.tabs.primary{
             }
         }
 
-        .left-image{
-            float: left;
+        // .left-image{
+        //     width: 100%;
 
-            img{
-                width: 100%;
-            }
-        }
-        .right-image{
-            float: right;
+        //     img{
+        //         float: left;
+        //         width: 50%;
+        //     }
+        // }
+        // .right-image{
+        //     width: 100%;
 
-            img{
-                width: 100%;
-            }
-        }
-        .center-image{
-            margin-bottom: 20px;
+        //     img{
+        //         float: right;
+        //         width: 50%;
+        //     }
+        // }
+        // .center-image{
+        //     width: 100%;
 
-            img{
-                width: 100%;
-            }
-        }
+        //     img{
+        //         margin-bottom: 20px;
+        //         width: 100%;
+        //     }
+        // }
 
 
         .caption-text{

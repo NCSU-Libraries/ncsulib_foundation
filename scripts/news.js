@@ -6,17 +6,16 @@ var news = {
         news.cap = $('.caption').data('caption');
         $('.caption').append('<small>'+news.cap+'</small>');
 
-        $('#main-content #post-content .left-image,#main-content #post-content .center-image,#main-content #post-content .right-image').each(function(){
-            news.num++;
+        $('#main-content #post-content p.left-image,#main-content #post-content p.center-image,#main-content #post-content p.right-image').each(function(){
 
             // add classes
             var caption = $(this).find('img').attr('alt');
             if(caption != ''){
-                console.log(caption)
-                var capClass = 'caption-'+news.num;
                 // get float direction
                 var classes = $(this).attr('class');
-                $(this).append('<p class="caption-text"><small>'+caption+'</small></p>');
+                var alignmentClass = $(this).attr('class');
+                $(this).find('img').wrap('<div class="caption-wrap"></div>');
+                $(this).find('.caption-wrap').append('<span class="caption-text"><small>'+caption+'</small></span>').addClass('div-'+alignmentClass);
             }
         })
 

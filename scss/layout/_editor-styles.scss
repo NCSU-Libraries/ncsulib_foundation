@@ -14,18 +14,58 @@ p.caption {
     }
 }
 
-.float-right, .flow-right, .right-image {
+.float-right,
+.flow-right,
+div.right-image {
     float: right;
     margin-left: rem-calc(20);
     margin-bottom: 20px;
 }
-.float-left, .flow-left, .left-image {
+.float-left,
+.flow-left,
+.left-image {
     float: left;
     margin-right: rem-calc(20);
     margin-bottom: 20px;
 }
-.right-image, .left-image{
+p.float-left,
+p.flow-left,
+p.left-image{
+    float: none;
+}
+div.right-image,
+img.right-image,
+div.left-image,
+img.left-image{
     max-width: 50%
+}
+
+.caption-wrap.div-left-image{
+    float: left;
+    margin: 25px 25px 25px 0px;
+    width: 50%;
+
+    img{
+        width: 100%;
+    }
+}
+.caption-wrap.div-right-image{
+    float: right;
+    margin: 25px 0px 25px 25px;
+    width: 50%;
+
+    img{
+        width: 100%;
+    }
+}
+.caption-wrap.div-center-image{
+    float: left;
+    margin: 25px 0px;
+    width: 100%;
+
+    img{
+        width: 100%;
+    }
 }
 
 .featured-image {
