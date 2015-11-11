@@ -10,13 +10,16 @@ var news = {
 
             // add classes
             var caption = $(this).find('img').attr('alt');
+            var alignmentClass = $(this).attr('class');
+
+            // wrap image in div
+            $(this).find('img').wrap('<div class="caption-wrap"></div>');
+
+            // add caption if it exists
             if(caption != ''){
-                // get float direction
-                var classes = $(this).attr('class');
-                var alignmentClass = $(this).attr('class');
-                $(this).find('img').wrap('<div class="caption-wrap"></div>');
                 $(this).find('.caption-wrap').append('<span class="caption-text"><small>'+caption+'</small></span>').addClass('div-'+alignmentClass);
             }
+
         })
 
         news.activateSocial();
