@@ -368,19 +368,20 @@ $body-font-size-small-screen: rem-calc(15);
 
       .project-author {
         @media #{$small-only} {display: none;}
-        @include grid-column($columns:7);
+        @include grid-column($columns:12);
         padding-left: 0px;
 
         .user-info {
-            @include grid-column($columns:12);
+            @include grid-column($columns:4);
             padding-left: 0px;
 
             .user-photo{
-                @include grid-column($columns:3);
+                @include grid-column($columns:8);
                 padding-left: 0px;
+                margin-bottom: 10px;
             }
             .user-details {
-                @include grid-column($columns:8);
+                @include grid-column($columns:12);
                 font-size: 1.7em;
                 padding-left: 0px;
 

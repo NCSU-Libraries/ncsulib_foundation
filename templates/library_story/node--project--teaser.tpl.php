@@ -14,7 +14,6 @@
 </div>
 
 <div class="project-content">
-
     <div class="centering-container">
         <div class="title-container">
             <a href="<?php print $node_url; ?>" class="project-title" >
@@ -28,7 +27,7 @@
 
     <div class="project-details">
         <div class="project-author">
-            <?php print $name; ?>
+            <?php print render($content['field_story_lead']); ?>
         </div>
 <!--         <div class="project-meta">
             <a href="<?php print $node_url; ?>" class="read-more">Read more &rarr;</a>
