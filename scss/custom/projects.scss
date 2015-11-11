@@ -246,7 +246,7 @@ $body-font-size-small-screen: rem-calc(15);
         .views-row {
             @include grid-row();
             border-bottom: 1px solid #ccc;
-            padding: 3.25rem 0px;
+            padding: 3.25rem 0px 25px;
             margin-bottom: rem-calc(0);
 
             @media #{$small-only} {
