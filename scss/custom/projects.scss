@@ -373,6 +373,7 @@ $body-font-size-small-screen: rem-calc(15);
 
         .user-info {
             @include grid-column($columns:4);
+            height: 210px;
             padding-left: 0px;
 
             .user-photo{
@@ -384,6 +385,7 @@ $body-font-size-small-screen: rem-calc(15);
                 @include grid-column($columns:12);
                 font-size: 1.7em;
                 padding-left: 0px;
+                padding-right: 0px;
 
                 .user-name {
                     line-height: 1;
