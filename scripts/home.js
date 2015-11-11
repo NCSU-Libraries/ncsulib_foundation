@@ -15,8 +15,6 @@ var home = {
             e.preventDefault();
         })
 
-        // ^(?:(?:doi:?\s*|(?:http:\/\/)?(?:dx\.)?(?:doi\.org)?\/))?(10(?:\.\d+){1,2}\/\S+)$
-
     },
 
     submitForm : function(){
