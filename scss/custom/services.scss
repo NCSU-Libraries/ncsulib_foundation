@@ -58,14 +58,6 @@ $include-html-classes: false;
                     background: none;
                 }
 
-                .medium-block-grid-2{
-                    li{
-                        a{
-                            padding-bottom: 0px;
-                        }
-                    }
-                }
-
                 h2{
                     height: auto;
 
@@ -87,6 +79,12 @@ $include-html-classes: false;
 
             li:nth-child(2){
                 padding-left: 15px;
+            }
+        }
+
+        ol.medium-block-grid-2{
+            a{
+                padding-bottom: 0px;
             }
         }
     }
