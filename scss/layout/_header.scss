@@ -33,7 +33,7 @@ body.nav-open{
 
 header{
 
-    margin-top: -3px; /* fix the spacing problem with the University nav iframe */
+    margin-top: 0px; /* fix the spacing problem with the University nav iframe */
     background: $primary-color;
 
     .top-bar{
@@ -144,6 +144,7 @@ header{
         }
 
         .top-bar-section{
+            height: $topbar-height;
 
             @media #{$small-only} {
                 padding-right: rem-calc(0);
@@ -152,6 +153,7 @@ header{
             ul.primary-nav{
                 background: $topbar-dropdown-bg;
                 float: right;
+                height: $topbar-height;
 
                 @media #{$small-only} {
                     background: $primary-color;
@@ -161,6 +163,7 @@ header{
 
                 li{
                     background: $primary-color;
+                    height: $topbar-height;
 
                     @media #{$small-only} {
                         border: none;
@@ -173,8 +176,7 @@ header{
                     background: $primary-color;
                     color: #FFF;
                     font-size: 1em;
-                    line-height: 3.5em;
-                    margin-top: 12px;
+                    margin-top: 5px;
                     text-transform: uppercase;
 
                     // hack for ipad
