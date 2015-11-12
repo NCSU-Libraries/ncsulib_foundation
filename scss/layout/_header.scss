@@ -44,31 +44,35 @@ header{
             text-decoration: none;
         }
 
-        .title-area .name{
-            padding-left: rem-calc(15);
-            padding-top: rem-calc(0);
-            width: 348px;
+        .title-area {
+            z-index: 1;
 
-            @media #{$small-only}{
-                float: left;
-                width: rem-calc(200);
-            }
-
-            @media #{$medium-only} {
-                width: 230px;
-            }
-
-            @media #{$large-up} {
+            .name{
+                padding-left: rem-calc(15);
+                padding-top: rem-calc(0);
                 width: 348px;
-            }
 
-            a{
-                display: inline;
-                height: 100%;
-            }
+                @media #{$small-only}{
+                    float: left;
+                    width: rem-calc(200);
+                }
 
-            img{
-                display: inline;
+                @media #{$medium-only} {
+                    width: 230px;
+                }
+
+                @media #{$large-up} {
+                    width: 348px;
+                }
+
+                a{
+                    display: inline;
+                    height: 100%;
+                }
+
+                img{
+                    display: inline;
+                }
             }
         }
 
