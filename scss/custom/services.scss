@@ -84,7 +84,7 @@ $include-html-classes: false;
 
         ol.medium-block-grid-2{
             li{
-                > a{
+                > a:last-child{
                     padding-bottom: 0px;
                 }
             }
