@@ -1,7 +1,7 @@
 var cc = {
     num : 0,
 
-    queue : ['ref-desk', 'nc-knows'],
+    queue : ['ref-desk', 'nca-ncsu'],
 
     show_presence : function() {
         var url = 'https://libraryh3lp.com/chat/'+cc.item+'@chat.libraryh3lp.com';
