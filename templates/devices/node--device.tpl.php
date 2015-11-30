@@ -6,11 +6,14 @@
  * Date: July 2013
  *
  */
+drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/device-availability.js');
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if ($content['field_technology_category']): ?>
     <?php
       $category = field_get_items('node', $node, 'field_technology_category');
+      $catkey = field_get_items('node', $node, 'field_catkey');
+      $catkey = $catkey[0]['value'];
       $category_name = field_view_value('node', $node, 'field_technology_category', $category[0]);
       $category_alias = drupal_lookup_path('alias', 'node/'. $category[0]['target_id']);
 
@@ -39,7 +42,7 @@
   <?php print render($title_suffix); ?>
 
 
-  <div class="content"<?php print $content_attributes; ?>>
+  <div class="content"<?= $content_attributes ?> data-catkey="<?= $catkey ?>">
     <?php print render($content['field_device_image']); ?>
     <div class="left-part">
       <?php print render($content['field_request_form_url']); ?>
