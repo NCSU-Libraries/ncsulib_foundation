@@ -6,23 +6,6 @@ var news = {
         news.cap = $('.caption').data('caption');
         $('.caption').append('<small>'+news.cap+'</small>');
 
-        $('#main-content #post-content p.left-image,#main-content #post-content p.center-image,#main-content #post-content p.right-image').each(function(){
-
-            // add classes
-            var caption = $(this).find('img').attr('alt');
-            var alignmentClass = $(this).attr('class');
-
-            // wrap image in div
-            $(this).find('img').wrap('<div class="caption-wrap"></div>');
-            $(this).find('.caption-wrap').addClass('div-'+alignmentClass);
-
-            // add caption if it exists
-            if(caption != ''){
-                $(this).find('.caption-wrap').append('<span class="caption-text"><small>'+caption+'</small></span>');
-            }
-
-        })
-
         news.activateSocial();
         news.activateArchive();
         news.setArchiveSelect();

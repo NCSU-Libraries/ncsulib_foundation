@@ -233,7 +233,6 @@ $include-html-classes: false;
 
         #news-form-buttons{
             background: #cc0000;
-            color: #fff;
             margin-left: -50%;
             margin-bottom: -71px;
             padding: 30px 50% 40px;
@@ -245,6 +244,8 @@ $include-html-classes: false;
 
             ul{
                 li{
+                    color: #fff;
+
                     a{
                         color: #fff;
                     }
@@ -280,6 +281,40 @@ $include-html-classes: false;
                 select#archive-select{
                     border: 0px;
                     height: 50px;
+                }
+            }
+        }
+
+        #mc_embed_signup{
+
+            form{
+                padding: 0px;
+
+                label h2{
+                    font-size: 1.875rem;
+                    font-weight: normal;
+                }
+
+                #mce-EMAIL{
+                    padding-left: 10px;
+                    width: 100%;
+                }
+
+                input#mc-embedded-subscribe.button{
+                    background: #fff;
+                    border-radius: 0px;
+                    color: #cc0000;
+                    font-family: FontAwesome;
+                    font-weight: normal;
+                    opacity: 1;
+                    min-width: 0px;
+                    width: 100%;
+                }
+                input#mc-embedded-subscribe.button:after{
+                    color: #cc0000;
+                    content: "\f105";
+                    font-family: FontAwesome;
+                    font-size: 1.2rem;
                 }
             }
         }
