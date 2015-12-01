@@ -142,6 +142,12 @@ function ncsulib_foundation_preprocess_page(&$variables) {
         drupal_add_js(path_to_theme() . '/scripts/vendor/foundation/foundation.topbar.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         drupal_add_js(path_to_theme() . '/scripts/news.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
+      case 'nrl':
+        drupal_add_js(path_to_theme() . '/scripts/device-availability-by-library.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        break;
+      case 'vetmed':
+        drupal_add_js(path_to_theme() . '/scripts/device-availability-by-library.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        break;
     }
 
     if (isset($url_comp[1]) && isset($url_comp[2])) {
