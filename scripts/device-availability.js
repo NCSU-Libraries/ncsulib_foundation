@@ -22,7 +22,7 @@ var device = {
                 if(key != 'TITLE'){
                     //loop through by lending period
                     $.each( val, function(lendKey, lendVal) {
-                        if(key != '2729663' && lendKey != 'EQUIP-1WK'){
+                        if(key != '2729663' && lendKey != 'EQUIP-1WK' && device.getTitle(key) != undefined){
                             str += '<tr class="building">';
                             // dont repeat building name twice
                             str += (key == oldkey) ? '<td></td>' : '<td>'+device.getTitle(key)+'</td>';
@@ -91,9 +91,6 @@ var device = {
                 break;
             case 'DESIGN':
                 return 'Harrye B. Lyons Design Library';
-                break;
-            case 'LRL':
-                return 'Learning Resource Lab';
                 break;
             default:
                 break;
