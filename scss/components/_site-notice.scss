@@ -5,10 +5,18 @@
 
     .alert-box{
         margin-bottom: 0px;
+
+        @media #{$small-only}{
+            padding-right: 0.875rem
+        }
     }
 
     .notice-icon{
         @include grid-column(1);
+
+        @media #{$small-only}{
+            display: none;
+        }
     }
     .success{
         .notice-icon:before {
@@ -33,6 +41,14 @@
             margin-top: 0px;
             padding-top: 0px;
         }
+
+        @media #{$small-only}{
+            width: 100%;
+
+            h1,h2,h3,h4,h5,h6{
+                font-size: 1.5rem;
+            }
+        }
     }
     .notice-date{
         bottom: 5px;
@@ -44,6 +60,11 @@
         p{
             font-size: 0.65rem;
             margin:0px;
+
+            h1,h2,h3,h4,h5,h6{
+            margin-top: 0px;
+            padding-top: 0px;
+        }
         }
     }
 }
