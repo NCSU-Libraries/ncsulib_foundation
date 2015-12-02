@@ -17,12 +17,16 @@ var device = {
             str += '</tr>';
             str += '</thead>';
             str += '<tbody>';
+
             $.each( data[device.catkey], function( key, val ) {
                 // loop by building
                 if(key != 'TITLE'){
                     //loop through by lending period
                     $.each( val, function(lendKey, lendVal) {
-                        if(key != '2729663' && lendKey != 'EQUIP-1WK' && device.getTitle(key) != undefined && device.getLendingPeriod(lendKey) != undefined){
+                        // strip 1 week pcs
+                        if((device.catkey == '2729663') && lendKey == 'EQUIP-1WK'){return true;}
+
+                        if(device.getTitle(key) != undefined && device.getLendingPeriod(lendKey) != undefined){
                             str += '<tr class="building">';
                             // dont repeat building name twice
                             str += (key == oldkey) ? '<td></td>' : '<td>'+device.getTitle(key)+'</td>';
