@@ -1,3 +1,4 @@
+console.log('hit')
 jQuery(function($){
 	if(!$('body').hasClass('logged-in')){
 		ga_nav.init();
@@ -7,24 +8,21 @@ jQuery(function($){
 var ga_nav = {
 	init : function(){
 		// top level nav
-		jQuery('.primary-nav li a').hover(function(e){
-			ga_nav.primary_page = jQuery(this).text();
-		})
-
 		jQuery('.primary-nav li a').click(function(e){
 			var page = jQuery(this).text();
-			ga('send', 'event', 'Global Nav', page, page);
+			ga('send', 'event', 'Global Nav', page);
 			ga_nav.pause();
 		})
 
 		jQuery('.primary-nav li a').hover(function(e){
+			ga_nav.primary_page = jQuery(this).text();
 			var page = jQuery(this).text();
 			ga('send', 'event', 'Global Nav Hover', page);
 			ga_nav.pause();
 		})
 
 		// secondary level nav
-		jQuery('.primary-nav-menus ul li a').click(function(e){
+		jQuery('#primary-nav-menus ul li a').click(function(e){
 			var page = jQuery(this).text();
 			ga('send', 'event', 'Global Nav', ga_nav.primary_page, page);
 			ga_nav.pause();
