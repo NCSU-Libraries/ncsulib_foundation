@@ -22,7 +22,7 @@ var device = {
                 if(key != 'TITLE'){
                     //loop through by lending period
                     $.each( val, function(lendKey, lendVal) {
-                        if(key != '2729663' && lendKey != 'EQUIP-1WK' && device.getTitle(key) != undefined){
+                        if(key != '2729663' && lendKey != 'EQUIP-1WK' && device.getTitle(key) != undefined && device.getLendingPeriod(lendKey) != undefined){
                             str += '<tr class="building">';
                             // dont repeat building name twice
                             str += (key == oldkey) ? '<td></td>' : '<td>'+device.getTitle(key)+'</td>';
@@ -67,9 +67,9 @@ var device = {
             case 'KIT':
                 return 'For use in space';
                 break;
-            case 'BOOK':
-                return '??';
-                break;
+            // case 'BOOK':
+            //     return '??';
+            //     break;
             default:
                 break;
         }
