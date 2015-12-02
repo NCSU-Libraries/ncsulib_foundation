@@ -22,21 +22,17 @@ var device = {
                 if(key != 'TITLE'){
                     //loop through by lending period
                     $.each( val, function(lendKey, lendVal) {
-                        str += '<tr class="building">';
-                        // dont repeat building name twice
-                        if(key == oldkey){
-                            str += '<td></td>';
-                        } else{
-                            str += '<td>'+device.getTitle(key)+'</td>';
-                        }
+                        if(key != '2729663' && lendKey != 'EQUIP-1WK'){
+                            str += '<tr class="building">';
+                            // dont repeat building name twice
+                            str += (key == oldkey) ? '<td></td>' : '<td>'+device.getTitle(key)+'</td>';
 
-                        if(!lendVal.TECHLEND){
-                            lendVal.TECHLEND = 0;
+                            if(!lendVal.TECHLEND){lendVal.TECHLEND = 0;}
+                            str += '<td>'+device.getLendingPeriod(lendKey)+'</td>';
+                            str += '<td>'+lendVal.TECHLEND+' of '+lendVal.TOTAL+'</td>';
+                            str += '</tr>';
+                            oldkey = key;
                         }
-                        str += '<td>'+device.getLendingPeriod(lendKey)+'</td>';
-                        str += '<td>'+lendVal.TECHLEND+' of '+lendVal.TOTAL+'</td>';
-                        str += '</tr>';
-                        oldkey = key;
                     });
                 }
             });
