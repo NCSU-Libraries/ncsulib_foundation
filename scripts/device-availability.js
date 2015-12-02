@@ -4,7 +4,7 @@
 var device = {
 
     init : function(){
-        $.getJSON( 'https://'+device.getDomain()+'.lib.ncsu.edu/sites/all/modules/custom/sirsi_data/master.json', function( data ) {
+        $.getJSON( '//'+device.getDomain()+'.lib.ncsu.edu/sites/all/modules/custom/sirsi_data/master.json', function( data ) {
 
             oldkey = '';
 
@@ -29,6 +29,10 @@ var device = {
                         } else{
                             str += '<td>'+device.getTitle(key)+'</td>';
                         }
+
+                        if(!lendVal.TECHLEND){
+                            lendVal.TECHLEND = 0;
+                        }
                         str += '<td>'+device.getLendingPeriod(lendKey)+'</td>';
                         str += '<td>'+lendVal.TECHLEND+' of '+lendVal.TOTAL+'</td>';
                         str += '</tr>';
@@ -47,6 +51,9 @@ var device = {
     getLendingPeriod : function(str){
         switch(str) {
             case 'EQU-4H-LOW':
+                return '4 hours';
+                break;
+            case 'LAPTOP-PAT':
                 return '4 hours';
                 break;
             case 'EQU-1W-LOW':
@@ -88,6 +95,9 @@ var device = {
                 break;
             case 'DESIGN':
                 return 'Harrye B. Lyons Design Library';
+                break;
+            case 'LRL':
+                return 'Learning Resource Lab';
                 break;
             default:
                 break;
