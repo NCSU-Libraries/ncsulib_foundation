@@ -1,4 +1,3 @@
-console.log('hit')
 jQuery(function($){
 	if(!$('body').hasClass('logged-in')){
 		ga_nav.init();
@@ -22,7 +21,7 @@ var ga_nav = {
 		})
 
 		// secondary level nav
-		jQuery('#primary-nav-menus ul li a').click(function(e){
+		jQuery('#primary-nav-menus ul li a').hover(function(e){
 			var page = jQuery(this).text();
 			ga('send', 'event', 'Global Nav', ga_nav.primary_page, page);
 			ga_nav.pause();
