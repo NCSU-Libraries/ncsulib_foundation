@@ -35,6 +35,14 @@ a.styled:after{
     display: inline-block;
 }
 
+div.styled:after, span.styled:after{
+    color: $primary-color;
+    content: "\f105";
+    font-family: "FontAwesome";
+    padding-left: 5px;
+    text-decoration: none;
+}
+
 /*begin global UI style overwrite*/
 dl.tabs{
     position: relative;

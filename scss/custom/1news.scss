@@ -21,6 +21,12 @@ $include-html-classes: false;
             padding-bottom: 30px;
         }
 
+        h2{
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
         img{
             width: 100%;
         }
@@ -35,11 +41,13 @@ $include-html-classes: false;
         #feat-news-title{
             color: #ccc;
             font-size: 1rem;
+            font-weight: normal;
             padding-left: 5px;
 
             a{
                 color: #42749b;
                 padding-left: 5px;
+                text-transform: none;
             }
         }
 
@@ -240,6 +248,9 @@ $include-html-classes: false;
 
             h2{
                 color: #fff;
+                font-weight: bold;
+                font-size: 1rem;
+                text-transform: uppercase;
             }
 
             ul{
@@ -278,6 +289,12 @@ $include-html-classes: false;
                     opacity: 1;
                 }
 
+                h2{
+                    font-size: 1rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
                 select#archive-select{
                     border: 0px;
                     height: 50px;
@@ -291,8 +308,9 @@ $include-html-classes: false;
                 padding: 0px;
 
                 label h2{
-                    font-size: 1.875rem;
-                    font-weight: normal;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
                 }
 
                 #mce-EMAIL{
@@ -334,6 +352,8 @@ $include-html-classes: false;
             color: #cc0000;
         }
     }
+
+
 
     aside{
         ul{
