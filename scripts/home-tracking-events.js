@@ -198,6 +198,12 @@ var homeGA = {
             ga('send', 'event', 'Library Story', 'click', href);
         })
 
+        // library stories button
+        jQuery('#lib-stories-btn a').click(function(e){
+            var href = $(this).attr('href');
+            ga('send', 'event', 'Library Story', 'click', 'View All');
+        })
+
 
 
     },
