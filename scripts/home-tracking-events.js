@@ -150,54 +150,33 @@ var homeGA = {
             homeGA.pause();
         })
 
-        // story 1
-        jQuery('#story-1-photo').click(function(e){
-            ga('send', 'event', 'Feature Area 1', 'James B. Hunt Library', 'photo');
-            homeGA.pause();
-        })
-        jQuery('#story-1-heading').click(function(){
-            ga('send', 'event', 'Feature Area 1', 'James B. Hunt Library', 'h2');
-            homeGA.pause();
-        })
-        jQuery('.story-1-link').click(function(){
-            ga('send', 'event', 'Feature Area 1', 'James B. Hunt Library', 'link');
+        // Hunt Library
+        jQuery('#hunt-feature a').click(function(e){
+            ga('send', 'event', 'Home Hunt Library color box');
             homeGA.pause();
         })
 
-        // story 2
-        jQuery('#story-2-photo').click(function(){
-            ga('send', 'event', 'Feature Area 2', 'Library Stories', 'photo');
-            homeGA.pause();
-        })
-        jQuery('#story-2-heading').click(function(){
-            ga('send', 'event', 'Feature Area 2', 'Library Stories', 'h2');
-            homeGA.pause();
-        })
-        jQuery('.story-2-link').click(function(){
-            ga('send', 'event', 'Feature Area 2', 'Library Stories', 'Learn More');
+        // news
+        jQuery('#home-news-content a').click(function(e){
+            title = jQuery(this).find('h3').text();
+            ga('send', 'event', 'Home News', title);
             homeGA.pause();
         })
 
-        // happenings
-        jQuery('.news-link').click(function(){
-            ga('send', 'event', 'Happenings', 'click', 'news');
+        // events
+        jQuery('#home-events ul li').click(function(e){
+            title = jQuery(this).find('a').text();
+            index = jQuery(this).index();
+            ga('send', 'event', 'Home Events', index, title);
             homeGA.pause();
         })
-        jQuery('.events-link').click(function(){
-            ga('send', 'event', 'Happenings', 'click', 'events');
-            homeGA.pause();
-        })
-        jQuery('.exhibits-link').click(function(){
-            ga('send', 'event', 'Happenings', 'click', 'exhibits');
-            homeGA.pause();
-        })
+
 
         // library stories
         jQuery('.view-capture-and-promote .view-content .views-row a').click(function(e){
             var href = $(this).attr('href');
             ga('send', 'event', 'Library Story', 'click', href);
         })
-
 
 
     },

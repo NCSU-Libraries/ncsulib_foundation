@@ -138,9 +138,41 @@
             </section>
 
             <!-- bottom row -->
-            <section id="tier-three">
+            <section id="tier-three" class="row">
+                    <div id="hunt-feature" class="medium-4 columns">
+                        <h2>The Hunt Library</h2>
+                        <a href="/huntlibrary">
+                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt-homepage.jpg" width="100%" />
+                            <div id="hunt-content">
+                                <h2>The Library of the Future</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit officiis quia dolore quas inventore, velit.</p>
+                                <p>Oeritatis aut reprehenderit omnis, optio rem et a neque asperiores molestiae. Enim ab provident sit.</p>
+                            </div>
+                        </a>
+                    </div>
 
-                <div id="story-1">
+                <div class="medium-4 columns" id="home-news">
+                    <h2>News</h2>
+                    <div id="home-news-content">
+                        <?php
+                            $block = module_invoke('views', 'block_view', 'News-block_5');
+                            print render($block['content']);
+                        ?>
+                    </div>
+                    <a href="/1news" class="styled">more news</a>
+                </div>
+
+                <div class="medium-4 columns">
+                    <h2>Events</h2>
+                    <div id="home-events">
+                        <?php
+                            $block2 = module_invoke('views', 'block_view', 'upcoming_events-block_8');
+                            print render($block2['content']);
+                        ?>
+                    </div>
+                </div>
+
+<!--                 <div id="story-1">
                     <div class="story-photo">
                         <a href="/huntlibrary/" id="story-1-photo">
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt.jpg" title="&copy; Jeff Goldberg/ESTO" alt="The James B. Hunt Jr. Library" width="100%">
@@ -157,10 +189,10 @@
                         <li><a href="/huntlibrary/namingopportunities" class="styled story-1-link">Help support Hunt</a></li>
                         <li><a href="//www.ncsu.edu/huntlibrary/" class="styled story-1-link">Think and Do</a></li>
                     </ul>
-                </div>
+                </div> -->
 
-                <div id="story-2" class="library-stories">
-                    <!-- <h3><a href="/stories" id="story-2-heading">Featured Library Story</a></h3> -->
+<!--                 <div id="story-2" class="library-stories">
+                    <h3><a href="/stories" id="story-2-heading">Featured Library Story</a></h3>
                     <div class="story-photo">
                         <a href="/stories/using-visualization-teaching-modern-look-medieval-bayeux-tapestry" id="story-2-photo">
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/Bayeux-Tapestry-2.jpg" alt="closeup of the original bayeux tapestry" width="100%" />
@@ -170,9 +202,9 @@
                         <h2><a href="/stories/using-visualization-teaching-modern-look-medieval-bayeux-tapestry">Using Visualization in Teaching: A Modern Look at the Medieval Bayeux Tapestry</a></h2>
                         <p><a class="styled" href="/stories/using-visualization-teaching-modern-look-medieval-bayeux-tapestry">Learn More</a></p>
                     </div>
-                </div>
+                </div> -->
 
-                <div id="happenings">
+<!--                 <div id="happenings">
                     <div id="home-news">
                         <div class="happenings-photo">
                             <a href="/news/" class="news-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/news.jpg" alt="" width="100%" /></a>
@@ -200,7 +232,7 @@
                             <p>Featured collections, visiting exhibits, digital immersion experiences…</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </section> <!-- /bottom row -->
 
