@@ -64,6 +64,28 @@ $include-html-classes: false;
             }
         }
 
+        // main news page news items
+        .news-item{
+            display: block;
+
+            &:hover{
+                text-decoration: none;
+
+                img{
+                    opacity: 0.75;
+                }
+            }
+
+            h3{
+                color: $anchor-font-color;
+                font-weight: normal;
+            }
+
+            p{
+                color: $body-font-color;
+            }
+        }
+
         // listing page
         .item{
             @media #{$medium-up} {
@@ -354,7 +376,7 @@ $include-html-classes: false;
     }
 
 
-
+    // news search/archive
     aside{
         ul{
             li{
