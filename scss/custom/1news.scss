@@ -136,27 +136,32 @@ $include-html-classes: false;
             font-size: 0.9rem;
             margin-bottom: 10px;
         }
+        #focus{
+            margin-bottom: 40px;
+            float: right;
 
-        #latest-focus{
 
-            @media #{$medium-up} {
-                padding-left: 0px;
-                padding-right: 0px;
+            #latest-focus{
+
+                @media #{$medium-up} {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+
+                #focus-cover{
+                    margin-bottom: 20px;
+                }
+
+                #focus-content{
+                    padding-right: 0px;
+                }
+
+                h2{
+                    padding-top: 0px;
+                    margin: 0px 0px 10px 0px;
+                }
+
             }
-
-            #focus-cover{
-                margin-bottom: 20px;
-            }
-
-            #focus-content{
-                padding-right: 0px;
-            }
-
-            h2{
-                padding-top: 0px;
-                margin: 0px 0px 10px 0px;
-            }
-
         }
 
         // listing items
@@ -181,7 +186,7 @@ $include-html-classes: false;
         .upcoming_events-block_8{
             @include grid-column(4, $float: left);
             padding-left: 0px;
-            margin-bottom: 0px;
+            margin-bottom: 60px;
 
             @media #{$small-only} {
                 width: 100%;
