@@ -88,7 +88,7 @@
                 <div id="available-links">
                     <h2>Available Now</h2>
                     <ul>
-                        <li><a href="/reservearoom/" id="al_reservearoom">Reserve a Room</a></li>
+                        <li><a href="https://rooms.lib.ncsu.edu" id="al_reservearoom">Reserve a Room</a></li>
                         <li><a href="/techlending/" id="al_techlending">Borrow Technology</a></li>
                     </ul>
                 </div>
@@ -103,7 +103,7 @@
                         <div class="content active" id="panel-hill">
                             <ul>
                                 <li>
-                                    <span class="item"><a href="/reservearoom" id="al_hill_study_rooms">Study Rooms</a> </span>
+                                    <span class="item"><a href="https://rooms.lib.ncsu.edu" id="al_hill_study_rooms">Study Rooms</a> </span>
                                     <span class="item-count count" id="hill-study"></span>
                                 </li>
                                 <li>
@@ -119,7 +119,7 @@
                         <div class="content" id="panel-hunt">
                             <ul>
                                 <li>
-                                    <span class="item"><a href="/reservearoom" id="al_hunt_study_rooms">Study Rooms</a> </span>
+                                    <span class="item"><a href="https://rooms.lib.ncsu.edu" id="al_hunt_study_rooms">Study Rooms</a> </span>
                                     <span class="item-count count" id="hunt-study"></span>
                                 </li>
                                 <li>
