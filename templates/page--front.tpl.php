@@ -60,8 +60,8 @@
                             <li>
                                 <ul>
                                     <li><h2>Studying</h2></li>
-                                    <li><a href="/reservearoom/" class="styled" id="ql_reservearoom">Reserve a Room</a></li>
-                                    <li><a href="/groupfinder/" class="styled" id="ql_group_finder">GroupFinder</a></li>
+                                    <li><a href="https://rooms.lib.ncsu.edu" class="styled" id="ql_reservearoom">Reserve a Room</a></li>
+                                    <!-- <li><a href="/groupfinder/" class="styled" id="ql_group_finder">GroupFinder</a></li> -->
                                 </ul>
                             </li>
                             <li>
