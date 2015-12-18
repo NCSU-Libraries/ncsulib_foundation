@@ -34,7 +34,7 @@ var device = {
                             if(!lendVal.AVAILABLE){lendVal.AVAILABLE = 0;}
                             if(!lendVal.REPAIR){lendVal.REPAIR = 0;}
                             str += '<td>'+device.getLendingPeriod(lendKey)+'</td>';
-                            str += '<td>'+lendVal.AVAILABLE+' of '+lendVal.LOCATION.TOTAL+'</td>';
+                            str += '<td>'+lendVal.AVAILABLE+' of '+lendVal.TOTAL+'</td>';
                             str += '</tr>';
                             oldkey = key;
                         }
