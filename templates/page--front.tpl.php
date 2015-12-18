@@ -102,10 +102,10 @@
                     <div class="tabs-content vertical">
                         <div class="content active" id="panel-hill">
                             <ul>
-                                <li>
+      <!--                           <li>
                                     <span class="item"><a href="https://rooms.lib.ncsu.edu" id="al_hill_study_rooms">Study Rooms</a> </span>
                                     <span class="item-count count" id="hill-study"></span>
-                                </li>
+                                </li> -->
                                 <li>
                                     <span class="item"><a href="/techlending/laptops-netbooks" id="al_hill_laptops">Laptops</a> </span>
                                     <span class="item-count count" id="hill-laptops"></span>
@@ -118,10 +118,10 @@
                         </div>
                         <div class="content" id="panel-hunt">
                             <ul>
-                                <li>
+    <!--                             <li>
                                     <span class="item"><a href="https://rooms.lib.ncsu.edu" id="al_hunt_study_rooms">Study Rooms</a> </span>
                                     <span class="item-count count" id="hunt-study"></span>
-                                </li>
+                                </li> -->
                                 <li>
                                     <span class="item"><a href="/techlending/laptops-netbooks" id="al_hunt_laptops">Laptops</a> </span>
                                     <span class="item-count count" id="hunt-laptops"></span>
