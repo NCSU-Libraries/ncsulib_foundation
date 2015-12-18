@@ -7,7 +7,7 @@ var device = {
     init : function(){
         device.getDomain();
 
-        $.getJSON( 'https://'+device.sub+'.lib.ncsu.edu/sites/all/modules/custom/sirsi_data/master.json', function( data ) {
+        $.getJSON( '//'+device.sub+'.lib.ncsu.edu/sites/all/modules/custom/sirsi_data/master.json', function( data ) {
 
             dAry = {Mac: data[2081286], Windows: data[2729663]};
 
@@ -22,8 +22,10 @@ var device = {
             str += '<div class="row">';
             $.each( dAry, function( key, val ) {
                 lib = val[device.uris[1].toUpperCase()];
+                available = lib['LAPTOP-PAT']['AVAILABLE'];
+                total = lib['LAPTOP-PAT']['TOTAL'];
                 str += '<div class="columns medium-9"><p>'+key+' laptops</p></div>';
-                str += '<div class="columns medium-3"><span class="label"> '+lib['LAPTOP-PAT']['TECHLEND']+' </span></div>';
+                str += '<div class="columns medium-3"><span class="label"> '+available+' of '+total+' </span></div>';
             });
             str += '</div>';
             str += '</section>';
