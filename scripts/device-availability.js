@@ -31,10 +31,10 @@ var device = {
                             // dont repeat building name twice
                             str += (key == oldkey) ? '<td></td>' : '<td>'+device.getTitle(key)+'</td>';
 
-                            if(!lendVal.TECHLEND){lendVal.TECHLEND = 0;}
+                            if(!lendVal.AVAILABLE){lendVal.AVAILABLE = 0;}
                             if(!lendVal.REPAIR){lendVal.REPAIR = 0;}
                             str += '<td>'+device.getLendingPeriod(lendKey)+'</td>';
-                            str += '<td>'+lendVal.TECHLEND+' of '+lendVal.LOCATION.TECHLEND+'</td>';
+                            str += '<td>'+lendVal.AVAILABLE+' of '+lendVal.LOCATION.TOTAL+'</td>';
                             str += '</tr>';
                             oldkey = key;
                         }

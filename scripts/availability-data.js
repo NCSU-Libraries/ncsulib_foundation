@@ -27,8 +27,8 @@ var tech = {
     loadLaptops : function(){
         hill = 0; hunt = 0;
         for(i=0;i<tech.laptopAry.length;i++){
-            hill += tech.data[tech.laptopAry[i]]['DHHILL']['LAPTOP-PAT']['TOTAL'];
-            hunt += tech.data[tech.laptopAry[i]]['HUNT']['LAPTOP-PAT']['TOTAL'];
+            hill += tech.data[tech.laptopAry[i]]['DHHILL']['LAPTOP-PAT']['AVAILABLE'];
+            hunt += tech.data[tech.laptopAry[i]]['HUNT']['LAPTOP-PAT']['AVAILABLE'];
         }
         jQuery('#hill-laptops').text(hill);
         jQuery('#hunt-laptops').text(hunt);
@@ -38,16 +38,16 @@ var tech = {
         hill = 0; hunt = 0;
         for(i=0;i<tech.tabletAry.length;i++){
             // console.log(tech.data[tech.tabletAry[i]]);
-            hill += tech.data[tech.tabletAry[i]]['DHHILL']['EQUIP-1WK']['TOTAL'];
+            hill += tech.data[tech.tabletAry[i]]['DHHILL']['EQUIP-1WK']['AVAILABLE'];
 
             if(typeof tech.data[tech.tabletAry[i]]['DHHILL']['EQUIP-4HR'] !== 'undefined'){
-                hill += tech.data[tech.tabletAry[i]]['DHHILL']['EQUIP-4HR']['TOTAL'];
+                hill += tech.data[tech.tabletAry[i]]['DHHILL']['EQUIP-4HR']['AVAILABLE'];
             }
 
-            hunt += tech.data[tech.tabletAry[i]]['HUNT']['EQUIP-1WK']['TOTAL'];
+            hunt += tech.data[tech.tabletAry[i]]['HUNT']['EQUIP-1WK']['AVAILABLE'];
 
             if(typeof tech.data[tech.tabletAry[i]]['HUNT']['EQUIP-4HR'] !== 'undefined'){
-                hunt += tech.data[tech.tabletAry[i]]['HUNT']['EQUIP-4HR']['TOTAL'];
+                hunt += tech.data[tech.tabletAry[i]]['HUNT']['EQUIP-4HR']['AVAILABLE'];
             }
         }
         jQuery('#hill-tablets').text(hill);
