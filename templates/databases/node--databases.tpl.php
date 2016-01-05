@@ -16,8 +16,7 @@
       hide($content['field_db_teaser']);
       hide($content['field_librarian']);
       hide($content['field_open_tagging']);
-
-
+      // $content['field_open_tagging'];
     ?>
 
 
@@ -34,9 +33,7 @@
         <?= render($content['field_librarian']); ?>
     </aside>
     <div class="columns medium-3">
-        <?php
-            print render($content['field_open_tagging']);
-        ?>
+        <?= render($content['field_open_tagging']) ?>
     </div>
 
   </div>

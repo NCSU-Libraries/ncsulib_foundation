@@ -152,21 +152,21 @@
                     </div>
 
                 <div class="medium-4 columns" id="home-news">
-                    <h2>News</h2>
+                    <h2><a href="/1news">News</a></h2>
                     <div id="home-news-content">
                         <?php
                             $block = module_invoke('views', 'block_view', 'News-block_5');
                             print render($block['content']);
                         ?>
                     </div>
-                    <a href="/1news" class="styled">more news</a>
+                    <!-- <a href="/1news" class="styled">more news</a> -->
                 </div>
 
                 <div class="medium-4 columns">
-                    <h2>Events</h2>
                     <div id="home-events">
+                        <h2><a href="/events">Events</a></h2>
                         <?php
-                            $block2 = module_invoke('views', 'block_view', 'upcoming_events-block_8');
+                            $block2 = module_invoke('views', 'block_view', 'upcoming_events-block_9');
                             print render($block2['content']);
                         ?>
                     </div>
@@ -241,11 +241,10 @@
 </div> <!--/.page -->
 
 <section id="library-stories">
-    <div id="library-stories-wrapper">
-        <div class="row above-footer">
-            <div class="medium-12 columns">
-                <?php print render($page['above_footer']); ?>
-            </div>
+    <div id="library-stories-wrapper" class="row">
+        <div class="medium-12 columns">
+            <h2 class="lib-label"><a href="/stories">Library Stories</a></h2>
+            <?php print render($page['above_footer']); ?>
         </div>
     </div>
 </section>

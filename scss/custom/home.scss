@@ -735,20 +735,29 @@ $include-html-classes: false;
 	#home-news{
 
 		h2{
-			line-height: 1;
-
 			a{
-				position: relative;
-				text-transform: none;
-				top: -1px;
+				color: #555;
+				font-weight: bold;
+				text-decoration: none;
 			}
-
-			a:before{
-				content: "|";
-				color: #ddd;
-				padding: 0px 5px 0px 0px;
+			a:hover{
+				color: #c00;
 			}
 		}
+		// 	line-height: 1;
+
+		// 	a{
+		// 		position: relative;
+		// 		text-transform: none;
+		// 		top: -1px;
+		// 	}
+
+		// 	a:before{
+		// 		content: "|";
+		// 		color: #ddd;
+		// 		padding: 0px 5px 0px 0px;
+		// 	}
+		// }
 
 		#home-news-content{
 			a{
@@ -774,6 +783,16 @@ $include-html-classes: false;
 		}
 	}
 	#home-events{
+		h2{
+			a{
+				color: #555;
+				font-weight: bold;
+			}
+			a:hover{
+				color: #c00;
+				text-decoration: none;
+			}
+		}
 		.workshop-item{
 			.workshop-date{
 				padding-left: 0px;
@@ -935,12 +954,19 @@ $include-html-classes: false;
 
 // begin Library Stories
 #library-stories{
- 	background: #FFF;
- 	padding: 0px 0px 0px;
+ 	// background: #FFF;
+ 	background: #407d94;
 
  	#library-stories-wrapper{
- 		background: #407d94;
- 		padding: 10px 0px 0px;
+
+ 		h2.lib-label{
+ 			a{
+ 				// color: #555;
+ 			}
+ 			a:hover{
+ 				color: #c00;
+ 			}
+ 		}
 
 		h2{
 			font-size: 1rem;
@@ -952,29 +978,53 @@ $include-html-classes: false;
 	 	}
 
 	 	img{
-	 		padding: 0px 0px 10px;
+	 		padding: 0px 0px 0px;
 
 	 		@media #{$small-only}{
 	 			width: 100%;
 	 		}
 	 	}
 
+ 		#library-stories-content{
+			background: #407d94;
+ 			margin-bottom: 50px;
+ 		}
+
+ 		#lib-st-photo{
+			// padding: 0px;
+ 		}
+
+ 		#lib-st-content{
+			padding: 25px 35px 35px;
+
+			h2.title{
+				font-size: 1.5rem;
+				font-weight: normal;
+				margin-bottom: 30px;
+				text-transform: none;
+			}
+
+			p.learn-more{
+
+			}
+ 		}
+
+
 	 	.views-row{
 	 		float: left;
-	 		width: 25%;
-	 		padding-right: 2%;
+	 		width: 100%;
 
 	 		&:hover{
 	 			opacity: 0.75;
 	 		}
 
-	 		&.views-row-4{
-	 			padding-right: 0px;
-	 			padding-left: 1%;
-	 		}
-	 		&.views-row-3{
-	 			padding-right: 1%;
-	 		}
+	 		// &.views-row-4{
+	 		// 	padding-right: 0px;
+	 		// 	padding-left: 1%;
+	 		// }
+	 		// &.views-row-3{
+	 		// 	padding-right: 1%;
+	 		// }
 
 	 		@media #{$small-only} {
 	 			float: none;
