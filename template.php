@@ -125,6 +125,15 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   // Add custom JS/CSS
   $url_comp = explode('/', request_uri());
 
+  // hack to remove dupes on event series page
+  if (isset($url_comp[2])) {
+    switch ($url_comp[2]) {
+      case 'series':
+        drupal_add_js(path_to_theme() . '/scripts/event-series-hack.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        break;
+    }
+  }
+
   // for entire directory (ex: /find)
   if (isset($url_comp[1])) {
     switch ($url_comp[1]) {
