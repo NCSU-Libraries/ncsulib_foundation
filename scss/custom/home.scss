@@ -16,6 +16,12 @@ $include-html-classes: false;
 		margin-bottom: 0px;
 	}
 }
+
+.pipe{
+	font-weight: normal;
+	// font-size: 1rem;
+	opacity: 0.4;
+}
 /* end global styles */
 
 
@@ -359,8 +365,7 @@ $include-html-classes: false;
 				text-transform: uppercase;
 
 				@media #{$small-only}{
-					font-size: 1.5rem;
-					font-weight: normal;
+					// font-size: 1rem;
 					margin-top: 10px;
 				}
 			}
@@ -435,6 +440,7 @@ $include-html-classes: false;
 	@media #{$small-only}{
 		@include grid-column(12);
 		padding: 0px;
+		margin-bottom: 50px;
 	}
 
 	.orbit-slider{
@@ -704,6 +710,11 @@ $include-html-classes: false;
 	}
 
 	#hunt-feature{
+
+		@media #{$small-only}{
+			margin-bottom: 50px;
+		}
+
 		a{
 			opacity: 1;
 			// transition: opacity 1s;
@@ -734,30 +745,31 @@ $include-html-classes: false;
 
 	#home-news{
 
+		@media #{$small-only}{
+			margin-bottom: 50px;
+		}
+
 		h2{
+				text-transform: uppercase;
+
 			a{
-				color: #555;
 				font-weight: bold;
+				color: #555;
+				font-weight: normal;
 				text-decoration: none;
+				text-transform: none;
+
+				i{
+					color: #c00;
+					// font-size: 0.8rem;
+				}
 			}
 			a:hover{
 				color: #c00;
+				text-decoration: none;
 			}
 		}
-		// 	line-height: 1;
 
-		// 	a{
-		// 		position: relative;
-		// 		text-transform: none;
-		// 		top: -1px;
-		// 	}
-
-		// 	a:before{
-		// 		content: "|";
-		// 		color: #ddd;
-		// 		padding: 0px 5px 0px 0px;
-		// 	}
-		// }
 
 		#home-news-content{
 			a{
@@ -779,14 +791,21 @@ $include-html-classes: false;
 
 			img{
 				margin-bottom: 20px;
+				width: 100%;
 			}
 		}
 	}
 	#home-events{
 		h2{
-			a{
-				color: #555;
 				font-weight: bold;
+			a{
+				text-transform: none;
+				color: #555;
+
+				i{
+					color: #c00;
+					// font-size: 0.8rem;
+				}
 			}
 			a:hover{
 				color: #c00;
@@ -815,156 +834,51 @@ $include-html-classes: false;
 	}
 }
 
-// #content #main-content #story-1,
-// #content #main-content #story-2{
-// 	@include grid-column(4);
-// 	margin-bottom: emCalc(0);
-// 	padding-left: 0px;
 
-// 	@media #{$small-only}{
-// 		@include grid-column(12);
-// 		padding: 0px;
-// 		margin-bottom: 30px;
-// 	}
-
-// 	.story-photo{
-// 		margin-bottom: emCalc(15);
-// 	}
-
-// 	h2 {
-// 		font-size: 1.4rem;
-// 		line-height: 1.8rem;
-// 		padding-top: 5px;
-// 	}
-// }
-// #content #main-content #story-2.library-stories{
-// 	// background: #407d94;
-// 	// color: #FFF;
-// 	// padding: 10px;
-
-// 	@media #{$small-only}{
-// 		margin-bottom: 30px;
-// 	}
-
-// 	.story-photo{
-// 		margin: 0px;
-// 	}
-
-// 	#story-2-content{
-// 		background: #407D94;
-// 		padding: 20px;
-
-// 		h2{
-// 			padding: 0px;
-// 		}
-
-// 		p{
-// 			margin: 0px;
-
-// 			a{
-// 				display: block;
-// 				float: none;
-// 				text-align: right;
-// 			}
-// 		}
-
-// 		h2,h3,p,a{
-// 			color: #fff;
-// 		}
-// 	}
-
-// 	h2{
-// 		padding-top: 10px;
-
-// 		a{
-// 			// color: #FFF;
-// 		}
-// 	}
-// 	h3{
-// 		margin-bottom: 5px;
-// 		margin-top: 0px;
-// 		padding-top: 0px;
-
-// 		a{
-// 			font-size: 1rem;
-// 			// color: #FFF;
-// 		}
-// 	}
-
-// 	p{
-// 		a{
-// 			// color: #fff;
-// 			float: right;
-
-// 			i{
-// 				color: #cc0000;
-// 			}
-// 		}
-// 	}
-// }
-
-// #content #happenings{
-// 	@include grid-column(4);
-
-// 	@media #{$small-only}{
-// 		@include grid-column(12);
-// 		padding: 0px;
-// 	}
-
-// 	#home-news, #home-events, #home-exhibits{
-// 		float: left;
-// 		margin-bottom: emCalc(25);
-// 	}
-
-// 	.happenings-photo{
-// 		@include grid-column(6);
-// 		padding-left: 0px;
-// 		padding-right: 0px;
-// 	}
-
-// 	.happenings-content{
-// 		@include grid-column(6);
-// 		padding-right: 0px;
-
-// 		h2{
-// 			font-size: emCalc(22);
-// 			line-height: 1rem;
-// 			margin-bottom: 5px;
-// 			margin-top: 0px;
-// 			padding-top: 0px;
-
-// 			a{
-// 				color: inherit;
-// 			}
-
-// 			a:hover{
-// 				color: $primary-color;
-// 			}
-// 		}
-
-// 		p{
-// 			font-size: 0.85rem;
-// 			line-height: 1.35rem;
-// 			margin-bottom: 0px;
-// 		}
-// 	}
-// }
 
 /*end tier three*/
 
 // begin Library Stories
 #library-stories{
- 	// background: #FFF;
  	background: #407d94;
+ 	width: 100%;
+
+ 	&:after {
+		visibility: hidden;
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
+	}
 
  	#library-stories-wrapper{
+		margin: auto;
+		// max-width: 1500px;
+ 		width: 100%;
+
+ 		.block{
+ 			margin: 0px;
+ 		}
 
  		h2.lib-label{
  			a{
  				// color: #555;
+ 				font-weight: bold;
+ 				text-transform: uppercase;
  			}
  			a:hover{
  				color: #c00;
+ 				// text-decoration: underline;
+ 			}
+ 		}
+
+ 		h2.title{
+ 			a{
+ 				font-size: 1.5rem;
+
+				@media #{$small-only}{
+					font-size: 1rem;
+				}
  			}
  		}
 
@@ -992,20 +906,45 @@ $include-html-classes: false;
 
  		#lib-st-photo{
 			// padding: 0px;
+			float: left;
+			width: 50%;
+
+			@media #{$small-only}{
+				float: none;
+	 			width: 100%;
+	 		}
  		}
 
  		#lib-st-content{
+			float: left;
 			padding: 25px 35px 35px;
+			width: 50%;
+
+			@media #{$small-only}{
+				float: none;
+	 			width: 100%;
+	 		}
 
 			h2.title{
 				font-size: 1.5rem;
 				font-weight: normal;
 				margin-bottom: 30px;
 				text-transform: none;
+
+				a:hover{
+					text-decoration: underline;
+				}
 			}
 
 			p.learn-more{
-
+				a{
+					@media #{$small-only}{
+						font-size: 1rem;
+					}
+		 		}
+				a:hover{
+					text-decoration: underline;
+				}
 			}
  		}
 
@@ -1015,16 +954,8 @@ $include-html-classes: false;
 	 		width: 100%;
 
 	 		&:hover{
-	 			opacity: 0.75;
+	 			// opacity: 0.75;
 	 		}
-
-	 		// &.views-row-4{
-	 		// 	padding-right: 0px;
-	 		// 	padding-left: 1%;
-	 		// }
-	 		// &.views-row-3{
-	 		// 	padding-right: 1%;
-	 		// }
 
 	 		@media #{$small-only} {
 	 			float: none;

@@ -140,19 +140,18 @@
             <!-- bottom row -->
             <section id="tier-three" class="row">
                     <div id="hunt-feature" class="medium-4 columns">
-                        <h2>The Hunt Library</h2>
+                        <h2>The James B. Hunt Jr. Library</h2>
                         <a href="/huntlibrary">
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt-homepage.jpg" width="100%" />
                             <div id="hunt-content">
                                 <h2>The Library of the Future</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit officiis quia dolore quas inventore, velit.</p>
-                                <p>Oeritatis aut reprehenderit omnis, optio rem et a neque asperiores molestiae. Enim ab provident sit.</p>
+                                <p>The Hunt Library is a signature building that provides a platform for NC State’s world-class research and teaching. Its technology-rich, collaborative spaces give NC State faculty and students a decisive competitive advantage, as they tackle society's grand challenges.</p>
                             </div>
                         </a>
                     </div>
 
                 <div class="medium-4 columns" id="home-news">
-                    <h2><a href="/1news">News</a></h2>
+                    <h2>News <span class="pipe">|</span> <a href="/1news">all news <i class="fa fa-angle-right"></i></a></h2>
                     <div id="home-news-content">
                         <?php
                             $block = module_invoke('views', 'block_view', 'News-block_5');
@@ -164,75 +163,13 @@
 
                 <div class="medium-4 columns">
                     <div id="home-events">
-                        <h2><a href="/events">Events</a></h2>
+                        <h2>Events <span class="pipe">|</span> <a href="/events">all events <i class="fa fa-angle-right"></i></a></h2>
                         <?php
                             $block2 = module_invoke('views', 'block_view', 'upcoming_events-block_9');
                             print render($block2['content']);
                         ?>
                     </div>
                 </div>
-
-<!--                 <div id="story-1">
-                    <div class="story-photo">
-                        <a href="/huntlibrary/" id="story-1-photo">
-                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt.jpg" title="&copy; Jeff Goldberg/ESTO" alt="The James B. Hunt Jr. Library" width="100%">
-                        </a>
-                    </div>
-                    <h2>
-                        <a href="/huntlibrary/" id="story-1-heading">James B. Hunt Jr. Library</a>
-                    </h2>
-
-                    <ul class="unstyle-list hunt-list">
-                        <li><a href="/huntlibrary/#storify" class="styled story-1-link">Hunt Library on Storify</a></li>
-                        <li><a href="/huntlibrary/inthenews" class="styled story-1-link">In the News</a></li>
-                        <li><a href="/huntlibrary/bookBot" class="styled story-1-link">bookBot</a></li>
-                        <li><a href="/huntlibrary/namingopportunities" class="styled story-1-link">Help support Hunt</a></li>
-                        <li><a href="//www.ncsu.edu/huntlibrary/" class="styled story-1-link">Think and Do</a></li>
-                    </ul>
-                </div> -->
-
-<!--                 <div id="story-2" class="library-stories">
-                    <h3><a href="/stories" id="story-2-heading">Featured Library Story</a></h3>
-                    <div class="story-photo">
-                        <a href="/stories/using-visualization-teaching-modern-look-medieval-bayeux-tapestry" id="story-2-photo">
-                            <img src="/sites/all/themes/ncsulib_foundation/images/homepage/Bayeux-Tapestry-2.jpg" alt="closeup of the original bayeux tapestry" width="100%" />
-                        </a>
-                    </div>
-                    <div id="story-2-content">
-                        <h2><a href="/stories/using-visualization-teaching-modern-look-medieval-bayeux-tapestry">Using Visualization in Teaching: A Modern Look at the Medieval Bayeux Tapestry</a></h2>
-                        <p><a class="styled" href="/stories/using-visualization-teaching-modern-look-medieval-bayeux-tapestry">Learn More</a></p>
-                    </div>
-                </div> -->
-
-<!--                 <div id="happenings">
-                    <div id="home-news">
-                        <div class="happenings-photo">
-                            <a href="/news/" class="news-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/news.jpg" alt="" width="100%" /></a>
-                        </div>
-                        <div class="happenings-content">
-                            <h2><a href="/news/" class="news-link">News</a></h2>
-                            <p>Technology, innovative spaces, new library resources, and more…</p>
-                        </div>
-                    </div>
-                    <div id="home-events">
-                        <div class="happenings-photo">
-                            <a href="/events/" class="events-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/events.jpg" alt="" width="100%" /></a>
-                        </div>
-                        <div class="happenings-content">
-                            <h2><a href="/events/" class="events-link">Events</a></h2>
-                            <p>Speaker series, book discussions, campus and community events...</p>
-                        </div>
-                    </div>
-                    <div id="home-exhibits">
-                        <div class="happenings-photo">
-                            <a href="/exhibits/" class="exhibits-link"><img src="/sites/all/themes/ncsulib_foundation/images/homepage/exhibits.jpg" alt="" width="100%" /></a>
-                        </div>
-                        <div class="happenings-content">
-                            <h2><a href="/exhibits/" class="exhibits-link">Exhibits</a></h2>
-                            <p>Featured collections, visiting exhibits, digital immersion experiences…</p>
-                        </div>
-                    </div>
-                </div> -->
 
             </section> <!-- /bottom row -->
 
@@ -241,11 +178,10 @@
 </div> <!--/.page -->
 
 <section id="library-stories">
-    <div id="library-stories-wrapper" class="row">
-        <div class="medium-12 columns">
-            <h2 class="lib-label"><a href="/stories">Library Stories</a></h2>
+    <div id="library-stories-wrapper">
+        <!-- <div class="medium-12 columns"> -->
             <?php print render($page['above_footer']); ?>
-        </div>
+        <!-- </div> -->
     </div>
 </section>
 <!-- /.above-footer -->
