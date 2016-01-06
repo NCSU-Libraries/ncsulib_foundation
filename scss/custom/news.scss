@@ -32,6 +32,10 @@ ul.tabs.primary{
 
         h1{
             font-size: 3.25rem;
+
+            @media #{$small-only} {
+                font-size: 1.8rem;
+            }
         }
 
         .news-block_3{

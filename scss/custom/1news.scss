@@ -64,6 +64,31 @@ $include-html-classes: false;
             }
         }
 
+        // main news page news items
+        .news-item{
+            display: block;
+
+            &:hover{
+                text-decoration: none;
+
+                img{
+                    opacity: 0.75;
+                }
+            }
+
+            h2{
+                color: $anchor-font-color;
+                font-size: 1.3rem;
+                font-weight: normal;
+                padding-top: 0px;
+                text-transform: none;
+            }
+
+            p{
+                color: $body-font-color;
+            }
+        }
+
         // listing page
         .item{
             @media #{$medium-up} {
@@ -111,27 +136,30 @@ $include-html-classes: false;
             font-size: 0.9rem;
             margin-bottom: 10px;
         }
+        #focus{
+            margin-bottom: 40px;
 
-        #latest-focus{
+            #latest-focus{
 
-            @media #{$medium-up} {
-                padding-left: 0px;
-                padding-right: 0px;
+                @media #{$medium-up} {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+
+                #focus-cover{
+                    margin-bottom: 20px;
+                }
+
+                #focus-content{
+                    padding-right: 0px;
+                }
+
+                h2{
+                    padding-top: 0px;
+                    margin: 0px 0px 10px 0px;
+                }
+
             }
-
-            #focus-cover{
-                margin-bottom: 20px;
-            }
-
-            #focus-content{
-                padding-right: 0px;
-            }
-
-            h2{
-                padding-top: 0px;
-                margin: 0px 0px 10px 0px;
-            }
-
         }
 
         // listing items
@@ -156,7 +184,7 @@ $include-html-classes: false;
         .upcoming_events-block_8{
             @include grid-column(4, $float: left);
             padding-left: 0px;
-            margin-bottom: 0px;
+            margin-bottom: 60px;
 
             @media #{$small-only} {
                 width: 100%;
@@ -243,13 +271,14 @@ $include-html-classes: false;
             background: #cc0000;
             margin-left: -50%;
             margin-bottom: -71px;
-            padding: 30px 50% 40px;
+            padding: 50px 50% 40px;
             width: 200%;
 
             h2{
                 color: #fff;
                 font-weight: bold;
                 font-size: 1rem;
+                margin-bottom: 10px;
                 text-transform: uppercase;
             }
 
@@ -292,6 +321,7 @@ $include-html-classes: false;
                 h2{
                     font-size: 1rem;
                     font-weight: bold;
+                    margin-bottom: 10px;
                     text-transform: uppercase;
                 }
 
@@ -307,15 +337,24 @@ $include-html-classes: false;
             form{
                 padding: 0px;
 
-                label h2{
-                    font-size: 1rem;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                }
+                #mc_embed_signup_scroll{
+                    margin-bottom: 30px;
 
-                #mce-EMAIL{
-                    padding-left: 10px;
-                    width: 100%;
+                    label {
+                        padding: 0px;
+
+                        h2{
+                            font-size: 1rem;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    #mce-EMAIL{
+                        padding-left: 10px;
+                        width: 100%;
+                    }
                 }
 
                 input#mc-embedded-subscribe.button{
@@ -354,7 +393,7 @@ $include-html-classes: false;
     }
 
 
-
+    // news search/archive
     aside{
         ul{
             li{

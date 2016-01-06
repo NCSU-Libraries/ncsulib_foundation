@@ -797,7 +797,9 @@ $include-html-classes: false;
 	}
 	#home-events{
 		h2{
-				font-weight: bold;
+			font-weight: bold;
+			text-transform: uppecase;
+
 			a{
 				text-transform: none;
 				color: #555;
@@ -875,6 +877,8 @@ $include-html-classes: false;
  		h2.title{
  			a{
  				font-size: 1.5rem;
+ 				font-weight: bold;
+ 				text-transform: none;
 
 				@media #{$small-only}{
 					font-size: 1rem;

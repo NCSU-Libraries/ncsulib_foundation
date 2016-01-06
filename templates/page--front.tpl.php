@@ -14,7 +14,6 @@
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
 ?>
 
-
 <!--.page -->
 <div role="document" class="page" id="content">
     <?php '';//include variable_get('htdocs_root')."/notice/notice.php"; ?>
@@ -107,11 +106,11 @@
                                 </li> -->
                                 <li>
                                     <span class="item"><a href="/techlending/laptops-netbooks" id="al_hill_laptops">Laptops</a> </span>
-                                    <span class="item-count count" id="hill-laptops"></span>
+                                    <span class="item-count count" id="hill-laptopsx">27</span>
                                 </li>
                                 <li>
                                     <span class="item"><a href="/techlending/tablets-and-ipods" id="al_hill_tablets">Tablets</a> </span>
-                                    <span class="item-count count" id="hill-tablets"></span>
+                                    <span class="item-count count" id="hill-tabletsx">19</span>
                                 </li>
                             </ul>
                         </div>
@@ -123,11 +122,11 @@
                                 </li> -->
                                 <li>
                                     <span class="item"><a href="/techlending/laptops-netbooks" id="al_hunt_laptops">Laptops</a> </span>
-                                    <span class="item-count count" id="hunt-laptops"></span>
+                                    <span class="item-count count" id="hunt-laptopsx">18</span>
                                 </li>
                                 <li>
                                     <span class="item"><a href="/techlending/tablets-and-ipods" id="al_hunt_tablets">Tablets</a> </span>
-                                    <span class="item-count count" id="hunt-tablets"></span>
+                                    <span class="item-count count" id="hunt-tabletsx">13</span>
                                 </li>
                             </ul>
                         </div>
@@ -150,7 +149,7 @@
                     </div>
 
                 <div class="medium-4 columns" id="home-news">
-                    <h2>News <span class="pipe">|</span> <a href="/1news">all news <i class="fa fa-angle-right"></i></a></h2>
+                    <h2>News <span class="pipe">|</span> <a href="//lib.ncsu.edu/1news">all news <i class="fa fa-angle-right"></i></a></h2>
                     <div id="home-news-content">
                         <?php
                             $block = module_invoke('views', 'block_view', 'News-block_5');
