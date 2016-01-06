@@ -21,11 +21,11 @@
             <?php print render($title_suffix); ?>
         <?php endif; ?>
         <div id="meta" class="row">
-            <div class="columns medium-4">
+            <div class="columns medium-4 small-6">
                 <?=  '';//$name; ?>
                 <div id="post-date"><small><?php print date('F j, Y',strtotime(format_date($node->created, 'page'))); ?></small></div>
             </div>
-            <div class="columns medium-4 left">
+            <div class="columns medium-4 small-6 left">
                 <div id="social">
                     <div id="social-btns">
                         <a id="fb-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
