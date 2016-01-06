@@ -61,7 +61,6 @@
                                 <ul>
                                     <li><h2>Studying</h2></li>
                                     <li><a href="/reservearoom/" class="styled" id="ql_reservearoom">Reserve a Room</a></li>
-                                    <li><a href="/groupfinder/" class="styled" id="ql_group_finder">GroupFinder</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -145,7 +144,7 @@
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt-homepage.jpg" width="100%" />
                             <div id="hunt-content">
                                 <h2>The Library of the Future</h2>
-                                <p>The Hunt Library is a signature building that provides a platform for NC State’s world-class research and teaching. Its technology-rich, collaborative spaces give NC State faculty and students a decisive competitive advantage, as they tackle society's grand challenges.</p>
+                                <p>The Hunt Library gives NC State faculty and students a decisive competitive advantage as they tackle society's grand challenges. The signature building's technology-rich, collaborative spaces provide a platform for NC State’s world-class research and teaching.</p>
                             </div>
                         </a>
                     </div>
