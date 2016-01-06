@@ -19,6 +19,7 @@ $include-html-classes: false;
 
 .pipe{
 	font-weight: normal;
+	line-height: 1;
 	// font-size: 1rem;
 	opacity: 0.4;
 }
@@ -703,9 +704,10 @@ $include-html-classes: false;
 #tier-three{
 	margin-bottom: emCalc(0);
 
-	h2{
+	h2.sec-label{
 		font-size: 1rem;
 		font-weight: bold;
+		margin-bottom: 20px;
 		text-transform: uppercase;
 	}
 
@@ -756,6 +758,7 @@ $include-html-classes: false;
 				font-weight: bold;
 				color: #555;
 				font-weight: normal;
+				line-height: 1rem;
 				text-decoration: none;
 				text-transform: none;
 
@@ -801,8 +804,9 @@ $include-html-classes: false;
 			text-transform: uppecase;
 
 			a{
-				text-transform: none;
 				color: #555;
+				line-height: 1rem;
+				text-transform: none;
 
 				i{
 					color: #c00;
@@ -818,6 +822,15 @@ $include-html-classes: false;
 			.workshop-date{
 				padding-left: 0px;
 				padding-right: 15px;
+				margin-top: 0px;
+			}
+
+			.workshop-title{
+				padding-top: 0px;
+
+				a{
+					font-size: 1.2rem;
+				}
 			}
 
 			.workshop-month{

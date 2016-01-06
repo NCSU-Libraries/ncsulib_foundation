@@ -3,14 +3,12 @@
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-artbox.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/search-tabs.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/articles.js');
-    //drupal_add_js('/catalog/scripts/app.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/availability-data.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-tracking-events.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autosuggest.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autocomplete.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/books-media-tab-autosuggest.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-search-tabs-logging.js');
-    // drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/ab-test.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/foundation/foundation.interchange.js', array('scope'=>'footer'));
 ?>
 
@@ -138,18 +136,18 @@
             <!-- bottom row -->
             <section id="tier-three" class="row">
                     <div id="hunt-feature" class="medium-4 columns">
-                        <h2>The James B. Hunt Jr. Library</h2>
+                        <h2 class="sec-label">The James B. Hunt Jr. Library</h2>
                         <a href="/huntlibrary">
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt-homepage.jpg" width="100%" />
                             <div id="hunt-content">
                                 <h2>The Library of the Future</h2>
-                                <p>The Hunt Library gives NC State faculty and students a decisive competitive advantage as they tackle society's grand challenges. The signature building's technology-rich, collaborative spaces provide a platform for NC State’s world-class research and teaching.</p>
+                                <p>The Hunt Library gives NC State faculty and students a decisive competitive advantage as they tackle society's grand challenges. The signature building's technology-rich, collaborative spaces provide a platform for NC State’s world-class research and teaching.<span class="styled white"></span></p>
                             </div>
                         </a>
                     </div>
 
                 <div class="medium-4 columns" id="home-news">
-                    <h2>News <span class="pipe">|</span> <a href="//lib.ncsu.edu/1news">all news <i class="fa fa-angle-right"></i></a></h2>
+                    <h2 class="sec-label">News <span class="pipe">|</span> <a href="//lib.ncsu.edu/1news">all news <i class="fa fa-angle-right"></i></a></h2>
                     <div id="home-news-content">
                         <?php
                             $block = module_invoke('views', 'block_view', 'News-block_5');
@@ -161,7 +159,7 @@
 
                 <div class="medium-4 columns">
                     <div id="home-events">
-                        <h2>Events <span class="pipe">|</span> <a href="/events">all events <i class="fa fa-angle-right"></i></a></h2>
+                        <h2 class="sec-label">Events <span class="pipe">|</span> <a href="/events">all events <i class="fa fa-angle-right"></i></a></h2>
                         <?php
                             $block2 = module_invoke('views', 'block_view', 'upcoming_events-block_9');
                             print render($block2['content']);
