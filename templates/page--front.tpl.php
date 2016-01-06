@@ -60,7 +60,7 @@
                             <li>
                                 <ul>
                                     <li><h2>Studying</h2></li>
-                                    <li><a href="/reservearoom/" class="styled" id="ql_reservearoom">Reserve a Room</a></li>
+                                    <li><a href="https://rooms.lib.ncsu.edu/" class="styled" id="ql_reservearoom">Reserve a Room</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -87,7 +87,7 @@
                 <div id="available-links">
                     <h2>Available Now</h2>
                     <ul>
-                        <li><a href="/reservearoom/" id="al_reservearoom">Reserve a Room</a></li>
+                        <li><a href="https://rooms.lib.ncsu.edu/" id="al_reservearoom">Reserve a Room</a></li>
                         <li><a href="/techlending/" id="al_techlending">Borrow Technology</a></li>
                     </ul>
                 </div>
@@ -101,10 +101,10 @@
                     <div class="tabs-content vertical">
                         <div class="content active" id="panel-hill">
                             <ul>
-                                <li>
-                                    <span class="item"><a href="/reservearoom" id="al_hill_study_rooms">Study Rooms</a> </span>
+<!--                                 <li>
+                                    <span class="item"><a href="https://rooms.lib.ncsu.edu/" id="al_hill_study_rooms">Study Rooms</a> </span>
                                     <span class="item-count count" id="hill-study"></span>
-                                </li>
+                                </li> -->
                                 <li>
                                     <span class="item"><a href="/techlending/laptops-netbooks" id="al_hill_laptops">Laptops</a> </span>
                                     <span class="item-count count" id="hill-laptops"></span>
@@ -117,10 +117,10 @@
                         </div>
                         <div class="content" id="panel-hunt">
                             <ul>
-                                <li>
-                                    <span class="item"><a href="/reservearoom" id="al_hunt_study_rooms">Study Rooms</a> </span>
+<!--                                 <li>
+                                    <span class="item"><a href="https://rooms.lib.ncsu.edu/" id="al_hunt_study_rooms">Study Rooms</a> </span>
                                     <span class="item-count count" id="hunt-study"></span>
-                                </li>
+                                </li> -->
                                 <li>
                                     <span class="item"><a href="/techlending/laptops-netbooks" id="al_hunt_laptops">Laptops</a> </span>
                                     <span class="item-count count" id="hunt-laptops"></span>
