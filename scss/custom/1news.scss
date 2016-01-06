@@ -164,6 +164,8 @@ $include-html-classes: false;
 
         // listing items
         .view-content{
+            margin-bottom: 40px;
+
             .photo{
                 @media #{$small-only} {
                     margin-bottom: 20px;
