@@ -60,7 +60,7 @@ function htdocsOrDrupal(){
 }
 
 function captionImage(){
-    $('#main-content p.left-image,#main-content p.center-image,#main-content p.right-image').each(function(){
+    $('#main-content .left-image,#main-content .center-image,#main-content .right-image').each(function(){
 
         // add classes
         var caption = $(this).find('img').attr('alt');
