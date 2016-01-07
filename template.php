@@ -131,14 +131,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       case 'styleguide':
         drupal_add_js(path_to_theme() . '/scripts/styleguide.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
-      case 'videowalls':
-        drupal_add_js(path_to_theme() . '/scripts/convert-to-zip.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
-        break;
       case 'news':
-        drupal_add_js(path_to_theme() . '/scripts/vendor/foundation/foundation.topbar.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
-        drupal_add_js(path_to_theme() . '/scripts/news.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
-        break;
-      case '1news':
         drupal_add_js(path_to_theme() . '/scripts/vendor/foundation/foundation.topbar.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         drupal_add_js(path_to_theme() . '/scripts/news.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
