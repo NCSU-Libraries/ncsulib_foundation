@@ -34,8 +34,8 @@ a.styled:after{
     text-decoration: none;
     display: inline-block;
 }
-a.styled.white{
-    color: #FFF;
+.styled.white:after{
+    color: #FFF !important;
 }
 
 div.styled:after, span.styled:after{

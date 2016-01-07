@@ -11,7 +11,10 @@ footer {
 		color: $footer-font-color;
 	}
 	h2{
-		font-size: (($h2-font-size)*.90);
+		// color: #777;
+		font-size: 1rem;
+		font-weight: bold;
+		text-transform: uppercase;
 	}
 	h3 {
 		font-size: (($h3-font-size)*.90);
@@ -75,8 +78,14 @@ footer {
 			@media #{$medium-up}{
 				@include grid-column(4);
 			}
-
 			margin-bottom: rem-calc(20);
+
+			h2{
+
+				a{
+					// color: #777;
+				}
+			}
 		}
 
 		#f-lib-links{
