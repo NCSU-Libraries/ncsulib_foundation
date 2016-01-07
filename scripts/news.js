@@ -18,7 +18,7 @@ var news = {
     activateArchive : function(){
         $('#archive-select').change(function(e){
             val = $(this).val();
-            window.location.href= '/1news/archive/'+val;
+            window.location.href= '/news/archive/'+val;
         })
     },
 
