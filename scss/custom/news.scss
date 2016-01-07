@@ -191,7 +191,7 @@ $include-html-classes: false;
         }
 
         .upcoming_events-block_8{
-            // @include grid-column(4, $float: left);
+            @include grid-column(4, $float: left);
             padding-left: 0px;
             margin-bottom: 60px;
 
