@@ -148,14 +148,13 @@
                     </div>
 
                 <div class="medium-4 columns" id="home-news">
-                    <h2 class="sec-label">News <span class="pipe">|</span> <a href="//lib.ncsu.edu/1news">all news <i class="fa fa-angle-right"></i></a></h2>
+                    <h2 class="sec-label">News <span class="pipe">|</span> <a href="//lib.ncsu.edu/news">all news <i class="fa fa-angle-right"></i></a></h2>
                     <div id="home-news-content">
                         <?php
                             $block = module_invoke('views', 'block_view', 'News-block_5');
                             print render($block['content']);
                         ?>
                     </div>
-                    <!-- <a href="/1news" class="styled">more news</a> -->
                 </div>
 
                 <div class="medium-4 columns">
