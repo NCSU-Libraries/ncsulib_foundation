@@ -944,7 +944,7 @@ $include-html-classes: false;
 
  		#lib-st-content{
 			float: left;
-			padding: 25px 35px 35px;
+			padding: 10px 0px 10px 35px;
 			width: 50%;
 
 			@media #{$small-only}{
@@ -953,9 +953,10 @@ $include-html-classes: false;
 	 		}
 
 			h2.title{
-				font-size: 1.5rem;
-				font-weight: normal;
-				margin-bottom: 30px;
+				font-size: 1.3rem;
+				// font-weight: normal;
+				margin-bottom: 20px;
+				margin-top: 15px;
 				text-transform: none;
 
 				a:hover{
