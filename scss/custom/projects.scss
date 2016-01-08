@@ -31,6 +31,10 @@ $body-font-size-small-screen: rem-calc(15);
 
     #featured-image{
         margin-bottom: 40px;
+
+        img{
+          padding-bottom: 5px;
+        }
     }
 
     .field-name-field-teaser {
