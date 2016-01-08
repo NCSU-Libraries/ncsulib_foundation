@@ -30,6 +30,10 @@ img.alignleft {
     margin-right: rem-calc(20);
     margin-bottom: 20px;
 }
+img.alignleft,
+img.alignright{
+    width: 50% !important;
+}
 p.float-left,
 p.flow-left,
 p.left-image{
