@@ -178,7 +178,7 @@
         <div class="medium-12 columns">
             <h2>Library Stories</h2>
             <?php
-                $block2 = module_invoke('views', 'block_view', 'capture_and_promote-block_8');
+                $block2 = module_invoke('views', 'block_view', 'capture_and_promote-block_9');
                 print render($block2['content']);
             ?>
         </div>
