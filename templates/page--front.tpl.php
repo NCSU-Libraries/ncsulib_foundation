@@ -174,10 +174,10 @@
 </div> <!--/.page -->
 
 <section id="library-stories">
-    <div id="library-stories-wrapper">
-        <!-- <div class="medium-12 columns"> -->
+    <div id="library-stories-wrapper" class="row">
+        <div class="medium-12 columns">
             <?php print render($page['above_footer']); ?>
-        <!-- </div> -->
+        </div>
     </div>
 </section>
 <!-- /.above-footer -->
