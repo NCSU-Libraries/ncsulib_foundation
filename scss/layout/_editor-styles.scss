@@ -16,14 +16,16 @@ p.caption {
 
 .float-right,
 .flow-right,
-div.right-image {
+div.right-image,
+img.alignright {
     float: right;
     margin-left: rem-calc(20);
     margin-bottom: 20px;
 }
 .float-left,
 .flow-left,
-.left-image {
+.left-image,
+img.alignleft {
     float: left;
     margin-right: rem-calc(20);
     margin-bottom: 20px;
