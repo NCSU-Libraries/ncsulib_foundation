@@ -60,20 +60,21 @@ function htdocsOrDrupal(){
 }
 
 function captionImage(){
-    $('#main-content .left-image,#main-content .center-image,#main-content .right-image').each(function(){
+    $('#main-content img.left-image, #main-content img.center-image, #main-content img.right-image').each(function(){
 
         // add classes
-        var caption = $(this).find('img').attr('alt');
+        var caption = $(this).attr('alt');
         var alignmentClass = $(this).attr('class');
 
         // wrap image in div
-        $(this).find('img').wrap('<div class="caption-wrap"></div>');
-        $(this).find('.caption-wrap').addClass('div-'+alignmentClass);
+        $(this).wrap('<span class="caption-wrap '+alignmentClass+'-wrap"></span>');
+        // $(this).addClass('caption-wrap div-'+alignmentClass);
+        // $(this).find('.caption-wrap').addClass('div-'+alignmentClass);
 
         // add caption if it exists
-        // if(caption != ''){
-        //     $(this).find('.caption-wrap').append('<span class="caption-text"><small>'+caption+'</small></span>');
-        // }
+        if(caption != ''){
+            $(this).parent().append('<span class="caption-text"><small>'+caption+'</small></span>');
+        }
 
     })
 }

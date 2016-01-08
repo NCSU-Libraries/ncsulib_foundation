@@ -33,14 +33,14 @@ p.flow-left,
 p.left-image{
     float: none;
 }
-div.right-image,
-img.right-image,
-div.left-image,
-img.left-image{
-    max-width: 50%
-}
+// div.right-image,
+// img.right-image,
+// div.left-image,
+// img.left-image{
+//     max-width: 50%
+// }
 
-.caption-wrap.div-left-image{
+.caption-wrap.left-image-wrap{
     float: left;
     margin: 25px 25px 25px 0px;
     width: 50%;
@@ -52,7 +52,7 @@ img.left-image{
         width: 100%;
     }
 }
-.caption-wrap.div-right-image{
+.caption-wrap.right-image-wrap{
     float: right;
     margin: 25px 0px 25px 25px;
     width: 50%;
@@ -64,7 +64,7 @@ img.left-image{
         width: 100%;
     }
 }
-.caption-wrap.div-center-image{
+.caption-wrap.center-image-wrap{
     float: left;
     margin: 25px 0px;
     width: 100%;
