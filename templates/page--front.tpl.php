@@ -176,7 +176,11 @@
 <section id="library-stories">
     <div id="library-stories-wrapper" class="row">
         <div class="medium-12 columns">
-            <?php print render($page['above_footer']); ?>
+            <h2>Library Stories</h2>
+            <?php
+                $block2 = module_invoke('views', 'block_view', 'capture_and_promote-block_8');
+                print render($block2['content']);
+            ?>
         </div>
     </div>
 </section>
