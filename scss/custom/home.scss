@@ -869,7 +869,7 @@ $include-html-classes: false;
 
  	#library-stories-wrapper{
 		margin: auto;
-		// max-width: 1500px;
+		max-width: 1200px;
  		width: 100%;
 
  		.block{
@@ -880,6 +880,10 @@ $include-html-classes: false;
  			a{
  				font-weight: bold;
  				text-transform: uppercase;
+
+ 				@media #{$small-only}{
+					font-size: 1rem;
+				}
  			}
  			a:hover{
  				color: #c00;
@@ -893,7 +897,8 @@ $include-html-classes: false;
  				text-transform: none;
 
 				@media #{$small-only}{
-					font-size: 1rem;
+					font-size: 1.2rem;
+ 					font-normal: normal;
 				}
  			}
  		}
@@ -994,7 +999,7 @@ $include-html-classes: false;
 
 	 	#lib-stories-btn{
 			float: right;
-			margin-top: 50px;
+			margin-top: 5px;
 	 	}
  	}
 }
