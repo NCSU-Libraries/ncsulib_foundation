@@ -92,14 +92,14 @@ function ncsulib_foundation_username($variables) {
 
     if(urlsegment(0) == 'news'){ //just for author on /news pages
         $output = '<div class="user-details">';
-        $output .= '<span class="user-name username"><a href="'.$staff_url.'">'.$variables['name'].'</a></span>';
+        $output .= '<span class="user-name username" itemprop="author" content="'.$variables['name'].'"><a href="'.$staff_url.'">'.$variables['name'].'</a></span>';
         $output .= '</div>';
         $output  = '<div class="user-info">'. $output .'</div>';
     } else if (isset($variables['link_path']) && $position_id != '2023' && $position_id != '2050') {
         // We have a link path, so we should generate a link using l().
         $output = '<div class="user-photo"><a href="'.$staff_url.'">'. $img .'</a></div>';
         $output .= '<div class="user-details">';
-        $output .= '<span class="user-name"><a class="username" href="'.$staff_url.'">'.$variables['name'].'</a></span>'; //'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
+        $output .= '<span class="user-name" itemprop="author" content="'.$variables['name'].'"><a class="username" href="'.$staff_url.'">'.$variables['name'].'</a></span>'; //'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
         $output .= '<span class="user-title">'. render($title) .'</span>';
         $output .= '</div>';
         $output  = '<div class="user-info">'. $output .'</div>';
@@ -108,7 +108,7 @@ function ncsulib_foundation_username($variables) {
         // in the output. Additional classes may be added as array elements like
         $output  = '<div class="user-photo">'. $img .'</div>';
         $output .= '<div class="user-details">';
-        $output .= '<span class="user-name username">'.$variables['name'].'</span>'; //'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
+        $output .= '<span class="user-name username" itemprop="author" content="'.$variables['name'].'">'.$variables['name'].'</span>'; //'. l($variables['name'] . $variables['extra'], $variables['link_path'], $variables['link_options']) .'</span>';
         $output .= '<span class="user-title">'. render($title) .'</span>';
         $output .= '</div>';
         $output  = '<div class="user-info">'. $output .'</div>';
@@ -183,7 +183,7 @@ function ncsulib_foundation_field__field_contact($variables) {
   $output .=  '<div class="user-info">';
   $output .= '<div class="user-photo">' . $photo_html . '</div>';
   $output .= '<div class="user-details">';
-  $output .= '<span class="user-name">' . $link . '</span>';
+  $output .= '<span class="user-name" itemprop="author" content="'.$link.'">' . $link . '</span>';
   $output .= '<span class="user-title">' . $title . '</span>';
   $output .= '</div>';
   $output .= '</div>';
@@ -600,7 +600,7 @@ function ncsulib_foundation_field__field_event_leads__event($variables) {
     $output .= '<div class="user-info">';
     $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
     $output .= '<div class="user-details">';
-    $output .= '<span class="user-name">'. l(render($item), $item['link']) .'</span>';
+    $output .= '<span class="user-name" itemprop="author" content="'.$l(render($item), $item['link']).'">'. l(render($item), $item['link']) .'</span>';
     $output .= '<span class="user-title">'. render($item['title']) .'</span>';
     $output .= '</div>';
     $output .= '</div>';
@@ -885,14 +885,14 @@ function print_multiple_users($user_array, $output) {
       case 0:
         $output .= '<div class="user-photo">'. $img .'</div>';
         $output .= '<div class="user-details">';
-        $output .= '<span class="user-name">'.$staff_url.'</span>';
+        $output .= '<span class="user-name" itemprop="author" content="'.$item['name'].'">'.$staff_url.'</span>';
         $output .= '<span class="user-title">'. render($item['title']) .'</span>';
         break;
 
       default:
         $output .= '<div class="user-photo">'. $img .'</div>';
         $output .= '<div class="user-details">';
-        $output .= '<span class="user-name">'. $staff_url .'</span>';
+        $output .= '<span class="user-name" itemprop="author" content="'.$item['name'].'">'. $staff_url .'</span>';
         $output .= '<span class="user-title">'. render($item['title']) .'</span>';
         break;
     }

@@ -8,16 +8,18 @@
   hide($content['field_flickr_set']);
   hide($content['field_problem_statement']);
 ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/Article">
 
-    <div class="story">
+    <div class="story" itemprop="mainEntityOfPage">
 
       <div class="intro">
         <div class="story-title">
           <?php if ($title): ?>
           <?php print render($title_prefix); ?>
           <p><a href="/stories"><i class="fa fa-chevron-left"></i> Back to Library Stories</a></p>
-          <h1 id="page-title" class="title"><?php print $title; ?></h1>
+          <h1 id="page-title" class="title" itemprop="headline" content="<?= $title; ?>"><?= $title; ?></h1>
+          <span itemprop="publisher" content="North Carolina State University Library"></span>
+          <span itemprop="logo" content="http://www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png"></span>
           <div class="right">
                 <a id="fb-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
                 <a id="tw-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
@@ -38,7 +40,7 @@
           $title = $content['field_featured_image_landscape']['#object']->field_featured_image_landscape['und'][0]['title'];
         ?>
 
-        <div id="featured-image">
+        <div id="featured-image" itemprop="image" content="http://www.lib.ncsu.edu/sites/default/files/<?= $photo_url; ?>">
           <img src="/sites/default/files/<?= $photo_url; ?>" width="100%" alt="<?= $alt; ?>" rel="image_src">
           <?php if($title){ echo '<small>'.$title.'</small>';} ?>
         </div>
@@ -50,7 +52,8 @@
 
           <div class="story-statement">
             <?php print render($content['field_body']); ?>
-            <p class="date-posted">Written on <?php print date('F j, Y', $created); ?></p>
+            <p class="date-posted" itemprop="datePublished" content="<?= date('F j, Y', $created) ?>">Written on <?php print date('F j, Y', $created); ?></p>
+            <span itemprop="dateModified" content="<?= date('F j, Y', $created) ?>"></span>
           </div>
           <aside class="story-statement-aside sidebar">
             <?php print render($content['field_story_lead']); ?>
