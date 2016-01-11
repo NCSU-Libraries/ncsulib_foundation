@@ -183,7 +183,7 @@ function ncsulib_foundation_field__field_contact($variables) {
   $output .=  '<div class="user-info">';
   $output .= '<div class="user-photo">' . $photo_html . '</div>';
   $output .= '<div class="user-details">';
-  $output .= '<span class="user-name" itemprop="author" content="'.$link.'">' . $link . '</span>';
+  $output .= '<span class="user-name" itemprop="author" content="'.$name.'">' . $link . '</span>';
   $output .= '<span class="user-title">' . $title . '</span>';
   $output .= '</div>';
   $output .= '</div>';
