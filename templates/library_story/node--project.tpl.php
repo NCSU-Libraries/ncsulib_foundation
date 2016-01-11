@@ -10,7 +10,7 @@
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/NewsArticle">
 
-    <div class="story" itemprop="mainEntityOfPage">
+    <div class="story" itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article">
 
       <div class="intro">
         <div class="story-title">
@@ -18,8 +18,16 @@
           <?php print render($title_prefix); ?>
           <p><a href="/stories"><i class="fa fa-chevron-left"></i> Back to Library Stories</a></p>
           <h1 id="page-title" class="title" itemprop="headline" content="<?= $title; ?>"><?= $title; ?></h1>
-          <span itemprop="publisher" content="North Carolina State University Library"></span>
-          <span itemprop="logo" content="http://www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png"></span>
+          <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+              <meta itemprop="url" content="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png">
+              <meta itemprop="width" content="600">
+              <meta itemprop="height" content="60">
+            </div>
+            <meta itemprop="name" content="North Carolina State University Library">
+          </div>
+
+
           <div class="right">
                 <a id="fb-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
                 <a id="tw-share-button" data-url="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
@@ -45,6 +53,7 @@
           <?php if($title){ echo '<small>'.$title.'</small>';} ?>
         </div>
         <?php print render($content['field_teaser']); ?>
+        <span itemprop="description"><?= render($content['field_teaser']) ?></span>
 
       </div>
 
