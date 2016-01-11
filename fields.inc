@@ -600,7 +600,7 @@ function ncsulib_foundation_field__field_event_leads__event($variables) {
     $output .= '<div class="user-info">';
     $output .= '<div class="user-photo">'. render($item['image']) .'</div>';
     $output .= '<div class="user-details">';
-    $output .= '<span class="user-name" itemprop="author" content="'.$l(render($item), $item['link']).'">'. l(render($item), $item['link']) .'</span>';
+    $output .= '<span class="user-name" itemprop="author" content="">'. l(render($item), $item['link']) .'</span>';
     $output .= '<span class="user-title">'. render($item['title']) .'</span>';
     $output .= '</div>';
     $output .= '</div>';
