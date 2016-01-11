@@ -8,7 +8,7 @@
   hide($content['field_flickr_set']);
   hide($content['field_problem_statement']);
 ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/Article">
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/NewsArticle">
 
     <div class="story" itemprop="mainEntityOfPage">
 
