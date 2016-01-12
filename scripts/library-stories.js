@@ -21,6 +21,11 @@ var lib = {
 
             e.preventDefault();
         })
+
+        // scroll tracking
+        $.scrollDepth({
+            elements: ['footer']
+        });
     }
 }
 
