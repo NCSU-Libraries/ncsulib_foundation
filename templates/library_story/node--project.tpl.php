@@ -53,7 +53,7 @@
           <?php if($title){ echo '<small>'.$title.'</small>';} ?>
         </div>
         <?php print render($content['field_teaser']); ?>
-        <span itemprop="description"><?= render($content['field_teaser']) ?></span>
+        <span itemprop="description" content="<?= render($content['field_teaser']) ?>"></span>
 
       </div>
 
