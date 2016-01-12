@@ -40,6 +40,17 @@ form.webform-client-form{
 	        font-style: italic;
 	        font-size: 0.9rem;
 	        padding-top: 7px;
+
+	        br{
+	        	margin-bottom: 20px;
+	        }
+	    }
+	    .form-managed-file{
+	    	margin-top: 20px;
+
+			input{
+				margin-bottom: 20px;
+			}
 	    }
 	}
     .webform-component.webform-component-markup{
