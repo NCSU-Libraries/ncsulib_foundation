@@ -22,8 +22,8 @@ var lib = {
             e.preventDefault();
         })
 
-        // scroll tracking
-        $.scrollDepth({
+        // scroll depth tracking
+        jQuery.scrollDepth({
             elements: ['footer']
         });
     }
