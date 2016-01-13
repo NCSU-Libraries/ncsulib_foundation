@@ -523,6 +523,11 @@ $include-html-classes: false;
 	}
 
 	#home-social{
+		@media #{$medium-up}{
+			position: relative;
+			top: 15px;
+		}
+
 		h2{
 			font-size: 1.25rem;
 		}
@@ -532,6 +537,10 @@ $include-html-classes: false;
 				float: left;
 				margin-right: 20px;
 				margin-bottom: 20px;
+
+				@media #{$small-only}{
+					width: 100%;
+				}
 
 				a{
 					color: #555;
