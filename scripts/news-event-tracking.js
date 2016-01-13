@@ -73,8 +73,8 @@ var nga = {
 }
 
 jQuery(function(){
-    // if(!$('body').hasClass('logged-in')){
+    if(!$('body').hasClass('logged-in')){
         nga.init();
-    // }
+    }
 })
 
