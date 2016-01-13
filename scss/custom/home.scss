@@ -30,7 +30,7 @@ $include-html-classes: false;
 #tier-one{
 	@include grid-row;
 	margin-top: rem-calc(0);
-	margin-bottom: rem-calc(30);
+	margin-bottom: rem-calc(0);
 
 	@media #{$small-only}{
 		margin-bottom: 0px;
@@ -520,6 +520,44 @@ $include-html-classes: false;
 	.orbit-timer{
 		// $orbit-timer-show-progress-bar: false !default;
 		// display: none;
+	}
+
+	#home-social{
+		h2{
+			font-size: 1.25rem;
+		}
+
+		#social-icons{
+			li{
+				float: left;
+				margin-right: 20px;
+				margin-bottom: 20px;
+
+				a{
+					color: #555;
+
+					i{
+						border-radius: 5px;
+						background: #555;
+						color: #FFF;
+						height: 30px;
+						font-size: 1.2rem;
+						padding: 6px 0px 0px;
+						text-align: center;
+						width: 30px;
+					}
+				}
+
+				a:hover{
+					color: #c00;
+					text-decoration: none;
+
+					i{
+						background: #c00;
+					}
+				}
+			}
+		}
 	}
 
 }

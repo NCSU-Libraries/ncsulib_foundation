@@ -75,6 +75,15 @@
                 <!-- artbox stub-->
                 <div id="home-artbox">
                     <?php include_once 'block--nivo_slider.tpl.php'; ?>
+
+                    <div id="home-social">
+                        <h2>Follow Us:</h2>
+                        <ul id="social-icons" class="unstyle-list">
+                            <li><a href="https://www.facebook.com/ncsulibraries"><i class="fa fa-facebook"></i> Facebook</a></li>
+                            <li><a href="https://twitter.com/ncsulibraries"><i class="fa fa-twitter"></i> Twitter</a></li>
+                            <li><a href="http://instagram.com/ncsulibraries"><i class="fa fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </section> <!-- /top row -->
