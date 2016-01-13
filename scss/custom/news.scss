@@ -253,6 +253,10 @@ $include-html-classes: false;
             padding: 10px 50% 11px;
             width: 200%;
 
+            h2{
+                color: #fff;
+            }
+
             .lib-story{
                 line-height: 1.4;
 
@@ -263,9 +267,6 @@ $include-html-classes: false;
                     }
                 }
 
-                h2{
-                    color: #fff;
-                }
                 a{
                     color: #fff;
                 }
