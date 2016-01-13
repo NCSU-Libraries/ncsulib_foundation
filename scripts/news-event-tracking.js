@@ -48,7 +48,7 @@ var nga = {
             newsGA.pause();
         })
 
-        // latest focus
+        // Archive button
         jQuery('#archive').click(function(e){
             ga('send', 'event', 'News', 'Archive Button');
             newsGA.pause();

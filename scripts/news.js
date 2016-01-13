@@ -1,7 +1,6 @@
 var news = {
     num : 0,
     init : function(){
-
         // imported news captions
         news.cap = $('.caption').data('caption');
         $('.caption').append('<small>'+news.cap+'</small>');
