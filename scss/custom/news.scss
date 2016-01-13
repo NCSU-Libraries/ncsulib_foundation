@@ -253,15 +253,26 @@ $include-html-classes: false;
             padding: 10px 50% 11px;
             width: 200%;
 
-            h2{
-                color: #fff;
-            }
-            a{
-                color: #fff;
-            }
+            .lib-story{
+                line-height: 1.4;
 
-            img{
-                padding-bottom: 10px;
+                .story-title{
+
+                    a{
+                        line-height: 1.4;
+                    }
+                }
+
+                h2{
+                    color: #fff;
+                }
+                a{
+                    color: #fff;
+                }
+
+                img{
+                    padding-bottom: 10px;
+                }
             }
 
             #lib-stories-btn{
