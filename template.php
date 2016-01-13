@@ -125,6 +125,16 @@ function ncsulib_foundation_preprocess_page(&$variables) {
   // Add custom JS/CSS
   $url_comp = explode('/', request_uri());
 
+  // just one directory deep
+  if (isset($url_comp[1]) && !isset($url_comp[2])) {
+    // for two dirs deep (ex: find/books)
+    switch ($url_comp[1]) {
+      case 'news':
+        drupal_add_js(path_to_theme() . '/scripts/news-event-tracking.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        break;
+    }
+  }
+
   // hack to remove dupes on event series page
   if (isset($url_comp[2])) {
     switch ($url_comp[2]) {
@@ -161,6 +171,8 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       }
     }
   }
+
+
 
   // target a specific single page
   $url_comp = explode('/', request_path());
