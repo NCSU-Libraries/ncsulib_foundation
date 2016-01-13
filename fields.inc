@@ -691,6 +691,25 @@ function ncsulib_foundation_field__project($variables) {
   return $output;
 }
 
+
+/**
+ * Implements theme_field()
+ *
+ * Make story lead(s) show up with name, title and thumbnail image
+ */
+function ncsulib_foundation_field__field_project_user_activities__project($variables) {
+  $output = '';
+
+  // Load all items
+  foreach ($variables['element']['#items'] as $key => $value) {
+    $output .= '<a href="/taxonomy/term/'.$value['tid'].'" class="term">'.$value['taxonomy_term']->name.'</a>, ';
+  }
+  $output = substr($output, 0, -2);
+  return $output;
+}
+
+
+
 /**
  * Implements theme_field()
  *

@@ -289,9 +289,17 @@ $body-font-size-small-screen: rem-calc(15);
                     display: none;
                 }
             }
+
+            .term{
+              line-height: 1.4;
+            }
+
             h3{
               font-size: 1rem;
-              margin-bottom: 0px;
+              font-weight: bold;
+              margin-bottom: 10px;
+              text-transform: uppercase;
+
               @media #{$small-only} {
                   display: none;
               }
