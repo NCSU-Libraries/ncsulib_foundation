@@ -49,7 +49,7 @@
           $title = $content['field_featured_image_landscape']['#object']->field_featured_image_landscape['und'][0]['title'];
         ?>
 
-        <div id="featured-image" >
+        <div id="featured-image">
           <img itemprop="image" src="/sites/default/files/<?= $photo_url; ?>" width="100%" alt="<?= $alt; ?>" rel="image_src">
           <?php if($title){ echo '<small>'.$title.'</small>';} ?>
         </div>

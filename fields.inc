@@ -129,8 +129,14 @@ function ncsulib_foundation_field__field_news_feature_photo__news($variables){
 
     $title = $variables['items'][0]['#item']['alt'];
     $img_url = $variables['items'][0]['#item']['uri'];
-    $output = '<img src="'.image_style_url("738_max_width", $img_url).'" width="100%" itemprop="image">';
-    $output .= '<small>'.$title.'</small>';
+    echo image_style_url("738_max_width", $img_url);
+    $output = '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
+    $output .= '<meta itemprop="url" content="'.image_style_url("738_max_width", $img_url).'">';
+    $output .= '<meta itemprop="width" content="738">';
+    $output .= '<meta itemprop="height" content="415">';
+    $output .= '<img src="'.image_style_url("738_max_width", $img_url).'" width="100%" itemprop="image">';
+    $output .= '<small itemprop="caption">'.$title.'</small>';
+    $output .= '</div>';
     return $output;
 }
 
