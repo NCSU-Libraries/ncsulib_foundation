@@ -1,4 +1,12 @@
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/NewsArticle">
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://webdev.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png">
+            <meta itemprop="width" content="600">
+            <meta itemprop="height" content="60">
+        </div>
+        <meta itemprop="name" content="North Carolina State University Library">
+    </div>
 
     <?php print render($title_prefix); ?>
     <?php if (!$page): ?>
@@ -17,13 +25,15 @@
     <div class="columns medium-12">
         <?php if ($title): ?>
             <?php print render($title_prefix); ?>
-                <h1 id="page-title" class="title"><?php print $title; ?></h1>
+                <h1 id="page-title" class="title" itemprop="headline"><?php print $title; ?></h1>
             <?php print render($title_suffix); ?>
         <?php endif; ?>
         <div id="meta" class="row">
             <div class="columns medium-4 small-6">
+                <span itemprop="author" content="NC State Library Staff"></span>
                 <?=  '';//$name; ?>
-                <div id="post-date"><small><?php print date('F j, Y',strtotime(format_date($node->created, 'page'))); ?></small></div>
+                <div id="post-date"><small itemprop="datePublished"><?= date('F j, Y',strtotime(format_date($node->created, 'page'))); ?></small></div>
+                <span itemprop="dateModified" content="<?= date('F j, Y',strtotime(format_date($node->created, 'page'))); ?>"></span>
             </div>
             <div class="columns medium-4 small-6 left">
                 <div id="social">
@@ -38,13 +48,15 @@
             </div>
         </div>
     </div>
-    <div id="post-content" class="columns medium-8">
+    <div id="post-content" class="columns medium-8" itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article">
        <div id="feature-photo" class="row">
             <div class="columns medium-12">
                 <?= render($content['field_news_feature_photo']); ?>
             </div>
         </div>
-        <?= render($content); ?>
+        <div itemprop="articleBody">
+            <?= render($content); ?>
+        </div>
     </div>
     <aside id="post-sidebar" class="columns medium-4">
 
