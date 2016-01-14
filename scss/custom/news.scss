@@ -250,35 +250,57 @@ $include-html-classes: false;
             color: #fff;
             margin-left: -50%;
             margin-bottom: 65px;
-            padding: 10px 50% 11px;
+            padding: 10px 50% 35px;
             width: 200%;
 
             h2{
                 color: #fff;
+                font-size: 1.8rem;
+                text-transform: none;
+                font-weight: normal;
+                font-family: UniversLight;
             }
 
-            .lib-story{
-                line-height: 1.4;
+            .view-header{
+                p{
+                    font-family: UniversLight;
+                    font-size: 1.1rem;
+                }
+            }
 
-                .story-title{
+            .view-content{
+                margin-bottom: 10px;
+
+                .lib-story{
+                    line-height: 1.4;
+
+                    .story-title{
+
+                        a{
+                            line-height: 1.4;
+                        }
+                    }
 
                     a{
-                        line-height: 1.4;
+                        color: #fff;
                     }
-                }
 
-                a{
-                    color: #fff;
-                }
-
-                img{
-                    padding-bottom: 10px;
+                    img{
+                        padding-bottom: 10px;
+                    }
                 }
             }
 
-            #lib-stories-btn{
-                text-align: right;
-                padding: 0px 0px 0px 0px;
+            .view-footer{
+
+                #lib-stories-btn{
+                    text-align: right;
+                    padding: 0px 0px 0px 0px;
+
+                    a{
+                        color: #fff;
+                    }
+                }
             }
         }
 
