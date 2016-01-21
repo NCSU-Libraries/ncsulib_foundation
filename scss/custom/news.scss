@@ -145,6 +145,12 @@ $include-html-classes: false;
         #focus{
             margin-bottom: 40px;
 
+            &:hover{
+                img{
+                    opacity: 0.75;
+                }
+            }
+
             #latest-focus{
 
                 @media #{$medium-up} {
@@ -154,6 +160,7 @@ $include-html-classes: false;
 
                 #focus-cover{
                     margin-bottom: 20px;
+
                 }
 
                 #focus-content{
@@ -255,7 +262,7 @@ $include-html-classes: false;
 
             h2{
                 color: #fff;
-                font-size: 1.8rem;
+                font-size: rem-calc(42);
                 text-transform: none;
                 font-weight: normal;
                 font-family: UniversLight;
@@ -263,8 +270,8 @@ $include-html-classes: false;
 
             .view-header{
                 p{
-                    font-family: UniversLight;
-                    font-size: 1.1rem;
+                    // font-family: UniversLight;
+                    font-size: rem-calc(24);
                 }
             }
 
@@ -274,15 +281,26 @@ $include-html-classes: false;
                 .lib-story{
                     line-height: 1.4;
 
+                    &:hover{
+                        img{
+                            opacity: 0.75;
+                        }
+                    }
+
                     .story-title{
 
                         a{
                             line-height: 1.4;
+
+                            &:hover{
+                                text-decoration: none;
+                            }
                         }
                     }
 
                     a{
                         color: #fff;
+
                     }
 
                     img{
