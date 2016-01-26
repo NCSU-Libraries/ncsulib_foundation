@@ -1,9 +1,4 @@
 <?php include 'ncsu-brand-bar.php'; ?>
-<!--?php include("/var/www/site/htdocs/notice/notice.php"); ?-->
-<?php
-	$msg = file_get_contents("https://www.lib.ncsu.edu/notice/notice.php");
-	echo $msg;
-?>
 <?php
 
 	// $_SERVER['REMOTE_ADDR'] is only set when a PHP page is rendered by Apache,
@@ -163,4 +158,7 @@
 
 <a name="#main-content" class="element-invisible element-focusable" tabindex="-1">Skip Content</a>
 
-
+<?php
+	$msg = file_get_contents("https://www.lib.ncsu.edu/notice/notice.php");
+	echo $msg;
+?>
