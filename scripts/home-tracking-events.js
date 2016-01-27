@@ -74,6 +74,13 @@ var homeGA = {
             homeGA.pause();
         })
 
+        // social icons
+        jQuery('#social-icons a').click(function(){
+            title = $(this).text();
+            ga('send', 'event', 'Homepage Social Icons', title);
+            homeGA.pause();
+        })
+
         // research tools
         jQuery('#rt_databases').click(function(){
             ga('send', 'event', 'Search', 'More Research Tools', 'Databases');
