@@ -241,7 +241,7 @@ $microformat-abbr-font-decoration: none !default;
 
 %small {
   font-size: $small-font-size;
-  line-height: 1.3;
+  line-height: inherit;
 }
 
 %code {
