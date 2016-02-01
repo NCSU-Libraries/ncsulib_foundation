@@ -151,7 +151,7 @@
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt-homepage.jpg" width="100%" />
                             <div id="hunt-content">
                                 <h2>The Library of the Future</h2>
-                                <p>The Hunt Library gives NC State faculty and students a decisive competitive advantage as they tackle society's grand challenges. The signature building's technology-rich, collaborative spaces provide a platform for NC State’s world-class research and teaching.<span class="styled white"></span></p>
+                                <p>The Hunt Library gives NC State faculty and students a decisive competitive advantage as they tackle society's grand challenges. The building's technology-rich, collaborative spaces provide a platform for NC State’s world-class research and teaching.<span class="styled white"></span></p>
                             </div>
                         </a>
                     </div>
