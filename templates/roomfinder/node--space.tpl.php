@@ -34,8 +34,6 @@
     ?>
 
 
-    <!-- <div class="columns medium-12"> -->
-
 
     <div class="row">
         <div class="columns medium-8">
@@ -52,7 +50,7 @@
         <div class="columns medium-12">
             <?= render($content); ?>
 
-            <h3>Usage Policies</h3>
+            <h3>Reservation and Use Guidelines</h3>
             <?php if($content['field_days_in_advance']): ?>
             <p>Reservable up to <?= strip_tags(render($content['field_days_in_advance'])); ?> in advance.</br>
             <?php endif; ?>
