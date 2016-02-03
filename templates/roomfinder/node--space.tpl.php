@@ -58,14 +58,14 @@
             <?php endif; ?>
 
             <?php if($content['field_max_reservation_period']): ?>
-            Reserve for up to <?= strip_tags(render($content['field_max_reservation_period'])); ?></br>
+            Reserve for up to <?= strip_tags(render($content['field_max_reservation_period'])); ?>.</br>
             <?php endif; ?>
 
             <?php
 
                 if($content['field_reservable_by']){
                     $string = strip_tags(implode(', ',explode('</div>',render($content['field_reservable_by']))));
-                    echo 'Reservable by '.substr($string, 0, -4).'</br>';
+                    echo 'Reservable by '.substr($string, 0, -5).'</br>';
                 }
 
                 if($content['field_15_minute_grace_period']){
