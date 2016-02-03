@@ -65,7 +65,7 @@
 
                 if($content['field_reservable_by']){
                     $string = strip_tags(implode(', ',explode('</div>',render($content['field_reservable_by']))));
-                    echo 'Reservable by '.substr($string, 0, -5).'</br>';
+                    echo 'Reservable by '.substr($string, 0, -6).'.</br>';
                 }
 
                 if($content['field_15_minute_grace_period']){
