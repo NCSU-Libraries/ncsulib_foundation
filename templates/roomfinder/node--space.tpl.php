@@ -27,6 +27,10 @@
         hide($content['field_contact_entity_phone']);
         hide($content['field_contact_entity_email']);
         hide($content['field_contact_person']);
+        hide($content['field_days_in_advance']);
+        hide($content['field_max_reservation_period']);
+        hide($content['field_reservable_by']);
+        hide($content['field_15_minute_grace_period']);
     ?>
 
 
