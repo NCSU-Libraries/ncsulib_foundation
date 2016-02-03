@@ -72,7 +72,15 @@
             ?>
             </p>
 
-            <?php if($content['field_contact_point'] || $content['field_contact_person'] || $content['field_contact_entity_name'] || $content['field_contact_entity_phone'] || $content['field_contact_entity_email'] ): ?>
+            <?php
+                if(
+                    render($content['field_contact_point']) ||
+                    render($content['field_contact_person']) ||
+                    render($content['field_contact_entity_name']) ||
+                    render($content['field_contact_entity_phone']) ||
+                    render($content['field_contact_entity_email'])
+                ):
+            ?>
             <h3>Contact Info</h3>
             <?php endif; ?>
             <?= render($content['field_contact_point']); ?>
