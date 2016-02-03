@@ -54,11 +54,11 @@
 
             <h3>Usage Policies</h3>
             <?php if($content['field_days_in_advance']): ?>
-            <p>Reservable up to <?= render($content['field_days_in_advance']); ?> in advance.</br>
+            <p>Reservable up to <?= strip_tags(render($content['field_days_in_advance'])); ?> in advance.</br>
             <?php endif; ?>
 
             <?php if($content['field_max_reservation_period']): ?>
-            Reserve for up to <?= render($content['field_max_reservation_period']); ?></br>
+            Reserve for up to <?= strip_tags(render($content['field_max_reservation_period'])); ?></br>
             <?php endif; ?>
 
             <?php
@@ -68,7 +68,7 @@
                     echo 'Reservable by '.substr($string, 0, -4).'</br>';
                 }
 
-                if(render($content['field_15_minute_grace_period']) == 'yes'){
+                if($content['field_15_minute_grace_period']){
                     echo 'After 15 minute grace period for arrival, space becomes available to others.';
                 }
             ?>
