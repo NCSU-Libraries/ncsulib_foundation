@@ -358,7 +358,7 @@ $include-html-classes: false;
 			}
 
 			h2{
-				color: $secondary-color;
+				// color: $secondary-color;
 				font-size: 0.8rem;
 				font-weight: bold;
 				margin-bottom: 10px;
@@ -890,6 +890,7 @@ $include-html-classes: false;
 			.workshop-day{
 
 				h2{
+					color: $secondary-color;
 					padding: 5px 0px;
 				}
 			}
