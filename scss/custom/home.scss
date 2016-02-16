@@ -47,8 +47,8 @@ $include-html-classes: false;
 		padding: 0px;
 	}
 
-	h2{
-		font-size: 1.8rem;
+	h3{
+		// font-size: 1.8rem;
 		margin-top: 0px;
 		padding-top: 0px;
 	}
@@ -263,7 +263,11 @@ $include-html-classes: false;
 /*end tabs*/
 
 #content #research-tools{
-	h2{
+	margin-bottom: 30px;
+	float: left;
+	width: 100%;
+
+	h3{
 		color: #999;
 		font-size: 0.7rem;
 		float: left;
@@ -357,13 +361,10 @@ $include-html-classes: false;
 				width: 100%;
 			}
 
-			h2{
-				// color: $secondary-color;
-				font-size: 0.8rem;
-				font-weight: bold;
+			h3{
+
 				margin-bottom: 10px;
 				padding-top: 0px;
-				text-transform: uppercase;
 
 				@media #{$small-only}{
 					// font-size: 1rem;
@@ -376,6 +377,7 @@ $include-html-classes: false;
 
 				li{
 					font-size: 0.84rem;
+					line-height: 1.5rem;
 					margin-bottom: 0px;
 
 
@@ -528,8 +530,8 @@ $include-html-classes: false;
 			top: 15px;
 		}
 
-		h2{
-			font-size: 1.25rem;
+		h3{
+			// font-size: 1.25rem;
 		}
 
 		#social-icons{
@@ -543,11 +545,11 @@ $include-html-classes: false;
 				}
 
 				a{
-					color: #555;
+					// color: #555;
 
 					i{
 						border-radius: 5px;
-						background: #555;
+						background: #c00;
 						color: #FFF;
 						height: 30px;
 						font-size: 1.2rem;
@@ -595,12 +597,9 @@ $include-html-classes: false;
 			margin-bottom: rem-calc(20);
 		}
 
-		h2{
-			font-size: 1rem;
-			font-weight: bold;
+		h3{
 			display: inline;
 			padding-top: 0px;
-			text-transform: uppercase;
 
 			@media #{$small-only}{
 				display: block;
@@ -624,7 +623,7 @@ $include-html-classes: false;
 					padding-top: 0px;
 				}
 
-				h2{
+				h3{
 					margin-top: rem-calc(5);
 					padding-top: 0px;
 				}
@@ -693,7 +692,7 @@ $include-html-classes: false;
 
 	.tabs-content{
 		.content{
-			padding: 0.74rem 0px;
+			padding: 0.64rem 0px;
 
 			ul{
 				margin: 0px;
@@ -751,7 +750,7 @@ $include-html-classes: false;
 #tier-three{
 	margin-bottom: emCalc(0);
 
-	h2.sec-label{
+	h3.sec-label{
 		font-size: 1rem;
 		font-weight: bold;
 		margin-bottom: 20px;
@@ -774,14 +773,14 @@ $include-html-classes: false;
 
 				h2{
 					color: #fff;
-					font-size: 1.3rem;
+					font-size: 1rem;
 					font-weight: normal;
 					padding: 0px;
 				}
 
 				p{
 					color: #fff;
-					line-height: 1.2rem;
+					line-height: 1.4rem;
 				}
 			}
 		}
@@ -798,15 +797,10 @@ $include-html-classes: false;
 			margin-bottom: 50px;
 		}
 
-		h2{
-				text-transform: uppercase;
+		h3{
 
 			a{
-				font-weight: bold;
-				color: #555;
-				font-weight: normal;
 				line-height: 1rem;
-				text-decoration: none;
 				text-transform: none;
 
 				i{
@@ -835,8 +829,9 @@ $include-html-classes: false;
 				font-size: 0.8rem;
 			}
 
-			h3{
+			h2{
 				font-weight: normal;
+				font-size: 1rem;
 			}
 
 			img{
@@ -846,12 +841,9 @@ $include-html-classes: false;
 		}
 	}
 	#home-events{
-		h2{
-			font-weight: bold;
-			text-transform: uppecase;
+		h3{
 
 			a{
-				color: #555;
 				line-height: 1rem;
 				text-transform: none;
 
