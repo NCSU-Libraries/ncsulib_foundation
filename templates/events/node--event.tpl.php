@@ -19,6 +19,15 @@
         print '<i class="fa fa-warning"></i> This event has already happened.';
         print '</div>';
     }
+
+    //is there a sidebar?
+    if($node->field_image_for_event || $content['field_event_leads']){
+        $sidebar = true;
+        $first_column = 'medium-7';
+    } else{
+        $sidebar = false;
+        $first_column = 'medium-12';
+    }
 ?>
 
 <?= render($title_prefix); ?>
@@ -28,7 +37,7 @@
 <?= render($title_suffix); ?>
 
     <div id="event-node" class="row">
-        <div class="columns medium-7">
+        <div class="columns <?=$first_column?>">
             <div class="event-meta">
                 <?php
                     // get time
@@ -80,6 +89,7 @@
 
 
         </div>
+        <?php if($sidebar): ?>
         <div class="columns medium-5">
             <?php if($node->field_image_for_event): ?>
             <?= '<img property="og:image" src="'.image_style_url('large', $node->field_image_for_event['und'][0]['uri']).'" width="100%" itemprop="image" />' ?>
@@ -87,6 +97,7 @@
 
             <?= drupal_render($content['field_event_leads']); ?>
         </div>
+        <?php endif; ?>
     </div>
 </article>
 
