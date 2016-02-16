@@ -67,8 +67,10 @@
                 }
 
                 if($content['field_15_minute_grace_period']){
-                    echo 'After 15 minute grace period for arrival, space becomes available to others.';
+                    echo 'After 15 minute grace period for arrival, space becomes available to others.</br>';
                 }
+
+                echo 'View <a href="http://www.lib.ncsu.edu/spaces/general-room-use-guidelines">room use guidelines</a>.';
             ?>
             </p>
 
