@@ -52,7 +52,7 @@
 		if($adverse_weather_ary):
 	?>
 	<div class="exceptions-schedule large-12">
-		<h4 class="subheader">Exam Hours <div class="adverse-weather-hours">&nbsp;</div></h4>
+		<h4 class="subheader">Adverse Weather <div class="adverse-weather-hours">&nbsp;</div></h4>
 		<table>
 			<?php foreach($adverse_weather_ary as $w): ?>
 			<tr>
