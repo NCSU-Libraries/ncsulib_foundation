@@ -47,35 +47,7 @@
 	<?php endif; ?>
 
 
-	<!-- EXCEPTIONS -->
-	<?php
-		$exceptions_hours_ary = hours_get_exception('exception',$month_ary);
-		if($exceptions_hours_ary):
-	?>
-
-	<div class="exceptions-schedule large-12">
-		<h4 class="subheader">Exceptions <div class="exception-hours">&nbsp;</div></h4>
-		<table>
-			<?php foreach($exceptions_hours_ary as $exception): ?>
-			<tr>
-				<td width="40%"><?= $exception['date_range']; ?></td>
-				<td><?= $exception['display']; ?></td>
-			</tr>
-			<?php endforeach; ?>
-		</table>
-		<?php if(arg(1) == 'hill' && arg(2) == 'creamery' && !isset($_GET['date'])): ?>
-<!-- 			<div class="row show-for-small-only">
-				<div class="columns medium-12">
-					<div class="exam-hours-alert">
-						<p><div class="up-triangle"></div>Temporarily closed during West Wing renovations.</p>
-					</div>
-				</div>
-			</div> -->
-		<?php endif; ?>
-	</div>
-	<?php endif; ?>
-
-	<!-- adverse weather -->
+	<!-- Adverse Weather -->
 	<?php
 		$adverse_weather_ary = hours_get_exception('adverse_weather',$month_ary);
 		if($adverse_weather_ary):
@@ -92,6 +64,27 @@
 		</table>
 	</div>
 	<?php endif; ?>
+
+
+	<!-- EXCEPTIONS -->
+	<?php
+		$exceptions_hours_ary = hours_get_exception('exception',$month_ary);
+		if($exceptions_hours_ary):
+	?>
+	<div class="exceptions-schedule large-12">
+		<h4 class="subheader">Exceptions <div class="exception-hours">&nbsp;</div></h4>
+		<table>
+			<?php foreach($exceptions_hours_ary as $exception): ?>
+			<tr>
+				<td width="40%"><?= $exception['date_range']; ?></td>
+				<td><?= $exception['display']; ?></td>
+			</tr>
+			<?php endforeach; ?>
+		</table>
+	</div>
+	<?php endif; ?>
+
+
 
 
 	<?php echo $srv_exceptions[0]['value']; ?>
