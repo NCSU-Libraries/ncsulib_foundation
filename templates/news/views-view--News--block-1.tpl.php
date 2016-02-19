@@ -32,7 +32,7 @@
   <?php if ($title): ?>
     <?php print $title; ?>
   <?php else : ?>
-    <?php echo '<h2>Featured News <span id="feat-news-title">| <a href="/news/archive/'.date('Y').'" class="styled">all news</a></span></h2>'; ?>
+    <?php echo '<h3>Featured News <span id="feat-news-title">| <a href="/news/archive/'.date('Y').'" class="styled">all news</a></span></h3>'; ?>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>

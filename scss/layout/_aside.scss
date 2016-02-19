@@ -88,13 +88,13 @@
 					// font-size: 0.875rem;
 
 					&.active-trail{
-						color: $secondary-color-b;
+						color: $side-nav-link-color-active;
 						font-weight: bold;
 					}
 				}
 
 				a:hover{
-					text-decoration: underline;
+					//text-decoration: underline;
 				}
 
 				ul{

@@ -425,7 +425,7 @@ header#minimum-bar{
                 font-size: rem-calc(12);
                 font-weight: 700;
                 margin: 0;
-                padding-top: 4px;
+                padding-top: 3px;
 
                 @media #{$small-only}{
                     font-size: rem-calc(10);
@@ -446,7 +446,8 @@ header#minimum-bar{
                 a {
                     color: #aaa;
 
-                    :hover{
+                    &:hover{
+                        color: #c00;
                         text-decoration: underline;
                     }
                 }
@@ -457,7 +458,7 @@ header#minimum-bar{
                 list-style-type: none;
                 line-height: 1;
                 margin: 0;
-                padding-top: 4px;
+                padding-top: 2px;
 
                 .library {
                     display: inline-block;
@@ -491,7 +492,7 @@ header#minimum-bar{
 
 
                     display: block;
-                    font-size: 0.8em;
+                    font-size: 0.75em;
                     line-height: 1em;
                     padding: 0 0 0 10px;
 

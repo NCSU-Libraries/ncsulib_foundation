@@ -19,9 +19,9 @@ $side-nav-list-position: inside !default;
 $side-nav-list-margin: rem-calc(0 0 7 0) !default;
 
 // We use these to control link styles.
-$side-nav-link-color: $primary-color !default;
-$side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%) !default;
-$side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%) !default;
+$side-nav-link-color: $body-font-color; //$secondary-color !default;
+$side-nav-link-color-active: #ccc; //scale-color($side-nav-link-color, $lightness: -30%) !default;
+$side-nav-link-color-hover: #c00; //scale-color($side-nav-link-color, $lightness: 30%) !default;
 $side-nav-font-size: rem-calc(14) !default;
 $side-nav-font-weight: normal !default;
 $side-nav-font-weight-active: $side-nav-font-weight !default;

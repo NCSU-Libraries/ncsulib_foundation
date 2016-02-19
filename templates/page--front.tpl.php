@@ -49,23 +49,23 @@
                             <li>
                                 <ul>
                                     <li><h3>Technology</h3></li>
-                                    <li><a href="/services/digital-media-production/" id="ql_cdm" class="styled">Digital Media Production</a></li>
-                                    <li><a href="/services/makerspace/" class="styled" id="ql_makersace">Makerspace</a></li>
-                                    <li><a href="/do/visualization" class="styled" id="ql_viz">Visualization</a></li>
+                                    <li><a href="/services/digital-media-production/" id="ql_cdm">Digital Media Production</a></li>
+                                    <li><a href="/services/makerspace/" id="ql_makersace">Makerspace</a></li>
+                                    <li><a href="/do/visualization" id="ql_viz">Visualization</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul>
                                     <li><h3>Studying</h3></li>
-                                    <li><a href="https://rooms.lib.ncsu.edu/" class="styled" id="ql_reservearoom">Reserve a Room</a></li>
+                                    <li><a href="https://rooms.lib.ncsu.edu/" id="ql_reservearoom">Reserve a Room</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul>
                                     <li><h3>Courses</h3></li>
-                                    <li><a href="/course" class="styled" id="ql_searchtools">Course Tools</a></li>
-                                    <li><a href="//reserves.lib.ncsu.edu/auth/" class="styled" id="ql_course_reserves">Course Reserves</a></li>
-                                    <li><a href="/textbookservice/" class="styled" id="ql_textbooks">Textbooks</a></li>
+                                    <li><a href="/course" id="ql_searchtools">Course Tools</a></li>
+                                    <li><a href="//reserves.lib.ncsu.edu/auth/" id="ql_course_reserves">Course Reserves</a></li>
+                                    <li><a href="/textbookservice/" id="ql_textbooks">Textbooks</a></li>
                                 </ul>
                             </li>
                         </ul>
