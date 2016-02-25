@@ -71,8 +71,19 @@ div.styled:after, span.styled:after{
     font-size: 0.75rem;
     padding-left: 4px;
     position: relative;
+    right: 0px;
     text-decoration: none;
     top: -2px;
+}
+a div.styled:after, a span.styled:after{
+    position: relative;
+    right: 0px;
+    transition-property: right;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+a:hover div.styled:after, a:hover span.styled:after{
+    right: -7px;
 }
 
 a.styled.button{

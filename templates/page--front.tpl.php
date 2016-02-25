@@ -77,7 +77,7 @@
                     <?php include_once 'block--nivo_slider.tpl.php'; ?>
 
                     <div id="home-social">
-                        <h3>Follow Us:</h3>
+                        <h3>Follow Us</h3>
                         <ul id="social-icons" class="unstyle-list">
                             <li><a href="https://www.facebook.com/ncsulibraries"><i class="fa fa-facebook"></i> Facebook</a></li>
                             <li><a href="https://twitter.com/ncsulibraries"><i class="fa fa-twitter"></i> Twitter</a></li>
@@ -157,7 +157,7 @@
                     </div>
 
                 <div class="medium-4 columns" id="home-news">
-                    <h3 class="sec-label">News <span class="pipe">|</span> <a href="//lib.ncsu.edu/news">all news <i class="fa fa-angle-right"></i></a></h3>
+                    <h3 class="sec-label">News <span class="pipe">|</span> <a href="//lib.ncsu.edu/news">all news</a></h3>
                     <div id="home-news-content">
                         <?php
                             $block = module_invoke('views', 'block_view', 'News-block_5');
@@ -168,7 +168,7 @@
 
                 <div class="medium-4 columns">
                     <div id="home-events">
-                        <h3 class="sec-label">Events <span class="pipe">|</span> <a href="/events">all events <i class="fa fa-angle-right"></i></a></h3>
+                        <h3 class="sec-label">Events <span class="pipe">|</span> <a href="/events">all events</a></h3>
                         <?php
                             $block2 = module_invoke('views', 'block_view', 'upcoming_events-block_9');
                             print render($block2['content']);

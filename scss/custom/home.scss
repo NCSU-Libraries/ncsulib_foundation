@@ -547,11 +547,11 @@ $include-html-classes: false;
 				}
 
 				a{
-					// color: #555;
+					color: #555;
 
 					i{
 						border-radius: 5px;
-						background: #c00;
+						background: #555;
 						color: #FFF;
 						height: 30px;
 						font-size: 1.2rem;
@@ -562,10 +562,11 @@ $include-html-classes: false;
 				}
 
 				a:hover{
+					color: #c00;
 					text-decoration: none;
 
 					i{
-						background: #900;
+						background: #c00;
 					}
 				}
 			}
@@ -755,11 +756,11 @@ $include-html-classes: false;
 		margin-bottom: 20px;
 
 		a{
-			color: $body-font-color;
+			//color: $body-font-color;
 		}
 
 		a:hover{
-			color: $primary-color;
+			//color: $primary-color;
 		}
 	}
 
@@ -806,7 +807,7 @@ $include-html-classes: false;
 		h3{
 
 			a{
-				color: $body-font-color;
+				//color: $body-font-color;
 				line-height: 1rem;
 				text-transform: lowercase;
 
@@ -816,7 +817,7 @@ $include-html-classes: false;
 				}
 			}
 			a:hover{
-				color: $side-nav-link-color-hover;
+				//color: $side-nav-link-color-hover;
 				text-decoration: none;
 			}
 		}

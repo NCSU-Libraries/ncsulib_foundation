@@ -17,7 +17,7 @@
         <div class="story-title">
           <?php if ($title): ?>
           <?php print render($title_prefix); ?>
-          <p><a href="/stories"><i class="fa fa-chevron-left"></i> Back to Library Stories</a></p>
+          <p><a href="/stories"><i class="fa fa-arrow-left"></i> Back to Library Stories</a></p>
           <h1 id="page-title" class="title" itemprop="headline" content="<?= $title; ?>"><?= $title; ?></h1>
           <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
             <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
