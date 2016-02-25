@@ -102,7 +102,7 @@ $include-html-classes: false;
 
 
 				ul.schedule .location{
-					text-decoration: underline;
+
 				}
 			}
 
@@ -117,6 +117,7 @@ $include-html-classes: false;
 				width: 73%;
 
 				p.location-title{
+					color: $body-font-color;
 					font-size: 0.9em;
 					display: table-cell;
 					height: 68px;

@@ -753,6 +753,14 @@ $include-html-classes: false;
 
 	h3.sec-label{
 		margin-bottom: 20px;
+
+		a{
+			color: $body-font-color;
+		}
+
+		a:hover{
+			color: $primary-color;
+		}
 	}
 
 	#hunt-feature{
@@ -841,7 +849,6 @@ $include-html-classes: false;
 		h3{
 
 			a{
-				color: $body-font-color;
 				line-height: 1rem;
 				text-transform: none;
 
@@ -851,7 +858,6 @@ $include-html-classes: false;
 				}
 			}
 			a:hover{
-				color: $side-nav-link-color-hover;
 				text-decoration: none;
 			}
 		}
@@ -869,6 +875,10 @@ $include-html-classes: false;
 				a{
 					font-size: 1.2rem;
 					line-height: 1.2;
+				}
+
+				a:hover{
+
 				}
 			}
 
@@ -949,6 +959,7 @@ $include-html-classes: false;
 				}
  			}
  			a:hover{
+ 				color: $primary-color;
  			}
  		}
 
@@ -1027,8 +1038,17 @@ $include-html-classes: false;
 			p.learn-more{
 				a{
 					&:hover{
-
+						color: $primary-color;
 					}
+				}
+
+				a:after{
+					color: #fff;
+
+				}
+
+				a:hover:after{
+					color: $primary-color;
 				}
 			}
 

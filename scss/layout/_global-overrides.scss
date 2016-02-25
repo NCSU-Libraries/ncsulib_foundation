@@ -51,7 +51,14 @@ a.styled:after{
     position: relative;
     text-decoration: none;
     top: -2px;
+    right: 0px;
     display: inline-block;
+    transition-property: right;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+a.styled:hover:after{
+    right: -7px;
 }
 .styled.white:after{
     color: #FFF !important;
@@ -59,18 +66,35 @@ a.styled:after{
 
 div.styled:after, span.styled:after{
     color: $primary-color;
-    content: "\f105";
+    content: "\f061";
     font-family: "FontAwesome";
+    font-size: 0.75rem;
     padding-left: 4px;
+    position: relative;
     text-decoration: none;
+    top: -2px;
 }
 
+a.styled.button{
+    color: #fff;
+    padding-right: 37px;
+}
 a.styled.button:after, a.styled.button:after{
     color: #fff;
-    content: "\f105";
+    content: "\f061";
     font-family: "FontAwesome";
+    font-size: 0.75rem;
     padding-left: 7px;
+    position: absolute;
+    right: 12px;
     text-decoration: none;
+    top: 35%;
+    transition-property: right;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+a.styled.button:hover:after, a.styled.button:hover:after{
+    right: 7px;
 }
 
 /*begin global UI style overwrite*/
