@@ -12,6 +12,11 @@
       //@include awesomify("\f073");
     //}
 
+    .view-content h2{
+      font-size: 1rem;
+      margin-bottom: 5px;
+      padding: 0px;
+    }
 
     ul {
       li {
@@ -26,11 +31,6 @@
           display: block;
         }
 
-        .item-list h2{
-          font-size: 1rem;
-          margin-bottom: 5px;
-          padding: 0px;
-        }
 
         span {
           display: block;
@@ -48,7 +48,7 @@
     @include grid-column(6);
     padding-right: 0;
 
-    .item-list h2{
+    .view-content h2{
       font-size: 1rem;
       margin-bottom: 25px;
       padding: 0px;
