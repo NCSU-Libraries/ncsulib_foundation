@@ -5,15 +5,15 @@
   @include grid-column(6);
   padding-left: 0;
 
-  h2 {
-    @include awesomify("\f073");
-  }
+  //h2 {
+    //@include awesomify("\f073");
+  //}
 
 
   ul {
     li {
 
-      margin-bottom: rem-calc(5);
+      margin-bottom: rem-calc(20);
 
       &:before {
         float: left;
@@ -25,6 +25,10 @@
 
       span {
         display: block;
+      }
+      span.date-display-single{
+        color: #999;
+        font-size: 80%;
       }
     }
   }
