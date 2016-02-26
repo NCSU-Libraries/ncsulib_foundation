@@ -34,7 +34,9 @@
   @include grid-column(6);
   padding-right: 0;
 
-  h2 {
-    @include awesomify("\f1ea");
+  h3{
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    padding: 0px;
   }
 }
