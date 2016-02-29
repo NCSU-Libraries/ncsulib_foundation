@@ -85,8 +85,6 @@ var nav = {
 	// }
 };
 
-
-
 jQuery(function(){
 	// if (!Modernizr.touch){
 		nav.init();

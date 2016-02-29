@@ -129,8 +129,6 @@ $body-font-size-small-screen: rem-calc(15);
       }
 
       @media #{$small-only} {
-        padding: rem-calc(20);
-        background: #E8E8E8;
         * {font-size: $body-font-size-small-screen;}
       }
     }

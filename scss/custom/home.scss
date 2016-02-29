@@ -266,7 +266,7 @@ $include-html-classes: false;
 /*end tabs*/
 
 #content #research-tools{
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	float: left;
 	width: 100%;
 
@@ -274,7 +274,7 @@ $include-html-classes: false;
 		color: #999;
 		font-size: 0.7rem;
 		float: left;
-		line-height: 1.05rem;
+		line-height: 1.25rem;
 		padding-top: 0px;
 		text-transform: uppercase;
 
@@ -928,6 +928,13 @@ $include-html-classes: false;
  			margin: 0px;
  		}
 
+ 		@media #{$small-only}{
+			.columns{
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+		}
+
  		h2#lib-st-title{
  			font-size: rem-calc(53);
  			margin-bottom: 20px;
@@ -1021,6 +1028,7 @@ $include-html-classes: false;
 
 			@media #{$small-only}{
 				float: none;
+				padding-left: 10px;
 	 			width: 100%;
 	 		}
 
@@ -1085,14 +1093,14 @@ $include-html-classes: false;
 	}
 
 	.orbit-next>span {
-		border-left-color: rgba(114, 114, 114, 0.45);
+		border-left-color: rgba(114, 114, 114, 0.7);
 	}
 
 	.orbit-prev {
 		left: 83%;
 
 		>span {
-			border-right-color: rgba(114, 114, 114, 0.45);
+			border-right-color: rgba(114, 114, 114, 0.7);
 		}
 	}
 }
