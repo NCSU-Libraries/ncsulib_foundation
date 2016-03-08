@@ -86,7 +86,7 @@
 			<!-- <li><a href="//www.lib.ncsu.edu/disabilityservices">Disability Services</a></li> -->
 		</ul>
 		<ul>
-			<li><a href="//www.lib.ncsu.edu/reservearoom">Reserve a Room</a></li>
+			<li><a href="//rooms.lib.ncsu.edu/">Reserve a Room</a></li>
 		</ul>
 		<ul>
 			<li><a href="//www.lib.ncsu.edu/services/digital-media-production">Digital Media Production</a></li>
