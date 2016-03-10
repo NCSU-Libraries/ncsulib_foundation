@@ -919,7 +919,7 @@ $side-nav-list-position: inherit;
 
 // We use these to control link styles.
 $side-nav-link-color: $primary-color;
-$side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-link-color-active: #c00; //scale-color($side-nav-link-color, $lightness: 30%);
 $side-nav-link-color-hover: $side-nav-link-color;//scale-color($side-nav-link-color, $lightness: 30%);
 $side-nav-font-size: $paragraph-font-size;
 // $side-nav-font-weight: normal;
