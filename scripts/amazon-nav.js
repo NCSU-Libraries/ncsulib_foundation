@@ -26,11 +26,15 @@ $(document).ready(function(){
                     if ( $(e.target).is(":hover") ) {
                         openNavItem(navIndex);
                     }
-                },35);
+                }, 55);
             } else {
                 if ( ! $('#primary-nav-menus').hasClass('open') ) {
+                    setTimeout(function(){
+                        if ( $(e.target).is(":hover") ) {
+                            openNavItem(navIndex);
+                        }
+                    },70);
                     //alert('its not open');
-                    openNavItem(navIndex);
                 } else if ( onPrimaryNav ) {
                     // we are leaving one nav for another (set timeout)
                     //alert('one nav for another');
@@ -68,6 +72,11 @@ $(document).ready(function(){
         
     });
 
+    function closeOneNav() {
+        $('.primary-menu-item:eq(' + navIndex + ')').removeClass('open');
+        $('.primary-menu-list:eq(' + navIndex + ')').removeClass('open');
+    }
+    
     function closeNav() {
         $('.primary-menu-item').removeClass('open');
         $('.primary-menu-list').removeClass('open');

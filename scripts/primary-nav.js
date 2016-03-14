@@ -23,7 +23,7 @@ var nav = {
 
 		// mouse out primary nav link
 		jQuery('.primary-nav a.primary-menu-item').mouseleave(function(){
-			nav.closeNav();
+			nav.closeAllNav();
 		});
 
 		// mouse on primary nav list
@@ -35,8 +35,7 @@ var nav = {
 		// mouse out primary nav list
 		jQuery('.primary-menu-list').mouseleave(function(){
 			nav.navMenuActive = false;
-			jQuery('.primary-nav li:eq('+nav.index+') a').removeClass('open');
-			jQuery('.primary-menu-list:eq('+nav.index+')').removeClass('open');
+			nav.closeAllNav();
 		});
 
 	},

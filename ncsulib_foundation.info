@@ -37,8 +37,8 @@ scripts[] = scripts/vendor/jquery.hoverIntent.minified.js
 
 ; Custom
 scripts[] = scripts/global.js
-;scripts[] = scripts/primary-nav.js
-scripts[] = scripts/amazon-nav.js
+scripts[] = scripts/primary-nav.js
+;scripts[] = scripts/amazon-nav.js
 scripts[] = scripts/search-bar.js
 scripts[] = scripts/modernizr-tests.js
 scripts[] = scripts/primary-nav-ga-tracking.js
