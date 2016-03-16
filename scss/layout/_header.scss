@@ -165,6 +165,14 @@ header{
                     padding-bottom: rem-calc(0);
                 }
 
+                li:not(.has-form) a:not(.button):hover {
+                    background: #c00;
+                }
+                
+                li:not(.has-form) a.open:not(.button):hover {
+                    background: $topbar-dropdown-bg;
+                }
+                
                 li{
                     background: $primary-color;
                     height: $topbar-height;
@@ -192,15 +200,6 @@ header{
                         padding: 0 rem-calc(20);
                         line-height: $topbar-height - 13;
                     }
-                }
-
-                li:hover > a{
-                    background: $topbar-dropdown-bg;
-                }
-
-                li > a:hover, li a:hover:not(.button){
-                    background: $topbar-dropdown-bg;
-                    text-decoration: none;
                 }
 
                 li > a:after{

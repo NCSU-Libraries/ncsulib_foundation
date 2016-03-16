@@ -1,13 +1,16 @@
 var amazonNav = {
-    // amount of time (in ms) for mouse to hover before opening subnav
-    navEnterTimeout : 55,
+    // amount of time (in ms) for mouse to hover before opening subnav the first time
+    navEnterTimeout : 200,
 
     // amount of time (in ms) for mouse to hover before opening a new subnav
-    mouseoverTimout : 70,
+    // "grazing the corner"
+    mouseoverTimeout : 120,
     
     pauseBeforeOpening : false,
 
 	init : function() {
+	    
+	    console.log(amazonNav.navEnterTimeout);
 	
         // mouse entered main nav
         $('ul.primary-nav>li').mouseenter(function(e){
@@ -21,7 +24,7 @@ var amazonNav = {
                     if ( $(e.target).is(":hover") ) {
                         amazonNav.openNavItem(navIndex);
                     }
-                }, amazonNav.navEnterTimeout);
+                }, amazonNav.mouseoverTimeout);
             } else {
                 // the subnav is not open yet
                 // don't open immediately in case they are mousing over the main nav
@@ -29,7 +32,7 @@ var amazonNav = {
                     if ( $(e.target).is(":hover") ) {
                         amazonNav.openNavItem(navIndex);
                     }
-                }, amazonNav.mouseoverTimout);
+                }, amazonNav.navEnterTimeout);
             }
         });
         
