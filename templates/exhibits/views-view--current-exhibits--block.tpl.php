@@ -52,7 +52,7 @@
 							<?php endif; ?>
 
 						<?php else: ?>
-						<h5>Where: <a href="<?php echo url('node/'.$where[0]['target_id']); ?>"><?php echo $space_title; ?></a> at <?php echo $library['#markup']; ?></h5>
+						<h5>Where: <a href="<?php echo url('node/'.$where[0]['target_id']); ?>"><?php echo $space_title; ?></a> <?php if($library){ echo 'at '. $library['#markup']; } ?></h5>
 						<?php endif; ?>
 					<?php endif; ?>
 					<?php if(($start_time || $end_time) && !$ongoing): ?>
