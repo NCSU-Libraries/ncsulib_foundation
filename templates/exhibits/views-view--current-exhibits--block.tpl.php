@@ -9,8 +9,7 @@
 <?php
 	drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/exhibits.css', array('weight' => 998, 'group' => 101));
 ?>
-<dl id="exhibits-content"></dl>
-<?php return; ?>
+<dl id="exhibits-content">
 <?php foreach($variables['view']->result as $val): ?>
 
 	<?php
@@ -27,6 +26,7 @@
 		$where = field_get_items('node', $node, 'field_space');
 		$url_field = field_get_items('node', $node, 'field_event_url');
 		$url = ($url_field == '') ? '<a href="'. url("node/".$val->nid) .'">'. $val->node_title . '</a>' : '<a href="'. $url_field[0]['url'] .'">'. $val->node_title . '</a>';
+		return;
 		$img = field_get_items('node', $node, 'field_image_for_event');
 		$img_url = image_style_url('half-page-width', $img[0]['uri']);
 		$space_node = node_load($space[0]['entity']->nid);
