@@ -16,7 +16,7 @@
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-//$base-font-size: 100%;
+// $base-font-size: 100%;
 
 // The $base-line-height is 100% while $base-font-size is 150%
 // $base-line-height: 150%;
@@ -37,8 +37,8 @@
 
 // We use these to control various global styles
 // $body-bg: #fff;
-$body-font-color: #555;
-$body-font-family: "UniversRoman", Arial,sans-serif;
+$body-font-color: #333;
+$body-font-family: "UniversLight", "UniversRoman", Arial,sans-serif;
 // $body-font-family: Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -132,7 +132,7 @@ $small: $small-only;
 $header-font-family: $body-font-family; //"UniversLTW01-67BoldCn",Arial,sans-serif; //$body-font-family;
 $header-font-weight: 500;
 // $header-font-style: normal;
-$header-font-color: #555;
+$header-font-color: #333;
 $header-line-height: 1.2;
 $header-top-margin: rem-calc(22);
 $header-bottom-margin: rem-calc(11);
@@ -140,11 +140,11 @@ $header-bottom-margin: rem-calc(11);
 
 // We use these to control header font sizes
 $h1-font-size: rem-calc(42);
-$h2-font-size: rem-calc(30);
-$h3-font-size: rem-calc(21);
-$h4-font-size: rem-calc(20);
-$h5-font-size: rem-calc(14);
-$h6-font-size: rem-calc(14);
+$h2-font-size: rem-calc(22);
+$h3-font-size: rem-calc(15);
+$h4-font-size: rem-calc(15);
+$h5-font-size: rem-calc(15);
+$h6-font-size: rem-calc(15);
 
 // These control how subheaders are styled.
 $subheader-line-height: $header-line-height;
@@ -154,13 +154,13 @@ $subheader-font-color: $header-font-color; //scale-color($header-font-color, $li
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-$small-font-size: 81%;
-$small-font-color: scale-color($header-font-color, $lightness: 100%);
+$small-font-size: 90%;
+$small-font-color: #555;
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-$paragraph-font-size: 0.9375rem;
+$paragraph-font-size: rem-calc(17);
 // $paragraph-line-height: 1.6;
 $paragraph-margin-bottom: rem-calc(11);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -175,9 +175,9 @@ $code-font-weight: 300;
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
-$anchor-font-color: #42749b ; //4C83AF; //3333FF; // Steel Blue
-$anchor-font-color-hover: #42749b; //4C83AF; // scale-color($anchor-font-color, $lightness: -75%);
-$anchor-text-hover-decoration: underline;
+$anchor-font-color: #c00; //#42749b ; //4C83AF; //3333FF; // Steel Blue
+$anchor-font-color-hover: #600; //#42749b; //4C83AF; // scale-color($anchor-font-color, $lightness: -75%);
+$anchor-text-hover-decoration: none;
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -330,8 +330,8 @@ $crumb-border-size: 0px;
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-$button-tny: rem-calc(11.5);
-// $button-sml: rem-calc(14);
+$button-tny: rem-calc(8);
+ $button-sml: rem-calc(11);
 // $button-med: rem-calc(16);
 // $button-lrg: rem-calc(18);
 
@@ -343,8 +343,8 @@ $button-tny: rem-calc(11.5);
 // $button-font-family: $body-font-family;
 // $button-font-color: #fff;
 // $button-font-color-alt: #333;
-// $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
+ $button-font-tny: rem-calc(15);
+ $button-font-sml: rem-calc(15);
 // $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: normal;
@@ -358,7 +358,7 @@ $button-tny: rem-calc(11.5);
 // $button-border-style: solid;
 
 // We use this to set the default radius used throughout the core.
-// $button-radius: $global-radius;
+$button-radius: 3px;
 // $button-round: $global-rounded;
 
 // We use this to set default opacity for disabled buttons.
@@ -508,7 +508,7 @@ $button-tny: rem-calc(11.5);
 // $input-focus-border-color: scale-color(#fff, $lightness: -40%);
 // $input-border-style: solid;
 // $input-border-width: 1px;
-// $input-border-radius: $global-radius;
+$input-border-radius: $button-radius;
 // $input-disabled-bg: #ddd;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 // $input-include-glowing-effect: true;
@@ -918,8 +918,8 @@ $side-nav-list-position: inherit;
 // $side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-$side-nav-link-color: $anchor-font-color;//$primary-color;
-$side-nav-link-color-active: $secondary-color;// scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-link-color: $primary-color;
+$side-nav-link-color-active: #c00; //scale-color($side-nav-link-color, $lightness: 30%);
 $side-nav-link-color-hover: $side-nav-link-color;//scale-color($side-nav-link-color, $lightness: 30%);
 $side-nav-font-size: $paragraph-font-size;
 // $side-nav-font-weight: normal;

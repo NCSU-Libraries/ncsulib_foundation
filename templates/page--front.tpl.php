@@ -36,7 +36,7 @@
                         ?>
                     </div>
                     <div id="research-tools">
-                        <h2>More Research Tools:</h2>
+                        <h3>More Research Tools:</h3>
                         <ul>
                             <li><a href="/databases/" id="rt_databases">Databases</a></li>
                             <li><a href="/journals/" id="rt_journals">Journal Titles</a></li>
@@ -48,24 +48,24 @@
                         <ul id="quicklinks">
                             <li>
                                 <ul>
-                                    <li><h2>Technology</h2></li>
-                                    <li><a href="/services/digital-media-production/" id="ql_cdm" class="styled">Digital Media Production</a></li>
-                                    <li><a href="/services/makerspace/" class="styled" id="ql_makersace">Makerspace</a></li>
-                                    <li><a href="/do/visualization" class="styled" id="ql_viz">Visualization</a></li>
+                                    <li><h3>Technology</h3></li>
+                                    <li><a href="/services/digital-media-production/" id="ql_cdm">Digital Media Production</a></li>
+                                    <li><a href="/services/makerspace/" id="ql_makersace">Makerspace</a></li>
+                                    <li><a href="/do/visualization" id="ql_viz">Visualization</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul>
-                                    <li><h2>Studying</h2></li>
-                                    <li><a href="https://rooms.lib.ncsu.edu/" class="styled" id="ql_reservearoom">Reserve a Room</a></li>
+                                    <li><h3>Studying</h3></li>
+                                    <li><a href="https://rooms.lib.ncsu.edu/" id="ql_reservearoom">Reserve a Room</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul>
-                                    <li><h2>Courses</h2></li>
-                                    <li><a href="/course" class="styled" id="ql_searchtools">Course Tools</a></li>
-                                    <li><a href="//reserves.lib.ncsu.edu/auth/" class="styled" id="ql_course_reserves">Course Reserves</a></li>
-                                    <li><a href="/textbookservice/" class="styled" id="ql_textbooks">Textbooks</a></li>
+                                    <li><h3>Courses</h3></li>
+                                    <li><a href="/course" id="ql_searchtools">Course Tools</a></li>
+                                    <li><a href="//reserves.lib.ncsu.edu/auth/" id="ql_course_reserves">Course Reserves</a></li>
+                                    <li><a href="/textbookservice/" id="ql_textbooks">Textbooks</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -77,7 +77,7 @@
                     <?php include_once 'block--nivo_slider.tpl.php'; ?>
 
                     <div id="home-social">
-                        <h2>Follow Us:</h2>
+                        <h3>Follow Us</h3>
                         <ul id="social-icons" class="unstyle-list">
                             <li><a href="https://www.facebook.com/ncsulibraries"><i class="fa fa-facebook"></i> Facebook</a></li>
                             <li><a href="https://twitter.com/ncsulibraries"><i class="fa fa-twitter"></i> Twitter</a></li>
@@ -91,7 +91,7 @@
             <!-- middle row -->
             <section id="tier-two">
                 <div id="available-links">
-                    <h2>Available Now</h2>
+                    <h3>Available Now</h3>
                     <ul>
                         <li><a href="https://rooms.lib.ncsu.edu" id="al_reservearoom">Reserve a Room</a></li>
                         <li><a href="/techlending/" id="al_techlending">Borrow Technology</a></li>
@@ -146,7 +146,7 @@
             <!-- bottom row -->
             <section id="tier-three" class="row">
                     <div id="hunt-feature" class="medium-4 columns">
-                        <h2 class="sec-label">The James B. Hunt Jr. Library</h2>
+                        <h3 class="sec-label">The James B. Hunt Jr. Library</h3>
                         <a href="/huntlibrary">
                             <img src="/sites/all/themes/ncsulib_foundation/images/homepage/hunt-homepage.jpg" width="100%" />
                             <div id="hunt-content">
@@ -157,7 +157,7 @@
                     </div>
 
                 <div class="medium-4 columns" id="home-news">
-                    <h2 class="sec-label">News <span class="pipe">|</span> <a href="//lib.ncsu.edu/news">all news <i class="fa fa-angle-right"></i></a></h2>
+                    <h3 class="sec-label">News <span class="pipe">|</span> <a href="//lib.ncsu.edu/news">all news</a></h3>
                     <div id="home-news-content">
                         <?php
                             $block = module_invoke('views', 'block_view', 'News-block_5');
@@ -168,7 +168,7 @@
 
                 <div class="medium-4 columns">
                     <div id="home-events">
-                        <h2 class="sec-label">Events <span class="pipe">|</span> <a href="/events">all events <i class="fa fa-angle-right"></i></a></h2>
+                        <h3 class="sec-label">Events <span class="pipe">|</span> <a href="/events">all events</a></h3>
                         <?php
                             $block2 = module_invoke('views', 'block_view', 'upcoming_events-block_9');
                             print render($block2['content']);

@@ -139,7 +139,6 @@ $button-disabled-opacity: 0.7 !default;
   @if $bg {
     // This find the lightness percentage of the background color.
     $bg-lightness: lightness($bg);
-
     background-color: $bg;
     border-color: scale-color($bg, $lightness: $button-function-factor);
     &:hover,

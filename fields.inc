@@ -129,15 +129,18 @@ function ncsulib_foundation_field__field_news_feature_photo__news($variables){
 
     $title = $variables['items'][0]['#item']['alt'];
     $img_url = $variables['items'][0]['#item']['uri'];
+    $img_url_str = explode('public://',$img_url);
     $output = '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
     $output .= '<meta itemprop="url" content="'.image_style_url("738_max_width", $img_url).'">';
     $output .= '<meta itemprop="width" content="738">';
     $output .= '<meta itemprop="height" content="415">';
-    $output .= '<img src="'.image_style_url("738_max_width", $img_url).'" width="100%" itemprop="image">';
+    //$output .= '<img src="https://www.lib.ncsu.edu/sites/default/files/styles/738_max_width/public/'.$img_url_str[1].'" width="100%" itemprop="image">';
+    $output .= '<img src="https://webdev.lib.ncsu.edu/sites/default/files/feature_image_1.jpg" width="100%" itemprop="image">';
     $output .= '<small itemprop="caption">'.$title.'</small>';
     $output .= '</div>';
     return $output;
 }
+
 
 
 
@@ -315,13 +318,13 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
   switch ($res_method) {
     case 'By Room Reservation System':
       $room_res_url  = field_get_items('node', $node, 'field_room_res_url');
-      $output = '<a href="'.$room_res_url[0]['value'].'" class="button tiny">View Reservation Options &nbsp; <i class="fa fa-chevron-right"></i></a>';
+      $output = '<a href="'.$room_res_url[0]['value'].'" class="button tiny styled">View Reservation Options</a>';
       break;
 
     case 'By Mediated Email Form':
       $request_form_url = field_get_items('node', $node, 'field_request_form_url');
       $form_url  = field_view_value('node', $node, 'field_request_form_url', $request_form_url[0]);
-      $output = '<a class="button tiny" href="'. $form_url['#element']['url'] .'">Request this room</a>';
+      $output = '<a class="button tiny styled" href="'. $form_url['#element']['url'] .'">Request this room</a>';
       break;
 
     case 'Not Reservable':

@@ -15,6 +15,19 @@
   }
 }
 
+  #fb-share-button{
+    color: #3765A3;
+  }
+  #fb-share-button:hover{
+    color: #c00;
+  }
+  #tw-share-button{
+    color: #5EA9DD;
+  }
+  #tw-share-button:hover{
+    color: #c00;
+  }
+
 .date-display-single {
   @include awesomify("\f073");
 }

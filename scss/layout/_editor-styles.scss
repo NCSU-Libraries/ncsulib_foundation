@@ -21,6 +21,13 @@ img.alignright {
     float: right;
     margin-left: rem-calc(20);
     margin-bottom: 20px;
+
+    @media #{$small-only}{
+        display: block;
+        float: none;
+        margin-left: 0px;
+        width: 100%;
+    }
 }
 .float-left,
 .flow-left,
@@ -29,10 +36,24 @@ img.alignleft {
     float: left;
     margin-right: rem-calc(20);
     margin-bottom: 20px;
+
+    @media #{$small-only}{
+        display: block;
+        float: none;
+        margin-left: 0px;
+        width: 100%;
+    }
 }
 img.alignleft,
 img.alignright{
     width: 50% !important;
+
+    @media #{$small-only}{
+        display: block;
+        float: none;
+        margin-left: 0px;
+        width: 100%;
+    }
 }
 p.float-left,
 p.flow-left,
@@ -51,6 +72,13 @@ p.left-image{
     margin: 25px 25px 25px 0px;
     width: 50%;
 
+    @media #{$small-only}{
+        display: block;
+        float: none;
+        margin-left: 0px;
+        width: 100%;
+    }
+
     img{
         margin: 0px;
         padding: 0px;
@@ -62,6 +90,13 @@ p.left-image{
     float: right;
     margin: 25px 0px 25px 25px;
     width: 50%;
+
+    @media #{$small-only}{
+        display: block;
+        float: none;
+        margin-left: 0px;
+        width: 100%;
+    }
 
     img{
         margin: 0px;
@@ -92,6 +127,7 @@ p.left-image{
     width: 40%;
 
     @media #{$small-only}{
+        display: block;
         float: none;
         margin-left: 0px;
         width: 100%;

@@ -1,3 +1,7 @@
+<?php if($teaser):
+    include_once 'mailchimp--news--teaser.tpl.php';
+?>
+<?php else: ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/NewsArticle">
     <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
         <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
@@ -10,7 +14,7 @@
 
     <?php print render($title_prefix); ?>
     <?php if (!$page): ?>
-        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+        <h3<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
 
@@ -84,3 +88,4 @@
   </div>
 
 </article>
+<?php endif; ?>

@@ -1,7 +1,18 @@
 html{
-    font-size: 16px;
+    // font-size: 17px;
 }
 
+h1{
+    color: #c00 !important;
+}
+h3{
+    font-family: "UniversRoman";
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h2{
+    color: #333;
+}
 
 
 /* text that is added because screen reasers can't read font awesome*/
@@ -16,8 +27,12 @@ html{
 
 /*pretty link*/
 a.styled{
+    color: $body-font-color;
     position: relative;
     text-decoration: none;
+}
+a.styled:hover{
+    color: $primary-color;
 }
 a.styled.left{
     text-align: left;
@@ -29,11 +44,21 @@ a.styled.right{
 }
 a.styled:after{
     color: $primary-color;
-    content: "\f105";
+    content: "\f061";
     font-family: "FontAwesome";
+    font-size: 0.75rem;
     padding-left: 5px;
+    position: relative;
     text-decoration: none;
+    top: -2px;
+    right: 0px;
     display: inline-block;
+    transition-property: right;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+a.styled:hover:after{
+    right: -7px;
 }
 .styled.white:after{
     color: #FFF !important;
@@ -41,10 +66,46 @@ a.styled:after{
 
 div.styled:after, span.styled:after{
     color: $primary-color;
-    content: "\f105";
+    content: "\f061";
     font-family: "FontAwesome";
+    font-size: 0.75rem;
     padding-left: 4px;
+    position: relative;
+    right: 0px;
     text-decoration: none;
+    top: -2px;
+}
+a div.styled:after, a span.styled:after{
+    position: relative;
+    right: 0px;
+    transition-property: right;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+a:hover div.styled:after, a:hover span.styled:after{
+    right: -7px;
+}
+
+a.styled.button{
+    color: #fff;
+    padding-right: 37px;
+}
+a.styled.button:after, a.styled.button:after{
+    color: #fff;
+    content: "\f061";
+    font-family: "FontAwesome";
+    font-size: 0.75rem;
+    padding-left: 7px;
+    position: absolute;
+    right: 12px;
+    text-decoration: none;
+    top: 35%;
+    transition-property: right;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+a.styled.button:hover:after, a.styled.button:hover:after{
+    right: 7px;
 }
 
 /*begin global UI style overwrite*/
@@ -208,23 +269,28 @@ div.tabs-content.vertical{
 // ensure there is no border radius on iOS devices
 input[type="submit"] {
     @include button($button-tny);
-    border-radius: 0px;
+    border-radius: 3px;
+}
+//if submit button is attached to an input bar
+.collapse input[type="submit"] {
+    @include button($button-tny);
+    border-radius: 0px 0px 0px 0px;
 }
 
 button,
 .button{
-    background: #820200; /* Old browsers */
+    background: #c00; /* Old browsers */
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I1MGMwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4MjAyMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(top,  #b50c00 0%, #820200 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b50c00), color-stop(100%,#820200)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #b50c00 0%,#820200 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #b50c00 0%,#820200 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #b50c00 0%,#820200 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #b50c00 0%,#820200 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b50c00', endColorstr='#820200',GradientType=0 ); /* IE6-8 */
+    // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I1MGMwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4MjAyMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    // background: -moz-linear-gradient(top,  #b50c00 0%, #820200 100%); /* FF3.6+ */
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b50c00), color-stop(100%,#820200)); /* Chrome,Safari4+ */
+    // background: -webkit-linear-gradient(top,  #b50c00 0%,#820200 100%); /* Chrome10+,Safari5.1+ */
+    // background: -o-linear-gradient(top,  #b50c00 0%,#820200 100%); /* Opera 11.10+ */
+    // background: -ms-linear-gradient(top,  #b50c00 0%,#820200 100%); /* IE10+ */
+    // background: linear-gradient(to bottom,  #b50c00 0%,#820200 100%); /* W3C */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b50c00', endColorstr='#820200',GradientType=0 ); /* IE6-8 */
     opacity: 0.9;
-
+    border-radius: 3px;
     -webkit-transition: opacity 0.25s; /* For Safari 3.1 to 6.0 */
     transition: opacity 0.25s;
 }
@@ -236,7 +302,7 @@ button.disabled,
 
 button:hover,
 .button:hover{
-    opacity: 1;
+    opacity: 0.8;
 }
 
 body button.disabled:hover,
@@ -404,7 +470,6 @@ table{
 
             h2{
                     background: #cc0000;
-                    font-family: "UniversLight";
                     font-size: 0px;
                     margin-bottom: 0px;
                     padding: 0px;

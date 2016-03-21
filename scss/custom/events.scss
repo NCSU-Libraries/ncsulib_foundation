@@ -20,6 +20,8 @@
 
 
 #content #main-content{
+    margin-bottom: 50px;
+
     // event page styling
     .event-item{
         .event-photo{
@@ -37,14 +39,12 @@
         // margin-left: 0px;
         margin-top: 50px;
 
-
-
         .event-content{
             padding-left: 0px;
 
-            h3{
+            h2{
                 padding-top: 0px;
-                margin-bottom: 0px;
+                margin-bottom: 5px;
             }
         }
     }

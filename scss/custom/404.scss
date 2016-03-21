@@ -4,10 +4,12 @@ $include-html-classes: false;
 @import "foundation/components/grid";
 
 #searchall{
-    height: 46px;
+    height: 47px;
 }
 
 #all-submit{
+    border-radius: 0px;
+
     @media #{$small-only}{
         @include grid-column(2);
     }

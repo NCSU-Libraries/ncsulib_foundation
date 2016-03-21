@@ -25,7 +25,7 @@
 			</div>
 
 			<?php if ($page['sidebar_first']): ?>
-				<div id="sidebar-left">
+				<div id="sidebar-left" class="sidebar">
 					<?php print render($page['sidebar_first']); ?>
 				</div>
 			<?php endif; ?>

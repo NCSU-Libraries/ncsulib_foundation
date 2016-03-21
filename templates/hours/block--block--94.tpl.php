@@ -46,6 +46,24 @@
 	</div>
 	<?php endif; ?>
 
+	<!-- adverse weather -->
+	<?php
+		$adverse_weather_ary = hours_get_exception('adverse_weather',$month_ary);
+		if($adverse_weather_ary):
+	?>
+	<div class="exceptions-schedule large-12">
+		<h4 class="subheader">Exam Hours <div class="adverse-weather-hours">&nbsp;</div></h4>
+		<table>
+			<?php foreach($adverse_weather_ary as $w): ?>
+			<tr>
+				<td width="40%"><?= $w['date_range']; ?></td>
+				<td><?= $w['display']; ?></td>
+			</tr>
+			<?php endforeach; ?>
+		</table>
+	</div>
+	<?php endif; ?>
+
 
 	<!-- EXCEPTIONS -->
 	<?php
