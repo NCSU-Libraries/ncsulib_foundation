@@ -170,6 +170,10 @@ $include-html-classes: false;
 
         // listing items
         .view-content{
+
+            h2{
+                color: $primary-color;
+            }
             margin-bottom: 40px;
 
             .photo{
@@ -186,6 +190,10 @@ $include-html-classes: false;
                 @media #{$medium-up} {
                     @include grid-column(7);
                 }
+            }
+
+            .post-content{
+                color: $body-font-color;
             }
         }
 
@@ -432,6 +440,7 @@ $include-html-classes: false;
     }
 
     h2#news-title{
+        color: $body-font-color;
         text-align: center;
         text-transform: uppercase;
 
@@ -495,6 +504,7 @@ $include-html-classes: false;
                 width: 10%;
 
                 input{
+                    border-radius: 0px 3px 3px 0px;
                     font-family: FontAwesome;
                     margin-top: 0px;
                     padding: 0px;
@@ -689,7 +699,6 @@ ul.tabs.primary{
 
                 h4{
                     font-size: 0.9rem;
-                    // font-weight: bold;
                     float: right;
                     padding-top: 8px;
                     margin-right: 9px;
@@ -719,6 +728,10 @@ ul.tabs.primary{
             #post-date{
                 float: left;
                 padding-top: 16px;
+            }
+
+            .item-content{
+                color: #333;
             }
 
             // Individual blog posts
@@ -751,57 +764,10 @@ ul.tabs.primary{
             }
         }
 
-        // .left-image{
-        //     width: 100%;
-
-        //     img{
-        //         float: left;
-        //         width: 50%;
-        //     }
-        // }
-        // .right-image{
-        //     width: 100%;
-
-        //     img{
-        //         float: right;
-        //         width: 50%;
-        //     }
-        // }
-        // .center-image{
-        //     width: 100%;
-
-        //     img{
-        //         margin-bottom: 20px;
-        //         width: 100%;
-        //     }
-        // }
-
 
         .caption-text{
-            // float:left;
             margin-bottom: 0px;
-            // padding: 0px 2%;
-            // width: 96%;
         }
-
-        // // .add-caption{
-        //     display: block;
-        //     padding-bottom: 10px;
-
-        //     &.alignLeft{
-        //         float: left;
-        //         padding-right: 20px;
-        //     }
-        //     &.alignRight{
-        //         float: right;
-        //         padding-left: 20px;
-        //     }
-
-        //     p{
-        //         margin-bottom: 10px;
-        //     }
-
-        // }
     }
 
     #news-title{
