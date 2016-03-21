@@ -795,6 +795,10 @@ $include-html-classes: false;
 			opacity: 0.75;
 			// transition: opacity 1s;
 			text-decoration: none;
+
+			img{
+				opacity: 1;
+			}
 		}
 	}
 
@@ -843,6 +847,10 @@ $include-html-classes: false;
 			img{
 				margin-bottom: 20px;
 				width: 100%;
+
+				&:hover{
+					opacity: 1;
+				}
 			}
 		}
 	}
