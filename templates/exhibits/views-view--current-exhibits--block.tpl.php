@@ -9,7 +9,8 @@
 <?php
 	drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/exhibits.css', array('weight' => 998, 'group' => 101));
 ?>
-<dl id="exhibits-content">
+<dl id="exhibits-content"></dl>
+<?php return; ?>
 <?php foreach($variables['view']->result as $val): ?>
 
 	<?php
