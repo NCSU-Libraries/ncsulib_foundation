@@ -55,7 +55,7 @@ $body-font-size-small-screen: rem-calc(15);
         @include grid-column(12);
 
         * {
-          font-size: rem-calc(20);
+          font-size: rem-calc(23);
           @media #{$small-only} {font-size: rem-calc(12);}
         }
       }
