@@ -28,9 +28,9 @@
 		$url = ($url_field == '') ? '<a href="'. url("node/".$val->nid) .'">'. $val->node_title . '</a>' : '<a href="'. $url_field[0]['url'] .'">'. $val->node_title . '</a>';
 		$img = field_get_items('node', $node, 'field_image_for_event');
 		$img_url = image_style_url('half-page-width', $img[0]['uri']);
-		//$space_node = node_load($space[0]['entity']->nid);
-		//$building_field = field_get_items('node', $space_node, 'field_building_name');
-		$library = '';//field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
+		$space_node = node_load($space[0]['entity']->nid);
+		$building_field = field_get_items('node', $space_node, 'field_building_name');
+		$library = field_view_value('node', $space_node, 'field_building_name', $building_field[0]);
 		$ongoing = field_get_items('node', $node, 'field_ongoing');
 		$event_url = field_get_items('node', $node, 'field_event_url');
 	?>
