@@ -318,9 +318,17 @@ select{
 
 
 
-body .panel.callout{
-    border: 0px solid #CCC;
-    background: #f5f5f5;
+body {
+    .panel{
+        ul.side-nav{
+            padding: 0px;
+        }
+    }
+
+    .panel.callout{
+        border: 0px solid #CCC;
+        background: #f5f5f5;
+    }
 }
 
 

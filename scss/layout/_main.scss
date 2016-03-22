@@ -143,6 +143,15 @@ main {
     ul{
         @include styled-list;
     }
+
+    ol{
+        margin-left: 1rem;
+
+        li{
+            list-style-position: outside;
+            margin-bottom: 5px;
+        }
+    }
 }
 
 
