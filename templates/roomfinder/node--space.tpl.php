@@ -50,18 +50,19 @@
         <div class="columns medium-12">
             <?= render($content); ?>
 
+            <?php if(render($content['field_days_in_advance']) || render($content['field_max_reservation_period']) || render($content['field_reservable_by'])): ?>
             <h3>Reservation and Use Guidelines</h3>
-            <?php if($content['field_days_in_advance']): ?>
+            <?php if(render($content['field_days_in_advance'])): ?>
             <p>Reservable up to <?= strip_tags(render($content['field_days_in_advance'])); ?> in advance.</br>
             <?php endif; ?>
 
-            <?php if($content['field_max_reservation_period']): ?>
+            <?php if(render($content['field_max_reservation_period'])): ?>
             Reserve for up to <?= strip_tags(render($content['field_max_reservation_period'])); ?>.</br>
             <?php endif; ?>
 
             <?php
 
-                if($content['field_reservable_by']){
+                if(render($content['field_reservable_by'])){
                     $string = strip_tags(implode(', ',explode('</div>',render($content['field_reservable_by']))));
                     echo 'Reservable by '.substr($string, 0, -6).'.</br>';
                 }
@@ -73,6 +74,7 @@
                 echo 'View <a href="http://www.lib.ncsu.edu/spaces/general-room-use-guidelines">room use guidelines</a>.';
             ?>
             </p>
+            <?php endif; ?>
 
             <?php
                 if(
