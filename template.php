@@ -160,6 +160,9 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       case 'vetmed':
         drupal_add_js(path_to_theme() . '/scripts/device-availability-by-library.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
+      case '1software':
+        drupal_add_js(path_to_theme() . '/scripts/1software.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        break;
     }
 
     if (isset($url_comp[1]) && isset($url_comp[2])) {

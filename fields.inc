@@ -126,22 +126,41 @@ function ncsulib_foundation_username($variables) {
  */
 function ncsulib_foundation_field__field_news_feature_photo__news($variables){
     $output = '';
+    $img_uri = $variables['items'][0]['#item']['uri'];
+    $img_url_str = explode('public://',$img_uri);
+    $img_str = image_style_url("738_max_width", $img_url_str[1]);
+
+    // when using in a non drupal env need to insert domain
+    if (strpos($img_str, 'www.lib.ncsu.edu') !== FALSE){
+        $img_url = $img_str;
+    } else{
+        $img_url_part = explode('http://default',$img_str);
+        $img_url = 'http://www.lib.ncsu.edu/'.$img_url_part[1];
+    }
 
     $title = $variables['items'][0]['#item']['alt'];
-    $img_url = $variables['items'][0]['#item']['uri'];
-    $img_url_str = explode('public://',$img_url);
     $output = '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
-    $output .= '<meta itemprop="url" content="'.image_style_url("738_max_width", $img_url).'">';
+    $output .= '<meta itemprop="url" content="'.$img_url.'">';
     $output .= '<meta itemprop="width" content="738">';
     $output .= '<meta itemprop="height" content="415">';
-    //$output .= '<img src="https://www.lib.ncsu.edu/sites/default/files/styles/738_max_width/public/'.$img_url_str[1].'" width="100%" itemprop="image">';
-    $output .= '<img src="'.image_style_url("738_max_width", $img_url).'" width="100%" itemprop="image">';
+    $output .= '<img src="'.$img_url.'" width="100%" itemprop="image">';
     $output .= '<small itemprop="caption">'.$title.'</small>';
     $output .= '</div>';
     return $output;
 }
 
 
+
+/**
+ * Implements theme_field()
+ *
+ * NEWS feature photo
+ */
+function ncsulib_foundation_field__field_software_user_activity($variables){
+  $output = '';
+  $output = 'test';
+  return $output;
+}
 
 
 /**
