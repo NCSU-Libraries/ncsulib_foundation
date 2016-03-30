@@ -1,6 +1,65 @@
+@import "base/init_for_custom";
+@import "components/list-styling";
+
+
 .field-name-field-application-icon{
     img{
         width: 150px;
     }
 }
+
+
+
+.software-block_5{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+
+ul.software-items {
+    padding-top: 20px;
+
+    &.long{
+        columns: 4;
+        -webkit-columns: 4;
+        -moz-columns: 4;
+    }
+
+    &.medium{
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+
+        @media #{$medium-up} {
+            width: 50%;
+        }
+    }
+
+    &.small{
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+
+    @media #{$small-only} {
+        &.small,&.medium,&.long{
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+        }
+    }
+
+    @include unstyled-list;
+}
+
+.view-content .tag{
+    background: #ddd;
+    color: #333;
+    margin: 0px 5px 10px 0px;
+}
+.view-content .tag:hover, .view-content .tag.active{
+    background: #c00;
+    color: #fff;
+}
+
 

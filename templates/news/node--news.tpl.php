@@ -1,7 +1,3 @@
-<?php if($teaser):
-    include_once 'mailchimp--news--teaser.tpl.php';
-?>
-<?php else: ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?> itemscope itemtype="http://schema.org/NewsArticle">
     <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
         <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
@@ -88,4 +84,3 @@
   </div>
 
 </article>
-<?php endif; ?>

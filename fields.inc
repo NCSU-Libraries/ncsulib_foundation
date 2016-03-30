@@ -156,11 +156,11 @@ function ncsulib_foundation_field__field_news_feature_photo__news($variables){
  *
  * NEWS feature photo
  */
-function ncsulib_foundation_field__field_software_user_activity($variables){
-  $output = '';
-  $output = 'test';
-  return $output;
-}
+// function ncsulib_foundation_field__field_software_user_activity($variables){
+//   $output = '';
+//   $output = 'test';
+//   return $output;
+// }
 
 
 /**
