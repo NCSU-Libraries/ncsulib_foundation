@@ -56,7 +56,7 @@
       <?php print $rows; ?>
       <?php
         $block = module_invoke('views', 'block_view', 'software-block_6');
-        print render($block['content']);
+        print strip_tags(render($block['content']), '<a>');
       ?>
     </div>
   <?php elseif ($empty): ?>
