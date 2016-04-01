@@ -4,7 +4,7 @@ var software = {
     itemId : '',
     init : function(){
 
-        $('.view-display-id-block_4 .tag').click(function(e){
+        $('.view-id-software .tag').click(function(e){
             elem = $(this);
             var index = $(elem).index();
 
@@ -24,25 +24,25 @@ var software = {
             e.preventDefault();
         })
 
-        $('.view-display-id-block_5 .tag').click(function(e){
-            elem = $(this);
-            var index = $(elem).index();
+        // $('.view-display-id-block_5 .tag').click(function(e){
+        //     elem = $(this);
+        //     var index = $(elem).index();
 
-            if($(elem).hasClass('active')){
-                software.clearAllButtons();
-                software.showAllItems();
-                software.deviceList[index] = '';
-                software.itemId = '';
-            } else{
-                software.clearAllButtons();
-                $(elem).addClass('active');
-                software.deviceList[index] = $(elem).data('id');
-                software.itemId = $(elem).data('id');
-                software.handleSingleItem();
-            }
+        //     if($(elem).hasClass('active')){
+        //         software.clearAllButtons();
+        //         software.showAllItems();
+        //         software.deviceList[index] = '';
+        //         software.itemId = '';
+        //     } else{
+        //         software.clearAllButtons();
+        //         $(elem).addClass('active');
+        //         software.deviceList[index] = $(elem).data('id');
+        //         software.itemId = $(elem).data('id');
+        //         software.handleSingleItem();
+        //     }
 
-            e.preventDefault();
-        })
+        //     e.preventDefault();
+        // })
     },
 
     handleSingleItem: function(){
