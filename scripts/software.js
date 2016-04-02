@@ -23,26 +23,6 @@ var software = {
 
             e.preventDefault();
         })
-
-        // $('.view-display-id-block_5 .tag').click(function(e){
-        //     elem = $(this);
-        //     var index = $(elem).index();
-
-        //     if($(elem).hasClass('active')){
-        //         software.clearAllButtons();
-        //         software.showAllItems();
-        //         software.deviceList[index] = '';
-        //         software.itemId = '';
-        //     } else{
-        //         software.clearAllButtons();
-        //         $(elem).addClass('active');
-        //         software.deviceList[index] = $(elem).data('id');
-        //         software.itemId = $(elem).data('id');
-        //         software.handleSingleItem();
-        //     }
-
-        //     e.preventDefault();
-        // })
     },
 
     handleSingleItem: function(){
@@ -85,8 +65,7 @@ var software = {
     },
 
     clearAllButtons : function(){
-        $('.view-display-id-block_4 .tag').removeClass('active');
-        $('.view-display-id-block_5 .tag').removeClass('active');
+        $('.view-id-software .tag').removeClass('active');
     },
 
     showAllItems : function(){

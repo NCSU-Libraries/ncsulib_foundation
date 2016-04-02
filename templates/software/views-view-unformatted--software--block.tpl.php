@@ -11,5 +11,5 @@
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
 <?php foreach ($rows as $id => $row): ?>
-    <?php print $row; ?>
+    <?php print strip_tags($row, '<a>'); ?>
 <?php endforeach; ?>
