@@ -1,12 +1,23 @@
 @media print {
 	// global
 	body{
-		margin: 50px 0px;
+		margin: 0mm 0mm;
 	}
+
+    a[href]:after{
+        content: '';
+    }
+
+    header,#utility{
+        display: none;
+    }
 
 	.ncstate-utility-bar{
 		display: none;
 	}
+    #utility-search{
+        display: none;
+    }
 
 	// homepage
 	#search-tabs,
@@ -15,9 +26,18 @@
 	.orbit-next,
 	.feedback-form,
 	#nav-toggle,
-	#primary-nav{
+	#primary-nav,
+    #tier-one,
+    #tier-two{
 		display: none;
 	}
+
+    #content{
+        margin-top: 0px;
+    }
+
+    // tables
+    table { page-break-inside:auto }
 
 	// logo
 	.name{
@@ -48,5 +68,27 @@
 			transform: none;
 		}
 	}
+
+    // sidebars
+    #post-sidebar,
+    #subnav,
+    .l-sidebar-first,
+    .l-sidebar-second,
+    .sidebar{
+        display: none;
+    }
+
+    // drupal admin stuff
+    .element-invisible,
+    ul.tabs.primary,
+    #toolbar.toolbar{
+        display: none;
+    }
+
+    @page{
+        margin: 10% 0% 10% 0%;
+    }
+
+
 }
 
