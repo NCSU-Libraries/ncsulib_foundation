@@ -32,8 +32,24 @@
 		display: none;
 	}
 
+    // content
     #content{
         margin-top: 0px;
+
+        #main-content{
+            h1#page-title{
+                font-size: 45px;
+            }
+            img{
+                // display: none;
+            }
+        }
+        ul.breadcrumbs{
+            display: none;
+        }
+    }
+    #social{
+        display: none;
     }
 
     // tables
@@ -86,7 +102,7 @@
     }
 
     @page{
-        margin: 10% 0% 10% 0%;
+        margin: 7% 5%;
     }
 
 
