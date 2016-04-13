@@ -12,7 +12,7 @@
 		<?php foreach ($reg_ary as $key=>$sem): ?>
 		<div class="reg-hours <?= $key; ?>">&nbsp;</div>
 
-		<h4 class="subheader"><?= $key; ?> Hours <span class="sem-dates">(<?= $sem[0]['semester_dates']; ?>)</span></h4>
+		<h4 class="subheader"><?= ucwords($key); ?> Hours <span class="sem-dates">(<?= $sem[0]['semester_dates']; ?>)</span></h4>
 			<table>
 				<?php foreach($sem as $item): ?>
 				<tr>
