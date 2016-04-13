@@ -36,17 +36,23 @@
 
 
     <div class="row">
-        <div class="columns medium-8">
+        <div class="columns medium-12">
             <?= render($content['field_image']); ?>
         </div>
-        <div class="columns medium-4">
+    </div>
+    <div class="row" id="space-meta">
+        <div class="columns medium-7">
             <?= render($content['field_building_new_']); ?>
-            <?= render($content['field_capacity']); ?>
             <?= render($content['field_floor']); ?>
             <?= render($content['field_room_number']); ?>
-            <?= render($content['field_reservation_method']); ?>
+            <?= render($content['field_capacity']); ?>
         </div>
+        <div class="columns medium-5">
+            <div class="right"><?= render($content['field_reservation_method']); ?></div>
+        </div>
+    </div>
 
+    <div class="row">
         <div class="columns medium-12">
             <?= render($content); ?>
 

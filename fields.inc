@@ -370,15 +370,16 @@ function ncsulib_foundation_field__field_room_number__space($variables) {
   // Render the items as a comma separated inline list
 
   if (count($variables['items']) > 1) {
-    $output .= '<span class="room-list">Room Numbers:&nbsp;</span>';
-    $output .= '<ul class="room-numbers"' . $variables['content_attributes'] . '>';
+    $output .= '<span class="room-list">Rooms:&nbsp;';
+    // $output .= '<ul class="room-numbers"' . $variables['content_attributes'] . '>';
     for ($i=0; $i < count($variables['items']); $i++) {
-      $output .= '<li>'. drupal_render($variables['items'][$i]);
-      $output .= ($i == count($variables['items'])-1) ? '</li>' : ', </li>';
+      $output .= drupal_render($variables['items'][$i]);
+      $output .= ($i == count($variables['items'])-1) ? '' : ', ';
     }
-    $output .= '</ul>';
+    $output .= '</span>';
+    // $output .= '</ul>';
   } else {
-    $output .= '<div class="room-numbers"><span class="room-list">Room Number:&nbsp;' . drupal_render($variables['items'][0]) . '</span></div>';
+    $output .= '<div class="room-numbers"><span class="room-list">Room:&nbsp;' . drupal_render($variables['items'][0]) . '</span></div>';
   }
 
   // Building map

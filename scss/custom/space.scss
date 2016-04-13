@@ -7,7 +7,7 @@ body.html main {
     @media #{$medium-up} {
         .field-name-field-image {
             // @include grid-column(6, $float: right);
-            margin-bottom: rem-calc(30);
+            margin-bottom: rem-calc(20);
         }
     }
     .building-name, .field-name-field-building-new- .field-item {
@@ -66,12 +66,14 @@ body.html main {
     .room-capacity,
     .room-floor,
     .field-name-field-contact-entity-phone,
-    .room-numbers{
-        display: block;
-        margin-bottom: 20px;
-    }
+    .room-numbers,
     .room-list{
-        margin-bottom: 0px;
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    #space-meta{
+        margin-bottom: 50px;
     }
 
     @media #{$small-only} {
