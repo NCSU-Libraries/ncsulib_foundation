@@ -74,13 +74,18 @@ body.html main {
 
     #space-meta{
         margin-bottom: 50px;
+
+        .res-btn{
+            float: right;
+
+            @media #{$small-only} {
+                margin-top: 20px;
+                float: left;
+            }
+        }
     }
 
     @media #{$small-only} {
-        .room-list {
-            margin: 0;
-        }
-
         .field-name-field-image {
             margin: rem-calc(0 0 10 0);
         }

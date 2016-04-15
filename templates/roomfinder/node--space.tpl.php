@@ -23,6 +23,7 @@
         hide($content['field_room_number']);
         hide($content['field_capacity']);
         hide($content['field_floor']);
+        hide($content['field_image']);
         hide($content['field_contact_entity_name']);
         hide($content['field_contact_entity_phone']);
         hide($content['field_contact_entity_email']);
@@ -37,7 +38,13 @@
 
     <div class="row">
         <div class="columns medium-12">
+            <?php if($content['field_360_image_']): ?>
+                <div class="field field-name-field-image field-type-image field-label-hidden">
+                    <?= '<iframe width="100%" scrolling="no" allowfullscreen src="/sites/all/themes/ncsulib_foundation/templates/includes/vr-loader.html?image=/sites/default/files/'.$content['field_image']['#items'][0]['filename'].'&is_stereo=false&preview=/sites/default/files/'.$content['field_image']['#items'][0]['filename'].'"></iframe>'; ?>
+                </div>
+            <?php else: ?>
             <?= render($content['field_image']); ?>
+            <?php endif; ?>
         </div>
     </div>
     <div class="row" id="space-meta">
@@ -47,9 +54,11 @@
             <?= render($content['field_room_number']); ?>
             <?= render($content['field_capacity']); ?>
         </div>
-        <div class="columns medium-5">
-            <div class="right"><?= render($content['field_reservation_method']); ?></div>
+        <?php if(render($content['field_reservation_method']) != ''): ?>
+        <div class="columns medium-5 res-btn">
+            <?= render($content['field_reservation_method']); ?>
         </div>
+        <?php endif; ?>
     </div>
 
     <div class="row">
