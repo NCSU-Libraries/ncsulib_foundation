@@ -347,6 +347,8 @@ function ncsulib_foundation_field__field_reservation_method__space($variables) {
       break;
 
     case 'Not Reservable':
+      $output = '';
+      break;
     default:
       $output = ' ';
       break;

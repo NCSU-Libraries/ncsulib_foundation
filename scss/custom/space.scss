@@ -76,11 +76,15 @@ body.html main {
         margin-bottom: 35px;
 
         .res-btn{
-            float: right;
+            a{
+                float: right;
+            }
 
             @media #{$small-only} {
-                margin-top: 20px;
-                float: left;
+                a{
+                    margin-top: 20px;
+                    float: left;
+                }
             }
         }
     }
