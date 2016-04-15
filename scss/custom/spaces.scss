@@ -1,6 +1,12 @@
+@import "base/init_for_custom";
+
 .view-id-software.view-display-id-block_2{
     .software-item{
         margin-bottom: 0px;
+
+        @media #{$small-only} {
+            margin-bottom: 10px;
+        }
 
         .icon{
             img{
