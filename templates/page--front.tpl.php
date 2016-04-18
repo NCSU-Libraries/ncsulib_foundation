@@ -168,7 +168,7 @@
 
                 <div class="medium-4 columns">
                     <div id="home-events">
-                        <h3 class="sec-label">Events <span class="pipe">|</span> <a href="/events">all events</a></h3>
+                        <h3 class="sec-label">Events &amp; Exhibits <span class="pipe">|</span> <a href="/events">all events</a></h3>
                         <?php
                             $block2 = module_invoke('views', 'block_view', 'upcoming_events-block_9');
                             print render($block2['content']);
