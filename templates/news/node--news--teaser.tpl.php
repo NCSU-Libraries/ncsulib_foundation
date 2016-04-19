@@ -9,6 +9,15 @@
     .teaser{
         width: 100%;
     }
+    .submitted{
+        display: none;
+    }
+    .links{
+
+    }
+    .node-readmore .element-invisible{
+        display: none;
+    }
 </style>
 <?php
     $data = json_encode($content);
@@ -20,7 +29,7 @@
     $body = $object->body->und[0]->value;
     $summary = $object->body->und[0]->summary;
     $nid = $object->nid;
-    $url = 'https://webdev.lib.ncsu.edu/node/'.$nid;
+    $url = 'https://www.lib.ncsu.edu/node/'.$nid;
 ?>
 
 
