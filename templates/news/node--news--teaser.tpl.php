@@ -6,6 +6,9 @@
     .photo img{
         width: 100%;
     }
+    .photo small{
+        display: none;
+    }
     .teaser{
         width: 100%;
     }
@@ -34,8 +37,8 @@
 
 
 <div class="item">
-    <h1><a href="<?= $url ?>"><?= $title; ?></a></h1>
     <div class="photo"><a href="<?= $url ?>"><?= $photo; ?></a></div>
+    <h1><a href="<?= $url ?>"><?= $title; ?></a></h1>
     <div class="teaser"><p><?= $summary; ?></p></div>
     <p><a href="<?= $url ?>">Read more</a></p>
 </div>
