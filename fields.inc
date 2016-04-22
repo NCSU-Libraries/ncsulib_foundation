@@ -136,7 +136,7 @@ function ncsulib_foundation_field__field_news_feature_photo__news($variables){
       $img_url = $img_str;
   } else{
       $img_url_part = explode('http://default',$img_str);
-      $img_url = 'http://www.lib.ncsu.edu/'.$img_url_part[1];
+      $img_url = 'http://www.lib.ncsu.edu'.$img_url_part[1];
   }
 
   if($variables['element']['#view_mode'] == 'teaser'){
