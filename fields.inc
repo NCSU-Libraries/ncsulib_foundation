@@ -119,24 +119,29 @@ function ncsulib_foundation_username($variables) {
 
 
 
+
 /**
  * Implements theme_field()
  *
  * NEWS feature photo
  */
 function ncsulib_foundation_field__field_news_feature_photo__news($variables){
-    $output = '';
-    $img_uri = $variables['items'][0]['#item']['uri'];
-    $img_url_str = explode('public://',$img_uri);
-    $img_str = image_style_url("738_max_width", $img_url_str[1]);
+  $output = '';
+  $img_uri = $variables['items'][0]['#item']['uri'];
+  $img_url_str = explode('public://',$img_uri);
+  $img_str = image_style_url("738_max_width", $img_url_str[1]);
 
-    // when using in a non drupal env need to insert domain
-    if (strpos($img_str, 'www.lib.ncsu.edu') !== FALSE){
-        $img_url = $img_str;
-    } else{
-        $img_url_part = explode('http://default',$img_str);
-        $img_url = 'http://www.lib.ncsu.edu/'.$img_url_part[1];
-    }
+  // when using in a non drupal env need to insert domain
+  if (strpos($img_str, 'www.lib.ncsu.edu') !== FALSE){
+      $img_url = $img_str;
+  } else{
+      $img_url_part = explode('http://default',$img_str);
+      $img_url = 'http://www.lib.ncsu.edu/'.$img_url_part[1];
+  }
+
+  if($variables['element']['#view_mode'] == 'teaser'){
+    $output .= '<img src="'.$img_url.'" width="100%">';
+  } else{
 
     $title = $variables['items'][0]['#item']['alt'];
     $output = '<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
@@ -146,21 +151,10 @@ function ncsulib_foundation_field__field_news_feature_photo__news($variables){
     $output .= '<img src="'.$img_url.'" width="100%" itemprop="image">';
     $output .= '<small itemprop="caption">'.$title.'</small>';
     $output .= '</div>';
-    return $output;
+  }
+
+  return $output;
 }
-
-
-
-/**
- * Implements theme_field()
- *
- * NEWS feature photo
- */
-// function ncsulib_foundation_field__field_software_user_activity($variables){
-//   $output = '';
-//   $output = 'test';
-//   return $output;
-// }
 
 
 /**

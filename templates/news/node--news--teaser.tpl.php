@@ -6,7 +6,7 @@
     .photo img{
         width: 100%;
     }
-    .photo small{
+    .photo small, small{
         display: none;
     }
     .teaser{
@@ -14,9 +14,6 @@
     }
     .submitted{
         display: none;
-    }
-    .links{
-
     }
     .node-readmore .element-invisible{
         display: none;
@@ -27,6 +24,7 @@
     $json = json_decode($data);
 
     $object = $json->body->{'#object'};
+    // print_r($object);
     $title = $object->title;
     $photo = render($content['field_news_feature_photo']);
     $body = $object->body->und[0]->value;
