@@ -18,6 +18,14 @@
     .node-readmore .element-invisible{
         display: none;
     }
+    .footerContent span.im{
+        color: #ffffff;
+    }
+    .footerContent .ii,
+    .footerContent .ii a,
+    .footerContent .ii a['href']{
+        color: #fff;
+    }
 </style>
 <?php
     $data = json_encode($content);
