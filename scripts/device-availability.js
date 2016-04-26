@@ -116,6 +116,6 @@ var device = {
 $(function($) {
     device.catkey = $('.content').data('catkey');
     if(device.catkey){
-        device.init();
+        device.init(); 
     }
 });
