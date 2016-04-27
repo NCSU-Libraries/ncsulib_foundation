@@ -620,6 +620,7 @@ ul.tabs.primary{
             }
             .field-item{
                 float: left;
+                line-height: 1.4rem;
                 margin-right: 3px;
             }
             .field-item:after{
@@ -764,7 +765,7 @@ ul.tabs.primary{
             }
         }
 
-        .caption{
+        .caption, .caption-text{
             small{
                 float: left;
                 line-height: 1.3;
