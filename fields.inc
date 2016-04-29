@@ -156,6 +156,40 @@ function ncsulib_foundation_field__field_news_feature_photo__news($variables){
   return $output;
 }
 
+/**
+ * Implements theme_field()
+ *
+ * NEWS staff member field
+ */
+function ncsulib_foundation_field__field_staff_members__news($variables){
+  $output = '';
+  $output = '<div id="news-staff">';
+
+  foreach($variables['element']['#object']->field_staff_members['und'] as $s){
+    $first_name = $s['entity']->field_firstname['und'][0]['value'];
+    $last_name = $s['entity']->field_lastname['und'][0]['value'];
+    $title = $s['entity']->field_title['und'][0]['value'];
+    $photo = $s['entity']->field_staff_photo['und'][0]['filename'];
+    $unity = $s['entity']->name;
+
+    $output .= '<a href="/staff/'.$unity.'">';
+    $output .= '<div class="staff-member">';
+    $output .= '<div class="staff-photo">';
+    $output .= '<img src="/sites/default/files/styles/medium/public/'.$photo.'" width="100%" />';
+    $output .= '</div>';
+    $output .= '<div class="staff-details">';
+    $output .= '<div class="staff-name">'.$first_name.' '.$last_name.'</div>';
+    $output .= '<div class="staff-title">'.$title.'</div>';
+    $output .= '</div>';
+    $output .= '</div>';
+    $output .= '</a>';
+  }
+
+  $output .= '</div>';
+
+  return $output;
+
+}
 
 /**
  * Implements theme_field()

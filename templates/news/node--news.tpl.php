@@ -20,6 +20,7 @@
         hide($content['comments']);
         hide($content['field_news_categories']);
         hide($content['field_news_tags']);
+        hide($content['field_staff_members']);
     ?>
 
     <div class="columns medium-12">
@@ -59,6 +60,12 @@
         </div>
     </div>
     <aside id="post-sidebar" class="columns medium-4">
+        <?php if(render($content['field_staff_members'])): ?>
+            <h3>Featured Staff</h3>
+            <div id="staff-news">
+                <?= render($content['field_staff_members']); ?>
+            </div>
+        <?php endif; ?>
 
         <?php if(!empty($content['field_news_tags']['#object'])): ?>
             <div id="tags">
