@@ -159,6 +159,6 @@
 <a name="#main-content" class="element-invisible element-focusable" tabindex="-1">Skip Content</a>
 
 <?php
-	$msg = file_get_contents("https://www.lib.ncsu.edu/notice/notice.php");
+    $msg = file_get_contents("http://www.lib.ncsu.edu/notice/notice.php");
 	echo $msg;
 ?>
