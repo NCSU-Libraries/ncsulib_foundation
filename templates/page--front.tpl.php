@@ -57,6 +57,7 @@
                                 <ul>
                                     <li><h3>Studying</h3></li>
                                     <li><a href="https://rooms.lib.ncsu.edu/" id="ql_reservearoom">Reserve a Room</a></li>
+				    <li><a href="/techlending">Borrow Technology</a></li>
                                 </ul>
                             </li>
                             <li>
