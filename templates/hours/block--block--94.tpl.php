@@ -22,7 +22,7 @@
 			<?php endforeach; ?>
 		</table>
 		<?php endforeach; ?>
-		<?php if(arg(1) == 'hill' && arg(2) == 'creamery' && $_GET['date'] != '2016-8')  : ?>
+		<?php if(arg(1) == 'hill' && arg(2) == 'creamery' && ($_GET['date'] == '2016-5' && $_GET['date'] == '2016-6' && $_GET['date'] == '2016-7'))  : ?>
 		<div class="row">
 			<div class="columns medium-12">
 				<div class="exam-hours-alert">
