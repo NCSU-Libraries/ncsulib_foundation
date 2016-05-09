@@ -176,10 +176,31 @@ function buildSearchFilters(baseURL) {
 }
 
 
+
+
     var catalogUrl = "http://catalog.lib.ncsu.edu/";
 
     jQuery(document).ready(function($){
-        // $("#tabs").tabs();
+
+        // articles tab
+        // searchArticleQuery hidden input should match searcharticle input
+        $('#searcharticle').on('input', function(){
+            $('#searchArticleQuery').val($(this).val());
+        })
+
+        $('#searcharticleadvanced').on('change', function(){
+            selectVal = $(this).val();
+            qVal = $('#searcharticle').val();
+            if(selectVal == 'title'){
+                $('#searchArticleQuery').val('(TitleCombined:('+qVal+'))');
+            } else if(selectVal == 'author'){
+                $('#searchArticleQuery').val('(AuthorCombined:('+qVal+'))');
+            } else if(selectVal == 'anywhere'){
+                $('#searchArticleQuery').val(qVal);
+            }
+        });
+
+
 
         // If user selects a call number browse, hide the TRLN and Worldcat options.
         $("#Ntk").change( function () {
