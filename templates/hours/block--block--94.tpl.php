@@ -13,15 +13,24 @@
 		<div class="reg-hours <?= $key; ?>">&nbsp;</div>
 
 		<h4 class="subheader"><?= ucwords($key); ?> Hours <span class="sem-dates">(<?= $sem[0]['semester_dates']; ?>)</span></h4>
-			<table>
-				<?php foreach($sem as $item): ?>
-				<tr>
-					<td width="40%"><?= $item['day_range']; ?></td>
-					<td><?= $item['open_hours']; ?></td>
-				</tr>
-				<?php endforeach; ?>
-			</table>
+		<table>
+			<?php foreach($sem as $item): ?>
+			<tr>
+				<td width="40%"><?= $item['day_range']; ?></td>
+				<td><?= $item['open_hours']; ?></td>
+			</tr>
+			<?php endforeach; ?>
+		</table>
 		<?php endforeach; ?>
+				<?php if(arg(1) == 'hill' && arg(2) == 'creamery'): ?>
+			<div class="row">
+				<div class="columns medium-12">
+					<div class="exam-hours-alert">
+						<p>The Creamery is closed for the summer.</p>
+					</div>
+				</div>
+			</div>
+		<?php endif; ?>
 	</div>
 
 

@@ -5,13 +5,15 @@ $include-html-classes: false;
 
 
 // temporary
-.exam-hours-alert{
-	// border: 1px solid #DDD;
+#content #main-content .exam-hours-alert{
 	background: #f5f5f5;
 	color: #cc0000;
-	margin-top:33px;
-	margin-left: -16px;
+	margin-top:-97px;
 	padding: 10px;
+
+	p{
+		margin-bottom: 0px;
+	}
 }
 .left-triangle{
 	width: 0;
