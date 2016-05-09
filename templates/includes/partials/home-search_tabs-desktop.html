@@ -24,10 +24,13 @@
 
         <!-- Articles -->
         <div class="content" id="articles">
-            <form accept-charset="utf-8" method="get" action="http://ncsu.summon.serialssolutions.com/search" id="search-articles-summon">
+            <!-- <form accept-charset="utf-8" method="get" action="http://ncsu.summon.serialssolutions.com/search" id="search-articles-summon"> -->
+            <form accept-charset="utf-8" method="get" action="https://ncsu.summon.serialssolutions.com" id="search-articles-summon">
                 <div class="search-body">
                     <input type="hidden" class="tab" name="tab" value="Articles" />
-                    <input type="search" id="searcharticle" value="" name="s.q" class="articles-search-field" placeholder="Search for articles in Summon" title="Search for articles in Summon" />
+                    <input type="search" id="searcharticle" value="" name="" class="articles-search-field" placeholder="Search for articles in Summon" title="Search for articles in Summon" />
+                    <input type="hidden" id="searchArticleQuery" value="" name="q" />
+                    <!-- <input type="search" id="searcharticle" value="" name="s.q" class="articles-search-field" placeholder="Search for articles in Summon" title="Search for articles in Summon" /> -->
                     <input type="submit" id="article-submit" class="front-page-submit button small" value="SEARCH" />
 
                     <p class="search-example">EX: tropical deforestation or enter a DOI</p>
@@ -37,17 +40,17 @@
                         <option value="author">Author</option>
                     </select>
 
-                    <label class="access" for="peer-reviewed"><input type="checkbox" value="IsPeerReviewed,true" name="s.fvf[]" id="peer-reviewed" class="article-input" /> Peer-reviewed only</label>
+                    <!-- <label class="access" for="peer-reviewed"><input type="checkbox" value="IsPeerReviewed,true" name="s.fvf[]" id="peer-reviewed" class="article-input" /> Peer-reviewed only</label> -->
+                    <label class="access" for="peer-reviewed"><input type="checkbox" value="IsPeerReviewed,true" name="fvf" id="peer-reviewed" class="article-input" /> Peer-reviewed only</label>
                     <p class="search-more"><a href="/articles/" id="articles-search-more">More search options</a> &raquo;</p>
                 </div>
-                <!-- ncsu.summon.serialssolutions.com hidden inputs -->
-                <!-- removed as per WSDPT 10/24/14 <input type="hidden" name="s.fvf[]" value="ContentType,Book Chapter,f"  /> -->
-                <input type="hidden" name="s.fvf[]" value="ContentType,Magazine Article" />
-                <input type="hidden" name="s.fvf[]" value="ContentType,Book Chapter" />
-                <input type="hidden" name="s.fvf[]" value="ContentType,Trade Publication Article" />
-                <input type="hidden" class="article-input" value="ContentType,Journal Article" name="s.fvf[]" />
-                <input type="hidden" class="article-input" value="addFacetValueFilters(ContentType,Journal / eJournal)" name="s.cmd" />
-                <input type="hidden" value="true" name="keep_r" />
+
+                <!-- Summon 2.0 update EO 5/4/16 -->
+                <input type="hidden" name="fvf" value="ContentType,Journal Article,f|ContentType,Book Chapter,f|ContentType,Magazine Article,f|ContentType,Trade Publication Article,f|ContentType,Journal / eJournal,f" />
+                <input type="hidden" name="keep_r" value="true" />
+                <input type="hidden" name="ho" value="t" />
+                <input type="hidden" name="l" value="en" />
+
             </form>
         </div>
 
