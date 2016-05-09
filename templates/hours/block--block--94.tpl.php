@@ -22,14 +22,14 @@
 			<?php endforeach; ?>
 		</table>
 		<?php endforeach; ?>
-				<?php if(arg(1) == 'hill' && arg(2) == 'creamery'): ?>
-			<div class="row">
-				<div class="columns medium-12">
-					<div class="exam-hours-alert">
-						<p>The Creamery is closed for the summer.</p>
-					</div>
+		<?php if(arg(1) == 'hill' && arg(2) == 'creamery' && $_GET['date'] != '2016-8')  : ?>
+		<div class="row">
+			<div class="columns medium-12">
+				<div class="exam-hours-alert">
+					<p>The Creamery is closed for the summer.</p>
 				</div>
 			</div>
+		</div>
 		<?php endif; ?>
 	</div>
 
