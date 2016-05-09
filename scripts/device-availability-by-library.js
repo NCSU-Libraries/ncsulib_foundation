@@ -57,5 +57,5 @@ var device = {
 }
 
 $(function($) {
-    device.init();
+    // device.init();
 });

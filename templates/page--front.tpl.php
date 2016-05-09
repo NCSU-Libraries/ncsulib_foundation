@@ -88,6 +88,11 @@
             </section> <!-- /top row -->
 
             <!-- middle row -->
+            <?php
+              // Temporarily skip this whole <section>
+              $skip = "yes";
+              if ($skip != "yes") {
+            ?>
             <section id="tier-two">
                 <div id="available-links">
                     <h3>Available Now</h3>
@@ -141,6 +146,13 @@
                 </div>
 
             </section>
+            <?php
+              }
+              else {
+                print "<p>&nbsp;</p>";
+                print "<p>&nbsp;</p>";
+              }
+            ?>
 
             <!-- bottom row -->
             <section id="tier-three" class="row">
