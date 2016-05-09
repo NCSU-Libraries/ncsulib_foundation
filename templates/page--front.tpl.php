@@ -14,7 +14,6 @@
 
 <!--.page -->
 <div role="document" class="page" id="content">
-    <?php '';//include variable_get('htdocs_root')."/notice/notice.php"; ?>
     <?php if (!empty($page['featured'])): ?>
         <!--/.featured -->
         <section class="l-featured">
