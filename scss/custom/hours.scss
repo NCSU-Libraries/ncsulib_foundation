@@ -185,7 +185,7 @@ $include-html-classes: false;
 					width: 100%;
 
 					p.location-title{
-						font-size: 0.75em;
+						font-size: 0.6em;
 						display: table-cell;
 						height: 68px;
 						margin-bottom: 0px;
@@ -532,7 +532,7 @@ $include-html-classes: false;
 
 		span.sem-dates{
 			display: block;
-			font-size: 0.6em;
+			font-size: 0.75em;
 			font-weight: normal;
 
 			@media #{$small-only}{
