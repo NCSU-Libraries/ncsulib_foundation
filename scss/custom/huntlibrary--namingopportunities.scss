@@ -67,7 +67,6 @@ div.floor {
         display:none;
     }
     display: block;
-    width: 737px;
     margin-top: 4px;
 }
 
@@ -83,10 +82,9 @@ div.floor {
 #content .data-targets{
     li {
         margin: 0 5px 0 0;
-        line-height: 1.1;
+        line-height: 1.5;
         text-align: right;
         font-style: italic;
-        overflow: auto;
         padding: 0;
         background: none;
 
@@ -104,7 +102,7 @@ div.floor {
             font-style: normal;
             color: #737373;
             display: block;
-            overflow: auto;
+            /*overflow: auto;*/
             font-style: italic;
         }
     }
@@ -121,15 +119,11 @@ div.floor {
 }
 
 #tabs {
-    margin-bottom: 60px;
-    overflow: auto;
-    background: url(/sites/all/themes/ncsulib_foundation/styles/blitzer/images/noisy_grid.png);
+    border: 0;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 
-// @-moz-document url-prefix() {
-//     .ui-tabsui-tabs-navlitop:0
-// }
-// }
 
 .floorplan {
     float: left;
@@ -143,18 +137,14 @@ div.floor {
 .main .ui-tabs-panel .data-targets {
     overflow: hidden;
     margin-top: 10px;
-    background: #FBFBFB;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FBFBFB), to(#F3F3F3));
-    border-radius: .5em;
+    background: #eee;
     padding: 3px;
-    border: 2px solid #fff;
-    box-shadow: 0 0 4px #000;
 }
 
 .data-targets li a:hover, .data-targets .highlighter {
     background: rgba(255, 0, 0, 0.3);
 /*previous yellow color: rgba(255, 208, 22, 0.38)*/
-    border-radius: .3em;
+    border-radius: 0em;
     padding: 6px 8px;
     text-decoration: none;
 }
@@ -180,16 +170,9 @@ div.floor {
 }
 
 .main .instructions {
-    margin: -60px 11px 0 21px;
-    padding: 10px 10px 10px 20px;
-    margin-top: -60px;
-    border-left: 1px solid #ACACAC;
-    border-right: 1px solid #ACACAC;
-    border-bottom: 1px solid #ACACAC;
-    border-bottom-left-radius: .5em;
-    border-bottom-right-radius: .5em;
-    line-height: 1;
-    background: url(/sites/all/themes/ncsulib_foundation/styles/blitzer/images/arrow-link.png) no-repeat 7px 12px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 0px;
 }
 
 #mapster_wrap_1 img, #mapster_wrap_1 canvas {
@@ -203,15 +186,6 @@ div.floor {
     color: #B80D0D;
 }
 
-/**
- * jQuery Tablesorter plugin overrides and styles needed to enable switching views between tabs and table
- */
-table.tablesorter {
-    /*margin-left: 182px;*/
-    /*width: 726px;*/
-    /*position: absolute;*/
-    /*top: 389px;*/
-}
 
 .tablesorter td, .tablesorter .header {
     border: 1px solid rgb(207, 207, 207);
@@ -228,7 +202,7 @@ table.tablesorter {
     float: right;
     font-size: 101%;
     color: #6F6F6F;
-    border-radius: .3em;
+    border-radius: 0em;
     border: 1px solid;
     padding: 1px 6px 1px 14px;
     background-clip: padding-box;
@@ -244,8 +218,8 @@ table.tablesorter {
     @media #{$small-only} {
         display: none;
     }
-    border-bottom: 1px solid #CCC;
     height: 36px;
+    width: 100%;
 
 }
 
@@ -272,10 +246,7 @@ table.tablesorter {
     margin: 0 .2em 1px .2em;
 }
 .other-ways {
-    position: absolute;
-    bottom: 7px;
-    right: 7px;
-    width: 368px;
+
 }
 
 .other-ways h3, h3.other-way {
@@ -288,3 +259,88 @@ table.tablesorter {
 #content .ui-tabs-anchor {
     font-size: rem-calc(13.5);
     }
+
+
+
+/*EO overrides 5.9.16*/
+#content #main-content {
+
+    .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br{
+        border-radius: 0px;
+    }
+    .main .no-utility-nav{
+        border: 0px;
+        width: 100%;
+    }
+
+    div.floor{
+        width: 100%;
+
+        #tabs{
+
+            .ui-tabs-panel{
+                padding: 0px;
+
+                .data-targets{
+
+                    li{
+                        margin: 0px;
+
+                        a{
+                            line-height: 1.4rem;
+                            overflow: auto;
+                            padding: 15px;
+                            width: 100%;
+
+                            .space-title{
+                                float: left;
+                                width: 70%;
+                            }
+                            .space-amt{
+                                float: right;
+                                text-align: right;
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+            .ui-tabs-nav{
+                height: 52px;
+            }
+            .ui-widget-header{
+                background: none;
+                border: 0px;
+                padding: 0px;
+            }
+            .ui-widget-content{
+                img{
+                    //width: 100%;
+                }
+            }
+
+            ul.ui-tabs-nav{
+                margin-bottom: 0px;
+            }
+
+            .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+                background: #f5f5f5;
+                border-radius: 0px;
+                margin: 0px;
+                padding: 7px;
+            }
+            .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
+                background: #fff;
+                border-radius: 0px;
+                margin: 0px;
+                padding: 7px;
+            }
+        }
+        .instructions{
+            background: none;
+            border: 0px;
+            margin: 0px;
+        }
+    }
+}
+

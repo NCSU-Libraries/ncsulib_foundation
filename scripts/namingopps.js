@@ -94,11 +94,11 @@ jQuery(function($) {
       areas: nonNameableAreas[i],
         onConfigured: function() {
           $('.floorplan1, .floorplan2, .floorplan3, .floorplan4, .floorplan5, .floorplan6').css({'float': 'left','margin': '0 17px 10px 0px'});
-          $('.floorplan2, .floorplan3, .floorplan4, .floorplan5, .floorplan6').css({'background' : 'white', 'box-shadow' : '0 0 4px black' } );
+          $('.floorplan2, .floorplan3, .floorplan4, .floorplan5, .floorplan6').css({'background' : 'white'} );
           $('.floorplan1, .floorplan2, .floorplan3, .floorplan4, .floorplan5, .floorplan6').css('width', '302px' );
           $('.floorplan0').css('margin', '0 0 10px 0' );
           $('.floorplan0').css('width', 'auto' );
-          $('.floorplan1').css({'background' : 'white', 'box-shadow' : '0 0 4px black' });
+          $('.floorplan1').css({'background' : 'white' });
       }
     });
   }
