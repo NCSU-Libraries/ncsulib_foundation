@@ -165,12 +165,4 @@
 	} else{
 		include '/var/www/site/htdocs/notice/notice.php';
 	}
-	// $domain = $_SERVER['HTTP_HOST'];
-	// if(strrpos(!$domain, "www")){
-	// 	include '/var/www/site/htdocs/notice/notice.php';
-	// } else if(!strrpos($domain, "webdev")){
-	// 	include '/var/www/webdev/htdocs/notice/notice.php';
-	// } else{
-	// 	return;
-	// }
 ?>
