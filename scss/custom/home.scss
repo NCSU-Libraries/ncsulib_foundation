@@ -166,7 +166,7 @@ $include-html-classes: false;
 		margin-bottom: rem-calc(10);
 	}
 }
-.search-example{
+#content #main-content .search-example{
 	@include grid-column(12);
 
 	@media #{$small-only}{
@@ -176,6 +176,7 @@ $include-html-classes: false;
 	color: rgba(0, 0, 0, 0.5);
 	font-size: 0.7rem;
 	padding-left: 0px;
+	margin-bottom: 0px;
 }
 #websitesearch .search-example{
 	display: inline-block;
@@ -186,7 +187,7 @@ $include-html-classes: false;
 	border: 1px solid #DDD;
 	margin-bottom: emCalc(15);
 }
-.search-more{
+#content #main-content .search-more{
 	float: left;
 	margin-bottom: 0px;
 	margin-top: 10px;
