@@ -12,7 +12,7 @@
 		<?php foreach ($reg_ary as $key=>$sem): ?>
 		<div class="reg-hours <?= $key; ?>">&nbsp;</div>
 
-		<h4 class="subheader"><?= ucwords($key); ?> Hours <span class="sem-dates">(<?= $sem[0]['semester_dates']; ?>)</span></h4>
+		<h3><?= ucwords($key); ?> Hours <span class="sem-dates">(<?= $sem[0]['semester_dates']; ?>)</span></h3>
 		<?php if(arg(1) == 'hill' && arg(2) == 'creamery' && $key == 'summer'): ?>
 			<div class="row">
 				<div class="columns medium-12">
@@ -44,7 +44,7 @@
 		if($exam_hours_ary):
 	?>
 	<div class="exceptions-schedule large-12">
-		<h4 class="subheader">Exam Hours <div class="exam-hours">&nbsp;</div></h4>
+		<h3>Exam Hours <div class="exam-hours">&nbsp;</div></h3>
 		<table>
 			<?php foreach($exam_hours_ary as $exam): ?>
 			<tr>
@@ -62,7 +62,7 @@
 		if($adverse_weather_ary):
 	?>
 	<div class="exceptions-schedule large-12">
-		<h4 class="subheader">Exam Hours <div class="adverse-weather-hours">&nbsp;</div></h4>
+		<h3>Exam Hours <div class="adverse-weather-hours">&nbsp;</div></h3>
 		<table>
 			<?php foreach($adverse_weather_ary as $w): ?>
 			<tr>
@@ -81,7 +81,7 @@
 		if($exceptions_hours_ary):
 	?>
 	<div class="exceptions-schedule large-12">
-		<h4 class="subheader">Exceptions <div class="exception-hours">&nbsp;</div></h4>
+		<h3>Exceptions <div class="exception-hours">&nbsp;</div></h3>
 		<table>
 			<?php foreach($exceptions_hours_ary as $exception): ?>
 			<tr>
@@ -100,7 +100,7 @@
 		if($adverse_weather_ary):
 	?>
 	<div class="exceptions-schedule large-12">
-		<h4 class="subheader">Adverse Weather <div class="adverse-weather-hours">&nbsp;</div></h4>
+		<h3>Adverse Weather <div class="adverse-weather-hours">&nbsp;</div></h3>
 		<table>
 			<?php foreach($adverse_weather_ary as $w): ?>
 			<tr>

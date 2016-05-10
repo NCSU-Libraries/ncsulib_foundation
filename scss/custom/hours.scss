@@ -271,6 +271,13 @@ $include-html-classes: false;
 			padding: 0px;
 		}
 
+		h3{
+			font-weight: normal;
+			margin-top: 0px;
+			padding-top: 0px;
+			text-transform: none;
+		}
+
 		table{
 			tr:nth-of-type(2n){
 				background: none;
@@ -527,7 +534,7 @@ $include-html-classes: false;
 .regular-schedule{
 	margin: 0px 0px 20px 0px;
 
-	h4{
+	h3{
 		padding: 0px;
 
 		span.sem-dates{
