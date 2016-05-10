@@ -159,6 +159,18 @@
 <a name="#main-content" class="element-invisible element-focusable" tabindex="-1">Skip Content</a>
 
 <?php
-    $msg = file_get_contents("http://www.lib.ncsu.edu/notice/notice.php");
-	echo $msg;
+	if($_SERVER['HTTP_HOST']){
+    	$msg = file_get_contents("http://www.lib.ncsu.edu/notice/notice.php");
+		echo $msg;
+	} else{
+		include '/var/www/site/htdocs/notice/notice.php';
+	}
+	// $domain = $_SERVER['HTTP_HOST'];
+	// if(strrpos(!$domain, "www")){
+	// 	include '/var/www/site/htdocs/notice/notice.php';
+	// } else if(!strrpos($domain, "webdev")){
+	// 	include '/var/www/webdev/htdocs/notice/notice.php';
+	// } else{
+	// 	return;
+	// }
 ?>
