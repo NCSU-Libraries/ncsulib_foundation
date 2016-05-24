@@ -52,7 +52,7 @@
                     // get categories to separate out exhibits
                     $cat = field_get_items('node', $node, 'field_event_category');
                     foreach($cat as $c){
-                        $time = ($c['value'] == 'Exhibits') ? '' : date('g:ia',$start_raw).' - '.date('g:ia',$end_raw);
+                        $time = ($c['value'] == 'Exhibits' && date('z',$start_raw) != date('z',$end_raw)) ? '' : date('g:ia',$start_raw).' - '.date('g:ia',$end_raw);
                     }
                     if(!$cat){$time = date('g:ia',$start_raw).' - '.date('g:ia',$end_raw);}
                     $str = (date('z',$start_raw) == date('z',$end_raw)) ? date('F j, Y',$start_raw) : date('F j',$start_raw).' - '.date('F j, Y',$end_raw);
