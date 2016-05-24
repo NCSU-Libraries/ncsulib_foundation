@@ -55,8 +55,10 @@
 						<h5>Where: <a href="<?php echo url('node/'.$where[0]['target_id']); ?>"><?php echo $space_title; ?></a> <?php if($library){ echo 'at '. $library['#markup']; } ?></h5>
 						<?php endif; ?>
 					<?php endif; ?>
-					<?php if(($start_time || $end_time) && !$ongoing): ?>
+					<?php if(($start_time || $end_time) && !$ongoing && $start_time != $end_time): ?>
 					<h5 class="subheader">When: <?php echo $start_time . ' - ' . $end_time; ?></h5>
+					<?php elseif($start_time == $end_time): ?>
+					<h5 class="subheader">When: <?php echo $start_time ?></h5>
 					<?php else: ?>
 					<h5 class="subheader">When: Ongoing</h5>
 					<?php endif; ?>
