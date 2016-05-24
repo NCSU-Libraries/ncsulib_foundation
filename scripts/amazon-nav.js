@@ -5,13 +5,13 @@ var amazonNav = {
     // amount of time (in ms) for mouse to hover before opening a new subnav
     // "grazing the corner"
     mouseoverTimeout : 120,
-    
+
     pauseBeforeOpening : false,
 
 	init : function() {
-	    
-	    console.log(amazonNav.navEnterTimeout);
-	
+
+	    // console.log(amazonNav.navEnterTimeout);
+
         // mouse entered main nav
         $('ul.primary-nav>li').mouseenter(function(e){
             var navIndex = $(this).index();
@@ -35,7 +35,7 @@ var amazonNav = {
                 }, amazonNav.navEnterTimeout);
             }
         });
-        
+
         // mouse left the main nav
         $('ul.primary-nav>li').mouseleave(function(e){
             if( $(e.toElement || e.relatedTarget).hasClass('primary-menu-item') ) {
@@ -47,7 +47,7 @@ var amazonNav = {
                 amazonNav.closeNav();
             }
         });
-        
+
         // mouse left the subnav
         $('.primary-menu-list').mouseleave(function(e){
             if( ! $(e.toElement || e.relatedTarget).hasClass('primary-menu-item') ) {
@@ -69,10 +69,10 @@ var amazonNav = {
         amazonNav.closeNav();
         $('.primary-menu-item:eq(' + navIndex + ')').addClass('open');
         $('.primary-menu-list:eq(' + navIndex + ')').addClass('open');
-    }	
-	
+    }
+
 };
 
 jQuery(function(){
-    amazonNav.init();
+    // amazonNav.init();
 });
