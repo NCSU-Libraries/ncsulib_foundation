@@ -67,9 +67,17 @@ p.left-image{
 //     max-width: 50%
 // }
 
+.caption-wrap{
+    .caption-text{
+        small{
+            font-size: 85%;
+        }
+    }
+}
+
 .caption-wrap.left-image-wrap{
     float: left;
-    margin: 25px 25px 5px 0px;
+    margin: 25px 25px 10px 0px;
     width: 50%;
 
     @media #{$small-only}{
@@ -88,7 +96,7 @@ p.left-image{
 }
 .caption-wrap.right-image-wrap{
     float: right;
-    margin: 25px 0px 5px 25px;
+    margin: 25px 0px 10px 25px;
     width: 50%;
 
     @media #{$small-only}{
@@ -107,8 +115,7 @@ p.left-image{
 }
 .caption-wrap.center-image-wrap{
     float: left;
-    margin: 25px 0px 5px;
-    text-align: center;
+    margin: 25px 0px 10px;
     width: 100%;
 
     img{

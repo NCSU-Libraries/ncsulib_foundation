@@ -1,11 +1,10 @@
 <?php
   /**
-   * Event Listing
+   * Event Listing for Event Series
    * Author: Erik Olson
    * Date: December 2013
    */
 ?>
-
 <div class="row event-item">
 	<div class="columns medium-4 event-photo">
 	<?php foreach ($fields as $id => $field): ?>
@@ -29,7 +28,7 @@
 			<h6 class="subheader"><?php echo $field->content; ?></h6>
 			<?php endif; ?>
 			<?php if($field->class == 'field-non-libraries-space'): ?>
-			<h6 class="subheader"><?= 'At the '. strip_tags($field->content); ?></h6>
+			<h6 class="subheader"><?= strip_tags($field->content); ?></h6>
 			<?php endif; ?>
 		<?php endforeach; ?>
 	</div>
