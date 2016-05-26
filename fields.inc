@@ -118,8 +118,6 @@ function ncsulib_foundation_username($variables) {
 
 
 
-
-
 /**
  * Implements theme_field()
  *
@@ -526,6 +524,61 @@ function ncsulib_foundation_field__field_non_libraries_space__event($variables) 
     $output .= '<li>'.$item['#markup'].'</li>';
   }
   $output .= '</ul>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_field()
+ *
+ * Handle event dates
+ */
+function ncsulib_foundation_field__field_time__event($variables) {
+  $output = '<h3>When</h3>';
+  $items = $variables['element']['#items'];
+
+  if(count($items) > 1){ //if multiple events
+      $output.= '<p>';
+    foreach($variables['element']['#items'] as $key => $item){
+      $start_raw = strtotime($items[$key]['value']);
+      $end_raw = strtotime($items[$key]['value2']);
+      $duration = $end_raw - $start_raw;
+      $d_hour = floor($duration/60/60);
+      $d_min = ($duration/60/60 - $d_hour)*60;
+
+      $output .= '<time itemprop="startDate" datetime="'.date('Y-m-d',$start_raw).'T'.date('G:i',$start_raw).'">'.date('F j, Y', $start_raw).'</time>';
+      $output .= '<time itemprop="duration" datetime="T'.$d_hour.'H'.$d_min.'M"></time>';
+      $output .= '<br>';
+      $output .= date('g:ia', $start_raw).' - '.date('g:ia', $end_raw);
+      $output .= '<br><br>';
+    }
+      $output.= '</p>';
+  } else{
+    $start_raw = strtotime($items[0]['value']);
+    $end_raw = strtotime($items[0]['value2']);
+    $duration = $end_raw - $start_raw;
+    $d_hour = floor($duration/60/60);
+    $d_min = ($duration/60/60 - $d_hour)*60;
+
+    // if a one day or mult day event
+    if(date('z', $start_raw) == date('z', $end_raw)){ //one day
+      $output .= '<p>';
+      $output .= '<time itemprop="startDate" datetime="'.date('Y-m-d',$start_raw).'T'.date('G:i',$start_raw).'">'.date('F j, Y', $start_raw).'</time>';
+      $output .= '<br>';
+      $output .= date('g:ia', $start_raw).' - '.date('g:ia', $end_raw);
+      $output .= '<time itemprop="duration" datetime="T'.$d_hour.'H'.$d_min.'M"></time>';
+      $output .= '</p>';
+    } else{ //mult day
+      $output .= '<p>';
+      $output .= '<time itemprop="startDate" datetime="'.date('Y-m-d',$start_raw).'T'.date('G:i',$start_raw).'">'.date('F j', $start_raw).' - '.date('F j, Y', $end_raw).'</time>';
+      $output .= '<br>';
+      $output .= date('g:ia', $start_raw).' - '.date('g:ia', $end_raw);
+      $output .= '<time itemprop="duration" datetime="T'.$d_hour.'H'.$d_min.'M"></time>';
+      $output .= '</p>';
+    }
+
+    $output .= '';
+  }
 
   return $output;
 }
