@@ -47,7 +47,7 @@
                 <?= drupal_render($content['field_non_libraries_space']); ?>
             </div>
 
-            <div itemprop="description"><?php print drupal_render($content['body']); ?></div>
+            <div itemprop="description" id="event-description"><?php print drupal_render($content['body']); ?></div>
 
             <!-- contact -->
             <?php if( isset($content['field_contact_name']) || isset($content['field_contact_phone']) || isset($content['field_contact_email'])): ?>
@@ -68,9 +68,8 @@
         <?php if($sidebar): ?>
         <div class="columns medium-5">
             <?php if($node->field_image_for_event): ?>
-            <?= '<img property="og:image" src="'.image_style_url('large', $node->field_image_for_event['und'][0]['uri']).'" width="100%" itemprop="image" />' ?>
-            <small><?= $node->field_image_for_event['und'][0]['alt'] ?></small>
-
+                <?= '<img property="og:image" src="'.image_style_url('large', $node->field_image_for_event['und'][0]['uri']).'" width="100%" itemprop="image" />' ?>
+                <small><?= $node->field_image_for_event['und'][0]['alt'] ?></small>
             <?php endif; ?>
 
             <?= drupal_render($content['field_event_leads']); ?>

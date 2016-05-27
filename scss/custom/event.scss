@@ -1,6 +1,9 @@
 @import "base/init_for_custom";
 
 .contact-info {
+  display: inline-block;
+  margin-bottom: 20px;
+
   .field-label {
     @extend %p;
   }
@@ -32,14 +35,29 @@
   }
 }
 
-#event-node{
+#content{
+  #main-content{
 
-  small{
-    display: block;
-    line-height: 1.2rem;
-    margin-top: 5px;
+    #event-node{
+
+      .event-meta{
+        ul.field-items{
+          margin-bottom: 0px;
+        }
+      }
+
+      small{
+        display: block;
+        line-height: 1.2rem;
+        margin-top: 5px;
+      }
+    }
+
   }
 }
+
+#event-description{}
+
 
 .date-display-single {
   @include awesomify("\f073");

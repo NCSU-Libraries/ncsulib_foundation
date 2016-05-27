@@ -68,11 +68,18 @@ p.left-image{
 // }
 
 .caption-wrap{
-    .caption-text{
+    p.caption-text{
         small{
             font-size: 85%;
         }
     }
+}
+.caption-wrap:after{
+    visibility: hidden;
+    display: table;
+    content: ".";
+    clear: both;
+    height: 0;
 }
 
 .caption-wrap.left-image-wrap{

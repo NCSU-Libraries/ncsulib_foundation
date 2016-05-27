@@ -539,7 +539,8 @@ function ncsulib_foundation_field__field_time__event($variables) {
 
   if(count($items) > 1){ //if multiple events
     $output.= '<p>';
-    foreach($variables['element']['#items'] as $key => $item){
+    $dates = $variables['element']['#items'];
+    foreach($dates as $key => $item){
       // kpr($item);
 
       $start_raw = strtotime($items[$key]['value'])+timezoneOffset();
@@ -548,12 +549,16 @@ function ncsulib_foundation_field__field_time__event($variables) {
       $d_hour = floor($duration/60/60);
       $d_min = ($duration/60/60 - $d_hour)*60;
 
-      $output .= '<time itemprop="startDate" datetime="'.date('Y-m-d',$start_raw).'T'.date('G:i',$start_raw).'">'.date('F j, Y', $start_raw).'</time>';
+      $output .= '<time itemprop="startDate" datetime="'.date('Y-m-d',$start_raw).'T'.date('G:i',$start_raw).'">'.date('F j', $start_raw).'</time>';
       $output .= '<time itemprop="duration" datetime="T'.$d_hour.'H'.$d_min.'M"></time>';
+      if(count($dates) > $key+1){
+        $output .= ', ';
+      } else{
+        $output .= ', '.date('Y', $start_raw);
+      }
+    }
       $output .= '<br>';
       $output .= date('g:ia', $start_raw).' - '.date('g:ia', $end_raw);
-      $output .= '<br><br>';
-    }
       $output.= '</p>';
   } else{
     $start_raw = strtotime($items[0]['value'])+timezoneOffset();
