@@ -22,5 +22,5 @@ var events = {
 
 
 jQuery(function(){
-    events.init();
+    // events.init();
 })
