@@ -13,9 +13,8 @@ var amazonNav = {
 	    // console.log(amazonNav.navEnterTimeout);
 
         // mouse entered main nav
-        $('ul.primary-nav>li').mouseenter(function(e){
+        $('ul.primary-nav>li').bind('mouseenter', function(e){
             var navIndex = $(this).index();
-
             if ( amazonNav.pauseBeforeOpening ) {
                 // the nav is already open, but mouse went over new main nav item
                 // don't open immediately in case they are mousing over a main nav corner
@@ -36,8 +35,35 @@ var amazonNav = {
             }
         });
 
+        // touchdown main nav
+        $('ul.primary-nav>li').bind('touchstart', function(e){
+            e.preventDefault();
+            var navIndex = $(this).index();
+            if ( amazonNav.pauseBeforeOpening ) {
+                amazonNav.pauseBeforeOpening = false;
+            }
+            if ( $(this).find('a').hasClass('open') ) {
+                // they already have the nav open so open the main nav item
+                window.open( 'http:' + $(this).find('a').attr('href'),'_self' );
+            } else {
+                // the subnav is not open yet
+                // don't open immediately in case they are mousing over the main nav
+                setTimeout(function(){
+                    amazonNav.openNavItem(navIndex);
+                }, amazonNav.navEnterTimeout);
+            }
+        });
+        
+        $(document).bind('touchstart', function(e) {
+            if ( $(e.target).closest('ul.primary-nav').length === 0 && $(e.target).closest('.primary-menu-list').length === 0 && $('ul.primary-nav>li>a').hasClass('open') ) {
+                e.preventDefault();
+                amazonNav.closeNav();
+            }
+        });
+
+
         // mouse left the main nav
-        $('ul.primary-nav>li').mouseleave(function(e){
+        $('ul.primary-nav>li').bind('mouseleave', function(e){
             if( $(e.toElement || e.relatedTarget).hasClass('primary-menu-item') ) {
                 // mouse left the nav and went into another one
                 // set variable so that it doesn't open immediately
@@ -49,7 +75,7 @@ var amazonNav = {
         });
 
         // mouse left the subnav
-        $('.primary-menu-list').mouseleave(function(e){
+        $('.primary-menu-list').bind('mouseleave', function(e){
             if( ! $(e.toElement || e.relatedTarget).hasClass('primary-menu-item') ) {
                 // mouse left the nav completely
                 amazonNav.closeNav();
@@ -74,5 +100,5 @@ var amazonNav = {
 };
 
 jQuery(function(){
-    // amazonNav.init();
+    amazonNav.init();
 });
