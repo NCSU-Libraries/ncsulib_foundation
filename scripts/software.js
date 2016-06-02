@@ -46,34 +46,34 @@ var software = {
         }
     },
 
-    handleMultItems: function(){
-        str = '';
-
-        for(i=0;i<software.uaList.length;i++){
-            if(software.uaList[i] != undefined && software.uaList[i] != ''){
-                str += '.'+software.uaList[i];
-            }
-        }
-        for(i=0;i<software.deviceList.length;i++){
-            if(software.deviceList[i] != undefined && software.deviceList[i] != ''){
-                str += '.'+software.deviceList[i];
-            }
-        }
-
-        $('.software-items li').hide();
-        $('.software-items li a'+str).parent().show();
-    },
-
-    clearAllButtons : function(){
-        $('.view-id-software .tag').removeClass('active');
-    },
-
-    showAllItems : function(){
-        $('ul.software-items li').show();
-        $('ul.software-items').removeClass('small');
-        $('ul.software-items').removeClass('medium');
-        $('ul.software-items').addClass('long');
-    }
+//     handleMultItems: function(){
+//         str = '';
+// 
+//         for(i=0;i<software.uaList.length;i++){
+//             if(software.uaList[i] != undefined && software.uaList[i] != ''){
+//                 str += '.'+software.uaList[i];
+//             }
+//         }
+//         for(i=0;i<software.deviceList.length;i++){
+//             if(software.deviceList[i] != undefined && software.deviceList[i] != ''){
+//                 str += '.'+software.deviceList[i];
+//             }
+//         }
+// 
+//         $('.software-items li').hide();
+//         $('.software-items li a'+str).parent().show();
+//     },
+// 
+//     clearAllButtons : function(){
+//         $('.view-id-software .tag').removeClass('active');
+//     },
+// 
+//     showAllItems : function(){
+//         $('ul.software-items li').show();
+//         $('ul.software-items').removeClass('small');
+//         $('ul.software-items').removeClass('medium');
+//         $('ul.software-items').addClass('long');
+//     }
 
 };
 
