@@ -21,28 +21,42 @@
 
 ul.software-items {
     padding-top: 20px;
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
 
-    &.long{
-        columns: 4;
-        -webkit-columns: 4;
-        -moz-columns: 4;
+
+
+    li {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+        vertical-align: top;
+        min-height: 150px;
     }
 
-    &.medium{
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-
-        @media #{$medium-up} {
-            width: 50%;
-        }
+    li a {
+        position: relative;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    
+    &.long li a div {
     }
 
-    &.small{
+    img {
+        display: block;
+        height: 80px;
+        width: auto;
+        max-width: 180px;
+        margin: 2px 0;
+    }
+
+    /*&.small{
         columns: 1;
         -webkit-columns: 1;
         -moz-columns: 1;
-    }
+    }*/
 
     @media #{$small-only} {
         &.small,&.medium,&.long{
