@@ -1,0 +1,36 @@
+@import "../foundation/settings";
+$include-html-classes: false;
+@import "foundation/components/global";
+@import "foundation/components/grid";
+
+#content{
+    #subnav{
+        .view-content{
+            .item-list{
+                h3{
+                    padding: 5px 0px;
+                }
+                ul.subject-list{
+                    display: none;
+                    margin-bottom: 15px;
+                    margin-left: 10px;
+
+                    li{
+                        margin-bottom: 5px;
+
+                        a{
+                            display: block;
+                            line-height: 1rem;
+                            margin-bottom: 20px;
+                        }
+
+                        a.selected{
+                            color: #c00;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
