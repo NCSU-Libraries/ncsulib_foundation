@@ -163,6 +163,9 @@ function ncsulib_foundation_preprocess_page(&$variables) {
       case 'software':
         drupal_add_js(path_to_theme() . '/scripts/software.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
         break;
+      case '1databases':
+        drupal_add_js(path_to_theme() . '/scripts/databases.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+        break;
     }
 
     if (isset($url_comp[1]) && isset($url_comp[2])) {
@@ -235,16 +238,7 @@ function ncsulib_foundation_preprocess_node(&$variables) {
       drupal_add_css(path_to_theme() . '/styles/core/custom/report.css', array('group' => 101));
       break;
 
-    case 'project':
-      drupal_add_css(path_to_theme() . '/styles/core/custom/projects.css', array('group' => 101));
-      break;
-
   }
-  // New tpl suggestion for short form stories
-  // if ($variables['view_mode'] == 'full' && $variables['type'] == 'project' && $variables['field_story_type']['und'][0]['value'] == 0) {
-  //   $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->type . '__short';
-  //   $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->nid . '__short';
-  // }
 
   // Make "node--NODETYPE--VIEWMODE.tpl.php" templates available for nodes
   if ($variables['view_mode'] == 'teaser') {
@@ -371,7 +365,12 @@ function ncsulib_foundation_breadcrumb($variables) {
 
     // only want breadcrumbs for /jobs right now
     $url_components = explode('/', request_uri());
-    if($url_components[1] == 'jobs' || $url_components[1] == 'spaces' || $url_components[1] == 'social-media-archives-toolkit'){
+    if(
+        $url_components[1] == 'jobs' ||
+        $url_components[1] == 'spaces' ||
+        $url_components[1] == 'social-media-archives-toolkit' ||
+        $url_components[1] == 'projects'
+        ){
       return $breadcrumbs;
     } else{
       return '';
