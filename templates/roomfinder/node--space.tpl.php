@@ -38,11 +38,12 @@
 
     <div class="row">
         <div class="columns medium-12">
+        <?php kpr(render($content['field_360_image_'])); ?>
             <?php if(render($content['field_360_image_']) != ''): ?>
                 <div class="field field-name-field-image field-type-image field-label-hidden">
                     <?= '<iframe width="100%" scrolling="no" allowfullscreen src="/sites/all/themes/ncsulib_foundation/templates/includes/vr-loader.html?image=/sites/default/files/'.$content['field_image']['#items'][0]['filename'].'&is_stereo=false&preview=/sites/default/files/'.$content['field_image']['#items'][0]['filename'].'"></iframe>'; ?>
                 </div>
-            <?php else: ?>
+            <?php elseif(render($content['field_image']) != ''): ?>
             <?= render($content['field_image']); ?>
             <?php endif; ?>
         </div>
