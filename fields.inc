@@ -948,40 +948,50 @@ function ncsulib_foundation_field__field_four_liner__project($variables) {
 function ncsulib_foundation_field__field_photos__projects($variables) {
   $output = '';
 
-  $output = '<ul class="projects-carousel unstyle-list" data-orbit data-options="animation:fade;bullets:false;timer:false;slide_number:false;">';
-
-  foreach($variables['items'] as $key => $p){
-    $entity_ref_ary = $p['entity']['field_collection_item'];
-    $entity_ref = array_shift(array_slice($entity_ref_ary, 0, 1));
+  if(count($variables['items']) == 1){
+    $entity_ary = $variables['items'][0]['entity']['field_collection_item'];
+    $entity_ref = array_shift(array_slice($entity_ary, 0, 1));
     $caption = $entity_ref['#entity']->field_caption_projects['und'][0]['safe_value'];
     $file = $entity_ref['#entity']->field_photo_collection['und'][0]['uri'];
     $img_url = image_style_url('large', $file);
 
-    $output .= '<li data-orbit-slide="slide-'.($key+1).'">';
     $output .=   '<img src="'.$img_url.'" alt="'.$caption.'" width="100%" />';
-    $output .=   '<div class="orbit-caption">';
-    $output .=   $caption;
-    $output .=   '</div>';
-    $output .= '</li>';
+  } else{
+    $output = '<ul class="projects-carousel unstyle-list" data-orbit data-options="animation:fade;bullets:false;timer:false;slide_number:false;">';
+
+    foreach($variables['items'] as $key => $p){
+      $entity_ref_ary = $p['entity']['field_collection_item'];
+      $entity_ref = array_shift(array_slice($entity_ref_ary, 0, 1));
+      $caption = $entity_ref['#entity']->field_caption_projects['und'][0]['safe_value'];
+      $file = $entity_ref['#entity']->field_photo_collection['und'][0]['uri'];
+      $img_url = image_style_url('large', $file);
+
+      $output .= '<li data-orbit-slide="slide-'.($key+1).'">';
+      $output .=   '<img src="'.$img_url.'" alt="'.$caption.'" width="100%" />';
+      $output .=   '<div class="orbit-caption">';
+      $output .=   $caption;
+      $output .=   '</div>';
+      $output .= '</li>';
+    }
+
+    $output .= '</ul>';
+
+
+  // print out thumbs
+    $output .= '<div id="carousel-thumbs">';
+    foreach($variables['items'] as $key => $p){
+      $entity_ref_ary = $p['entity']['field_collection_item'];
+      $entity_ref = array_shift(array_slice($entity_ref_ary, 0, 1));
+      $caption = $entity_ref['#entity']->field_caption_projects['und'][0]['safe_value'];
+      $file = $entity_ref['#entity']->field_photo_collection['und'][0]['uri'];
+      $img_url = image_style_url('thumbnail', $file);
+
+      $output .= '<a data-orbit-link="slide-'.($key+1).'" class="thumb">';
+      $output .= '<img src="'.$img_url.'" />';
+      $output .= '</a>';
+    }
+    $output .= '</div>';
   }
-  // kpr($variables);
-  $output .= '</ul>';
-
-
-// print out thumbs
-  $output .= '<div id="carousel-thumbs">';
-  foreach($variables['items'] as $key => $p){
-    $entity_ref_ary = $p['entity']['field_collection_item'];
-    $entity_ref = array_shift(array_slice($entity_ref_ary, 0, 1));
-    $caption = $entity_ref['#entity']->field_caption_projects['und'][0]['safe_value'];
-    $file = $entity_ref['#entity']->field_photo_collection['und'][0]['uri'];
-    $img_url = image_style_url('thumbnail', $file);
-
-    $output .= '<a data-orbit-link="slide-'.($key+1).'" class="thumb">';
-    $output .= '<img src="'.$img_url.'" />';
-    $output .= '</a>';
-  }
-  $output .= '</div>';
 
   return $output;
 }

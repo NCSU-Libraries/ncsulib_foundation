@@ -24,23 +24,31 @@
 ?>
   <div class="row" id="carousel-wrap">
     <div class="columns medium-8">
+    <?php if(render($content['field_photos'])): ?>
       <?= render($content['field_photos']) ?>
+    <?php endif; ?>
     </div>
     <div class="columns medium-4">
+    <?php if(render($content['field_tags'])): ?>
       <div id="proj-url">
         <a href="" class="button small styled expand">Here's our project</a>
       </div>
+    <?php endif; ?>
+    <?php if(render($content['field_project_author_s_'])): ?>
       <div id="proj-authors">
         <h3>We Made This</h3>
         <?= render($content['field_project_author_s_']) ?>
       </div>
+    <?php endif; ?>
     </div>
   </div>
   <div class="row">
     <div class="columns medium-12">
+    <?php if(render($content)): ?>
     <h2>Summary</h2>
       <?= render($content) ?>
     </div>
+    <?php endif; ?>
   </div>
 
 </article>
