@@ -32,7 +32,7 @@ ul.software-items {
         width: 100%;
         padding: 10px 0;
         vertical-align: top;
-        min-height: 150px;
+        // min-height: 150px;
     }
 
     li a {
@@ -40,7 +40,7 @@ ul.software-items {
         display: inline-block;
         vertical-align: bottom;
     }
-    
+
     &.long li a div {
     }
 
