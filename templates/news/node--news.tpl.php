@@ -69,6 +69,7 @@
 
         <?php if(!empty($content['field_news_tags']['#object'])): ?>
             <div id="tags">
+                <h3>Tags</h3>
                 <?= render($content['field_news_tags']); ?>
             </div>
         <?php endif; ?>
