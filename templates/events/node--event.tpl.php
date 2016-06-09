@@ -33,7 +33,7 @@
             <div class="event-meta">
                 <?php
                         //did this event already happen?
-                        $event_date = strtotime($content['field_time']['#object']->field_time['und'][0]['value2']);
+                        $event_date = strtotime($content['field_time']['#object']->field_time['und'][count($content['field_time']['#object']->field_time['und'])-1]['value2'])+timezoneOffset();
                         $is_ongoing = ($content['field_ongoing']['#object']->field_ongoing['und'][0]['value'] == 1) ? true : false;
 
                         if($event_date && $event_date < date('U') && $is_ongoing != '1'){
