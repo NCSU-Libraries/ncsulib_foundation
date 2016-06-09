@@ -71,17 +71,3 @@ var news = {
 $(function($) {
     news.init();
 });
-
-
-
-var events = {
-    init : function(){
-
-
-    }
-}
-
-
-jQuery(function(){
-    events.init();
-})
