@@ -98,7 +98,7 @@
     <?php if(!empty($cal_items)){ ?>
     <p><small>*Closed or limited access due to workshops</small></p>
     <?php } ?>
-    <p><a href="/makerspace-calendar">Makerspace calendar <i class="fa fa-chevron-right"></i></a></p>
+
     <?php } ?>
-    <p><a href="/hours/<?= $lib ?>/makerspace">Full Makerspace hours <i class="fa fa-chevron-right"></i></a></p>
+    <p>Makerspace hours: <a href="/hours/<?= $lib ?>/makerspace">Hill</a> | <a href="/hours/<?= $lib ?>/makerspace">Hunt</a></p>
 </section>
