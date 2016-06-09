@@ -80,10 +80,6 @@
 	    	a:hover{
 	    		// color: $primary-color;
 	    	}
-
-	    	a.styled{
-				color: $body-font-color;
-	    	}
 	    }
 
 		// list
@@ -147,25 +143,8 @@
 		.view-footer{
 			margin-top: -5px;
 
-			p{
-				// text-align: right;
-			}
-
-			i.fa-chevron-right{
-				color: #cc0000;
-				padding-left: 2px;
-				position: relative;
-				top: 1px;
-			}
-
-			a{
-				color: $body-font-color;
-			}
-
-			a:hover{
-				color: $primary-color;
-			}
 		}
+
 		.view-footer:after {
 			content: ".";
 			visibility: hidden;

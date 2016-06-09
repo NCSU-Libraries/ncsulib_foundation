@@ -47,6 +47,10 @@
 					color: #c00;
 					font-size: 1rem;
 				}
+
+				a:hover{
+					color: $body-font-color;
+				}
 			}
 
 			.date-display-range{
