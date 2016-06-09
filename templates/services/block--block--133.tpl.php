@@ -100,5 +100,5 @@
     <?php } ?>
 
     <?php } ?>
-    <p>Makerspace hours: <a href="/hours/<?= $lib ?>/makerspace">Hill</a> | <a href="/hours/<?= $lib ?>/makerspace">Hunt</a></p>
+    <p>Makerspace hours: <a href="/hours/hill/makerspace">Hill</a> | <a href="/hours/hunt/makerspace">Hunt</a></p>
 </section>
