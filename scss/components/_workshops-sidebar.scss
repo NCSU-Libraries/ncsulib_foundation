@@ -1,42 +1,58 @@
 // workshops sidebar
-#content .workshop-item{
-	margin-bottom: 30px;
+#content {
 
-	.workshop-date{
-		margin-top: 6px;
-		padding-right: 0px;
-	}
+	.sidebar{
 
-	.workshop-month{
-		background: #cc0000;
-		text-align:center;
+		.workshop-item{
+			margin-bottom: 30px;
 
-		h4{
-			color: #fff;
-			line-height: 1.3rem;
-			margin-bottom: 0px;
-			padding-top: 2px;
-			text-transform: uppercase;
+			.workshop-date{
+				margin-top: 6px;
+				padding-right: 0px;
+			}
+
+			.workshop-month{
+				background: #cc0000;
+				text-align:center;
+
+				h4{
+					color: #fff;
+					line-height: 1.3rem;
+					margin-bottom: 0px;
+					padding-top: 2px;
+					text-transform: uppercase;
+				}
+			}
+
+			.workshop-day{
+				border-left:1px solid #DDD;
+				border-bottom:1px solid #DDD;
+				border-right:1px solid #DDD;
+				text-align: center;
+
+				h2{
+					font-family: "UniversLight";
+					font-size: 2rem;
+					line-height: 2rem;
+					margin-bottom: 0px;
+					padding: 6px 0px;
+				}
+			}
+
+			.workshop-title{
+				line-height: 1.2rem;
+				padding-right: 0px;
+
+				a{
+					color: #c00;
+					font-size: 1rem;
+				}
+			}
+
+			.date-display-range{
+				color: #999;
+				text-transform: lowercase;
+			}
 		}
-	}
-
-	.workshop-day{
-		border-left:1px solid #DDD;
-		border-bottom:1px solid #DDD;
-		border-right:1px solid #DDD;
-		text-align: center;
-
-		h2{
-			font-family: "UniversLight";
-			font-size: 2rem;
-			line-height: 2rem;
-			margin-bottom: 0px;
-			padding: 6px 0px;
-		}
-	}
-
-	.workshop-title{
-		line-height: 1.2rem;
-		padding-right: 0px;
 	}
 }

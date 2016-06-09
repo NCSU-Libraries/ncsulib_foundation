@@ -17,6 +17,12 @@ $include-html-classes: false;
         display: none;
     }
 }
+.pipe{
+    color: #ccc;
+    font-weight: normal;
+    position: relative;
+    top: -2px
+}
 
 #content {
     #main-content{
@@ -136,6 +142,7 @@ $include-html-classes: false;
             margin-bottom: 10px;
         }
         #focus{
+            @include grid-column($columns:3);
             margin-bottom: 40px;
 
             &:hover{
@@ -147,8 +154,8 @@ $include-html-classes: false;
             #latest-focus{
 
                 @media #{$medium-up} {
-                    padding-left: 0px;
-                    padding-right: 0px;
+                    // padding-left: 0px;
+                    // padding-right: 0px;
                 }
 
                 #focus-cover{
@@ -157,7 +164,7 @@ $include-html-classes: false;
                 }
 
                 #focus-content{
-                    padding-right: 0px;
+                    // padding-right: 0px;
                 }
 
                 h2{
@@ -206,10 +213,44 @@ $include-html-classes: false;
             }
         }
 
+        .News-staff_news_block{
+            @include grid-column(4);
+            background: rgba(0,0,0,0.08);
+            margin-left: 50px;
+            padding: 20px;
+
+            h3{
+                margin-top: 0px;
+                padding-top: 0px;
+
+                a{
+                    text-transform: lowercase;
+                }
+            }
+
+            p{
+                color: $body-font-color;
+                font-size: 1rem;
+                margin-bottom: 0px;
+            }
+
+            .view-content{
+                a{
+                    display: block;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .block-2084{
+            padding: 0px;
+        }
+
         .upcoming_events-block_8{
-            @include grid-column(4, $float: left);
+            @include grid-column(4);
             padding-left: 0px;
             margin-bottom: 60px;
+            margin-right: 30px;
 
             @media #{$small-only} {
                 width: 100%;
@@ -459,6 +500,11 @@ $include-html-classes: false;
             font-weight: bold;
         }
 
+        a.sub{
+            font-family: "UniversLight";
+            font-weight: normal;
+        }
+
         a:hover{
             text-decoration: none;
         }
@@ -471,6 +517,10 @@ $include-html-classes: false;
             li{
                 padding: 5px 0px;
             }
+        }
+
+        #staff-news{
+            margin-bottom: 20px;
         }
 
         // staff sidebar block
@@ -659,9 +709,28 @@ ul.tabs.primary{
                 content: '';
             }
 
-            .news-block_4{
+            .News-block_4{
+                ul{
+                    margin-bottom: 0px;
+                }
                 h2{
                     // padding-top: 0px;
+                }
+                .news-item{
+                    p{
+                        margin-bottom: 0px;
+                    }
+                }
+
+                .view-content{
+                    a{
+                        margin-bottom: 20px;
+                    }
+
+                }
+
+                .view-footer{
+                    // margin-top: -15px;
                 }
             }
 

@@ -1,19 +1,29 @@
 // project block (right column)
-#content .sidebar .project-item{
-	margin-bottom: 30px;
+#content {
+	.sidebar {
+		.project-item{
+			margin-bottom: 30px;
 
-	.project-photo{
-		// margin-bottom: 10px;
-		// width: 100%;
-		height: 115px;
-		overflow: hidden;
+			.project-photo{
+				// margin-bottom: 10px;
+				// width: 100%;
+				height: 115px;
+				overflow: hidden;
 
-	}
+			}
 
-	h3 {
-		margin-bottom: 5px;
-		position:relative;
-		width:100%;
+			h3 {
+				margin-bottom: 5px;
+				position:relative;
+				width:100%;
+			}
+		}
+
+		.project-item:hover{
+			a{
+				color: $body-font-color;
+			}
+		}
 	}
 
 }

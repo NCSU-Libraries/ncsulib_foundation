@@ -78,7 +78,11 @@
 	    	}
 
 	    	a:hover{
-	    		color: $primary-color;
+	    		// color: $primary-color;
+	    	}
+
+	    	a.styled{
+				color: $body-font-color;
 	    	}
 	    }
 
@@ -106,7 +110,7 @@
 				}
 
 				a:hover{
-					color: #c00;
+					// color: #c00;
 					//text-decoration: underline;
 				}
 
@@ -130,6 +134,12 @@
 				content: none;
 				padding: 0px;
 				margin: -4px;
+			}
+
+			li:hover {
+				a{
+					color: $body-font-color;
+				}
 			}
 
 		}
