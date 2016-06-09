@@ -97,17 +97,14 @@
 					text-transform: none;
 				}
 
-				a{
-					// font-size: 0.875rem;
+				&.leaf a{
 
 					&.active-trail{
-						color: #c00;//$side-nav-link-color-active;
+						color: $primary-color;
 					}
-				}
-
-				a:hover{
-					// color: #c00;
-					//text-decoration: underline;
+					&:hover{
+						color: $primary-color;
+					}
 				}
 
 				ul{
