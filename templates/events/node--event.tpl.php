@@ -43,6 +43,7 @@
                         }
                 ?>
                 <?= drupal_render($content['field_time']); ?>
+                <h3>Where</h3>
                 <?= drupal_render($content['field_space']); ?>
                 <?= drupal_render($content['field_non_libraries_space']); ?>
             </div>
