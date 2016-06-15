@@ -13,12 +13,12 @@ var device = {
 
             str = '<section class="block">';
             str += '<h2>Computers Available</h2>';
-            if(device.uris[1] == 'vetmed'){
-                str += '<div class="row">';
-                str += '<div class="columns medium-9"><p>Desktops</p></div>';
-                str += '<div class="columns medium-3"><span id="desktops" class="label"> '+device.getDesktops()+' </span></div>';
-                str += '</div>';
-            }
+            // if(device.uris[1] == 'vetmed'){
+            //     str += '<div class="row">';
+            //     str += '<div class="columns medium-9"><p>Desktops</p></div>';
+            //     str += '<div class="columns medium-3"><span id="desktops" class="label"> '+device.getDesktops()+' </span></div>';
+            //     str += '</div>';
+            // }
             str += '<div class="row">';
             $.each( dAry, function( key, val ) {
                 lib = val[device.uris[1].toUpperCase()];
