@@ -369,7 +369,9 @@ function ncsulib_foundation_breadcrumb($variables) {
         $url_components[1] == 'jobs' ||
         $url_components[1] == 'spaces' ||
         $url_components[1] == 'social-media-archives-toolkit' ||
-        $url_components[1] == 'projects'
+        $url_components[1] == 'projects' ||
+        $url_components[1] == 'database' ||
+        $url_components[1] == 'databases'
         ){
       return $breadcrumbs;
     } else{
