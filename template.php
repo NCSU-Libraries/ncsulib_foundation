@@ -371,6 +371,9 @@ function ncsulib_foundation_breadcrumb($variables) {
         $url_components[1] == 'social-media-archives-toolkit' ||
         $url_components[1] == 'projects' ||
         $url_components[1] == 'database' ||
+        $url_components[1] == '1databases' ||
+        $url_components[1] == 'software' ||
+        $url_components[1] == 'stories' ||
         $url_components[1] == 'databases'
         ){
       return $breadcrumbs;
