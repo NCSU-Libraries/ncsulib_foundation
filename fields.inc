@@ -167,13 +167,13 @@ function ncsulib_foundation_field__field_staff_members__news($variables){
     $first_name = $s['entity']->field_firstname['und'][0]['value'];
     $last_name = $s['entity']->field_lastname['und'][0]['value'];
     $title = $s['entity']->field_title['und'][0]['value'];
-    $photo = $s['entity']->field_staff_photo['und'][0]['filename'];
+    $photo = $s['entity']->field_staff_photo['und'][0]['uri'];
     $unity = $s['entity']->name;
-
+    // kpr($s['entity']->field_staff_photo);
     $output .= '<a href="/staff/'.$unity.'">';
     $output .= '<div class="staff-member">';
     $output .= '<div class="staff-photo">';
-    $output .= '<img src="/sites/default/files/styles/medium/public/'.$photo.'" width="100%" />';
+    $output .= '<img src="'.image_style_url('medium', $photo).'" width="100% alt="'.$first_name.' '.$last_name.'" />';
     $output .= '</div>';
     $output .= '<div class="staff-details">';
     $output .= '<div class="staff-name">'.$first_name.' '.$last_name.'</div>';
@@ -188,6 +188,21 @@ function ncsulib_foundation_field__field_staff_members__news($variables){
   return $output;
 
 }
+
+
+/**
+ * Implements theme_field()
+ *
+ * Databases url
+ */
+function ncsulib_foundation_field__field_database_url__databases($variables){
+  $url = $variables['items'][0]['#markup'];
+  $output = '<br><p><a href="'.$url.'" class="styled button">View Database</a></p>';
+
+  return $output;
+}
+
+
 
 /**
  * Implements theme_field()
