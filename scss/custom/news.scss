@@ -215,29 +215,45 @@ $include-html-classes: false;
 
         .News-staff_news_block{
             @include grid-column(4);
-            background: rgba(0,0,0,0.08);
             margin-left: 50px;
-            padding: 20px;
 
             h3{
                 margin-top: 0px;
                 padding-top: 0px;
+                // color: #fff;
 
                 a{
+                    // color: #fff;
                     text-transform: lowercase;
+                }
+
+                a:hover{
+                    text-decoration: underline;
                 }
             }
 
-            p{
-                color: $body-font-color;
-                font-size: 1rem;
-                margin-bottom: 0px;
-            }
+
 
             .view-content{
                 a{
+                    color: #fff;
                     display: block;
                     margin-bottom: 0px;
+                }
+                #staff-news-block{
+                    background: #D14905;
+                    padding: 20px;
+
+                    h2{
+                        color: #fff;
+                        padding-top: 0px;
+                    }
+                    p{
+                        // color: $body-font-color;
+                        color: #fff;
+                        font-size: 1rem;
+                        margin-bottom: 0px;
+                    }
                 }
             }
         }
