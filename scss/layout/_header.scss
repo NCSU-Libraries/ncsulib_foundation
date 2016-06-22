@@ -36,8 +36,11 @@ header{
     margin-top: 0px; /* fix the spacing problem with the University nav iframe */
     background: $primary-color;
 
-    .top-bar{
+    .top-bar.tab-bar{
         @include grid-row;
+        background: none;
+        height: $topbar-height;
+        line-height: $topbar-height;
 
         a{
             line-height: 2em;
@@ -48,16 +51,23 @@ header{
             z-index: 1;
 
             .name{
-                padding-left: rem-calc(15);
+                margin: auto;
+                padding-left: rem-calc(0);
                 padding-top: rem-calc(0);
                 width: 348px;
 
                 @media #{$small-only}{
-                    float: left;
-                    width: rem-calc(200);
+                    // float: left;
+                    padding-right: 5px;
+                    width: rem-calc(170);
+
+                    img{
+                        margin-top: -5px;
+                    }
                 }
 
                 @media #{$medium-only} {
+                    padding-left: 20px;
                     width: 230px;
                 }
 
@@ -78,7 +88,7 @@ header{
 
         #search-toggle{
             display: none;
-            float: right;
+            float: left;
             text-align: center;
 
             @media #{$small-only}{
@@ -89,8 +99,8 @@ header{
                 color: #FFF; //$primary-color;
                 display: block;
                 height: $topbar-height;
-                padding-top: rem-calc(24);
-                width: 44px;
+                padding-top: rem-calc(20);
+                width: 64px;
             }
 
             i{
@@ -104,6 +114,25 @@ header{
         #nav-toggle{
             float: right;
             text-align: center;
+
+            &.right-small{
+                border: none;
+                height: $topbar-height;
+                width: $topbar-height*0.9;
+            }
+
+            .menu-icon{
+                height: $topbar-height;
+                padding: $topbar-height/4 1% 0px 0px;
+                text-indent: 0px;
+                width: 100%;
+
+                span{
+                    margin-left: 20px;
+                    margin-top: 2px;
+                    position: static;
+                }
+            }
 
             @media #{$medium-up}{
                 display: none;
@@ -168,11 +197,11 @@ header{
                 li:not(.has-form) a:not(.button):hover {
                     background: #c00;
                 }
-                
+
                 li:not(.has-form) a.open:not(.button):hover {
                     background: $topbar-dropdown-bg;
                 }
-                
+
                 li{
                     background: $primary-color;
                     height: $topbar-height;

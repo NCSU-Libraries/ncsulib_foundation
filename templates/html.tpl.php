@@ -15,7 +15,7 @@
         <div class="skip-link">
             <a href="#main-content" class="element-focusable"><?php print t('Skip to main content'); ?></a>
         </div>
-        <div class="off-canvas-wrap">
+        <div class="off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
                 <?php include 'includes/header.php'; ?>
 

@@ -20,21 +20,26 @@
   		drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
   	}
 ?>
+
 <header class="contain-to-grid" role="banner">
-	<div class="top-bar">
+	<div class="tab-bar top-bar">
 		<div class="title-area">
+			<span id="search-toggle">
+				<a href="#"><i class="fa fa-search"></i> &nbsp; </a>
+			</span>
+
 			<div class="name">
 			  	<a href="//www.lib.ncsu.edu" title="<?php print t('NCSU Library'); ?>" rel="home" id="logo">
 					<img itemprop="logo" src="//www.lib.ncsu.edu/sites/all/themes/ncsulib_foundation/images/ncsu-library-logo-white.png" alt="<?php print t('Home'); ?>" />
 			  	</a>
 			</div>
-			<nav id="nav-toggle" class="right-off-canvas-toggle" role="navigation" aria-label="mobile navigation">
-				<!-- <a href="#" id="hamburger-nav" class="hide"><i class="fa fa-bars"></i>menu</a> -->
-				<a href="#" id="menu-nav">menu</a>
-			</nav>
-			<span id="search-toggle">
-				<a href="#"><i class="fa fa-search"></i> src </a>
-			</span>
+<!-- 			<nav id="nav-toggle" class="right-off-canvas-toggle" role="navigation" aria-label="mobile navigation">
+				<a href="#" id="hamburger-nav" class="hide"><i class="fa fa-bars"></i>menu</a>
+			</nav> -->
+			<section id="nav-toggle" role="navigation" aria-label="mobile navigation" class="right-small">
+        		<a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      		</section>
+
 		</div>
 
 		<nav class="top-bar-section primary-nav home" role="navigation" aria-label="main navigation">

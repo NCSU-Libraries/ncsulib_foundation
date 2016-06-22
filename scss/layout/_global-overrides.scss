@@ -217,9 +217,14 @@ div.tabs-content.vertical{
 
 
 // Magellan expedition
-#content [data-magellan-expedition]{
-    left: 0;
-    padding: 0px;
+#content {
+    [data-magellan-expedition]{
+        left: 0;
+        padding: 0px;
+    }
+}
+#toolbar{
+    display: none;
 }
 
 

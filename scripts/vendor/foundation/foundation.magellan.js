@@ -22,10 +22,10 @@
       var self = this,
           S = self.S,
           settings = self.settings;
-      
+
       // initialize expedition offset
       self.set_expedition_position();
-      
+
 
       S(self.scope)
         .off('.magellan')
@@ -82,7 +82,7 @@
       $('[' + this.attr_name() + '=fixed]', self.scope).each(function() {
         var expedition = $(this),
             top_offset = expedition.data('magellan-top-offset');
-        
+
         if (window_top_offset >= top_offset) {
           // Placeholder allows height calculations to be consistent even when
           // appearing to switch between fixed/non-fixed placement
