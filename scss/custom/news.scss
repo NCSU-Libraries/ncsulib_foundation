@@ -220,7 +220,10 @@ $include-html-classes: false;
 
         .News-staff_news_block{
             @include grid-column(4);
-            margin-left: 50px;
+
+            @media #{$large-up} {
+                margin-left: 50px;
+            }
 
             @media #{$small-only} {
                 margin: 0px;
