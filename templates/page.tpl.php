@@ -1,5 +1,11 @@
 <!--.page -->
 <div id="content" role="document" class="page">
+    <div id="breadcrumbs-main" class="row">
+        <div class="columns medium-12">
+            <?php echo ncsulib_foundation_breadcrumb(); ?>
+        </div>
+    </div>
+
     <?php if (!empty($page['featured'])): ?>
         <!--/.featured -->
         <section class="l-featured row">
@@ -22,9 +28,6 @@
 
     <main role="main" class="row l-main">
 
-        <div class="columns medium-12">
-            <?php echo ncsulib_foundation_breadcrumb(); ?>
-        </div>
 
         <div class="<?= $main_grid; ?> main columns" id="main-content">
 
