@@ -1,7 +1,4 @@
-@import "../foundation/settings";
-$include-html-classes: false;
-@import "foundation/components/global";
-@import "foundation/components/grid";
+@import "base/init_for_custom";
 
 #content{
     #subnav{
@@ -31,6 +28,57 @@ $include-html-classes: false;
                     }
                 }
             }
+        }
+    }
+
+    #db-search-box{
+        // background: #efefef;
+
+        input{
+            height: 50px;
+        }
+        a.button{
+            border-radius: 0px 3px 3px 0px;
+            height: 50px;
+            line-height: 50px;
+
+            i{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    #core-db.accordion{
+        dd.accordion-navigation{
+            background: #fff;
+
+            & > a{
+                @include awesomify("\f067");
+                background: #fff;
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                padding: 7px;
+            }
+            &.active > a{
+                @include awesomify("\f068");
+            }
+            & > a:after{
+                position: absolute;
+                right: 12px;
+            }
+
+            h3 a{
+                border: 0px;
+            }
+        }
+    }
+
+    .db{
+        display: none;
+
+        h3{
+            font-size: 1rem;
+            margin-bottom: 5px;
         }
     }
 }
