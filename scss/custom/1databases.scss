@@ -1,11 +1,18 @@
 @import "base/init_for_custom";
 
 #content{
-    #subnav{
+    #subnav.sidebar{
         .view-content{
             .item-list{
                 h3{
+                    font-size: 1rem;
+                    font-weight: normal;
                     padding: 5px 0px;
+                    text-transform: none;
+                }
+                h3:hover, h3.active{
+                    color: $primary-color;
+                    cursor: pointer;
                 }
                 ul.subject-list{
                     display: none;
@@ -21,9 +28,8 @@
                             margin-bottom: 20px;
                         }
 
-                        a.selected{
+                        a:hover,a.selected{
                             color: #c00;
-                            font-weight: bold;
                         }
                     }
                 }
