@@ -9,11 +9,40 @@
                     font-weight: normal;
                     padding: 5px 0px;
                     text-transform: none;
+
+                    .subject-title{
+                        display: inline-block;
+                        width: 85%;
+                    }
+                    .subject-title:hover{
+                        color: $primary-color;
+                        cursor: pointer;
+                    }
+                    span.nav-expand{
+                        @include awesomify("\f196");
+                        color: $body-font-color;
+                        float: right;
+                    }
+                    span.nav-expand.active{
+                        @include awesomify("\f147");
+                        // color: $primary-color;
+                    }
+                    span.nav-expand:hover{
+                        cursor: pointer;
+                    }
                 }
-                h3:hover, h3.active{
-                    color: $primary-color;
-                    cursor: pointer;
+
+                h3.active{
+                    .subject-title{
+                        color: $primary-color;
+                    }
+
+                    .subject-title:hover{
+                        color: $primary-color;
+                        cursor: pointer;
+                    }
                 }
+
                 ul.subject-list{
                     display: none;
                     margin-bottom: 15px;
@@ -36,51 +65,52 @@
             }
         }
     }
+    .block-2192,.block-2194{
+        margin-bottom: 20px;
 
-    #db-search-box{
-        // background: #efefef;
+        #db-search-box{
 
-        input{
-            height: 50px;
-        }
-        a.button{
-            border-radius: 0px 3px 3px 0px;
-            height: 50px;
-            line-height: 50px;
-
-            i{
-                font-size: 1.4rem;
+            input{
+                height: 50px;
             }
-        }
-    }
+            select.postfix{
+                // border-radius: 0px 3px 3px 0px;
+                height: 50px;
+                line-height: 50px;
 
-    #core-db.accordion{
-        dd.accordion-navigation{
-            background: #fff;
-
-            & > a{
-                @include awesomify("\f067");
-                background: #fff;
-                border-left: 1px solid #ccc;
-                border-right: 1px solid #ccc;
-                padding: 7px;
-            }
-            &.active > a{
-                @include awesomify("\f068");
-            }
-            & > a:after{
-                position: absolute;
-                right: 12px;
+                appearance: none;
+                -webkit-appearance: none !important;
+                -moz-appearance: none !important;
+                background-color: #fafafa;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+");
+                background-position: 100% center;
+                background-repeat: no-repeat;
+                border-color: #cccccc;
+                border-radius: 0;
+                border-style: solid;
+                border-width: 1px;
+                border-right: 0px;
+                color: #444444;
+                font-family: inherit;
+                font-size: 1rem;
+                // height: 2.05556rem;
+                // line-height: normal;
+                padding: 0.44444rem;
             }
 
-            h3 a{
-                border: 0px;
+            #db-result{
+                font-size: 0.8rem;
+                margin-bottom: 0px;
             }
         }
     }
 
     .db{
         display: none;
+
+        &.core{
+            display: block;
+        }
 
         h3{
             font-size: 1rem;
