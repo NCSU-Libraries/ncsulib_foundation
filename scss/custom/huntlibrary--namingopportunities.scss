@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'UniversLight';
-    src: url(/eboards/assets/fonts/UniversCond/UniversLTPro-45Light.otf);
-}
-
 @import "base/init_for_custom";
 
 
@@ -10,6 +5,7 @@
 iframe{
     border:none;
 }
+
 table.data-targets{
     width: 54%;
 
