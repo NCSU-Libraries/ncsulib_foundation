@@ -2,6 +2,34 @@
 
 
 /* tables */
+iframe{
+    border:none;
+}
+table.data-targets{
+    width: 54%;
+
+    @media #{$small-only}{
+        width: 100%;
+    }
+
+    tr:hover{
+        background: #F3A6A6;
+    }
+
+    td{
+        padding: 0px;
+
+        a{
+            display: block;
+            height: 100%;
+            padding: 10px;
+        }
+    }
+
+    td:nth-child(2){
+        text-align: right;
+    }
+}
 table.tablesorter {
     @media #{$small-only} {
         display: block;
@@ -145,7 +173,7 @@ div.floor {
     background: rgba(255, 0, 0, 0.3);
 /*previous yellow color: rgba(255, 208, 22, 0.38)*/
     border-radius: 0em;
-    padding: 6px 8px;
+    // padding: 6px 8px;
     text-decoration: none;
 }
 

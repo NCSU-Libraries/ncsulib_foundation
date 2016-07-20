@@ -58,7 +58,7 @@ jQuery(function($) {
 
     $(this).hover(function(e) {
       if (e.type == 'mouseenter') {
-        thisMapsterImgID = "#"+$(this).parents('ul').attr('data-image');
+        thisMapsterImgID = "#"+$(this).parents('table').attr('data-image');
         $(thisMapsterImgID).mapster('highlight', $targetRoom);
       }
       else if (e.type == 'mouseleave') {
@@ -107,8 +107,8 @@ jQuery(function($) {
    * Tablesorter
    */
   // creating table from existing lists in tabbed view of interface
-  $('ul.data-targets a').each(function() {
-    floorForTable = $(this).parents('ul').attr('data-image') === "floor6" ? "Grounds" : $(this).parents('ul').attr('data-image').replace(/floor/g, "Floor ");
+  $('.data-targets a').each(function() {
+    floorForTable = $(this).parents('table').attr('data-image') === "floor6" ? "Grounds" : $(this).parents('table').attr('data-image').replace(/floor/g, "Floor ");
     list = $(this).html();
     space = $('span:first-child', this).text();
     price = list.slice(list.lastIndexOf('>')+1);
