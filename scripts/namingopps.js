@@ -203,7 +203,6 @@ function resizeIframe(obj){
    obj.style.height = 0;
    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
    if(obj.contentWindow.document.body.scrollHeight > 0){
-    console.log('cleared');
     clearInterval(int);
    }
 
