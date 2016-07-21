@@ -29,6 +29,7 @@ function slider_check(){
 function iframeCheck(){
     var elem = $('#main-content iframe');
     // if element exists andthere is no height set
+    console.log($(elem));
     if ($(elem).length > 0 && !$(elem).attr('height')) {
         // widt of iframe
         var width = $(elem).attr('width');

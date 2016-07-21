@@ -107,11 +107,14 @@ jQuery(function($) {
    * Tablesorter
    */
   // creating table from existing lists in tabbed view of interface
-  $('.data-targets a').each(function() {
-    floorForTable = $(this).parents('table').attr('data-image') === "floor6" ? "Grounds" : $(this).parents('table').attr('data-image').replace(/floor/g, "Floor ");
-    list = $(this).html();
-    space = $('span:first-child', this).text();
-    price = list.slice(list.lastIndexOf('>')+1);
+  $('.data-targets tr').each(function() {
+    leftCol = $(this).find('td:first-child');
+    rightCol = $(this).find('td:last-child a:first-child');
+    space = $(leftCol).text();
+    price = $(rightCol).text();
+    url = $(this).find('td:last-child iframe').attr('src');
+    revealID = $(rightCol).data('reveal-id');
+    floorForTable = '';//$(this).parents('table').attr('data-image') === "floor6" ? "Grounds" : $(this).parents('table').attr('data-image').replace(/floor/g, "Floor ");
 
     botCount++;  // iterator used to filter out certain naming opportunities
 
@@ -124,7 +127,7 @@ jQuery(function($) {
     // don't count certain items as they appear on multiple floors
     if ((botCount > 30 && botCount < 36) || botCount == 39 || botCount == 40 || botCount == 43){
     } else {
-      $('.all-spaces tbody').append('<tr><td><a data-reveal-id="opp-modal" data-reveal-ajax="true" class="reveal-space" href="'+ $(this).attr('href') +'">' + space +'</a></td><td>'+ floorForTable +'</td><td>'+ price +'</td></tr>');
+      $('.all-spaces tbody').append('<tr><td><a data-reveal-id="'+revealID+'" href="#">' + space +'</a></td><td>'+ floorForTable +'</td><td>'+ price +'</td></tr>');
     }
   });
 
