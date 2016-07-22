@@ -97,6 +97,14 @@
 					text-transform: none;
 				}
 
+				a.active{
+					color: $primary-color;
+				}
+
+				a:hover{
+					color: $body-font-color;
+				}
+
 				&.leaf a{
 
 					&.active-trail{
@@ -128,12 +136,6 @@
 				content: none;
 				padding: 0px;
 				margin: -4px;
-			}
-
-			li:hover {
-				a{
-					color: $body-font-color;
-				}
 			}
 
 		}
