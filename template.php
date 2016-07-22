@@ -177,6 +177,9 @@ function ncsulib_foundation_preprocess_page(&$variables) {
         case 'makerspace/projects':
           drupal_add_js('https://form.jotform.com/jsform/61057405269153', array('type' => 'file', 'group' => 101, 'weight' => 1));
           break;
+        case 'spaces/music-rooms-hill':
+          drupal_add_js(path_to_theme() . '/scripts/music-rooms.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
+          break;
       }
     }
   }

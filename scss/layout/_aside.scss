@@ -111,13 +111,14 @@
 	            	list-style-type: none;
 					margin-bottom: rem-calc(0);
 					margin-left: rem-calc(15);
-					margin-top: rem-calc(10);
+					margin-top: rem-calc(15);
 					padding: 0px;
 
 					li{
+						margin-bottom: 15px;
 
 						a{
-							font-size: 90%;
+							font-size: rem-calc(14);
 						}
 					}
 				}

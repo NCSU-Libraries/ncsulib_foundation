@@ -30,6 +30,30 @@ h2{
 
     #main-content, .sidebar, #sidebar{
 
+
+        a.expandable:after{
+            color: $primary-color;
+            content: "\f067";
+            font-family: "FontAwesome";
+            font-size: 0.8rem;
+            padding-left: 10px;
+            position: relative;
+            text-decoration: none;
+            top: -2px;
+            right: 0px;
+            display: inline-block;
+            transition-property: right;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+        }
+        a.expandable *{
+            display: inline-block;
+        }
+        .active a.expandable:after{
+            content: "\f068";
+        }
+
+
         a.styled{
             color: $body-font-color;
             position: relative;
