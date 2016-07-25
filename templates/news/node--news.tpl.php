@@ -21,7 +21,6 @@
         hide($content['field_news_categories']);
         hide($content['field_news_tags']);
         hide($content['field_staff_members']);
-        hide($content['field_teaser_photo']);
     ?>
 
     <div class="columns medium-12">

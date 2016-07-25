@@ -160,13 +160,13 @@ function ncsulib_foundation_field__field_news_feature_photo__news($variables){
  * NEWS feature video
  */
 function ncsulib_foundation_field__field_news_featured_video__news($variables){
-  $teaser_uri = $variables['#object']->field_teaser_photo[0]['und']['uri'];
-  $teaser = image_style_url('large', $teaser_uri);
+  $teaser_uri = $variables['element']['#object']->field_teaser_photo['und'][0]['uri'];
+  $teaser_url = image_style_url('medium',$teaser_uri);
   $video_uri = $variables['element']['#object']->field_news_featured_video['und'][0]['uri'];
   $url = file_create_url($video_uri);
 
   $output = '';
-  $output = '<video width="100%" controls poster="'.$teaser.'">';
+  $output = '<video width="100%" controls poster="'.$teaser_url.'">';
   $output .= '<source src="'.$url.'" type="video/mp4">]';
   $output .= 'Your browser does not support the video tag.';
   $output .= '</video>';
