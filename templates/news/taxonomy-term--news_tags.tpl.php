@@ -1,5 +1,5 @@
 <?php
 
-    header('Location: https://webdev.lib.ncsu.edu/news/tag/'.urlsegment(1)) ;
+    header('Location: /news/tag/'.urlsegment(1)) ;
 
 ?>
