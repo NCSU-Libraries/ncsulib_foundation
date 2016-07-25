@@ -161,7 +161,7 @@ function ncsulib_foundation_field__field_news_feature_photo__news($variables){
  */
 function ncsulib_foundation_field__field_news_featured_video__news($variables){
   $teaser_uri = $variables['element']['#object']->field_teaser_photo['und'][0]['uri'];
-  $teaser_url = image_style_url('medium',$teaser_uri);
+  $teaser_url = image_style_url('large',$teaser_uri);
   $video_uri = $variables['element']['#object']->field_news_featured_video['und'][0]['uri'];
   $url = file_create_url($video_uri);
 
