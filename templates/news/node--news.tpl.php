@@ -21,6 +21,7 @@
         hide($content['field_news_categories']);
         hide($content['field_news_tags']);
         hide($content['field_staff_members']);
+        hide($content['field_teaser_photo']);
     ?>
 
     <div class="columns medium-12">
@@ -52,7 +53,12 @@
     <div id="post-content" class="columns medium-8" itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://google.com/article">
        <div id="feature-photo" class="row">
             <div class="columns medium-12">
+
+                <?php if(render($content['field_news_featured_video'])): ?>
+                <?= render($content['field_news_featured_video']); ?>
+                <?php else: ?>
                 <?= render($content['field_news_feature_photo']); ?>
+                <?php endif; ?>
             </div>
         </div>
         <div itemprop="articleBody">

@@ -71,6 +71,9 @@
             <?php if($node->field_image_for_event): ?>
                 <?= '<img property="og:image" src="'.image_style_url('large', $node->field_image_for_event['und'][0]['uri']).'" width="100%" itemprop="image" />' ?>
                 <small><?= $node->field_image_for_event['und'][0]['alt'] ?></small>
+            <?php elseif($node->field_event_teaser_photo): ?>
+                <?= '<img property="og:image" src="'.image_style_url('large', $node->field_event_teaser_photo['und'][0]['uri']).'" width="100%" itemprop="image" />' ?>
+                <small><?= $node->field_image_for_event['und'][0]['alt'] ?></small>
             <?php endif; ?>
 
             <?= drupal_render($content['field_event_leads']); ?>
