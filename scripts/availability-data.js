@@ -12,7 +12,7 @@ var tech = {
 
     init : function(){
         tech.loadTechJSON();
-        // tech.loadSpaceJson();
+        tech.loadSpaceJson();
     },
 
     loadTechJSON : function(){
@@ -56,23 +56,25 @@ var tech = {
 
     loadSpaceJson : function(){
         // Fetching hill spaces data
-        jQuery.getJSON('/website/sra/hill.json', function(data) {
+        // jQuery.getJSON('/website/sra/hill.json', function(data) {
+        jQuery.getJSON('https://rooms-dev01.lib.ncsu.edu/service/rooms/status/open/hill/', function(data) {
+            console.log(data);
             tech.writeHillSpaces(data);
         }, 'json');
 
         // Fetching hunt spaces data
-        jQuery.getJSON('/website/sra/hunt.json', function(data) {
+        jQuery.getJSON('https://rooms-dev01.lib.ncsu.edu/service/rooms/status/open/hunt/', function(data) {
             tech.writeHuntSpaces(data);
             }, 'json');
         },
 
     writeHillSpaces : function(spaceData){
-        var available = spaceData['hill']['available'];
+        var available = spaceData['roomCount'];
         jQuery('#hill-study').html(available);
     },
 
     writeHuntSpaces : function(spaceData){
-        var available = spaceData['hunt']['available'];
+        var available = spaceData['roomCount'];
         jQuery('#hunt-study').html(available);
     },
 
