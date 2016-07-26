@@ -12,7 +12,7 @@ var tech = {
 
     init : function(){
         tech.loadTechJSON();
-        tech.loadSpaceJson();
+        // tech.loadSpaceJson();
     },
 
     loadTechJSON : function(){

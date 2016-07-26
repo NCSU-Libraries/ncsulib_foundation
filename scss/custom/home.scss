@@ -701,7 +701,7 @@ $include-html-classes: false;
 				margin: 0px;
 
 				li{
-					@include grid-column(3);
+					@include grid-column(6);
 					float: left;
 					list-style-type: none;
 					padding: rem-calc(14) 0px rem-calc(6);
