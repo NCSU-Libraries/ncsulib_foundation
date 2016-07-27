@@ -12,7 +12,6 @@ var tech = {
 
     init : function(){
         tech.loadTechJSON();
-        tech.loadSpaceJson();
     },
 
     loadTechJSON : function(){
@@ -37,7 +36,7 @@ var tech = {
     loadTablets : function(){
         hill = 0; hunt = 0;
         for(i=0;i<tech.tabletAry.length;i++){
-            // console.log(tech.data[tech.tabletAry[i]]);
+
             hill += tech.data[tech.tabletAry[i]]['DHHILL']['EQUIP-1WK']['AVAILABLE'];
 
             if(typeof tech.data[tech.tabletAry[i]]['DHHILL']['EQUIP-4HR'] !== 'undefined'){
@@ -52,30 +51,6 @@ var tech = {
         }
         jQuery('#hill-tablets').text(hill);
         jQuery('#hunt-tablets').text(hunt);
-    },
-
-    loadSpaceJson : function(){
-        // Fetching hill spaces data
-        // jQuery.getJSON('/website/sra/hill.json', function(data) {
-        jQuery.getJSON('https://rooms-dev01.lib.ncsu.edu/service/rooms/status/open/hill/', function(data) {
-            console.log(data);
-            tech.writeHillSpaces(data);
-        }, 'json');
-
-        // Fetching hunt spaces data
-        jQuery.getJSON('https://rooms-dev01.lib.ncsu.edu/service/rooms/status/open/hunt/', function(data) {
-            tech.writeHuntSpaces(data);
-            }, 'json');
-        },
-
-    writeHillSpaces : function(spaceData){
-        var available = spaceData['roomCount'];
-        jQuery('#hill-study').html(available);
-    },
-
-    writeHuntSpaces : function(spaceData){
-        var available = spaceData['roomCount'];
-        jQuery('#hunt-study').html(available);
     },
 
     getDomain : function(){

@@ -1,9 +1,9 @@
 <?php
     drupal_add_css(drupal_get_path('theme', 'ncsulib_foundation').'/styles/core/custom/home.css', array('weight' => 998, 'group' => 101));
+    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/availability-data.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-artbox.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/search-tabs.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/articles.js');
-    drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/availability-data.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/home-tracking-events.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autosuggest.js');
     drupal_add_js(drupal_get_path('theme', 'ncsulib_foundation').'/scripts/vendor/trln_autocomplete.js');
@@ -109,15 +109,15 @@
                             <ul>
                                 <li>
                                     <span class="item"><a href="https://rooms.lib.ncsu.edu/" id="al_hill_study_rooms">Study Rooms</a> </span>
-                                    <span class="item-count count" id="hill-study"></span>
+                                    <span class="item-count count" id="hill-study"><?= spaces_homepage_data('hill'); ?></span>
                                 </li>
                                 <li>
                                     <span class="item"><a href="/techlending/laptops-netbooks" id="al_hill_laptops">Laptops</a> </span>
-                                    <span class="item-count count" id="hill-laptops">27</span>
+                                    <span class="item-count count" id="hill-laptops"></span>
                                 </li>
                                 <li>
                                     <span class="item"><a href="/techlending/tablets-and-ipods" id="al_hill_tablets">Tablets</a> </span>
-                                    <span class="item-count count" id="hill-tablets">19</span>
+                                    <span class="item-count count" id="hill-tablets"></span>
                                 </li>
                             </ul>
                         </div>
@@ -126,15 +126,15 @@
 
                                 <li>
                                     <span class="item"><a href="https://rooms.lib.ncsu.edu/" id="al_hunt_study_rooms">Study Rooms</a> </span>
-                                    <span class="item-count count" id="hunt-study"></span>
+                                    <span class="item-count count" id="hunt-study"><?= spaces_homepage_data('hunt'); ?></span>
                                 </li>
                                 <li>
                                     <span class="item"><a href="/techlending/laptops-netbooks" id="al_hunt_laptops">Laptops</a> </span>
-                                    <span class="item-count count" id="hunt-laptops">18</span>
+                                    <span class="item-count count" id="hunt-laptops"></span>
                                 </li>
                                 <li>
                                     <span class="item"><a href="/techlending/tablets-and-ipods" id="al_hunt_tablets">Tablets</a> </span>
-                                    <span class="item-count count" id="hunt-tablets">13</span>
+                                    <span class="item-count count" id="hunt-tablets"></span>
                                 </li>
                             </ul>
                         </div>
