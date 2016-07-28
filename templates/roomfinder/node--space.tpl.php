@@ -80,14 +80,14 @@
 
                 if(render($content['field_reservable_by'])){
                     $string = strip_tags(implode(', ',explode('</div>',render($content['field_reservable_by']))));
-                    echo 'Reservable by '.substr($string, 0, -6).'.</br>';
+                    echo '<p>Reservable by '.substr($string, 0, -6).'.</p>';
                 }
 
-                if(render($content['field_15_minute_grace_period'])){
-                    echo 'After 15 minute grace period for arrival, space becomes available to others.</br>';
+                if($content['field_15_minute_grace_period'][0]['#markup'] == true){
+                    echo '<p>After 15 minute grace period for arrival, space becomes available to others.</p>';
                 }
 
-                echo 'View <a href="http://www.lib.ncsu.edu/spaces/general-room-use-guidelines">room use guidelines</a>.';
+                echo '<p>View <a href="http://www.lib.ncsu.edu/spaces/general-room-use-guidelines">room use guidelines</a>.</p>';
             ?>
             </p>
             <?php endif; ?>
