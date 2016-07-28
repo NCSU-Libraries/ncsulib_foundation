@@ -68,8 +68,9 @@
             <?php if(render($content['field_reservation_method']) != ''): ?>
 
             <h3>Reservation and Use Guidelines</h3>
+            <p>
             <?php if(render($content['field_days_in_advance'])): ?>
-            <p>Reservable up to <?= strip_tags(render($content['field_days_in_advance'])); ?> in advance.</br>
+            Reservable up to <?= strip_tags(render($content['field_days_in_advance'])); ?> in advance.</br>
             <?php endif; ?>
 
             <?php if(render($content['field_max_reservation_period'])): ?>
@@ -80,14 +81,14 @@
 
                 if(render($content['field_reservable_by'])){
                     $string = strip_tags(implode(', ',explode('</div>',render($content['field_reservable_by']))));
-                    echo '<p>Reservable by '.substr($string, 0, -6).'.</p>';
+                    echo 'Reservable by '.substr($string, 0, -6).'.</br>';
                 }
 
                 if($content['field_15_minute_grace_period'][0]['#markup'] == true){
-                    echo '<p>After 15 minute grace period for arrival, space becomes available to others.</p>';
+                    echo 'After 15 minute grace period for arrival, space becomes available to others.</br>';
                 }
 
-                echo '<p>View <a href="http://www.lib.ncsu.edu/spaces/general-room-use-guidelines">room use guidelines</a>.</p>';
+                echo 'View <a href="http://www.lib.ncsu.edu/spaces/general-room-use-guidelines">room use guidelines</a>.';
             ?>
             </p>
             <?php endif; ?>
