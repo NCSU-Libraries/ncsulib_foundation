@@ -579,8 +579,8 @@ function ncsulib_foundation_field__field_time__event($variables) {
     foreach($dates as $key => $item){
       // kpr($item);
 
-      $start_raw = strtotime($items[$key]['value'])+timezoneOffset();
-      $end_raw = strtotime($items[$key]['value2'])+timezoneOffset();
+      $start_raw = strtotime($items[$key]['value'])+timezoneOffset(strtotime($items[0]['value']));
+      $end_raw = strtotime($items[$key]['value2'])+timezoneOffset(strtotime($items[0]['value2']));
       $duration = $end_raw - $start_raw;
       $d_hour = floor($duration/60/60);
       $d_min = ($duration/60/60 - $d_hour)*60;
@@ -597,8 +597,8 @@ function ncsulib_foundation_field__field_time__event($variables) {
       $output .= date('g:ia', $start_raw).' - '.date('g:ia', $end_raw);
       $output.= '</p>';
   } else{
-    $start_raw = strtotime($items[0]['value'])+timezoneOffset();
-    $end_raw = strtotime($items[0]['value2'])+timezoneOffset();
+    $start_raw = strtotime($items[0]['value'])+timezoneOffset(strtotime($items[0]['value']));
+    $end_raw = strtotime($items[0]['value2'])+timezoneOffset(strtotime($items[0]['value2']));
     $duration = $end_raw - $start_raw;
     $d_hour = floor($duration/60/60);
     $d_min = ($duration/60/60 - $d_hour)*60;
@@ -626,8 +626,12 @@ function ncsulib_foundation_field__field_time__event($variables) {
   return $output;
 }
 
-function timezoneOffset(){
-  $tz_offset = strtotime(date("M d Y H:i:s")) - strtotime(gmdate("M d Y H:i:s"));
+function timezoneOffset($str){
+  if($str){
+    $tz_offset = strtotime(date("M d Y H:i:s", $str)) - strtotime(gmdate("M d Y H:i:s", $str));
+  } else{
+    $tz_offset = strtotime(date("M d Y H:i:s")) - strtotime(gmdate("M d Y H:i:s"));
+  }
   return $tz_offset;
 }
 
