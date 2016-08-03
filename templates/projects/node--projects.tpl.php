@@ -36,7 +36,7 @@
             <?php endif; ?>
             <?php if(render($content['field_project_url'])): ?>
                 <div id="proj-url">
-                    <a href="<?= $content['field_project_url']['#items'][0]['value']?>" target=_"blank" class="button small styled expand">Here's our project</a>
+                    <a href="<?= $content['field_project_url']['#items'][0]['value']?>" target=_"blank" class="button small styled">Here's our project</a>
                 </div>
             <?php endif; ?>
         </div>
