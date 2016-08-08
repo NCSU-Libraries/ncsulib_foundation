@@ -7,7 +7,7 @@ var music = {
             e.preventDefault();
         })
 
-        $(".accordion").on("click", "li", function (event) {
+        $(".accordion").on("click", "li:first-child", function (event) {
  			$("div.active").slideToggle("slow");
  			$(this).find(".content").slideToggle("slow");
  		});
