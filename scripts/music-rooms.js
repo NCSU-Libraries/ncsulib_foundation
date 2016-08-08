@@ -7,10 +7,10 @@ var music = {
             e.preventDefault();
         })
 
-        $(".accordion").on("click", "li", function (event) {
- 			$("div.active").slideToggle("slow");
- 			$(this).find(".content").first().slideToggle("slow");
- 		});
+        // $(".accordion").on("click", "li", function (event) {
+ 			// $("div.active").slideToggle("slow");
+ 			// $(this).find(".content").first().slideToggle("slow");
+ 		// });
     }
 }
 
