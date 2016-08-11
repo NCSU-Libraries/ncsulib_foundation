@@ -1,0 +1,47 @@
+// temp styles for atom admin themes
+//
+
+#scald-atom-add-form-add,#scald-atom-add-form-options{
+	.wizard-trail{
+		margin-bottom: 20px;
+	}
+
+	label[for="edit-file-upload"]{
+		font-size: 1.5rem;
+		margin-bottom: 20px;
+	}
+
+	div#edit-file-upload{
+		margin-bottom: 15px;
+
+		input#edit-file-upload{
+			margin-bottom: 15px;
+		}
+		input#edit-file-upload-button{
+			margin-bottom: 0px;
+		}
+
+	}
+
+	.multiselect{
+
+		select{
+			min-height: 250px;
+		}
+		.multiselect_remove, .multiselect_add{
+			line-height: 1rem;
+			height: 63px;
+		}
+	}
+
+	.description{
+		margin-bottom: 40px;
+	}
+
+	#edit-next{
+		margin-right: 20px;
+	}
+	#edit-return{
+		margin-right: 20px;
+	}
+}
