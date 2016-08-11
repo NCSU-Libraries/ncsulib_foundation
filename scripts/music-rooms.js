@@ -6,6 +6,8 @@ var aud = {
     	jQuery('#audio_btn').click(function(e){
     		document.getElementById('audio_demo').play();
     		aud.trackPlaying();
+
+    		e.preventDefault();
     	})
     },
 
