@@ -1,7 +1,7 @@
 var audio = {
     init : function(){
     	jQuery('#audio_btn').click(function(e){
-    		jQuery('#audio_demo').play();
+    		document.getElementById('audio_demo').play();
     	})
     }
 
