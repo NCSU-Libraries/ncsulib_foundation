@@ -177,7 +177,7 @@ function ncsulib_foundation_preprocess_page(&$variables) {
         case 'makerspace/projects':
           drupal_add_js('https://form.jotform.com/jsform/61057405269153', array('type' => 'file', 'group' => 101, 'weight' => 1));
           break;
-        case 'spaces/music-rooms-hill':
+        case 'spaces/music-booths-hill':
           drupal_add_js(path_to_theme() . '/scripts/music-rooms.js', array('type' => 'file', 'group' => 101, 'weight' => 1));
           break;
       }
@@ -286,6 +286,23 @@ function ncsulib_foundation_process_html(&$vars){
 
         $vars[$replace] = preg_replace('/(src|href|@import )(url\(|=)(")http(s?):/', '$1$2$3', $vars[$replace]);
     }
+
+    $output = array(
+      '#type' => 'markup',
+      '#markup' => '<script id="embedUV" type="text/javascript" src="https://scrc.lib.ncsu.edu/sal_staging/uv-1.7.27/lib/embed.js"></script>' . "\r",
+    );
+    $vars['scripts'] .= drupal_render($output);
+    // kpr($variables);
+
+    //show media embed js on /scrc only
+    if (arg(0) == 'scrc'){
+      $output = array(
+        '#type' => 'markup',
+        '#markup' => '<script language="javascript" type="text/javascript" src="http://platform.linkedin.com/in.js">api_key: mykey</script>' . "\r",
+      );
+      $vars['scripts'] .= drupal_render($output);
+    }
+
 }
 
 /**
