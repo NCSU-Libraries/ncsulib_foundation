@@ -2,6 +2,7 @@
 
 include 'controllers/spaces.php';
 include 'controllers/events.php';
+// include 'controllers/workshops.php';
 include 'controllers/news.php';
 include 'controllers/users.php';
 include 'controllers/library_stories.php';

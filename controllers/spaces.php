@@ -19,7 +19,11 @@
 	}
 	function ncsulib_foundation_field__field_floor__space($variables) {
 	  $output = '';
-	  $output .= '<span class="room-floor">' . drupal_render($variables['items'][0]) . '</span>';
+	  $output .= '<span class="room-floor"><ul class="unstyle-list">';
+	  foreach($variables['items'] as $item){
+	  	$output .= '<li>'.render($item) .'</li>';
+	  }
+	  	$output .= '</ul></span>';
 	  return $output;
 	}
 	function ncsulib_foundation_field__field_staff_contact__space($variables) {

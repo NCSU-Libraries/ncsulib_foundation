@@ -1,5 +1,124 @@
 @import "base/init_for_custom";
 
+@import "base/init_for_custom";
+
+/**
+ * For the Space node content type
+ */
+#content #main-content {
+    @media #{$medium-up} {
+        .field-name-field-image {
+            // @include grid-column(6, $float: right);
+            margin-bottom: rem-calc(20);
+        }
+    }
+
+    .building-name, .field-name-field-building-new- .field-item {
+        display: block;
+        float: left;
+        line-height: 1.6;
+        font-size: 1rem;
+        margin-bottom: rem-calc(10);
+    }
+     .room-numbers {
+
+        @include unstyled-list;
+        line-height: 1.4;
+
+        li {
+            display: inline;
+            font-size: rem-calc(16);
+        }
+    }
+
+    .building-map {
+        margin: rem-calc(0 0 20 0);
+        font-size: rem-calc(16);
+        clear: left;
+        @media #{$small-only} {margin-left: 0;}
+    }
+
+    .button-reserve {
+        @include button($full-width: false);
+        @media #{$small-only} {
+            display: none;
+        }
+    }
+
+    // .button {
+    //     clear: left;
+    //     float: left;
+    // }
+
+    .field-name-body {
+        clear: left;
+        margin-bottom: rem-calc(20);
+
+        .field-item {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background: none;
+        }
+    }
+    .room-list {
+        font-size: rem-calc(16);
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    span.room-floor{
+        line-height: 1.5rem;
+        margin-bottom: 3px;
+
+        ul{
+            margin-bottom: 0px;
+
+            li{
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .room-capacity,
+    .room-floor,
+    .field-name-field-contact-entity-phone,
+    .room-numbers,
+    .room-list{
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    #space-meta{
+        margin-bottom: 35px;
+
+        .res-btn{
+            a{
+                float: right;
+            }
+
+            @media #{$small-only} {
+                a{
+                    margin-top: 20px;
+                    float: left;
+                }
+            }
+        }
+    }
+
+    @media #{$small-only} {
+        .field-name-field-image {
+            margin: rem-calc(0 0 10 0);
+        }
+    }
+
+    h3:first-of-type {
+        clear: both;
+    }
+}
+
+
+
 .view-id-software.view-display-id-block_2{
     .software-item{
         margin-bottom: 0px;
