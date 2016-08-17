@@ -1,3 +1,4 @@
+<!-- why is this not working? -->
 <?php
 	$slider_vars = variable_get('nivo_slider_banner_settings', array());
 ?>
@@ -18,7 +19,7 @@
 		$title = $slide['title'];
 
 ?>
-    <li><a href="<?= $url; ?>" data-title="<?= $title; ?>" data-destination="<?= $url_dest; ?>"><?= $title; ?><img src="<?= file_create_url($file->uri); ?>" alt="<?= $title; ?>" /></a></li>
+    <li><a href="<?= $url; ?>" data-title="<?= $title; ?>" data-destination="<?= $url_dest; ?>"><?= $title; ?><img src="https://lib.ncsu.edu/sites/default/files/banner/<?= $file->filename; ?>" alt="<?= $title; ?>" /></a></li>
 	<?php endif; ?>
 <?php endforeach; ?>
 
